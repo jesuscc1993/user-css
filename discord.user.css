@@ -1,0 +1,217 @@
+/* ==UserStyle==
+@name           Discord Customization
+@namespace      https://github.com/jesuscc1993/
+@author         MetalTxus
+@description    `Allows the customization of Discord's web version.`
+@version        20210511.19.12
+@license        NO-REDISTRIBUTION
+@preprocessor   default
+
+@var text font-family            "Font family"          "'Whitney', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+
+@var text inline-emoji-size      "Inline emoji size"    24px
+
+@var text block-emoji-size       "Block emoji size"     54px
+
+@var text reaction-emoji-size    "Reaction emoji size"  20px
+
+@var text min-sidebar-width      "Min sidebar width"    240px
+
+@var text max-sidebar-width      "Max sidebar width"    240px
+
+@var text avatar-scale           "Avatar scale"         1
+
+==/UserStyle== */
+@-moz-document domain("discord.com") {
+body {
+  font-family: var(--font-family);
+}
+
+/* responsive columns */
+[class*="content-"] [class*="sidebar-"],
+[class*="content-"] [class*="members-"],
+[class*="membersWrap-"] {
+  max-width: var(--max-sidebar-width) !important;
+  min-width: var(--min-sidebar-width) !important;
+  width: 100% !important;
+}
+
+[class*="content-"] [class*="sidebar-"] [class*="channel"],
+[class*="content-"] [class*="membersWrap-"] [class*="member-"] {
+  max-width: 100% !important;
+}
+
+[class*="content-"] [class*="sidebar-"] [class^="bannerImage"],
+[class*="content-"] [class*="sidebar-"] [class^="bannerImage"]:after {
+  width: 100%;
+}
+
+
+/* HIDE UNLESS HOVERED */
+/* common setup */
+[class*="content-"] [class*="guilds"] {
+  z-index: 102;
+}
+[class*="content-"] [class*="sidebar"] {
+  height: 100vh;
+}
+[class*="content-"] [class*="membersWrap"] {
+  right: 0;
+  height: calc(100vh - 50px);
+}
+
+[class*="content-"] [class*="sidebar-"],
+[class*="content-"] [class*="membersWrap"] {
+  transition: .2s;
+  transition-delay: .2s;
+  z-index: 101;
+}
+
+/* hide server members unless hovered */
+@media (max-width: 1152px) {
+  [class*="membersWrap"] {
+    position: absolute;
+  }
+
+  [class*="membersWrap"]:not(:hover) {
+    margin-right: calc(var(--min-sidebar-width) * -1 + 8px);
+  }
+}
+
+/* hide channels unless hovered */
+@media (max-width: 800px) {
+  [class*="sidebar-"] + [class*="chat"] {
+    padding-left: 8px;
+  }
+  [class*="chatContent"] [class*="messagesWrapper"] {
+    padding-right: 8px;
+  }
+
+  [class*="sidebar-"] {
+    position: absolute;
+  }
+
+  [class*="sidebar-"]:not(:hover) {
+    margin-left: calc(var(--min-sidebar-width) * -1 + 8px);
+  }
+}
+
+
+/* HIDE AVATARS */
+@media (max-width: 480px) {
+  [class*="messagesWrapper"] img[class*="avatar"],
+  [class*="messagesWrapper"] [class*="timestamp"] {
+    display: none;
+  }
+
+  [class*="messagesWrapper"] [class*="message"] {
+    padding: .125rem .25rem;
+  }
+
+  [class*="messagesWrapper"] [class*="messageContent"] {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+
+/* RESIZE */
+/* avatars */
+[class*="messagesWrapper"] img[class*="avatar"] {
+  transform: scale(var(--avatar-scale)) !important;
+  margin-top: 2.5px;
+}
+
+/* emojis */
+[class*="messagesWrapper"] img.emoji:not(.jumboable) {
+  width: var(--inline-emoji-size) !important;
+  height: var(--inline-emoji-size) !important;
+}
+[class*="messagesWrapper"] img.emoji.jumboable {
+  width: var(--block-emoji-size) !important;
+  height: var(--block-emoji-size) !important;
+}
+[class^="reaction"] img.emoji:not(.jumboable) {
+  width: var(--reaction-emoji-size) !important;
+  height: var(--reaction-emoji-size) !important;
+  margin: 3px 0;
+}
+
+[class*="messagesWrapper"] [class*="scrollable"] {
+  max-height: none;
+}
+
+/* MISCELLANEOUS */
+[class*="messagesWrapper"] textArea {
+  max-height: none !important;
+  resize: vertical;
+}
+
+[class*="isMentioned"] {
+  margin-top: 1px;
+}
+
+/* float bot tag */
+[class*="nameAndDecorators"] > *:first-child {
+  flex: 1;
+}
+[class*="nameAndDecorators"] > *:not(:first-child) {
+  align-self: normal;
+}
+
+/* blurple mentions */
+[class*="mentioned"] .mention {
+  color: var(--brand-experiment) !important;
+}
+
+/* hide download icon */
+[class*="guilds"] [class*="scroller"] > [class*="listItem"]:last-child,
+[class*="guilds"] [class*="scroller"] > [class*="listItem"]:nth-last-child(2) {
+  display: none;
+}
+
+/* hide misc stuff */
+[class*="emptyChannelIcon"],
+[class^="userPopout"] [class^="footer"] {
+  display: none;
+}
+
+/* hide ads */
+[aria-label="Send a gift"],
+[class*="buttons"][class*="you"] > *:first-child,
+[href="/store"] {
+  display: none;
+}
+
+/* make "invisible" usernames readeable */
+[class*="name"][style="color: rgb(255, 255, 255);"] {
+  color: #747f8d !important;
+}
+[class*="name"][style="color: rgb(54, 57, 62);"],
+[class*="name"][style="color: rgb(54, 57, 63);"] {
+  color: #98a8b3 !important;
+}
+
+/* hide folder when set to match background */
+[class*="folderIconWrapper"] svg[style="color: rgb(47, 49, 54);"] {
+  display: none;
+}
+
+/* SHRINK */
+/*[class*="messagesWrapper"] [class*="grid"] {
+  padding: 0 1rem .5rem .75rem;
+}
+
+[class*="compact"][class*="wrapper"],
+[class*="cozy"][class*="wrapper"] {
+  padding-top: .05rem;
+  padding-bottom: .05rem;
+}*/
+/* disabled as it messes up scrolling */
+/*.group-spacing-16 [class*="groupStart"] {
+  margin-top: 8px;
+}
+.group-spacing-16 [class*="divider"] + [class*="groupStart"] {
+  margin-top: 16px;
+}*/
+}
