@@ -1,0 +1,40 @@
+/* ==UserStyle==
+@name           YouTube Fullscreen Theater
+@namespace      https://github.com/jesuscc1993/
+@author         MetalTxus
+@description    `Displays YouTube's theater in fullscreen.`
+@version        20210511.19.36
+@license        NO-REDISTRIBUTION
+@preprocessor   stylus
+
+@var checkbox hide-scrollbar     "Hide scrollbar"         0
+
+==/UserStyle== */
+@-moz-document url-prefix("https://www.youtube.com/watch?v=") {
+  if hide-scrollbar {
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  ytd-watch-flexy:not([fullscreen]) #player-theater-container.ytd-watch-flexy {
+    max-height: none;
+    height: calc(100vh);
+  }
+
+  #page-manager.ytd-app {
+    margin-top: 0;
+  }
+
+  #masthead-container.ytd-app {
+    top: -56px;
+    transition: .2s;
+    transition-delay: .15s;
+    border-bottom: 56px solid transparent;
+  }
+  #masthead-container.ytd-app:focus-within,
+  #masthead-container.ytd-app:hover {
+    top: 0;
+    border-bottom: 0px solid transparent;
+  }
+}
