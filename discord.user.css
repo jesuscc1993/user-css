@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    `Allows the customization of Discord's web version.`
-@version        20210511.19.12
+@version        20210513.18.35
 @license        NO-REDISTRIBUTION
 @preprocessor   less
 
@@ -205,8 +205,9 @@
   }
 
   /* blurple restoration */
-  .mention {
-    background-color: var(--brand-experiment-560) !important;
+  [class*="mentioned"] .mention {
+    color: var(--brand-experiment) !important;
+    background: transparent;
   }
 
   html.newBrand when (@restore-blurple = 1) {
