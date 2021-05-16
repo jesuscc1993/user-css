@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    `Allows the customization of Discord's web version.`
-@version        20210513.18.35
+@version        20210516.13.50
 @license        NO-REDISTRIBUTION
 @preprocessor   less
 
@@ -33,6 +33,10 @@
     --min-sidebar-width: @min-sidebar-width;
     --max-sidebar-width: @max-sidebar-width;
     --avatar-scale: @avatar-scale;
+  }
+  
+  html.newBrand {
+    --font-display: var(--font-family);
   }
 
   body {
@@ -203,14 +207,15 @@
   [class*="folderIconWrapper"] svg[style="color: rgb(47, 49, 54);"] {
     display: none;
   }
-
-  /* blurple restoration */
+  
+  /* mentions restoration */
   [class*="mentioned"] .mention {
     color: var(--brand-experiment) !important;
     background: transparent;
   }
 
-  html.newBrand when (@restore-blurple = 1) {
+  /* blurple restoration */
+  html.newBrand when (@restore-blurple =1) {
     --brand-experiment-100: #f8f9fd;
     --brand-experiment-130: #f2f4fc;
     --brand-experiment-160: #ebeefa;
@@ -256,7 +261,6 @@
     --brand-experiment-85a: rgba(114, 137, 218, 0.85);
     --brand-experiment-90a: rgba(114, 137, 218, 0.9);
     --brand-experiment-95a: rgba(114, 137, 218, 0.95);
-    --font-display: var(--font-family);
   }
 
   /* SHRINK */
