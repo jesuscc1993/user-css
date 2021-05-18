@@ -209,7 +209,7 @@
   }
   
   /* mentions restoration */
-  [class*="mentioned"] .mention {
+  [class*="mentioned"] .mention[class*="wrapper"] {
     color: var(--brand-experiment) !important;
     background: transparent;
   }
