@@ -215,7 +215,7 @@
   }
 
   /* blurple restoration */
-  html.newBrand when (@restore-blurple =1) {
+  html.theme-dark when (@restore-blurple =1) {
     --brand-experiment-100: #f8f9fd;
     --brand-experiment-130: #f2f4fc;
     --brand-experiment-160: #ebeefa;
