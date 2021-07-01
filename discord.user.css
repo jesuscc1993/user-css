@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    `Allows the customization of Discord's web version.`
-@version        20210624.23.6
+@version        20210701.16.18
 @license        NO-REDISTRIBUTION
 @preprocessor   less
 
@@ -35,7 +35,7 @@
     --avatar-scale: @avatar-scale;
   }
   
-  html.newBrand {
+  html.theme-dark {
     --font-display: var(--font-family);
   }
 
