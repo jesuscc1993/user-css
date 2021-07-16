@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    `Allows the customization of Discord's web version.`
-@version        20210715.19.59
+@version        20210716.18.36
 @license        NO-REDISTRIBUTION
 @preprocessor   less
 
@@ -161,7 +161,8 @@
     [class*='messagesWrapper'] [class*='messageContent-'] {
       overflow: visible;
     }
-    [class*='messagesWrapper-'] img.emoji {
+    [class*='messagesWrapper-'] img.emoji,
+		[class^='reaction'] img.emoji {
       transition: 0.15s;
       z-index: 1;
       position: relative;
