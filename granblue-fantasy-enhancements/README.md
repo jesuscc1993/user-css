@@ -24,7 +24,7 @@
 | **Center content** | Center game content in the screen. |
 | **Center popups** | **Warning:** might cause issues in small resolutions. |
 | **Compact gacha results** | Compacts gacha results. |
-| **Compact lists** | Show 5 items columns instead of 4. |
+| **Compact lists** | Show 5 item columns instead of 4. |
 | **Compact raids** | Compacts the raid list. |
 | **Compact summons** | Compacts the summon selection list. |
 | **Compact upgrade summary** | Compacts the upgrade summary. |
