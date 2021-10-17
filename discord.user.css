@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    `Allows the customization of Discord's web version.`
-@version        20210910.18.29
+@version        20211017.11.43
 @license        NO-REDISTRIBUTION
 @preprocessor   less
 
@@ -146,11 +146,11 @@
     width: var(--block-emoji-size) !important;
     height: var(--block-emoji-size) !important;
   }
-  [class^='reaction'] img.emoji:not(.jumboable) {
-    width: var(--reaction-emoji-size) !important;
-    height: var(--reaction-emoji-size) !important;
-    margin: 3px 0;
-  }
+  // [class^='reaction'] img.emoji:not(.jumboable) {
+  //   width: var(--reaction-emoji-size) !important;
+  //   height: var(--reaction-emoji-size) !important;
+  //   margin: 3px 0;
+  // }
 
   [class*='messagesWrapper'] [class*='scrollable'] {
     max-height: none;
@@ -178,7 +178,8 @@
       transform: scale(2);
     }
     [class^='reaction'] img.emoji:not(.jumboable):hover {
-      transform: scale(4);
+      // transform: scale(4);
+      transform: scale(1);
     }
 		[role="textbox"] img.emoji:hover {
       transform: none !important;			
