@@ -1,11 +1,13 @@
 # Stylus - Dark+ (CodeMirror theme)
 
-To install, view the raw files. Requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension.
+## Description
+
+Dark+ CodeMirror theme for the Stylus extension (Chrome only).
 
 ## Preview
 
-![Preview](stylus-codemirror-dark-plus.png)
+![Preview](preview.png)
 
 ## Installation
 
-- [UserCSS](./stylus-codemirror-dark-plus.user.css) (requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension).
+- [UserCSS](./stylus-codemirror-dark-plus.user.css) (view raw file to install. Requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension).

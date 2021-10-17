@@ -1,8 +1,8 @@
-# Stylus - Dark theme
+# YouTube - Fullscreen Theater
 
 ## Description
 
-Dark theme for the Stylus extension (Chrome only).
+Displays YouTube's theater in fullscreen.
 
 ## Preview
 

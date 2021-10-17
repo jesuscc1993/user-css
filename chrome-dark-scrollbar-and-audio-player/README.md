@@ -1,11 +1,17 @@
 # Chrome - Dark scrollbar and audio player
 
-To install, view the raw files. Requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension.
+## Description
+
+Styles the scrollbar and audio player components to a dark theme (WebKit only).
 
 ## Preview
 
-![Preview](chrome-dark-scrollbar-and-audio-player.png)
+![Preview](preview.png)
+
+## Settings overview
+
+![Settings](settings.png)
 
 ## Installation
 
-- [UserCSS](./chrome-dark-scrollbar-and-audio-player.user.css) (requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension).
+- [UserCSS](./chrome-dark-scrollbar-and-audio-player.user.css) (view raw file to install. Requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension).
