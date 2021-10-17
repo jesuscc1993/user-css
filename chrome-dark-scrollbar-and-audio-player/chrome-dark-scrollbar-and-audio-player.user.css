@@ -24,9 +24,10 @@
 
 @advanced dropdown dark-player "Dark audio player" {
   dark-player-0 "Disabled*" <<<EOT  EOT;
-dark-player-1 "Enabled" <<<EOT audio {
-  filter: invert(1) hue-rotate(180deg);
-} EOT;
+
+  dark-player-1 "Enabled" <<<EOT audio {
+    filter: invert(1) hue-rotate(180deg);
+  } EOT;
 
 }
 
