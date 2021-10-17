@@ -1,0 +1,162 @@
+/* ==UserStyle==
+@name           Stylus - Dark+ (CodeMirror theme)
+@namespace      https://github.com/jesuscc1993/
+@author         MetalTxus
+@description    `Dark+ CodeMirror theme for the Stylus extension (Chrome only)`
+@version        20211017.22.59
+@license        NO-REDISTRIBUTION
+@preprocessor   uso
+
+==/UserStyle== */
+
+@-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne/edit.html") {
+  .CodeMirror {
+    --c-attention: #FF33FF;
+    --c-background: #1E1E1E;
+    --c-blue: #569CD6;
+    --c-border-light: #333;
+    --c-border: #282828;
+    --c-cyan: #9CDCFE;
+    --c-foreground: #FFF;
+    --c-green: #6A9955;
+    --c-lime: #B5CEA8;
+    --c-line-number: #858585;
+    --c-orange: #CE9178;
+    --c-search-result-current: #515C6A;
+    --c-search-result: #613214;
+    --c-selection: #264f78;
+    --c-string: #E6DB74;
+    --c-variable: #DCDCAA;
+    --c-yellow: #D7BA7D;
+  
+    --c-scrollbar-background: #181818;
+    --c-scrollbar-hover: #444;
+    --c-scrollbar: #333;
+  
+    --font-family: 'Roboto Mono';
+    --font-size: 15px;
+  
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+  }
+  .CodeMirror .CodeMirror-cursor {
+    border-color: var(--c-foreground) !important;
+    border-width: 2px;
+  }
+  .CodeMirror .CodeMirror-lines {
+    padding: 0;
+  }
+  .CodeMirror pre.CodeMirror-line,
+  .CodeMirror pre.CodeMirror-line-like {
+    padding: 0;
+  }
+  .CodeMirror .CodeMirror-activeline-gutter {
+    background-color: transparent !important;
+  }
+  .CodeMirror .CodeMirror-linebackground {
+    background-color: transparent !important;
+    border: 1px solid var(--c-border) !important;
+  }
+  .CodeMirror,
+  .CodeMirror-gutters {
+    background-color: var(--c-background) !important;
+    /* border: none; */
+    border-color: var(--c-border-light) !important;
+  }
+  .CodeMirror .CodeMirror-gutters {
+    border-right: 1px solid;
+    /* border-right: none; */
+  }
+  .CodeMirror .CodeMirror-linenumber {
+    color: var(--c-line-number);
+  }
+  .CodeMirror .CodeMirror-selected {
+    background: var(--c-selection);
+  }
+  .CodeMirror .CodeMirror-line {
+    color: var(--c-foreground) !important;
+  }
+  .CodeMirror .CodeMirror-foldmarker {
+    color: var(--c-attention);
+    font-family: var(--font-family);
+    text-shadow: none;
+  }
+  
+  div.CodeMirror span.CodeMirror-matchingbracket {
+    color: var(--c-attention);
+  }
+  .cm-s-default .cm-property {
+    color: var(--c-cyan);
+  }
+  .cm-s-default .cm-def {
+    color: var(--c-cyan);
+  }
+  .cm-s-default .cm-string {
+    color: var(--c-string);
+  }
+  .cm-s-default .cm-builtin {
+    color: var(--c-yellow);
+  }
+  .cm-s-default .cm-qualifier {
+    color: var(--c-yellow);
+  }
+  .cm-s-default .cm-tag {
+    color: var(--c-blue);
+  }
+  .cm-s-default .cm-number {
+    color: var(--c-lime);
+  }
+  .cm-s-default .cm-atom {
+    color: var(--c-orange);
+  }
+  .cm-s-default .cm-string {
+    color: var(--c-orange);
+  }
+  .cm-s-default .cm-keyword {
+    color: var(--c-blue);
+  }
+  .cm-s-default .cm-comment {
+    color: var(--c-green);
+  }
+  .cm-s-default .cm-variable {
+    color: var(--c-variable);
+  }
+  .cm-s-default .cm-variable-2 {
+    color: var(--c-cyan);
+  }
+  .cm-s-default .cm-variable-3 {
+    color: var(--c-orange);
+  }
+  
+  body.find-open .cm-searching.search-target-match {
+    background-color: var(--c-search-result-current);
+    color: inherit;
+  }
+  body.find-open .cm-searching {
+    background-color: var(--c-search-result);
+  }
+  
+  .CodeMirror ::-webkit-scrollbar,
+  .CodeMirror ::-webkit-scrollbar-corner,
+  .CodeMirror ::-webkit-scrollbar-track-piece,
+  .CodeMirror-scrollbar-filler {
+    background: var(--c-scrollbar-background) !important;
+  }
+  
+  .CodeMirror ::-webkit-scrollbar {
+    width: 17px !important;
+    height: 17px !important;
+  }
+  
+  .CodeMirror ::-webkit-scrollbar-thumb {
+    background: var(--c-scrollbar);
+    border: 3px solid var(--c-scrollbar-background) !important;
+    border-radius: 8px !important;
+  }
+  
+  .CodeMirror ::-webkit-scrollbar-thumb:hover {
+    background: var(--c-scrollbar-hover);
+  }
+  
+  /* based on: https://raw.githubusercontent.com/microsoft/vscode/master/extensions/theme-defaults/themes/dark_plus.json */
+  }
