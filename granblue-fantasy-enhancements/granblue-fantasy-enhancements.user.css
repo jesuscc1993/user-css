@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    `Allows the customization of the game's layout and responsive behavior.<a href="https://imgur.com/a/kud5i">> Previews album <</a>`
-@version        20211017.22.53
+@version        20211028.22.18
 @license        NO-REDISTRIBUTION
 @preprocessor   uso
 
@@ -247,6 +247,7 @@
 
   rearrange-raid-ui-1 "Enabled" <<<EOT
     .cnt-raid .prt-raid-log {
+			pointer-events: none;			
       bottom: 96px;
       top: auto;
     }
