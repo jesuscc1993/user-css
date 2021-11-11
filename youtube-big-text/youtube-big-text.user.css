@@ -1,0 +1,69 @@
+/* ==UserStyle==
+@name           YouTube - Big Text
+@namespace      https://github.com/jesuscc1993/
+@author         MetalTxus
+@description    `Increases YouTube's font size; useful when watchign from a distance.`
+@version        20211111.21.50
+@license        NO-REDISTRIBUTION
+@preprocessor   stylus
+
+@var text    font-size-lg                  "Grid font size"                20px
+@var text    font-size-md                  "Video font size"               16px
+@var text    video-description-max-height  "Max video description height"  96px
+@var number  grid-line-clamp               "Max grid title lines"          4
+@var number  video-title-line-clamp        "Max video title lines"         2
+@var number  video-comment-line-clamp      "Max video comment lines"       6
+
+==/UserStyle== */
+
+:root {
+  --font-size-lg: font-size-lg;
+  --font-size-md: font-size-md;
+  --line-height-lg: calc(var(--font-size-lg) * 1.2);
+  --line-height-md: calc(var(--font-size-md) * 1.2);
+}
+
+html:not(.style-scope)[typography] {
+  --yt-navbar-title-font-size: var(--font-size-lg);
+  --yt-navbar-title-line-height: var(--line-height-lg);
+}
+
+ytd-comments,
+ytd-expander {
+  --ytd-user-comment_-_font-size: var(--font-size-lg);
+  --ytd-user-comment_-_line-height: var(--line-height-lg);
+}
+
+ytd-expander {
+  --ytd-expander-collapsed-height: video-description-max-height !important;
+  --ytd-expander-max-lines: video-comment-line-clamp !important;
+}
+
+ytd-grid-video-renderer {
+  --yt-link-font-size: var(--font-size-md);
+  --ytd-link-line-height: var(--line-height-md);
+}
+
+ytd-grid-video-renderer #video-title.yt-simple-endpoint.ytd-grid-video-renderer {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
+  max-height: none;
+  -webkit-line-clamp: grid-line-clamp;
+}
+
+.title.ytd-video-primary-info-renderer {
+  line-height: var(--yt-navbar-title-line-height);
+  max-height: none;
+  -webkit-line-clamp: video-title-line-clamp;
+}
+
+ytd-expander.ytd-video-secondary-info-renderer,
+#content-text.ytd-comment-renderer,
+.ytd-comment-renderer {
+  font-size: var(--ytd-user-comment_-_font-size);
+  line-height: var(--ytd-user-comment_-_line-height);
+}
+
+#description.ytd-video-secondary-info-renderer {
+  max-width: none;
+}
