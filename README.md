@@ -7,4 +7,5 @@ To install, view the raw files. Requires the [Stylus](https://github.com/opensty
 - [granblue-fantasy-enhancements](granblue-fantasy-enhancements)
 - [stylus-codemirror-dark-plus](stylus-codemirror-dark-plus)
 - [stylus-dark](stylus-dark)
+- [youtube-big-text](youtube-big-text)
 - [youtube-fullscreen-theater](youtube-fullscreen-theater)
