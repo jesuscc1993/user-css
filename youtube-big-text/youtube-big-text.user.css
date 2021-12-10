@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    `Increases YouTube's font size; useful when watchign from a distance.`
-@version        2021.12.10.20.59
+@version        2021.12.10.21.5
 @license        NO-REDISTRIBUTION
 @preprocessor   stylus
 
@@ -18,6 +18,10 @@
 
 @-moz-document domain("youtube.com") {
   :root {
+		--grid-line-clamp: grid-line-clamp;
+		--video-comment-line-clamp: video-comment-line-clamp;
+		--video-title-line-clamp: video-title-line-clamp;
+	  --video-description-max-height: video-description-max-height;
     --font-size-lg: font-size-lg;
     --font-size-md: font-size-md;
     --line-height-lg: calc(var(--font-size-lg) * 1.2);
@@ -36,8 +40,8 @@
   }
 
   ytd-expander {
-    --ytd-expander-collapsed-height: video-description-max-height !important;
-    --ytd-expander-max-lines: video-comment-line-clamp !important;
+    --ytd-expander-collapsed-height: var(--video-description-max-height) !important;
+    --ytd-expander-max-lines: var(--video-comment-line-clamp) !important;
   }
 
   ytd-grid-video-renderer {
@@ -51,13 +55,13 @@
     font-size: var(--font-size-md);
     line-height: var(--line-height-md);
     max-height: none;
-    -webkit-line-clamp: grid-line-clamp;
+    -webkit-line-clamp: var(--grid-line-clamp);
   }
 
   .title.ytd-video-primary-info-renderer {
     line-height: var(--yt-navbar-title-line-height);
     max-height: none;
-    -webkit-line-clamp: video-title-line-clamp;
+    -webkit-line-clamp: var(--video-title-line-clamp);
   }
 
   ytd-expander.ytd-video-secondary-info-renderer,
