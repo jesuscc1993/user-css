@@ -18,10 +18,10 @@
 
 @-moz-document domain("youtube.com") {
   :root {
-		--grid-line-clamp: grid-line-clamp;
-		--video-comment-line-clamp: video-comment-line-clamp;
-		--video-title-line-clamp: video-title-line-clamp;
-	  --video-description-max-height: video-description-max-height;
+    --grid-line-clamp: grid-line-clamp;
+    --video-comment-line-clamp: video-comment-line-clamp;
+    --video-title-line-clamp: video-title-line-clamp;
+    --video-description-max-height: video-description-max-height;
     --font-size-lg: font-size-lg;
     --font-size-md: font-size-md;
     --line-height-lg: calc(var(--font-size-lg) * 1.2);
