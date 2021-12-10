@@ -45,9 +45,9 @@
     --ytd-link-line-height: var(--line-height-md);
   }
 
-	ytd-grid-video-renderer #video-title.ytd-grid-video-renderer,
-	ytd-item-section-renderer #video-title.ytd-playlist-video-renderer,
-	ytd-two-column-search-results-renderer #video-title.ytd-video-renderer {
+  ytd-grid-video-renderer #video-title.ytd-grid-video-renderer,
+  ytd-item-section-renderer #video-title.ytd-playlist-video-renderer,
+  ytd-two-column-search-results-renderer #video-title.ytd-video-renderer {
     font-size: var(--font-size-md);
     line-height: var(--line-height-md);
     max-height: none;
