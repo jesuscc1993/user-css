@@ -1,0 +1,54 @@
+/* ==UserStyle==
+@name           Duolingo - Dark theme
+@namespace      https://github.com/jesuscc1993/
+@author         MetalTxus
+@description    `Dark theme for the Duolingo (WIP).`
+@version        20211219.20.59
+@license        NO-REDISTRIBUTION
+@preprocessor   uso
+
+==/UserStyle== */
+
+@-moz-document domain("duolingo.com") {
+  
+  path[fill="#e5e5e5"] {
+    fill: #444;
+  }
+  path[fill="#ffd900"] {
+    fill: #C80;
+  }
+
+  [role="progressbar"],
+  [id="session/PlayerFooter"] {
+    filter: saturate(1.5);
+  }
+
+  html {
+    filter: invert(.9) hue-rotate(180deg);
+  }
+
+  img,
+  svg,
+  video,
+  [style*="background-image"] {
+    filter: invert(1) hue-rotate(180deg) brightness(1.125);
+  }
+
+  ._1LdIi,
+  ._1ualb,
+  ._3DWgD,
+  ._3aUCN,
+  .e9TL7,
+  .placeholder {
+    filter: invert(1) hue-rotate(180deg) brightness(1.125);
+  }
+
+  ._212s-,
+  ._3dPmh,
+  ._4iaAs,
+  .lIg1v,
+  .placeholder {
+    filter: invert(1) hue-rotate(180deg) brightness(1.5);
+  }
+
+}
