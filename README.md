@@ -4,6 +4,7 @@ To install, view the raw files. Requires the [Stylus](https://github.com/opensty
 # List
 - [chrome-dark-scrollbar-and-audio-player](chrome-dark-scrollbar-and-audio-player)
 - [discord](discord)
+- [duolingo-dark](duolingo-dark)
 - [granblue-fantasy-enhancements](granblue-fantasy-enhancements)
 - [stylus-codemirror-dark-plus](stylus-codemirror-dark-plus)
 - [stylus-dark](stylus-dark)
