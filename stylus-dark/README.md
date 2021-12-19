@@ -10,4 +10,4 @@ Dark theme for the Stylus extension (Chrome only).
 
 ## Installation
 
-- [UserCSS](.stylus-dark.user.css) (view raw file to install. Requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension).
+- [UserCSS](./stylus-dark.user.css) (view raw file to install. Requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension).
