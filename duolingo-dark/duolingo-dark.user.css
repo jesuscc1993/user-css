@@ -10,12 +10,11 @@
 ==/UserStyle== */
 
 @-moz-document domain("duolingo.com") {
-  
   path[fill="#e5e5e5"] {
     fill: #444;
   }
   path[fill="#ffd900"] {
-    fill: #C80;
+    fill: #c80;
   }
 
   [role="progressbar"],
@@ -24,7 +23,7 @@
   }
 
   html {
-    filter: invert(.9) hue-rotate(180deg);
+    filter: invert(0.9) hue-rotate(180deg);
   }
 
   img,
@@ -39,6 +38,7 @@
   ._3DWgD,
   ._3aUCN,
   .e9TL7,
+  .MyHQ0,
   .placeholder {
     filter: invert(1) hue-rotate(180deg) brightness(1.125);
   }
@@ -50,5 +50,4 @@
   .placeholder {
     filter: invert(1) hue-rotate(180deg) brightness(1.5);
   }
-
 }
