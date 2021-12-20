@@ -8,7 +8,6 @@
 @preprocessor   uso
 
 ==/UserStyle== */
-
 @-moz-document domain("duolingo.com") {
   path[fill="#e5e5e5"] {
     fill: #444;
@@ -44,6 +43,7 @@
   }
 
   ._212s-,
+  ._3_QUJ,
   ._3dPmh,
   ._4iaAs,
   .lIg1v,
