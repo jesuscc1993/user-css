@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    `Increases YouTube's font size; useful when watchign from a distance.`
-@version        2021.12.10.21.5
+@version        2021.12.25.11.25
 @license        NO-REDISTRIBUTION
 @preprocessor   stylus
 
@@ -49,6 +49,7 @@
     --ytd-link-line-height: var(--line-height-md);
   }
 
+	ytd-grid-playlist-renderer #video-title.ytd-grid-playlist-renderer,
   ytd-grid-video-renderer #video-title.ytd-grid-video-renderer,
   ytd-item-section-renderer #video-title.ytd-playlist-video-renderer,
   ytd-two-column-search-results-renderer #video-title.ytd-video-renderer {
