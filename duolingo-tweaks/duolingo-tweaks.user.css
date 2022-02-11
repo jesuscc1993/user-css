@@ -1,0 +1,49 @@
+@-moz-document domain("duolingo.com") {
+
+  @media (min-width: 700px) {
+    [data-test="player-end-carousel"] > :nth-child(1) {
+      width: 100%;
+    }
+    [data-test="player-end-carousel"] > :nth-child(2) {
+      display: none;
+    }
+
+    [data-test*="challenge"] > .uH5m4 {
+      max-width: none;
+      width: 672px;
+    }
+  }
+
+  [data-test="challenge-tap-token"] {
+    user-select: text;
+  }
+
+  /* leagues */
+  #root > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(1),
+  /* premium */
+  #root > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(3),
+  /* friends */
+  #root > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(5),
+  /* share */
+  #root > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(6) {
+    display: none;
+  }
+
+  /* tmp fixes */
+  [data-test="try-plus-badge"],
+  .F2B9m,
+  ._1ii1y,
+  ._3o_lc._1vljO {
+    display: none;
+  }
+
+  /* hacks */
+  ._3p5e9,
+  .ite_X {
+    display: none;
+  }
+  ._1UVl- {
+    margin-left: -10px;
+  }
+
+}
