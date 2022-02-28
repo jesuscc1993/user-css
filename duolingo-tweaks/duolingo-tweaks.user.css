@@ -1,3 +1,14 @@
+/* ==UserStyle==
+@name           Duolingo - Tweaks
+@namespace      https://github.com/jesuscc1993/
+@author         MetalTxus
+@description    Applies tweaks to Duolingo
+@version        20220228.21.28
+@license        NO-REDISTRIBUTION
+@preprocessor   stylus
+
+==/UserStyle== */
+
 @-moz-document domain("duolingo.com") {
 
   @media (min-width: 700px) {

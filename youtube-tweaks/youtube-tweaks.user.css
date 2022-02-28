@@ -1,3 +1,14 @@
+/* ==UserStyle==
+@name           YouTube - Tweaks
+@namespace      https://github.com/jesuscc1993/
+@author         MetalTxus
+@description    Applies tweaks to YouTube
+@version        20220228.21.28
+@license        NO-REDISTRIBUTION
+@preprocessor   stylus
+
+==/UserStyle== */
+
 @-moz-document domain("youtube.com") {
   :root {
     --thumbnail-zoom: 1.2;
@@ -72,8 +83,17 @@
     display: none;
   }
 
+  /* hide sidebar items */
+  #sections ytd-guide-section-renderer:nth-child(1) > * > ytd-guide-entry-renderer:nth-child(2), /* explore */
+  #sections ytd-guide-section-renderer:nth-child(1) > * > ytd-guide-entry-renderer:nth-child(3), /* shorts */
+  #sections ytd-guide-collapsible-section-entry-renderer:nth-child(5) > * > ytd-guide-entry-renderer:nth-child(2), /* your videos */
+  foo {
+    display: none;
+  }
+
   /* extensions */
-  #startSegmentButton {
+  .ytp-right-controls #infoButton,
+  .ytp-right-controls #startSegmentButton {
     display: none !important;
   }
 
