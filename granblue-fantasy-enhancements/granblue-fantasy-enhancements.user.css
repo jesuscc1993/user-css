@@ -579,7 +579,7 @@
 
   hide-arcarum-skip-0 "Disabled" <<<EOT EOT;
   
-  hide-arcarum-skip-1 "Enabled/" <<<EOT
+  hide-arcarum-skip-1 "Enabled*" <<<EOT
     .prt-arcarum-skip {
       display: none;	
     }
