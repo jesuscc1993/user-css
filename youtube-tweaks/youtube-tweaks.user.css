@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Applies tweaks to YouTube
-@version        20220228.21.28
+@version        20220408.23.52
 @license        NO-REDISTRIBUTION
 @preprocessor   stylus
 
@@ -43,7 +43,7 @@
   }
 
   #hover-overlays {
-    zoom: 2;
+    zoom: 2.075;
   }
 
   /* misc */
