@@ -2,22 +2,26 @@
 @name           YouTube - Tweaks
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
-@description    Applies tweaks to YouTube
-@version        20220408.23.52
+@description    `Applies tweaks to YouTube.`
+@version        20220427.17.59
 @license        NO-REDISTRIBUTION
 @preprocessor   stylus
+
+@var number     thumbnail-zoom 		"Thumbnail zoom" 		125
+@var text      	drawer-width 			"App drawer width" 	192px
+@var text      	grid-max-width		"Max grid width" 		1600px
 
 ==/UserStyle== */
 
 @-moz-document domain("youtube.com") {
   :root {
-    --thumbnail-zoom: 1.2;
+    --thumbnail-zoom: thumbnail-zoom / 100;
     --thumbnail-width: calc(210px * var(--thumbnail-zoom));
     --thumbnail-height: calc(118px * var(--thumbnail-zoom));
   }
 
   html:not(.style-scope) {
-    --ytd-grid-max-width: 1536px;
+    --ytd-grid-max-width: grid-max-width;
     --ytd-grid-6-columns-width: var(--ytd-grid-max-width);
   }
 
@@ -66,7 +70,7 @@
 
   /* thinner sidebar */
   ytd-app {
-    --app-drawer-width: 192px;
+    --app-drawer-width: drawer-width;
   }
 
   ytd-guide-renderer.ytd-app {
@@ -75,6 +79,10 @@
 
   tp-yt-paper-item.ytd-guide-entry-renderer {
     padding: 0 16px;
+  }
+
+  ytd-app[guide-persistent-and-visible] ytd-page-manager.ytd-app {
+    margin-left: var(--app-drawer-width);
   }
 
   /* hide text on video buttons */
