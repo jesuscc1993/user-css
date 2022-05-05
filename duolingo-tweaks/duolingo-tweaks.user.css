@@ -1,60 +1,106 @@
 /* ==UserStyle==
-@name           Duolingo - Tweaks
-@namespace      https://github.com/jesuscc1993/
-@author         MetalTxus
-@description    Applies tweaks to Duolingo
-@version        20220228.21.28
-@license        NO-REDISTRIBUTION
-@preprocessor   stylus
+@name						Duolingo - Tweaks
+@namespace			https://github.com/jesuscc1993/
+@author					MetalTxus
+@description		Allows the customization of several Duolingo elements.
+@version				2022.05.05.21.25
+@license				NO-REDISTRIBUTION
+@preprocessor		stylus
 
+@var	checkbox	hide-characters				"Hide	Duolingo characters"			0
+@var	checkbox	hide-pronunciation		"Hide	pronunciation"						0
+@var	checkbox	hide-leagues					"Hide	leagues side panel"				0
+@var	checkbox	hide-goals						"Hide	goals side panel"					0
+@var	checkbox	hide-premium					"Hide	premium side panel"				0
+@var	checkbox	hide-achievements			"Hide	achievements side panel"	0
+@var	checkbox	hide-friends					"Hide	friends side panel"				0
+@var	checkbox	hide-share						"Hide	share side panel"					0
 ==/UserStyle== */
 
 @-moz-document domain("duolingo.com") {
+	@media (min-width: 700px) {
+		[data-test="player-end-carousel"] > :nth-child(1) {
+			width: 100%;
+		}
+		[data-test="player-end-carousel"] > :nth-child(2) {
+			display: none;
+		}
 
-  @media (min-width: 700px) {
-    [data-test="player-end-carousel"] > :nth-child(1) {
-      width: 100%;
-    }
-    [data-test="player-end-carousel"] > :nth-child(2) {
-      display: none;
-    }
+		[data-test*="challenge"] > .uH5m4 {
+			max-width: none;
+			width: 672px;
+		}
+	}
 
-    [data-test*="challenge"] > .uH5m4 {
-      max-width: none;
-      width: 672px;
-    }
-  }
+	[data-test="challenge-tap-token"] {
+		user-select: text;
+	}
 
-  [data-test="challenge-tap-token"] {
-    user-select: text;
-  }
+	/* characters */
+	if (hide-characters) {
+		.ite_X,
+		.F2B9m {
+			display: none;
+		}
 
-  /* leagues */
-  #root > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(1),
-  /* premium */
-  #root > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(3),
-  /* friends */
-  #root > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(5),
-  /* share */
-  #root > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(6) {
-    display: none;
-  }
+		._1UVl- {
+			margin-left: -10px;
+		}
+	}
 
-  /* tmp fixes */
-  [data-test="try-plus-badge"],
-  .F2B9m,
-  ._1ii1y,
-  ._3o_lc._1vljO {
-    display: none;
-  }
+	/* pronunciation */
+	if (hide-pronunciation) {
+		._47IB1._3x_e5._2m_ED {
+			display: none;
+		}
+	}
 
-  /* hacks */
-  ._3p5e9,
-  .ite_X {
-    display: none;
-  }
-  ._1UVl- {
-    margin-left: -10px;
-  }
+	/* leages */
+	if (hide-leagues) {
+		#root > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
+			display: none;
+		}
+	}
+	
+	/* goals */
+	if (hide-goals) {
+		#root > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+			display: none;
+		}
+	}
+	
+	/* premium */
+	if (hide-premium) {
+		#root > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
+			display: none;
+		}
+	}
+	
+	/* achievements */
+	if (hide-achievements) {
+		#root > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) {
+			display: none;
+		}
+	}
+	
+	/* friends */
+	if (hide-friends) {
+		#root > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) {
+			display: none;
+		}
+	}
+	
+	/* share */
+	if (hide-share) {
+		#root > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(6) {
+			display: none;
+		}
+	}
 
+	/* tmp fixes */
+	[data-test="try-plus-badge"],
+	._1ii1y,
+	._3o_lc._1vljO {
+		display: none;
+	}
 }
