@@ -2,8 +2,8 @@
 @name           Chrome - Dark scrollbar and audio player
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
-@description    `Styles the scrollbar and audio player components to a dark theme (WebKit only).`
-@version        20210511.19.41
+@description    `Styles the scrollbar and audio player components to a dark theme.Every setting can be customized through the "Customize Settings" feature.(only compatible with WebKit browsers)`
+@version        20220519.15.59
 @license        NO-REDISTRIBUTION
 @preprocessor   uso
 
@@ -18,16 +18,17 @@
 
 @advanced color scrollbar-hover "Scrollbar (hover)" #444444
 
-@advanced text border-radius "Border radius" "8px"
+@advanced text scrollbar-width "Scrollbar width" "17px"
 
 @advanced text border-width "Border width" "3px"
 
+@advanced text border-radius "Border radius" "8px"
+
 @advanced dropdown dark-player "Dark audio player" {
   dark-player-0 "Disabled*" <<<EOT  EOT;
-
-  dark-player-1 "Enabled" <<<EOT audio {
-    filter: invert(1) hue-rotate(180deg);
-  } EOT;
+dark-player-1 "Enabled" <<<EOT audio {
+  filter: invert(1) hue-rotate(180deg);
+} EOT;
 
 }
 
@@ -41,8 +42,8 @@
 }
 
 /*[[scope]]*/::-webkit-scrollbar {
-  width: 17px !important;
-  height: 17px !important;
+  width: /*[[scrollbar-width]]*/ !important;
+  height: /*[[scrollbar-width]]*/ !important;
 }
 
 /*[[scope]]*/::-webkit-scrollbar-thumb {
@@ -54,7 +55,6 @@
 /*[[scope]]*/::-webkit-scrollbar-thumb:hover {
   background: /*[[scrollbar-hover]]*/;
 }
-
 
 
 /*[[dark-player]]*/
