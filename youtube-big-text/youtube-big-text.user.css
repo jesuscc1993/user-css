@@ -2,30 +2,35 @@
 @name           YouTube - Big Text
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
-@description    `Increases YouTube's font size; useful when watchign from a distance.`
-@version        2022.05.11.19.15
+@description    `Increases YouTube's font size; useful when watching from a distance.`
+@version        2022.05.31.20.29
 @license        NO-REDISTRIBUTION
 @preprocessor   stylus
 
-@var text    font-size-lg                  "Grid font size"                20px
-@var text    font-size-md                  "Video font size"               16px
-@var text    video-description-max-height  "Max video description height"  96px
-@var number  grid-line-clamp               "Max grid title lines"          4
-@var number  video-title-line-clamp        "Max video title lines"         2
-@var number  video-comment-line-clamp      "Max video comment lines"       6
+@var text     font-size-lg                  "Grid font size"                20px
+@var text     font-size-md                  "Video font size"               16px
+@var text     video-description-max-height  "Max video description height"  96px
+@var text     line-height-font-size-ratio   "Line height / font size ratio" 1.2
+@var text     owner-and-teaser-scale        "Owner and teaser scale"        1.33
+@var number   grid-line-clamp               "Max grid title lines"          4
+@var number   video-title-line-clamp        "Max video title lines"         2
+@var number   video-comment-line-clamp      "Max video comment lines"       6
 
 ==/UserStyle== */
 
 @-moz-document domain("youtube.com") {
   :root {
-    --grid-line-clamp: grid-line-clamp;
-    --video-comment-line-clamp: video-comment-line-clamp;
-    --video-title-line-clamp: video-title-line-clamp;
-    --video-description-max-height: video-description-max-height;
+		--line-height-font-size-ratio: line-height-font-size-ratio;
+		--owner-and-teaser-scale: owner-and-teaser-scale;
     --font-size-lg: font-size-lg;
     --font-size-md: font-size-md;
-    --line-height-lg: calc(var(--font-size-lg) * 1.2);
-    --line-height-md: calc(var(--font-size-md) * 1.2);
+    --grid-line-clamp: grid-line-clamp;
+    --video-comment-line-clamp: video-comment-line-clamp;
+    --video-description-max-height: video-description-max-height;
+    --video-title-line-clamp: video-title-line-clamp;
+
+    --line-height-lg: calc(var(--font-size-lg) * var(--line-height-font-size-ratio));
+    --line-height-md: calc(var(--font-size-md) * var(--line-height-font-size-ratio));
   }
 
   html:not(.style-scope)[typography] {
@@ -73,7 +78,7 @@
     font-size: var(--ytd-user-comment_-_font-size);
     line-height: var(--ytd-user-comment_-_line-height);
   }
-	
+
 	#name.ytd-author-comment-badge-renderer {
 		max-height: none;
 	}
@@ -85,4 +90,8 @@
   #description.ytd-video-secondary-info-renderer {
     max-width: none;
   }
+	
+	#owner-and-teaser {
+		zoom: var(--owner-and-teaser-scale);
+	}
 }
