@@ -3,7 +3,7 @@
 @namespace			https://github.com/jesuscc1993/
 @author					MetalTxus
 @description		Allows the customization of several Duolingo elements.
-@version				2022.06.01.19.17
+@version				2022.06.01.19.20
 @license				NO-REDISTRIBUTION
 @preprocessor		stylus
 
@@ -101,7 +101,7 @@
 		/* to counter hiding the add on top */
 	}
 
-	._2eeKH {
+	#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) ._2eeKH {
 		border-radius: 50%;
 		overflow: hidden;
 	}
