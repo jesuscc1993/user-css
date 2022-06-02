@@ -3,7 +3,7 @@
 @namespace			https://github.com/jesuscc1993/
 @author					MetalTxus
 @description		Allows the customization of several Duolingo elements.
-@version				2022.05.05.21.25
+@version				2022.06.01.19.17
 @license				NO-REDISTRIBUTION
 @preprocessor		stylus
 
@@ -16,7 +16,6 @@
 @var	checkbox	hide-friends					"Hide	friends side panel"				0
 @var	checkbox	hide-share						"Hide	share side panel"					0
 ==/UserStyle== */
-
 @-moz-document domain("duolingo.com") {
 	@media (min-width: 700px) {
 		[data-test="player-end-carousel"] > :nth-child(1) {
@@ -57,49 +56,60 @@
 
 	/* leages */
 	if (hide-leagues) {
-		#root > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
+		#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
 			display: none;
 		}
 	}
-	
+
 	/* goals */
 	if (hide-goals) {
-		#root > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+		#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
 			display: none;
 		}
 	}
-	
+
 	/* premium */
 	if (hide-premium) {
-		#root > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
+		#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
 			display: none;
 		}
 	}
-	
+
 	/* achievements */
 	if (hide-achievements) {
-		#root > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) {
+		#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) {
 			display: none;
 		}
 	}
-	
+
 	/* friends */
 	if (hide-friends) {
-		#root > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) {
+		#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) {
 			display: none;
 		}
 	}
-	
+
 	/* share */
 	if (hide-share) {
-		#root > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(6) {
+		#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(6) {
 			display: none;
 		}
+	}
+
+	[data-test="shop-section"] {
+		margin-top: 0;
+		/* to counter hiding the add on top */
+	}
+
+	._2eeKH {
+		border-radius: 50%;
+		overflow: hidden;
 	}
 
 	/* tmp fixes */
 	[data-test="try-plus-badge"],
 	._1ii1y,
+	._45hcs,
 	._3o_lc._1vljO {
 		display: none;
 	}
