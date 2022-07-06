@@ -3,18 +3,18 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    `Increases YouTube's font size; useful when watching from a distance.`
-@version        2022.07.05.21.59
+@version        2022.07.06.16.59
 @license        NO-REDISTRIBUTION
 @preprocessor   stylus
 
-@var text     font-size-lg                  "Grid font size"                20px
-@var text     font-size-md                  "Video font size"               16px
-@var text     video-description-max-height  "Max video description height"  96px
-@var text     line-height-font-size-ratio   "Line height / font size ratio" 1.2
-@var text     owner-and-teaser-scale        "Owner and teaser scale"        1.33
-@var number   grid-line-clamp               "Max grid title lines"          4
-@var number   video-title-line-clamp        "Max video title lines"         2
-@var number   video-comment-line-clamp      "Max video comment lines"       6
+@var text       font-size-lg                  "Grid font size"                20px
+@var text       font-size-md                  "Video font size"               16px
+@var text       video-description-max-height  "Max video description height"  96px
+@var text       line-height-font-size-ratio   "Line height / font size ratio" 1.2
+@var text       owner-and-teaser-scale        "Owner and teaser scale"        1.33
+@var number     grid-line-clamp               "Max grid title lines"          4
+@var number     video-title-line-clamp        "Max video title lines"         2
+@var number     video-comment-line-clamp      "Max video comment lines"       6
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
@@ -76,6 +76,16 @@
 	#name.ytd-author-comment-badge-renderer .ytd-channel-name {
 		font-size: var(--ytd-user-comment_-_font-size);
 		line-height: var(--ytd-user-comment_-_line-height);
+	}
+
+	ytd-thumbnail-overlay-time-status-renderer {
+		height: auto;
+	}
+
+	#text.ytd-thumbnail-overlay-time-status-renderer {
+		max-height: none;
+		font-size: var(--font-size-md);
+		line-height: var(--font-size-md);
 	}
 
 	.ytp-time-display,
