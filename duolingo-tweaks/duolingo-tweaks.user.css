@@ -3,7 +3,7 @@
 @namespace			https://github.com/jesuscc1993/
 @author					MetalTxus
 @description		Allows the customization of several Duolingo elements.
-@version				2022.06.01.19.20
+@version				2022.07.13.20.17
 @license				NO-REDISTRIBUTION
 @preprocessor		stylus
 
@@ -14,7 +14,7 @@
 @var	checkbox	hide-premium					"Hide	premium side panel"				0
 @var	checkbox	hide-achievements			"Hide	achievements side panel"	0
 @var	checkbox	hide-friends					"Hide	friends side panel"				0
-@var	checkbox	hide-share						"Hide	share side panel"					0
+@var	checkbox	hide-follow						"Hide	follow side panel"				0
 ==/UserStyle== */
 @-moz-document domain("duolingo.com") {
 	@media (min-width: 700px) {
@@ -89,8 +89,8 @@
 		}
 	}
 
-	/* share */
-	if (hide-share) {
+	/* follow */
+	if (hide-follow) {
 		#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(6) {
 			display: none;
 		}
