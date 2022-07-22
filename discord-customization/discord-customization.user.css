@@ -1,29 +1,29 @@
 /* ==UserStyle==
-@name           Discord - Customization
-@namespace      https://github.com/jesuscc1993/
-@author         MetalTxus
-@description    `Allows the customization of Discord's web version.`
-@version        20210910.18.29
-@license        NO-REDISTRIBUTION
-@preprocessor   less
+@name						Discord - Customization
+@namespace			https://github.com/jesuscc1993/
+@author					MetalTxus
+@description		Provides some extra customization options for Discord.
+@version				2022.07.22.22.16
+@license				CC BY-SA 4.0
+@preprocessor		less
 
-@var text font-family            "Font family"          "'Whitney', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+@var text font-family						"Font family"						"'Whitney', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
 
-@var text inline-emoji-size      "Inline emoji size"    24px
+@var text inline-emoji-size			"Inline emoji size"			24px
 
-@var text block-emoji-size       "Block emoji size"     54px
+@var text block-emoji-size			"Block emoji size"			54px
 
-@var text reaction-emoji-size    "Reaction emoji size"  20px
+@var text reaction-emoji-size		"Reaction emoji size"		20px
 
-@var text min-sidebar-width      "Min sidebar width"    240px
+@var text min-sidebar-width			"Min sidebar width"			240px
 
-@var text max-sidebar-width      "Max sidebar width"    240px
+@var text max-sidebar-width			"Max sidebar width"			240px
 
-@var text avatar-scale           "Avatar scale"         1
+@var text avatar-scale					"Avatar scale"					1
 
-@var checkbox emoji-zoom         "Emoji zoom on hover"  0
+@var checkbox emoji-zoom				"Emoji zoom on hover"		0
 
-@var checkbox restore-blurple    "Restore blurple"      0
+@var checkbox restore-blurple		"Restore blurple"				0
 
 ==/UserStyle== */
 @-moz-document domain("discord.com") {
@@ -69,9 +69,11 @@
   [class*='content-'] [class*='guilds'] {
     z-index: 102;
   }
+
   [class*='content-'] [class*='sidebar'] {
     height: 100vh;
   }
+
   [class*='content-'] [class*='membersWrap'] {
     right: 0;
     height: calc(100vh - 50px);
@@ -100,6 +102,7 @@
     [class*='sidebar-'] + [class*='chat'] {
       padding-left: 8px;
     }
+
     [class*='chatContent'] [class*='messagesWrapper'] {
       padding-right: 8px;
     }
@@ -142,50 +145,58 @@
     width: var(--inline-emoji-size) !important;
     height: var(--inline-emoji-size) !important;
   }
+
   [class*='messagesWrapper'] img.emoji.jumboable {
     width: var(--block-emoji-size) !important;
     height: var(--block-emoji-size) !important;
   }
-  // [class^='reaction'] img.emoji:not(.jumboable) {
-  //   width: var(--reaction-emoji-size) !important;
-  //   height: var(--reaction-emoji-size) !important;
-  //   margin: 3px 0;
-  // }
 
+  /*[class^='reaction'] img.emoji:not(.jumboable) {
+		 width: var(--reaction-emoji-size) !important;
+		 height: var(--reaction-emoji-size) !important;
+		 margin: 3px 0;
+	}*/
   [class*='messagesWrapper'] [class*='scrollable'] {
     max-height: none;
   }
 
   /* emoji: hover */
-  .emoji-zoom() when (@emoji-zoom = 1) {
+  .emoji-zoom() when (@emoji-zoom =1) {
     [class*='messagesWrapper'] [class*='messageContent-'] {
       overflow: visible;
     }
+
     [class*='messagesWrapper-'] img.emoji,
-		[class^='reaction'] img.emoji {
+    [class^='reaction'] img.emoji {
       transition: 0.15s;
       z-index: 1;
       position: relative;
     }
+
     [class*='messagesWrapper-'] img.emoji:hover,
-		[class^='reaction'] img.emoji:hover {
+    [class^='reaction'] img.emoji:hover {
       z-index: 2;
     }
+
     [class*='messagesWrapper-'] img.emoji:not(.jumboable):hover {
-      // transform: scale(4);
+      /*transform: scale(4);*/
       transform: scale(1);
     }
+
     [class*='messagesWrapper-'] img.emoji.jumboable:hover {
       transform: scale(2);
     }
+
     [class^='reaction'] img.emoji:not(.jumboable):hover {
-      // transform: scale(4);
+      /*transform: scale(4);*/
       transform: scale(1);
     }
-		[role="textbox"] img.emoji:hover {
-      transform: none !important;			
-		}
+
+    [role='textbox'] img.emoji:hover {
+      transform: none !important;
+    }
   }
+
   .emoji-zoom();
 
   /* MISCELLANEOUS */
@@ -202,6 +213,7 @@
   [class*='nameAndDecorators'] > *:first-child {
     flex: 1;
   }
+
   [class*='nameAndDecorators'] > *:not(:first-child) {
     align-self: normal;
   }
@@ -231,6 +243,7 @@
   [class*='name'][style='color: rgb(255, 255, 255);'] {
     color: #747f8d !important;
   }
+
   [class*='name'][style='color: rgb(54, 57, 62);'],
   [class*='name'][style='color: rgb(54, 57, 63);'] {
     color: #98a8b3 !important;
@@ -295,22 +308,4 @@
     --brand-experiment-90a: rgba(114, 137, 218, 0.9);
     --brand-experiment-95a: rgba(114, 137, 218, 0.95);
   }
-
-  /* SHRINK */
-  /*[class*="messagesWrapper"] [class*="grid"] {
-    padding: 0 1rem .5rem .75rem;
-  }
-
-  [class*="compact"][class*="wrapper"],
-  [class*="cozy"][class*="wrapper"] {
-    padding-top: .05rem;
-    padding-bottom: .05rem;
-  }*/
-  /* disabled as it messes up scrolling */
-  /*.group-spacing-16 [class*="groupStart"] {
-    margin-top: 8px;
-  }
-  .group-spacing-16 [class*="divider"] + [class*="groupStart"] {
-    margin-top: 16px;
-  }*/
 }

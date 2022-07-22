@@ -1,41 +1,42 @@
 /* ==UserStyle==
-@name           Stylus - Dark+ (CodeMirror theme)
-@namespace      https://github.com/jesuscc1993/
-@author         MetalTxus
-@description    `Dark+ CodeMirror theme for the Stylus extension (Chrome only).`
-@version        20211017.22.59
-@license        NO-REDISTRIBUTION
-@preprocessor   uso
+@name						Stylus - Dark+ (CodeMirror theme)
+@namespace			https://github.com/jesuscc1993/
+@author					MetalTxus
+@description		Dark+ CodeMirror theme for the Stylus extension (Chrome only).
+@version				2022.07.22.22.16
+@license				CC BY-SA 4.0
+@preprocessor		uso
 
 ==/UserStyle== */
 
-@-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne/edit.html") {
+@-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne/edit.html")
+{
   .CodeMirror {
-    --c-attention: #FF33FF;
-    --c-background: #1E1E1E;
-    --c-blue: #569CD6;
+    --c-attention: #ff33ff;
+    --c-background: #1e1e1e;
+    --c-blue: #569cd6;
     --c-border-light: #333;
     --c-border: #282828;
-    --c-cyan: #9CDCFE;
-    --c-foreground: #FFF;
-    --c-green: #6A9955;
-    --c-lime: #B5CEA8;
+    --c-cyan: #9cdcfe;
+    --c-foreground: #fff;
+    --c-green: #6a9955;
+    --c-lime: #b5cea8;
     --c-line-number: #858585;
-    --c-orange: #CE9178;
-    --c-search-result-current: #515C6A;
+    --c-orange: #ce9178;
+    --c-search-result-current: #515c6a;
     --c-search-result: #613214;
     --c-selection: #264f78;
-    --c-string: #E6DB74;
-    --c-variable: #DCDCAA;
-    --c-yellow: #D7BA7D;
-  
+    --c-string: #e6db74;
+    --c-variable: #dcdcaa;
+    --c-yellow: #d7ba7d;
+
     --c-scrollbar-background: #181818;
     --c-scrollbar-hover: #444;
     --c-scrollbar: #333;
-  
+
     --font-family: 'Roboto Mono';
     --font-size: 15px;
-  
+
     font-family: var(--font-family);
     font-size: var(--font-size);
   }
@@ -81,7 +82,7 @@
     font-family: var(--font-family);
     text-shadow: none;
   }
-  
+
   div.CodeMirror span.CodeMirror-matchingbracket {
     color: var(--c-attention);
   }
@@ -127,7 +128,7 @@
   .cm-s-default .cm-variable-3 {
     color: var(--c-orange);
   }
-  
+
   body.find-open .cm-searching.search-target-match {
     background-color: var(--c-search-result-current);
     color: inherit;
@@ -135,28 +136,28 @@
   body.find-open .cm-searching {
     background-color: var(--c-search-result);
   }
-  
+
   .CodeMirror ::-webkit-scrollbar,
   .CodeMirror ::-webkit-scrollbar-corner,
   .CodeMirror ::-webkit-scrollbar-track-piece,
   .CodeMirror-scrollbar-filler {
     background: var(--c-scrollbar-background) !important;
   }
-  
+
   .CodeMirror ::-webkit-scrollbar {
     width: 17px !important;
     height: 17px !important;
   }
-  
+
   .CodeMirror ::-webkit-scrollbar-thumb {
     background: var(--c-scrollbar);
     border: 3px solid var(--c-scrollbar-background) !important;
     border-radius: 8px !important;
   }
-  
+
   .CodeMirror ::-webkit-scrollbar-thumb:hover {
     background: var(--c-scrollbar-hover);
   }
-  
+
   /* based on: https://raw.githubusercontent.com/microsoft/vscode/master/extensions/theme-defaults/themes/dark_plus.json */
-  }
+}
