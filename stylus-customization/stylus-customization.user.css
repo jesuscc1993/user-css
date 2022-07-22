@@ -1,0 +1,51 @@
+/* ==UserStyle==
+@name           Stylus - Customization
+@namespace      https://github.com/jesuscc1993/
+@author         MetalTxus
+@description    Provides some extra customization options the Stylus extension.
+@version        2022.07.22.22.36
+@license        CC BY-SA 4.0
+@preprocessor   stylus
+
+@var text input-width  "Input Width"  128px
+@var text input-height "Input Height" 22px
+
+==/UserStyle== */
+@-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne")
+{
+  #sections .section:first-child .CodeMirror {
+    min-height: calc(100% - 116px) !important;
+  }
+
+  #sections .section:not(:first-child) .CodeMirror {
+    min-height: 212px !important;
+  }
+
+  #message-box .colorview-swatch,
+  #message-box .colorview-swatch::after,
+  #message-box .colorview-swatch::before,
+  .color-swatch,
+  .config-body .select-resizer,
+  .config-body input[type="text"],
+  .config-body select {
+    box-sizing: border-box;
+    height: input-height;
+    max-width: none;
+    width: input-width;
+  }
+
+  #message-box .colorview-swatch,
+  #message-box .colorview-swatch::after,
+  #message-box .colorview-swatch::before,
+  .color-swatch {
+    margin-right: 1px;
+  }
+
+  .config-body .onoffswitch {
+    margin-right: 3px;
+  }
+
+  /*.config-reset-icon {
+		padding: 0 2px;
+	}*/
+}
