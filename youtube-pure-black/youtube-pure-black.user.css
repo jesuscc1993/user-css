@@ -1,0 +1,29 @@
+/* ==UserStyle==
+@name           YouTube - Pure Black
+@namespace      https://github.com/jesuscc1993/
+@author         MetalTxus
+@description    Pure black theme for YouTube.
+@version        2022.07.22.20.22
+@license        NO-REDISTRIBUTION
+@preprocessor   stylus
+
+@var text       background-color		"Background color"		#000
+
+==/UserStyle== */
+@-moz-document domain("youtube.com") {
+	html[darker-dark-theme][dark],
+	[darker-dark-theme] [dark],
+	html[dark],
+	[dark] {
+		--yt-spec-base-background: background-color/* #0f0f0f */;
+		--yt-spec-raised-background: background-color/* #212121 */;
+		--yt-spec-menu-background: background-color/* #2F2F2F */;
+		--yt-spec-general-background-a: background-color/* #181818 */;
+		--yt-spec-general-background-b: background-color/* #0f0f0f */;
+		--yt-spec-general-background-c: background-color/* #030303 */;
+		/* regular dark */
+		--yt-spec-brand-background-solid: background-color/* #212121 */;
+		--yt-spec-brand-background-primary: background-color/* rgba(33, 33, 33, 0.98) */;
+		--yt-spec-brand-background-secondary: background-color/* rgba(33, 33, 33, 0.95) */;
+	}
+}
