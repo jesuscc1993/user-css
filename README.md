@@ -10,3 +10,4 @@ To install, view the raw files. Requires the [Stylus](https://github.com/opensty
 - [stylus-dark](stylus-dark)
 - [youtube-big-text](youtube-big-text)
 - [youtube-fullscreen-theater](youtube-fullscreen-theater)
+- [youtube-pure-black](youtube-pure-black)
