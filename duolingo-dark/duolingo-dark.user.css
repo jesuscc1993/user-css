@@ -1,23 +1,23 @@
 /* ==UserStyle==
-@name						Duolingo - Dark Theme
-@namespace			https://github.com/jesuscc1993/
-@author					MetalTxus
-@description		Dark theme for Duolingo.
-@version				2022.07.22.22.16
-@license				CC BY-SA 4.0
-@preprocessor		uso
+@name           Duolingo - Dark Theme
+@namespace      https://github.com/jesuscc1993/
+@author         MetalTxus
+@description    Dark theme for Duolingo.
+@version        2022.07.22.22.36
+@license        CC BY-SA 4.0
+@preprocessor   uso
 
 ==/UserStyle== */
 @-moz-document domain("duolingo.com") {
-  path[fill='#e5e5e5'] {
+  path[fill="#e5e5e5"] {
     fill: #444;
   }
-  path[fill='#ffd900'] {
+  path[fill="#ffd900"] {
     fill: #c80;
   }
 
-  [role='progressbar'],
-  [id='session/PlayerFooter'] {
+  [role="progressbar"],
+  [id="session/PlayerFooter"] {
     filter: saturate(1.5);
   }
 
@@ -28,7 +28,7 @@
   img,
   svg,
   video,
-  [style*='background-image'] {
+  [style*="background-image"] {
     filter: invert(1) hue-rotate(180deg) brightness(1.125);
   }
 

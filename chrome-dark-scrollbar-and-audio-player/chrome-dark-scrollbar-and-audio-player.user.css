@@ -1,43 +1,45 @@
 /* ==UserStyle==
-@name						Chrome - Dark scrollbar and audio player
-@namespace			https://github.com/jesuscc1993/
-@author					MetalTxus
-@description		Styles the scrollbar and audio player components to a dark theme. Every setting can be customized through the "Customize Settings" feature. Only compatible with WebKit browsers.
-@version				2022.07.22.22.16
-@license				CC BY-SA 4.0
-@preprocessor		uso
+@name           Chrome - Dark scrollbar and audio player
+@namespace      https://github.com/jesuscc1993/
+@author         MetalTxus
+@description    Styles the scrollbar and audio player components to a dark theme. Every setting can be customized through the "Customize Settings" feature. Only compatible with WebKit browsers.
+@version        2022.07.22.22.36
+@license        CC BY-SA 4.0
+@preprocessor   uso
 
 @advanced dropdown scope "Scope" {
-	scope-any "All scrollbars*" <<<EOT	EOT;
-	scope-html "Main scrollbar" <<<EOT html >	EOT;
+  scope-any        "All scrollbars*" <<<EOT  EOT;
+  scope-html       "Main scrollbar"  <<<EOT html >  EOT;
 }
 
-@advanced color background "Background" #101010
+@advanced color    background      "Background" #101010
 
-@advanced color scrollbar "Scrollbar" #333333
+@advanced color    scrollbar       "Scrollbar" #333333
 
-@advanced color scrollbar-hover "Scrollbar (hover)" #444444
+@advanced color    scrollbar-hover "Scrollbar (hover)" #444444
 
-@advanced text scrollbar-width "Scrollbar width" "17px"
+@advanced text     scrollbar-width "Scrollbar width" "17px"
 
-@advanced text border-width "Border width" "3px"
+@advanced text     border-width    "Border width" "3px"
 
-@advanced text border-radius "Border radius" "8px"
+@advanced text     border-radius   "Border radius" "8px"
 
-@advanced dropdown dark-player "Dark audio player" {
-	dark-player-0 "Disabled*" <<<EOT	EOT;
+@advanced dropdown dark-player     "Dark audio player" {
+  dark-player-0    "Disabled*" <<<EOT  EOT;
 
-	dark-player-1 "Enabled" <<<EOT audio {
-		filter: invert(1) hue-rotate(180deg);
-	} EOT;
+  dark-player-1    "Enabled"   <<<EOT audio {
+    filter: invert(1) hue-rotate(180deg);
+  } EOT;
 }
 
 ==/UserStyle== */
 @-moz-document regexp(".*") {
   /*[[scope]]*/
   ::-webkit-scrollbar,
-	/*[[scope]]*/::-webkit-scrollbar-corner,
-	/*[[scope]]*/::-webkit-scrollbar-track-piece {
+	/*[[scope]]*/
+	::-webkit-scrollbar-corner,
+	/*[[scope]]*/
+	::-webkit-scrollbar-track-piece {
     background: /*[[background]]*/ !important;
   }
 

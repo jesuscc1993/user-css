@@ -1,45 +1,45 @@
 /* ==UserStyle==
-@name						Duolingo - Customization
-@namespace			https://github.com/jesuscc1993/
-@author					MetalTxus
-@description		Provides some extra customization options for Duolingo.
-@version				2022.07.22.22.16
-@license				CC BY-SA 4.0
-@preprocessor		stylus
+@name           Duolingo - Customization
+@namespace      https://github.com/jesuscc1993/
+@author         MetalTxus
+@description    Provides some extra customization options for Duolingo.
+@version        2022.07.22.22.36
+@license        CC BY-SA 4.0
+@preprocessor   stylus
 
-@var	checkbox	hide-characters				"Hide	Duolingo characters"			0
+@var  checkbox  hide-characters        "Hide Duolingo characters"       0
 
-@var	checkbox	hide-pronunciation		"Hide	pronunciation"						0
+@var  checkbox  hide-pronunciation     "Hide pronunciation"             0
 
-@var	checkbox	hide-leagues					"Hide	leagues side panel"				0
+@var  checkbox  hide-leagues           "Hide leagues side panel"        0
 
-@var	checkbox	hide-goals						"Hide	goals side panel"					0
+@var  checkbox  hide-goals             "Hide goals side panel"          0
 
-@var	checkbox	hide-premium					"Hide	premium side panel"				0
+@var  checkbox  hide-premium           "Hide premium side panel"        0
 
-@var	checkbox	hide-achievements			"Hide	achievements side panel"	0
+@var  checkbox  hide-achievements      "Hide achievements side panel"   0
 
-@var	checkbox	hide-friends					"Hide	friends side panel"				0
+@var  checkbox  hide-friends           "Hide friends side panel"        0
 
-@var	checkbox	hide-follow						"Hide	follow side panel"				0
+@var  checkbox  hide-follow            "Hide follow side panel"         0
 
 ==/UserStyle== */
 @-moz-document domain("duolingo.com") {
   @media (min-width: 700px) {
-    [data-test='player-end-carousel'] > :nth-child(1) {
+    [data-test="player-end-carousel"] > :nth-child(1) {
       width: 100%;
     }
-    [data-test='player-end-carousel'] > :nth-child(2) {
+    [data-test="player-end-carousel"] > :nth-child(2) {
       display: none;
     }
 
-    [data-test*='challenge'] > .uH5m4 {
+    [data-test*="challenge"] > .uH5m4 {
       max-width: none;
       width: 672px;
     }
   }
 
-  [data-test='challenge-tap-token'] {
+  [data-test="challenge-tap-token"] {
     user-select: text;
   }
 
@@ -64,101 +64,58 @@
 
   /* leages */
   if (hide-leagues) {
-    #root
-      > div
-      > div:nth-child(5)
-      > div
-      > div:nth-child(1)
-      > div:nth-child(1)
-      > div:nth-child(1) {
+    #root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
       display: none;
     }
   }
 
   /* goals */
   if (hide-goals) {
-    #root
-      > div
-      > div:nth-child(5)
-      > div
-      > div:nth-child(1)
-      > div:nth-child(1)
-      > div:nth-child(2) {
+    #root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
       display: none;
     }
   }
 
   /* premium */
   if (hide-premium) {
-    #root
-      > div
-      > div:nth-child(5)
-      > div
-      > div:nth-child(1)
-      > div:nth-child(1)
-      > div:nth-child(3) {
+    #root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
       display: none;
     }
   }
 
   /* achievements */
   if (hide-achievements) {
-    #root
-      > div
-      > div:nth-child(5)
-      > div
-      > div:nth-child(1)
-      > div:nth-child(1)
-      > div:nth-child(4) {
+    #root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) {
       display: none;
     }
   }
 
   /* friends */
   if (hide-friends) {
-    #root
-      > div
-      > div:nth-child(5)
-      > div
-      > div:nth-child(1)
-      > div:nth-child(1)
-      > div:nth-child(5) {
+    #root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) {
       display: none;
     }
   }
 
   /* follow */
   if (hide-follow) {
-    #root
-      > div
-      > div:nth-child(5)
-      > div
-      > div:nth-child(1)
-      > div:nth-child(1)
-      > div:nth-child(6) {
+    #root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(6) {
       display: none;
     }
   }
 
-  [data-test='shop-section'] {
+  [data-test="shop-section"] {
     margin-top: 0;
     /* to counter hiding the add on top */
   }
 
-  #root
-    > div
-    > div:nth-child(5)
-    > div
-    > div:nth-child(1)
-    > div:nth-child(1)
-    > div:nth-child(1)
-    ._2eeKH {
+  #root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) ._2eeKH {
     border-radius: 50%;
     overflow: hidden;
   }
 
   /* tmp fixes */
-  [data-test='try-plus-badge'],
+  [data-test="try-plus-badge"],
   ._1ii1y,
   ._45hcs,
   ._3o_lc._1vljO {

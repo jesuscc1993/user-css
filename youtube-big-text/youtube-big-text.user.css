@@ -1,27 +1,27 @@
 /* ==UserStyle==
-@name						YouTube - Big Text
-@namespace			https://github.com/jesuscc1993/
-@author					MetalTxus
-@description		Increases YouTube's font size; useful when watching from a distance.
-@version				2022.07.22.22.16
-@license				CC BY-SA 4.0
-@preprocessor		stylus
+@name           YouTube - Big Text
+@namespace      https://github.com/jesuscc1993/
+@author         MetalTxus
+@description    Increases YouTube's font size; useful when watching from a distance.
+@version        2022.07.22.22.36
+@license        CC BY-SA 4.0
+@preprocessor   stylus
 
-@var text			 font-size-lg										"Grid font size"									20px
+@var text       font-size-lg                    "Grid font size"                  20px
 
-@var text			 font-size-md										"Video font size"									16px
+@var text       font-size-md                    "Video font size"                 16px
 
-@var text			 video-description-max-height		"Max video description height"		96px
+@var text       video-description-max-height    "Max video description height"    96px
 
-@var text			 line-height-font-size-ratio		"Line height / font size ratio"		1.2
+@var text       line-height-font-size-ratio     "Line height / font size ratio"   1.2
 
-@var text			 owner-and-teaser-scale					"Owner and teaser scale"					1.33
+@var text       owner-and-teaser-scale          "Owner and teaser scale"          1.33
 
-@var number		 grid-line-clamp							 "Max grid title lines"							4
+@var number     grid-line-clamp                 "Max grid title lines"            4
 
-@var number		 video-title-line-clamp					"Max video title lines"						2
+@var number     video-title-line-clamp          "Max video title lines"           2
 
-@var number		 video-comment-line-clamp				"Max video comment lines"					6
+@var number     video-comment-line-clamp        "Max video comment lines"         6
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
@@ -35,12 +35,8 @@
     --video-description-max-height: video-description-max-height;
     --video-title-line-clamp: video-title-line-clamp;
 
-    --line-height-lg: calc(
-      var(--font-size-lg) * var(--line-height-font-size-ratio)
-    );
-    --line-height-md: calc(
-      var(--font-size-md) * var(--line-height-font-size-ratio)
-    );
+    --line-height-lg: calc(var(--font-size-lg) * var(--line-height-font-size-ratio));
+    --line-height-md: calc(var(--font-size-md) * var(--line-height-font-size-ratio));
   }
 
   html:not(.style-scope)[typography] {
@@ -55,9 +51,7 @@
   }
 
   ytd-expander {
-    --ytd-expander-collapsed-height: var(
-      --video-description-max-height
-    ) !important;
+    --ytd-expander-collapsed-height: var(--video-description-max-height) !important;
     --ytd-expander-max-lines: var(--video-comment-line-clamp) !important;
   }
 
@@ -68,8 +62,7 @@
 
   ytd-grid-playlist-renderer #video-title.ytd-grid-playlist-renderer,
   ytd-grid-video-renderer #video-title.ytd-grid-video-renderer,
-  ytd-grid-video-renderer
-    #video-title.yt-simple-endpoint.ytd-grid-video-renderer,
+  ytd-grid-video-renderer #video-title.yt-simple-endpoint.ytd-grid-video-renderer,
   ytd-item-section-renderer #video-title.ytd-playlist-video-renderer,
   ytd-two-column-search-results-renderer #video-title.ytd-video-renderer {
     font-size: var(--font-size-md);

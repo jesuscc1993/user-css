@@ -1,11 +1,11 @@
 /* ==UserStyle==
-@name						Stylus - Dark theme
-@namespace			https://github.com/jesuscc1993/
-@author					MetalTxus
-@description		`Dark theme for the Stylus extension (Chrome only).`
-@version				2022.07.22.22.16
-@license				CC BY-SA 4.0
-@preprocessor		uso
+@name           Stylus - Dark theme
+@namespace      https://github.com/jesuscc1993/
+@author         MetalTxus
+@description    Dark theme for the Stylus extension (Chrome only).
+@version        2022.07.22.22.36
+@license        CC BY-SA 4.0
+@preprocessor   uso
 
 ==/UserStyle== */
 
@@ -31,7 +31,7 @@
   #confirm > div,
   #header,
   #help-popup,
-  #message-box [id^='message'],
+  #message-box [id^="message"],
   #options,
   .menu-items-wrapper,
   body {
@@ -40,10 +40,10 @@
   }
 
   /* #header,
-	#options {
-		background: var(--c-sidebar-background);
-		color: var(--c-foreground);
-	} */
+  #options {
+    background: var(--c-sidebar-background);
+    color: var(--c-foreground);
+  } */
 
   #header {
     box-shadow: none;
@@ -107,7 +107,7 @@
   }
 
   #manage\.newUI\.sort,
-  #options [type='number'],
+  #options [type="number"],
   #search {
     padding-left: 6px;
     padding-right: 6px;
@@ -125,12 +125,12 @@
   button:not(:disabled):hover {
     background: var(--c-hover) !important;
     /*background: var(--c-foreground);
-		color: var(--c-background);
-		border-color: var(--c-foreground);*/
+    color: var(--c-background);
+    border-color: var(--c-foreground);*/
   }
 
-  .style-name:hover input[type='checkbox'],
-  input[type='checkbox']:not(.slider):hover {
+  .style-name:hover input[type="checkbox"],
+  input[type="checkbox"]:not(.slider):hover {
     background: var(--c-hover) !important;
   }
 
@@ -164,12 +164,7 @@
 
   .newUI .entry .style-name:hover::before,
   .entry .style-name::before {
-    background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.05) 50%,
-      transparent
-    );
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05) 50%, transparent);
   }
   .newUI .entry.enabled .style-name:hover .style-name-link {
     color: var(--c-foreground);

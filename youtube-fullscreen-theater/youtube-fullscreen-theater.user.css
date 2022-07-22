@@ -1,13 +1,13 @@
 /* ==UserStyle==
-@name						YouTube - Fullscreen Theater
-@namespace			https://github.com/jesuscc1993/
-@author					MetalTxus
-@description		Displays YouTube's theater in fullscreen.
-@version				2022.07.22.22.16
-@license				CC BY-SA 4.0
-@preprocessor		stylus
+@name           YouTube - Fullscreen Theater
+@namespace      https://github.com/jesuscc1993/
+@author         MetalTxus
+@description    Displays YouTube's theater in fullscreen.
+@version        2022.07.22.22.36
+@license        CC BY-SA 4.0
+@preprocessor   stylus
 
-@var checkbox		hide-scrollbar	"Hide scrollbar"		0
+@var checkbox   hide-scrollbar  "Hide scrollbar"  0
 
 ==/UserStyle== */
 @-moz-document url-prefix("https://www.youtube.com/watch?v=")
@@ -33,6 +33,7 @@
     transition-delay: 0.15s;
     border-bottom: 56px solid transparent;
   }
+
   #masthead-container.ytd-app:focus-within,
   #masthead-container.ytd-app:hover {
     top: 0;

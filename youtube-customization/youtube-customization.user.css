@@ -1,19 +1,19 @@
 /* ==UserStyle==
-@name						YouTube - Customization
-@namespace			https://github.com/jesuscc1993/
-@author					MetalTxus
-@description		Provides some extra customization options for YouTube.
-@version				2022.07.22.22.16
-@license				CC BY-SA 4.0
-@preprocessor		stylus
+@name            YouTube - Customization
+@namespace      https://github.com/jesuscc1993/
+@author          MetalTxus
+@description    Provides some extra customization options for YouTube.
+@version        2022.07.22.22.36
+@license        CC BY-SA 4.0
+@preprocessor    stylus
 
-@var number			grid-thumbnail-zoom 		"Grid thumbnail zoom" 		125
+@var number      grid-thumbnail-zoom     "Grid thumbnail zoom"     125
 
-@var number			list-thumbnail-zoom 		"List thumbnail zoom" 		125
+@var number      list-thumbnail-zoom     "List thumbnail zoom"     125
 
-@var text				drawer-width 						"App drawer width" 				192px
+@var text        drawer-width            "App drawer width"        192px
 
-@var text				grid-max-width					"Max grid width" 					1600px
+@var text        grid-max-width          "Max grid width"          1600px
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
@@ -70,8 +70,7 @@
   #country-code,
   #top-level-buttons-computed > :nth-child(4),
   #voice-search-button,
-  #buttons.ytd-masthead
-    > ytd-topbar-menu-button-renderer.ytd-masthead.style-default {
+  #buttons.ytd-masthead > ytd-topbar-menu-button-renderer.ytd-masthead.style-default {
     display: none !important;
   }
 
@@ -80,8 +79,7 @@
     z-index: 0;
   }
 
-  ytd-subscribe-button-renderer[button-style='COMPACT_GRAY']
-    tp-yt-paper-button.ytd-subscribe-button-renderer:not([subscribed]) {
+  ytd-subscribe-button-renderer[button-style="COMPACT_GRAY"] tp-yt-paper-button.ytd-subscribe-button-renderer:not([subscribed]) {
     background-color: var(--yt-spec-brand-button-background);
     color: var(--yt-spec-static-brand-white);
   }
@@ -106,20 +104,18 @@
   /* hide text on video buttons */
   /* ytd-video-primary-info-renderer ytd-toggle-button-renderer:not(:first-child) yt-formatted-string, */
   /* dislike */
-  ytd-video-primary-info-renderer
-    ytd-button-renderer:not(:first-child)
-    yt-formatted-string {
+  ytd-video-primary-info-renderer ytd-button-renderer:not(:first-child) yt-formatted-string {
     display: none;
   }
 
   /* hide sidebar items */
   #sections ytd-guide-section-renderer:nth-child(1) > * > ytd-guide-entry-renderer:nth-child(2),
-	/* explore */
-	#sections ytd-guide-section-renderer:nth-child(1) > * > ytd-guide-entry-renderer:nth-child(3),
-	/* shorts */
-	#sections ytd-guide-collapsible-section-entry-renderer:nth-child(5) > * > ytd-guide-entry-renderer:nth-child(2),
-	/* your videos */
-	foo {
+  /* explore */
+  #sections ytd-guide-section-renderer:nth-child(1) > * > ytd-guide-entry-renderer:nth-child(3),
+  /* shorts */
+  #sections ytd-guide-collapsible-section-entry-renderer:nth-child(5) > * > ytd-guide-entry-renderer:nth-child(2),
+  /* your videos */
+  foo {
     display: none;
   }
 
