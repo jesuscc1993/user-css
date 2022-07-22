@@ -29,6 +29,7 @@
     [data-test="player-end-carousel"] > :nth-child(1) {
       width: 100%;
     }
+
     [data-test="player-end-carousel"] > :nth-child(2) {
       display: none;
     }
