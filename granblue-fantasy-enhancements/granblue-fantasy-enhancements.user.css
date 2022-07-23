@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2022.07.22.22.36
+@version        2022.07.23.11.39
 @license        CC BY-SA 4.0
 @preprocessor   uso
 
@@ -89,6 +89,10 @@
     #gree-game-container .wrapper {
       margin-bottom: 0px !important;
     }
+		.pop-claimed.pop-usual .prt-popup-frame.all-claim {
+			max-height: calc(50vh - 200px);
+			overflow-y: auto;
+		}
   EOT;
 
 }
@@ -789,82 +793,85 @@
 
 ==/UserStyle== */
 @-moz-document domain("granbluefantasy.jp") {
-  /* font */
-  body,
-  .prt-status .prt-user-name .txt-user-name {
-    /* 'FOT-テロップ明朝 Pro D' */
-    font-family: "/*[[font-family]]*/", "Average Sans", sans-serif !important;
-  }
+	/* font */
+	body,
+	.prt-status .prt-user-name .txt-user-name {
+		/* 'FOT-テロップ明朝 Pro D' */
+		font-family: "/*[[font-family]]*/", "Average Sans", sans-serif !important;
+	}
 
-  /* hide sidebar */
-  body.jssdk > div:first-child > div:first-child {
-    display: none;
-  }
+	/* hide sidebar */
+	body.jssdk > div:first-child > div:first-child {
+		display: none;
+	}
 
-  body,
-  .cnt-raid,
-  .cnt-raid .cnt-multi,
-  .prt-mask-job,
-  .prt-scene-comment-after-mask {
-    background: /*[[bg-color]]*/ !important;
-  }
-  .mask {
-    background: /*[[bg-color]]*/ B3 !important;
-  }
+	body,
+	.cnt-raid,
+	.cnt-raid .cnt-multi,
+	.prt-mask-job,
+	.prt-scene-comment-after-mask {
+		background: /*[[bg-color]]*/
+		!important;
+	}
 
-  /* fix font sizes */
-  .prt-supporter-info .prt-supporter-detail .prt-summon-skill.text-small {
-    font-size: 8.25px !important;
-    font-weight: 500;
-  }
+	.mask {
+		background: /*[[bg-color]]*/
+		B3 !important;
+	}
 
-  /* fix poker BG */
-  .cnt-poker {
-    background: #000;
-  }
+	/* fix font sizes */
+	.prt-supporter-info .prt-supporter-detail .prt-summon-skill.text-small {
+		font-size: 8.25px !important;
+		font-weight: 500;
+	}
 
-  /* fix user info BG */
-  .prt-user-info::before {
-    border-image-repeat: stretch stretch;
-  }
+	/* fix poker BG */
+	.cnt-poker {
+		background: #000;
+	}
 
-  /* fix crew chest overlapping pictures */
-  #submenu-general-chat #chat-body #chat-log .lis-log .txt-log {
-    padding-left: 52px;
-  }
+	/* fix user info BG */
+	.prt-user-info::before {
+		border-image-repeat: stretch stretch;
+	}
 
-  /* prevent horizontal scrollbar */
-  body {
-    overflow-x: hidden;
-  }
+	/* fix crew chest overlapping pictures */
+	#submenu-general-chat #chat-body #chat-log .lis-log .txt-log {
+		padding-left: 52px;
+	}
 
-  /*[[center-content]]*/
-  /*[[center-popups]]*/
-  /*[[compact-gacha]]*/
-  /*[[compact-raids]]*/
-  /*[[compact-summons]]*/
-  /*[[fit-crew-chat]]*/
-  /*[[fix-header-menu]]*/
-  /*[[gray-out-equipped]]*/
-  /*[[hide-arcarum-skip]]*/
-  /*[[hide-crystal-count]]*/
-  /*[[hide-event-load]]*/
-  /*[[hide-gacha-banner]]*/
-  /*[[hide-header-banners]]*/
-  /*[[hide-outfit-sets]]*/
-  /*[[hide-pinboard]]*/
-  /*[[hide-quest-comment]]*/
-  /*[[hide-scrollbars]]*/
-  /*[[hide-size]]*/
-  /*[[hide-special-draw]]*/
-  /*[[hide-star-premium]]*/
-  /*[[hide-submenu]]*/
-  /*[[hide-support-plus]]*/
-  /*[[keep-extras-open]]*/
-  /*[[rearrange-raid-ui]]*/
-  /*[[selectable-text]]*/
-  /*[[sort-summons]]*/
-  /*[[submenu-on-left]]*/
+	/* prevent horizontal scrollbar */
+	body {
+		overflow-x: hidden;
+	}
+
+	/*[[center-content]]*/
+	/*[[center-popups]]*/
+	/*[[compact-gacha]]*/
+	/*[[compact-raids]]*/
+	/*[[compact-summons]]*/
+	/*[[fit-crew-chat]]*/
+	/*[[fix-header-menu]]*/
+	/*[[gray-out-equipped]]*/
+	/*[[hide-arcarum-skip]]*/
+	/*[[hide-crystal-count]]*/
+	/*[[hide-event-load]]*/
+	/*[[hide-gacha-banner]]*/
+	/*[[hide-header-banners]]*/
+	/*[[hide-outfit-sets]]*/
+	/*[[hide-pinboard]]*/
+	/*[[hide-quest-comment]]*/
+	/*[[hide-scrollbars]]*/
+	/*[[hide-size]]*/
+	/*[[hide-special-draw]]*/
+	/*[[hide-star-premium]]*/
+	/*[[hide-submenu]]*/
+	/*[[hide-support-plus]]*/
+	/*[[keep-extras-open]]*/
+	/*[[rearrange-raid-ui]]*/
+	/*[[selectable-text]]*/
+	/*[[sort-summons]]*/
+	/*[[submenu-on-left]]*/
 }
 
 /*[[compact-lists]]*/
