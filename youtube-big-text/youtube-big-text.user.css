@@ -81,7 +81,7 @@
 	#content-text.ytd-comment-renderer,
 	.ytd-comment-renderer,
 	#name.ytd-author-comment-badge-renderer .ytd-channel-name {
-		font-size: var(--ytd-user-comment_-_font-size);
+	  font-size: var(--ytd-user-comment_-_font-size);
 		line-height: var(--ytd-user-comment_-_line-height);
 	}
 
