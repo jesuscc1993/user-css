@@ -3,125 +3,134 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Provides some extra customization options for YouTube.
-@version        2022.07.22.22.36
+@version        2022.07.25.23.29
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var number     grid-thumbnail-zoom     "Grid thumbnail zoom"     125
+@var number     grid-thumbnail-zoom     "Grid thumbnail zoom"                 125
 
-@var number     list-thumbnail-zoom     "List thumbnail zoom"     125
+@var number     list-thumbnail-zoom     "List thumbnail zoom"                 125
 
-@var text       drawer-width            "App drawer width"        192px
+@var text       drawer-width            "App drawer width"                    192px
 
-@var text       grid-max-width          "Max grid width"          1600px
+@var text       grid-max-width          "Max grid width"                      1600px
+
+@var checkbox   force-sub-bg            "Force black subtitle background"     1
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
-  :root {
-    --grid-thumbnail-zoom: grid-thumbnail-zoom / 100;
-    --grid-thumbnail-width: calc(210px * var(--grid-thumbnail-zoom));
-    --grid-thumbnail-height: calc(118px * var(--grid-thumbnail-zoom));
+	:root {
+		--grid-thumbnail-zoom: grid-thumbnail-zoom / 100;
+		--grid-thumbnail-width: calc(210px * var(--grid-thumbnail-zoom));
+		--grid-thumbnail-height: calc(118px * var(--grid-thumbnail-zoom));
 
-    --list-thumbnail-zoom: list-thumbnail-zoom / 100;
-    --list-thumbnail-width: calc(120px * var(--list-thumbnail-zoom));
-    --list-thumbnail-height: calc(68px * var(--list-thumbnail-zoom));
-  }
+		--list-thumbnail-zoom: list-thumbnail-zoom / 100;
+		--list-thumbnail-width: calc(120px * var(--list-thumbnail-zoom));
+		--list-thumbnail-height: calc(68px * var(--list-thumbnail-zoom));
+	}
 
-  html:not(.style-scope) {
-    --ytd-grid-max-width: grid-max-width;
-    --ytd-grid-6-columns-width: var(--ytd-grid-max-width);
-  }
+	html:not(.style-scope) {
+		--ytd-grid-max-width: grid-max-width;
+		--ytd-grid-6-columns-width: var(--ytd-grid-max-width);
+	}
 
-  /* custom grid zoom */
-  ytd-thumbnail.ytd-grid-video-renderer {
-    height: var(--grid-thumbnail-height);
-  }
+	/* custom grid zoom */
+	ytd-thumbnail.ytd-grid-video-renderer {
+		height: var(--grid-thumbnail-height);
+	}
 
-  #items.ytd-grid-renderer > ytd-grid-video-renderer.ytd-grid-renderer,
-  #items.ytd-grid-renderer > ytd-grid-radio-renderer.ytd-grid-renderer,
-  #items.ytd-grid-renderer > ytd-grid-channel-renderer.ytd-grid-renderer,
-  #items.ytd-grid-renderer > ytd-grid-playlist-renderer.ytd-grid-renderer,
-  #items.ytd-grid-renderer > ytd-grid-movie-playlist-renderer.ytd-grid-renderer,
-  #items.ytd-grid-renderer > ytd-grid-movie-renderer.ytd-grid-renderer,
-  #items.ytd-grid-renderer > ytd-grid-show-renderer.ytd-grid-renderer,
-  #items.ytd-grid-renderer > ytd-game-card-renderer.ytd-grid-renderer,
-  #items.ytd-grid-renderer ytd-thumbnail.ytd-grid-video-renderer {
-    width: var(--grid-thumbnail-width);
-  }
+	#items.ytd-grid-renderer > ytd-grid-video-renderer.ytd-grid-renderer,
+	#items.ytd-grid-renderer > ytd-grid-radio-renderer.ytd-grid-renderer,
+	#items.ytd-grid-renderer > ytd-grid-channel-renderer.ytd-grid-renderer,
+	#items.ytd-grid-renderer > ytd-grid-playlist-renderer.ytd-grid-renderer,
+	#items.ytd-grid-renderer > ytd-grid-movie-playlist-renderer.ytd-grid-renderer,
+	#items.ytd-grid-renderer > ytd-grid-movie-renderer.ytd-grid-renderer,
+	#items.ytd-grid-renderer > ytd-grid-show-renderer.ytd-grid-renderer,
+	#items.ytd-grid-renderer > ytd-game-card-renderer.ytd-grid-renderer,
+	#items.ytd-grid-renderer ytd-thumbnail.ytd-grid-video-renderer {
+		width: var(--grid-thumbnail-width);
+	}
 
-  #items.ytd-grid-renderer ytd-thumbnail img.yt-img-shadow {
-    width: var(--grid-thumbnail-width) !important;
-  }
+	#items.ytd-grid-renderer ytd-thumbnail img.yt-img-shadow {
+		width: var(--grid-thumbnail-width) !important;
+	}
 
-  ytd-thumbnail.ytd-playlist-video-renderer,
-  ytd-playlist-video-renderer ytd-thumbnail img.yt-img-shadow {
-    max-height: none;
-    max-width: none;
-    height: var(--list-thumbnail-height);
-    width: var(--list-thumbnail-width);
-  }
+	ytd-thumbnail.ytd-playlist-video-renderer,
+	ytd-playlist-video-renderer ytd-thumbnail img.yt-img-shadow {
+		max-height: none;
+		max-width: none;
+		height: var(--list-thumbnail-height);
+		width: var(--list-thumbnail-width);
+	}
 
-  #hover-overlays {
-    zoom: 2.075;
-  }
+	#hover-overlays {
+		zoom: 2.075;
+	}
 
-  /* misc */
-  /*html > ::-webkit-scrollbar,*/
-  #country-code,
-  #top-level-buttons-computed > :nth-child(4),
-  #voice-search-button,
-  #buttons.ytd-masthead > ytd-topbar-menu-button-renderer.ytd-masthead.style-default {
-    display: none !important;
-  }
+	/* misc */
+	/*html > ::-webkit-scrollbar,*/
+	#country-code,
+	#top-level-buttons-computed > :nth-child(4),
+	#voice-search-button,
+	#buttons.ytd-masthead > ytd-topbar-menu-button-renderer.ytd-masthead.style-default {
+		display: none !important;
+	}
 
-  ytd-thumbnail-overlay-resume-playback-renderer {
-    height: 32px;
-    z-index: 0;
-  }
+	ytd-thumbnail-overlay-resume-playback-renderer {
+		height: 32px;
+		z-index: 0;
+	}
 
-  ytd-subscribe-button-renderer[button-style="COMPACT_GRAY"] tp-yt-paper-button.ytd-subscribe-button-renderer:not([subscribed]) {
-    background-color: var(--yt-spec-brand-button-background);
-    color: var(--yt-spec-static-brand-white);
-  }
+	ytd-subscribe-button-renderer[button-style="COMPACT_GRAY"] tp-yt-paper-button.ytd-subscribe-button-renderer:not([subscribed]) {
+		background-color: var(--yt-spec-brand-button-background);
+		color: var(--yt-spec-static-brand-white);
+	}
 
-  /* thinner sidebar */
-  ytd-app {
-    --app-drawer-width: drawer-width;
-  }
+	/* thinner sidebar */
+	ytd-app {
+		--app-drawer-width: drawer-width;
+	}
 
-  ytd-guide-renderer.ytd-app {
-    width: var(--app-drawer-width);
-  }
+	ytd-guide-renderer.ytd-app {
+		width: var(--app-drawer-width);
+	}
 
-  tp-yt-paper-item.ytd-guide-entry-renderer {
-    padding: 0 16px;
-  }
+	tp-yt-paper-item.ytd-guide-entry-renderer {
+		padding: 0 16px;
+	}
 
-  ytd-app[guide-persistent-and-visible] ytd-page-manager.ytd-app {
-    margin-left: var(--app-drawer-width);
-  }
+	ytd-app[guide-persistent-and-visible] ytd-page-manager.ytd-app {
+		margin-left: var(--app-drawer-width);
+	}
 
-  /* hide text on video buttons */
-  /* ytd-video-primary-info-renderer ytd-toggle-button-renderer:not(:first-child) yt-formatted-string, */
-  /* dislike */
-  ytd-video-primary-info-renderer ytd-button-renderer:not(:first-child) yt-formatted-string {
-    display: none;
-  }
+	/* force sub bg color */
+	if force-sub-bg {
+		.ytp-caption-segment {
+			background: rgba(8, 8, 8, 0.75) !important;
+		}
+	}
 
-  /* hide sidebar items */
-  #sections ytd-guide-section-renderer:nth-child(1) > * > ytd-guide-entry-renderer:nth-child(2),
-  /* explore */
-  #sections ytd-guide-section-renderer:nth-child(1) > * > ytd-guide-entry-renderer:nth-child(3),
-  /* shorts */
-  #sections ytd-guide-collapsible-section-entry-renderer:nth-child(5) > * > ytd-guide-entry-renderer:nth-child(2),
-  /* your videos */
-  foo {
-    display: none;
-  }
+	/* hide text on video buttons */
+	/* ytd-video-primary-info-renderer ytd-toggle-button-renderer:not(:first-child) yt-formatted-string, */
+	/* dislike */
+	ytd-video-primary-info-renderer ytd-button-renderer:not(:first-child) yt-formatted-string {
+		display: none;
+	}
 
-  /* extensions */
-  .ytp-right-controls #infoButton,
-  .ytp-right-controls #startSegmentButton {
-    display: none !important;
-  }
+	/* hide sidebar items */
+	#sections ytd-guide-section-renderer:nth-child(1) > * > ytd-guide-entry-renderer:nth-child(2),
+	/* explore */
+	#sections ytd-guide-section-renderer:nth-child(1) > * > ytd-guide-entry-renderer:nth-child(3),
+	/* shorts */
+	#sections ytd-guide-collapsible-section-entry-renderer:nth-child(5) > * > ytd-guide-entry-renderer:nth-child(2),
+	/* your videos */
+	foo {
+		display: none;
+	}
+
+	/* extensions */
+	.ytp-right-controls #infoButton,
+	.ytp-right-controls #startSegmentButton {
+		display: none !important;
+	}
 }
