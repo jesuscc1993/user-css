@@ -13,15 +13,10 @@
 }
 
 @advanced color    background      "Background" #101010
-
 @advanced color    scrollbar       "Scrollbar" #333333
-
 @advanced color    scrollbar-hover "Scrollbar (hover)" #444444
-
 @advanced text     scrollbar-width "Scrollbar width" "17px"
-
 @advanced text     border-width    "Border width" "3px"
-
 @advanced text     border-radius   "Border radius" "8px"
 
 @advanced dropdown dark-player     "Dark audio player" {

@@ -8,13 +8,9 @@
 @preprocessor   stylus
 
 @var number     grid-thumbnail-zoom     "Grid thumbnail zoom"                 125
-
 @var number     list-thumbnail-zoom     "List thumbnail zoom"                 125
-
 @var text       drawer-width            "App drawer width"                    192px
-
 @var text       grid-max-width          "Max grid width"                      1600px
-
 @var checkbox   force-sub-bg            "Force black subtitle background"     1
 
 ==/UserStyle== */
@@ -106,7 +102,7 @@
 	/* force sub bg color */
 	if force-sub-bg {
 		.ytp-caption-segment {
-			background: rgba(8, 8, 8, 0.75) !important;
+      background: rgba(0, 0, 0, .72) !important;
 		}
 	}
 

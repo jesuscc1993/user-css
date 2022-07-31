@@ -8,21 +8,13 @@
 @preprocessor   less
 
 @var text font-family            "Font family"            "'Whitney', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
-
 @var text inline-emoji-size      "Inline emoji size"      24px
-
 @var text block-emoji-size       "Block emoji size"       54px
-
 @var text reaction-emoji-size    "Reaction emoji size"    20px
-
 @var text min-sidebar-width      "Min sidebar width"      240px
-
 @var text max-sidebar-width      "Max sidebar width"      240px
-
 @var text avatar-scale           "Avatar scale"           1
-
 @var checkbox emoji-zoom         "Emoji zoom on hover"    0
-
 @var checkbox restore-blurple    "Restore blurple"        0
 
 ==/UserStyle== */

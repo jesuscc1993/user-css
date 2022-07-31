@@ -8,19 +8,12 @@
 @preprocessor   stylus
 
 @var  checkbox  hide-characters        "Hide Duolingo characters"       0
-
 @var  checkbox  hide-pronunciation     "Hide pronunciation"             0
-
 @var  checkbox  hide-leagues           "Hide leagues side panel"        0
-
 @var  checkbox  hide-goals             "Hide goals side panel"          0
-
 @var  checkbox  hide-premium           "Hide premium side panel"        0
-
 @var  checkbox  hide-achievements      "Hide achievements side panel"   0
-
 @var  checkbox  hide-friends           "Hide friends side panel"        0
-
 @var  checkbox  hide-follow            "Hide follow side panel"         0
 
 ==/UserStyle== */

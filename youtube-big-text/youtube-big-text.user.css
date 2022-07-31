@@ -8,21 +8,13 @@
 @preprocessor   stylus
 
 @var text       font-size-cc                    "Caption font size"               36px
-
 @var text       font-size-lg                    "Grid font size"                  20px
-
 @var text       font-size-md                    "Video font size"                 16px
-
 @var text       video-description-max-height    "Max video description height"    96px
-
 @var text       line-height-font-size-ratio     "Line height / font size ratio"   1.2
-
 @var text       owner-and-teaser-scale          "Owner and teaser scale"          1.33
-
 @var number     grid-line-clamp                 "Max grid title lines"            4
-
 @var number     video-title-line-clamp          "Max video title lines"           2
-
 @var number     video-comment-line-clamp        "Max video comment lines"         6
 
 ==/UserStyle== */
