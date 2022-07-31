@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Styles the scrollbar and audio player components to a dark theme. Every setting can be customized through the "Customize Settings" feature. Only compatible with WebKit browsers.
-@version        2022.07.22.22.36
+@version        2022.07.31.10.59
 @license        CC BY-SA 4.0
 @preprocessor   uso
 
@@ -34,30 +34,24 @@
 
 ==/UserStyle== */
 @-moz-document regexp(".*") {
-  /*[[scope]]*/
-  ::-webkit-scrollbar,
-  /*[[scope]]*/
-  ::-webkit-scrollbar-corner,
-  /*[[scope]]*/
-  ::-webkit-scrollbar-track-piece {
+  /*[[scope]]*/::-webkit-scrollbar,
+	/*[[scope]]*/::-webkit-scrollbar-corner,
+	/*[[scope]]*/::-webkit-scrollbar-track-piece {
     background: /*[[background]]*/ !important;
   }
 
-  /*[[scope]]*/
-  ::-webkit-scrollbar {
+  /*[[scope]]*/::-webkit-scrollbar {
     width: /*[[scrollbar-width]]*/ !important;
     height: /*[[scrollbar-width]]*/ !important;
   }
 
-  /*[[scope]]*/
-  ::-webkit-scrollbar-thumb {
+  /*[[scope]]*/::-webkit-scrollbar-thumb {
     background: /*[[scrollbar]]*/ ;
     border: /*[[border-width]]*/ solid /*[[background]]*/ !important;
     border-radius: /*[[border-radius]]*/ !important;
   }
 
-  /*[[scope]]*/
-  ::-webkit-scrollbar-thumb:hover {
+  /*[[scope]]*/::-webkit-scrollbar-thumb:hover {
     background: /*[[scrollbar-hover]]*/ ;
   }
 
