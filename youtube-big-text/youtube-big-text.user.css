@@ -3,9 +3,11 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Increases YouTube's font size; useful when watching from a distance.
-@version        2022.07.25.23.18
+@version        2022.07.27.18.25
 @license        CC BY-SA 4.0
 @preprocessor   stylus
+
+@var text       font-size-cc                    "Caption font size"               36px
 
 @var text       font-size-lg                    "Grid font size"                  20px
 
@@ -30,6 +32,7 @@
     --owner-and-teaser-scale: owner-and-teaser-scale;
     --font-size-lg: font-size-lg;
     --font-size-md: font-size-md;
+    --font-size-cc: font-size-cc;
     --grid-line-clamp: grid-line-clamp;
     --video-comment-line-clamp: video-comment-line-clamp;
     --video-description-max-height: video-description-max-height;
@@ -37,6 +40,7 @@
 
     --line-height-lg: calc(var(--font-size-lg) * var(--line-height-font-size-ratio));
     --line-height-md: calc(var(--font-size-md) * var(--line-height-font-size-ratio));
+    --line-height-cc: calc(var(--font-size-cc) * var(--line-height-font-size-ratio));
   }
 
   html:not(.style-scope)[typography] {
@@ -95,11 +99,16 @@
     line-height: var(--line-height-md);
   }
 
-  .ytp-caption-segment,
   ytd-grid-video-renderer #text.ytd-thumbnail-overlay-time-status-renderer {
     max-height: none;
     font-size: var(--font-size-lg) !important;
     line-height: var(--line-height-lg) !important;
+  }
+
+  .ytp-caption-segment {
+    max-height: none;
+    font-size: var(--font-size-cc) !important;
+    line-height: var(--line-height-cc) !important;
   }
 
   .ytp-time-display,
