@@ -21,7 +21,7 @@
   }
 
   ::-webkit-scrollbar {
-    width: 17px !important;
+    width: 0px !important;
     height: 17px !important;
   }
 
@@ -30,7 +30,7 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #0a0a0a;
+    background: #0A0A0A;
     border: 3px solid var(--c-scrollbar-bg) !important;
     border-radius: 8px !important;
   }
@@ -87,6 +87,7 @@
     left: 8px;
   } */
 
+
   .prt-command > *:first-child,
   .prt-command > *:first-child > * {
     z-index: 0;
@@ -94,8 +95,9 @@
 
   .prt-command-chara .prt-special,
   .prt-command-chara .prt-ability-list {
-    background: #150f0f;
+    background: #150F0F;
   }
+
 
   /* fast draw */
   /*#cjs-gacha {
@@ -270,7 +272,7 @@
   }
   /* 4 banners per gameplay extra rows */
   .prt-campaign-banners::before {
-    border-image: url(http://game-a.granbluefantasy.jp/assets_en/img/sp/ui/campaign_toggle/campaign_base.png) 140 0 60 fill stretch round;
+    border-image: url(https://prd-game-a-granbluefantasy.akamaized.net/assets_en/img/sp/ui/campaign_toggle/campaign_base.png?1511244036) 160 0 60 fill stretch round;
     border-width: 70px 0 30px;
   }
   .prt-campaign-banners {
@@ -299,7 +301,7 @@
     padding-top: 5px;
   }
   /* hide upgrade crap */
-  .prt-attribute-bonus {
+  /*.prt-attribute-bonus {
     display: none !important;
   }
   .cnt-confirm-material .txt-evolution-confirm {
@@ -307,7 +309,7 @@
     margin-bottom: 0;
     opacity: 0;
     pointer-events: none;
-  }
+  }*/
 
   /* hide crew chat when it doesn't fit */
   @media (max-width: 1600px) {
@@ -367,7 +369,7 @@
   }
   /* darker disabled abilities */
   .prt-command-chara .prt-ability-list .lis-ability [class^="shine"] {
-    opacity: 0.66;
+    opacity: .66;
   }
   /* compact enhancements */
   .prt-enhance-detail.prt-module-enhancement {
@@ -423,12 +425,12 @@
     width: 60px !important;
     z-index: 10;
     position: relative;
-    transition: 0.1s;
+    transition: .1s;
   }
   .txt-balloon-comment .img-stamp,
   .txt-log .img-stamp {
     margin: -15px !important;
-    transform: scale(0.5);
+    transform: scale(.5);
   }
   .txt-balloon-comment .img-stamp:hover,
   .txt-log .img-stamp:hover {
@@ -514,7 +516,7 @@
     outline: none;
   }
   #submenu #cnt-submenu-navi-vertical {
-    background: black !important;
+    background: black !important
   }
   /* compact battle confirmation */
   .txt-deck-confirm {
@@ -629,7 +631,7 @@
   /*show-town*/
   .cnt-mypage {
     display: flex;
-    flex-direction: column;
+    flex-direction: column
   }
   .lis-banner {
     margin-bottom: -4px;
@@ -668,8 +670,7 @@
   }
 }
 
-@-moz-document url-prefix("http://game.granbluefantasy.jp/#raid/")
-{
+@-moz-document url-prefix("http://game.granbluefantasy.jp/#raid/") {
   /* click through modal backdrops */
   .mask {
     min-height: 0 !important;
@@ -677,8 +678,7 @@
   }
 }
 
-@-moz-document url-prefix("http://game.granbluefantasy.jp/#comic/")
-{
+@-moz-document url-prefix("http://game.granbluefantasy.jp/#comic/") {
   header,
   .prt-episode-title,
   footer {
@@ -717,11 +717,20 @@
   }
 }
 
-@-moz-document url("http://game.granbluefantasy.jp/#quest/assist/event")
-{
+@-moz-document url("http://game.granbluefantasy.jp/#quest/assist/event") {
   /* hide stuff on event raids page */
   #prt-assist-id,
   .prt-lead {
     display: none;
   }
+}/* ==UserStyle==
+@name           Empty @name replaces the default template - 4/9/2022, 12:36:12 PM
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+
+@-moz-document domain("example.com") {
+  /* Insert code here... */
 }
