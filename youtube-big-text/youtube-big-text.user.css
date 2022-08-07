@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Increases YouTube's font size; useful when watching from a distance.
-@version        2022.07.27.18.25
+@version        2022.08.07.11.24
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
@@ -80,6 +80,11 @@
     font-size: var(--ytd-user-comment_-_font-size);
     line-height: var(--ytd-user-comment_-_line-height);
   }
+	
+	.ytd-comment-renderer yt-formatted-string > .emoji.small-emoji {
+    height: var(--ytd-user-comment_-_font-size);
+    width: auto;
+	}
 
   ytd-thumbnail-overlay-time-status-renderer {
     height: auto;
