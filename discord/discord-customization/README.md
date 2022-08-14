@@ -14,4 +14,4 @@ Provides some extra customization options for Discord.
 
 ## Installation
 
-- [UserCSS](./discord-customization.user.css) (requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension).
+- [UserCSS](./discord-customization.user.css) (requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension; press the "Raw" button to install).

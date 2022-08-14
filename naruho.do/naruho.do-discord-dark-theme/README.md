@@ -10,4 +10,4 @@ Replica la apariencia y colores del tema oscuro de Discord.
 
 ## Installation
 
-- [UserCSS](./naruho.do-discord-dark-theme.user.css) (requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension).
+- [UserCSS](./naruho.do-discord-dark-theme.user.css) (requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension; press the "Raw" button to install).

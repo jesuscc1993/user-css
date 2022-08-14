@@ -10,4 +10,4 @@ Permite la personalización de varios aspectos visuales.
 
 ## Installation
 
-- [UserCSS](./naruho.do-customize.user.css) (requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension).
+- [UserCSS](./naruho.do-customize.user.css) (requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension; press the "Raw" button to install).

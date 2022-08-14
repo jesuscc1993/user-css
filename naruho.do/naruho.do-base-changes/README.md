@@ -10,4 +10,4 @@ Aplica una serie de cambios básicos sobre los que aplicar otros temas.
 
 ## Installation
 
-- [UserCSS](./naruho.do-base-changes.user.css) (requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension).
+- [UserCSS](./naruho.do-base-changes.user.css) (requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension; press the "Raw" button to install).

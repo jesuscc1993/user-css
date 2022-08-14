@@ -14,7 +14,7 @@
 
 ## Installation
 
-- [UserCSS](./granblue-fantasy-enhancements.user.css) (requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension).
+- [UserCSS](./granblue-fantasy-enhancements.user.css) (requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension; press the "Raw" button to install).
 
 ## Settings overview
 
