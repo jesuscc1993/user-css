@@ -3,8 +3,12 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Aplica una serie de cambios básicos sobre los que aplicar otros temas.
-@version        2022.08.14.16.28
+@version        2022.08.14.17.33
 @license        CC BY-SA 4.0
+@preprocessor		stylus
+
+@var  checkbox  fix-header        			"Anclar cabecera"       				0
+@var  checkbox  limit-message-height    "Limitar alto de mensajes"      0
 ==/UserStyle== */
 
 @-moz-document regexp("https?\\:\\/\\/naruho\\.do.*") {
@@ -217,22 +221,6 @@
     height: 8px;
   }
 
-  /* max comment height */
-  .comment_wrapper .message p {
-    max-height: 416px;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-
-  /* fixed Header */
-  #header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-sizing: border-box;
-  }
-
   #wrapper {
     padding-top: 40px;
   }
@@ -306,5 +294,23 @@
     background: none;
     line-height: 22px;
     padding: 6px 8px;
+  }
+
+  if (limit-message-height) {
+		.comment_wrapper .message p {
+			max-height: 416px;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+  }
+
+  if (fix-header) {
+		#header {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 1000;
+			box-sizing: border-box;
+		}
   }
 }
