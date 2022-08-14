@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Provides some extra customization options for Duolingo.
-@version        2022.07.22.22.36
+@version        2022.08.14.17.39
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
@@ -18,101 +18,110 @@
 
 ==/UserStyle== */
 @-moz-document domain("duolingo.com") {
-  @media (min-width: 700px) {
-    [data-test="player-end-carousel"] > :nth-child(1) {
-      width: 100%;
-    }
+	@media (min-width: 700px) {
+		[data-test="player-end-carousel"] > :nth-child(1) {
+			width: 100%;
+		}
 
-    [data-test="player-end-carousel"] > :nth-child(2) {
-      display: none;
-    }
+		[data-test="player-end-carousel"] > :nth-child(2) {
+			display: none;
+		}
 
-    [data-test*="challenge"] > .uH5m4 {
-      max-width: none;
-      width: 672px;
-    }
-  }
+		[data-test*="challenge"] > .uH5m4 {
+			max-width: none;
+			width: 672px;
+		}
+	}
 
-  [data-test="challenge-tap-token"] {
-    user-select: text;
-  }
+	[data-test="challenge-tap-token"] {
+		user-select: text;
+	}
 
-  /* characters */
-  if (hide-characters) {
-    .ite_X,
-    .F2B9m {
-      display: none;
-    }
+	/* characters */
+	if (hide-characters) {
+		.ite_X,
+		.F2B9m {
+			display: none;
+		}
 
-    ._1UVl- {
-      margin-left: -10px;
-    }
-  }
+		._1UVl- {
+			margin-left: -10px;
+		}
+	}
 
-  /* pronunciation */
-  if (hide-pronunciation) {
-    ._47IB1._3x_e5._2m_ED {
-      display: none;
-    }
-  }
+	/* pronunciation */
+	if (hide-pronunciation) {
+		._47IB1._3x_e5._2m_ED {
+			display: none;
+		}
+	}
 
-  /* leages */
-  if (hide-leagues) {
-    #root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
-      display: none;
-    }
-  }
+	/* leages */
+	if (hide-leagues) {
+		#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
+			display: none;
+		}
+	}
 
-  /* goals */
-  if (hide-goals) {
-    #root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
-      display: none;
-    }
-  }
+	/* goals */
+	if (hide-goals) {
+		#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+			display: none;
+		}
+	}
 
-  /* premium */
-  if (hide-premium) {
-    #root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
-      display: none;
-    }
-  }
+	/* premium */
+	if (hide-premium) {
+		#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
+			display: none;
+		}
+	}
 
-  /* achievements */
-  if (hide-achievements) {
-    #root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) {
-      display: none;
-    }
-  }
+	/* achievements */
+	if (hide-achievements) {
+		#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) {
+			display: none;
+		}
+	}
 
-  /* friends */
-  if (hide-friends) {
-    #root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) {
-      display: none;
-    }
-  }
+	/* friends */
+	if (hide-friends) {
+		#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) {
+			display: none;
+		}
+	}
 
-  /* follow */
-  if (hide-follow) {
-    #root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(6) {
-      display: none;
-    }
-  }
+	/* follow */
+	if (hide-follow) {
+		#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(6) {
+			display: none;
+		}
+	}
 
-  [data-test="shop-section"] {
-    margin-top: 0;
-    /* to counter hiding the add on top */
-  }
+	[data-test="shop-section"] {
+		margin-top: 0;
+		/* to counter hiding the add on top */
+	}
 
-  #root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) ._2eeKH {
-    border-radius: 50%;
-    overflow: hidden;
-  }
+	#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) ._2eeKH {
+		border-radius: 50%;
+		overflow: hidden;
+	}
 
-  /* tmp fixes */
-  [data-test="try-plus-badge"],
-  ._1ii1y,
-  ._45hcs,
-  ._3o_lc._1vljO {
-    display: none;
-  }
+	/* hide results adds column */
+	._1jZrU {
+		width: 100%;
+	}
+
+	.SQR8J {
+		display: none;
+	}
+
+	/* tmp fixes */
+	[data-test="try-plus-badge"],
+	._1ii1y,
+	._45hcs,
+	._3o_lc._1vljO {
+		display: none;
+	}
 }
