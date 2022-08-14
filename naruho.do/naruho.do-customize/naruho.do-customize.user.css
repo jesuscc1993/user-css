@@ -13,86 +13,86 @@ wall_default "Original" <<<EOT http://cdn.naruho.do/images/background_texture.pn
 wall_black "Original, negro" <<<EOT http://cdn.naruho.do/feed_uploads/6y5jto.png EOT;
 wall_hexagon_pattern "Patrón hexagonal" <<<EOT https://cdn.naruho.do/feed_uploads/N7IkrH.gif EOT;
 
-	wall_image-custom-dropdown "Custom" <<<EOT /*[[wall_image-custom]]*\/ EOT;
+  wall_image-custom-dropdown "Custom" <<<EOT /*[[wall_image-custom]]*\/ EOT;
 }
 @advanced text wall_image-custom "Fondo: Imagen (configurar \"Fondo: Acomodación\" si se utiliza uno distinto) (Custom)" "https://example.com/image.png"
 @advanced dropdown wall_stretch "Fondo: Acomodación" {
-	wall_stretch-none "No acomodar" <<<EOT auto auto EOT;
+  wall_stretch-none "No acomodar" <<<EOT auto auto EOT;
 wall_stretch-x "A lo ancho" <<<EOT 100% auto EOT;
 wall_stretch-y "A lo alto" <<<EOT auto 100% EOT;
 wall_stretch-xy "A lo ancho y a lo alto" <<<EOT 100% 100% EOT;
 
 }
 @advanced dropdown wall_attach "Fondo: Desplazar con el contenido" {
-	wall_attach-fixed "No" <<<EOT fixed EOT;
+  wall_attach-fixed "No" <<<EOT fixed EOT;
 wall_attach-scroll "Sí" <<<EOT scroll EOT;
 
 }
 @advanced dropdown scroll_header "Cabecera: Desplazar con el contenido" {
-	scroll_header-1 "Sí" <<<EOT /* Fixed Header *\/
+  scroll_header-1 "Sí" <<<EOT /* Fixed Header *\/
 #header {
-	position: fixed;
-	width: 100%;
-	height: 40px;
-	box-sizing: border-box;
-	top: 0;
-	z-index: 1000;
-	padding: 8px 4px;
-	border-bottom-width: 3px;
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  top: 0;
+  z-index: 1000;
+  padding: 8px 4px;
+  border-bottom-width: 3px;
 }
 
 #wrapper {
-	padding-top: 40px;
+  padding-top: 40px;
 }
 
 #wrap_content {
-	background-position: right 40px;
+  background-position: right 40px;
 }
 
 #navBar .icon {
-	height: 50px;
-	padding-top: 1px;
+  height: 50px;
+  padding-top: 1px;
 } EOT;
 scroll_header-0 "No" <<<EOT   EOT;
 
 }
 @advanced dropdown avt-roundness "Avatares: Redondeado" {
-	avt-roundness-3 "Completo" <<<EOT 50% EOT;
+  avt-roundness-3 "Completo" <<<EOT 50% EOT;
 avt-roundness-2 "Vertical" <<<EOT 52px EOT;
 avt-roundness-1 "Esquinas" <<<EOT 4px EOT;
 avt-roundness-0 "Ninguno" <<<EOT 2px EOT;
 
 }
 @advanced dropdown small_friend_grid "Avatares: Reducir tamaño en lista de amistades" {
-	small_friend_grid-0 "No" <<<EOT  EOT;
+  small_friend_grid-0 "No" <<<EOT  EOT;
 small_friend_grid-1 "Sí" <<<EOT /* Smaller avatars in friend grid *\/
 #friends_block .gridded_list li,
 #userSocial_block .gridded_list li {
-	height: 168px;
-	width: 15.65%;
-	clear: none !important;
+  height: 168px;
+  width: 15.65%;
+  clear: none !important;
 }
 
 #friends_block .gridded_list li img,
 #userSocial_block .gridded_list li img {
-	max-height:128px;
+  max-height:128px;
 } EOT;
 
 }
 @advanced dropdown avatar-shadows "Avatares: Proyectar sombras (defectuoso)" {
-	avatar-shadows-0 "No" <<<EOT  EOT;
+  avatar-shadows-0 "No" <<<EOT  EOT;
 avatar-shadows-1 "Sí" <<<EOT #board #long_feeds .avatar.rounded img {
-	box-shadow: 0 2px 8px rgba(0,0,0,.35);	
+  box-shadow: 0 2px 8px rgba(0,0,0,.35);  
 }
 
 #board #long_feeds [id*="ndo-message-"],
 #board #long_feeds .avatar.rounded {
-	overflow: visible;
+  overflow: visible;
 } EOT;
 
 }
 @advanced dropdown feedHeightLimit "Feeds: Limitar alto de los comentarios" {
-	feedHeightLimit-0 "No" <<<EOT  EOT;
+  feedHeightLimit-0 "No" <<<EOT  EOT;
 feedHeightLimit-1 "Sí" <<<EOT /* Limit feed content height *\/
 #long_feeds .message.box > p,
 #long_feeds .message.box [data-showmore] > p {
@@ -103,12 +103,12 @@ feedHeightLimit-1 "Sí" <<<EOT /* Limit feed content height *\/
 
 }
 @advanced dropdown image_limitHeight "Feeds: Limitar alto de las imágenes" {
-	feed_images-limit "Sí" <<<EOT max-height: 480px; EOT;
+  feed_images-limit "Sí" <<<EOT max-height: 480px; EOT;
 feed_images-noLimit "No" <<<EOT  EOT;
 
 }
 @advanced dropdown better_list_update "Feeds: Actualización de listas más legibles" {
-	better_list_update-1 "Sí" <<<EOT /* More readable list updates *\/
+  better_list_update-1 "Sí" <<<EOT /* More readable list updates *\/
 [href^="https://naruho.do/anime/"]:before,
 [href^="https://naruho.do/manga/"]:before {
     content: '\A• ';
@@ -122,87 +122,87 @@ better_list_update-2 "No" <<<EOT  EOT;
 
 }
 @advanced dropdown bigger_rating "Votación: Texto más grande" {
-	bigger_rating-0 "No" <<<EOT  EOT;
+  bigger_rating-0 "No" <<<EOT  EOT;
 bigger_rating-1 "Sí" <<<EOT /* Bigger rating text *\/
 .comment_wrapper .vote a {
-	margin: -0.5px 1px;
+  margin: -0.5px 1px;
 }
 .comment_wrapper .vote a:first-child  {
-	margin-top: -1px;
+  margin-top: -1px;
 }
 .comment_wrapper .vote a:last-child  {
-	margin-bottom: -1px;
+  margin-bottom: -1px;
 }
 
 .comment_wrapper .vote span {
-	display: block;
-	font-size: 14px;
-	margin-bottom: 2px;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 2px;
 } EOT;
 
 }
 @advanced dropdown hide_vote_icons "Votación: Mostrar botones sólo al pasar el cursor sobre los mismos" {
-	hide_vote_icons-0 "No" <<<EOT  EOT;
+  hide_vote_icons-0 "No" <<<EOT  EOT;
 hide_vote_icons-1 "Sí" <<<EOT /* Hide vote buttons unless hovered *\/
 .comment_wrapper .vote:not(:hover) a:not(.active) {
-	visibility: hidden;
+  visibility: hidden;
 } EOT;
 
 }
 @advanced dropdown smallerListRows "Listas: Reducir alto de las filas en las listas de anime y manga" {
-	smallerListRows-1 "Sí" <<<EOT /* Smaller anime/manga list rows *\/
+  smallerListRows-1 "Sí" <<<EOT /* Smaller anime/manga list rows *\/
 #user_seriesList .cel.ds,
 #user_seriesList .cel.position {
-	padding:4px 0 !important;
+  padding:4px 0 !important;
 }
 #user_seriesList .cel.ds {
-	padding-left:28px !important;
+  padding-left:28px !important;
 }
 #list li .actions {
-	top:5px;
+  top:5px;
 } EOT;
 smallerListRows-0 "No" <<<EOT  EOT;
 
 }
 @advanced dropdown hide_new_topics "Lateral: Ocultar nuevos temas" {
-	hide_new_topics-0 "No" <<<EOT  EOT;
+  hide_new_topics-0 "No" <<<EOT  EOT;
 hide_new_topics-1 "Sí" <<<EOT /* Hide new topics *\/
 #feeds-rightBlock .box:nth-child(2) {
-	display: none;
+  display: none;
 } EOT;
 
 }
 @advanced dropdown hide_trending "Lateral: Ocultar tendencias" {
-	hide_trending-0 "No" <<<EOT  EOT;
+  hide_trending-0 "No" <<<EOT  EOT;
 hide_trending-1 "Sí" <<<EOT /* Hide trending *\/
 #feeds-rightBlock .box:nth-child(3) {
-	display: none;
+  display: none;
 } EOT;
 
 }
 @advanced dropdown hide_new_releases "Lateral: Ocultar nuevas publicaciones" {
-	hide_new_releases-0 "No" <<<EOT  EOT;
+  hide_new_releases-0 "No" <<<EOT  EOT;
 hide_new_releases-1 "Sí" <<<EOT /* Hide new releases *\/
 #feeds-rightBlock .box:nth-child(4) {
-	display: none;
+  display: none;
 } EOT;
 
 }
 @advanced dropdown truncate_sidebar "Lateral: Truncar textos largos" {
-	truncate_sidebar-0 "No" <<<EOT  EOT;
+  truncate_sidebar-0 "No" <<<EOT  EOT;
 truncate_sidebar-1 "Sí" <<<EOT /* Truncate sidebar text *\/
 #feeds-rightBlock .hashtag a {
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 } EOT;
 
 }
 @advanced dropdown compact "Compactar contenido (ahorro de alrededor de un 30% del espacio)" {
-	compact-0 "No" <<<EOT  EOT;
+  compact-0 "No" <<<EOT  EOT;
 compact-1 "Sí" <<<EOT body {
 font-size: 12px;
-	line-height: 16px;
+  line-height: 16px;
 }
 
 .comment_wrapper .add-comment textarea {
@@ -322,13 +322,13 @@ font-size: 12px;
 /* 1920px *\/
 @media (min-width: 1900px) {
     
-	#board #long_feeds .comments .message {
-		width: 93.6% !important;
-	}
+  #board #long_feeds .comments .message {
+    width: 93.6% !important;
+  }
 
-	#long_feeds .comments .message {
-		width: 93.15% !important;
-	}
+  #long_feeds .comments .message {
+    width: 93.15% !important;
+  }
 
 } EOT;
 
@@ -377,7 +377,7 @@ font-size: 12px;
     border-width: 2px;
   }
 
-	body .avatar,
+  body .avatar,
   body .avatar.rounded {
     border-radius: 0;
   }

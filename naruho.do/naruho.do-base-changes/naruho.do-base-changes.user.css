@@ -3,306 +3,308 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Aplica una serie de cambios básicos sobre los que aplicar otros temas.
-@version        2022.08.14.12.44
+@version        2022.08.14.11.21
 @license        CC BY-SA 4.0
 ==/UserStyle== */
 
-/* fixes */
-#wrap_content #long_feeds .message {
-	margin-bottom: 0;
-	padding-right: 4px;
-}
+@-moz-document regexp("https?\\:\\/\\/naruho\\.do.*") {
+  /* fixes */
+  #wrap_content #long_feeds .message {
+    margin-bottom: 0;
+    padding-right: 4px;
+  }
 
-#wrap_content #long_feeds .comments {
-	margin: 0;
-	border-width: 0 1px;
-	padding: 0 10px;
-}
+  #wrap_content #long_feeds .comments {
+    margin: 0;
+    border-width: 0 1px;
+    padding: 0 10px;
+  }
 
-#wrap_content #long_feeds .message {
-	padding-right: 0;
-}
+  #wrap_content #long_feeds .message {
+    padding-right: 0;
+  }
 
-#wrap_content .comment_wrapper .vote {
-	margin-right: 10px;
-	width: 18px;
-}
+  #wrap_content .comment_wrapper .vote {
+    margin-right: 10px;
+    width: 18px;
+  }
 
-#wrap_content #long_feeds .add-comment {
-	margin-top: -1px;
-}
+  #wrap_content #long_feeds .add-comment {
+    margin-top: -1px;
+  }
 
-.comment_wrapper .add-comment .buttons input {
-	width: auto;
-	padding: 6px 16px;
-}
+  .comment_wrapper .add-comment .buttons input {
+    width: auto;
+    padding: 6px 16px;
+  }
 
-.comment_wrapper .add-comment .buttons input.toggle-emoticons {
-	padding: 3px 8px !important;
-	width: auto;
-}
+  .comment_wrapper .add-comment .buttons input.toggle-emoticons {
+    padding: 3px 8px !important;
+    width: auto;
+  }
 
-.comment_wrapper .add-comment textarea {
-	height: 36px;
-}
+  .comment_wrapper .add-comment textarea {
+    height: 36px;
+  }
 
-#board #long_feeds .avatar.rounded {
-	margin: 0 !important;
-}
+  #board #long_feeds .avatar.rounded {
+    margin: 0 !important;
+  }
 
-.avatar a {
-	font-size: 0;
-}
+  .avatar a {
+    font-size: 0;
+  }
 
-.more-comments {
-	border-color: #CCC;
-	border-style: solid;
-	border-width: 0 1px 1px;
-	box-sizing: border-box;
-	margin: 0;
-	width: 100%;
-}
+  .more-comments {
+    border-color: #CCC;
+    border-style: solid;
+    border-width: 0 1px 1px;
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+  }
 
-/* /friends */
-#userSocial_block .gridded_list li {
-	width: 19%;
-}
+  /* /friends */
+  #userSocial_block .gridded_list li {
+    width: 19%;
+  }
 
-#userSocial_block .gridded_list li img {
-	display: block;
-	height: 192px;
-	margin: auto;
-	max-width: 192px;
-	width: auto;
-}
+  #userSocial_block .gridded_list li img {
+    display: block;
+    height: 192px;
+    margin: auto;
+    max-width: 192px;
+    width: auto;
+  }
 
-/* /friends - hide follower stuff */
-#userSocial_block > .tabs,
-#followers_block,
-#follow_block {
-	display: none;
-}
+  /* /friends - hide follower stuff */
+  #userSocial_block > .tabs,
+  #followers_block,
+  #follow_block {
+    display: none;
+  }
 
-/* hide */
-#wrap_content #long_feeds .message img.tail,
-#shareForm #typeshare div a.icon.post.selected,
-#navBar #user_actions li .ua-box .row {
-	display: none;
-}
+  /* hide */
+  #wrap_content #long_feeds .message img.tail,
+  #shareForm #typeshare div a.icon.post.selected,
+  #navBar #user_actions li .ua-box .row {
+    display: none;
+  }
 
-/* hide forum */
-.box.hashtag:nth-child(2) {
-	display: none;
-}
+  /* hide forum */
+  .box.hashtag:nth-child(2) {
+    display: none;
+  }
 
-/* hide - adds */
-.pub_300,
-.adsbygoogle {
-	display: none !important;
-	margin: 0 !important;
-}
+  /* hide - adds */
+  .pub_300,
+  .adsbygoogle {
+    display: none !important;
+    margin: 0 !important;
+  }
 
-/* size */
-#wrap_content #shareForm {
-	margin: 0 0 20px 61px !important;
-}
+  /* size */
+  #wrap_content #shareForm {
+    margin: 0 0 20px 61px !important;
+  }
 
-#wrap_content #shareForm #sharebox,
-#wrap_content #shareForm #picture_prev,
-#wrap_content #shareForm #typeshare {
-	box-sizing: border-box;
-	width: calc(100% - 333px) !important;
-}
+  #wrap_content #shareForm #sharebox,
+  #wrap_content #shareForm #picture_prev,
+  #wrap_content #shareForm #typeshare {
+    box-sizing: border-box;
+    width: calc(100% - 333px) !important;
+  }
 
-#wrap_content #shareForm #typeshare .smallBtn.toggle-emoticons {
-	margin-right: 4px;
-}
+  #wrap_content #shareForm #typeshare .smallBtn.toggle-emoticons {
+    margin-right: 4px;
+  }
 
-@media (max-width: 1280px) {
-	#wrap_content #shareForm #sharebox,
-	#wrap_content #shareForm #picture_prev,
-	#wrap_content #shareForm #typeshare {
-		width: calc(100% - 5px - 56px - 5px - 45px) !important;
-	}
-}
+  @media (max-width: 1280px) {
+    #wrap_content #shareForm #sharebox,
+    #wrap_content #shareForm #picture_prev,
+    #wrap_content #shareForm #typeshare {
+      width: calc(100% - 5px - 56px - 5px - 45px) !important;
+    }
+  }
 
-#wrap_content #long_feeds .message,
-#wrap_content #long_feeds .comments,
-#wrap_content #long_feeds .add-comment,
-#wrap_content .load-more {
-	width: calc(100% - 5px - 56px) !important;
-}
+  #wrap_content #long_feeds .message,
+  #wrap_content #long_feeds .comments,
+  #wrap_content #long_feeds .add-comment,
+  #wrap_content .load-more {
+    width: calc(100% - 5px - 56px) !important;
+  }
 
-#wrap_content #long_feeds .comments .message {
-	width: calc(100% - 5px - 56px - 5px - 20px) !important;
-}
+  #wrap_content #long_feeds .comments .message {
+    width: calc(100% - 5px - 56px - 5px - 20px) !important;
+  }
 
-/* restyle */
-#side img.avatar {
-	background-color: transparent !important;
-	border-color: transparent !important;
-}
+  /* restyle */
+  #side img.avatar {
+    background-color: transparent !important;
+    border-color: transparent !important;
+  }
 
-.avatar {
-	border-color: transparent !important;
-	border-radius: 50%;
-	overflow: hidden;
-}
+  .avatar {
+    border-color: transparent !important;
+    border-radius: 50%;
+    overflow: hidden;
+  }
 
-.avatar,
-.avatar a {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+  .avatar,
+  .avatar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.avatar a {
-	height: 100%;
-}
+  .avatar a {
+    height: 100%;
+  }
 
-.avatar img {
-	/*width: auto !important;*/
-	height: auto !important;
-	/*max-width: 100%;*/
-	min-height: 100%;
-}
+  .avatar img {
+    /*width: auto !important;*/
+    height: auto !important;
+    /*max-width: 100%;*/
+    min-height: 100%;
+  }
 
-/* changes */
-.comment_wrapper .message strong.user {
-	display: inline-block;
-	margin-right: 5px;
-}
+  /* changes */
+  .comment_wrapper .message strong.user {
+    display: inline-block;
+    margin-right: 5px;
+  }
 
-#header {
-	padding: 8px;
-}
+  #header {
+    padding: 8px;
+  }
 
-#navBar .logo {
-	height: 26px;
-	background-size: contain;
-}
+  #navBar .logo {
+    height: 26px;
+    background-size: contain;
+  }
 
-#header,
-#navBar .icon {
-	height: 40px;
-}
+  #header,
+  #navBar .icon {
+    height: 40px;
+  }
 
-#navBar .icon {
-	top: -10px;
-}
+  #navBar .icon {
+    top: -10px;
+  }
 
-#navBar .icon > img {
-	top: 7px;
-}
+  #navBar .icon > img {
+    top: 7px;
+  }
 
-#navBar #user_actions .username {
-	top: 0px;
-	width: 32px;
-	height: 32px;
-	margin: -6px 0 0 10px;
-}
+  #navBar #user_actions .username {
+    top: 0px;
+    width: 32px;
+    height: 32px;
+    margin: -6px 0 0 10px;
+  }
 
-#burger-nav {
-	margin-top: 4px;
-}
+  #burger-nav {
+    margin-top: 4px;
+  }
 
-br {
-	content: '';
-	display: block;
-	height: 2px;
-}
+  br {
+    content: '';
+    display: block;
+    height: 2px;
+  }
 
-.box.hashtag br {
-	height: 8px;
-}
+  .box.hashtag br {
+    height: 8px;
+  }
 
-/* max comment height */
-.comment_wrapper .message p {
-	max-height: 416px;
-	overflow-x: hidden;
-	overflow-y: auto;
-}
+  /* max comment height */
+  .comment_wrapper .message p {
+    max-height: 416px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 
-/* fixed Header */
-#header {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 1000;
-	box-sizing: border-box;
-}
+  /* fixed Header */
+  #header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+  }
 
-#wrapper {
-	padding-top: 40px;
-}
+  #wrapper {
+    padding-top: 40px;
+  }
 
-#wrap_content {
-	background-position: right 40px;
-}
+  #wrap_content {
+    background-position: right 40px;
+  }
 
-/* More readable list updates */
-[href^="https://naruho.do/anime/"]:before,
-[href^="https://naruho.do/manga/"]:before {
-	content: '\A· ';
-}
+  /* More readable list updates */
+  [href^="https://naruho.do/anime/"]:before,
+  [href^="https://naruho.do/manga/"]:before {
+    content: '\A· ';
+  }
 
-[href^="https://naruho.do/anime/"],
-[href^="https://naruho.do/manga/"] {
-	white-space: pre;
-}
+  [href^="https://naruho.do/anime/"],
+  [href^="https://naruho.do/manga/"] {
+    white-space: pre;
+  }
 
-/* feed images */
-.message div.center {
-	margin-right: 5px;
-	height: auto !important;
-}
+  /* feed images */
+  .message div.center {
+    margin-right: 5px;
+    height: auto !important;
+  }
 
-#long_feeds .comments .message div.center img,
-.message div.center img {
-	margin-top: 0 !important;
-	width: auto !important;
-	max-width: 100%;
-	height: auto;
-	max-height: 480px;
-	cursor: url(https://dl.dropbox.com/s/32kv0rup3zw5lho/zoom-in.cur), zoom-in;
-}
+  #long_feeds .comments .message div.center img,
+  .message div.center img {
+    margin-top: 0 !important;
+    width: auto !important;
+    max-width: 100%;
+    height: auto;
+    max-height: 480px;
+    cursor: url(https://dl.dropbox.com/s/32kv0rup3zw5lho/zoom-in.cur), zoom-in;
+  }
 
 
 
-/* custom */
-.box a {
-	margin-bottom: 5px !important;
-}
+  /* custom */
+  .box a {
+    margin-bottom: 5px !important;
+  }
 
-.box.trendy a {
-	text-decoration: none;
-}
+  .box.trendy a {
+    text-decoration: none;
+  }
 
-.box.trendy a:hover {
-	opacity: .8;
-}
+  .box.trendy a:hover {
+    opacity: .8;
+  }
 
-.box.trendy a:before {
-	content: ' ';
-	display: block;
-}
+  .box.trendy a:before {
+    content: ' ';
+    display: block;
+  }
 
-/* inline forms */
-.comment_wrapper .add-comment form {
-	display: flex;
-}
+  /* inline forms */
+  .comment_wrapper .add-comment form {
+    display: flex;
+  }
 
-.comment_wrapper .add-comment .buttons {
-	display: contents;
-}
+  .comment_wrapper .add-comment .buttons {
+    display: contents;
+  }
 
-.comment_wrapper .add-comment .buttons input {
-	margin: 0 0 0 4px;
-}
+  .comment_wrapper .add-comment .buttons input {
+    margin: 0 0 0 4px;
+  }
 
-/* no textarea icon */
-.comment_wrapper .add-comment textarea {
-	background: none;
-	line-height: 22px;
-	padding: 6px 8px;
+  /* no textarea icon */
+  .comment_wrapper .add-comment textarea {
+    background: none;
+    line-height: 22px;
+    padding: 6px 8px;
+  }
 }
