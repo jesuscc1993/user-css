@@ -4,16 +4,26 @@ To install, view the raw files. Requires the [Stylus](https://github.com/opensty
 
 # List
 
-- [chrome-dark-scrollbar-and-audio-player](chrome-dark-scrollbar-and-audio-player)
-- [discord-customization](discord-customization)
-- [duolingo/duolingo-customization](duolingo/duolingo-customization)
-- [duolingo/duolingo-dark](duolingo/duolingo-dark)
+* [chrome/chrome-dark-scrollbar-and-audio-player](chrome/chrome-dark-scrollbar-and-audio-player)
+
+- [discord/discord-customization](discord/discord-customization)
+
+* [duolingo/duolingo-customization](duolingo/duolingo-customization)
+* [duolingo/duolingo-dark](duolingo/duolingo-dark)
+
 - [granblue-fantasy/granblue-fantasy-enhancements](granblue-fantasy/granblue-fantasy-enhancements)
 - [granblue-fantasy/granblue-fantasy-tweaks](granblue-fantasy/granblue-fantasy-tweaks)
+
+* [naruho.do/naruho.do-base-changes](naruho.do/naruho.do-base-changes)
+* [naruho.do/naruho.do-customize](naruho.do/naruho.do-customize)
+* [naruho.do/naruho.do-discord-dark-theme](naruho.do/naruho.do-discord-dark-theme)
+* [naruho.do/naruho.do-stylish-black](naruho.do/naruho.do-stylish-black)
+
 - [stylus/stylus-codemirror-dark-plus](stylus/stylus-codemirror-dark-plus)
-- [stylus/stylus-dark](stylus/stylus-dark)
 - [stylus/stylus-customization](stylus/stylus-customization)
-- [youtube/youtube-big-text](youtube/youtube-big-text)
-- [youtube/youtube-customization](youtube/youtube-customization)
-- [youtube/youtube-fullscreen-theater](youtube/youtube-fullscreen-theater)
-- [youtube/youtube-pure-black](youtube/youtube-pure-black)
+- [stylus/stylus-dark](stylus/stylus-dark)
+
+* [youtube/youtube-big-text](youtube/youtube-big-text)
+* [youtube/youtube-customization](youtube/youtube-customization)
+* [youtube/youtube-fullscreen-theater](youtube/youtube-fullscreen-theater)
+* [youtube/youtube-pure-black](youtube/youtube-pure-black)

@@ -10,4 +10,4 @@ Displays YouTube's theater in fullscreen.
 
 ## Installation
 
-- [UserCSS](./youtube-fullscreen-theater.user.css) (view raw file to install. Requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension).
+- [UserCSS](./youtube-fullscreen-theater.user.css) (requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension).

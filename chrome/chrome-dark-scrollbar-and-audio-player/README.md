@@ -14,4 +14,4 @@ Styles the scrollbar and audio player components to a dark theme (WebKit only).
 
 ## Installation
 
-- [UserCSS](./chrome-dark-scrollbar-and-audio-player.user.css) (view raw file to install. Requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension).
+- [UserCSS](./chrome-dark-scrollbar-and-audio-player.user.css) (requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension).

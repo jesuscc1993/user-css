@@ -14,4 +14,4 @@ Provides some extra customization options for Duolingo.
 
 ## Installation
 
-- [UserCSS](./duolingo-customization.user.css) (view raw file to install. Requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension).
+- [UserCSS](./duolingo-customization.user.css) (requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension).

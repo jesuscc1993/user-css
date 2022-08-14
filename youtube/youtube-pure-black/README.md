@@ -10,4 +10,4 @@ Pure black theme for YouTube.
 
 ## Installation
 
-- [UserCSS](./youtube-pure-black.user.css) (view raw file to install. Requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension).
+- [UserCSS](./youtube-pure-black.user.css) (requires the [Stylus](https://github.com/openstyles/stylus#releases) browser extension).
