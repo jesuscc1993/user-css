@@ -30,8 +30,8 @@
 ==/UserStyle== */
 @-moz-document regexp(".*") {
   /*[[scope]]*/::-webkit-scrollbar,
-  /*[[scope]]*/::-webkit-scrollbar-corner,
-  /*[[scope]]*/::-webkit-scrollbar-track-piece {
+	/*[[scope]]*/::-webkit-scrollbar-corner,
+	/*[[scope]]*/::-webkit-scrollbar-track-piece {
     background: /*[[background]]*/ !important;
   }
 

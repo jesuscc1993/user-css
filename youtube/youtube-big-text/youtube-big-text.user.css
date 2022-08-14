@@ -80,11 +80,11 @@
     font-size: var(--ytd-user-comment_-_font-size);
     line-height: var(--ytd-user-comment_-_line-height);
   }
-  
-  .ytd-comment-renderer yt-formatted-string > .emoji.small-emoji {
+	
+	.ytd-comment-renderer yt-formatted-string > .emoji.small-emoji {
     height: var(--ytd-user-comment_-_font-size);
     width: auto;
-  }
+	}
 
   ytd-thumbnail-overlay-time-status-renderer {
     height: auto;
