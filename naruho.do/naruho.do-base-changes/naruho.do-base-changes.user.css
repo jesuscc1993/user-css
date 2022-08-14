@@ -3,10 +3,11 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Aplica una serie de cambios básicos sobre los que aplicar otros temas.
-@version        2022.08.14.17.33
+@version        2022.08.14.17.46
 @license        CC BY-SA 4.0
 @preprocessor		stylus
 
+@var  text      avatar-border-radius    "Redondeado de avatares"        "50%"
 @var  checkbox  fix-header        			"Anclar cabecera"       				0
 @var  checkbox  limit-message-height    "Limitar alto de mensajes"      0
 ==/UserStyle== */
@@ -53,10 +54,6 @@
 
   #board #long_feeds .avatar.rounded {
     margin: 0 !important;
-  }
-
-  .avatar a {
-    font-size: 0;
   }
 
   .more-comments {
@@ -148,9 +145,10 @@
     border-color: transparent !important;
   }
 
-  .avatar {
+  .avatar,
+  .avatar.rounded {
     border-color: transparent !important;
-    border-radius: 50%;
+    border-radius: avatar-border-radius;
     overflow: hidden;
   }
 
@@ -162,6 +160,7 @@
   }
 
   .avatar a {
+    font-size: 0;
     height: 100%;
   }
 
