@@ -3,28 +3,21 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Replica la apariencia y colores del tema oscuro de Discord.
-@version        2022.08.14.13.06
+@version        2022.08.14.18.59
 @license        CC BY-SA 4.0
+@preprocessor   less
+
+@var   text     bg-opacity  "Opacidad del fondo"  "100%" 
 ==/UserStyle== */
 
 @-moz-document regexp("https?\\:\\/\\/naruho\\.do.*") {
   :root {
-    --background-accent: #4f545c;
-    --background-floating: #18191c;
-    --background-primary: #36393f;
-    --background-secondary-alt: #292b2f;
-    --background-secondary: #2f3136;
-    --background-tertiary: #202225;
-    --channels-default: #8e9297;
-    --interactive-active: #fff;
-    --interactive-hover: #dcddde;
-    --interactive-muted: #4f545c;
-    --interactive-normal: #b9bbbe;
+    --background-primary: fade(#36393f, @bg-opacity);
+    --background-secondary: fade(#2f3136, @bg-opacity);
+    --background-tertiary: fade(#202225, @bg-opacity);
+    --interactive-muted: fade(#4f545c, @bg-opacity);
     --primary: #7289da;
     --primary-dark: #677bc4;
-    --text-link: #00b0f4;
-    --text-muted: #72767d;
-    --text-normal: #dcddde;
   }
 
   /* style */
@@ -33,7 +26,7 @@
     font-size: 0.95rem;
     line-height: 1.3;
   }
-
+	
   .comment_wrapper .vote {
     width: 29px;
     line-height: 1.6;
@@ -113,7 +106,7 @@
   .comment_wrapper .vote #shareForm .tfield,
   .tfield,
   #accounts #import_list input[type=text] {
-    background-color: #484c52;
+    background-color: var(--interactive-muted);
     color: hsla(0, 0%, 100%, .7);
     border-color: transparent;
   }
@@ -130,6 +123,10 @@
   #shareForm #typeshare,
   #shareForm #typeshare div {
     border-color: transparent;
+  }
+
+  #shareForm #typeshare div {
+    background-color: transparent;
   }
 
   ::selection {
@@ -171,7 +168,7 @@
   }
 
   .media-not-displayed {
-    background-color: #484c52;
+    background-color: var(--interactive-muted);
     box-shadow: 6px 0 0 var(--primary) inset;
   }
 
