@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Aplica una serie de cambios básicos sobre los que aplicar otros temas.
-@version        2022.08.14.13.06
+@version        2022.08.14.16.28
 @license        CC BY-SA 4.0
 ==/UserStyle== */
 
@@ -21,7 +21,7 @@
   }
 
   #wrap_content #long_feeds .message {
-    padding-right: 0;
+    padding-right: 10px;
   }
 
   #wrap_content .comment_wrapper .vote {
