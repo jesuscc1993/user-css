@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Provides some extra customization options for Discord.
-@version        2022.08.16.13.55
+@version        2022.08.16.14.59
 @license        CC BY-SA 4.0
 @preprocessor   less
 
@@ -214,9 +214,9 @@
 	}
 
 	/* darker quotes */
-	html when (@darker-quotes = 1) {
+	html when (@darker-quotes =1) {
 		blockquote {
-			background: var(--background-tertiary);
+			background: #0003;
 		}
 
 		[class*="textArea"] blockquote {
@@ -260,7 +260,7 @@
 	}
 
 	/* blurple restoration */
-	html.theme-dark when (@restore-blurple = 1) {
+	html.theme-dark when (@restore-blurple =1) {
 		--brand-experiment-100: #f8f9fd;
 		--brand-experiment-130: #f2f4fc;
 		--brand-experiment-160: #ebeefa;
