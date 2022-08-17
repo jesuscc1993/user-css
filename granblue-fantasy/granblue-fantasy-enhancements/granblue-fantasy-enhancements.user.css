@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2022.08.06.11.23
+@version        2022.08.17.19.37
 @license        CC BY-SA 4.0
 @preprocessor   uso
 
@@ -262,7 +262,7 @@
 @advanced dropdown sort-summons "Sort summons" {
 
   sort-summons-1 "Enabled*" <<<EOT
-    .prt-supporter-list .prt-supporter-attribute:not(.disableView) {
+    .prt-supporter-list .prt-supporter-attribut.selected {
       display: flex;
       flex-direction: column;
     }
