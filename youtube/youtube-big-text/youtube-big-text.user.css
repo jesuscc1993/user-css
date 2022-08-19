@@ -3,13 +3,14 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Increases YouTube's font size; useful when watching from a distance.
-@version        2022.08.07.11.24
+@version        2022.08.19.8.37
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
 @var text       font-size-cc                    "Caption font size"               36px
 @var text       font-size-lg                    "Grid font size"                  20px
 @var text       font-size-md                    "Video font size"                 16px
+@var text       font-size-sm                    "Side video font size"            14px
 @var text       video-description-max-height    "Max video description height"    96px
 @var text       line-height-font-size-ratio     "Line height / font size ratio"   1.2
 @var text       owner-and-teaser-scale          "Owner and teaser scale"          1.33
@@ -22,17 +23,19 @@
   :root {
     --line-height-font-size-ratio: line-height-font-size-ratio;
     --owner-and-teaser-scale: owner-and-teaser-scale;
+    --font-size-cc: font-size-cc;
     --font-size-lg: font-size-lg;
     --font-size-md: font-size-md;
-    --font-size-cc: font-size-cc;
+    --font-size-sm: font-size-sm;
     --grid-line-clamp: grid-line-clamp;
     --video-comment-line-clamp: video-comment-line-clamp;
     --video-description-max-height: video-description-max-height;
     --video-title-line-clamp: video-title-line-clamp;
 
+    --line-height-cc: calc(var(--font-size-cc) * var(--line-height-font-size-ratio));
     --line-height-lg: calc(var(--font-size-lg) * var(--line-height-font-size-ratio));
     --line-height-md: calc(var(--font-size-md) * var(--line-height-font-size-ratio));
-    --line-height-cc: calc(var(--font-size-cc) * var(--line-height-font-size-ratio));
+    --line-height-sm: calc(var(--font-size-sm) * var(--line-height-font-size-ratio));
   }
 
   html:not(.style-scope)[typography] {
@@ -88,6 +91,12 @@
 
   ytd-thumbnail-overlay-time-status-renderer {
     height: auto;
+  }
+	
+	#video-title.ytd-playlist-panel-video-renderer,
+	#video-title.ytd-compact-video-renderer {
+    font-size: var(--font-size-sm) !important;
+    line-height: var(--line-height-sm) !important;
   }
 
   #text.ytd-thumbnail-overlay-time-status-renderer {
