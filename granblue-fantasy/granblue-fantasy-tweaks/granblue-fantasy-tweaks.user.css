@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Tweaks certain aspects of the game.
-@version        2022.07.22.22.36
+@version        2022.08.30.16.59
 @license        CC BY-SA 4.0
 @preprocessor   uso
 ==/UserStyle== */
@@ -169,13 +169,13 @@
   /* start: hide gala draw buttons */
   /*.prt-user-menu .prt-link-gacha.fes {
     display: block;
-    background: url(http://game-a.granbluefantasy.jp/assets_en/img/sp/mypage/btn-s6cd3cf1890.png) no-repeat 0 -995px;
+    background: url(https://game-a.granbluefantasy.jp/assets_en/img/sp/mypage/btn-s6cd3cf1890.png) no-repeat 0 -995px;
     background-size: 202px 4704px;
   }
 
   .prt-global-main .prt-global-gacha.fes {
     display: block;
-    background: url('http://game-a.granbluefantasy.jp/assets_en/img/sp/menu/parts_btn-sa56bb9abd1.png') no-repeat 0 -1176px;
+    background: url('https://game-a.granbluefantasy.jp/assets_en/img/sp/menu/parts_btn-sa56bb9abd1.png') no-repeat 0 -1176px;
     background-size: 135px 3228px;
   }*/
   /* end: hide gala draw button */
@@ -670,7 +670,7 @@
   }
 }
 
-@-moz-document url-prefix("http://game.granbluefantasy.jp/#raid/") {
+@-moz-document url-prefix("https://game.granbluefantasy.jp/#raid/") {
   /* click through modal backdrops */
   .mask {
     min-height: 0 !important;
@@ -678,7 +678,7 @@
   }
 }
 
-@-moz-document url-prefix("http://game.granbluefantasy.jp/#comic/") {
+@-moz-document url-prefix("https://game.granbluefantasy.jp/#comic/") {
   header,
   .prt-episode-title,
   footer {
@@ -693,7 +693,7 @@
   }
 }
 
-@-moz-document regexp("http:\\/\\/game\\.granbluefantasy\\.jp\\/.*\\/scene.*"), regexp("http:\\/\\/game\\.granbluefantasy\\.jp\\/.*#raidz.*") {
+@-moz-document regexp("https:\\/\\/game\\.granbluefantasy\\.jp\\/.*\\/scene.*"), regexp("https:\\/\\/game\\.granbluefantasy\\.jp\\/.*#raidz.*") {
   /* hide footer when dispensable */
   #treasure-footer {
     display: none;
@@ -717,7 +717,7 @@
   }
 }
 
-@-moz-document url("http://game.granbluefantasy.jp/#quest/assist/event") {
+@-moz-document url("https://game.granbluefantasy.jp/#quest/assist/event") {
   /* hide stuff on event raids page */
   #prt-assist-id,
   .prt-lead {

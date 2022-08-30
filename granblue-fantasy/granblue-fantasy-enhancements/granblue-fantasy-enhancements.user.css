@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2022.08.18.11.27
+@version        2022.08.30.16.59
 @license        CC BY-SA 4.0
 @preprocessor   uso
 
@@ -222,7 +222,7 @@
   reorder-coop-0 "Disabled*" <<<EOT EOT;
   
   reorder-coop-1 "Enabled" <<<EOT
-    @-moz-document regexp("http://game.granbluefantasy.jp/#coopraid/room/.*") {
+    @-moz-document regexp("https://game.granbluefantasy.jp/#coopraid/room/.*") {
 
       .cnt-coopraid {
         display: flex;
@@ -294,7 +294,7 @@
 @advanced dropdown compact-upgrade "📦 Compact upgrade summary" {
 
   compact-upgrade-1 "Enabled*" <<<EOT
-    @-moz-document regexp("http://game.granbluefantasy.jp/#enhancement/.*") {
+    @-moz-document regexp("https://game.granbluefantasy.jp/#enhancement/.*") {
 
       .cnt-material-status .cnt-material-list .list,
       .cnt-material-status-item .cnt-material-list .list,
@@ -505,17 +505,17 @@
   
   compact-lists-1 "Enabled" <<<EOT
     @-moz-document
-    regexp("http://game.granbluefantasy.jp/#archaic/.*"),
-    regexp("http://game.granbluefantasy.jp/#container/.*"),
-    regexp("http://game.granbluefantasy.jp/#decompose/.*"),
-    regexp("http://game.granbluefantasy.jp/#enhancement/.*"),
-    regexp("http://game.granbluefantasy.jp/#event/sequenceraid.*\/party/.*"),
-    regexp("http://game.granbluefantasy.jp/#evolution/.*"),
-    regexp("http://game.granbluefantasy.jp/#list.*"),
-    regexp("http://game.granbluefantasy.jp/#party/list.*"),
-    regexp("http://game.granbluefantasy.jp/#profile/pushed_npc/list"),
-    regexp("http://game.granbluefantasy.jp/#recycle/.*"),
-    regexp("http://game.granbluefantasy.jp/#sell/.*") {
+    regexp("https://game.granbluefantasy.jp/#archaic/.*"),
+    regexp("https://game.granbluefantasy.jp/#container/.*"),
+    regexp("https://game.granbluefantasy.jp/#decompose/.*"),
+    regexp("https://game.granbluefantasy.jp/#enhancement/.*"),
+    regexp("https://game.granbluefantasy.jp/#event/sequenceraid.*\/party/.*"),
+    regexp("https://game.granbluefantasy.jp/#evolution/.*"),
+    regexp("https://game.granbluefantasy.jp/#list.*"),
+    regexp("https://game.granbluefantasy.jp/#party/list.*"),
+    regexp("https://game.granbluefantasy.jp/#profile/pushed_npc/list"),
+    regexp("https://game.granbluefantasy.jp/#recycle/.*"),
+    regexp("https://game.granbluefantasy.jp/#sell/.*") {
 
       #lis-inner-summon,
       #lis-inner-weapon,
