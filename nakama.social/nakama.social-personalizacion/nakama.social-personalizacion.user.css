@@ -3,14 +3,15 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Permite la configuración de ciertos aspectos visuales en Nakama.
-@version        2022.09.01.18.18
+@version        2022.09.01.18.31
 @license        CC BY-SA 4.0
 @preprocessor   less
 
-@var text border-radius-md    "Redondeado (medio)"    1rem
-@var text border-radius-lg    "Redondeado (grande)"   1rem
-@var text content-width       "Ancho de contenido"    65ch
-@var checkbox attachments-scrollbar   "Scrollbar en adjuntos"    0
+@var text border-radius-md    					"Redondeado (medio)"    			1rem
+@var text border-radius-lg    					"Redondeado (grande)"   			1rem
+@var text content-width       					"Ancho de contenido"    			65ch
+@var checkbox limit-attachment-height		"Limitar alto de adjuntos"    1
+@var checkbox attachments-scrollbar 		"Scrollbar en adjuntos"    		0
 
 ==/UserStyle== */
 @-moz-document domain("nakama.social") {
@@ -32,13 +33,21 @@
 	.media-scroller iframe,
 	.media-scroller img,
 	.media-scroller video {
-		max-height: none;
 		border-radius: var(--border-radius-md);
 	}
 
 	.post-warning {
 		max-height: none;
 		border-radius: var(--border-radius-md);
+	}
+
+	html when (@limit-attachment-height =0) {
+		.media-scroller audio,
+		.media-scroller iframe,
+		.media-scroller img,
+		.media-scroller video {
+			max-height: none;
+		}
 	}
 
 	html when (@attachments-scrollbar =1) {
