@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Permite la configuración de ciertos aspectos visuales en Nakama.
-@version        2022.09.01.18.51
+@version        2022.09.03.10.37
 @license        CC BY-SA 4.0
 @preprocessor   less
 
@@ -24,7 +24,8 @@
 		max-width: @content-width;
 	}
 
-	.post {
+	.post,
+	.media-scroller iframe[id^="twitter-widget"] {
 		border-radius: var(--border-radius-lg);
 	}
 
