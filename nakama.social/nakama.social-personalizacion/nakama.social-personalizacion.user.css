@@ -3,79 +3,83 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Permite la configuración de ciertos aspectos visuales en Nakama.
-@version        2022.09.03.10.37
+@version        2022.09.04.12.10
 @license        CC BY-SA 4.0
 @preprocessor   less
 
-@var text border-radius-md    					"Redondeado (medio)"    			1rem
-@var text border-radius-lg    					"Redondeado (grande)"   			1rem
-@var text content-width       					"Ancho de contenido"    			65ch
-@var text max-attachment-height		      "Alto máximo de adjuntos"     calc(100vh - 8rem)
-@var checkbox attachments-scrollbar 		"Scrollbar en adjuntos"    		0
+@var text border-radius-md              "Redondeado (medio)"            1rem
+@var text border-radius-lg              "Redondeado (grande)"           1rem
+@var text content-width                 "Ancho de contenido"            65ch
+@var text max-attachment-height         "Alto máximo de adjuntos"       calc(100vh - 8rem)
+@var text post-button-height            "Alto de botones en posts"      3rem
+@var text post-button-padding           "Espaciado de botones en posts" 0 1rem
+@var checkbox attachments-scrollbar     "Scrollbar en adjuntos"         0
 
 ==/UserStyle== */
 @-moz-document domain("nakama.social") {
-	:root {
-		--border-radius-md: @border-radius-md;
-		--border-radius-lg: @border-radius-lg;
-	}
+  .container {
+    max-width: @content-width;
+  }
 
-	.container {
-		max-width: @content-width;
-	}
+  .post,
+  .media-scroller iframe[id^="twitter-widget"] {
+    border-radius: @border-radius-lg;
+  }
 
-	.post,
-	.media-scroller iframe[id^="twitter-widget"] {
-		border-radius: var(--border-radius-lg);
-	}
+  .media-scroller audio,
+  .media-scroller iframe,
+  .media-scroller img,
+  .media-scroller video {
+    max-height: @max-attachment-height;
+    border-radius: @border-radius-md;
+  }
 
-	.media-scroller audio,
-	.media-scroller iframe,
-	.media-scroller img,
-	.media-scroller video {
-		max-height: @max-attachment-height;
-		border-radius: var(--border-radius-md);
-	}
+  .post-warning {
+    max-height: none;
+    border-radius: @border-radius-md;
+  }
 
-	.post-warning {
-		max-height: none;
-		border-radius: var(--border-radius-md);
-	}
+  .post-replies-link,
+  .post-add-reaction-btn,
+  .post-reaction {
+    height: @post-button-height;
+    padding: @post-button-padding;
+  }
 
-	html when (@attachments-scrollbar =1) {
-		.media-scroller {
-			overflow-x: auto;
-			scrollbar-width: initial !important;
-		}
+  html when (@attachments-scrollbar =1) {
+    .media-scroller {
+      overflow-x: auto;
+      scrollbar-width: initial !important;
+    }
 
-		.media-scroller::-webkit-scrollbar {
-			display: block !important;
-		}
-	}
+    .media-scroller::-webkit-scrollbar {
+      display: block !important;
+    }
+  }
 
-	/* Scrollbar */
-	::-webkit-scrollbar,
-	::-webkit-scrollbar-corner,
-	::-webkit-scrollbar-track-piece {
-		background: var(--surface-0) !important;
-	}
+  /* Scrollbar */
+  ::-webkit-scrollbar,
+  ::-webkit-scrollbar-corner,
+  ::-webkit-scrollbar-track-piece {
+    background: var(--surface-0) !important;
+  }
 
-	::-webkit-scrollbar {
-		width: 17px !important;
-		height: 17px !important;
-	}
+  ::-webkit-scrollbar {
+    width: 17px !important;
+    height: 17px !important;
+  }
 
-	::-webkit-scrollbar:vertical {
-		border-radius: 8px !important;
-	}
+  ::-webkit-scrollbar:vertical {
+    border-radius: 8px !important;
+  }
 
-	::-webkit-scrollbar-thumb {
-		background: var(--surface-primary);
-		border: 3px solid var(--surface-0) !important;
-		border-radius: 8px !important;
-	}
+  ::-webkit-scrollbar-thumb {
+    background: var(--surface-primary);
+    border: 3px solid var(--surface-0) !important;
+    border-radius: 8px !important;
+  }
 
-	::-webkit-scrollbar-thumb:hover {
-		background: hsl(var(--hue), 30%, 30%);
-	}
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--hue), 30%, 30%);
+  }
 }
