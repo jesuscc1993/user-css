@@ -3,17 +3,18 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Permite la configuración de ciertos aspectos visuales en Nakama.
-@version        2022.09.04.12.10
+@version        2022.09.04.12.13
 @license        CC BY-SA 4.0
 @preprocessor   less
 
-@var text border-radius-md              "Redondeado (medio)"            1rem
-@var text border-radius-lg              "Redondeado (grande)"           1rem
-@var text content-width                 "Ancho de contenido"            65ch
-@var text max-attachment-height         "Alto máximo de adjuntos"       calc(100vh - 8rem)
-@var text post-button-height            "Alto de botones en posts"      3rem
-@var text post-button-padding           "Espaciado de botones en posts" 0 1rem
-@var checkbox attachments-scrollbar     "Scrollbar en adjuntos"         0
+@var text border-radius-md              "Redondeado (medio)"              1rem
+@var text border-radius-lg              "Redondeado (grande)"             1rem
+@var text content-width                 "Ancho de contenido"              65ch
+@var text max-attachment-height         "Alto máximo de adjuntos"         calc(100vh - 8rem)
+@var text post-button-height            "Alto de botones en posts"        3rem
+@var text post-button-padding           "Espaciado de botones en posts"   0 1rem
+@var text post-button-border-radius     "Redondeado de botones en posts"  1.5rem
+@var checkbox attachments-scrollbar     "Scrollbar en adjuntos"           0
 
 ==/UserStyle== */
 @-moz-document domain("nakama.social") {
@@ -42,6 +43,7 @@
   .post-replies-link,
   .post-add-reaction-btn,
   .post-reaction {
+		border-radius: @post-button-border-radius;
     height: @post-button-height;
     padding: @post-button-padding;
   }
