@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2022.08.30.16.59
+@version        2022.09.07.16.54
 @license        CC BY-SA 4.0
 @preprocessor   uso
 
@@ -795,6 +795,7 @@
 @-moz-document domain("granbluefantasy.jp") {
   /* font */
   body,
+	.prt-user-info .prt-info-profile .btn-user-name,
   .prt-status .prt-user-name .txt-user-name {
     /* 'FOT-テロップ明朝 Pro D' */
     font-family: "/*[[font-family]]*/", "Average Sans", sans-serif !important;
