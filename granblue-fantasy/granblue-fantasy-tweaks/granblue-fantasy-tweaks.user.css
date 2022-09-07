@@ -1,880 +1,736 @@
 /* ==UserStyle==
-@name           Granblue Fantasy Enhancements
+@name           Granblue Fantasy Tweaks
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
-@description    Allows the customization of the game's layout and responsive behavior.
-@version        2022.09.07.16.54
+@description    Tweaks certain aspects of the game.
+@version        2022.08.30.16.59
 @license        CC BY-SA 4.0
 @preprocessor   uso
-
-@advanced color    bg-color       "Background color" #150F0F
-
-@advanced text     font-family    "Font family" "FOT-テロップ明朝 Pro D"
-
-@advanced dropdown center-content "Center content" {
-
-  center-content-1 "Enabled*" <<<EOT
-    #mobage-game-container,
-    .cnt-global-header {
-      left: calc((100vw - 640px) / 4);
-    }
-
-
-    #mobage-game-container {
-      position: absolute !important;
-    }
-
-    .cnt-global-header {
-      position: fixed;
-    }
-  EOT;
-
-  center-content-0 "Disabled" <<<EOT EOT;
-
-}
-
-@advanced dropdown center-popups "Center popups" {
-
-  center-popups-0 "Disabled*" <<<EOT EOT;
-  
-  center-popups-1 "Enabled" <<<EOT
-    #pop {
-      position: fixed;
-      height: 50vh;
-      top: 0;
-      left: initial;
-      display: flex !important;
-      align-items: center;
-      padding-bottom: 30px;
-      box-sizing: border-box;
-    }
-    .pop-usual,
-    .pop-deck,
-    #pop-deck,
-    #pop {
-      z-index: 999998;
-    }
-    .prt-popup-body .prt-bonus-box {
-      max-height: calc(50vh - 180px);
-      overflow: auto;
-    }
-    #treasure-footer-wrapper {
-      position: absolute;
-      top: 0;
-      z-index: 999999;
-    }
-    .pop-deck,
-    #pop-deck {
-      position: fixed;
-      height: 50vh;
-      top: 0 !important;
-      left: initial;
-      z-index: 250004;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .pop-deck:not([style*="display: none;"]),
-    #pop-deck:not([style*="display: none;"]) {
-      display: flex !important;
-    }
-    .pop-deck > *,
-    #pop-deck > *,
-    #pop > * {
-      top: initial !important;
-    }
-    #pop > .pop-raid-item {
-      top: 40px !important;
-    }
-    #mobage-game-container .wrapper,
-    #gree-game-container .wrapper {
-      margin-bottom: 0px !important;
-    }
-    .pop-claimed.pop-usual .prt-popup-frame.all-claim {
-      max-height: calc(50vh - 200px);
-      overflow-y: auto;
-    }
-  EOT;
-
-}
-
-@advanced dropdown selectable-text "Enable text selection" {
-
-  selectable-text-0 "Disabled*" <<<EOT EOT;
-  
-  selectable-text-2 "Enabled" <<<EOT
-    [class^="txt"],
-    [class^="txt"] *,
-    [class^="prt"],
-    [class^="prt"] *,
-    #my_comment {
-      user-select: text;
-    }
-
-    [class^="btn"],
-    .txt-page-number {
-      user-select: none !important;
-    }
-  EOT;
-
-  selectable-text-1 "Disabled (quest dialog)" <<<EOT
-    [class^="txt"],
-    [class^="txt"] *,
-    [class^="prt"],
-    [class^="prt"] *,
-    #my_comment {
-      user-select: text;
-    }
-
-    [class^="btn"],
-    .txt-page-number {
-      user-select: none !important;
-    }
-
-    .cnt-quest-scene *,
-    .prt-scene-comment * {
-      user-select: none !important;
-    }
-  EOT;
-
-}
-
-@advanced dropdown fit-crew-chat "Fit crew chat" {
-
-  fit-crew-chat-0 "Disabled*" <<<EOT EOT;
-  
-  fit-crew-chat-1 "Enabled" <<<EOT
-    #submenu-general-chat #chat-body {
-      width: calc((100% - 320px - 128px - 8px) / 2);
-    }
-  EOT;
-
-}
-
-@advanced dropdown fix-header-menu "Fix header menu position" {
-
-  fix-header-menu-0 "Disabled*" <<<EOT EOT;
-  
-  fix-header-menu-1 "Enabled" <<<EOT
-    .pop-global-menu {
-      position: fixed;
-      top: 0 !important;
-      left: auto;
-    }
-
-    .prt-item-contents.item-filter .prt-item-filter .prt-item-filter-list.pos-fixed {
-      top: 50px;
-    }
-  EOT;
-
-}
-
-@advanced dropdown gray-out-equipped "Gray out equipped items" {
-
-  gray-out-equipped-1 "Enabled*" <<<EOT
-    .lis-item.equipped,
-    .lis-weapon.equipped {
-      filter: grayscale(.5) brightness(.66);
-    }
-  EOT;
-
-  gray-out-equipped-0 "Disabled" <<<EOT EOT;
-
-}
-
-@advanced dropdown keep-extras-open "Keep gameplay extras open" {
-
-  keep-extras-open-0 "Disabled*" <<<EOT EOT;
-  
-  keep-extras-open-1 "Enabled" <<<EOT
-    .btn-campaign-toggle {
-      background-image: url(https://prd-game-a-granbluefantasy.akamaized.net/assets_en/img/sp/ui/campaign_toggle/campaign_open.png?1511168524) !important;
-    }
-    .btn-campaign-toggle.on {
-      transform: none !important;
-    }
-    .prt-campaign-banners {
-      display: block;
-    }
-  EOT;
-
-}
-
-@advanced dropdown submenu-on-left "Move submenu to the left" {
-
-  submenu-on-left-0 "Disabled*" <<<EOT EOT;
-  
-  submenu-on-left-1 "Enabled" <<<EOT
-    #submenu {
-      left: 32px !important;
-      margin: 0 !important;
-      z-index: 1000000 !important;
-    }
-
-    #submenu.open {
-      box-shadow: 2px 0 8px #0002;
-    }
-  EOT;
-
-}
-
-@advanced dropdown reorder-coop "Rearrange co-op room" {
-
-  reorder-coop-0 "Disabled*" <<<EOT EOT;
-  
-  reorder-coop-1 "Enabled" <<<EOT
-    @-moz-document regexp("https://game.granbluefantasy.jp/#coopraid/room/.*") {
-
-      .cnt-coopraid {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .cnt-coopraid > .prt-foot-buttons {
-        order: 1;
-      }
-
-      .cnt-coopraid > .prt-3tabs,
-      .cnt-coopraid > .prt-quest-set,
-      .cnt-coopraid > .prt-retraction-button,
-      .cnt-coopraid > .prt-tab-contents {
-        order: 2;
-      }
-
-    }
-  EOT;
-
-}
-
-@advanced dropdown rearrange-raid-ui "Rearrange raid UI" {
-
-  rearrange-raid-ui-0 "Disabled*" <<<EOT EOT;
-
-  rearrange-raid-ui-1 "Enabled" <<<EOT
-    .cnt-raid .prt-raid-log {
-      pointer-events: none;      
-      bottom: 96px;
-      top: auto;
-    }
-  EOT;
-
-}
-
-@advanced dropdown sort-summons "Sort summons" {
-
-  sort-summons-1 "Enabled*" <<<EOT
-    .prt-supporter-list .prt-supporter-attribute.selected {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="5"] {
-      order: 1;
-    }
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="4"] {
-      order: 2;
-    }
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="3"] {
-      order: 3;
-    }
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="2"] {
-      order: 4;
-    }
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="1"] {
-      order: 5;
-    }
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="0"] {
-      order: 6;
-    }
-  EOT;
-
-  sort-summons-0 "Disabled" <<<EOT EOT;
-
-}
-
-@advanced dropdown compact-upgrade "📦 Compact upgrade summary" {
-
-  compact-upgrade-1 "Enabled*" <<<EOT
-    @-moz-document regexp("https://game.granbluefantasy.jp/#enhancement/.*") {
-
-      .cnt-material-status .cnt-material-list .list,
-      .cnt-material-status-item .cnt-material-list .list,
-      .prt-enhance-detail .cnt-material-list .list {
-        transform: scale(.5);
-        margin: -7.5px -13px;
-      }
-
-      .cnt-material-status .prt-attribute-bonus,
-      .cnt-material-status-item .prt-attribute-bonus,
-      .prt-enhance-detail .prt-attribute-bonus,
-      .cnt-material-status .txt-confirm,
-      .cnt-material-status-item .txt-confirm,
-      .prt-enhance-detail .txt-confirm {
-        font-size: 10px;
-      }
-
-      .cnt-material-status .txt-confirm,
-      .cnt-material-status-item .txt-confirm,
-      .prt-enhance-detail .txt-confirm {
-        padding-bottom: 8px;
-      }
-
-    }
-  EOT;
-  
-  compact-upgrade-2 "Disabled" <<<EOT EOT;
-
-}
-
-@advanced dropdown compact-gacha "📦 Compact gacha results" {
-
-  compact-gacha-1 "Enabled*" <<<EOT
-    .prt-obtain-multi br {
-      display: none;
-    }
-    .prt-obtain-multi .prt-result-multi .prt-thumbnail-list .lis-result-multi {
-      width: 56px;
-      height: 32px;
-      margin: 2px 3px;
-    }
-    .prt-obtain-multi .prt-result-multi .prt-thumbnail-list .img-result-multi {
-      width: 100%;
-      height: 100%;
-    }
-  EOT;
-
-  compact-gacha-0 "Disabled" <<<EOT EOT;
-
-}
-
-@advanced dropdown compact-raids "📦 Compact raids" {
-
-  compact-raids-1 "Enabled*" <<<EOT
-    .lis-raid {
-      transform: scale(1, .75);
-      margin: -8px auto -24px !important;
-    }
-    .lis-raid:last-of-type {
-      margin-bottom: 0 !important;
-    }
-    .lis-raid .prt-raid-thumbnail .img-raid-thumbnail {
-      transform: scale(.75, 1);
-      margin: 0 -8px 0 -10px;
-    }
-    .lis-raid .prt-raid-info > * {
-      transform: scale(.75, 1);
-      margin-left: -36px;
-    }
-    .lis-raid .txt-raid-name {
-      margin-left: -26px;
-      width: 180px !important;
-    }
-    .lis-raid .txt-half-campaign.plural,
-    .lis-raid .txt-free-campaign.plural {
-      left: 130px;
-    }
-    .btn-multi-raid.on {
-      transform: scale(.98, 0.74);
-    }
-    .lis-raid .prt-raid-thumbnail .ico-defeat {
-      margin-left: -8px;
-    }
-    .lis-raid .prt-raid-thumbnail .prt-finish-time {
-      right: 4px;
-      bottom: 12px;
-    }
-  EOT;
-
-  compact-raids-0 "Disabled" <<<EOT EOT;
-
-}
-
-@advanced dropdown compact-summons "📦 Compact summons" {
-
-  compact-summons-1 "Basic*" <<<EOT
-    .prt-supporter-thumb {
-      display: none;
-    }
-    .prt-supporter-name {
-      padding-left: 0 !important;
-    }
-    .lis-supporter {
-      margin: 0px auto -2px !important;
-    }
-  EOT;
-
-  compact-summons-2 "Extra" <<<EOT
-    .prt-supporter-list .lis-supporter .prt-supporter-thumb,
-    .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-summon-max {
-      display: none;
-    }
-    .prt-supporter-list .lis-supporter .prt-supporter-name {
-      height: 16px;
-      margin-bottom: -16px;
-    }
-    .prt-supporter-list .lis-supporter .prt-supporter-name > * {
-      opacity: 0;
-    }
-    .prt-supporter-list .lis-supporter .prt-supporter-name.ico-friend::after {
-      top: -2px;
-      right: 18px;
-      zoom: .75;
-    }
-    .prt-supporter-list .lis-supporter .prt-supporter-info {
-      margin-top: 1px;
-    }
-    .prt-supporter-list .lis-supporter .prt-supporter-summon {
-      color: white;
-    }
-    .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-supporter-summon {
-      font-size: 9px;
-      line-height: 8px;
-      margin-bottom: 4px;
-    }
-    .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-summon-skill {
-      font-weight: 500;
-      line-height: 9px;
-      margin-bottom: 0 !important;
-    }
-    .prt-supporter-list .lis-supporter {
-      background: url(https://i.imgur.com/AH2mgcX.png);
-      background-size: 100% 100%;
-      height: 51px;
-      margin-bottom: 0 !important;
-      padding: 5px 5px;
-    }
-  EOT;
-
-  compact-summons-3 "Ultra" <<<EOT
-    .prt-supporter-list .lis-supporter .prt-supporter-thumb,
-    .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail > *:not(.prt-summon-skill) {
-      display: none;
-    }
-    .prt-supporter-list .lis-supporter .prt-supporter-name {
-      font-size: 0;
-      margin-bottom: -18px;
-      padding-bottom: 18px;
-      z-index: 1;
-    }
-    .prt-supporter-list .lis-supporter .prt-supporter-name.ico-friend::after {
-      right: 37.5px;
-      top: 0;
-      zoom: .66;
-    }
-    .prt-supporter-list .prt-supporter-attribute:not(.disableView) {
-      display: grid !important;
-      grid-template-columns: repeat(auto-fill, 92px);
-      grid-template-rows: repeat(auto-fill, 44px);
-      margin: -4px 18px 16px;
-    }
-    .cnt-sequenceraid .prt-supporter-attribute:not(.disableView) {
-      margin: -4px 10px 16px;
-    }
-    .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-summon-skill {
-      height: 40px;
-      overflow: hidden;
-      width: 16px;
-    }
-    .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-summon-skill:not([class*="bless-rank"]) {
-      display: none;
-    }
-    .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-summon-skill[class*="bless-rank"]:before {
-      content: '★';
-      font-size: 16px;
-      line-height: 40px;
-      margin-right: 8px;
-    }
-    .prt-supporter-list .lis-supporter {
-      background: none;
-      height: 44px;
-      margin: 0;
-      padding: 0;
-      width: 96px;
-    }
-    .prt-supporter-list .lis-supporter .prt-supporter-info .prt-summon-image {
-      margin-right: 4px;
-    }
-  EOT;
-
-  compact-summons-0 "Disabled" <<<EOT EOT;
-
-}
-
-@advanced dropdown compact-lists "📦 Compact lists" {
-
-  compact-lists-0 "Disabled*" <<<EOT EOT;
-  
-  compact-lists-1 "Enabled" <<<EOT
-    @-moz-document
-    regexp("https://game.granbluefantasy.jp/#archaic/.*"),
-    regexp("https://game.granbluefantasy.jp/#container/.*"),
-    regexp("https://game.granbluefantasy.jp/#decompose/.*"),
-    regexp("https://game.granbluefantasy.jp/#enhancement/.*"),
-    regexp("https://game.granbluefantasy.jp/#event/sequenceraid.*\/party/.*"),
-    regexp("https://game.granbluefantasy.jp/#evolution/.*"),
-    regexp("https://game.granbluefantasy.jp/#list.*"),
-    regexp("https://game.granbluefantasy.jp/#party/list.*"),
-    regexp("https://game.granbluefantasy.jp/#profile/pushed_npc/list"),
-    regexp("https://game.granbluefantasy.jp/#recycle/.*"),
-    regexp("https://game.granbluefantasy.jp/#sell/.*") {
-
-      #lis-inner-summon,
-      #lis-inner-weapon,
-      .cnt-list-equipment .cnt-list-order,
-      .cnt-list-equipment .cnt-npc-order,
-      .cnt-list-equipment .cnt-summon-order,
-      .cnt-list-equipment .cnt-weapon-order,
-      .cnt-weapon-select .cnt-order-box .cnt-select-order {
-        padding: 7px 12px;
-      }
-
-      .cnt-list-equipment .cnt-list-order .list,
-      .cnt-list-equipment .cnt-npc-order .lis-npc,
-      .cnt-list-equipment .cnt-summon-order .lis-summon,
-      .cnt-list-equipment .cnt-weapon-order .lis-weapon,
-      .cnt-material-order .btn-material,
-      .cnt-weapon-select .cnt-order-box .cnt-select-order .list {
-        transform: scale(.8);
-        margin: -9.5px -5.5px !important;
-      }
-
-      .prt-listup .prt-list-item {
-        padding: 7px 12px;
-      }
-
-      #lis-inner-summon .btn-item,
-      #lis-inner-weapon .btn-item,
-      .prt-listup:not(#prt-list-skin) .prt-list-item .btn-item,
-      .prt-listup:not(#prt-list-skin) .prt-list-item .lis-item,
-      [data-css="/party/list_npc.css"] + #cnt-list_npc .lis-npc,
-      [data-css="/party/list_summon.css"] + #cnt-list_summon .lis-summon,
-      [data-css="/party/list_weapon.css"] + #cnt-list_weapon .lis-weapon {
-        transform: scale(.8);
-        margin: -10px -5.5px 0 !important;
-      }
-
-      #lis-inner-summon .btn-item.on,
-      #lis-inner-weapon .btn-item.on,
-      .cnt-list-equipment .cnt-summon-order .lis-summon.on,
-      .cnt-list-equipment .cnt-weapon-order .lis-weapon.on,
-      .cnt-material-order .btn-material.on,
-      .pop-filter-enhancement .prt-reset-filter .btn-reset-filter.on,
-      .pop-filter-setting .prt-reset-filter .btn-reset-filter.on,
-      .prt-listup .prt-param-icon .btn-current-sort.on,
-      .prt-listup .prt-list-item .btn-item.on {
-        transform: scale(.75);
-      }
-    }
-
-    @-moz-document domain("granbluefantasy.jp") {
-      .pop-confirm-recycle.pop-usual .txt-popup-body .prt-confirm-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle,
-      .pop-confirm-recycle.pop-usual .txt-popup-body .prt-result-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle,
-      .pop-result-recycle.pop-usual .txt-popup-body .prt-confirm-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle,
-      .pop-result-recycle.pop-usual .txt-popup-body .prt-result-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle {
-        width: 51px;
-        height: auto;
-        margin: 0 1px 1px;
-      }
-    }
-  EOT;
-
-}
-
-@advanced dropdown hide-arcarum-skip "⛔ Hide arcarum skip button" {
-
-  hide-arcarum-skip-0 "Disabled" <<<EOT EOT;
-  
-  hide-arcarum-skip-1 "Enabled/" <<<EOT
-    .prt-arcarum-skip {
-      display: none;  
-    }
-  EOT;
-
-}
-
-@advanced dropdown hide-header-banners "⛔ Hide header banners" {
-
-  hide-header-banners-0 "Disabled" <<<EOT EOT;
-  
-  hide-header-banners-1 "Enabled*" <<<EOT
-    .pop-global-menu .prt-global-banner {
-      display: none;
-    }
-  EOT;
-
-}
-
-@advanced dropdown hide-scrollbars "⛔ Hide scrollbars" {
-
-  hide-scrollbars-1 "Enabled*" <<<EOT
-    html ::-webkit-scrollbar {
-      display: none !important;
-    }
-
-    .jssdk #submenu.open {
-      width: 373px;
-    }
-  EOT;
-
-  hide-scrollbars-2 "When no space is available" <<<EOT
-    @media only screen and (max-width: 640px) {
-
-      html ::-webkit-scrollbar {
-        display: none !important;
-      }
-
-      .jssdk #submenu.open {
-        width: 373px;
-      }
-
-    }
-  EOT;
-
-  hide-scrollbars-0 "Disabled" <<<EOT EOT;
-
-}
-
-@advanced dropdown hide-star-premium "⛔ Hide star premium draw" {
-
-  hide-star-premium-1 "Enabled" <<<EOT
-    .lis-gold.campaign {
-      display: none;
-    }
-  EOT;
-
-  hide-star-premium-0 "Disabled*" <<<EOT EOT;
-
-}
-
-@advanced dropdown hide-submenu "⛔ Hide submenu" {
-
-  hide-submenu-1 "Enabled*" <<<EOT
-    #submenu {
-      display: none !important;
-    }
-  EOT;
-
-  hide-submenu-0 "Disabled" <<<EOT EOT;
-
-}
-
-@advanced dropdown hide-size "⛔ Hide footer size settings" {
-  
-  hide-size-1 "Enabled*" <<<EOT
-    #treasure-footer .cnt-treasure-footer {
-      bottom: -10px;
-    }
-
-    body.jssdk #mobage-game-container,
-    body.jssdk #gree-game-container {
-      margin-bottom: 32px;
-    }
-  EOT;
-
-  hide-size-0 "Disabled" <<<EOT EOT;
-
-}
-
-@advanced dropdown hide-crystal-count "⛔ Hide crystal count" {
-
-  hide-crystal-count-0 "Disabled*" <<<EOT EOT;
-  
-  hide-crystal-count-1 "Enabled" <<<EOT
-    .prt-user-info .prt-info-possessed .prt-stone,
-    .prt-player .prt-player-status .prt-info-possessed .prt-stone {
-      display: none !important;
-    }
-  EOT;
-
-}
-
-@advanced dropdown hide-gacha-banner "⛔ Hide gacha banners" {
-
-  hide-gacha-banner-0 "Disabled*" <<<EOT EOT;
-  
-  hide-gacha-banner-1 "Enabled" <<<EOT
-    .lis-banner.prt-event-banner,
-    .prt-gacha-banner-slider,
-    .btn-banner[data-href^="gacha"] {
-      display: none !important;
-    }
-  EOT;
-
-}
-
-@advanced dropdown hide-special-draw "⛔ Hide surprise draw" {
-
-  hide-special-draw-0 "Disabled*" <<<EOT EOT;
-  
-  hide-special-draw-1 "Enabled" <<<EOT
-    .btn-banner[data-href="gacha/campaign/69/gachacampaign"] {
-      display: none;
-    } 
-  EOT;
-
-}
-
-@advanced dropdown hide-outfit-sets "⛔ Hide featured outfit sets" {
-
-  hide-outfit-sets-0 "Disabled*" <<<EOT EOT;
-  
-  hide-outfit-sets-1 "Enabled" <<<EOT
-    .btn-banner[data-href^="gacha/skin"] {
-      display: none;
-    }
-  EOT;
-
-}
-
-@advanced dropdown hide-quest-comment "⛔ Hide quest commentary" {
-
-  hide-quest-comment-0 "Disabled*" <<<EOT EOT;
-  
-  hide-quest-comment-1 "Enabled" <<<EOT
-    .prt-lead {
-      min-height: 12px;
-    }
-
-    .prt-lead > .onm-be,
-    .prt-lead > .txt-baloon {
-      display: none;
-    }
-
-    .btn-toggle-assist-owner {
-      margin: 0 auto 8px auto;
-    }
-  EOT;
-
-}
-
-@advanced dropdown hide-pinboard "⛔ Hide pinboard missions" {
-
-  hide-pinboard-0 "Disabled*" <<<EOT EOT;
-  
-  hide-pinboard-1 "Enabled" <<<EOT
-    .prt-campaign-banners {
-      padding: 48px 0 8px 15px;
-    }
-    .prt-campaign-banners .btn-banner-s {
-      margin: 0 !important;
-    }
-    .prt-campaign-banners .btn-banner-s img {
-      margin: 0 10px 6px 0;
-    }
-    .prt-campaign-banners [data-href="campaign/panel"] {
-      display: none;
-    }
-  EOT;
-
-}
-
-@advanced dropdown hide-event-load "⛔ Hide event loading animations" {
-
-  hide-event-load-0 "Disabled*" <<<EOT EOT;
-  
-  hide-event-load-1 "Enabled" <<<EOT
-    #ready > * {
-      display: none !important;
-    }
-  EOT;
-
-}
-
-@advanced dropdown hide-support-plus "⛔ Hide support summon plus marks" {
-
-  hide-support-plus-0 "Disabled*" <<<EOT EOT;
-  
-  hide-support-plus-1 "Enabled" <<<EOT .prt-supporter-list .prt-summon-quality,
-    .prt-deck-select .prt-supporter .prt-supporter-info .prt-summon-image .prt-supporter-quality {
-      display: none;
-    }
-  EOT;
-
-}
-
 ==/UserStyle== */
+
 @-moz-document domain("granbluefantasy.jp") {
-  /* font */
-  body,
-	.prt-user-info .prt-info-profile .btn-user-name,
-  .prt-status .prt-user-name .txt-user-name {
-    /* 'FOT-テロップ明朝 Pro D' */
-    font-family: "/*[[font-family]]*/", "Average Sans", sans-serif !important;
+  :root {
+    --c-scrollbar-bg: #000;
   }
 
-  /* hide sidebar */
-  body.jssdk > div:first-child > div:first-child {
+  /* Scrollbar */
+  ::-webkit-scrollbar,
+  ::-webkit-scrollbar-corner,
+  ::-webkit-scrollbar-track-piece {
+    background: var(--c-scrollbar-bg) !important;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px !important;
+    height: 17px !important;
+  }
+
+  ::-webkit-scrollbar:vertical {
+    border-radius: 8px !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #0A0A0A;
+    border: 3px solid var(--c-scrollbar-bg) !important;
+    border-radius: 8px !important;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #111;
+  }
+
+  /* updates */
+  .prt-log-notice .btn-lis-log,
+  .prt-no-header-log .btn-lis-log,
+  .prt-log-notice-no-footer .btn-lis-log,
+  .prt-log-notice .lis-log,
+  .prt-no-header-log .lis-log,
+  .prt-log-notice-no-footer .lis-log,
+  .prt-log-notice .btn-lis-log.on,
+  .prt-no-header-log .btn-lis-log.on,
+  .prt-log-notice-no-footer .btn-lis-log.on,
+  .prt-log-notice .lis-log.on,
+  .prt-no-header-log .lis-log.on,
+  .prt-log-notice-no-footer .lis-log.on {
+    height: 28px;
+  }
+  .prt-log-notice .btn-lis-log .txt-log-date,
+  .prt-no-header-log .btn-lis-log .txt-log-date,
+  .prt-log-notice-no-footer .btn-lis-log .txt-log-date,
+  .prt-log-notice .lis-log .txt-log-date,
+  .prt-no-header-log .lis-log .txt-log-date,
+  .prt-log-notice-no-footer .lis-log .txt-log-date {
+    padding: 8px 5px;
+  }
+
+  /* bigger favourite item text */
+  #treasure-footer .cnt-treasure-footer #prt-treasure-slider #treasure-list .lis-treasure .prt-treasure-wrapper .txt-treasure-num {
+    font-size: 9.5px;
+    text-shadow: 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000;
+  }
+
+  /* smaller profile support summons text */
+  .prt-fix-summon .prt-fix-support-wrap .prt-fix-support .prt-fix-spec {
+    font-size: 11px !important;
+  }
+
+  /*.common-pop-error {
+    opacity: .5;
+    pointer-events: none;
+  }*/
+  .mask {
+    pointer-events: none;
+  }
+
+  /* .pop-show {
+    zoom: .95 !important;
+    left: 8px;
+  } */
+
+
+  .prt-command > *:first-child,
+  .prt-command > *:first-child > * {
+    z-index: 0;
+  }
+
+  .prt-command-chara .prt-special,
+  .prt-command-chara .prt-ability-list {
+    background: #150F0F;
+  }
+
+
+  /* fast draw */
+  /*#cjs-gacha {
     display: none;
   }
+  .cnt-result-gacha[style="display:none;"] {
+    display: block !important;
+  }*/
+  /*
 
-  body,
+
+  /* hide global footer */
+  /* .wrapper {
+    padding-bottom: 10px;
+  }
+  .cnt-global-footer {
+    display: none;
+  }
+  body.jssdk #mobage-game-container .wrapper,
+  body.jssdk #gree-game-container .wrapper {
+    margin-bottom: -25px !important;
+  } */
+  /* */
+  .cnt-event.multi {
+    display: flex;
+    flex-direction: column;
+  }
+  .cnt-event.multi > *:not(.prt-module-frame):not(.prt-event-gacha) {
+    order: 1;
+    margin-top: 0 !important;
+  }
+  .cnt-event.multi > .prt-module-frame,
+  .cnt-event.multi > .prt-event-gacha {
+    order: 0;
+  }
+  .cnt-event.multi > .prt-module-frame {
+    margin-top: 40px;
+  }
+
+  .cnt-raid-chat .ico-attention,
+  .prt-event-support .prt-event-temporary {
+    display: none !important;
+  }
+
+  /* fix upgrade's "switch" button */
+  /* .cnt-base-status .status .btn-base-chenge {
+    margin-top: 1px;
+  } */
+  /*.prt-command-summon[style*="display: none;"] + * {}*/
+  /* .prt-navi {
+    top: 160px;
+  } */
+  .prt-scene-comment {
+    font-size: 13.5px;
+    font-weight: 400;
+  }
+
+  .prt-user-info .prt-info-possessed * {
+    font-size: 13px !important;
+    line-height: 18px;
+  }
+  body .prt-supporter-info .prt-supporter-detail .prt-summon-skill:not(.hack) {
+    font-size: 8px !important;
+    font-weight: bold !important;
+    line-height: 9.5px !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* start: hide gala draw buttons */
+  /*.prt-user-menu .prt-link-gacha.fes {
+    display: block;
+    background: url(https://game-a.granbluefantasy.jp/assets_en/img/sp/mypage/btn-s6cd3cf1890.png) no-repeat 0 -995px;
+    background-size: 202px 4704px;
+  }
+
+  .prt-global-main .prt-global-gacha.fes {
+    display: block;
+    background: url('https://game-a.granbluefantasy.jp/assets_en/img/sp/menu/parts_btn-sa56bb9abd1.png') no-repeat 0 -1176px;
+    background-size: 135px 3228px;
+  }*/
+  /* end: hide gala draw button */
+  .jssdk #submenu.open #prt-submenu-contents {
+    zoom: 0.9725;
+  }
+  .prt-assist {
+    display: flex;
+    flex-direction: column;
+  }
+  .prt-assist-contents {
+    order: 1;
+  }
+  .prt-module-id {
+    margin-bottom: 1px;
+  }
+  .prt-module-id .prt-multi-title,
+  .prt-module-id .txt-join-lead {
+    display: none;
+  }
+  .prt-module-id .prt-input {
+    padding: 0;
+  }
+  .prt-module-id .prt-input .prt-input-form {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  .prt-module-id .prt-input .prt-input-form .prt-input-key {
+    padding: 0;
+    width: calc(100% - 130px);
+    margin-right: 5px;
+  }
+  .prt-module-id .prt-input .prt-input-form .frm-battle-key {
+    width: 100%;
+    box-sizing: border-box;
+    height: 32px;
+  }
+
+  /**/
+  .btn-show-button > * {
+    vertical-align: middle;
+  }
+
+  /* minimum height */
+  #mobage-game-container,
+  #gree-game-container {
+    margin-bottom: 0 !important;
+    /*padding-bottom: 57.5px;*/
+    padding-bottom: 31px;
+    /* compensate for footer */
+  }
+  .wrapper,
+  .mask,
+  .cnt-quest-scene,
   .cnt-raid,
-  .cnt-raid .cnt-multi,
-  .prt-mask-job,
-  .prt-scene-comment-after-mask {
-    background: /*[[bg-color]]*/
-    !important;
-  }
-
-  .mask {
-    background: /*[[bg-color]]*/
-    B3 !important;
-  }
-
-  /* fix font sizes */
-  .prt-supporter-info .prt-supporter-detail .prt-summon-skill.text-small {
-    font-size: 8.25px !important;
-    font-weight: 500;
-  }
-
-  /* fix poker BG */
   .cnt-poker {
-    background: #000;
+    min-height: calc(50vh - 31px) !important;
+  }
+  @media (max-height: 500px) {
+    .cnt-raid {
+      min-height: 500px !important;
+    }
+  }
+  @media (max-height: 328px) {
+    .wrapper,
+    .mask,
+    .cnt-quest-scene,
+    .cnt-poker {
+      min-height: 328px !important;
+    }
+  }
+  /* improve item stats display */
+  .prt-list-item-status table {
+    width: 70%;
+  }
+  .prt-list-item-status.locked table {
+    margin-left: 5%;
+  }
+  .prt-list-item-status td:nth-child(2):last-child {
+    text-align: right;
+  }
+  .prt-list-item-status .txt-item-status,
+  .prt-list-item-status .prt-item-status {
+    font-size: 9.5px;
+  }
+  #pop-deck .prt-deck-select .prt-deck-wrapper .lis-deck .prt-unit-image .prt-leader .img-leader,
+  #pop-deck .prt-deck-select .prt-deck-wrapper .lis-deck .prt-unit-image .lis-party .img-party {
+    width: 39px;
+    height: 71px;
+  }
+  #pop-deck .prt-deck-select .prt-deck-wrapper .lis-deck .prt-unit-image .prt-leader [class^="ico-attribute-"] {
+    top: 57.5px;
+  }
+  /* 4 banners per gameplay extra rows */
+  .prt-campaign-banners::before {
+    border-image: url(https://prd-game-a-granbluefantasy.akamaized.net/assets_en/img/sp/ui/campaign_toggle/campaign_base.png?1511244036) 160 0 60 fill stretch round;
+    border-width: 70px 0 30px;
+  }
+  .prt-campaign-banners {
+    min-height: 99px;
+    z-index: 2;
+  }
+  .prt-campaign-banners .btn-banner-s .img-collaboration-s {
+    width: 65px;
+  }
+  /* chat */
+  #general-chat.app.chrome #chat-open,
+  #submenu-general-chat #chat-open {
+    bottom: 32px;
+    width: 26px;
+    height: 24px;
+    right: 0 !important;
+    top: 32px !important;
+    /*margin: 0 !important;
+    left: 32px !important;*/
+    z-index: 1000000000;
+    background-size: 44px 744px;
+    background-position: 0 -128px;
+  }
+  #submenu-general-chat #chat-body #chat-content {
+    top: 32px !important;
+    padding-top: 5px;
+  }
+  /* hide upgrade crap */
+  /*.prt-attribute-bonus {
+    display: none !important;
+  }
+  .cnt-confirm-material .txt-evolution-confirm {
+    height: 0;
+    margin-bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+  }*/
+
+  /* hide crew chat when it doesn't fit */
+  @media (max-width: 1600px) {
+    #submenu {
+      display: none !important;
+    }
+  }
+  /* hide gacha crap */
+  /* .cnt-index-gacha #prt-header-img-wrapper, */
+  .prt-external-links,
+  .prt-header-img-wrapper .img-header-fade,
+  .lis-lineup .prt-gacha-infomation {
+    display: none;
+  }
+  .prt-header-img-wrapper {
+    height: 172px;
+    margin: -28px auto -46px;
+    overflow: hidden;
+    position: relative;
+  }
+  .prt-header-img-wrapper > img {
+    height: auto;
+    width: 100%;
+  }
+  .prt-header-img-wrapper .prt-cerulean-sparks-wrapper {
+    top: 60px;
+  }
+  /* hide spam notifications */
+  .btn-lis-notification.campaign-label,
+  .btn-lis-notification[data-href="#static_news/detail/prev_id=20002"] {
+    display: none !important;
+  }
+  /* hide add banners */
+  .btn-banner[data-href^="collaboration/campaign/gbvs"] {
+    display: none !important;
+  }
+  /* hide crap tutorials */
+  .prt-enhance-note,
+  .prt-list-help-balloon {
+    display: none;
+  }
+  /* hide party auto-select button */
+  .btn-index-all-setting {
+    visibility: hidden;
+  }
+  /* hide posessions in user card */
+  .prt-user-info .prt-info-possessed:not(.box) {
+    display: none;
+  }
+  /* battle - hide button to enable animations */
+  .btn-set-skip-special-all.set-off {
+    visibility: hidden;
+  }
+  /* battle - hide players header */
+  .prt-multi-mene {
+    display: none !important;
+  }
+  /* darker disabled abilities */
+  .prt-command-chara .prt-ability-list .lis-ability [class^="shine"] {
+    opacity: .66;
+  }
+  /* compact enhancements */
+  .prt-enhance-detail.prt-module-enhancement {
+    font-size: 10px;
+    line-height: 11.5px;
+  }
+  .prt-enhance-detail.prt-module-enhancement .prt-module-header {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .cnt-material-status .cnt-material-list,
+  .cnt-material-status-item .cnt-material-list,
+  .prt-enhance-detail .cnt-material-list {
+    padding-bottom: 0;
+  }
+  .cnt-list-equipment .txt-notice {
+    padding: 0;
+  }
+  .cnt-list-equipment .prt-induce-button .btn-induce,
+  .cnt-list-equipment .prt-induce-evo .btn-induce {
+    margin: 0 -2px;
+  }
+  .prt-description-optimization,
+  .prt-material-pointer {
+    display: none;
+  }
+  .cnt-material-status .txt-caution-rarity,
+  .cnt-material-status-item .txt-caution-rarity,
+  .prt-enhance-detail .txt-caution-rarity {
+    opacity: 0;
+    margin: 0;
+  }
+  .lis-treasure .prt-treasure-count .txt-treasure-count {
+    font-size: 16px !important;
+    padding: 2px 0;
+  }
+  /* crop class images on chat */
+  #chat-body .lis-log .img-character-log,
+  #chat-activenotice .lis-log .img-character-log {
+    /*clip: rect(0px, 46px, 30px, 0px);*/
+    clip: rect(0px, 32px, 30px, 0px);
+  }
+  #chat-body .lis-log .txt-log,
+  #chat-activenotice .lis-log .txt-log {
+    padding-left: 36px !important;
+  }
+  /* smaller stamps, with real size zoom on hover */
+  .txt-balloon-comment {
+    overflow: visible !important;
+  }
+  .txt-balloon-comment .img-stamp,
+  .txt-log .img-stamp {
+    width: 60px !important;
+    z-index: 10;
+    position: relative;
+    transition: .1s;
+  }
+  .txt-balloon-comment .img-stamp,
+  .txt-log .img-stamp {
+    margin: -15px !important;
+    transform: scale(.5);
+  }
+  .txt-balloon-comment .img-stamp:hover,
+  .txt-log .img-stamp:hover {
+    transform: scale(1);
+  }
+  .txt-balloon-comment .img-stamp {
+    background: #ecedeb;
+    box-shadow: 0 0 4px #ecedeb, 0 0 4px #ecedeb, 0 0 4px #ecedeb;
+  }
+  .txt-log .img-stamp {
+    background: black;
+    box-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black;
+  }
+  .prt-log-display .prt-log-each .txt-log-message {
+    padding: 0 5px 0 15px;
+  }
+  .cnt-quest-scene .btn-skip {
+    top: 422px;
+  }
+  /*  */
+  .cnt-quest-command {
+    background: url(https://i.imgur.com/Rxdv5uY.png) no-repeat;
+    background-size: 320px 320px;
+  }
+  .cnt-base-status .status .prt-title.text-small {
+    font-size: 11px;
+    line-height: 10px;
+  }
+  .cnt-weapon-list .prt-weapon-list .prt-skill .prt-slv-value .txt-slv-value {
+    margin-bottom: 1.5px;
+  }
+  div.prt-symbolmark {
+    margin-top: 0 !important;
+  }
+  .prt-blank-story {
+    display: none !important;
+  }
+  /* highlight side stories exchanges left */
+  [data-story-id="zzzz"] {
+    filter: none !important;
+    opacity: 1 !important;
+  }
+  /* crap removal */
+  .cnt-extra-lb .img-tips,
+  .btn-thumbnail.btn-grapass-banner,
+  .btn-banner-s[data-href*="collaboration/campaign/gbvs"],
+  .btn-banner-s[data-href="beginnercomic"],
+  .btn-banner-s[data-href="premium"],
+  .btn-banner[data-external-href*="granbluefantasy-campaign.mobage.jp"],
+  .btn-banner[data-href*="gacha/campaign"],
+  .btn-banner[data-href*="gacha/skin"],
+  .btn-banner[data-href*="shop/skin"],
+  .btn-banner[data-href*="sidestory/story/"],
+  .btn-banner[data-href="manariafriends"],
+  .btn-banner[href*="anime.granbluefantasy.jp"],
+  .btn-check-seraphic,
+  .prt-campaign-banners .btn-banner-s img[src*="banner_anime.png"],
+  .prt-scene-comment-after-mask,
+  .prt-config-balloon,
+  .btn-weapon-all,
+  .btn-summon-all,
+  .btn-mainweapon-fix,
+  .btn-change-sex.type-1,
+  .prt-self-introduction .prt-sns-one:nth-child(2),
+  #prt-comic-banner,
+  #prt-assist-id .txt-offer-lead,
+  #prt-assist-id .prt-assist-tips {
+    display: none !important;
+  }
+  .prt-self-introduction .prt-sns-one,
+  .prt-self-introduction .txt-twitter-recover-comment {
+    width: 152px !important;
+  }
+  .cnt-extra-lb .btn-select-augment-item {
+    margin-top: 0;
+  }
+  #chat-input.btn-general-chat,
+  #chat-send,
+  #chat-stamp {
+    cursor: pointer;
+  }
+  textarea:focus {
+    outline: none;
+  }
+  #submenu #cnt-submenu-navi-vertical {
+    background: black !important
+  }
+  /* compact battle confirmation */
+  .txt-deck-confirm {
+    min-height: 60px;
+  }
+  .txt-deck-confirm .txt-limit {
+    font-size: 10px;
+    font-style: italic;
+  }
+  /* */
+  .prt-damage-num [class*="count"] {
+    min-width: 17px;
+  }
+  .prt-damage-num .count-1 {
+    background-position-x: 4px !important;
+  }
+  .prt-frame::before,
+  .prt-module-item-list::before {
+    border-image: url(https://i.imgur.com/DSVSl9I.png) 80 0 82 fill stretch round;
+  }
+  .prt-buttons {
+    margin-bottom: 4px;
+  }
+  /* party characters / summons */
+  /* #prt-pc + div + .prt-contents:not(.large) .cnt-weapon-list {
+    background-image: url(https://i.imgur.com/XTnzQ2v.png);
+    background-position: -2.5px 0;
+    background-size: 326px 661px;
+  }
+  #prt-pc + div + .prt-contents:not(.large) .cnt-summon-list {
+    background-image: url(https://i.imgur.com/XTnzQ2v.png);
+    background-position: -2.5px -332px;
+    background-size: 326px 661px;
+  }
+  #prt-pc + div + .prt-contents:not(.large) .cnt-weapon-list,
+  #prt-pc + div + .prt-contents:not(.large) .cnt-summon-list {
+    height: 308px;
+  }
+  #prt-pc + div + .prt-contents:not(.large) .cnt-weapon-list .btn-mainweapon-fix,
+  #prt-pc + div + .prt-contents:not(.large) .cnt-weapon-list .btn-weapon-display-change {
+    top: 270px;
+  } */
+  .cnt-weapon-list .prt-weapon-list.is-companion .cnt-weapon-sub .lis-weapon-sub {
+    margin-bottom: 0;
+  }
+  .pop-usual .txt-popup-body,
+  .pop-usual .txt-popup-body-sm,
+  .pop-usual .txt-popup-body .txt-explain {
+    font-size: 10px;
+    line-height: 1.15;
+  }
+  .pop-usual .txt-popup-body > *,
+  .pop-usual .txt-popup-body-sm > * {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  .pop-usual .prt-popup-frame,
+  .pop-notification-list .prt-notification-list .btn-lis-notification {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+  .pop-usual .btn-show-button {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+  .pop-exp .prt-arcarum-point-box .txt-point-title::before {
+    top: -8.5px;
+  }
+  /* 6 items per row in supplies when not filtering */
+  /* .prt-item-contents.item-filter .prt-item-filter .prt-module-item-list:not(.type-filter) .prt-item-inner .lis-item {
+    margin: 0 2.5px !important;
+  } */
+  /* 6 items per row in supplies when filtering */
+  /* .prt-item-contents.item-filter .prt-item-filter .prt-module-item-list.type-filter .prt-item-inner .lis-item {
+    transform: scale(.78);
+    height: 86px;
+    margin: -16px -2.51px !important;
+  } */
+  .prt-item-contents.item-filter .prt-item-filter .prt-module-item-list .prt-item-inner .prt-line {
+    height: 64px;
+  }
+  /* glowless footer */
+  #treasure-footer .cnt-treasure-footer,
+  #treasure-footer .cnt-treasure-footer.plain {
+    background: url(https://i.imgur.com/J0uhDGM.png) no-repeat 0 6.5px;
+    background-size: 100%;
+    bottom: -10.5px;
+  }
+  /* explanation */
+  .prt-attention-box .prt-attention-body,
+  .prt-gacha-about .prt-about-body {
+    background: transparent;
+  }
+  /* */
+  .prt-lupi-lineup .prt-gacha-infomation::before {
+    border: none;
+  }
+  .prt-user-scene {
+    height: 416px;
+  }
+  .cnt-mypage .prt-banner.margin-top-small,
+  .cnt-mypage .prt-banner {
+    margin-top: -28px;
   }
 
-  /* fix user info BG */
-  .prt-user-info::before {
-    border-image-repeat: stretch stretch;
+  .cnt-mypage .prt-banner.display-off {
+    margin-top: 0;
+  }
+  .prt-town-scene .prt-town-bg .img-town {
+    height: 456px;
+  }
+  /*show-town*/
+  .cnt-mypage {
+    display: flex;
+    flex-direction: column
+  }
+  .lis-banner {
+    margin-bottom: -4px;
+  }
+  /* black background in scenes */
+  .prt-scene-comment {
+    background: url(https://i.imgur.com/PX0mVyE.png) no-repeat 0 0;
+    background-size: 320px auto;
+  }
+  /* fix header position */
+  .pop-global-menu {
+    box-sizing: border-box;
+    height: 100%;
+    overflow: auto;
   }
 
-  /* fix crew chest overlapping pictures */
-  #submenu-general-chat #chat-body #chat-log .lis-log .txt-log {
-    padding-left: 52px;
+  .pop-global-menu .prt-global-banner:last-of-type {
+    padding-bottom: 30px;
   }
 
-  /* prevent horizontal scrollbar */
-  body {
-    overflow-x: hidden;
+  @media (max-width: 1920px) {
+    .prt-scene-comment .prt-message-area .txt-message {
+      font-size: 12.5px;
+    }
   }
-
-  /*[[center-content]]*/
-  /*[[center-popups]]*/
-  /*[[compact-gacha]]*/
-  /*[[compact-raids]]*/
-  /*[[compact-summons]]*/
-  /*[[fit-crew-chat]]*/
-  /*[[fix-header-menu]]*/
-  /*[[gray-out-equipped]]*/
-  /*[[hide-arcarum-skip]]*/
-  /*[[hide-crystal-count]]*/
-  /*[[hide-event-load]]*/
-  /*[[hide-gacha-banner]]*/
-  /*[[hide-header-banners]]*/
-  /*[[hide-outfit-sets]]*/
-  /*[[hide-pinboard]]*/
-  /*[[hide-quest-comment]]*/
-  /*[[hide-scrollbars]]*/
-  /*[[hide-size]]*/
-  /*[[hide-special-draw]]*/
-  /*[[hide-star-premium]]*/
-  /*[[hide-submenu]]*/
-  /*[[hide-support-plus]]*/
-  /*[[keep-extras-open]]*/
-  /*[[rearrange-raid-ui]]*/
-  /*[[selectable-text]]*/
-  /*[[sort-summons]]*/
-  /*[[submenu-on-left]]*/
+  /* hide arca vyrn images */
+  #cnt-arcarum-stage .cnt-division-list .prt-division-list .img-blank-division {
+    display: none;
+  }
+  #cnt-arcarum .prt-arcarum-frame .prt-frame-main,
+  #cnt-arcarum-stage .prt-arcarum-frame .prt-frame-main {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
-/*[[compact-lists]]*/
-/*[[compact-upgrade]]*/
-/*[[reorder-coop]]*/
+@-moz-document url-prefix("https://game.granbluefantasy.jp/#raid/") {
+  /* click through modal backdrops */
+  .mask {
+    min-height: 0 !important;
+    height: 0;
+  }
+}
+
+@-moz-document url-prefix("https://game.granbluefantasy.jp/#comic/") {
+  header,
+  .prt-episode-title,
+  footer {
+    display: none !important;
+  }
+  .cnt-comic-episode {
+    padding: 0;
+  }
+  .wrapper,
+  .cnt-comic-episode {
+    background: black;
+  }
+}
+
+@-moz-document regexp("https:\\/\\/game\\.granbluefantasy\\.jp\\/.*\\/scene.*"), regexp("https:\\/\\/game\\.granbluefantasy\\.jp\\/.*#raidz.*") {
+  /* hide footer when dispensable */
+  #treasure-footer {
+    display: none;
+  }
+  #mobage-game-container,
+  #gree-game-container {
+    padding-bottom: 0;
+  }
+  /*  */
+  /*.prt-sel-area .prt-sel-inner {
+    bottom: 50px;
+  }
+  .prt-sel-area .prt-sel-inner.prt-one-sel {
+    bottom: 80px;
+  }*/
+  .prt-sel-area .prt-sel-inner.has-1-sel {
+    top: 288px;
+  }
+  .prt-sel-area .prt-sel-inner.has-2-sel {
+    top: 260px;
+  }
+}
+
+@-moz-document url("https://game.granbluefantasy.jp/#quest/assist/event") {
+  /* hide stuff on event raids page */
+  #prt-assist-id,
+  .prt-lead {
+    display: none;
+  }
+}/* ==UserStyle==
+@name           Empty @name replaces the default template - 4/9/2022, 12:36:12 PM
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+
+@-moz-document domain("example.com") {
+  /* Insert code here... */
+}
