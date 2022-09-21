@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Displays YouTube's theater in fullscreen.
-@version        2022.09.21.18.00
+@version        2022.09.22.01.26
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
@@ -11,35 +11,42 @@
 @var checkbox   hide-scrollbar  "Hide scrollbar"    0
 
 ==/UserStyle== */
-@-moz-document url-prefix("https://www.youtube.com/watch?v=")
-{
-  if hide-header {
-    #masthead-container.ytd-app {
-      top: -56px;
-      transition: 0.2s;
-      transition-delay: 0.15s;
-      border-bottom: 56px solid transparent;
-    }
+@-moz-document url-prefix("https://www.youtube.com/watch?v=") {
+	:root {
+		--header-height: 56px;
+	}
 
-    #masthead-container.ytd-app:focus-within,
-    #masthead-container.ytd-app:hover {
-      top: 0;
-      border-bottom: 0px solid transparent;
-    }
-  }
-  
-  if hide-scrollbar {
-    ::-webkit-scrollbar {
-      display: none;
-    }
-  }
+	ytd-watch-flexy:not([fullscreen]) #player-theater-container.ytd-watch-flexy {
+		max-height: none;
+		height: calc(100vh - var(--header-height));
+	}
 
-  ytd-watch-flexy:not([fullscreen]) #player-theater-container.ytd-watch-flexy {
-    max-height: none;
-    height: calc(100vh);
-  }
+	if hide-header {
+		#page-manager.ytd-app {
+			margin-top: 0;
+		}
 
-  #page-manager.ytd-app {
-    margin-top: 0;
-  }
+		#masthead-container.ytd-app {
+			top: calc(-1 * var(--header-height));
+			transition: 0.2s;
+			transition-delay: 0.15s;
+			border-bottom: headerHeight solid transparent;
+		}
+
+		#masthead-container.ytd-app:focus-within,
+		#masthead-container.ytd-app:hover {
+			top: 0;
+			border-bottom: 0px solid transparent;
+		}
+
+		ytd-watch-flexy:not([fullscreen]) #player-theater-container.ytd-watch-flexy {
+			height: 100vh;
+		}
+	}
+
+	if hide-scrollbar {
+		::-webkit-scrollbar {
+			display: none;
+		}
+	}
 }
