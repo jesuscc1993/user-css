@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Displays YouTube's theater in fullscreen.
-@version        2022.09.22.01.26
+@version        2022.09.23.00.33
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
@@ -30,7 +30,7 @@
 			top: calc(-1 * var(--header-height));
 			transition: 0.2s;
 			transition-delay: 0.15s;
-			border-bottom: headerHeight solid transparent;
+			border-bottom: var(--header-height) solid transparent;
 		}
 
 		#masthead-container.ytd-app:focus-within,
@@ -40,7 +40,7 @@
 		}
 
 		ytd-watch-flexy:not([fullscreen]) #player-theater-container.ytd-watch-flexy {
-			height: 100vh;
+			height: 100vh !important;
 		}
 	}
 
