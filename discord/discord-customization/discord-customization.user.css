@@ -3,22 +3,22 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Provides some extra customization options for Discord.
-@version        2022.09.08.18.31
+@version        2022.10.11.19.35
 @license        CC BY-SA 4.0
 @preprocessor   less
 
-@var text font-family            "Font family"            "'Whitney', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
-@var text block-emoji-size       "Block emoji size"       54px
-@var text inline-emoji-size      "Inline emoji size"      24px
-@var text reaction-emoji-size    "Reaction emoji size"    20px
-@var text min-sidebar-width      "Min sidebar width"      240px
-@var text max-sidebar-width      "Max sidebar width"      240px
-@var text channels-height        "Channels height"        32px
-@var text avatar-scale           "Avatar scale"           1
-@var checkbox darker-quotes      "Darker code and quotes" 0
-@var checkbox emoji-zoom         "Emoji zoom on hover"    0
-@var checkbox full-width-embeds  "Full width embeds"      0
-@var checkbox restore-blurple    "Restore blurple"        0
+@var text font-family            "Font family"              "'Whitney', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+@var text block-emoji-size       "Block emoji size"         54px
+@var text inline-emoji-size      "Inline emoji size"        24px
+@var text reaction-emoji-size    "Reaction emoji size"      20px
+@var text min-sidebar-width      "Min sidebar width"        240px
+@var text max-sidebar-width      "Max sidebar width"        240px
+@var text channel-height         "Channel height (sidebar)" 32px
+@var text avatar-scale           "Avatar scale"             1
+@var checkbox darker-quotes      "Darker code and quotes"   0
+@var checkbox emoji-zoom         "Emoji zoom on hover"      0
+@var checkbox full-width-embeds  "Full width embeds"        0
+@var checkbox restore-blurple    "Restore blurple"          0
 
 ==/UserStyle== */
 @-moz-document domain("discord.com") {
@@ -29,7 +29,7 @@
 		--reaction-emoji-size: @reaction-emoji-size;
 		--min-sidebar-width: @min-sidebar-width;
 		--max-sidebar-width: @max-sidebar-width;
-		--channels-height: @channels-height;
+		--channel-height: @channel-height;
 		--avatar-scale: @avatar-scale;
 	}
 
@@ -271,9 +271,14 @@
 		max-width: 100% !important;
 	}
 
-	/* channel list */
-	[class*="sidebar"] [class*="containerDefault"] [class*="mainContent"], [class*="iconVisibility-"] [class*="children-"] {
-		height: var(--channels-height) !important;
+	/* channel height */
+	[class*="sidebar"] [class*="iconVisibility"]:not([class*="wrapperCommon"]) > * {
+		height: var(--channel-height);
+	}
+	
+	[class*="sidebar"] [class*="iconVisibility"]:not([class*="wrapperCommon"]) > [class*="unread"] {
+		margin-top: 0;
+		top: 1px;
 	}
 
 	/* blurple restoration */
