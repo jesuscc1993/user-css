@@ -13,7 +13,7 @@
 @var text reaction-emoji-size    "Reaction emoji size"    20px
 @var text min-sidebar-width      "Min sidebar width"      240px
 @var text max-sidebar-width      "Max sidebar width"      240px
-@var text channels-height        "Channels height"        25px
+@var text channels-height        "Channels height"        32px
 @var text avatar-scale           "Avatar scale"           1
 @var checkbox darker-quotes      "Darker code and quotes" 0
 @var checkbox emoji-zoom         "Emoji zoom on hover"    0
@@ -270,10 +270,12 @@
 	[class*="gridContainer"] when (@full-width-embeds =1) {
 		max-width: 100% !important;
 	}
-	/* channel list*/
+
+	/* channel list */
 	[class*="sidebar"] [class*="containerDefault"] [class*="mainContent"], [class*="iconVisibility-"] [class*="children-"] {
 		height: var(--channels-height) !important;
 	}
+
 	/* blurple restoration */
 	html.theme-dark when (@restore-blurple =1) {
 		--brand-experiment-100: #f8f9fd;
