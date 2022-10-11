@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Provides some extra customization options for Discord.
-@version        2022.10.11.20.08
+@version        2022.10.11.20.21
 @license        CC BY-SA 4.0
 @preprocessor   less
 
@@ -70,13 +70,8 @@
 	}
 
 	/* channel height */
-	[class*="sidebar"] [class*="iconVisibility"]:not([class*="wrapperCommon"]) > * {
+	[class*="sidebar"] [class*="iconVisibility"]:not([class*="wrapperCommon"]) > *:not([class*="unread"]) {
 		height: var(--channel-height);
-	}
-
-	[class*="sidebar"] [class*="iconVisibility"]:not([class*="wrapperCommon"]) > [class*="unread"] {
-		margin-top: 0;
-		top: 1px;
 	}
 
 	/* HIDE UNLESS HOVERED */
