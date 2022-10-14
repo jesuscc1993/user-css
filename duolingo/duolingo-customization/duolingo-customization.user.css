@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Provides some extra customization options for Duolingo.
-@version        2022.09.21.20.02
+@version        2022.10.14.21.37
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
@@ -58,48 +58,42 @@
 
 	/* leages */
 	if (hide-leagues) {
-		#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(1),
-		#root > div > div:nth-child(5) > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
+    #root > div > div > div:nth-child(2) > div > div._1YfQ8._1FaGz > div > div:nth-child(1) > div {
 			display: none;
 		}
 	}
 
 	/* goals */
 	if (hide-goals) {
-		#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2),
-		#root > div > div:nth-child(5) > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+    #root > div > div > div:nth-child(2) > div > div._1YfQ8._1FaGz > div > div:nth-child(2) > div {
 			display: none;
 		}
 	}
 
 	/* premium */
 	if (hide-premium) {
-		#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(3),
-		#root > div > div:nth-child(5) > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
+    #root > div > div > div:nth-child(2) > div > div._1YfQ8._1FaGz > div > div:nth-child(3) > div {
 			display: none;
 		}
 	}
 
 	/* achievements */
 	if (hide-achievements) {
-		#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(4),
-		#root > div > div:nth-child(5) > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) {
+    #root > div > div > div:nth-child(2) > div > div._1YfQ8._1FaGz > div > div:nth-child(4) > div {
 			display: none;
 		}
 	}
 
 	/* friends */
 	if (hide-friends) {
-		#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(5),
-		#root > div > div:nth-child(5) > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) {
+    #root > div > div > div:nth-child(2) > div > div._1YfQ8._1FaGz > div > div:nth-child(5) > div {
 			display: none;
 		}
 	}
 
 	/* follow */
 	if (hide-follow) {
-		#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(6),
-		#root > div > div:nth-child(5) > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(6) {
+    #root > div > div > div:nth-child(2) > div > div._1YfQ8._1FaGz > div > div:nth-child(6) > div {
 			display: none;
 		}
 	}
@@ -108,11 +102,11 @@
 		margin-top: 0;
 		/* to counter hiding the add on top */
 	}
-
-	#root > div > div:nth-child(5) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) ._2eeKH {
-		border-radius: 50%;
-		overflow: hidden;
-	}
+  
+  /* hide top shop add */
+  #root > div._1R67g._3YKTw > div > div:nth-child(2) > div > div._33Mo9 > div._2TlMB > div > div {
+    display: none;
+  }
 
 	/* hide results adds column */
 	._1jZrU {
