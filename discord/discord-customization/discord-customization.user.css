@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Provides some extra customization options for Discord.
-@version        2022.10.14.20.36
+@version        2022.10.15.00.07
 @license        CC BY-SA 4.0
 @preprocessor   less
 
@@ -280,8 +280,8 @@
 
 	/* reduced message spacing */
 	html when (@reduce-message-spacing =1) {
-		[class*="wrapper"][class*="compact"],
-		[class*="wrapper"][class*="cozy"] {
+		[class*="wrapper"][class*="compact"]:not([class*="mentioned-"]),
+		[class*="wrapper"][class*="cozy"]:not([class*="mentioned-"]) {
 			padding-top: 0;
 			padding-bottom: 0;
 		}
