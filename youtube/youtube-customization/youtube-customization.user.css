@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Provides some extra customization options for YouTube.
-@version        2022.10.22.11.40
+@version        2022.10.22.11.45
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
@@ -28,6 +28,10 @@
   html:not(.style-scope) {
     --ytd-grid-max-width: grid-max-width;
     --ytd-grid-6-columns-width: var(--ytd-grid-max-width);
+  }
+
+  ytd-app {
+    --app-drawer-width: drawer-width;
   }
 
   /* custom grid zoom */
@@ -59,32 +63,9 @@
     width: var(--list-thumbnail-width);
   }
 
-  #hover-overlays {
-    zoom: 2.075;
-  }
-
-  /* misc */
-  /*html > ::-webkit-scrollbar,*/
-  #country-code,
-  #top-level-buttons-computed > :nth-child(4),
-  #voice-search-button,
-  #buttons.ytd-masthead > ytd-topbar-menu-button-renderer.ytd-masthead.style-default {
-    display: none !important;
-  }
-
-  ytd-thumbnail-overlay-resume-playback-renderer {
-    height: 32px;
-    z-index: 0;
-  }
-
   ytd-subscribe-button-renderer[button-style="COMPACT_GRAY"] tp-yt-paper-button.ytd-subscribe-button-renderer:not([subscribed]) {
     background-color: var(--yt-spec-brand-button-background);
     color: var(--yt-spec-static-brand-white);
-  }
-
-  /* thinner sidebar */
-  ytd-app {
-    --app-drawer-width: drawer-width;
   }
 
   ytd-guide-renderer.ytd-app {
@@ -97,25 +78,5 @@
 
   ytd-app[guide-persistent-and-visible] ytd-page-manager.ytd-app {
     margin-left: var(--app-drawer-width);
-  }
-
-  /* force sub bg color */
-  if force-sub-bg {
-    .ytp-caption-segment {
-      background: rgba(0, 0, 0, .72) !important;
-    }
-  }
-
-  /* hide text on video buttons */
-  /* ytd-video-primary-info-renderer ytd-toggle-button-renderer:not(:first-child) yt-formatted-string, */
-  /* dislike */
-  ytd-video-primary-info-renderer ytd-button-renderer:not(:first-child) yt-formatted-string {
-    display: none;
-  }
-
-  /* extensions */
-  .ytp-right-controls #infoButton,
-  .ytp-right-controls #startSegmentButton {
-    display: none !important;
   }
 }
