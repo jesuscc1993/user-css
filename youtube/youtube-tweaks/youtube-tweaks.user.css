@@ -3,63 +3,67 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Miscellaneous style overrides for YouTube.
-@version        2022.10.25.22.37
+@version        2022.10.25.22.47
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var color      sub-bg    "Subtitle background color"    rgba(0, 0, 0, .72)
+@var color      sub-bg               "Subtitle background color"    rgba(0, 0, 0, .72)
+@var text       sub-border-radius    "Subtitle border radius"       0px
 
 ==/UserStyle== */
-
 @-moz-document domain("youtube.com") {
-  ytd-grid-video-renderer {
-    height: 296px;
-  }
+	ytd-grid-video-renderer {
+		height: 296px;
+	}
 
-  ytd-thumbnail-overlay-resume-playback-renderer {
-    height: 32px;
-    z-index: 0;
-  }
+	ytd-thumbnail-overlay-resume-playback-renderer {
+		height: 32px;
+		z-index: 0;
+	}
 
-  #hover-overlays {
-    zoom: 2.075;
-  }
+	#hover-overlays {
+		zoom: 2.075;
+	}
 
-  /* force sub bg color */
-  if force-sub-bg {
-    .ytp-caption-segment {
-      background: sub-bg !important;
-    }
-  }
+	.ytp-caption-segment {
+		background: sub-bg !important;
+	}
 
-  /* hide text on video buttons */
-  /* ytd-video-primary-info-renderer ytd-toggle-button-renderer:not(:first-child) yt-formatted-string, */
-  /* dislike */
-  ytd-video-primary-info-renderer ytd-button-renderer:not(:first-child) yt-formatted-string {
-    display: none;
-  }
+	.ytp-caption-segment:first-child {
+		border-radius: sub-border-radius 0 0 sub-border-radius;		
+	}
+	.ytp-caption-segment:last-child {
+		border-radius: 0 sub-border-radius sub-border-radius 0;		
+	}
 
-  /* extensions */
-  .ytp-right-controls #infoButton,
-  .ytp-right-controls #startSegmentButton {
-    display: none !important;
-  }
+	/* hide text on video buttons */
+	/* ytd-video-primary-info-renderer ytd-toggle-button-renderer:not(:first-child) yt-formatted-string, */
+	/* dislike */
+	ytd-video-primary-info-renderer ytd-button-renderer:not(:first-child) yt-formatted-string {
+		display: none;
+	}
 
-  /* misc */
-  /*html > ::-webkit-scrollbar,*/
-  #country-code,
-  #top-level-buttons-computed > :nth-child(4),
-  #voice-search-button,
-  #buttons.ytd-masthead > ytd-topbar-menu-button-renderer.ytd-masthead.style-default {
-    display: none !important;
-  }
+	/* extensions */
+	.ytp-right-controls #infoButton,
+	.ytp-right-controls #startSegmentButton {
+		display: none !important;
+	}
 
-  /* hide sidebar items */
-  /* shorts */
-  #sections ytd-guide-section-renderer:nth-child(1) > * > ytd-guide-entry-renderer:nth-child(2),
-  /* your videos */
-  #sections ytd-guide-collapsible-section-entry-renderer:nth-child(4) > * > ytd-guide-entry-renderer:nth-child(2),
-  foo {
-    display: none;
-  }
+	/* misc */
+	/*html > ::-webkit-scrollbar,*/
+	#country-code,
+	#top-level-buttons-computed > :nth-child(4),
+	#voice-search-button,
+	#buttons.ytd-masthead > ytd-topbar-menu-button-renderer.ytd-masthead.style-default {
+		display: none !important;
+	}
+
+	/* hide sidebar items */
+	/* shorts */
+	#sections ytd-guide-section-renderer:nth-child(1) > * > ytd-guide-entry-renderer:nth-child(2),
+	/* your videos */
+	#sections ytd-guide-collapsible-section-entry-renderer:nth-child(4) > * > ytd-guide-entry-renderer:nth-child(2),
+	foo {
+		display: none;
+	}
 }
