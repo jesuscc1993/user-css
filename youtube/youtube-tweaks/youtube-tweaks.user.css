@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Miscellaneous style overrides for YouTube.
-@version        2022.10.25.22.47
+@version        2022.10.25.23.14
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
@@ -30,10 +30,13 @@
 	}
 
 	.ytp-caption-segment:first-child {
-		border-radius: sub-border-radius 0 0 sub-border-radius;		
+		border-top-left-radius: sub-border-radius;
+		border-bottom-left-radius: sub-border-radius;
 	}
+
 	.ytp-caption-segment:last-child {
-		border-radius: 0 sub-border-radius sub-border-radius 0;		
+		border-top-right-radius: sub-border-radius;
+		border-bottom-right-radius: sub-border-radius;
 	}
 
 	/* hide text on video buttons */
