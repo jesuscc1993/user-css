@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Provides some extra customization options for Discord.
-@version        2022.10.22.21.20
+@version        2022.10.25.21.05
 @license        CC BY-SA 4.0
 @preprocessor   less
 
@@ -265,6 +265,10 @@
 
 		[class*="messagesWrapper-"] img.emoji.jumboable:hover {
 			transform: scale(2);
+		}
+		
+		[class*="messagesWrapper-"] [class*="reaction"] img.emoji {
+			transform: scale(1) !important;
 		}
 
 		[role="textbox"] img.emoji:hover {
