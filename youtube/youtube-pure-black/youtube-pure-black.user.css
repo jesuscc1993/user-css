@@ -3,12 +3,13 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Pure black theme for YouTube.
-@version        2022.10.26.20.18
+@version        2022.10.26.21.46
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var color      primary-bg-color    "Primary background color"    #000
-@var color      secondary-bg-color  "Secondary background color"  rgba(255, 255, 255, 0.05)
+@var color      primary-bg-color            "Primary background color"              #000
+@var color      secondary-bg-color          "Secondary background color"            rgba(255, 255, 255, 0.04)
+@var color      secondary-bg-color-hover    "Secondary background color (hover)"    rgba(255, 255, 255, 0.08)
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
@@ -16,6 +17,7 @@
 	[darker-dark-theme] [dark],
 	html[dark],
 	[dark] {
+		/* PRIMARY */
 		--yt-spec-base-background: primary-bg-color/* #0f0f0f */;
 		--yt-spec-raised-background: primary-bg-color/* #212121 */;
 		--yt-spec-menu-background: primary-bg-color/* #2F2F2F */;
@@ -27,7 +29,11 @@
 		--yt-spec-brand-background-primary: primary-bg-color/* rgba(33, 33, 33, 0.98) */;
 		--yt-spec-brand-background-secondary: primary-bg-color/* rgba(33, 33, 33, 0.95) */;
 
-		--yt-spec-badge-chip-background: secondary-bg-color;/* rgba(255, 255, 255, 0.1) */
-		--yt-spec-additive-background: secondary-bg-color;/* rgba(255, 255, 255, 0.1) */
+		/* SECONDARY */
+		--yt-spec-badge-chip-background: secondary-bg-color/* rgba(255, 255, 255, 0.1) */;
+		--yt-spec-additive-background: secondary-bg-color/* rgba(255, 255, 255, 0.1) */;
+		/* hover */
+		--yt-spec-button-chip-background-hover: secondary-bg-color-hover/* rgba(255, 255, 255, 0.2); */
+		--yt-spec-mono-tonal-hover: secondary-bg-color-hover/* rgba(255, 255, 255, 0.2); */
 	}
 }
