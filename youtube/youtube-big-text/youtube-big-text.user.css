@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Increases YouTube's font size; useful when watching from a distance.
-@version        2022.10.21.19.13
+@version        2022.10.26.22.27
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
@@ -20,122 +20,127 @@
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
-  :root {
-    --line-height-font-size-ratio: line-height-font-size-ratio;
-    --owner-and-teaser-scale: owner-and-teaser-scale;
-    --font-size-cc: font-size-cc;
-    --font-size-lg: font-size-lg;
-    --font-size-md: font-size-md;
-    --font-size-sm: font-size-sm;
-    --grid-line-clamp: grid-line-clamp;
-    --video-comment-line-clamp: video-comment-line-clamp;
-    --video-description-max-height: video-description-max-height;
-    --video-title-line-clamp: video-title-line-clamp;
+	:root {
+		--line-height-font-size-ratio: line-height-font-size-ratio;
+		--owner-and-teaser-scale: owner-and-teaser-scale;
+		--font-size-cc: font-size-cc;
+		--font-size-lg: font-size-lg;
+		--font-size-md: font-size-md;
+		--font-size-sm: font-size-sm;
+		--grid-line-clamp: grid-line-clamp;
+		--video-comment-line-clamp: video-comment-line-clamp;
+		--video-description-max-height: video-description-max-height;
+		--video-title-line-clamp: video-title-line-clamp;
 
-    --line-height-cc: calc(var(--font-size-cc) * var(--line-height-font-size-ratio));
-    --line-height-lg: calc(var(--font-size-lg) * var(--line-height-font-size-ratio));
-    --line-height-md: calc(var(--font-size-md) * var(--line-height-font-size-ratio));
-    --line-height-sm: calc(var(--font-size-sm) * var(--line-height-font-size-ratio));
-  }
+		--line-height-cc: calc(var(--font-size-cc) * var(--line-height-font-size-ratio));
+		--line-height-lg: calc(var(--font-size-lg) * var(--line-height-font-size-ratio));
+		--line-height-md: calc(var(--font-size-md) * var(--line-height-font-size-ratio));
+		--line-height-sm: calc(var(--font-size-sm) * var(--line-height-font-size-ratio));
+	}
 
-  html:not(.style-scope)[typography] {
-    --yt-navbar-title-font-size: var(--font-size-lg);
-    --yt-navbar-title-line-height: var(--line-height-lg);
-  }
+	html:not(.style-scope)[typography] {
+		--yt-navbar-title-font-size: var(--font-size-lg);
+		--yt-navbar-title-line-height: var(--line-height-lg);
+	}
 
-  ytd-comments,
-  ytd-expander {
-    --ytd-user-comment_-_font-size: var(--font-size-lg);
-    --ytd-user-comment_-_line-height: var(--line-height-lg);
-  }
+	ytd-comments,
+	ytd-expander {
+		--ytd-user-comment_-_font-size: var(--font-size-lg);
+		--ytd-user-comment_-_line-height: var(--line-height-lg);
+	}
 
-  ytd-expander {
-    --ytd-expander-collapsed-height: var(--video-description-max-height) !important;
-    --ytd-expander-max-lines: var(--video-comment-line-clamp) !important;
-  }
+	ytd-expander {
+		--ytd-expander-collapsed-height: var(--video-description-max-height) !important;
+		--ytd-expander-max-lines: var(--video-comment-line-clamp) !important;
+	}
 
-  ytd-grid-video-renderer {
-    --yt-link-font-size: var(--font-size-md);
-    --ytd-link-line-height: var(--line-height-md);
-  }
+	ytd-grid-video-renderer {
+		--yt-link-font-size: var(--font-size-md);
+		--ytd-link-line-height: var(--line-height-md);
+	}
 
-  ytd-grid-playlist-renderer #video-title.ytd-grid-playlist-renderer,
-  ytd-grid-video-renderer #video-title.yt-simple-endpoint.ytd-grid-video-renderer,
-  ytd-grid-video-renderer #video-title.ytd-grid-video-renderer,
-  ytd-item-section-renderer #video-title.ytd-playlist-video-renderer,
-  ytd-two-column-browse-results-renderer #video-title.ytd-rich-grid-media,
-  ytd-two-column-search-results-renderer #video-title.ytd-video-renderer {
-    font-size: var(--font-size-md);
-    line-height: var(--line-height-md);
-    max-height: none;
-    -webkit-line-clamp: var(--grid-line-clamp);
-  }
+	ytd-grid-playlist-renderer #video-title.ytd-grid-playlist-renderer,
+	ytd-grid-video-renderer #video-title.yt-simple-endpoint.ytd-grid-video-renderer,
+	ytd-grid-video-renderer #video-title.ytd-grid-video-renderer,
+	ytd-item-section-renderer #video-title.ytd-playlist-video-renderer,
+	ytd-two-column-browse-results-renderer #video-title.ytd-rich-grid-media,
+	ytd-two-column-search-results-renderer #video-title.ytd-video-renderer {
+		font-size: var(--font-size-md);
+		line-height: var(--line-height-md);
+		max-height: none;
+		-webkit-line-clamp: var(--grid-line-clamp);
+	}
 
-  .title.ytd-video-primary-info-renderer {
-    line-height: var(--yt-navbar-title-line-height);
-    max-height: none;
-    -webkit-line-clamp: var(--video-title-line-clamp);
-  }
+	.title.ytd-video-primary-info-renderer {
+		line-height: var(--yt-navbar-title-line-height);
+		max-height: none;
+		-webkit-line-clamp: var(--video-title-line-clamp);
+	}
 
-  ytd-expander.ytd-video-secondary-info-renderer,
-  #content-text.ytd-comment-renderer,
-  .ytd-comment-renderer,
-  #name.ytd-author-comment-badge-renderer .ytd-channel-name {
-    font-size: var(--ytd-user-comment_-_font-size);
-    line-height: var(--ytd-user-comment_-_line-height);
-  }
-  
-  .ytd-comment-renderer yt-formatted-string > .emoji.small-emoji {
-    height: var(--ytd-user-comment_-_font-size);
-    width: auto;
-  }
+	ytd-expander.ytd-video-secondary-info-renderer,
+	#content-text.ytd-comment-renderer,
+	.ytd-comment-renderer,
+	#name.ytd-author-comment-badge-renderer .ytd-channel-name {
+		font-size: var(--ytd-user-comment_-_font-size);
+		line-height: var(--ytd-user-comment_-_line-height);
+	}
 
-  ytd-thumbnail-overlay-time-status-renderer {
-    height: auto;
-  }
+	.ytd-comment-renderer yt-formatted-string > .emoji.small-emoji {
+		height: var(--ytd-user-comment_-_font-size);
+		width: auto;
+	}
 
-  #video-title.ytd-playlist-panel-video-renderer,
-  #video-title.ytd-compact-video-renderer {
-    font-size: var(--font-size-sm) !important;
-    line-height: var(--line-height-sm) !important;
-  }
+	ytd-thumbnail-overlay-time-status-renderer {
+		height: auto;
+	}
 
-  #text.ytd-thumbnail-overlay-time-status-renderer {
-    max-height: none;
-    font-size: var(--font-size-md);
-    line-height: var(--line-height-md);
-  }
+	#video-title.ytd-playlist-panel-video-renderer,
+	#video-title.ytd-compact-video-renderer {
+		font-size: var(--font-size-sm) !important;
+		line-height: var(--line-height-sm) !important;
+	}
 
-  ytd-grid-video-renderer #text.ytd-thumbnail-overlay-time-status-renderer {
-    max-height: none;
-    font-size: var(--font-size-lg) !important;
-    line-height: var(--line-height-lg) !important;
-  }
+	#description.ytd-watch-metadata,
+	#text.ytd-thumbnail-overlay-time-status-renderer,
+	#video-title.ytd-compact-video-renderer,
+	#video-title.ytd-playlist-panel-video-renderer,
+	ytd-text-inline-expander {
+		max-height: none;
+		font-size: var(--font-size-md);
+		line-height: var(--line-height-md);
+	}
 
-  .ytp-caption-segment {
-    max-height: none;
-    font-size: var(--font-size-cc) !important;
-    line-height: var(--line-height-cc) !important;
-  }
+	h1.ytd-watch-metadata,
+	ytd-grid-video-renderer #text.ytd-thumbnail-overlay-time-status-renderer {
+		max-height: none;
+		font-size: var(--font-size-lg) !important;
+		line-height: var(--line-height-lg) !important;
+	}
 
-  .ytp-time-display,
-  .ytp-chapter-container {
-    font-size: var(--font-size-md);
-  }
+	.ytp-caption-segment {
+		max-height: none;
+		font-size: var(--font-size-cc) !important;
+		line-height: var(--line-height-cc) !important;
+	}
 
-  #name.ytd-author-comment-badge-renderer {
-    max-height: none;
-  }
+	.ytp-time-display,
+	.ytp-chapter-container {
+		font-size: var(--font-size-md);
+	}
 
-  ytd-author-comment-badge-renderer {
-    height: auto;
-  }
+	#name.ytd-author-comment-badge-renderer {
+		max-height: none;
+	}
 
-  #description.ytd-video-secondary-info-renderer {
-    max-width: none;
-  }
+	ytd-author-comment-badge-renderer {
+		height: auto;
+	}
 
-  #owner-and-teaser {
-    zoom: var(--owner-and-teaser-scale);
-  }
+	#description.ytd-video-secondary-info-renderer {
+		max-width: none;
+	}
+
+	#owner-and-teaser {
+		zoom: var(--owner-and-teaser-scale);
+	}
 }
