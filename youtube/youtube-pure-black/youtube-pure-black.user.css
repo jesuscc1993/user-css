@@ -3,27 +3,31 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Pure black theme for YouTube.
-@version        2022.07.22.22.36
+@version        2022.10.26.20.18
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var text       background-color    "Background color"    #000
+@var color      primary-bg-color    "Primary background color"    #000
+@var color      secondary-bg-color  "Secondary background color"  rgba(255, 255, 255, 0.05)
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
-  html[darker-dark-theme][dark],
-  [darker-dark-theme] [dark],
-  html[dark],
-  [dark] {
-    --yt-spec-base-background: background-color /* #0f0f0f */;
-    --yt-spec-raised-background: background-color /* #212121 */;
-    --yt-spec-menu-background: background-color /* #2F2F2F */;
-    --yt-spec-general-background-a: background-color /* #181818 */;
-    --yt-spec-general-background-b: background-color /* #0f0f0f */;
-    --yt-spec-general-background-c: background-color /* #030303 */;
-    /* regular dark */
-    --yt-spec-brand-background-solid: background-color /* #212121 */;
-    --yt-spec-brand-background-primary: background-color /* rgba(33, 33, 33, 0.98) */;
-    --yt-spec-brand-background-secondary: background-color /* rgba(33, 33, 33, 0.95) */;
-  }
+	html[darker-dark-theme][dark],
+	[darker-dark-theme] [dark],
+	html[dark],
+	[dark] {
+		--yt-spec-base-background: primary-bg-color/* #0f0f0f */;
+		--yt-spec-raised-background: primary-bg-color/* #212121 */;
+		--yt-spec-menu-background: primary-bg-color/* #2F2F2F */;
+		--yt-spec-general-background-a: primary-bg-color/* #181818 */;
+		--yt-spec-general-background-b: primary-bg-color/* #0f0f0f */;
+		--yt-spec-general-background-c: primary-bg-color/* #030303 */;
+		/* regular dark */
+		--yt-spec-brand-background-solid: primary-bg-color/* #212121 */;
+		--yt-spec-brand-background-primary: primary-bg-color/* rgba(33, 33, 33, 0.98) */;
+		--yt-spec-brand-background-secondary: primary-bg-color/* rgba(33, 33, 33, 0.95) */;
+
+		--yt-spec-badge-chip-background: secondary-bg-color;/* rgba(255, 255, 255, 0.1) */
+		--yt-spec-additive-background: secondary-bg-color;/* rgba(255, 255, 255, 0.1) */
+	}
 }
