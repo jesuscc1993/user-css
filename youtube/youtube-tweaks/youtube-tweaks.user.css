@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Miscellaneous style overrides for YouTube.
-@version        2022.10.25.23.14
+@version        2022.10.26.22.02
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
@@ -68,5 +68,10 @@
 	#sections ytd-guide-collapsible-section-entry-renderer:nth-child(4) > * > ytd-guide-entry-renderer:nth-child(2),
 	foo {
 		display: none;
+	}
+
+	/* side menu items */
+	ytd-guide-entry-renderer[guide-refresh] {
+		width: 100%;
 	}
 }
