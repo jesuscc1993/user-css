@@ -3,12 +3,9 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Miscellaneous style overrides for YouTube.
-@version        2022.10.26.22.02
+@version        2022.10.26.22.15
 @license        CC BY-SA 4.0
 @preprocessor   stylus
-
-@var color      sub-bg               "Subtitle background color"    rgba(0, 0, 0, .72)
-@var text       sub-border-radius    "Subtitle border radius"       0px
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
@@ -23,20 +20,6 @@
 
 	#hover-overlays {
 		zoom: 2.075;
-	}
-
-	.ytp-caption-segment {
-		background: sub-bg !important;
-	}
-
-	.ytp-caption-segment:first-child {
-		border-top-left-radius: sub-border-radius;
-		border-bottom-left-radius: sub-border-radius;
-	}
-
-	.ytp-caption-segment:last-child {
-		border-top-right-radius: sub-border-radius;
-		border-bottom-right-radius: sub-border-radius;
 	}
 
 	/* hide text on video buttons */
