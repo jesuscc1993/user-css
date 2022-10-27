@@ -3,13 +3,14 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Pure black theme for YouTube.
-@version        2022.10.26.21.46
+@version        2022.10.27.21.33
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
 @var color      primary-bg-color            "Primary background color"              #000
-@var color      secondary-bg-color          "Secondary background color"            rgba(255, 255, 255, 0.04)
-@var color      secondary-bg-color-hover    "Secondary background color (hover)"    rgba(255, 255, 255, 0.08)
+@var color      secondary-bg-color          "Secondary background color"            rgba(255, 255, 255, 0.05)
+@var color      secondary-bg-color-hover    "Secondary background color (hover)"    rgba(255, 255, 255, 0.1)
+@var checkbox   remove-playlist-gradient    "Remove playlist gradient"              1
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
@@ -33,7 +34,21 @@
 		--yt-spec-badge-chip-background: secondary-bg-color/* rgba(255, 255, 255, 0.1) */;
 		--yt-spec-additive-background: secondary-bg-color/* rgba(255, 255, 255, 0.1) */;
 		/* hover */
-		--yt-spec-button-chip-background-hover: secondary-bg-color-hover/* rgba(255, 255, 255, 0.2); */
-		--yt-spec-mono-tonal-hover: secondary-bg-color-hover/* rgba(255, 255, 255, 0.2); */
+		--yt-spec-button-chip-background-hover: secondary-bg-color-hover/* rgba(255, 255, 255, 0.2); */;
+		--yt-spec-mono-tonal-hover: secondary-bg-color-hover/* rgba(255, 255, 255, 0.2); */;
+
+		if (remove-playlist-gradient) {
+			.immersive-header-background-wrapper {
+				background: secondary-bg-color !important;
+			}
+
+			.immersive-header-gradient {
+				background: transparent !important;
+			}
+
+			.immersive-header-container .blurred-image {
+				display: none;
+			}
+		}
 	}
 }
