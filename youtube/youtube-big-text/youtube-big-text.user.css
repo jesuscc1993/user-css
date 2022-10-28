@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Increases YouTube's font size; useful when watching from a distance.
-@version        2022.10.26.22.27
+@version        2022.10.28.22.04
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
@@ -103,15 +103,15 @@
 	#description.ytd-watch-metadata,
 	#text.ytd-thumbnail-overlay-time-status-renderer,
 	#video-title.ytd-compact-video-renderer,
-	#video-title.ytd-playlist-panel-video-renderer,
-	ytd-text-inline-expander {
+	#video-title.ytd-playlist-panel-video-renderer {
 		max-height: none;
 		font-size: var(--font-size-md);
 		line-height: var(--line-height-md);
 	}
 
 	h1.ytd-watch-metadata,
-	ytd-grid-video-renderer #text.ytd-thumbnail-overlay-time-status-renderer {
+	ytd-grid-video-renderer #text.ytd-thumbnail-overlay-time-status-renderer,
+	ytd-text-inline-expander {
 		max-height: none;
 		font-size: var(--font-size-lg) !important;
 		line-height: var(--line-height-lg) !important;
