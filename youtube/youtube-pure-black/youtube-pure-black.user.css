@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Pure black theme for YouTube.
-@version        2022.10.27.21.33
+@version        2022.11.01.10.43
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
@@ -39,7 +39,7 @@
 
 		if (remove-playlist-gradient) {
 			.immersive-header-background-wrapper {
-				background: secondary-bg-color !important;
+				background: primary-bg-color !important;
 			}
 
 			.immersive-header-gradient {
