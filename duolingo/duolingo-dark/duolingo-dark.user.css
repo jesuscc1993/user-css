@@ -3,55 +3,60 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Dark theme for Duolingo.
-@version        2022.11.04.12.15
+@version        2022.11.04.12.21
 @license        CC BY-SA 4.0
 @preprocessor   uso
 
 ==/UserStyle== */
 @-moz-document domain("duolingo.com") {
-  path[fill="#e5e5e5"] {
-    fill: #444;
-  }
+	path[fill="#e5e5e5"] {
+		fill: #444;
+	}
 
-  path[fill="#ffd900"] {
-    fill: #c80;
-  }
+	path[fill="#ffd900"] {
+		fill: #c80;
+	}
 
-  [role="progressbar"],
-  [id="session/PlayerFooter"] {
-    filter: saturate(1.5);
-  }
+	[role="progressbar"],
+	[id="session/PlayerFooter"] {
+		filter: saturate(1.5);
+	}
 
-  html {
-    filter: invert(0.9) hue-rotate(180deg);
-  }
+	html {
+		filter: invert(0.9) hue-rotate(180deg);
+	}
 
-  img,
-  img:hover,
-  svg,
-  svg:hover,
-  video,
-  video:hover,
-  [style*="background-image"] {
-    filter: invert(1) hue-rotate(180deg) brightness(1.125) !important;
-  }
+	img,
+	img:hover,
+	svg,
+	svg:hover,
+	video,
+	video:hover,
+	[style*="background-image"] {
+		filter: invert(1) hue-rotate(180deg) brightness(1.125) !important;
+	}
 
-  ._1LdIi,
-  ._1ualb,
-  ._3DWgD,
-  ._3aUCN,
-  .e9TL7,
-  .MyHQ0,
-  .placeholder {
-    filter: invert(1) hue-rotate(180deg) brightness(1.125);
-  }
+	._1LdIi,
+	._1ualb,
+	._3DWgD,
+	._3aUCN,
+	.e9TL7,
+	.MyHQ0,
+	.placeholder {
+		filter: invert(1) hue-rotate(180deg) brightness(1.125);
+	}
 
-  ._212s-,
-  ._3_QUJ,
-  ._3dPmh,
-  ._4iaAs,
-  .lIg1v,
-  .placeholder {
-    filter: invert(1) hue-rotate(180deg) brightness(1.5);
-  }
+	._212s-,
+	._3_QUJ,
+	._3dPmh,
+	._4iaAs,
+	.lIg1v,
+	.placeholder {
+		filter: invert(1) hue-rotate(180deg) brightness(1.5);
+	}
+
+	/* path step */
+	._2D40f {
+		--path-level-color: #775000;
+	}
 }
