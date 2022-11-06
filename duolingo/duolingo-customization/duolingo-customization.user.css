@@ -3,17 +3,41 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Provides some extra customization options for Duolingo.
-@version        2022.11.04.12.15
+@version        2022.11.06.21.36
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var  checkbox  hide-characters        "Hide Duolingo characters"       0
-@var  checkbox  hide-pronunciation     "Hide pronunciation"             0
-@var  checkbox  hide-leagues           "Hide leagues side panel"        0
-@var  checkbox  hide-goals             "Hide goals side panel"          0
-@var  checkbox  hide-premium           "Hide premium side panel"        0
+@var  checkbox  hide-leagues           "Hide leagues"                                 0
+@var  checkbox  hide-goals             "Hide goals"                                   0
+@var  checkbox  hide-premium           "Hide premium adds and features"               0
+@var  checkbox  hide-classes           "Hide classes"                                 0
+@var  checkbox  hide-schools           "Hide schools"                                 0
+@var  checkbox  hide-pronunciation     "Hide pronunciation"                           0
 
 ==/UserStyle== */
+@-moz-document url("https://www.duolingo.com/learn"), url("https://www.duolingo.com/characters"), url("https://www.duolingo.com/shop") {
+	/* leagues */
+	if (hide-leagues) {
+		#root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(1) {
+			display: none;
+		}
+	}
+
+	/* goals */
+	if (hide-goals) {
+		#root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(2) {
+			display: none;
+		}
+	}
+
+	/* premium */
+	if (hide-premium) {
+		#root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(3) {
+			display: none;
+		}
+	}
+}
+
 @-moz-document domain("duolingo.com") {
 	@media (min-width: 700px) {
 		[data-test="player-end-carousel"] > :nth-child(1) {
@@ -34,18 +58,6 @@
 		user-select: text;
 	}
 
-	/* characters */
-	if (hide-characters) {
-		.ite_X,
-		.F2B9m {
-			display: none;
-		}
-
-		._1UVl- {
-			margin-left: -10px;
-		}
-	}
-
 	/* pronunciation */
 	if (hide-pronunciation) {
 		._47IB1._3x_e5._2m_ED {
@@ -53,23 +65,32 @@
 		}
 	}
 
-	/* leages */
-	if (hide-leagues) {
-		#root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(1) {
-			display: none;
-		}
-	}
-
 	/* goals */
 	if (hide-goals) {
-		#root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(2) {
+		[data-test="/settings/coach"] {
 			display: none;
 		}
 	}
 
 	/* premium */
 	if (hide-premium) {
-		#root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(3) {
+		[href="/review"],
+		[href="/settings/super"] {
+			display: none;
+		}
+	}
+
+	/* classes */
+	if (hide-classes) {
+		[href="https://classes.duolingo.com/"] {
+			display: none;
+		}
+	}
+
+	/* schools */
+	if (hide-schools) {
+		[href="/settings/schools"],
+		[href="https://schools.duolingo.com/"] {
 			display: none;
 		}
 	}
