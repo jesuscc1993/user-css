@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Provides some extra customization options for Duolingo.
-@version        2022.11.06.21.36
+@version        2022.11.06.21.44
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
@@ -15,28 +15,6 @@
 @var  checkbox  hide-pronunciation     "Hide pronunciation"                           0
 
 ==/UserStyle== */
-@-moz-document url("https://www.duolingo.com/learn"), url("https://www.duolingo.com/characters"), url("https://www.duolingo.com/shop") {
-	/* leagues */
-	if (hide-leagues) {
-		#root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(1) {
-			display: none;
-		}
-	}
-
-	/* goals */
-	if (hide-goals) {
-		#root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(2) {
-			display: none;
-		}
-	}
-
-	/* premium */
-	if (hide-premium) {
-		#root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(3) {
-			display: none;
-		}
-	}
-}
 
 @-moz-document domain("duolingo.com") {
 	@media (min-width: 700px) {
@@ -78,6 +56,21 @@
 		[href="/settings/super"] {
 			display: none;
 		}
+
+		/* hide top shop add */
+		#root > div._1R67g._3YKTw > div > div:nth-child(2) > div > div._33Mo9 > div._2TlMB > div > div {
+			display: none;
+		}
+
+		[data-test="shop-section"] {
+			margin-top: 0;
+			/* to counter hiding the add on top */
+		}
+
+		/* hide results adds column */
+		._1jZrU {
+			width: 100%;
+		}
 	}
 
 	/* classes */
@@ -94,31 +87,29 @@
 			display: none;
 		}
 	}
+}
 
-	[data-test="shop-section"] {
-		margin-top: 0;
-		/* to counter hiding the add on top */
+@-moz-document url("https://www.duolingo.com/learn"),
+url("https://www.duolingo.com/characters"),
+url("https://www.duolingo.com/shop") {
+	/* leagues */
+	if (hide-leagues) {
+		#root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(1) {
+			display: none;
+		}
 	}
 
-	/* hide top shop add */
-	#root > div._1R67g._3YKTw > div > div:nth-child(2) > div > div._33Mo9 > div._2TlMB > div > div {
-		display: none;
+	/* goals */
+	if (hide-goals) {
+		#root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(2) {
+			display: none;
+		}
 	}
 
-	/* hide results adds column */
-	._1jZrU {
-		width: 100%;
-	}
-
-	.SQR8J {
-		display: none;
-	}
-
-	/* tmp fixes */
-	[data-test="try-plus-badge"],
-	._1ii1y,
-	._45hcs,
-	._3o_lc._1vljO {
-		display: none;
+	/* premium */
+	if (hide-premium) {
+		#root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(3) {
+			display: none;
+		}
 	}
 }
