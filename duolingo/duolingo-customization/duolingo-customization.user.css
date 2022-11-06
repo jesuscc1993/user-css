@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Provides some extra customization options for Duolingo.
-@version        2022.11.06.21.44
+@version        2022.11.06.21.49
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
@@ -15,7 +15,6 @@
 @var  checkbox  hide-pronunciation     "Hide pronunciation"                           0
 
 ==/UserStyle== */
-
 @-moz-document domain("duolingo.com") {
 	@media (min-width: 700px) {
 		[data-test="player-end-carousel"] > :nth-child(1) {
@@ -89,9 +88,7 @@
 	}
 }
 
-@-moz-document url("https://www.duolingo.com/learn"),
-url("https://www.duolingo.com/characters"),
-url("https://www.duolingo.com/shop") {
+@-moz-document regexp("https:\/\/www\.duolingo\.com\/(characters|learn|shop)") {
 	/* leagues */
 	if (hide-leagues) {
 		#root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(1) {
