@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Miscellaneous style overrides for YouTube.
-@version        2022.11.08.20.29
+@version        2022.11.08.20.36
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
@@ -23,10 +23,14 @@
 	}
 
 	/* hide text on video buttons */
-	/* ytd-video-primary-info-renderer ytd-toggle-button-renderer:not(:first-child) yt-formatted-string, */
-	/* dislike */
-	ytd-video-primary-info-renderer ytd-button-renderer:not(:first-child) yt-formatted-string {
+	#top-level-buttons-computed > *:not(:first-child) .yt-core-attributed-string,
+	#flexible-item-buttons .yt-core-attributed-string {
 		display: none;
+	}
+
+	#top-level-buttons-computed > *:not(:first-child) .yt-spec-button-shape-next__icon,
+	#flexible-item-buttons .yt-spec-button-shape-next__icon {
+		margin: 0 -6px !important;
 	}
 
 	/* extensions */
