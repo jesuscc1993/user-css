@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Provides some extra customization options for Duolingo.
-@version        2022.11.06.21.49
+@version        2022.11.07.20.10
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
@@ -62,14 +62,20 @@
 		}
 
 		[data-test="shop-section"] {
+			/* counter hiding the add on top */
 			margin-top: 0;
-			/* to counter hiding the add on top */
 		}
+		/* */
 
 		/* hide results adds column */
 		._1jZrU {
 			width: 100%;
 		}
+		
+		.wm1bO.SQR8J {
+			display: none;			
+		}
+		/* */
 	}
 
 	/* classes */
