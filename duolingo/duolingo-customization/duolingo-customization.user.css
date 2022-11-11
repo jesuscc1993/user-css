@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Provides some extra customization options for Duolingo.
-@version        2022.11.10.15.37
+@version        2022.11.11.15.10
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 @var  checkbox  hide-leagues           "Hide leagues"                                 0
@@ -53,6 +53,11 @@
     ._2kgY1 {
       grid-template-columns: 0 1fr;
       grid-gap: 0;
+    }
+
+    /* stories */
+    ._25ZJA {
+      display: none;
     }
   }
 
