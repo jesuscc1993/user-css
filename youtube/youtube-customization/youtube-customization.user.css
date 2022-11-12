@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Provides some extra customization options for YouTube.
-@version        2022.11.12.11.19
+@version        2022.11.12.11.41
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
@@ -36,28 +36,29 @@
 	}
 
 	/* custom grid zoom */
-	#items.ytd-grid-renderer ytd-thumbnail.ytd-grid-video-renderer {
+	ytd-shelf-renderer ytd-thumbnail.ytd-grid-video-renderer {
 		height: var(--grid-thumbnail-height);
 	}
 
-	#items.ytd-grid-renderer > ytd-grid-video-renderer.ytd-grid-renderer,
-	#items.ytd-grid-renderer > ytd-grid-radio-renderer.ytd-grid-renderer,
-	#items.ytd-grid-renderer > ytd-grid-channel-renderer.ytd-grid-renderer,
-	#items.ytd-grid-renderer > ytd-grid-playlist-renderer.ytd-grid-renderer,
-	#items.ytd-grid-renderer > ytd-grid-movie-playlist-renderer.ytd-grid-renderer,
-	#items.ytd-grid-renderer > ytd-grid-movie-renderer.ytd-grid-renderer,
-	#items.ytd-grid-renderer > ytd-grid-show-renderer.ytd-grid-renderer,
-	#items.ytd-grid-renderer > ytd-game-card-renderer.ytd-grid-renderer,
-	#items.ytd-grid-renderer ytd-thumbnail.ytd-grid-video-renderer {
-		width: var(--grid-thumbnail-width);
+	ytd-shelf-renderer ytd-grid-video-renderer,
+	ytd-shelf-renderer ytd-thumbnail,
+	ytd-shelf-renderer ytd-reel-item-renderer {
+		width: var(--grid-thumbnail-width) !important;
+	}
+	
+	/* custom grid zoom (shorts) */
+	ytd-reel-shelf-renderer ytd-thumbnail.ytd-grid-video-renderer {
+		height: var(--grid-thumbnail-height);
 	}
 
-	#items.ytd-grid-renderer ytd-thumbnail img.yt-img-shadow {
+	ytd-reel-shelf-renderer ytd-grid-video-renderer,
+	ytd-reel-shelf-renderer ytd-thumbnail,
+	ytd-reel-shelf-renderer ytd-reel-item-renderer {
 		width: var(--grid-thumbnail-width) !important;
 	}
 
-	ytd-thumbnail.ytd-playlist-video-renderer,
-	ytd-playlist-video-renderer ytd-thumbnail img.yt-img-shadow {
+	/* custom list zoom */
+	ytd-thumbnail.ytd-playlist-video-renderer {
 		max-height: none;
 		max-width: none;
 		height: var(--list-thumbnail-height);
