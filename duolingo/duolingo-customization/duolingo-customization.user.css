@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Provides some extra customization options for Duolingo.
-@version        2022.11.11.15.10
+@version        2022.11.12.17.36
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 @var  checkbox  hide-leagues           "Hide leagues"                                 0
@@ -54,11 +54,6 @@
       grid-template-columns: 0 1fr;
       grid-gap: 0;
     }
-
-    /* stories */
-    ._25ZJA {
-      display: none;
-    }
   }
 
   /* pronunciation */
@@ -97,7 +92,12 @@
       width: 100%;
     }
 
+		._3zucw,
     .wm1bO.SQR8J {
+      display: none;
+    }
+		
+		[src*="images/super"] {
       display: none;
     }
     /* */
@@ -122,21 +122,22 @@
 @-moz-document regexp("https:\/\/www\.duolingo\.com\/(characters|learn|shop)") {
   /* leagues */
   if (hide-leagues) {
-    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(1) {
+    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(2) {
       display: none;
     }
   }
 
   /* goals */
   if (hide-goals) {
-    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(2) {
+    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(3) {
       display: none;
     }
   }
 
   /* premium */
   if (hide-premium) {
-    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(3) {
+    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(1),
+    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(4) {
       display: none;
     }
   }
