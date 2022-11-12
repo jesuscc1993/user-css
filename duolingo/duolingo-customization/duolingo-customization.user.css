@@ -3,116 +3,141 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Provides some extra customization options for Duolingo.
-@version        2022.11.07.20.10
+@version        2022.11.11.15.10
 @license        CC BY-SA 4.0
 @preprocessor   stylus
-
 @var  checkbox  hide-leagues           "Hide leagues"                                 0
 @var  checkbox  hide-goals             "Hide goals"                                   0
 @var  checkbox  hide-premium           "Hide premium adds and features"               0
 @var  checkbox  hide-classes           "Hide classes"                                 0
 @var  checkbox  hide-schools           "Hide schools"                                 0
 @var  checkbox  hide-pronunciation     "Hide pronunciation"                           0
-
+@var  checkbox  hide-characters        "Hide Duolingo characters"                     0
 ==/UserStyle== */
 @-moz-document domain("duolingo.com") {
-	@media (min-width: 700px) {
-		[data-test="player-end-carousel"] > :nth-child(1) {
-			width: 100%;
-		}
+  @media (min-width: 700px) {
+    [data-test="player-end-carousel"] > :nth-child(1) {
+      width: 100%;
+    }
 
-		[data-test="player-end-carousel"] > :nth-child(2) {
-			display: none;
-		}
+    [data-test="player-end-carousel"] > :nth-child(2) {
+      display: none;
+    }
 
-		[data-test*="challenge"] > .uH5m4 {
-			max-width: none;
-			width: 672px;
-		}
-	}
+    [data-test*="challenge"] > .uH5m4 {
+      max-width: none;
+      width: 672px;
+    }
+  }
 
-	[data-test="challenge-tap-token"] {
-		user-select: text;
-	}
+  [data-test="challenge-tap-token"] {
+    user-select: text;
+  }
 
-	/* pronunciation */
-	if (hide-pronunciation) {
-		._47IB1._3x_e5._2m_ED {
-			display: none;
-		}
-	}
+  /* characters */
+  if (hide-characters) {
+    /* regular ones */
+    .F2B9m {
+      display: none;
+    }
 
-	/* goals */
-	if (hide-goals) {
-		[data-test="/settings/coach"] {
-			display: none;
-		}
-	}
+    ._1UVl- {
+      margin-left: -10px;
+    }
 
-	/* premium */
-	if (hide-premium) {
-		[href="/review"],
-		[href="/settings/super"] {
-			display: none;
-		}
+    /* grid variant */
+    ._1KcR7 {
+      opacity: 0;
+    }
 
-		/* hide top shop add */
-		#root > div._1R67g._3YKTw > div > div:nth-child(2) > div > div._33Mo9 > div._2TlMB > div > div {
-			display: none;
-		}
+    ._2kgY1 {
+      grid-template-columns: 0 1fr;
+      grid-gap: 0;
+    }
 
-		[data-test="shop-section"] {
-			/* counter hiding the add on top */
-			margin-top: 0;
-		}
-		/* */
+    /* stories */
+    ._25ZJA {
+      display: none;
+    }
+  }
 
-		/* hide results adds column */
-		._1jZrU {
-			width: 100%;
-		}
-		
-		.wm1bO.SQR8J {
-			display: none;			
-		}
-		/* */
-	}
+  /* pronunciation */
+  if (hide-pronunciation) {
+    ._47IB1._3x_e5._2m_ED {
+      display: none;
+    }
+  }
 
-	/* classes */
-	if (hide-classes) {
-		[href="https://classes.duolingo.com/"] {
-			display: none;
-		}
-	}
+  /* goals */
+  if (hide-goals) {
+    [data-test="/settings/coach"] {
+      display: none;
+    }
+  }
 
-	/* schools */
-	if (hide-schools) {
-		[href="/settings/schools"],
-		[href="https://schools.duolingo.com/"] {
-			display: none;
-		}
-	}
+  /* premium */
+  if (hide-premium) {
+    [href="/review"],
+    [href="/settings/super"] {
+      display: none;
+    }
+
+    /* hide top shop add */
+    #root > div._1R67g._3YKTw > div > div:nth-child(2) > div > div._33Mo9 > div._2TlMB > div > div {
+      display: none;
+    }
+
+    [data-test="shop-section"] {
+      /* counter hiding the add on top */
+      margin-top: 0;
+    }
+    /* */
+    /* hide results adds column */
+    ._1jZrU {
+      width: 100%;
+    }
+
+    .wm1bO.SQR8J {
+      display: none;
+    }
+    /* */
+  }
+
+  /* classes */
+  if (hide-classes) {
+    [href="https://classes.duolingo.com/"] {
+      display: none;
+    }
+  }
+
+  /* schools */
+  if (hide-schools) {
+    [href="/settings/schools"],
+    [href="https://schools.duolingo.com/"] {
+      display: none;
+    }
+  }
 }
 
 @-moz-document regexp("https:\/\/www\.duolingo\.com\/(characters|learn|shop)") {
-	/* leagues */
-	if (hide-leagues) {
-		#root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(1) {
-			display: none;
-		}
-	}
+  /* leagues */
+  if (hide-leagues) {
+    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(1) {
+      display: none;
+    }
+  }
 
-	/* goals */
-	if (hide-goals) {
-		#root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(2) {
-			display: none;
-		}
-	}
+  /* goals */
+  if (hide-goals) {
+    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(2) {
+      display: none;
+    }
+  }
 
-	/* premium */
-	if (hide-premium) {
-		#root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(3) {
-			display: none;
-		}
-	}
+  /* premium */
+  if (hide-premium) {
+    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(3) {
+      display: none;
+    }
+  }
 }
