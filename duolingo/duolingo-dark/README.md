@@ -2,7 +2,7 @@
 
 ## Description
 
-Dark theme for the Duolingo (WIP).
+Dark theme for Duolingo.
 
 ## Preview
 

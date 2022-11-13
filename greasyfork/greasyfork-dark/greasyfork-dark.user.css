@@ -1,0 +1,51 @@
+/* ==UserStyle==
+@name           GreasyFork - Dark Theme
+@namespace      https://github.com/jesuscc1993/
+@author         MetalTxus
+@description    Dark theme for GreasyFork.
+@version        2022.11.13.20.46
+@license        CC BY-SA 4.0
+@preprocessor   uso
+
+==/UserStyle== */
+@-moz-document domain("greasyfork.org") {
+	body {
+		background: #0d0d0d;
+		filter: invert(.95) hue-rotate(180deg);
+	}
+
+	#main-header,
+	svg,
+	img,
+	video {
+		filter: invert(1) hue-rotate(180deg);
+	}
+
+	#main-header img {
+		filter: none;
+	}
+
+	a {
+		color: #F99;
+	}
+
+	a:visited {
+		color: #FCC;
+	}
+
+	a.discussion-title {
+		color: #000;
+	}
+
+	.prettyprint li.L1,
+	.prettyprint li.L3,
+	.prettyprint li.L5,
+	.prettyprint li.L7,
+	.prettyprint li.L9 {
+		background: #fcfcfc;
+	}
+
+	* {
+		box-shadow: none !important;
+	}
+}

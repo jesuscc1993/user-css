@@ -19,12 +19,9 @@ Requires the [Stylus](https://github.com/openstyles/stylus#releases) userstyle l
 - [granblue-fantasy/granblue-fantasy-enhancements](granblue-fantasy/granblue-fantasy-enhancements)
 - [granblue-fantasy/granblue-fantasy-tweaks](granblue-fantasy/granblue-fantasy-tweaks)
 
-* [nakama.social/nakama.social-personalizacion](nakama.social/nakama.social-personalizacion)
+* [greasyfork/greasyfork-dark](greasyfork/greasyfork-dark)
 
-- [naruho.do/naruho.do-base-changes](naruho.do/naruho.do-base-changes)
-- [naruho.do/naruho.do-customize](naruho.do/naruho.do-customize)
-- [naruho.do/naruho.do-discord-dark-theme](naruho.do/naruho.do-discord-dark-theme)
-- [naruho.do/naruho.do-stylish-black](naruho.do/naruho.do-stylish-black)
+- [nakama.social/nakama.social-personalizacion](nakama.social/nakama.social-personalizacion)
 
 * [stylus/stylus-codemirror-dark-plus](stylus/stylus-codemirror-dark-plus)
 * [stylus/stylus-customization](stylus/stylus-customization)
