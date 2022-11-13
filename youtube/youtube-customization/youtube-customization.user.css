@@ -3,39 +3,49 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Provides some extra customization options for YouTube.
-@version        2022.11.12.11.41
+@version        2022.11.13.19.29
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var number     grid-thumbnail-zoom     "Grid thumbnail zoom"                 125
-@var number     list-thumbnail-zoom     "List thumbnail zoom"                 125
-@var text       drawer-width            "App drawer width"                    192px
-@var text       grid-max-width          "Max grid width"                      1600px
-@var color      sub-bg                  "Subtitle background color"           rgba(0, 0, 0, .72)
-@var text       sub-border-radius       "Subtitle border radius"              0px
+@var text       grid-thumbnail-width            "Grid thumbnail width"                210px
+@var text       rich-grid-thumbnail-width       "Rich grid thumbnail width"           336px
+@var text       list-thumbnail-width            "List thumbnail width"                120px
+@var text       drawer-width                    "App drawer width"                    240px
+@var text       grid-max-width                  "Max grid width"                      1284px
+@var color      sub-bg                          "Subtitle background color"           rgba(0, 0, 0, .72)
+@var text       sub-border-radius               "Subtitle border radius"              0px
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
 	:root {
-		--grid-thumbnail-zoom: grid-thumbnail-zoom / 100;
-		--grid-thumbnail-width: calc(210px * var(--grid-thumbnail-zoom));
-		--grid-thumbnail-height: calc(118px * var(--grid-thumbnail-zoom));
+		thumbnail-aspect-ratio=9 / 16;
 
-		--list-thumbnail-zoom: list-thumbnail-zoom / 100;
-		--list-thumbnail-width: calc(120px * var(--list-thumbnail-zoom));
-		--list-thumbnail-height: calc(68px * var(--list-thumbnail-zoom));
+		--grid-thumbnail-height: grid-thumbnail-width * thumbnail-aspect-ratio;
+		--grid-thumbnail-width: grid-thumbnail-width;
+
+		--rich-grid-thumbnail-height: rich-grid-thumbnail-width * thumbnail-aspect-ratio;
+		--rich-grid-thumbnail-width: rich-grid-thumbnail-width;
+
+		--list-thumbnail-height: list-thumbnail-width * thumbnail-aspect-ratio;
+		--list-thumbnail-width: list-thumbnail-width;
 	}
 
 	html:not(.style-scope) {
 		--ytd-grid-max-width: grid-max-width;
 		--ytd-grid-6-columns-width: var(--ytd-grid-max-width);
+
+		--ytd-rich-grid-item-min-width: none;
+		--ytd-rich-grid-item-max-width: none;
+		--ytd-rich-grid-mini-item-min-width: none;
+		--ytd-rich-grid-mini-item-max-width: none;
+		--ytd-rich-grid-slim-item-max-width: none;
 	}
 
 	ytd-app {
 		--app-drawer-width: drawer-width;
 	}
 
-	/* custom grid zoom */
+	/* grid zoom */
 	ytd-shelf-renderer ytd-thumbnail.ytd-grid-video-renderer {
 		height: var(--grid-thumbnail-height);
 	}
@@ -45,8 +55,17 @@
 	ytd-shelf-renderer ytd-reel-item-renderer {
 		width: var(--grid-thumbnail-width) !important;
 	}
-	
-	/* custom grid zoom (shorts) */
+
+	/* rich grid zoom */
+	ytd-rich-grid-renderer ytd-thumbnail.ytd-rich-grid-media {
+		height: var(--rich-grid-thumbnail-height);
+	}
+
+	ytd-rich-grid-renderer ytd-rich-item-renderer {
+		width: var(--rich-grid-thumbnail-width) !important;
+	}
+
+	/* shorts grid zoom */
 	ytd-reel-shelf-renderer ytd-thumbnail.ytd-grid-video-renderer {
 		height: var(--grid-thumbnail-height);
 	}
@@ -57,7 +76,7 @@
 		width: var(--grid-thumbnail-width) !important;
 	}
 
-	/* custom list zoom */
+	/* list zoom */
 	ytd-thumbnail.ytd-playlist-video-renderer {
 		max-height: none;
 		max-width: none;
