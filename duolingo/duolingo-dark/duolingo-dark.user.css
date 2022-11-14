@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Dark theme for Duolingo.
-@version        2022.11.04.12.27
+@version        2022.11.14.16.07
 @license        CC BY-SA 4.0
 @preprocessor   uso
 
@@ -46,6 +46,11 @@
 	.MyHQ0,
 	.placeholder {
 		filter: invert(1) hue-rotate(180deg) brightness(1.125);
+	}
+
+	/* trophy svg */
+	._1T2zW {
+		filter: invert(1) hue-rotate(180deg) brightness(1.25);
 	}
 
 	._212s-,
