@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Provides some extra customization options for YouTube.
-@version        2022.11.17.16.30
+@version        2022.11.17.16.34
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
@@ -62,7 +62,7 @@
     height: var(--rich-grid-thumbnail-height);
   }
 
-  ytd-rich-grid-renderer ytd-rich-item-renderer {
+  ytd-rich-grid-renderer ytd-rich-item-renderer:not([is-slim-media]) {
     width: var(--rich-grid-thumbnail-width) !important;
     max-width: 25%;
   }
