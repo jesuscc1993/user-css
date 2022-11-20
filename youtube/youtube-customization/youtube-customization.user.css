@@ -3,7 +3,7 @@
 @namespace      https://github.com/jesuscc1993/
 @author         MetalTxus
 @description    Provides some extra customization options for YouTube.
-@version        2022.11.19.11.54
+@version        2022.11.20.23.37
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
@@ -57,8 +57,7 @@
 
 	ytd-shelf-renderer ytd-grid-video-renderer,
 	ytd-shelf-renderer ytd-thumbnail,
-	ytd-shelf-renderer ytd-reel-item-renderer,
-	ytd-shelf-renderer img.yt-img-shadow {
+	ytd-shelf-renderer ytd-reel-item-renderer {
 		width: var(--grid-thumbnail-width) !important;
 	}
 
