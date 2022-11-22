@@ -1,11 +1,12 @@
 /* ==UserStyle==
 @name           Duolingo - Customization
-@namespace      https://github.com/jesuscc1993/
-@author         MetalTxus
 @description    Provides some extra customization options for Duolingo.
 @version        2022.11.12.17.36
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
+
 @var  checkbox  hide-leagues           "Hide leagues"                                 0
 @var  checkbox  hide-goals             "Hide goals"                                   0
 @var  checkbox  hide-premium           "Hide premium adds and features"               0
