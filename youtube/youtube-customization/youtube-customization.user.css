@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2022.11.20.23.37
+@version        2022.11.23.21.30
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -15,6 +15,7 @@
 @var color      sub-bg                          "Subtitle background color"           rgba(0, 0, 0, .72)
 @var text       sub-border-radius               "Subtitle border radius"              0px
 @var text       max-playlist-height             "Maximum playlist height"             460px
+@var text       max-playlist-width              "Maximum playlist width"              402px
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
@@ -48,6 +49,7 @@
 
 	ytd-watch-flexy {
 		--ytd-watch-flexy-panel-max-height: max-playlist-height !important;
+		--ytd-watch-flexy-sidebar-width: max-playlist-width;
 	}
 
 	/* grid zoom */

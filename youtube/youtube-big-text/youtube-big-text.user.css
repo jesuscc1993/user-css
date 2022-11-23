@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Big Text
 @description    Increases YouTube's font size; useful when watching from a distance.
-@version        2022.11.13.10.24
+@version        2022.11.23.21.30
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -10,7 +10,6 @@
 @var text       font-size-cc                    "Caption font size"               36px
 @var text       font-size-lg                    "Grid font size"                  20px
 @var text       font-size-md                    "Video font size"                 16px
-@var text       font-size-sm                    "Side video font size"            14px
 @var text       video-description-max-height    "Max video description height"    96px
 @var text       line-height-font-size-ratio     "Line height / font size ratio"   1.2
 @var text       owner-and-teaser-scale          "Owner and teaser scale"          1.33
@@ -94,17 +93,17 @@
 	ytd-thumbnail-overlay-time-status-renderer {
 		height: auto;
 	}
-
-	#video-title.ytd-playlist-panel-video-renderer,
-	#video-title.ytd-compact-video-renderer {
-		font-size: var(--font-size-sm) !important;
-		line-height: var(--line-height-sm) !important;
+	
+	ytd-playlist-panel-renderer[collapsible] .badge.ytd-badge-supported-renderer {
+		font-size: 1.5rem;
 	}
 
 	#description.ytd-watch-metadata,
 	#text.ytd-thumbnail-overlay-time-status-renderer,
 	#video-title.ytd-compact-video-renderer,
-	#video-title.ytd-playlist-panel-video-renderer {
+	#video-title.ytd-playlist-panel-video-renderer,
+	ytd-playlist-panel-renderer[collapsible] .index-message-wrapper.ytd-playlist-panel-renderer,
+	ytd-playlist-panel-renderer[collapsible] .publisher.ytd-playlist-panel-renderer {
 		max-height: none;
 		font-size: var(--font-size-md);
 		line-height: var(--line-height-md);
@@ -112,6 +111,7 @@
 
 	h1.ytd-watch-metadata,
 	ytd-grid-video-renderer #text.ytd-thumbnail-overlay-time-status-renderer,
+	ytd-playlist-panel-renderer[modern-panels]:not([hide-header-text]) .title.ytd-playlist-panel-renderer,
 	ytd-text-inline-expander {
 		max-height: none;
 		font-size: var(--font-size-lg) !important;
