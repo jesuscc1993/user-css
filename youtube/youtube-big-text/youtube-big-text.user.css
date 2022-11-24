@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Big Text
 @description    Increases YouTube's font size; useful when watching from a distance.
-@version        2022.11.24.21.45
+@version        2022.11.24.21.55
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -59,9 +59,47 @@
 		--ytd-link-line-height: var(--line-height-md);
 	}
 
-	.metadata-stats.ytd-playlist-byline-renderer {
+	#text.ytd-channel-name,
+	#vote-count-middle.ytd-comment-action-buttons-renderer,
+	.metadata-stats.ytd-playlist-byline-renderer,
+	.yt-spec-button-shape-next--size-m,
+	ytd-playlist-panel-renderer[collapsible] .badge.ytd-badge-supported-renderer,
+	ytd-playlist-panel-renderer[collapsible] .index-message-wrapper.ytd-playlist-panel-renderer,
+	ytd-playlist-panel-renderer[collapsible] .publisher.ytd-playlist-panel-renderer,
+	ytd-video-owner-renderer[watch-metadata-refresh] #owner-sub-count.ytd-video-owner-renderer {
 		font-size: var(--font-size-sm);
 		line-height: var(--line-height-sm);
+		max-height: none;
+	}
+
+	#description.ytd-watch-metadata,
+	#text.ytd-thumbnail-overlay-time-status-renderer,
+	#video-title.ytd-compact-video-renderer,
+	#video-title.ytd-playlist-panel-video-renderer,
+	ytd-grid-playlist-renderer #video-title.ytd-grid-playlist-renderer,
+	ytd-grid-video-renderer #video-title.yt-simple-endpoint.ytd-grid-video-renderer,
+	ytd-grid-video-renderer #video-title.ytd-grid-video-renderer,
+	ytd-item-section-renderer #video-title.ytd-playlist-video-renderer,
+	ytd-playlist-panel-renderer[modern-panels]:not([hide-header-text]) .title.ytd-playlist-panel-renderer,
+	ytd-rich-grid-media[mini-mode] #video-title.ytd-rich-grid-media,
+	ytd-two-column-browse-results-renderer #video-title.ytd-rich-grid-media,
+	ytd-two-column-search-results-renderer #video-title.ytd-video-renderer {
+		font-size: var(--font-size-md);
+		line-height: var(--line-height-md);
+		max-height: none;
+	}
+
+	h1.ytd-watch-metadata,
+	ytd-grid-video-renderer #text.ytd-thumbnail-overlay-time-status-renderer,
+	ytd-text-inline-expander {
+		font-size: var(--font-size-lg) !important;
+		line-height: var(--line-height-lg) !important;
+		max-height: none;
+	}
+
+	.ytp-caption-segment {
+		font-size: var(--font-size-cc) !important;
+		line-height: var(--line-height-cc) !important;
 		max-height: none;
 	}
 
@@ -72,9 +110,6 @@
 	ytd-rich-grid-media[mini-mode] #video-title.ytd-rich-grid-media,
 	ytd-two-column-browse-results-renderer #video-title.ytd-rich-grid-media,
 	ytd-two-column-search-results-renderer #video-title.ytd-video-renderer {
-		font-size: var(--font-size-md);
-		line-height: var(--line-height-md);
-		max-height: none;
 		-webkit-line-clamp: var(--grid-line-clamp);
 	}
 
@@ -99,36 +134,6 @@
 
 	ytd-thumbnail-overlay-time-status-renderer {
 		height: auto;
-	}
-
-	ytd-playlist-panel-renderer[collapsible] .badge.ytd-badge-supported-renderer {
-		font-size: 1.5rem;
-	}
-
-	#description.ytd-watch-metadata,
-	#text.ytd-thumbnail-overlay-time-status-renderer,
-	#video-title.ytd-compact-video-renderer,
-	#video-title.ytd-playlist-panel-video-renderer,
-	ytd-playlist-panel-renderer[collapsible] .index-message-wrapper.ytd-playlist-panel-renderer,
-	ytd-playlist-panel-renderer[collapsible] .publisher.ytd-playlist-panel-renderer {
-		max-height: none;
-		font-size: var(--font-size-md);
-		line-height: var(--line-height-md);
-	}
-
-	h1.ytd-watch-metadata,
-	ytd-grid-video-renderer #text.ytd-thumbnail-overlay-time-status-renderer,
-	ytd-playlist-panel-renderer[modern-panels]:not([hide-header-text]) .title.ytd-playlist-panel-renderer,
-	ytd-text-inline-expander {
-		max-height: none;
-		font-size: var(--font-size-lg) !important;
-		line-height: var(--line-height-lg) !important;
-	}
-
-	.ytp-caption-segment {
-		max-height: none;
-		font-size: var(--font-size-cc) !important;
-		line-height: var(--line-height-cc) !important;
 	}
 
 	.ytp-time-display,
