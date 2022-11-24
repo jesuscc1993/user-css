@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Big Text
 @description    Increases YouTube's font size; useful when watching from a distance.
-@version        2022.11.23.21.30
+@version        2022.11.24.21.45
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -10,6 +10,7 @@
 @var text       font-size-cc                    "Caption font size"               36px
 @var text       font-size-lg                    "Grid font size"                  20px
 @var text       font-size-md                    "Video font size"                 16px
+@var text       font-size-sm                    "Small texts"                     14px
 @var text       video-description-max-height    "Max video description height"    96px
 @var text       line-height-font-size-ratio     "Line height / font size ratio"   1.2
 @var text       owner-and-teaser-scale          "Owner and teaser scale"          1.33
@@ -58,6 +59,12 @@
 		--ytd-link-line-height: var(--line-height-md);
 	}
 
+	.metadata-stats.ytd-playlist-byline-renderer {
+		font-size: var(--font-size-sm);
+		line-height: var(--line-height-sm);
+		max-height: none;
+	}
+
 	ytd-grid-playlist-renderer #video-title.ytd-grid-playlist-renderer,
 	ytd-grid-video-renderer #video-title.yt-simple-endpoint.ytd-grid-video-renderer,
 	ytd-grid-video-renderer #video-title.ytd-grid-video-renderer,
@@ -93,7 +100,7 @@
 	ytd-thumbnail-overlay-time-status-renderer {
 		height: auto;
 	}
-	
+
 	ytd-playlist-panel-renderer[collapsible] .badge.ytd-badge-supported-renderer {
 		font-size: 1.5rem;
 	}
