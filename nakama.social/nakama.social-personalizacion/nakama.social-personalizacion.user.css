@@ -1,20 +1,21 @@
 /* ==UserStyle==
 @name           Nakama - Personalización
 @description    Permite la configuración de ciertos aspectos visuales en Nakama.
-@version        2022.09.04.12.13
+@version        2022.12.01.17.52
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   less
 
-@var text border-radius-md              "Redondeado (medio)"              1rem
-@var text border-radius-lg              "Redondeado (grande)"             1rem
-@var text content-width                 "Ancho de contenido"              65ch
-@var text max-attachment-height         "Alto máximo de adjuntos"         calc(100vh - 8rem)
-@var text post-button-height            "Alto de botones en posts"        3rem
-@var text post-button-padding           "Espaciado de botones en posts"   0 1rem
-@var text post-button-border-radius     "Redondeado de botones en posts"  1.5rem
-@var checkbox attachments-scrollbar     "Scrollbar en adjuntos"           0
+@var text border-radius-md              "Redondeado (medio)"                  1rem
+@var text border-radius-lg              "Redondeado (grande)"                 1rem
+@var text content-width                 "Ancho de contenido"                  65ch
+@var text max-attachment-height         "Alto máximo de adjuntos"             calc(100vh - 8rem)
+@var text post-button-height            "Alto de botones en posts"            3rem
+@var text post-button-padding           "Espaciado de botones en posts"       0 1rem
+@var text post-button-border-radius     "Redondeado de botones en posts"      1.5rem
+@var checkbox attachments-scrollbar     "Scrollbar en adjuntos"               0
+@var checkbox disable-seasons           "Deshabilitar efectos de estación"    0
 
 ==/UserStyle== */
 @-moz-document domain("nakama.social") {
@@ -58,6 +59,10 @@
       display: block !important;
     }
   }
+	
+	body > canvas when (@disable-seasons =1) {
+		display: none !important;
+	}
 
   /* Scrollbar */
   ::-webkit-scrollbar,
