@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2022.11.23.21.30
+@version        2022.12.05.22.28
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -16,6 +16,8 @@
 @var text       sub-border-radius               "Subtitle border radius"              0px
 @var text       max-playlist-height             "Maximum playlist height"             460px
 @var text       max-playlist-width              "Maximum playlist width"              402px
+@var text       shorts-comments-height          "Shorts comments height"              70vh
+@var text       shorts-comments-width           "Shorts comments width"               450px
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
@@ -125,5 +127,14 @@
 	.ytp-caption-segment:last-child {
 		border-top-right-radius: sub-border-radius;
 		border-bottom-right-radius: sub-border-radius;
+	}
+
+	ytd-engagement-panel-section-list-renderer[dialog][target-id=engagement-panel-comments-section] {
+		height: shorts-comments-height;
+		min-height: none;
+		max-height: 100vh;
+		width: shorts-comments-width;
+		min-width: none;
+		max-width: 100vw;
 	}
 }
