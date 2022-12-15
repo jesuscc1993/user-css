@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           nyaa.si - Customize
 @description    Provides some extra customization options.
-@version        2022.12.15.20.43
+@version        2022.12.15.20.54
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -11,10 +11,10 @@
 @var  checkbox  wide-search      "Wide searchbar"              0
 @var  checkbox  custom-style     "Alternative style"           0
 @var  checkbox  text-categories  "Display categories as text"  0
+@var  checkbox  hide-categories  "Hide categories"             0
 
 ==/UserStyle== */
 @-moz-document regexp("https?:\\/\\/\\S*nyaa.(si|at)\\S*") {
-
 	if (custom-style) {
 		/* main */
 		.container {
@@ -36,12 +36,12 @@
 
 		.table-bordered td:first-child {
 			border-radius: 6px 0 0 6px;
-			border-left: 1px solid white;
+			border-left: 1px solid transparent;
 		}
 
 		.table-bordered td:last-child {
 			border-radius: 0 6px 6px 0;
-			border-right: 1px solid white;
+			border-right: 1px solid transparent;
 		}
 
 		.tlisticon,
@@ -102,6 +102,21 @@
 			display: inline-block;
 			font-size: 10px;
 			line-height: 18px;
+		}
+	}
+
+	if (hide-categories) {
+		.torrent-list th:first-child,
+		.torrent-list td:first-child {
+			display: none;
+		}
+
+		if (custom-style) {
+			/* round table */
+			.table-bordered td:nth-child(2) {
+				border-radius: 6px 0 0 6px;
+				border-left: 1px solid transparent;
+			}
 		}
 	}
 
