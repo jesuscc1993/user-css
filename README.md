@@ -23,11 +23,13 @@ Requires the [Stylus](https://github.com/openstyles/stylus#releases) userstyle l
 
 - [nakama.social/nakama.social-personalizacion](nakama.social/nakama.social-personalizacion)
 
-* [stylus/stylus-codemirror-dark-plus](stylus/stylus-codemirror-dark-plus)
-* [stylus/stylus-customization](stylus/stylus-customization)
-* [stylus/stylus-dark](stylus/stylus-dark)
+* [nyaa.si/nyaa.si-customization](nyaa.si/nyaa.si-customization)
 
-- [youtube/youtube-big-text](youtube/youtube-big-text)
-- [youtube/youtube-customization](youtube/youtube-customization)
-- [youtube/youtube-fullscreen-theater](youtube/youtube-fullscreen-theater)
-- [youtube/youtube-pure-black](youtube/youtube-pure-black)
+- [stylus/stylus-codemirror-dark-plus](stylus/stylus-codemirror-dark-plus)
+- [stylus/stylus-customization](stylus/stylus-customization)
+- [stylus/stylus-dark](stylus/stylus-dark)
+
+* [youtube/youtube-big-text](youtube/youtube-big-text)
+* [youtube/youtube-customization](youtube/youtube-customization)
+* [youtube/youtube-fullscreen-theater](youtube/youtube-fullscreen-theater)
+* [youtube/youtube-pure-black](youtube/youtube-pure-black)
