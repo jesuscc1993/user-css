@@ -1,29 +1,29 @@
 /* ==UserStyle==
 @name           nyaa.si - Customize
 @description    Provides some extra customization options.
-@version        2022.12.12.20.29
+@version        2022.12.15.20.43
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var  checkbox  bigger-icons    "Bigger download icons"            0
-@var  checkbox  wide-search     "Wide searchbar"                   0
-@var  checkbox  custom-style    "Alternative style"                0
-@var  checkbox  custom-banners  "Alternative torrent type images (broken due to Dropbox)"  0
+@var  checkbox  bigger-icons     "Bigger download icons"       0
+@var  checkbox  wide-search      "Wide searchbar"              0
+@var  checkbox  custom-style     "Alternative style"           0
+@var  checkbox  text-categories  "Display categories as text"  0
 
 ==/UserStyle== */
 @-moz-document regexp("https?:\\/\\/\\S*nyaa.(si|at)\\S*") {
 
 	if (custom-style) {
-		/* Main */
+		/* main */
 		.container {
 			min-width: 75%;
 			border-color: transparent;
 			background: none;
 		}
 
-		/* Round table */
+		/* round table */
 		.table-bordered,
 		.table-bordered * {
 			border-color: transparent !important;
@@ -53,43 +53,33 @@
 		}
 
 
-		/* Row colors */
-		.success,
-		.success td {
-			background-color: #C0E0DA !important;
+		/* theme colors */
+		.table .danger td {
+			background-color: #D060001F !important;
 		}
 
-		.danger,
-		.danger td {
-			background-color: #EEDCC8 !important;
-		}
-	}
-
-	if (custom-banners) {
-		img[src="/static/img/icons/nyaa/1_1.png"],
-		img[src="/static/img/icons/nyaa/1_2.png"],
-		img[src="/static/img/icons/nyaa/1_3.png"],
-		img[src="/static/img/icons/nyaa/1_4.png"] {
-			height: 0;
-			width: 80px;
-			padding-top: 30px;
-			margin: -1px 0;
+		.table .success td {
+			background-color: #00A0501F !important;
 		}
 
-		img[src="/static/img/icons/nyaa/1_1.png"] {
-			background-image: url('https://dl.dropbox.com/s/s3xf16cjiwy0382/anime_amv.png');
-		}
+		body.dark {
+			a:focus,
+			a:hover {
+				color: #63aae3;
+				text-decoration: underline;
+			}
 
-		img[src="/static/img/icons/nyaa/1_2.png"] {
-			background-image: url('https://dl.dropbox.com/s/puohkg5gf6hnnvp/anime_subbed.png');
-		}
+			.table {
+				background-color: transparent;
+			}
 
-		img[src="/static/img/icons/nyaa/1_3.png"] {
-			background-image: url('https://dl.dropbox.com/s/dsn3kkwtj92iosl/anime_subbed_alt.png');
-		}
+			.table-striped > tbody > tr:nth-of-type(odd) {
+				background-color: #FFFFFF08;
+			}
 
-		img[src="/static/img/icons/nyaa/1_4.png"] {
-			background-image: url('https://dl.dropbox.com/s/kf7117tfhdktb3d/anime_raw.png');
+			.table-hover > tbody > tr:hover {
+				background-color: #FFFFFF1A;
+			}
 		}
 	}
 
@@ -97,6 +87,21 @@
 		table.torrent-list .fa.fa-download,
 		table.torrent-list .fa.fa-magnet {
 			font-size: 18px;
+			position: relative;
+			top: 2px;
+		}
+	}
+
+	if (text-categories) {
+		.torrent-list td:first-child a img {
+			display: none;
+		}
+
+		.torrent-list td:first-child a:after {
+			content: attr(title);
+			display: inline-block;
+			font-size: 10px;
+			line-height: 18px;
 		}
 	}
 
