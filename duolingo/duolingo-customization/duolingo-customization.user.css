@@ -127,15 +127,15 @@
       display: none !important;
     }
   }
-	
-	._3bTT7 {
-		gap: 0;
-		
-		a {
-			margin-bottom: 8px;
-    	display: block;
-		}
-	}
+
+  ._3bTT7 {
+    gap: 0;
+    
+    a {
+      margin-bottom: 8px;
+      display: block;
+    }
+  }
 }
 
 @-moz-document regexp("https:\/\/www\.duolingo\.com\/(characters|learn|shop)") {
