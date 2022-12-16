@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Duolingo - Customization
 @description    Provides some extra customization options for Duolingo.
-@version        2022.12.16.11.16
+@version        2022.12.16.12.14
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -77,7 +77,7 @@
   if (hide-premium) {
     [href="/review"],
     [href="/settings/super"] {
-      display: none;
+      display: none !important;
     }
 
     /* hide top shop add */
@@ -109,14 +109,14 @@
   /* leaderboards */
   if (hide-leaderboards) {
     [href="/leaderboard"] {
-      display: none;
+      display: none !important;
     }
   }
 
   /* classes */
   if (hide-classes) {
     [href="https://classes.duolingo.com/"] {
-      display: none;
+      display: none !important;
     }
   }
 
@@ -124,9 +124,18 @@
   if (hide-schools) {
     [href="/settings/schools"],
     [href="https://schools.duolingo.com/"] {
-      display: none;
+      display: none !important;
     }
   }
+	
+	._3bTT7 {
+		gap: 0;
+		
+		a {
+			margin-bottom: 8px;
+    	display: block;
+		}
+	}
 }
 
 @-moz-document regexp("https:\/\/www\.duolingo\.com\/(characters|learn|shop)") {
