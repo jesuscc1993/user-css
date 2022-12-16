@@ -95,12 +95,12 @@
       width: 100%;
     }
 
-		._3zucw,
+    ._3zucw,
     .wm1bO.SQR8J {
       display: none;
     }
-		
-		[src*="images/super"] {
+
+    [src*="images/super"] {
       display: none;
     }
     /* */
@@ -112,7 +112,7 @@
       display: none;
     }
   }
-	
+
   /* classes */
   if (hide-classes) {
     [href="https://classes.duolingo.com/"] {
