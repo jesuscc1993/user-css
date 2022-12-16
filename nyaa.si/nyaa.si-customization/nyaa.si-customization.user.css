@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           nyaa.si - Customize
 @description    Provides some extra customization options.
-@version        2022.12.15.20.54
+@version        2022.12.16.18.59
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -107,7 +107,7 @@
 
 	if (hide-categories) {
 		.torrent-list th:first-child,
-		.torrent-list td:first-child {
+		.torrent-list td:first-child:not([colspan]) {
 			display: none;
 		}
 
