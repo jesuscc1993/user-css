@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Duolingo - Customization
 @description    Provides some extra customization options for Duolingo.
-@version        2022.11.12.17.36
+@version        2022.12.16.11.16
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -10,10 +10,12 @@
 @var  checkbox  hide-leagues           "Hide leagues"                                 0
 @var  checkbox  hide-goals             "Hide goals"                                   0
 @var  checkbox  hide-premium           "Hide premium adds and features"               0
+@var  checkbox  hide-leaderboards      "Hide leaderboards"                            0
 @var  checkbox  hide-classes           "Hide classes"                                 0
 @var  checkbox  hide-schools           "Hide schools"                                 0
 @var  checkbox  hide-pronunciation     "Hide pronunciation"                           0
 @var  checkbox  hide-characters        "Hide Duolingo characters"                     0
+
 ==/UserStyle== */
 @-moz-document domain("duolingo.com") {
   @media (min-width: 700px) {
@@ -104,6 +106,13 @@
     /* */
   }
 
+  /* leaderboards */
+  if (hide-leaderboards) {
+    [href="/leaderboard"] {
+      display: none;
+    }
+  }
+	
   /* classes */
   if (hide-classes) {
     [href="https://classes.duolingo.com/"] {
