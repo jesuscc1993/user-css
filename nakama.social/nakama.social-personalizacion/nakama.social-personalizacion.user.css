@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Nakama - Personalización
 @description    Permite la configuración de ciertos aspectos visuales en Nakama.
-@version        2022.12.01.17.52
+@version        2022.12.20.18.10
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -19,74 +19,77 @@
 
 ==/UserStyle== */
 @-moz-document domain("nakama.social") {
-  .container {
-    max-width: @content-width;
-  }
-
-  .post,
-  .media-scroller iframe[id^="twitter-widget"] {
-    border-radius: @border-radius-lg;
-  }
-
-  .media-scroller audio,
-  .media-scroller iframe,
-  .media-scroller img,
-  .media-scroller video {
-    max-height: @max-attachment-height;
-    border-radius: @border-radius-md;
-  }
-
-  .post-warning {
-    max-height: none;
-    border-radius: @border-radius-md;
-  }
-
-  .post-replies-link,
-  .post-add-reaction-btn,
-  .post-reaction {
-		border-radius: @post-button-border-radius;
-    height: @post-button-height;
-    padding: @post-button-padding;
-  }
-
-  html when (@attachments-scrollbar =1) {
-    .media-scroller {
-      overflow-x: auto;
-      scrollbar-width: initial !important;
-    }
-
-    .media-scroller::-webkit-scrollbar {
-      display: block !important;
-    }
-  }
-	
-	body > canvas when (@disable-seasons =1) {
-		display: none !important;
+	.container {
+		max-width: @content-width;
 	}
 
-  /* Scrollbar */
-  ::-webkit-scrollbar,
-  ::-webkit-scrollbar-corner,
-  ::-webkit-scrollbar-track-piece {
-    background: var(--surface-0) !important;
-  }
+	.post,
+	.media-scroller iframe[id^="twitter-widget"] {
+		border-radius: @border-radius-lg;
+	}
 
-  ::-webkit-scrollbar {
-    width: 17px !important;
-    height: 17px !important;
-  }
+	.media-scroller audio,
+	.media-scroller iframe,
+	.media-scroller img,
+	.media-scroller video {
+		max-height: @max-attachment-height;
+		border-radius: @border-radius-md;
+	}
 
-  ::-webkit-scrollbar:vertical {
-    border-radius: 8px !important;
-  }
+	.post-warning {
+		max-height: none;
+		border-radius: @border-radius-md;
+	}
 
-  ::-webkit-scrollbar-thumb {
-    background: var(--surface-primary);
-    border: 3px solid var(--surface-0) !important;
-    border-radius: 8px !important;
-  }
+	.post-replies-link,
+	.post-add-reaction-btn,
+	.post-reaction {
+		border-radius: @post-button-border-radius;
+		height: @post-button-height;
+		padding: @post-button-padding;
+	}
 
-  ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--hue), 30%, 30%);
-  }
+	html when (@attachments-scrollbar =1) {
+		.media-scroller {
+			overflow-x: auto;
+			scrollbar-width: initial !important;
+		}
+
+		.media-scroller::-webkit-scrollbar {
+			display: block !important;
+		}
+	}
+
+	body when (@disable-seasons =1) {
+		> canvas,
+		#padoru {
+			display: none !important;
+		}
+	}
+
+	/* Scrollbar */
+	::-webkit-scrollbar,
+	::-webkit-scrollbar-corner,
+	::-webkit-scrollbar-track-piece {
+		background: var(--surface-0) !important;
+	}
+
+	::-webkit-scrollbar {
+		width: 17px !important;
+		height: 17px !important;
+	}
+
+	::-webkit-scrollbar:vertical {
+		border-radius: 8px !important;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: var(--surface-primary);
+		border: 3px solid var(--surface-0) !important;
+		border-radius: 8px !important;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: hsl(var(--hue), 30%, 30%);
+	}
 }
