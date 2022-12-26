@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           nyaa.si - Customization
 @description    Provides some extra customization options.
-@version        2022.12.22.21.55
+@version        2022.12.26.18.58
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -55,7 +55,7 @@
 
 		/* theme colors */
 		.table .danger td {
-			background-color: #D060001F !important;
+			background-color: #D03E001F !important;
 		}
 
 		.table .success td {
@@ -74,11 +74,11 @@
 			}
 
 			.table-striped > tbody > tr:nth-of-type(odd) {
-				background-color: #FFFFFF08;
+				background-color: #FFFFFF04;
 			}
 
 			.table-hover > tbody > tr:hover {
-				background-color: #FFFFFF1A;
+				background-color: #FFFFFF12;
 			}
 		}
 	}
