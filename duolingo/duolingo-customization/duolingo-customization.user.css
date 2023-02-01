@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Duolingo - Customization
 @description    Provides some extra customization options for Duolingo.
-@version        2023.01.01.00.30
+@version        2023.02.01.17.48
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -12,7 +12,6 @@
 @var  checkbox  hide-premium           "Hide premium adds and features"               0
 @var  checkbox  hide-leaderboards      "Hide leaderboards"                            0
 @var  checkbox  hide-classes           "Hide classes"                                 0
-@var  checkbox  hide-schools           "Hide schools"                                 0
 @var  checkbox  hide-pronunciation     "Hide pronunciation"                           0
 @var  checkbox  hide-characters        "Hide Duolingo characters"                     0
 
@@ -75,6 +74,7 @@
 
   /* premium */
   if (hide-premium) {
+    [data-test="free-plus-button"],
     [href="/review"],
     [href="/settings/super"] {
       display: none !important;
@@ -120,17 +120,10 @@
     }
   }
 
-  /* schools */
-  if (hide-schools) {
-    [href="/settings/schools"],
-    [href="https://schools.duolingo.com/"] {
-      display: none !important;
-    }
-  }
-
+  /* sidebar item spacing fix */
   ._3bTT7 {
     gap: 0;
-    
+
     a {
       margin-bottom: 8px;
       display: block;
@@ -141,7 +134,7 @@
 @-moz-document regexp("https:\/\/www\.duolingo\.com\/(characters|learn|shop)") {
   /* leagues */
   if (hide-leagues) {
-    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(2) {
+    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(3) {
       display: none;
     }
   }
@@ -155,8 +148,8 @@
 
   /* premium */
   if (hide-premium) {
-    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(1),
-    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(4) {
+    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(2),
+    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(5) {
       display: none;
     }
   }
