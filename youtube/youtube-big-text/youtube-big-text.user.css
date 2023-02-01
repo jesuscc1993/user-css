@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Big Text
 @description    Increases YouTube's font size; useful when watching from a distance.
-@version        2022.11.24.21.57
+@version        2023.02.01.21.41
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -15,6 +15,7 @@
 @var text       line-height-font-size-ratio     "Line height / font size ratio"   1.2
 @var text       owner-and-teaser-scale          "Owner and teaser scale"          1.33
 @var number     grid-line-clamp                 "Max grid title lines"            4
+@var number     playlist-line-clamp             "Max playlist title lines"        2
 @var number     video-title-line-clamp          "Max video title lines"           2
 @var number     video-comment-line-clamp        "Max video comment lines"         6
 
@@ -28,6 +29,7 @@
 		--font-size-md: font-size-md;
 		--font-size-sm: font-size-sm;
 		--grid-line-clamp: grid-line-clamp;
+		--playlist-line-clamp: playlist-line-clamp;
 		--video-comment-line-clamp: video-comment-line-clamp;
 		--video-description-max-height: video-description-max-height;
 		--video-title-line-clamp: video-title-line-clamp;
@@ -107,17 +109,23 @@
 	ytd-grid-playlist-renderer #video-title.ytd-grid-playlist-renderer,
 	ytd-grid-video-renderer #video-title.yt-simple-endpoint.ytd-grid-video-renderer,
 	ytd-grid-video-renderer #video-title.ytd-grid-video-renderer,
-	ytd-item-section-renderer #video-title.ytd-playlist-video-renderer,
 	ytd-rich-grid-media[mini-mode] #video-title.ytd-rich-grid-media,
 	ytd-two-column-browse-results-renderer #video-title.ytd-rich-grid-media,
 	ytd-two-column-search-results-renderer #video-title.ytd-video-renderer {
 		-webkit-line-clamp: var(--grid-line-clamp);
 	}
 
+	ytd-item-section-renderer #video-title.ytd-playlist-video-renderer {
+		-webkit-line-clamp: var(--playlist-line-clamp);
+	}
+
+	.title.ytd-video-primary-info-renderer {
+		-webkit-line-clamp: var(--video-title-line-clamp);
+	}
+
 	.title.ytd-video-primary-info-renderer {
 		line-height: var(--yt-navbar-title-line-height);
 		max-height: none;
-		-webkit-line-clamp: var(--video-title-line-clamp);
 	}
 
 	ytd-expander.ytd-video-secondary-info-renderer,
