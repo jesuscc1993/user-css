@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Duolingo - Customization
 @description    Provides some extra customization options for Duolingo.
-@version        2023.02.04.11.59
+@version        2023.02.06.9.20
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -131,7 +131,7 @@
   }
 }
 
-@-moz-document regexp("https:\\/\\/www\\.duolingo\\.com\\/(characters|learn|practice-hub|shop)") {
+@-moz-document regexp("https:\\/\\/www\\.duolingo\\.com\\/(characters|guidebook|learn|practice-hub|shop).*") {
   /* leagues */
   if (hide-leagues) {
     #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(3) {
