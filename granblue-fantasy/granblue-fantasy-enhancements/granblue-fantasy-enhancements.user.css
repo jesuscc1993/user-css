@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2022.09.07.16.54
+@version        2023.02.28.22.29
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -13,7 +13,9 @@
 
 @advanced dropdown center-content "Center content" {
 
-  center-content-1 "Enabled*" <<<EOT
+  center-content-0 "Disabled" <<<EOT EOT;
+
+  center-content-1 "Enabled" <<<EOT
     #mobage-game-container,
     .cnt-global-header {
       left: calc((100vw - 640px) / 4);
@@ -29,13 +31,11 @@
     }
   EOT;
 
-  center-content-0 "Disabled" <<<EOT EOT;
-
 }
 
 @advanced dropdown center-popups "Center popups" {
 
-  center-popups-0 "Disabled*" <<<EOT EOT;
+  center-popups-0 "Disabled" <<<EOT EOT;
   
   center-popups-1 "Enabled" <<<EOT
     #pop {
@@ -99,22 +99,7 @@
 
 @advanced dropdown selectable-text "Enable text selection" {
 
-  selectable-text-0 "Disabled*" <<<EOT EOT;
-  
-  selectable-text-2 "Enabled" <<<EOT
-    [class^="txt"],
-    [class^="txt"] *,
-    [class^="prt"],
-    [class^="prt"] *,
-    #my_comment {
-      user-select: text;
-    }
-
-    [class^="btn"],
-    .txt-page-number {
-      user-select: none !important;
-    }
-  EOT;
+  selectable-text-0 "Disabled" <<<EOT EOT;
 
   selectable-text-1 "Disabled (quest dialog)" <<<EOT
     [class^="txt"],
@@ -135,12 +120,27 @@
       user-select: none !important;
     }
   EOT;
+  
+  selectable-text-2 "Enabled" <<<EOT
+    [class^="txt"],
+    [class^="txt"] *,
+    [class^="prt"],
+    [class^="prt"] *,
+    #my_comment {
+      user-select: text;
+    }
+
+    [class^="btn"],
+    .txt-page-number {
+      user-select: none !important;
+    }
+  EOT;
 
 }
 
 @advanced dropdown fit-crew-chat "Fit crew chat" {
 
-  fit-crew-chat-0 "Disabled*" <<<EOT EOT;
+  fit-crew-chat-0 "Disabled" <<<EOT EOT;
   
   fit-crew-chat-1 "Enabled" <<<EOT
     #submenu-general-chat #chat-body {
@@ -152,7 +152,7 @@
 
 @advanced dropdown fix-header-menu "Fix header menu position" {
 
-  fix-header-menu-0 "Disabled*" <<<EOT EOT;
+  fix-header-menu-0 "Disabled" <<<EOT EOT;
   
   fix-header-menu-1 "Enabled" <<<EOT
     .pop-global-menu {
@@ -170,20 +170,32 @@
 
 @advanced dropdown gray-out-equipped "Gray out equipped items" {
 
-  gray-out-equipped-1 "Enabled*" <<<EOT
+  gray-out-equipped-0 "Disabled" <<<EOT EOT;
+
+  gray-out-equipped-1 "Enabled" <<<EOT
     .lis-item.equipped,
     .lis-weapon.equipped {
       filter: grayscale(.5) brightness(.66);
     }
   EOT;
 
-  gray-out-equipped-0 "Disabled" <<<EOT EOT;
+}
+
+@advanced dropdown gray-out-sparked "Gray out acquired characters (spark menu)" {
+
+  gray-out-sparked-0 "Disabled" <<<EOT EOT;
+
+  gray-out-sparked-1 "Enabled" <<<EOT
+    .lis-get-npc.already {
+      filter: grayscale(.5) brightness(.66);
+    }
+  EOT;
 
 }
 
 @advanced dropdown keep-extras-open "Keep gameplay extras open" {
 
-  keep-extras-open-0 "Disabled*" <<<EOT EOT;
+  keep-extras-open-0 "Disabled" <<<EOT EOT;
   
   keep-extras-open-1 "Enabled" <<<EOT
     .btn-campaign-toggle {
@@ -201,7 +213,7 @@
 
 @advanced dropdown submenu-on-left "Move submenu to the left" {
 
-  submenu-on-left-0 "Disabled*" <<<EOT EOT;
+  submenu-on-left-0 "Disabled" <<<EOT EOT;
   
   submenu-on-left-1 "Enabled" <<<EOT
     #submenu {
@@ -219,7 +231,7 @@
 
 @advanced dropdown reorder-coop "Rearrange co-op room" {
 
-  reorder-coop-0 "Disabled*" <<<EOT EOT;
+  reorder-coop-0 "Disabled" <<<EOT EOT;
   
   reorder-coop-1 "Enabled" <<<EOT
     @-moz-document regexp("https://game.granbluefantasy.jp/#coopraid/room/.*") {
@@ -247,7 +259,7 @@
 
 @advanced dropdown rearrange-raid-ui "Rearrange raid UI" {
 
-  rearrange-raid-ui-0 "Disabled*" <<<EOT EOT;
+  rearrange-raid-ui-0 "Disabled" <<<EOT EOT;
 
   rearrange-raid-ui-1 "Enabled" <<<EOT
     .cnt-raid .prt-raid-log {
@@ -261,7 +273,9 @@
 
 @advanced dropdown sort-summons "Sort summons" {
 
-  sort-summons-1 "Enabled*" <<<EOT
+  sort-summons-0 "Disabled" <<<EOT EOT;
+
+  sort-summons-1 "Enabled" <<<EOT
     .prt-supporter-list .prt-supporter-attribute.selected {
       display: flex;
       flex-direction: column;
@@ -287,13 +301,13 @@
     }
   EOT;
 
-  sort-summons-0 "Disabled" <<<EOT EOT;
-
 }
 
 @advanced dropdown compact-upgrade "📦 Compact upgrade summary" {
+  
+  compact-upgrade-0 "Disabled" <<<EOT EOT;
 
-  compact-upgrade-1 "Enabled*" <<<EOT
+  compact-upgrade-1 "Enabled" <<<EOT
     @-moz-document regexp("https://game.granbluefantasy.jp/#enhancement/.*") {
 
       .cnt-material-status .cnt-material-list .list,
@@ -320,14 +334,14 @@
 
     }
   EOT;
-  
-  compact-upgrade-2 "Disabled" <<<EOT EOT;
 
 }
 
 @advanced dropdown compact-gacha "📦 Compact gacha results" {
 
-  compact-gacha-1 "Enabled*" <<<EOT
+  compact-gacha-0 "Disabled" <<<EOT EOT;
+
+  compact-gacha-1 "Enabled" <<<EOT
     .prt-obtain-multi br {
       display: none;
     }
@@ -342,13 +356,13 @@
     }
   EOT;
 
-  compact-gacha-0 "Disabled" <<<EOT EOT;
-
 }
 
 @advanced dropdown compact-raids "📦 Compact raids" {
 
-  compact-raids-1 "Enabled*" <<<EOT
+  compact-raids-0 "Disabled" <<<EOT EOT;
+
+  compact-raids-1 "Enabled" <<<EOT
     .lis-raid {
       transform: scale(1, .75);
       margin: -8px auto -24px !important;
@@ -384,13 +398,13 @@
     }
   EOT;
 
-  compact-raids-0 "Disabled" <<<EOT EOT;
-
 }
 
 @advanced dropdown compact-summons "📦 Compact summons" {
 
-  compact-summons-1 "Basic*" <<<EOT
+  compact-summons-0 "Disabled" <<<EOT EOT;
+
+  compact-summons-1 "Basic" <<<EOT
     .prt-supporter-thumb {
       display: none;
     }
@@ -460,13 +474,13 @@
       top: 0;
       zoom: .66;
     }
-    .prt-supporter-list .prt-supporter-attribute:not(.disableView) {
+    .prt-supporter-list .prt-supporter-attribute.selected {
       display: grid !important;
       grid-template-columns: repeat(auto-fill, 92px);
       grid-template-rows: repeat(auto-fill, 44px);
       margin: -4px 18px 16px;
     }
-    .cnt-sequenceraid .prt-supporter-attribute:not(.disableView) {
+    .cnt-sequenceraid .prt-supporter-attribute.selected {
       margin: -4px 10px 16px;
     }
     .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-summon-skill {
@@ -495,13 +509,11 @@
     }
   EOT;
 
-  compact-summons-0 "Disabled" <<<EOT EOT;
-
 }
 
 @advanced dropdown compact-lists "📦 Compact lists" {
 
-  compact-lists-0 "Disabled*" <<<EOT EOT;
+  compact-lists-0 "Disabled" <<<EOT EOT;
   
   compact-lists-1 "Enabled" <<<EOT
     @-moz-document
@@ -595,7 +607,7 @@
 
   hide-header-banners-0 "Disabled" <<<EOT EOT;
   
-  hide-header-banners-1 "Enabled*" <<<EOT
+  hide-header-banners-1 "Enabled" <<<EOT
     .pop-global-menu .prt-global-banner {
       display: none;
     }
@@ -605,7 +617,9 @@
 
 @advanced dropdown hide-scrollbars "⛔ Hide scrollbars" {
 
-  hide-scrollbars-1 "Enabled*" <<<EOT
+  hide-scrollbars-0 "Disabled" <<<EOT EOT;
+
+  hide-scrollbars-1 "Enabled" <<<EOT
     html ::-webkit-scrollbar {
       display: none !important;
     }
@@ -629,11 +643,11 @@
     }
   EOT;
 
-  hide-scrollbars-0 "Disabled" <<<EOT EOT;
-
 }
 
 @advanced dropdown hide-star-premium "⛔ Hide star premium draw" {
+
+  hide-star-premium-0 "Disabled" <<<EOT EOT;
 
   hide-star-premium-1 "Enabled" <<<EOT
     .lis-gold.campaign {
@@ -641,27 +655,37 @@
     }
   EOT;
 
-  hide-star-premium-0 "Disabled*" <<<EOT EOT;
+}
+
+@advanced dropdown hide-sidebar "⛔ Hide sidebar" {
+
+  hide-sidebar-1 "Enabled (required)" <<<EOT
+		body.jssdk > div:first-child > div:first-child {
+			display: none;
+		}
+  EOT;
 
 }
 
 @advanced dropdown hide-submenu "⛔ Hide submenu" {
 
-  hide-submenu-1 "Enabled*" <<<EOT
+  hide-submenu-0 "Disabled" <<<EOT EOT;
+
+  hide-submenu-1 "Enabled" <<<EOT
     #submenu {
       display: none !important;
     }
   EOT;
 
-  hide-submenu-0 "Disabled" <<<EOT EOT;
-
 }
 
 @advanced dropdown hide-size "⛔ Hide footer size settings" {
+
+  hide-size-0 "Disabled" <<<EOT EOT;
   
-  hide-size-1 "Enabled*" <<<EOT
+  hide-size-1 "Enabled" <<<EOT
     #treasure-footer .cnt-treasure-footer {
-      bottom: -10px;
+      bottom: -10.5px;
     }
 
     body.jssdk #mobage-game-container,
@@ -670,13 +694,11 @@
     }
   EOT;
 
-  hide-size-0 "Disabled" <<<EOT EOT;
-
 }
 
 @advanced dropdown hide-crystal-count "⛔ Hide crystal count" {
 
-  hide-crystal-count-0 "Disabled*" <<<EOT EOT;
+  hide-crystal-count-0 "Disabled" <<<EOT EOT;
   
   hide-crystal-count-1 "Enabled" <<<EOT
     .prt-user-info .prt-info-possessed .prt-stone,
@@ -689,7 +711,7 @@
 
 @advanced dropdown hide-gacha-banner "⛔ Hide gacha banners" {
 
-  hide-gacha-banner-0 "Disabled*" <<<EOT EOT;
+  hide-gacha-banner-0 "Disabled" <<<EOT EOT;
   
   hide-gacha-banner-1 "Enabled" <<<EOT
     .lis-banner.prt-event-banner,
@@ -703,7 +725,7 @@
 
 @advanced dropdown hide-special-draw "⛔ Hide surprise draw" {
 
-  hide-special-draw-0 "Disabled*" <<<EOT EOT;
+  hide-special-draw-0 "Disabled" <<<EOT EOT;
   
   hide-special-draw-1 "Enabled" <<<EOT
     .btn-banner[data-href="gacha/campaign/69/gachacampaign"] {
@@ -715,7 +737,7 @@
 
 @advanced dropdown hide-outfit-sets "⛔ Hide featured outfit sets" {
 
-  hide-outfit-sets-0 "Disabled*" <<<EOT EOT;
+  hide-outfit-sets-0 "Disabled" <<<EOT EOT;
   
   hide-outfit-sets-1 "Enabled" <<<EOT
     .btn-banner[data-href^="gacha/skin"] {
@@ -727,7 +749,7 @@
 
 @advanced dropdown hide-quest-comment "⛔ Hide quest commentary" {
 
-  hide-quest-comment-0 "Disabled*" <<<EOT EOT;
+  hide-quest-comment-0 "Disabled" <<<EOT EOT;
   
   hide-quest-comment-1 "Enabled" <<<EOT
     .prt-lead {
@@ -748,7 +770,7 @@
 
 @advanced dropdown hide-pinboard "⛔ Hide pinboard missions" {
 
-  hide-pinboard-0 "Disabled*" <<<EOT EOT;
+  hide-pinboard-0 "Disabled" <<<EOT EOT;
   
   hide-pinboard-1 "Enabled" <<<EOT
     .prt-campaign-banners {
@@ -769,7 +791,7 @@
 
 @advanced dropdown hide-event-load "⛔ Hide event loading animations" {
 
-  hide-event-load-0 "Disabled*" <<<EOT EOT;
+  hide-event-load-0 "Disabled" <<<EOT EOT;
   
   hide-event-load-1 "Enabled" <<<EOT
     #ready > * {
@@ -781,7 +803,7 @@
 
 @advanced dropdown hide-support-plus "⛔ Hide support summon plus marks" {
 
-  hide-support-plus-0 "Disabled*" <<<EOT EOT;
+  hide-support-plus-0 "Disabled" <<<EOT EOT;
   
   hide-support-plus-1 "Enabled" <<<EOT .prt-supporter-list .prt-summon-quality,
     .prt-deck-select .prt-supporter .prt-supporter-info .prt-summon-image .prt-supporter-quality {
@@ -799,11 +821,6 @@
   .prt-status .prt-user-name .txt-user-name {
     /* 'FOT-テロップ明朝 Pro D' */
     font-family: "/*[[font-family]]*/", "Average Sans", sans-serif !important;
-  }
-
-  /* hide sidebar */
-  body.jssdk > div:first-child > div:first-child {
-    display: none;
   }
 
   body,
@@ -854,6 +871,7 @@
   /*[[fit-crew-chat]]*/
   /*[[fix-header-menu]]*/
   /*[[gray-out-equipped]]*/
+  /*[[gray-out-sparked]]*/
   /*[[hide-arcarum-skip]]*/
   /*[[hide-crystal-count]]*/
   /*[[hide-event-load]]*/
@@ -866,6 +884,7 @@
   /*[[hide-size]]*/
   /*[[hide-special-draw]]*/
   /*[[hide-star-premium]]*/
+  /*[[hide-sidebar]]*/
   /*[[hide-submenu]]*/
   /*[[hide-support-plus]]*/
   /*[[keep-extras-open]]*/
