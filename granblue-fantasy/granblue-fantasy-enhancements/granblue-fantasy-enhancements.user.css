@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.02.28.22.29
+@version        2023.02.28.22.50
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -281,23 +281,26 @@
       flex-direction: column;
     }
 
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="5"] {
+    .prt-supporter-list .lis-supporter[data-supporter-evolution="6"] {
       order: 1;
     }
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="4"] {
+    .prt-supporter-list .lis-supporter[data-supporter-evolution="5"] {
       order: 2;
     }
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="3"] {
+    .prt-supporter-list .lis-supporter[data-supporter-evolution="4"] {
       order: 3;
     }
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="2"] {
+    .prt-supporter-list .lis-supporter[data-supporter-evolution="3"] {
       order: 4;
     }
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="1"] {
+    .prt-supporter-list .lis-supporter[data-supporter-evolution="2"] {
       order: 5;
     }
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="0"] {
+    .prt-supporter-list .lis-supporter[data-supporter-evolution="1"] {
       order: 6;
+    }
+    .prt-supporter-list .lis-supporter[data-supporter-evolution="0"] {
+      order: 7;
     }
   EOT;
 
@@ -470,40 +473,47 @@
       z-index: 1;
     }
     .prt-supporter-list .lis-supporter .prt-supporter-name.ico-friend::after {
-      right: 37.5px;
-      top: 0;
-      zoom: .66;
+			right: 2px;
+			top: 0px;
     }
     .prt-supporter-list .prt-supporter-attribute.selected {
       display: grid !important;
-      grid-template-columns: repeat(auto-fill, 92px);
-      grid-template-rows: repeat(auto-fill, 44px);
+      grid-template-columns: repeat(auto-fill, 94px);
+      grid-template-rows: repeat(auto-fill, 55.5px);
       margin: -4px 18px 16px;
     }
     .cnt-sequenceraid .prt-supporter-attribute.selected {
       margin: -4px 10px 16px;
     }
     .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-summon-skill {
-      height: 40px;
-      overflow: hidden;
-      width: 16px;
+			height: 40px;
+			margin-left: -29px;
+			margin-top: 18px;
+			overflow: hidden;
+			width: 24px;
     }
-    .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-summon-skill:not([class*="bless-rank"]) {
+    .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-summon-skill:not([class*="bless-rank"]),
+    .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-summon-skill.bless-rank0-style {
       display: none;
     }
     .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-summon-skill[class*="bless-rank"]:before {
       content: '★';
-      font-size: 16px;
+      font-size: 24px;
       line-height: 40px;
+			padding: 0 2px;
       margin-right: 8px;
     }
     .prt-supporter-list .lis-supporter {
       background: none;
-      height: 44px;
+      height: 55.5px;
       margin: 0;
       padding: 0;
-      width: 96px;
+      width: 94px;
     }
+		.prt-supporter-list .lis-supporter .prt-supporter-info .prt-summon-image .img-supporter-summon {
+			height: auto;
+			width: 100%;
+		}
     .prt-supporter-list .lis-supporter .prt-supporter-info .prt-summon-image {
       margin-right: 4px;
     }
