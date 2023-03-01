@@ -1,0 +1,94 @@
+/* ==UserStyle==
+@name           Coverage - Dark Theme
+@description    Dark theme for Coverage (Istanbul).
+@version        2023.03.01.12.38
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+@preprocessor   stylus
+
+==/UserStyle== */
+@-moz-document regexp("file:///.*/coverage/.*")
+{
+  :root {
+    --invert-value: 0.9;
+    --content-width: 1080px;
+    --padding: 8px;
+  }
+
+  table.coverage-summary {
+    min-width: calc(var(--content-width) - var(--padding) * 2);
+    width: initial;
+    margin: auto;
+    border: 1px solid #bbb;
+  }
+
+  body {
+    background: white;
+    font-family: "Roboto";
+  }
+
+  html {
+    filter: invert(var(--invert-value)) hue-rotate(180deg);
+  }
+
+  img,
+  video {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  .pad1 {
+    padding: var(--padding);
+  }
+
+  /* tweaks */
+  .coverage-summary td,
+  .coverage-summary th {
+    padding: 6px;
+  }
+
+  .chart {
+    border-radius: 2px;
+  }
+  .cover-fill,
+  .cover-empty {
+    border-radius: 1px;
+  }
+
+  /* patches */
+  .kwd {
+    color: #00f;
+  }
+  .cbranch-no {
+    background: #fc0 !important;
+  }
+
+  .medium {
+    background: #ffe5be;
+  }
+  .medium .chart {
+    border: 1px solid #a05e00;
+  }
+  .status-line.medium,
+  .medium .cover-fill {
+    background: #a05e00;
+  }
+
+  .low,
+  .cline-no {
+    background: #fce1e5;
+  }
+  .low .chart {
+    border: 1px solid #ff5c5c;
+  }
+  .red.solid,
+  .status-line.low,
+  .low .cover-fill {
+    background: #ff5c5c;
+  }
+
+  .wrapper > *:not(.status-line) {
+    width: var(--content-width);
+    margin: 0 auto;
+  }
+}
