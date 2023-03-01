@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2022.12.25.16.05
+@version        2023.03.01.20.00
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -607,7 +607,6 @@
   #treasure-footer .cnt-treasure-footer.plain {
     background: url(https://i.imgur.com/J0uhDGM.png) no-repeat 0 6.5px;
     background-size: 100%;
-    bottom: -10.5px;
   }
   /* explanation */
   .prt-attention-box .prt-attention-body,
