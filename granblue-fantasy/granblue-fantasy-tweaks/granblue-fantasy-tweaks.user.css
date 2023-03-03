@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2023.03.01.20.00
+@version        2023.03.04.00.15
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -158,12 +158,6 @@
   .prt-user-info .prt-info-possessed * {
     font-size: 13px !important;
     line-height: 18px;
-  }
-  body .prt-supporter-info .prt-supporter-detail .prt-summon-skill:not(.hack) {
-    font-size: 8px !important;
-    font-weight: bold !important;
-    line-height: 9.5px !important;
-    margin-bottom: 0 !important;
   }
 
   /* start: hide gala draw buttons */

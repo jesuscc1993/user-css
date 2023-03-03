@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.02.28.22.50
+@version        2023.03.04.00.15
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -473,49 +473,49 @@
       z-index: 1;
     }
     .prt-supporter-list .lis-supporter .prt-supporter-name.ico-friend::after {
-			right: 2px;
-			top: 0px;
+			right: -7px;
+			top: -1px;
+			transform: scale(.75);
     }
     .prt-supporter-list .prt-supporter-attribute.selected {
       display: grid !important;
-      grid-template-columns: repeat(auto-fill, 94px);
-      grid-template-rows: repeat(auto-fill, 55.5px);
-      margin: -4px 18px 16px;
+      grid-gap: 2px;
+      grid-template-columns: repeat(auto-fill, 70px);
+      grid-template-rows: repeat(auto-fill, 40px);
+      margin: -4px 17px 16px;
     }
     .cnt-sequenceraid .prt-supporter-attribute.selected {
       margin: -4px 10px 16px;
     }
+		.prt-supporter-list .lis-supporter[data-supporter-evolution="0"] .prt-supporter-detail {
+      display: none;
+    }
     .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-summon-skill {
-			height: 40px;
-			margin-left: -29px;
+			height: 20px;
+			margin-left: -22.5px;
 			margin-top: 18px;
 			overflow: hidden;
-			width: 24px;
-    }
-    .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-summon-skill:not([class*="bless-rank"]),
-    .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-summon-skill.bless-rank0-style {
-      display: none;
+			width: 20px;
     }
     .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-summon-skill[class*="bless-rank"]:before {
       content: '★';
-      font-size: 24px;
-      line-height: 40px;
+      font-size: 22px;
+      line-height: 22px;
 			padding: 0 2px;
-      margin-right: 8px;
     }
     .prt-supporter-list .lis-supporter {
       background: none;
-      height: 55.5px;
+      height: 40px;
       margin: 0;
       padding: 0;
-      width: 94px;
+      width: 100%;
     }
 		.prt-supporter-list .lis-supporter .prt-supporter-info .prt-summon-image .img-supporter-summon {
 			height: auto;
 			width: 100%;
 		}
     .prt-supporter-list .lis-supporter .prt-supporter-info .prt-summon-image {
-      margin-right: 4px;
+      margin-right: 0;
     }
   EOT;
 
