@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.03.04.00.15
+@version        2023.03.04.19.33
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -365,13 +365,10 @@
 
   compact-raids-0 "Disabled" <<<EOT EOT;
 
-  compact-raids-1 "Enabled" <<<EOT
+  compact-raids-1 "Basic" <<<EOT
     .lis-raid {
       transform: scale(1, .75);
       margin: -8px auto -24px !important;
-    }
-    .lis-raid:last-of-type {
-      margin-bottom: 0 !important;
     }
     .lis-raid .prt-raid-thumbnail .img-raid-thumbnail {
       transform: scale(.75, 1);
@@ -385,12 +382,61 @@
       margin-left: -26px;
       width: 180px !important;
     }
-    .lis-raid .txt-half-campaign.plural,
-    .lis-raid .txt-free-campaign.plural {
-      left: 130px;
+    .lis-raid .prt-raid-info .txt-half-campaign.plural,
+    .lis-raid .prt-raid-info .txt-free-campaign.plural,
+    .lis-raid .prt-raid-info .prt-item-effect {
+    	right: 20px;
     }
     .btn-multi-raid.on {
       transform: scale(.98, 0.74);
+    }
+    .lis-raid .prt-raid-thumbnail .ico-defeat {
+      margin-left: -8px;
+    }
+    .lis-raid .prt-raid-thumbnail .prt-finish-time {
+      right: 4px;
+      bottom: 12px;
+    }
+  EOT;
+
+  compact-raids-2 "Extra" <<<EOT
+		.prt-raid-list {
+			margin: -10px 0 25px;
+		}
+    .lis-raid {
+      transform: scale(1, .65);
+      margin: -8px auto -32px !important;
+    }
+		.lis-raid .prt-request-info {
+			display: none;
+		}
+    .lis-raid .prt-raid-thumbnail .img-raid-thumbnail {
+      transform: scale(.65, 1);
+      margin: -1px -24px 0 -14.5px;
+    }
+    .lis-raid .prt-raid-info {
+			transform: scale(1.25);
+			margin: 5px 28px;
+    }
+    .lis-raid .prt-raid-info > * {
+      transform: scale(.65, 1);
+      margin-left: -36px;
+    }
+    .lis-raid .prt-raid-info .txt-raid-name {
+			margin-left: -30px;
+			width: 184px !important;
+    }
+    .lis-raid .prt-raid-info .txt-half-campaign.plural,
+    .lis-raid .prt-raid-info .txt-free-campaign.plural,
+    .lis-raid .prt-raid-info .prt-item-effect {
+    	right: 10px;
+    }
+    .lis-raid .prt-raid-info .txt-half-campaign.plural,
+    .lis-raid .prt-raid-info .txt-free-campaign.plural {
+			top: 24px;
+    }
+    .btn-multi-raid.on {
+      transform: scale(.98, 0.63);
     }
     .lis-raid .prt-raid-thumbnail .ico-defeat {
       margin-left: -8px;
