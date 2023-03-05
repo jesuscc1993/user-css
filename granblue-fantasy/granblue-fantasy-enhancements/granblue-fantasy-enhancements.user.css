@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.03.05.12.14
+@version        2023.03.05.22.18
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -567,6 +567,41 @@
 
 }
 
+@advanced dropdown compact-item-pickup "📦 Compact item pickups" {
+
+  compact-item-pickup-0 "Disabled" <<<EOT EOT;
+
+  compact-item-pickup-1 "Enabled" <<<EOT
+		.prt-button-box,
+		.prt-button-box .prt-relation-button {
+			height: 24px;
+		}
+
+		.prt-button-box .prt-relation-button {
+			padding: 0;
+			transform: scale(0.75) translate(0, -4px);
+		}
+
+		.prt-button-box .prt-relation-button .btn-arcarum {
+			font-size: 1.15em;
+			line-height: .8em;
+			transform: scale(0.85) translate(0, -3px);
+		}
+
+		.prt-button-box .prt-temp-button {
+			padding: 2px 2px 4px 4px;
+			width: auto;
+		}
+
+		.prt-button-box .prt-temp-button .ico-item-kind,
+		.prt-button-box .prt-temp-button .img-item-kind {
+			height: 20px;
+			width: 20px;
+		}
+  EOT;
+
+}
+
 @advanced dropdown compact-lists "📦 Compact lists" {
 
   compact-lists-0 "Disabled" <<<EOT EOT;
@@ -924,6 +959,7 @@
   /*[[compact-gacha]]*/
   /*[[compact-raids]]*/
   /*[[compact-summons]]*/
+  /*[[compact-item-pickup]]*/
   /*[[fit-crew-chat]]*/
   /*[[fix-header-menu]]*/
   /*[[gray-out-equipped]]*/
