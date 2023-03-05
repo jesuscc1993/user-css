@@ -588,13 +588,14 @@
 			transform: scale(0.85) translate(0, -3px);
 		}
 
+		.prt-button-box .btn-show-button,
 		.prt-button-box .prt-temp-button {
 			padding: 2px 2px 4px 4px;
 			width: auto;
 		}
 
-		.prt-button-box .prt-temp-button .ico-item-kind,
-		.prt-button-box .prt-temp-button .img-item-kind {
+		.prt-button-box .ico-item-kind,
+		.prt-button-box .img-item-kind {
 			height: 20px;
 			width: 20px;
 		}
