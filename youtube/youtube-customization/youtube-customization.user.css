@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2022.12.05.22.28
+@version        2023.03.06.18.11
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -18,6 +18,7 @@
 @var text       max-playlist-width              "Maximum playlist width"              402px
 @var text       shorts-comments-height          "Shorts comments height"              70vh
 @var text       shorts-comments-width           "Shorts comments width"               450px
+@var checkbox   gray-out-watched    						"Gray out watched videos"             0
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
@@ -136,5 +137,12 @@
 		width: shorts-comments-width;
 		min-width: none;
 		max-width: 100vw;
+	}
+
+	if (gray-out-watched) {
+		ytd-grid-video-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer),
+		ytd-rich-item-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer) {
+			filter: grayscale(.9) brightness(.25);
+		}
 	}
 }
