@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2023.03.04.00.15
+@version        2023.03.06.17.12
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -73,6 +73,11 @@
   .prt-fix-summon .prt-fix-support-wrap .prt-fix-support .prt-fix-spec {
     font-size: 11px !important;
   }
+	
+	/* bold summon descriptions */
+	.prt-summon-skill {
+		font-weight: bold !important;
+	}
 
   /*.common-pop-error {
     opacity: .5;
