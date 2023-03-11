@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.03.06.17.12
+@version        2023.03.11.23.59
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -535,10 +535,14 @@
     .cnt-sequenceraid .prt-supporter-attribute.selected {
       margin: -4px 10px 16px;
     }
+		.prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail {
+			left: -22px;
+			right: 0;
+			width: 20px;
+		}
     .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-summon-skill {
 			bottom: 1px;
 			height: 20px;
-			margin-left: -22.5px;
 			overflow: hidden;
 			position: absolute;
 			width: 20px;
