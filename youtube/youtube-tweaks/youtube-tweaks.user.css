@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2023.03.13.19.02
+@version        2023.03.13.22.27
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -58,9 +58,12 @@
 	[aria-label="Dislike this video"] #text {
 		margin-left: 6px;
 	}
-	
-  /* prevent accidental pagination */
-	ytd-continuation-item-renderer {
+
+	/* prevent accidental pagination */
+	[page-subtype="channels"][role="main"] ytd-continuation-item-renderer,
+	[page-subtype="playlist"][role="main"] ytd-continuation-item-renderer,
+	[page-subtype="subscriptions"][role="main"] ytd-continuation-item-renderer,
+	ytd-search[role="main"] ytd-continuation-item-renderer {
 		margin-top: 80vh;
 	}
 
