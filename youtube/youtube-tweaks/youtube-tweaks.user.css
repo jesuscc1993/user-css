@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2022.12.23.18.21
+@version        2023.03.13.19.02
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -57,6 +57,11 @@
 
 	[aria-label="Dislike this video"] #text {
 		margin-left: 6px;
+	}
+	
+  /* prevent accidental pagination */
+	ytd-continuation-item-renderer {
+		margin-top: 80vh;
 	}
 
 	/* misc */
