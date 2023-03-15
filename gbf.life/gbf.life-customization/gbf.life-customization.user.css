@@ -1,0 +1,35 @@
+/* ==UserStyle==
+@name           gbf.life - Customization
+@description    Provides some extra customization options for gbf.life.
+@version        2023.03.15.18.12
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+@preprocessor   stylus
+
+@var number     column-count  "Column count (0 = default)" 0
+
+==/UserStyle== */
+@-moz-document domain("gbf.life") {
+	:root {
+		--column-count: column-count;
+	}
+	
+	body {
+		overflow-y: auto;
+	}
+
+	.select-newest-rescue {
+		height: calc(100vh - 612px);
+	}
+
+	.panel-footer {
+		min-height: 0 !important;
+	}
+	
+	if (column-count > 0) {
+		.rescue_column {
+			width: calc(100vw / var(--column-count)) !important;
+		}
+	}
+}
