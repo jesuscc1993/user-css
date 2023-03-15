@@ -1,35 +1,46 @@
 /* ==UserStyle==
 @name           gbf.life - Customization
 @description    Provides some extra customization options for gbf.life.
-@version        2023.03.15.18.35
+@version        2023.03.15.18.44
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var number     column-count  "Column count (0 = default)" 0
+@var number     columns-count          "Column count (0 = default)"  0
+@var checkbox   disable-round-borders  "Disable round borders"       0
 
 ==/UserStyle== */
 @-moz-document domain("gbf.life") {
 	:root {
-		--column-count: column-count;
+		--columns-count: columns-count;
 	}
-	
+
 	body {
 		overflow-y: auto;
 	}
 
 	.select-newest-rescue {
 		height: calc(100vh - 632px);
+		border-style: solid !important;
 	}
 
 	.panel-footer {
 		min-height: 0 !important;
 	}
-	
-	if (column-count > 0) {
+
+	if (columns-count > 0) {
 		.rescue_column {
-			width: calc(100vw / var(--column-count)) !important;
+			width: calc(100vw / var(--columns-count)) !important;
+		}
+	}
+
+	if (disable-round-borders) {
+		.btn-group-lg > .btn,
+		.btn-lg,
+		.panel,
+		.panel-heading {
+			border-radius: 0;
 		}
 	}
 }
