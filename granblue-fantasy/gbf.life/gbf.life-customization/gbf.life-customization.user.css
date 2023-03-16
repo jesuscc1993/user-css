@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           gbf.life - Customization
 @description    Provides some extra customization options for gbf.life.
-@version        2023.03.15.18.44
+@version        2023.03.16.13.31
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -21,7 +21,7 @@
 	}
 
 	.select-newest-rescue {
-		height: calc(100vh - 632px);
+		height: calc(100vh - 640px);
 		border-style: solid !important;
 	}
 
