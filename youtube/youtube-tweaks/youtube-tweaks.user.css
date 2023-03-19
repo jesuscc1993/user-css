@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2023.03.13.22.27
+@version        2023.03.19.20.26
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -9,6 +9,11 @@
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
+	html[dark],
+	dark {
+		--yt-spec-static-overlay-background-heavy: rgba(0, 0, 0, 0.85);
+	}
+
 	ytd-grid-video-renderer {
 		height: 296px;
 	}
