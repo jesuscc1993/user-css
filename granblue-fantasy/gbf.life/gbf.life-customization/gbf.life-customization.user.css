@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           gbf.life - Customization
 @description    Provides some extra customization options for gbf.life.
-@version        2023.03.16.13.31
+@version        2023.03.21.11.59
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -12,35 +12,51 @@
 
 ==/UserStyle== */
 @-moz-document domain("gbf.life") {
-	:root {
-		--columns-count: columns-count;
-	}
+  :root {
+    --columns-count: columns-count;
+  }
 
-	body {
-		overflow-y: auto;
-	}
+  body {
+    overflow-y: auto;
+  }
+  
+  footer {  
+    min-width: 100vw;
+  }
 
-	.select-newest-rescue {
-		height: calc(100vh - 644px);
-		border-style: solid !important;
-	}
+  .select-newest-rescue {
+    height: calc(100vh - 612px);
+    border-style: solid !important;
+  }
 
-	.panel-footer {
-		min-height: 0 !important;
-	}
+  .panel-footer {
+    min-height: 0 !important;
+  }
 
-	if (columns-count > 0) {
-		.rescue_column {
-			width: calc(100vw / var(--columns-count)) !important;
-		}
-	}
+  if (columns-count > 0) {
+    .rescue_column {
+      width: calc(100vw / var(--columns-count)) !important;
+    }
+    
+    if (columns-count > 5) {
+      .select-newest-rescue {
+        font-size: 1.5em !important;
+      }
+    }
+    
+    if (columns-count > 7) {
+      .select-newest-rescue {
+        font-size: 1em !important;
+      }
+    }
+  }
 
-	if (disable-round-borders) {
-		.btn-group-lg > .btn,
-		.btn-lg,
-		.panel,
-		.panel-heading {
-			border-radius: 0;
-		}
-	}
+  if (disable-round-borders) {
+    .btn-group-lg > .btn,
+    .btn-lg,
+    .panel,
+    .panel-heading {
+      border-radius: 0;
+    }
+  }
 }
