@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.03.21.23.02
+@version        2023.03.22.18.32
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -707,10 +707,25 @@
 
   hide-arcarum-skip-0 "Disabled" <<<EOT EOT;
   
-  hide-arcarum-skip-1 "Enabled/" <<<EOT
+  hide-arcarum-skip-1 "Enabled" <<<EOT
     .prt-arcarum-skip {
       display: none;  
     }
+  EOT;
+
+}
+
+@advanced dropdown hide-auto-select "⛔ Hide auto select feature" {
+
+  hide-auto-select-0 "Disabled" <<<EOT EOT;
+  
+  hide-auto-select-1 "Enabled" <<<EOT
+		.cnt-summon-list .prt-setting-all.btn-summon-all,
+		.cnt-weapon-list .btn-mainweapon-fix,
+		.cnt-weapon-list .btn-weapon-all,
+		.prt-bar .btn-index-all-setting {
+			display: none;
+		}
   EOT;
 
 }
@@ -927,84 +942,85 @@
 
 ==/UserStyle== */
 @-moz-document domain("granbluefantasy.jp") {
-  /* font */
-  body,
+	/* font */
+	body,
 	.prt-user-info .prt-info-profile .btn-user-name,
-  .prt-status .prt-user-name .txt-user-name {
-    /* 'FOT-テロップ明朝 Pro D' */
-    font-family: "/*[[font-family]]*/", "Average Sans", sans-serif !important;
-  }
+	.prt-status .prt-user-name .txt-user-name {
+		/* 'FOT-テロップ明朝 Pro D' */
+		font-family: "/*[[font-family]]*/", "Average Sans", sans-serif !important;
+	}
 
-  body,
-  .cnt-raid,
-  .cnt-raid .cnt-multi,
-  .prt-mask-job,
-  .prt-scene-comment-after-mask {
-    background: /*[[bg-color]]*/
-    !important;
-  }
+	body,
+	.cnt-raid,
+	.cnt-raid .cnt-multi,
+	.prt-mask-job,
+	.prt-scene-comment-after-mask {
+		background: /*[[bg-color]]*/
+		!important;
+	}
 
-  .mask {
-    background: /*[[bg-color]]*/
-    B3 !important;
-  }
+	.mask {
+		background: /*[[bg-color]]*/
+		B3 !important;
+	}
 
-  /* fix font sizes */
-  .prt-supporter-info .prt-supporter-detail .prt-summon-skill.text-small {
-    font-size: 8.25px !important;
-    font-weight: 500;
-  }
+	/* fix font sizes */
+	.prt-supporter-info .prt-supporter-detail .prt-summon-skill.text-small {
+		font-size: 8.25px !important;
+		font-weight: 500;
+	}
 
-  /* fix poker BG */
-  .cnt-poker {
-    background: #000;
-  }
+	/* fix poker BG */
+	.cnt-poker {
+		background: #000;
+	}
 
-  /* fix user info BG */
-  .prt-user-info::before {
-    border-image-repeat: stretch stretch;
-  }
+	/* fix user info BG */
+	.prt-user-info::before {
+		border-image-repeat: stretch stretch;
+	}
 
-  /* fix crew chest overlapping pictures */
-  #submenu-general-chat #chat-body #chat-log .lis-log .txt-log {
-    padding-left: 52px;
-  }
+	/* fix crew chest overlapping pictures */
+	#submenu-general-chat #chat-body #chat-log .lis-log .txt-log {
+		padding-left: 52px;
+	}
 
-  /* prevent horizontal scrollbar */
-  body {
-    overflow-x: hidden;
-  }
+	/* prevent horizontal scrollbar */
+	body {
+		overflow-x: hidden;
+	}
 
-  /*[[center-content]]*/
-  /*[[center-popups]]*/
-  /*[[compact-gacha]]*/
-  /*[[compact-raids]]*/
-  /*[[compact-summons]]*/
-  /*[[compact-item-pickup]]*/
-  /*[[fit-crew-chat]]*/
-  /*[[fix-header-menu]]*/
-  /*[[gray-out-equipped]]*/
-  /*[[gray-out-sparked]]*/
-  /*[[hide-arcarum-skip]]*/
-  /*[[hide-crystal-count]]*/
-  /*[[hide-event-load]]*/
-  /*[[hide-gacha-banner]]*/
-  /*[[hide-header-banners]]*/
-  /*[[hide-outfit-sets]]*/
-  /*[[hide-pinboard]]*/
-  /*[[hide-quest-comment]]*/
-  /*[[hide-scrollbars]]*/
-  /*[[hide-size]]*/
-  /*[[hide-special-draw]]*/
-  /*[[hide-star-premium]]*/
-  /*[[hide-sidebar]]*/
-  /*[[hide-submenu]]*/
-  /*[[hide-support-plus]]*/
-  /*[[keep-extras-open]]*/
-  /*[[rearrange-raid-ui]]*/
-  /*[[selectable-text]]*/
-  /*[[sort-summons]]*/
-  /*[[submenu-on-left]]*/
+	/*[[center-content]]*/
+	/*[[center-popups]]*/
+	/*[[compact-gacha]]*/
+	/*[[compact-raids]]*/
+	/*[[compact-summons]]*/
+	/*[[compact-item-pickup]]*/
+	/*[[fit-crew-chat]]*/
+	/*[[fix-header-menu]]*/
+	/*[[gray-out-equipped]]*/
+	/*[[gray-out-sparked]]*/
+	/*[[hide-arcarum-skip]]*/
+	/*[[hide-auto-select]]*/
+	/*[[hide-crystal-count]]*/
+	/*[[hide-event-load]]*/
+	/*[[hide-gacha-banner]]*/
+	/*[[hide-header-banners]]*/
+	/*[[hide-outfit-sets]]*/
+	/*[[hide-pinboard]]*/
+	/*[[hide-quest-comment]]*/
+	/*[[hide-scrollbars]]*/
+	/*[[hide-size]]*/
+	/*[[hide-special-draw]]*/
+	/*[[hide-star-premium]]*/
+	/*[[hide-sidebar]]*/
+	/*[[hide-submenu]]*/
+	/*[[hide-support-plus]]*/
+	/*[[keep-extras-open]]*/
+	/*[[rearrange-raid-ui]]*/
+	/*[[selectable-text]]*/
+	/*[[sort-summons]]*/
+	/*[[submenu-on-left]]*/
 }
 
 /*[[compact-lists]]*/
