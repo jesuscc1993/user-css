@@ -1,11 +1,13 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2023.03.22.18.11
+@version        2023.03.22.20.03
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
-@preprocessor   uso
+@preprocessor   stylus
+
+@var checkbox   shift-content-right    "Slightly shift contents to the right"    0
 ==/UserStyle== */
 @-moz-document domain("granbluefantasy.jp") {
   :root {
@@ -85,18 +87,11 @@
     font-weight: bold !important;
   }
 
-  /*.common-pop-error {
-    opacity: .5;
-    pointer-events: none;
-  }*/
+  /* click through masks */
   .mask {
     pointer-events: none;
   }
 
-  /* .pop-show {
-    zoom: .95 !important;
-    left: 8px;
-  } */
   .prt-command > *:first-child,
   .prt-command > *:first-child > * {
     z-index: 0;
@@ -107,29 +102,6 @@
     background: #150F0F;
   }
 
-
-  /* fast draw */
-  /*#cjs-gacha {
-    display: none;
-  }
-  .cnt-result-gacha[style="display:none;"] {
-    display: block !important;
-  }*/
-  /*
-
-
-  /* hide global footer */
-  /* .wrapper {
-    padding-bottom: 10px;
-  }
-  .cnt-global-footer {
-    display: none;
-  }
-  body.jssdk #mobage-game-container .wrapper,
-  body.jssdk #gree-game-container .wrapper {
-    margin-bottom: -25px !important;
-  } */
-  /* */
   .cnt-event.multi {
     display: flex;
     flex-direction: column;
@@ -154,14 +126,6 @@
     display: none !important;
   }
 
-  /* fix upgrade's "switch" button */
-  /* .cnt-base-status .status .btn-base-chenge {
-    margin-top: 1px;
-  } */
-  /*.prt-command-summon[style*="display: none;"] + * {}*/
-  /* .prt-navi {
-    top: 160px;
-  } */
   .prt-scene-comment {
     font-size: 13.5px;
     font-weight: 400;
@@ -185,6 +149,7 @@
     background-size: 135px 3228px;
   }*/
   /* end: hide gala draw button */
+
   .jssdk #submenu.open #prt-submenu-contents {
     zoom: 0.9725;
   }
@@ -329,16 +294,6 @@
     padding-top: 5px;
   }
 
-  /* hide upgrade crap */
-  /*.prt-attribute-bonus {
-    display: none !important;
-  }
-  .cnt-confirm-material .txt-evolution-confirm {
-    height: 0;
-    margin-bottom: 0;
-    opacity: 0;
-    pointer-events: none;
-  }*/
   /* hide crew chat when it doesn't fit */
   @media (max-width: 1600px) {
     #submenu {
@@ -624,24 +579,6 @@
   }
 
   /* party characters / summons */
-  /* #prt-pc + div + .prt-contents:not(.large) .cnt-weapon-list {
-    background-image: url(https://i.imgur.com/XTnzQ2v.png);
-    background-position: -2.5px 0;
-    background-size: 326px 661px;
-  }
-  #prt-pc + div + .prt-contents:not(.large) .cnt-summon-list {
-    background-image: url(https://i.imgur.com/XTnzQ2v.png);
-    background-position: -2.5px -332px;
-    background-size: 326px 661px;
-  }
-  #prt-pc + div + .prt-contents:not(.large) .cnt-weapon-list,
-  #prt-pc + div + .prt-contents:not(.large) .cnt-summon-list {
-    height: 308px;
-  }
-  #prt-pc + div + .prt-contents:not(.large) .cnt-weapon-list .btn-mainweapon-fix,
-  #prt-pc + div + .prt-contents:not(.large) .cnt-weapon-list .btn-weapon-display-change {
-    top: 270px;
-  } */
   .cnt-weapon-list .prt-weapon-list.is-companion .cnt-weapon-sub .lis-weapon-sub {
     margin-bottom: 0;
   }
@@ -723,7 +660,7 @@
     height: 456px;
   }
 
-  /*show-town*/
+  /* show-town */
   .cnt-mypage {
     display: flex;
     flex-direction: column
@@ -768,6 +705,14 @@
     justify-content: center;
     flex-direction: column;
   }
+	
+	/* shift window */
+	if (shift-content-right) {
+    #mobage-game-container,
+    .cnt-global-header {
+      margin-left: 10px;
+    }
+	}
 }
 
 @-moz-document url-prefix("https://game.granbluefantasy.jp/#raid/") {
