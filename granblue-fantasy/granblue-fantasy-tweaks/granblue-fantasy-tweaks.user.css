@@ -1,13 +1,12 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2023.03.22.20.03
+@version        2023.03.23.17.59
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var checkbox   shift-content-right    "Slightly shift contents to the right"    0
 ==/UserStyle== */
 @-moz-document domain("granbluefantasy.jp") {
   :root {
@@ -705,14 +704,6 @@
     justify-content: center;
     flex-direction: column;
   }
-	
-	/* shift window */
-	if (shift-content-right) {
-    #mobage-game-container,
-    .cnt-global-header {
-      margin-left: 10px;
-    }
-	}
 }
 
 @-moz-document url-prefix("https://game.granbluefantasy.jp/#raid/") {

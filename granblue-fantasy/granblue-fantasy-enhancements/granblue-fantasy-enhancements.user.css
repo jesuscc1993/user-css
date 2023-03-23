@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.03.22.19.54
+@version        2023.03.23.17.59
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -11,23 +11,52 @@
 
 @advanced text     font-family    "Font family" "FOT-テロップ明朝 Pro D"
 
-@advanced dropdown center-content "Center content" {
+@advanced dropdown content-alignment "Content alignment" {
 
-  center-content-0 "Disabled" <<<EOT EOT;
+  content-alignment-0 "Left" <<<EOT EOT;
 
-  center-content-1 "Enabled" <<<EOT
+  content-alignment-1 "Left (fixed header)" <<<EOT
+    .cnt-global-header {
+			position: fixed;
+    }
+  EOT;
+
+  content-alignment-2 "Center" <<<EOT
+    #mobage-game-container {
+			left: calc(25vw - 160px);
+    }
+
+    .cnt-global-header {
+      left: calc(25vw - 640px);
+    }
+  EOT;
+
+  content-alignment-3 "Center (fixed header)" <<<EOT
     #mobage-game-container,
     .cnt-global-header {
-      left: calc((100vw - 640px) / 4);
-    }
-
-
-    #mobage-game-container {
-      position: absolute !important;
+			left: calc(25vw - 160px);
     }
 
     .cnt-global-header {
-      position: fixed;
+			position: fixed;
+    }
+  EOT;
+
+  content-alignment-4 "Right" <<<EOT
+    #mobage-game-container,
+    .cnt-global-header {
+      right: 0;
+    }
+  EOT;
+
+  content-alignment-5 "Right (fixed header)" <<<EOT
+    #mobage-game-container,
+    .cnt-global-header {
+    	left: calc(50vw - 320px);
+    }
+
+    .cnt-global-header {
+			position: fixed;
     }
   EOT;
 
@@ -979,6 +1008,10 @@
 		background: /*[[bg-color]]*/
 		B3 !important;
 	}
+	
+	#mobage-game-container {
+		position: absolute !important;
+	}
 
 	/* fix font sizes */
 	.prt-supporter-info .prt-supporter-detail .prt-summon-skill.text-small {
@@ -1006,7 +1039,7 @@
 		overflow-x: hidden;
 	}
 
-	/*[[center-content]]*/
+	/*[[content-alignment]]*/
 	/*[[center-popups]]*/
 	/*[[compact-gacha]]*/
 	/*[[compact-raids]]*/
