@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Media Transformations
 @description    Applies configurable transformations to images and/or videos.
-@version        2023.03.24.19.56
+@version        2023.03.24.20.00
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -10,7 +10,7 @@
 @advanced checkbox apply-to-images "Apply to images" 1
 @advanced checkbox apply-to-videos "Apply to videos" 1
 @advanced range    rotation        "Rotation"        [0, -180, 180, 1, 'deg']
-@advanced number   scale           "Scale"           100
+@advanced range    scale           "Scale"           [100, 1, 1000, 1, '%']
 @advanced number   translation-x   "Translation (x)" 0
 @advanced number   translation-y   "Translation (y)" 0
 
@@ -18,13 +18,13 @@
 @-moz-document regexp(".*") {
 	if (apply-to-images) {
 		img {
-			transform: rotate(rotation) scale(scale / 100) translate(translation-x + 0px, translation-y + 0px);
+			transform: rotate(rotation) scale(scale) translate(translation-x + 0px, translation-y + 0px);
 		}
 	}
 
 	if (apply-to-videos) {
 		video {
-			transform: rotate(rotation) scale(scale / 100) translate(translation-x + 0px, translation-y + 0px);
+			transform: rotate(rotation) scale(scale) translate(translation-x + 0px, translation-y + 0px);
 		}
 	}
 }
