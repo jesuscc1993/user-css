@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2023.03.24.17.22
+@version        2023.03.29.17.12
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -274,23 +274,37 @@
   }
 
   /* chat */
-  #general-chat.app.chrome #chat-open,
   #submenu-general-chat #chat-open {
+    background-position: 0 -128px;
+    background-size: 44px 744px;
     bottom: 32px;
-    width: 26px;
     height: 24px;
     right: 0 !important;
     top: 32px !important;
-    /*margin: 0 !important;
-    left: 32px !important;*/
+    width: 26px;
     z-index: 1000000000;
-    background-size: 44px 744px;
-    background-position: 0 -128px;
   }
 
   #submenu-general-chat #chat-body #chat-content {
-    top: 32px !important;
     padding-top: 5px;
+    top: 32px !important;
+  }
+
+  /* crop class images on chat */
+  #chat-body .lis-log .img-character-log,
+  #chat-activenotice .lis-log .img-character-log {
+    clip: rect(0px, 32px, 30px, 0px);
+  }
+
+  #chat-body .lis-log .txt-log,
+  #chat-activenotice .lis-log .txt-log {
+    padding-left: 36px !important;
+  }
+
+  #chat-input.btn-general-chat,
+  #chat-send,
+  #chat-stamp {
+    cursor: pointer;
   }
 
   /* hide crew chat when it doesn't fit */
@@ -415,18 +429,6 @@
     padding: 2px 0;
   }
 
-  /* crop class images on chat */
-  #chat-body .lis-log .img-character-log,
-  #chat-activenotice .lis-log .img-character-log {
-    /*clip: rect(0px, 46px, 30px, 0px);*/
-    clip: rect(0px, 32px, 30px, 0px);
-  }
-
-  #chat-body .lis-log .txt-log,
-  #chat-activenotice .lis-log .txt-log {
-    padding-left: 36px !important;
-  }
-
   /* smaller stamps, with real size zoom on hover */
   .txt-balloon-comment {
     overflow: visible !important;
@@ -533,12 +535,6 @@
 
   .cnt-extra-lb .btn-select-augment-item {
     margin-top: 0;
-  }
-
-  #chat-input.btn-general-chat,
-  #chat-send,
-  #chat-stamp {
-    cursor: pointer;
   }
 
   textarea:focus {
