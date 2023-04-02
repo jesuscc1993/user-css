@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.03.30.17.00
+@version        2023.04.02.19.04
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -86,6 +86,16 @@
     .prt-popup-body {
       max-height: calc(50vh - 180px);
       overflow: auto;
+    }
+    .pop-sort-change.pop-usual .prt-popup-body .txt-popup-body,
+    .pop-custom-filter.pop-usual .prt-popup-body .txt-popup-body,
+    .pop-filter-setting.prt-archive-npc .prt-popup-body .txt-popup-body {
+      padding-top: 24px;
+    }
+    .pop-sort-change.pop-usual .txt-popup-body .btn-default,
+    .pop-custom-filter.pop-usual .txt-popup-body .btn-default,
+    .pop-filter-setting.prt-archive-npc .txt-popup-body .btn-default {
+      top: 0;
     }
     #treasure-footer-wrapper {
       position: absolute;
