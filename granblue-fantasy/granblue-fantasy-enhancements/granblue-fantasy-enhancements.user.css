@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.04.02.19.04
+@version        2023.04.07.23.38
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -772,9 +772,12 @@
   
   hide-auto-select-1 "Enabled" <<<EOT
     .cnt-summon-list .prt-setting-all.btn-summon-all,
+    .cnt-summon-list .prt-setting-all.prt-summon-all-disabled,
     .cnt-weapon-list .btn-mainweapon-fix,
     .cnt-weapon-list .btn-weapon-all,
-    .prt-bar .btn-index-all-setting {
+    .cnt-weapon-list.large .prt-weapon-all-disabled,
+    .prt-bar .btn-index-all-setting,
+    .prt-bar .prt-index-all-disabled {
       display: none;
     }
   EOT;
