@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2023.04.07.23.38
+@version        2023.04.08.17.17
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -745,8 +745,7 @@ regexp("https:\\/\\/game\\.granbluefantasy\\.jp\\/.*#raidz.*") {
 
 @-moz-document url("https://game.granbluefantasy.jp/#quest/assist/event") {
   /* hide stuff on event raids page */
-  #prt-assist-id,
-  .prt-lead {
+  #prt-assist-id {
     display: none;
   }
 }
