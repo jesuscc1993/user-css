@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.04.10.16.50
+@version        2023.04.11.10.34
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -446,6 +446,9 @@
       transform: scale(.8, 1);
       width: 72px;
     }
+    .prt-raid-list .prt-assist-raid-setting {
+      margin-top: 16px;
+    }
   EOT;
 
   compact-raids-2 "Extra" <<<EOT
@@ -508,6 +511,9 @@
       left: 90px;
       transform: scale(.8, 1.2);
       width: 72px;
+    }
+    .prt-raid-list .prt-assist-raid-setting {
+      margin-top: 20px;
     }
   EOT;
 
