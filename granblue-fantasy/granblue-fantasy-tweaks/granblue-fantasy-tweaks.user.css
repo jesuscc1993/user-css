@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2023.04.12.15.38
+@version        2023.04.13.10.35
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -339,9 +339,11 @@
 		display: none !important;
 	}
 
-	/* hide crap tutorials */
+	/* hide tutorials */
 	.prt-enhance-note,
-	.prt-list-help-balloon {
+	.prt-list-help-balloon,
+  .prt-solo-multi-comment,
+  .prt-solo-multi-image {
 		display: none;
 	}
 
