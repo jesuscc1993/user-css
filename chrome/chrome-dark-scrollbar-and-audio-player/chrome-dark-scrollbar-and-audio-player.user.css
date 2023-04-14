@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Chrome - Dark scrollbar and audio player
 @description    Styles the scrollbar and audio player components to a dark theme. Every setting can be customized through the "Customize Settings" feature. Only compatible with WebKit browsers.
-@version        2022.07.31.10.59
+@version        2023.04.14.22.57
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -12,12 +12,13 @@
   scope-html       "Main scrollbar"  <<<EOT html >  EOT;
 }
 
-@advanced color    background      "Background" #101010
-@advanced color    scrollbar       "Scrollbar" #333333
-@advanced color    scrollbar-hover "Scrollbar (hover)" #444444
-@advanced text     scrollbar-width "Scrollbar width" "17px"
-@advanced text     border-width    "Border width" "3px"
-@advanced text     border-radius   "Border radius" "8px"
+@advanced color    background            "Background" #101010
+@advanced color    scrollbar             "Scrollbar" #333333
+@advanced color    scrollbar-hover       "Scrollbar (hover)" #444444
+@advanced text     scrollbar-width       "Scrollbar width" "17px"
+@advanced text     border-width          "Border width" "3px"
+@advanced text     border-width-hover    "Border width (hover)" "2px"
+@advanced text     border-radius         "Border radius" "8px"
 
 @advanced dropdown dark-player     "Dark audio player" {
   dark-player-0    "Disabled*" <<<EOT  EOT;
@@ -41,13 +42,14 @@
   }
 
   /*[[scope]]*/::-webkit-scrollbar-thumb {
-    background: /*[[scrollbar]]*/ ;
+    background: /*[[scrollbar]]*/ !important;
     border: /*[[border-width]]*/ solid /*[[background]]*/ !important;
     border-radius: /*[[border-radius]]*/ !important;
   }
 
   /*[[scope]]*/::-webkit-scrollbar-thumb:hover {
-    background: /*[[scrollbar-hover]]*/ ;
+    background: /*[[scrollbar-hover]]*/ !important;
+    border-width: /*[[border-width-hover]]*/ !important;
   }
 
   /*[[dark-player]]*/
