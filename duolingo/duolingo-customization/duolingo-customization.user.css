@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Duolingo - Customization
 @description    Provides some extra customization options for Duolingo.
-@version        2023.04.15.11.59
+@version        2023.04.16.11.47
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -140,16 +140,16 @@
   }
 
   /* goals */
-  /* if (hide-goals) {
-    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(3) {
+  if (hide-goals) {
+    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(4) {
       display: none;
     }
-  } */
+  }
 
   /* premium */
   if (hide-premium) {
     #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(2),
-    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(4) {
+    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(5) {
       display: none;
     }
   }
