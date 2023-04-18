@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.04.11.10.34
+@version        2023.04.18.11.23
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -208,6 +208,7 @@
   gray-out-equipped-0 "Disabled" <<<EOT EOT;
 
   gray-out-equipped-1 "Enabled" <<<EOT
+    .btn-item.equipped,
     .lis-item.equipped,
     .lis-weapon.equipped {
       filter: grayscale(.5) brightness(.66);
@@ -686,6 +687,7 @@
     @-moz-document
     regexp("https://game.granbluefantasy.jp/#archaic/.*"),
     regexp("https://game.granbluefantasy.jp/#arousal/.*"),
+    regexp("https://game.granbluefantasy.jp/#bonus_stock/.*"),
     regexp("https://game.granbluefantasy.jp/#container/.*"),
     regexp("https://game.granbluefantasy.jp/#decompose/.*"),
     regexp("https://game.granbluefantasy.jp/#enhancement/.*"),
