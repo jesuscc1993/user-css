@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Duolingo - Dark Theme
 @description    Dark theme for Duolingo.
-@version        2022.11.24.17.24
+@version        2023.04.19.11.23
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -9,65 +9,70 @@
 
 ==/UserStyle== */
 @-moz-document domain("duolingo.com") {
-	path[fill="#e5e5e5"] {
-		fill: #444;
-	}
+  path[fill="#e5e5e5"] {
+    fill: #444;
+  }
 
-	path[fill="#ffd900"] {
-		fill: #c80;
-	}
+  path[fill="#ffd900"] {
+    fill: #c80;
+  }
 
-	[role="progressbar"],
-	[id="session/PlayerFooter"] {
-		filter: saturate(1.5);
-	}
+  [role="progressbar"],
+  [id="session/PlayerFooter"] {
+    filter: saturate(1.5);
+  }
 
-	html {
-		filter: invert(0.9) hue-rotate(180deg);
-	}
+  html {
+    filter: invert(0.9) hue-rotate(180deg);
+  }
 
-	img,
-	img:hover,
-	svg,
-	svg:hover,
-	video,
-	video:hover,
-	[style*="background-image"] {
-		filter: invert(1) hue-rotate(180deg) brightness(1.125) !important;
-	}
+  img,
+  img:hover,
+  svg,
+  svg:hover,
+  video,
+  video:hover,
+  [style*="background-image"] {
+    filter: invert(1) hue-rotate(180deg) brightness(1.125) !important;
+  }
 
-	/* unit test */
-	._145Ci,
-	/* wrap up */
-	._23sc9,
-	._1LdIi,
-	._1ualb,
-	._3DWgD,
-	._3aUCN,
-	.e9TL7,
-	.MyHQ0,
-	/* duolingo characters */
-	.F2B9m,
-	.placeholder {
-		filter: invert(1) hue-rotate(180deg) brightness(1.125);
-	}
+  /* streak freeze */
+  ._36lJw,
+  /* double or nothing */
+  .AS1h6,
+  /* unit test */
+  ._145Ci,
+  /* wrap up */
+  ._23sc9,
+  ._1LdIi,
+  ._1ualb,
+  ._3DWgD,
+  ._3aUCN,
+  .e9TL7,
+  .MyHQ0,
+  /* duolingo characters */
+  .F2B9m,
+  .placeholder {
+    filter: invert(1) hue-rotate(180deg) brightness(1.125);
+  }
 
-	/* trophy svg */
-	._1T2zW {
-		filter: invert(1) hue-rotate(180deg) brightness(1.25);
-	}
+  /* trophy svg */
+  ._1T2zW {
+    filter: invert(1) hue-rotate(180deg) brightness(1.25);
+  }
 
-	._212s-,
-	._3_QUJ,
-	._3dPmh,
-	._4iaAs,
-	.lIg1v,
-	.placeholder {
-		filter: invert(1) hue-rotate(180deg) brightness(1.5);
-	}
+  ._212s-,
+  /* achievements */
+  ._3_QUJ,
+  ._3dPmh,
+  ._4iaAs,
+  .lIg1v,
+  .placeholder {
+    filter: invert(1) hue-rotate(180deg) brightness(1.5);
+  }
 
-	/* path step */
-	._2D40f {
-		--path-level-color: #775000;
-	}
+  /* path step */
+  ._2D40f {
+    --path-level-color: #775000;
+  }
 }

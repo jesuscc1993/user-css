@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Duolingo - Customization
 @description    Provides some extra customization options for Duolingo.
-@version        2023.04.16.11.47
+@version        2023.04.19.11.20
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -85,10 +85,6 @@
       display: none;
     }
 
-    [data-test="shop-section"] {
-      /* counter hiding the add on top */
-      margin-top: 0;
-    }
     /* */
     /* hide results adds column */
     ._1jZrU {
@@ -115,7 +111,8 @@
 
   /* classes */
   if (hide-classes) {
-    [href="https://classes.duolingo.com/"] {
+    [href="https://classes.duolingo.com/"]
+    {
       display: none !important;
     }
   }
