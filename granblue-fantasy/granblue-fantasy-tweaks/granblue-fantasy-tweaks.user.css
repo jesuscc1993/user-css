@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2023.04.13.10.43
+@version        2023.04.21.11.10
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -72,7 +72,7 @@
 
   .prt-command-chara .prt-special,
   .prt-command-chara .prt-ability-list {
-    background: #150F0F;
+    background: #150f0f;
   }
 
   .cnt-event.multi {
@@ -302,14 +302,16 @@
     height: auto;
   }
 
-  .img-header-bg[src="https://prd-game-a-granbluefantasy.akamaized.net/assets_en/img_mid/sp/gacha/rupie/header/1.jpg"] {
+  .img-header-bg[src="https://prd-game-a-granbluefantasy.akamaized.net/assets_en/img_mid/sp/gacha/rupie/header/1.jpg"]
+  {
     width: 0;
     background: url(https://prd-game-a-granbluefantasy.akamaized.net/assets_en/img_mid/sp/gacha/7hyy02tv/header/bg.jpg);
     background-size: cover;
     padding: 160px;
   }
 
-  .img-header-bg[src="https://prd-game-a-granbluefantasy.akamaized.net/assets_en/img_mid/sp/gacha/classic/header/bg.jpg"] {
+  .img-header-bg[src="https://prd-game-a-granbluefantasy.akamaized.net/assets_en/img_mid/sp/gacha/classic/header/bg.jpg"]
+  {
     top: -20px;
   }
 
@@ -373,12 +375,17 @@
 
   /* darker disabled abilities */
   .prt-command-chara .prt-ability-list .lis-ability [class^="shine"] {
-    opacity: .66;
+    opacity: 0.66;
   }
 
   /* darker disabled elements */
   .prt-item-get.complete {
     filter: brightness(0.66);
+  }
+
+  /* darker disabled summons */
+  .prt-command-summon .prt-summon-list .lis-summon.off .prt-mask {
+    background-color: rgba(16, 20, 20, 0.8);
   }
 
   /* compact enhancements */
@@ -434,13 +441,13 @@
     width: 60px !important;
     z-index: 10;
     position: relative;
-    transition: .1s;
+    transition: 0.1s;
   }
 
   .txt-balloon-comment .img-stamp,
   .txt-log .img-stamp {
     margin: -15px !important;
-    transform: scale(.5);
+    transform: scale(0.5);
   }
 
   .txt-balloon-comment .img-stamp:hover,
@@ -540,7 +547,7 @@
   }
 
   #submenu #cnt-submenu-navi-vertical {
-    background: black !important
+    background: black !important;
   }
 
   /* compact battle confirmation */
@@ -656,7 +663,7 @@
   /* show-town */
   .cnt-mypage {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
   }
 
   .lis-banner {
@@ -711,7 +718,8 @@
   }
 }
 
-@-moz-document url-prefix("https://game.granbluefantasy.jp/#raid/") {
+@-moz-document url-prefix("https://game.granbluefantasy.jp/#raid/")
+{
   /* click through modal backdrops */
   .mask {
     min-height: 0 !important;
@@ -719,7 +727,8 @@
   }
 }
 
-@-moz-document url-prefix("https://game.granbluefantasy.jp/#comic/") {
+@-moz-document url-prefix("https://game.granbluefantasy.jp/#comic/")
+{
   header,
   .prt-episode-title,
   footer {
@@ -764,7 +773,8 @@ regexp("https:\\/\\/game\\.granbluefantasy\\.jp\\/.*#raidz.*") {
   }
 }
 
-@-moz-document url("https://game.granbluefantasy.jp/#quest/assist/event") {
+@-moz-document url("https://game.granbluefantasy.jp/#quest/assist/event")
+{
   /* hide stuff on event raids page */
   #prt-assist-id {
     display: none;
