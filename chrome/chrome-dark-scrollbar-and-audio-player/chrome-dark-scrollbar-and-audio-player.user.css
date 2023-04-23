@@ -1,56 +1,55 @@
 /* ==UserStyle==
 @name           Chrome - Dark scrollbar and audio player
 @description    Styles the scrollbar and audio player components to a dark theme. Every setting can be customized through the "Customize Settings" feature. Only compatible with WebKit browsers.
-@version        2023.04.14.22.57
+@version        2023.04.23.10.45
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   uso
 
-@advanced dropdown scope "Scope" {
-  scope-any        "All scrollbars*" <<<EOT  EOT;
-  scope-html       "Main scrollbar"  <<<EOT html >  EOT;
+@advanced dropdown scope                 "Scope" {
+  scope-any        "All scrollbars"      <<<EOT  EOT;
+  scope-html       "Main scrollbar"      <<<EOT html >  EOT;
 }
 
-@advanced color    background            "Background" #101010
-@advanced color    scrollbar             "Scrollbar" #333333
-@advanced color    scrollbar-hover       "Scrollbar (hover)" #444444
-@advanced text     scrollbar-width       "Scrollbar width" "17px"
+@advanced color    background            "Track color" #101010
+@advanced color    scrollbar             "Thumb color" #333333
+@advanced color    scrollbar-hover       "Thumb color (hover)" #444444
+@advanced text     scrollbar-width       "Width" "17px"
+@advanced text     border-radius         "Border radius" "8px"
 @advanced text     border-width          "Border width" "3px"
 @advanced text     border-width-hover    "Border width (hover)" "2px"
-@advanced text     border-radius         "Border radius" "8px"
 
-@advanced dropdown dark-player     "Dark audio player" {
-  dark-player-0    "Disabled*" <<<EOT  EOT;
+@advanced dropdown dark-player           "Dark audio player" {
+  dark-player-0    "Disabled"            <<<EOT  EOT;
 
-  dark-player-1    "Enabled"   <<<EOT audio {
+  dark-player-1    "Enabled"             <<<EOT audio {
     filter: invert(1) hue-rotate(180deg);
   } EOT;
 }
 
 ==/UserStyle== */
-@-moz-document regexp(".*") {
-  /*[[scope]]*/::-webkit-scrollbar,
-  /*[[scope]]*/::-webkit-scrollbar-corner,
-  /*[[scope]]*/::-webkit-scrollbar-track-piece {
-    background: /*[[background]]*/ !important;
-  }
 
-  /*[[scope]]*/::-webkit-scrollbar {
-    width: /*[[scrollbar-width]]*/ !important;
-    height: /*[[scrollbar-width]]*/ !important;
-  }
-
-  /*[[scope]]*/::-webkit-scrollbar-thumb {
-    background: /*[[scrollbar]]*/ !important;
-    border: /*[[border-width]]*/ solid /*[[background]]*/ !important;
-    border-radius: /*[[border-radius]]*/ !important;
-  }
-
-  /*[[scope]]*/::-webkit-scrollbar-thumb:hover {
-    background: /*[[scrollbar-hover]]*/ !important;
-    border-width: /*[[border-width-hover]]*/ !important;
-  }
-
-  /*[[dark-player]]*/
+/*[[scope]]*/::-webkit-scrollbar,
+/*[[scope]]*/::-webkit-scrollbar-corner,
+/*[[scope]]*/::-webkit-scrollbar-track-piece {
+	background: /*[[background]]*/ !important;
 }
+
+/*[[scope]]*/::-webkit-scrollbar {
+	width: /*[[scrollbar-width]]*/ !important;
+	height: /*[[scrollbar-width]]*/ !important;
+}
+
+/*[[scope]]*/::-webkit-scrollbar-thumb {
+	background: /*[[scrollbar]]*/ !important;
+	border: /*[[border-width]]*/ solid /*[[background]]*/ !important;
+	border-radius: /*[[border-radius]]*/ !important;
+}
+
+/*[[scope]]*/::-webkit-scrollbar-thumb:hover {
+	background: /*[[scrollbar-hover]]*/ !important;
+	border-width: /*[[border-width-hover]]*/ !important;
+}
+
+/*[[dark-player]]*/
