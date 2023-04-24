@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.04.18.11.23
+@version        2023.04.24.13.20
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -209,6 +209,7 @@
 
   gray-out-equipped-1 "Enabled" <<<EOT
     .btn-item.equipped,
+    .btn-lis-item.equipped,
     .lis-item.equipped,
     .lis-weapon.equipped {
       filter: grayscale(.5) brightness(.66);
@@ -695,6 +696,7 @@
     regexp("https://game.granbluefantasy.jp/#evolution/.*"),
     regexp("https://game.granbluefantasy.jp/#list.*"),
     regexp("https://game.granbluefantasy.jp/#party/list.*"),
+    regexp("https://game.granbluefantasy.jp/#profile/fix/list/.*"),
     regexp("https://game.granbluefantasy.jp/#profile/pushed_npc/list"),
     regexp("https://game.granbluefantasy.jp/#recycle/.*"),
     regexp("https://game.granbluefantasy.jp/#sell/.*") {
@@ -726,6 +728,7 @@
       #lis-inner-summon .btn-item,
       #lis-inner-weapon .btn-item,
       .cnt-arousal .btn-material-item,
+      .cnt-order-box .cnt-list-order-inner .btn-lis-item,
       .prt-listup:not(#prt-list-skin) .prt-list-item .btn-item,
       .prt-listup:not(#prt-list-skin) .prt-list-item .lis-item,
       [data-css="/party/list_npc.css"] + #cnt-list_npc .lis-npc,
@@ -740,6 +743,7 @@
       .cnt-list-equipment .cnt-summon-order .lis-summon.on,
       .cnt-list-equipment .cnt-weapon-order .lis-weapon.on,
       .cnt-material-order .btn-material.on,
+      .cnt-order-box .cnt-list-order-inner .btn-lis-item.on,
       .pop-filter-enhancement .prt-reset-filter .btn-reset-filter.on,
       .pop-filter-setting .prt-reset-filter .btn-reset-filter.on,
       .prt-listup .prt-param-icon .btn-current-sort.on,
@@ -1052,12 +1056,12 @@
   }
 
   /* fix missing click effects */
-	.btn-guild-name:active,
-	.btn-user-name:active {
-		transform: scale(0.95) translate(-3px, 1px);
-	}
-	
-	.cnt-raid-chat .btn-chat:active,
+  .btn-guild-name:active,
+  .btn-user-name:active {
+    transform: scale(0.95) translate(-3px, 1px);
+  }
+  
+  .cnt-raid-chat .btn-chat:active,
   .pop-start-assist .prt-twitter-assist .prt-twitter-btn .btn-twitter:active {
     transform: scale(0.95) translateY(2px);
   }
