@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.04.24.13.20
+@version        2023.04.28.10.49
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -953,10 +953,6 @@
     .prt-lead > .txt-baloon {
       display: none;
     }
-
-    .btn-toggle-assist-owner {
-      margin: 0 auto 8px auto;
-    }
   EOT;
 
 }
@@ -1021,15 +1017,13 @@
   .cnt-raid .cnt-multi,
   .prt-mask-job,
   .prt-scene-comment-after-mask {
-    background: /*[[bg-color]]*/
-    !important;
+    background: /*[[bg-color]]*/ !important;
   }
 
   .mask {
-    background: /*[[bg-color]]*/
-    B3 !important;
+    background: /*[[bg-color]]*/B3 !important;
   }
-  
+
   #mobage-game-container {
     position: absolute !important;
   }
@@ -1060,7 +1054,7 @@
   .btn-user-name:active {
     transform: scale(0.95) translate(-3px, 1px);
   }
-  
+
   .cnt-raid-chat .btn-chat:active,
   .pop-start-assist .prt-twitter-assist .prt-twitter-btn .btn-twitter:active {
     transform: scale(0.95) translateY(2px);
