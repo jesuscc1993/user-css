@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.04.28.17.44
+@version        2023.05.03.16.17
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -1007,95 +1007,100 @@
 
 ==/UserStyle== */
 @-moz-document domain("granbluefantasy.jp") {
-	/* font */
-	body,
-	.prt-user-info .prt-info-profile .btn-user-name,
-	.prt-status .prt-user-name .txt-user-name {
-		/* 'FOT-テロップ明朝 Pro D' */
-		font-family: "/*[[font-family]]*/", "Average Sans", sans-serif !important;
-	}
+  /* font */
+  body,
+  .prt-user-info .prt-info-profile .btn-user-name,
+  .prt-status .prt-user-name .txt-user-name {
+    /* 'FOT-テロップ明朝 Pro D' */
+    font-family: "/*[[font-family]]*/", "Average Sans", sans-serif !important;
+  }
 
-	body,
-	.cnt-raid,
-	.cnt-raid .cnt-multi,
-	.prt-mask-job,
-	.prt-scene-comment-after-mask {
-		background: /*[[bg-color]]*/
-		!important;
-	}
+  body,
+  .cnt-raid,
+  .cnt-raid .cnt-multi,
+  .prt-mask-job,
+  .prt-scene-comment-after-mask {
+    background: /*[[bg-color]]*/ !important;
+  }
 
-	#mobage-game-container {
-		position: absolute !important;
-	}
+  #mobage-game-container {
+    position: absolute !important;
+  }
 
-	/* fix font sizes */
-	.prt-supporter-info .prt-supporter-detail .prt-summon-skill.text-small {
-		font-size: 8.25px !important;
-		font-weight: 500;
-	}
+  /* fix font sizes */
+  .prt-supporter-info .prt-supporter-detail .prt-summon-skill.text-small {
+    font-size: 8.25px !important;
+    font-weight: 500;
+  }
 
-	/* fix poker BG */
-	.cnt-poker {
-		background: #000;
-	}
+  /* fix crew skill text with custom font */
+  .prt-support-list .prt-support-info .prt-support-count {
+    display: block;
+    padding: 4px;
+  }
 
-	/* fix user info BG */
-	.prt-user-info::before {
-		border-image-repeat: stretch stretch;
-	}
+  /* fix poker BG */
+  .cnt-poker {
+    background: #000;
+  }
 
-	/* fix crew chest overlapping pictures */
-	#submenu-general-chat #chat-body #chat-log .lis-log .txt-log {
-		padding-left: 52px;
-	}
+  /* fix user info BG */
+  .prt-user-info::before {
+    border-image-repeat: stretch stretch;
+  }
 
-	/* fix missing click effects */
-	.btn-guild-name:active,
-	.btn-user-name:active {
-		transform: scale(0.95) translate(-3px, 1px);
-	}
+  /* fix crew chest overlapping pictures */
+  #submenu-general-chat #chat-body #chat-log .lis-log .txt-log {
+    padding-left: 52px;
+  }
 
-	.cnt-raid-chat .btn-chat:active,
-	.pop-start-assist .prt-twitter-assist .prt-twitter-btn .btn-twitter:active {
-		transform: scale(0.95) translateY(2px);
-	}
+  /* fix missing click effects */
+  .btn-guild-name:active,
+  .btn-user-name:active {
+    transform: scale(0.95) translate(-3px, 1px);
+  }
 
-	/* prevent horizontal scrollbar */
-	body {
-		overflow-x: hidden;
-	}
+  .cnt-raid-chat .btn-chat:active,
+  .pop-start-assist .prt-twitter-assist .prt-twitter-btn .btn-twitter:active {
+    transform: scale(0.95) translateY(2px);
+  }
 
-	/*[[content-alignment]]*/
-	/*[[center-popups]]*/
-	/*[[compact-gacha]]*/
-	/*[[compact-raids]]*/
-	/*[[compact-summons]]*/
-	/*[[compact-item-pickup]]*/
-	/*[[fit-crew-chat]]*/
-	/*[[fix-header-menu]]*/
-	/*[[gray-out-equipped]]*/
-	/*[[gray-out-sparked]]*/
-	/*[[hide-arcarum-skip]]*/
-	/*[[hide-auto-select]]*/
-	/*[[hide-crystal-count]]*/
-	/*[[hide-event-load]]*/
-	/*[[hide-gacha-banner]]*/
-	/*[[hide-header-banners]]*/
-	/*[[hide-outfit-sets]]*/
-	/*[[hide-pinboard]]*/
-	/*[[hide-quest-comment]]*/
-	/*[[hide-scrollbars]]*/
-	/*[[hide-size]]*/
-	/*[[hide-special-draw]]*/
-	/*[[hide-star-premium]]*/
-	/*[[hide-sidebar]]*/
-	/*[[hide-submenu]]*/
-	/*[[hide-support-plus]]*/
-	/*[[keep-extras-open]]*/
-	/*[[rearrange-raid-ui]]*/
-	/*[[selectable-text]]*/
-	/*[[sort-summons]]*/
-	/*[[submenu-on-left]]*/
+  /* prevent horizontal scrollbar */
+  body {
+    overflow-x: hidden;
+  }
+
+  /*[[content-alignment]]*/
+  /*[[center-popups]]*/
+  /*[[compact-gacha]]*/
+  /*[[compact-raids]]*/
+  /*[[compact-summons]]*/
+  /*[[compact-item-pickup]]*/
+  /*[[fit-crew-chat]]*/
+  /*[[fix-header-menu]]*/
+  /*[[gray-out-equipped]]*/
+  /*[[gray-out-sparked]]*/
+  /*[[hide-arcarum-skip]]*/
+  /*[[hide-auto-select]]*/
+  /*[[hide-crystal-count]]*/
+  /*[[hide-event-load]]*/
+  /*[[hide-gacha-banner]]*/
+  /*[[hide-header-banners]]*/
+  /*[[hide-outfit-sets]]*/
+  /*[[hide-pinboard]]*/
+  /*[[hide-quest-comment]]*/
+  /*[[hide-scrollbars]]*/
+  /*[[hide-size]]*/
+  /*[[hide-special-draw]]*/
+  /*[[hide-star-premium]]*/
+  /*[[hide-sidebar]]*/
+  /*[[hide-submenu]]*/
+  /*[[hide-support-plus]]*/
+  /*[[keep-extras-open]]*/
+  /*[[rearrange-raid-ui]]*/
+  /*[[selectable-text]]*/
+  /*[[sort-summons]]*/
+  /*[[submenu-on-left]]*/
 }
 
 /*[[compact-lists]]*/
