@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.05.04.11.42
+@version        2023.05.04.11.57
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -919,6 +919,18 @@
 
 }
 
+@advanced dropdown hide-gameplay-extras "⛔ Hide gameplay extras" {
+
+  hide-gameplay-extras-0 "Disabled" <<<EOT EOT;
+  
+  hide-gameplay-extras-1 "Enabled" <<<EOT
+    .cnt-mypage > .prt-toggle-pane {
+      display: none;
+    }
+  EOT;
+
+}
+
 @advanced dropdown hide-special-draw "⛔ Hide surprise draw" {
 
   hide-special-draw-0 "Disabled" <<<EOT EOT;
@@ -1085,15 +1097,16 @@
   /*[[hide-crystal-count]]*/
   /*[[hide-event-load]]*/
   /*[[hide-gacha-banner]]*/
+  /*[[hide-gameplay-extras]]*/
   /*[[hide-header-banners]]*/
   /*[[hide-outfit-sets]]*/
   /*[[hide-pinboard]]*/
   /*[[hide-quest-comment]]*/
   /*[[hide-scrollbars]]*/
+  /*[[hide-sidebar]]*/
   /*[[hide-size]]*/
   /*[[hide-special-draw]]*/
   /*[[hide-star-premium]]*/
-  /*[[hide-sidebar]]*/
   /*[[hide-submenu]]*/
   /*[[hide-support-plus]]*/
   /*[[keep-extras-open]]*/
