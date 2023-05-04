@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Nakama - Personalización
 @description    Permite la configuración de ciertos aspectos visuales en Nakama.
-@version        2022.12.20.18.10
+@version        2023.05.04.21.39
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -62,6 +62,7 @@
 
 	body when (@disable-seasons =1) {
 		> canvas,
+		#animateimage,
 		#padoru {
 			display: none !important;
 		}
