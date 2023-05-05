@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Chrome - Dark scrollbar and audio player
 @description    Styles the scrollbar and audio player components to a dark theme. Every setting can be customized through the "Customize Settings" feature. Only compatible with WebKit browsers.
-@version        2023.04.23.10.45
+@version        2023.05.05.20.13
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -30,26 +30,27 @@
 
 ==/UserStyle== */
 
-/*[[scope]]*/::-webkit-scrollbar,
-/*[[scope]]*/::-webkit-scrollbar-corner,
-/*[[scope]]*/::-webkit-scrollbar-track-piece {
-	background: /*[[background]]*/ !important;
-}
-
-/*[[scope]]*/::-webkit-scrollbar {
-	width: /*[[scrollbar-width]]*/ !important;
-	height: /*[[scrollbar-width]]*/ !important;
-}
-
-/*[[scope]]*/::-webkit-scrollbar-thumb {
-	background: /*[[scrollbar]]*/ !important;
-	border: /*[[border-width]]*/ solid /*[[background]]*/ !important;
-	border-radius: /*[[border-radius]]*/ !important;
-}
-
-/*[[scope]]*/::-webkit-scrollbar-thumb:hover {
-	background: /*[[scrollbar-hover]]*/ !important;
-	border-width: /*[[border-width-hover]]*/ !important;
-}
-
 /*[[dark-player]]*/
+@-moz-document regexp("https?://(?!(www\.)?(discord.com|twitter.com|youtube.com)).*") {
+	/*[[scope]]*/::-webkit-scrollbar,
+	/*[[scope]]*/::-webkit-scrollbar-corner,
+	/*[[scope]]*/::-webkit-scrollbar-track-piece {
+		background: /*[[background]]*/ !important;
+	}
+
+	/*[[scope]]*/::-webkit-scrollbar {
+		width: /*[[scrollbar-width]]*/ !important;
+		height: /*[[scrollbar-width]]*/ !important;
+	}
+
+	/*[[scope]]*/::-webkit-scrollbar-thumb {
+		background: /*[[scrollbar]]*/ !important;
+		border: /*[[border-width]]*/ solid /*[[background]]*/ !important;
+		border-radius: /*[[border-radius]]*/ !important;
+	}
+
+	/*[[scope]]*/::-webkit-scrollbar-thumb:hover {
+		background: /*[[scrollbar-hover]]*/ !important;
+		border-width: /*[[border-width-hover]]*/ !important;
+	}
+}
