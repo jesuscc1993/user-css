@@ -12,41 +12,41 @@
 
 ==/UserStyle== */
 @-moz-document url-prefix("https://www.youtube.com/watch?v=") {
-	:root {
-		--header-height: 56px;
-	}
+  :root {
+    --header-height: 56px;
+  }
 
-	ytd-watch-flexy:not([fullscreen]) #player-theater-container.ytd-watch-flexy {
-		max-height: none;
-		height: calc(100vh - var(--header-height));
-	}
+  ytd-watch-flexy:not([fullscreen]) #player-theater-container.ytd-watch-flexy {
+    max-height: none;
+    height: calc(100vh - var(--header-height));
+  }
 
-	if hide-header {
-		#page-manager.ytd-app {
-			margin-top: 0;
-		}
+  if hide-header {
+    #page-manager.ytd-app {
+      margin-top: 0;
+    }
 
-		#masthead-container.ytd-app {
-			top: calc(-1 * var(--header-height));
-			transition: 0.2s;
-			transition-delay: 0.15s;
-			border-bottom: var(--header-height) solid transparent;
-		}
+    #masthead-container.ytd-app {
+      top: calc(-1 * var(--header-height));
+      transition: 0.2s;
+      transition-delay: 0.15s;
+      border-bottom: var(--header-height) solid transparent;
+    }
 
-		#masthead-container.ytd-app:focus-within,
-		#masthead-container.ytd-app:hover {
-			top: 0;
-			border-bottom: 0px solid transparent;
-		}
+    #masthead-container.ytd-app:focus-within,
+    #masthead-container.ytd-app:hover {
+      top: 0;
+      border-bottom: 0px solid transparent;
+    }
 
-		ytd-watch-flexy:not([fullscreen]) #player-theater-container.ytd-watch-flexy {
-			height: 100vh !important;
-		}
-	}
+    ytd-watch-flexy:not([fullscreen]) #player-theater-container.ytd-watch-flexy {
+      height: 100vh !important;
+    }
+  }
 
-	if hide-scrollbar {
-		::-webkit-scrollbar {
-			display: none;
-		}
-	}
+  if hide-scrollbar {
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }

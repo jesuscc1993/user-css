@@ -14,41 +14,41 @@
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
-	html[darker-dark-theme][dark],
-	[darker-dark-theme] [dark],
-	html[dark],
-	[dark] {
-		/* PRIMARY */
-		--yt-spec-base-background: primary-bg-color/* #0f0f0f */;
-		--yt-spec-raised-background: primary-bg-color/* #212121 */;
-		--yt-spec-menu-background: primary-bg-color/* #2F2F2F */;
-		--yt-spec-general-background-a: primary-bg-color/* #181818 */;
-		--yt-spec-general-background-b: primary-bg-color/* #0f0f0f */;
-		--yt-spec-general-background-c: primary-bg-color/* #030303 */;
-		/* regular dark */
-		--yt-spec-brand-background-solid: primary-bg-color/* #212121 */;
-		--yt-spec-brand-background-primary: primary-bg-color/* rgba(33, 33, 33, 0.98) */;
-		--yt-spec-brand-background-secondary: primary-bg-color/* rgba(33, 33, 33, 0.95) */;
+  html[darker-dark-theme][dark],
+  [darker-dark-theme] [dark],
+  html[dark],
+  [dark] {
+    /* PRIMARY */
+    --yt-spec-base-background: primary-bg-color/* #0f0f0f */;
+    --yt-spec-raised-background: primary-bg-color/* #212121 */;
+    --yt-spec-menu-background: primary-bg-color/* #2F2F2F */;
+    --yt-spec-general-background-a: primary-bg-color/* #181818 */;
+    --yt-spec-general-background-b: primary-bg-color/* #0f0f0f */;
+    --yt-spec-general-background-c: primary-bg-color/* #030303 */;
+    /* regular dark */
+    --yt-spec-brand-background-solid: primary-bg-color/* #212121 */;
+    --yt-spec-brand-background-primary: primary-bg-color/* rgba(33, 33, 33, 0.98) */;
+    --yt-spec-brand-background-secondary: primary-bg-color/* rgba(33, 33, 33, 0.95) */;
 
-		/* SECONDARY */
-		--yt-spec-badge-chip-background: secondary-bg-color/* rgba(255, 255, 255, 0.1) */;
-		--yt-spec-additive-background: secondary-bg-color/* rgba(255, 255, 255, 0.1) */;
-		/* hover */
-		--yt-spec-button-chip-background-hover: secondary-bg-color-hover/* rgba(255, 255, 255, 0.2); */;
-		--yt-spec-mono-tonal-hover: secondary-bg-color-hover/* rgba(255, 255, 255, 0.2); */;
+    /* SECONDARY */
+    --yt-spec-badge-chip-background: secondary-bg-color/* rgba(255, 255, 255, 0.1) */;
+    --yt-spec-additive-background: secondary-bg-color/* rgba(255, 255, 255, 0.1) */;
+    /* hover */
+    --yt-spec-button-chip-background-hover: secondary-bg-color-hover/* rgba(255, 255, 255, 0.2); */;
+    --yt-spec-mono-tonal-hover: secondary-bg-color-hover/* rgba(255, 255, 255, 0.2); */;
 
-		if (remove-playlist-gradient) {
-			.immersive-header-background-wrapper {
-				background: primary-bg-color !important;
-			}
+    if (remove-playlist-gradient) {
+      .immersive-header-background-wrapper {
+        background: primary-bg-color !important;
+      }
 
-			.immersive-header-gradient {
-				background: transparent !important;
-			}
+      .immersive-header-gradient {
+        background: transparent !important;
+      }
 
-			.immersive-header-container .blurred-image {
-				display: none;
-			}
-		}
-	}
+      .immersive-header-container .blurred-image {
+        display: none;
+      }
+    }
+  }
 }

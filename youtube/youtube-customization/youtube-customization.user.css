@@ -18,131 +18,131 @@
 @var text       max-playlist-width              "Maximum playlist width"              402px
 @var text       shorts-comments-height          "Shorts comments height"              70vh
 @var text       shorts-comments-width           "Shorts comments width"               450px
-@var checkbox   gray-out-watched    						"Gray out watched videos"             0
+@var checkbox   gray-out-watched                "Gray out watched videos"             0
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
-	:root {
-		thumbnail-aspect-ratio=9 / 16;
+  :root {
+    thumbnail-aspect-ratio=9 / 16;
 
-		--grid-thumbnail-height: grid-thumbnail-width * thumbnail-aspect-ratio;
-		--grid-thumbnail-width: grid-thumbnail-width;
+    --grid-thumbnail-height: grid-thumbnail-width * thumbnail-aspect-ratio;
+    --grid-thumbnail-width: grid-thumbnail-width;
 
-		--rich-grid-thumbnail-height: thumbnail-aspect-ratio;
-		--rich-grid-thumbnail-width: rich-grid-thumbnail-width;
+    --rich-grid-thumbnail-height: thumbnail-aspect-ratio;
+    --rich-grid-thumbnail-width: rich-grid-thumbnail-width;
 
-		--list-thumbnail-height: list-thumbnail-width * thumbnail-aspect-ratio;
-		--list-thumbnail-width: list-thumbnail-width;
-	}
+    --list-thumbnail-height: list-thumbnail-width * thumbnail-aspect-ratio;
+    --list-thumbnail-width: list-thumbnail-width;
+  }
 
-	html:not(.style-scope) {
-		--ytd-grid-max-width: grid-max-width;
-		--ytd-grid-6-columns-width: var(--ytd-grid-max-width);
+  html:not(.style-scope) {
+    --ytd-grid-max-width: grid-max-width;
+    --ytd-grid-6-columns-width: var(--ytd-grid-max-width);
 
-		--ytd-rich-grid-item-min-width: none;
-		--ytd-rich-grid-item-max-width: none;
-		--ytd-rich-grid-mini-item-min-width: none;
-		--ytd-rich-grid-mini-item-max-width: none;
-		--ytd-rich-grid-slim-item-max-width: none;
-	}
+    --ytd-rich-grid-item-min-width: none;
+    --ytd-rich-grid-item-max-width: none;
+    --ytd-rich-grid-mini-item-min-width: none;
+    --ytd-rich-grid-mini-item-max-width: none;
+    --ytd-rich-grid-slim-item-max-width: none;
+  }
 
-	ytd-app {
-		--app-drawer-width: drawer-width;
-	}
+  ytd-app {
+    --app-drawer-width: drawer-width;
+  }
 
-	ytd-watch-flexy {
-		--ytd-watch-flexy-panel-max-height: max-playlist-height !important;
-		--ytd-watch-flexy-sidebar-width: max-playlist-width;
-	}
+  ytd-watch-flexy {
+    --ytd-watch-flexy-panel-max-height: max-playlist-height !important;
+    --ytd-watch-flexy-sidebar-width: max-playlist-width;
+  }
 
-	/* grid zoom */
-	ytd-shelf-renderer ytd-thumbnail.ytd-grid-video-renderer {
-		height: var(--grid-thumbnail-height);
-	}
+  /* grid zoom */
+  ytd-shelf-renderer ytd-thumbnail.ytd-grid-video-renderer {
+    height: var(--grid-thumbnail-height);
+  }
 
-	ytd-shelf-renderer ytd-grid-video-renderer,
-	ytd-shelf-renderer ytd-thumbnail,
-	ytd-shelf-renderer ytd-reel-item-renderer {
-		width: var(--grid-thumbnail-width) !important;
-	}
+  ytd-shelf-renderer ytd-grid-video-renderer,
+  ytd-shelf-renderer ytd-thumbnail,
+  ytd-shelf-renderer ytd-reel-item-renderer {
+    width: var(--grid-thumbnail-width) !important;
+  }
 
-	/* rich grid zoom */
-	ytd-rich-grid-renderer ytd-thumbnail.ytd-rich-grid-media {
-		height: var(--rich-grid-thumbnail-height);
-	}
+  /* rich grid zoom */
+  ytd-rich-grid-renderer ytd-thumbnail.ytd-rich-grid-media {
+    height: var(--rich-grid-thumbnail-height);
+  }
 
-	ytd-rich-grid-renderer ytd-rich-item-renderer:not([is-slim-media]) {
-		width: var(--rich-grid-thumbnail-width) !important;
-		max-width: 25%;
-	}
+  ytd-rich-grid-renderer ytd-rich-item-renderer:not([is-slim-media]) {
+    width: var(--rich-grid-thumbnail-width) !important;
+    max-width: 25%;
+  }
 
-	/* shorts grid zoom */
-	ytd-reel-shelf-renderer ytd-thumbnail.ytd-grid-video-renderer {
-		height: var(--grid-thumbnail-height);
-	}
+  /* shorts grid zoom */
+  ytd-reel-shelf-renderer ytd-thumbnail.ytd-grid-video-renderer {
+    height: var(--grid-thumbnail-height);
+  }
 
-	ytd-reel-shelf-renderer ytd-grid-video-renderer,
-	ytd-reel-shelf-renderer ytd-thumbnail,
-	ytd-reel-shelf-renderer ytd-reel-item-renderer {
-		width: var(--grid-thumbnail-width) !important;
-	}
+  ytd-reel-shelf-renderer ytd-grid-video-renderer,
+  ytd-reel-shelf-renderer ytd-thumbnail,
+  ytd-reel-shelf-renderer ytd-reel-item-renderer {
+    width: var(--grid-thumbnail-width) !important;
+  }
 
-	/* list zoom */
-	#thumbnail-container.ytd-playlist-panel-video-renderer,
-	#thumbnail-container.ytd-playlist-panel-video-renderer > ytd-thumbnail.ytd-playlist-panel-video-renderer,
-	#thumbnail-container.ytd-playlist-panel-video-renderer img.yt-img-shadow,
-	ytd-thumbnail.ytd-playlist-video-renderer,
-	{
-		max-height: none;
-		max-width: none;
-		height: var(--list-thumbnail-height);
-		width: var(--list-thumbnail-width);
-	}
+  /* list zoom */
+  #thumbnail-container.ytd-playlist-panel-video-renderer,
+  #thumbnail-container.ytd-playlist-panel-video-renderer > ytd-thumbnail.ytd-playlist-panel-video-renderer,
+  #thumbnail-container.ytd-playlist-panel-video-renderer img.yt-img-shadow,
+  ytd-thumbnail.ytd-playlist-video-renderer,
+  {
+    max-height: none;
+    max-width: none;
+    height: var(--list-thumbnail-height);
+    width: var(--list-thumbnail-width);
+  }
 
-	ytd-subscribe-button-renderer[button-style="COMPACT_GRAY"] tp-yt-paper-button.ytd-subscribe-button-renderer:not([subscribed]) {
-		background-color: var(--yt-spec-brand-button-background);
-		color: var(--yt-spec-static-brand-white);
-	}
+  ytd-subscribe-button-renderer[button-style="COMPACT_GRAY"] tp-yt-paper-button.ytd-subscribe-button-renderer:not([subscribed]) {
+    background-color: var(--yt-spec-brand-button-background);
+    color: var(--yt-spec-static-brand-white);
+  }
 
-	ytd-guide-renderer.ytd-app {
-		width: var(--app-drawer-width);
-	}
+  ytd-guide-renderer.ytd-app {
+    width: var(--app-drawer-width);
+  }
 
-	tp-yt-paper-item.ytd-guide-entry-renderer {
-		padding: 0 16px;
-	}
+  tp-yt-paper-item.ytd-guide-entry-renderer {
+    padding: 0 16px;
+  }
 
-	ytd-app[guide-persistent-and-visible] ytd-page-manager.ytd-app {
-		margin-left: var(--app-drawer-width);
-	}
+  ytd-app[guide-persistent-and-visible] ytd-page-manager.ytd-app {
+    margin-left: var(--app-drawer-width);
+  }
 
-	.ytp-caption-segment {
-		background: sub-bg !important;
-	}
+  .ytp-caption-segment {
+    background: sub-bg !important;
+  }
 
-	.ytp-caption-segment:first-child {
-		border-top-left-radius: sub-border-radius;
-		border-bottom-left-radius: sub-border-radius;
-	}
+  .ytp-caption-segment:first-child {
+    border-top-left-radius: sub-border-radius;
+    border-bottom-left-radius: sub-border-radius;
+  }
 
-	.ytp-caption-segment:last-child {
-		border-top-right-radius: sub-border-radius;
-		border-bottom-right-radius: sub-border-radius;
-	}
+  .ytp-caption-segment:last-child {
+    border-top-right-radius: sub-border-radius;
+    border-bottom-right-radius: sub-border-radius;
+  }
 
-	ytd-engagement-panel-section-list-renderer[dialog][target-id=engagement-panel-comments-section] {
-		height: shorts-comments-height;
-		min-height: none;
-		max-height: 100vh;
-		width: shorts-comments-width;
-		min-width: none;
-		max-width: 100vw;
-	}
+  ytd-engagement-panel-section-list-renderer[dialog][target-id=engagement-panel-comments-section] {
+    height: shorts-comments-height;
+    min-height: none;
+    max-height: 100vh;
+    width: shorts-comments-width;
+    min-width: none;
+    max-width: 100vw;
+  }
 
-	if (gray-out-watched) {
-		ytd-grid-video-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer),
-		ytd-rich-item-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer) {
-			filter: grayscale(.9) brightness(.25);
-		}
-	}
+  if (gray-out-watched) {
+    ytd-grid-video-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer),
+    ytd-rich-item-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer) {
+      filter: grayscale(.9) brightness(.25);
+    }
+  }
 }

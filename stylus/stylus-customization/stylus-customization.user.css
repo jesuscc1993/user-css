@@ -12,47 +12,47 @@
 
 ==/UserStyle== */
 @-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne") {
-	#sections .section:first-child .CodeMirror {
-		min-height: calc(100% - 116px) !important;
-	}
+  #sections .section:first-child .CodeMirror {
+    min-height: calc(100% - 116px) !important;
+  }
 
-	#sections .section:not(:first-child) .CodeMirror {
-		min-height: 212px !important;
-	}
+  #sections .section:not(:first-child) .CodeMirror {
+    min-height: 212px !important;
+  }
 
-	#message-box .colorview-swatch,
-	#message-box .colorview-swatch::after,
-	#message-box .colorview-swatch::before,
-	.color-swatch,
-	.config-body .select-resizer,
-	.config-body input[type="text"],
-	.config-body select {
-		box-sizing: border-box;
-		height: input-height;
-		max-width: none;
-		width: input-width;
-	}
+  #message-box .colorview-swatch,
+  #message-box .colorview-swatch::after,
+  #message-box .colorview-swatch::before,
+  .color-swatch,
+  .config-body .select-resizer,
+  .config-body input[type="text"],
+  .config-body select {
+    box-sizing: border-box;
+    height: input-height;
+    max-width: none;
+    width: input-width;
+  }
 
-	#message-box .colorview-swatch,
-	#message-box .colorview-swatch::after,
-	#message-box .colorview-swatch::before,
-	.color-swatch {
-		margin-right: 1px;
-	}
+  #message-box .colorview-swatch,
+  #message-box .colorview-swatch::after,
+  #message-box .colorview-swatch::before,
+  .color-swatch {
+    margin-right: 1px;
+  }
 
-	.config-body .onoffswitch {
-		margin-right: 3px;
-	}
+  .config-body .onoffswitch {
+    margin-right: 3px;
+  }
 
-	#stylus-popup {
-		max-height: none;
-	}
+  #stylus-popup {
+    max-height: none;
+  }
 
-	#stylus-popup #installed {
-		max-height: 500px;
-	}
+  #stylus-popup #installed {
+    max-height: 500px;
+  }
 
-	/*.config-reset-icon {
+  /*.config-reset-icon {
     padding: 0 2px;
   }*/
 }

@@ -16,15 +16,15 @@
 
 ==/UserStyle== */
 @-moz-document regexp(".*") {
-	if (apply-to-images) {
-		img {
-			transform: rotate(rotation) scale(scale) translate(translation-x + 0px, translation-y + 0px);
-		}
-	}
+  if (apply-to-images) {
+    img {
+      transform: rotate(rotation) scale(scale) translate(translation-x + 0px, translation-y + 0px);
+    }
+  }
 
-	if (apply-to-videos) {
-		video {
-			transform: rotate(rotation) scale(scale) translate(translation-x + 0px, translation-y + 0px);
-		}
-	}
+  if (apply-to-videos) {
+    video {
+      transform: rotate(rotation) scale(scale) translate(translation-x + 0px, translation-y + 0px);
+    }
+  }
 }

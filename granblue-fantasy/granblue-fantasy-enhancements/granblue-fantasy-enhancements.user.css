@@ -686,20 +686,20 @@
   
   compact-lists-1 "Enabled" <<<EOT
     @-moz-document
-			regexp("https://game.granbluefantasy.jp/#archaic/.*"),
-			regexp("https://game.granbluefantasy.jp/#arousal/.*"),
-			regexp("https://game.granbluefantasy.jp/#bonus_stock/.*"),
-			regexp("https://game.granbluefantasy.jp/#container/.*"),
-			regexp("https://game.granbluefantasy.jp/#decompose.*"),
-			regexp("https://game.granbluefantasy.jp/#enhancement/.*"),
-			regexp("https://game.granbluefantasy.jp/#event/sequenceraid.*\/party/.*"),
-			regexp("https://game.granbluefantasy.jp/#evolution/.*"),
-			regexp("https://game.granbluefantasy.jp/#list.*"),
-			regexp("https://game.granbluefantasy.jp/#party/list.*"),
-			regexp("https://game.granbluefantasy.jp/#profile/fix/list/.*"),
-			regexp("https://game.granbluefantasy.jp/#profile/pushed_npc/list"),
-			regexp("https://game.granbluefantasy.jp/#recycle/.*"),
-			regexp("https://game.granbluefantasy.jp/#sell/.*")
+      regexp("https://game.granbluefantasy.jp/#archaic/.*"),
+      regexp("https://game.granbluefantasy.jp/#arousal/.*"),
+      regexp("https://game.granbluefantasy.jp/#bonus_stock/.*"),
+      regexp("https://game.granbluefantasy.jp/#container/.*"),
+      regexp("https://game.granbluefantasy.jp/#decompose.*"),
+      regexp("https://game.granbluefantasy.jp/#enhancement/.*"),
+      regexp("https://game.granbluefantasy.jp/#event/sequenceraid.*\/party/.*"),
+      regexp("https://game.granbluefantasy.jp/#evolution/.*"),
+      regexp("https://game.granbluefantasy.jp/#list.*"),
+      regexp("https://game.granbluefantasy.jp/#party/list.*"),
+      regexp("https://game.granbluefantasy.jp/#profile/fix/list/.*"),
+      regexp("https://game.granbluefantasy.jp/#profile/pushed_npc/list"),
+      regexp("https://game.granbluefantasy.jp/#recycle/.*"),
+      regexp("https://game.granbluefantasy.jp/#sell/.*")
     {
 
       #lis-inner-summon,
@@ -786,51 +786,51 @@
   hide-auto-select-0 "Disabled" <<<EOT EOT;
   
   hide-auto-select-1 "Enabled" <<<EOT
-		@-moz-document domain("granbluefantasy.jp") {
-			.cnt-summon-list .btn-summon-all,
-			.cnt-summon-list .prt-summon-all-disabled,
-			.cnt-weapon-list .btn-mainweapon-fix,
-			.cnt-weapon-list .btn-weapon-all,
-			.cnt-weapon-list .prt-weapon-all-disabled,
-			.prt-bar .btn-index-all-setting,
-			.prt-bar .prt-index-all-disabled {
-				display: none !important;
-			}
-		}
+    @-moz-document domain("granbluefantasy.jp") {
+      .cnt-summon-list .btn-summon-all,
+      .cnt-summon-list .prt-summon-all-disabled,
+      .cnt-weapon-list .btn-mainweapon-fix,
+      .cnt-weapon-list .btn-weapon-all,
+      .cnt-weapon-list .prt-weapon-all-disabled,
+      .prt-bar .btn-index-all-setting,
+      .prt-bar .prt-index-all-disabled {
+        display: none !important;
+      }
+    }
 
-		@-moz-document regexp("https://game.granbluefantasy.jp/#party/.*") {
-			.cnt-party .prt-contents {
-				height: 400px;
-			}
-			.cnt-party .prt-bar {
-				background-position-y: -944px;
-				height: 54px;
-			}
-			.cnt-party .prt-bar .btn-swap-order {
-				bottom: -8px;
-			}
-			.cnt-weapon-list.large .btn-swap-slots,
-			.cnt-weapon-list.large .btn-weapon-display-change {
-				top: 363px;
-			}
+    @-moz-document regexp("https://game.granbluefantasy.jp/#party/.*") {
+      .cnt-party .prt-contents {
+        height: 400px;
+      }
+      .cnt-party .prt-bar {
+        background-position-y: -944px;
+        height: 54px;
+      }
+      .cnt-party .prt-bar .btn-swap-order {
+        bottom: -8px;
+      }
+      .cnt-weapon-list.large .btn-swap-slots,
+      .cnt-weapon-list.large .btn-weapon-display-change {
+        top: 363px;
+      }
 
-			.cnt-weapon-list.large {
-				background: url(https://i.imgur.com/lHR9CbL.png) no-repeat 0 0;
-			}
-			.prt-contents.summon.large .cnt-summon-list {
-				background: url(https://i.imgur.com/lHR9CbL.png) no-repeat 0 -424px;
-			}
-			.cnt-weapon-list {
-				background: url(https://i.imgur.com/lHR9CbL.png) no-repeat 0 -860px;
-			}
-			.prt-contents.summon .cnt-summon-list {
-				background: url(https://i.imgur.com/lHR9CbL.png) no-repeat 0 -1224px;
-			}
-			.cnt-weapon-list,
-			.prt-contents.summon .cnt-summon-list {
-				background-size: 326px 1554px !important;
-			}
-		}
+      .cnt-weapon-list.large {
+        background: url(https://i.imgur.com/lHR9CbL.png) no-repeat 0 0;
+      }
+      .prt-contents.summon.large .cnt-summon-list {
+        background: url(https://i.imgur.com/lHR9CbL.png) no-repeat 0 -424px;
+      }
+      .cnt-weapon-list {
+        background: url(https://i.imgur.com/lHR9CbL.png) no-repeat 0 -860px;
+      }
+      .prt-contents.summon .cnt-summon-list {
+        background: url(https://i.imgur.com/lHR9CbL.png) no-repeat 0 -1224px;
+      }
+      .cnt-weapon-list,
+      .prt-contents.summon .cnt-summon-list {
+        background-size: 326px 1554px !important;
+      }
+    }
   EOT;
 
 }

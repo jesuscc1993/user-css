@@ -9,89 +9,89 @@
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
-	html[dark],
-	dark {
-		--yt-spec-static-overlay-background-heavy: rgba(0, 0, 0, 0.85);
-	}
+  html[dark],
+  dark {
+    --yt-spec-static-overlay-background-heavy: rgba(0, 0, 0, 0.85);
+  }
 
-	ytd-grid-video-renderer {
-		height: 296px;
-	}
+  ytd-grid-video-renderer {
+    height: 296px;
+  }
 
-	ytd-thumbnail-overlay-resume-playback-renderer {
-		height: 32px;
-		z-index: 0;
-	}
+  ytd-thumbnail-overlay-resume-playback-renderer {
+    height: 32px;
+    z-index: 0;
+  }
 
-	#hover-overlays {
-		zoom: 2.075;
-	}
+  #hover-overlays {
+    zoom: 2.075;
+  }
 
-	/* hide text on video buttons */
-	#top-level-buttons-computed > *:not(:first-child) .yt-core-attributed-string,
-	#flexible-item-buttons .yt-core-attributed-string {
-		display: none;
-	}
+  /* hide text on video buttons */
+  #top-level-buttons-computed > *:not(:first-child) .yt-core-attributed-string,
+  #flexible-item-buttons .yt-core-attributed-string {
+    display: none;
+  }
 
-	#top-level-buttons-computed > *:not(:first-child) .yt-spec-button-shape-next__icon,
-	#flexible-item-buttons .yt-spec-button-shape-next__icon {
-		margin: 0 -6px !important;
-	}
+  #top-level-buttons-computed > *:not(:first-child) .yt-spec-button-shape-next__icon,
+  #flexible-item-buttons .yt-spec-button-shape-next__icon {
+    margin: 0 -6px !important;
+  }
 
-	/* remove headers from sections past the first one */
-	[page-subtype="subscriptions"][role="main"] ytd-item-section-renderer {
-		border: none !important;
+  /* remove headers from sections past the first one */
+  [page-subtype="subscriptions"][role="main"] ytd-item-section-renderer {
+    border: none !important;
 
-		&:not(:nth-child(1)) {
-			#contents.ytd-shelf-renderer {
-				margin-top: 0;
-			}
+    &:not(:nth-child(1)) {
+      #contents.ytd-shelf-renderer {
+        margin-top: 0;
+      }
 
-			.grid-subheader {
-				display: none;
-			}
-		}
-	}
+      .grid-subheader {
+        display: none;
+      }
+    }
+  }
 
-	/* extensions */
-	.ryd-tooltip,
-	.ytp-right-controls #infoButton,
-	.ytp-right-controls #startSegmentButton {
-		display: none !important;
-	}
+  /* extensions */
+  .ryd-tooltip,
+  .ytp-right-controls #infoButton,
+  .ytp-right-controls #startSegmentButton {
+    display: none !important;
+  }
 
-	[aria-label="Dislike this video"] #text {
-		margin-left: 6px;
-	}
+  [aria-label="Dislike this video"] #text {
+    margin-left: 6px;
+  }
 
-	/* prevent accidental pagination */
-	[page-subtype="channels"][role="main"] ytd-continuation-item-renderer,
-	[page-subtype="playlist"][role="main"] ytd-continuation-item-renderer,
-	[page-subtype="subscriptions"][role="main"] ytd-continuation-item-renderer,
-	ytd-search[role="main"] ytd-continuation-item-renderer {
-		margin-top: 80vh;
-	}
+  /* prevent accidental pagination */
+  [page-subtype="channels"][role="main"] ytd-continuation-item-renderer,
+  [page-subtype="playlist"][role="main"] ytd-continuation-item-renderer,
+  [page-subtype="subscriptions"][role="main"] ytd-continuation-item-renderer,
+  ytd-search[role="main"] ytd-continuation-item-renderer {
+    margin-top: 80vh;
+  }
 
-	/* misc */
-	/*html > ::-webkit-scrollbar,*/
-	#country-code,
-	#top-level-buttons-computed > :nth-child(4),
-	#voice-search-button,
-	#buttons.ytd-masthead > ytd-topbar-menu-button-renderer.ytd-masthead.style-default {
-		display: none !important;
-	}
+  /* misc */
+  /*html > ::-webkit-scrollbar,*/
+  #country-code,
+  #top-level-buttons-computed > :nth-child(4),
+  #voice-search-button,
+  #buttons.ytd-masthead > ytd-topbar-menu-button-renderer.ytd-masthead.style-default {
+    display: none !important;
+  }
 
-	/* hide sidebar items */
-	/* shorts */
-	#sections ytd-guide-section-renderer:nth-child(1) > * > ytd-guide-entry-renderer:nth-child(2),
-	/* your videos */
-	#sections ytd-guide-collapsible-section-entry-renderer:nth-child(4) > * > ytd-guide-entry-renderer:nth-child(2),
-	foo {
-		display: none;
-	}
+  /* hide sidebar items */
+  /* shorts */
+  #sections ytd-guide-section-renderer:nth-child(1) > * > ytd-guide-entry-renderer:nth-child(2),
+  /* your videos */
+  #sections ytd-guide-collapsible-section-entry-renderer:nth-child(4) > * > ytd-guide-entry-renderer:nth-child(2),
+  foo {
+    display: none;
+  }
 
-	/* side menu items */
-	ytd-guide-entry-renderer[guide-refresh] {
-		width: 100%;
-	}
+  /* side menu items */
+  ytd-guide-entry-renderer[guide-refresh] {
+    width: 100%;
+  }
 }

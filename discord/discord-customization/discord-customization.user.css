@@ -24,335 +24,335 @@
 
 ==/UserStyle== */
 @-moz-document domain("discord.com") {
-	:root {
-		--font-family: @font-family;
-		--inline-emoji-size: @inline-emoji-size;
-		--block-emoji-size: @block-emoji-size;
-		--reaction-emoji-size: @reaction-emoji-size;
-		--min-sidebar-width: @min-sidebar-width;
-		--max-sidebar-width: @max-sidebar-width;
-		--channel-padding: @channel-padding;
-		--avatar-scale: @avatar-scale;
-	}
+  :root {
+    --font-family: @font-family;
+    --inline-emoji-size: @inline-emoji-size;
+    --block-emoji-size: @block-emoji-size;
+    --reaction-emoji-size: @reaction-emoji-size;
+    --min-sidebar-width: @min-sidebar-width;
+    --max-sidebar-width: @max-sidebar-width;
+    --channel-padding: @channel-padding;
+    --avatar-scale: @avatar-scale;
+  }
 
-	html.theme-dark {
-		--font-display: var(--font-family);
-	}
+  html.theme-dark {
+    --font-display: var(--font-family);
+  }
 
-	body {
-		font-family: var(--font-family);
-	}
+  body {
+    font-family: var(--font-family);
+  }
 
-	/* responsive columns */
-	[class*="content-"] [class*="sidebar-"],
-	[class*="content-"] [class*="members-"],
-	[class*="membersWrap-"] {
-		max-width: var(--max-sidebar-width) !important;
-		min-width: var(--min-sidebar-width) !important;
-		width: 100% !important;
-	}
+  /* responsive columns */
+  [class*="content-"] [class*="sidebar-"],
+  [class*="content-"] [class*="members-"],
+  [class*="membersWrap-"] {
+    max-width: var(--max-sidebar-width) !important;
+    min-width: var(--min-sidebar-width) !important;
+    width: 100% !important;
+  }
 
-	[class*="content-"] [class*="sidebar-"] [class*="channel"],
-	[class*="content-"] [class*="membersWrap-"] [class*="member-"] {
-		max-width: 100% !important;
-	}
+  [class*="content-"] [class*="sidebar-"] [class*="channel"],
+  [class*="content-"] [class*="membersWrap-"] [class*="member-"] {
+    max-width: 100% !important;
+  }
 
-	[class*="content-"] [class*="sidebar-"] [class^="bannerImage"],
-	[class*="content-"] [class*="sidebar-"] [class^="bannerImage"]:after {
-		width: 100%;
-	}
+  [class*="content-"] [class*="sidebar-"] [class^="bannerImage"],
+  [class*="content-"] [class*="sidebar-"] [class^="bannerImage"]:after {
+    width: 100%;
+  }
 
-	/* causes issue with vc */
-	/*[class*="content-"] [class*="sidebar-"] [class*="panels-"] [class*="container-"] {
-		display: flex;
-	}*/
+  /* causes issue with vc */
+  /*[class*="content-"] [class*="sidebar-"] [class*="panels-"] [class*="container-"] {
+    display: flex;
+  }*/
 
-	[class*="content-"] [class*="sidebar-"] [class*="panels-"] [class*="container-"] [class*="avatarWrapper-"] {
-		flex: 1;
-	}
+  [class*="content-"] [class*="sidebar-"] [class*="panels-"] [class*="container-"] [class*="avatarWrapper-"] {
+    flex: 1;
+  }
 
-	/* channel height */
-	[class*="sidebar"] [class*="iconVisibility"]:not([class*="wrapperCommon"]) a {
-		padding: var(--channel-padding) 0;
-	}
+  /* channel height */
+  [class*="sidebar"] [class*="iconVisibility"]:not([class*="wrapperCommon"]) a {
+    padding: var(--channel-padding) 0;
+  }
 
-	/* HIDE UNLESS HOVERED */
-	/* common setup */
-	[class*="content-"] [class*="guilds"] {
-		z-index: 102;
-	}
+  /* HIDE UNLESS HOVERED */
+  /* common setup */
+  [class*="content-"] [class*="guilds"] {
+    z-index: 102;
+  }
 
-	[class*="content-"] [class*="sidebar"] {
-		height: 100vh;
-	}
+  [class*="content-"] [class*="sidebar"] {
+    height: 100vh;
+  }
 
-	[class*="content-"] [class*="membersWrap"] {
-		right: 0;
-		height: calc(100vh - 50px);
-	}
+  [class*="content-"] [class*="membersWrap"] {
+    right: 0;
+    height: calc(100vh - 50px);
+  }
 
-	[class*="content-"] [class*="sidebar-"],
-	[class*="content-"] [class*="membersWrap"] {
-		transition: 0.2s;
-		transition-delay: 0.2s;
-		z-index: 101;
-	}
+  [class*="content-"] [class*="sidebar-"],
+  [class*="content-"] [class*="membersWrap"] {
+    transition: 0.2s;
+    transition-delay: 0.2s;
+    z-index: 101;
+  }
 
-	/* hide server members unless hovered */
-	@media (max-width: 1152px) {
-		[class*="membersWrap"] {
-			position: absolute;
-		}
+  /* hide server members unless hovered */
+  @media (max-width: 1152px) {
+    [class*="membersWrap"] {
+      position: absolute;
+    }
 
-		[class*="membersWrap"]:not(:hover) {
-			margin-right: calc(var(--min-sidebar-width) * -1 + 8px);
-		}
-	}
+    [class*="membersWrap"]:not(:hover) {
+      margin-right: calc(var(--min-sidebar-width) * -1 + 8px);
+    }
+  }
 
-	/* hide channels unless hovered */
-	@media (max-width: 800px) {
-		[class*="sidebar-"] + [class*="chat"] {
-			padding-left: 8px;
-		}
+  /* hide channels unless hovered */
+  @media (max-width: 800px) {
+    [class*="sidebar-"] + [class*="chat"] {
+      padding-left: 8px;
+    }
 
-		[class*="chatContent"] [class*="messagesWrapper"] {
-			padding-right: 8px;
-		}
+    [class*="chatContent"] [class*="messagesWrapper"] {
+      padding-right: 8px;
+    }
 
-		[class*="sidebar-"] {
-			position: absolute;
-		}
+    [class*="sidebar-"] {
+      position: absolute;
+    }
 
-		[class*="sidebar-"]:not(:hover) {
-			margin-left: calc(var(--min-sidebar-width) * -1 + 8px);
-		}
-	}
+    [class*="sidebar-"]:not(:hover) {
+      margin-left: calc(var(--min-sidebar-width) * -1 + 8px);
+    }
+  }
 
-	/* HIDE AVATARS */
-	@media (max-width: 480px) {
-		[class*="messagesWrapper"] img[class*="avatar"],
-		[class*="messagesWrapper"] [class*="timestamp"] {
-			display: none;
-		}
+  /* HIDE AVATARS */
+  @media (max-width: 480px) {
+    [class*="messagesWrapper"] img[class*="avatar"],
+    [class*="messagesWrapper"] [class*="timestamp"] {
+      display: none;
+    }
 
-		[class*="messagesWrapper"] [class*="message"] {
-			padding: 0.125rem 0.25rem;
-		}
+    [class*="messagesWrapper"] [class*="message"] {
+      padding: 0.125rem 0.25rem;
+    }
 
-		[class*="messagesWrapper"] [class*="messageContent"] {
-			margin-left: 0;
-			padding-left: 0;
-		}
-	}
+    [class*="messagesWrapper"] [class*="messageContent"] {
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
 
-	/* RESIZE */
-	/* avatars */
-	[class*="messagesWrapper"] img[class*="avatar"] {
-		transform: scale(var(--avatar-scale)) !important;
-		margin-top: 2.5px;
-	}
+  /* RESIZE */
+  /* avatars */
+  [class*="messagesWrapper"] img[class*="avatar"] {
+    transform: scale(var(--avatar-scale)) !important;
+    margin-top: 2.5px;
+  }
 
-	/* emojis */
-	[class*="messagesWrapper"] img.emoji:not(.jumboable) {
-		width: var(--inline-emoji-size) !important;
-		height: var(--inline-emoji-size) !important;
-	}
+  /* emojis */
+  [class*="messagesWrapper"] img.emoji:not(.jumboable) {
+    width: var(--inline-emoji-size) !important;
+    height: var(--inline-emoji-size) !important;
+  }
 
-	[class*="messagesWrapper"] img.emoji.jumboable {
-		width: var(--block-emoji-size) !important;
-		height: var(--block-emoji-size) !important;
-	}
+  [class*="messagesWrapper"] img.emoji.jumboable {
+    width: var(--block-emoji-size) !important;
+    height: var(--block-emoji-size) !important;
+  }
 
-	/*[class^='reaction'] img.emoji:not(.jumboable) {
+  /*[class^='reaction'] img.emoji:not(.jumboable) {
      width: var(--reaction-emoji-size) !important;
      height: var(--reaction-emoji-size) !important;
      margin: 3px 0;
   }*/
-	[class*="messagesWrapper"] [class*="scrollable"] {
-		max-height: none;
-	}
+  [class*="messagesWrapper"] [class*="scrollable"] {
+    max-height: none;
+  }
 
-	/* MISCELLANEOUS */
-	[class*="messagesWrapper"] textArea {
-		max-height: none !important;
-		resize: vertical;
-	}
+  /* MISCELLANEOUS */
+  [class*="messagesWrapper"] textArea {
+    max-height: none !important;
+    resize: vertical;
+  }
 
-	[class*="isMentioned"] {
-		margin-top: 1px;
-	}
+  [class*="isMentioned"] {
+    margin-top: 1px;
+  }
 
-	/* float bot tag */
-	[class*="nameAndDecorators"] > *:first-child {
-		flex: 1;
-	}
+  /* float bot tag */
+  [class*="nameAndDecorators"] > *:first-child {
+    flex: 1;
+  }
 
-	[class*="nameAndDecorators"] > *:not(:first-child) {
-		align-self: normal;
-	}
+  [class*="nameAndDecorators"] > *:not(:first-child) {
+    align-self: normal;
+  }
 
-	/* hide download icon */
-	[class*="guilds"] [class*="scroller"] > [class*="listItem"]:last-child,
-	[class*="guilds"] [class*="scroller"] > [class*="listItem"]:nth-last-child(2) {
-		display: none;
-	}
+  /* hide download icon */
+  [class*="guilds"] [class*="scroller"] > [class*="listItem"]:last-child,
+  [class*="guilds"] [class*="scroller"] > [class*="listItem"]:nth-last-child(2) {
+    display: none;
+  }
 
-	/* hide misc stuff */
-	[class*="emptyChannelIcon"],
-	[class^="userPopout"] [class^="footer"] {
-		display: none;
-	}
+  /* hide misc stuff */
+  [class*="emptyChannelIcon"],
+  [class^="userPopout"] [class^="footer"] {
+    display: none;
+  }
 
-	/* hide ads */
-	[aria-label="Send a gift"],
-	[class*="buttons"][class*="you"] > *:first-child,
-	[href="/store"] {
-		display: none;
-	}
+  /* hide ads */
+  [aria-label="Send a gift"],
+  [class*="buttons"][class*="you"] > *:first-child,
+  [href="/store"] {
+    display: none;
+  }
 
-	/* make "invisible" usernames readeable */
-	[class*="name"][style="color: rgb(255, 255, 255);"] {
-		color: #747f8d !important;
-	}
+  /* make "invisible" usernames readeable */
+  [class*="name"][style="color: rgb(255, 255, 255);"] {
+    color: #747f8d !important;
+  }
 
-	[class*="name"][style="color: rgb(54, 57, 62);"],
-	[class*="name"][style="color: rgb(54, 57, 63);"] {
-		color: #98a8b3 !important;
-	}
+  [class*="name"][style="color: rgb(54, 57, 62);"],
+  [class*="name"][style="color: rgb(54, 57, 63);"] {
+    color: #98a8b3 !important;
+  }
 
-	/* hide folder when set to match background */
-	[class*="folderIconWrapper"] svg[style="color: rgb(47, 49, 54);"] {
-		display: none;
-	}
+  /* hide folder when set to match background */
+  [class*="folderIconWrapper"] svg[style="color: rgb(47, 49, 54);"] {
+    display: none;
+  }
 
-	/* mentions restoration */
-	[class*="mentioned"] .mention[class*="wrapper"] {
-		color: var(--brand-experiment) !important;
-		background: transparent;
-	}
+  /* mentions restoration */
+  [class*="mentioned"] .mention[class*="wrapper"] {
+    color: var(--brand-experiment) !important;
+    background: transparent;
+  }
 
-	/* darker code and quotes */
-	html when (@darker-quotes =1) {
-		[class*="markup"] code,
-		blockquote {
-			background: #0003;
-		}
+  /* darker code and quotes */
+  html when (@darker-quotes =1) {
+    [class*="markup"] code,
+    blockquote {
+      background: #0003;
+    }
 
-		[class*="textArea"] [class*="markup"] code,
-		[class*="textArea"] blockquote {
-			background: var(--background-secondary);
-		}
-	}
+    [class*="textArea"] [class*="markup"] code,
+    [class*="textArea"] blockquote {
+      background: var(--background-secondary);
+    }
+  }
 
-	/* emoji zoom */
-	html when (@emoji-zoom =1) {
-		[class*="messagesWrapper"] [class*="messageContent-"] {
-			overflow: visible;
-		}
+  /* emoji zoom */
+  html when (@emoji-zoom =1) {
+    [class*="messagesWrapper"] [class*="messageContent-"] {
+      overflow: visible;
+    }
 
-		[class*="messagesWrapper-"] img.emoji {
-			transition: 0.15s;
-			z-index: 1;
-			position: relative;
-		}
+    [class*="messagesWrapper-"] img.emoji {
+      transition: 0.15s;
+      z-index: 1;
+      position: relative;
+    }
 
-		[class*="messagesWrapper-"] img.emoji:hover {
-			z-index: 2;
-		}
+    [class*="messagesWrapper-"] img.emoji:hover {
+      z-index: 2;
+    }
 
-		[class*="messagesWrapper-"] img.emoji:not(.jumboable):hover {
-			transform: scale(1.8333);
-		}
+    [class*="messagesWrapper-"] img.emoji:not(.jumboable):hover {
+      transform: scale(1.8333);
+    }
 
-		[class*="messagesWrapper-"] img.emoji.jumboable:hover {
-			transform: scale(2);
-		}
-		
-		[class*="messagesWrapper-"] [class*="reaction"] img.emoji {
-			transform: scale(1) !important;
-		}
+    [class*="messagesWrapper-"] img.emoji.jumboable:hover {
+      transform: scale(2);
+    }
+    
+    [class*="messagesWrapper-"] [class*="reaction"] img.emoji {
+      transform: scale(1) !important;
+    }
 
-		[role="textbox"] img.emoji:hover {
-			transform: none !important;
-		}
-	}
+    [role="textbox"] img.emoji:hover {
+      transform: none !important;
+    }
+  }
 
-	/* full width embeds */
-	[class*="gridContainer"] when (@full-width-embeds =1) {
-		max-width: 100% !important;
-	}
+  /* full width embeds */
+  [class*="gridContainer"] when (@full-width-embeds =1) {
+    max-width: 100% !important;
+  }
 
-	/* reduced message spacing */
-	html when (@reduce-message-spacing =1) {
-		[class*="wrapper"][class*="compact"]:not([class*="mentioned-"]),
-		[class*="wrapper"][class*="cozy"]:not([class*="mentioned-"]) {
-			padding-top: 0;
-			padding-bottom: 0;
-		}
-	}
+  /* reduced message spacing */
+  html when (@reduce-message-spacing =1) {
+    [class*="wrapper"][class*="compact"]:not([class*="mentioned-"]),
+    [class*="wrapper"][class*="cozy"]:not([class*="mentioned-"]) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
 
-	/* blurple mentions */
-	html when (@blurple-mentions =1) {
-		[class*="mentioned-"]:before {
-			background-color: #7289da;
-		}
+  /* blurple mentions */
+  html when (@blurple-mentions =1) {
+    [class*="mentioned-"]:before {
+      background-color: #7289da;
+    }
 
-		[class*="mentioned-"] {
-			background-color: #7289da22;
-		}
+    [class*="mentioned-"] {
+      background-color: #7289da22;
+    }
 
-		[class*="mentioned-"][class*="selected"],
-		&.mouse-mode.full-motion [class*="mentioned-"]:hover {
-			background-color: #7289da11 !important;
-		}
-	}
+    [class*="mentioned-"][class*="selected"],
+    &.mouse-mode.full-motion [class*="mentioned-"]:hover {
+      background-color: #7289da11 !important;
+    }
+  }
 
-	/* blurple restoration */
-	html.theme-dark when (@restore-blurple =1) {
-		--brand-experiment-100: #f8f9fd;
-		--brand-experiment-130: #f2f4fc;
-		--brand-experiment-160: #ebeefa;
-		--brand-experiment-200: #e3e7f8;
-		--brand-experiment-230: #dae0f5;
-		--brand-experiment-260: #d1d9f3;
-		--brand-experiment-300: #c7d0f0;
-		--brand-experiment-330: #b5c1ec;
-		--brand-experiment-360: #a5b3e7;
-		--brand-experiment-400: #8ea1e1;
-		--brand-experiment-430: #869adf;
-		--brand-experiment-460: #7d92dd;
-		--brand-experiment: #7289da;
-		--brand-experiment-500: #7289da;
-		--brand-experiment-530: #687dc6;
-		--brand-experiment-560: #5c6fb1;
-		--brand-experiment-600: #4e5d94;
-		--brand-experiment-630: #435180;
-		--brand-experiment-660: #3b4770;
-		--brand-experiment-700: #2e3757;
-		--brand-experiment-730: #2b3352;
-		--brand-experiment-760: #272f4b;
-		--brand-experiment-800: #222941;
-		--brand-experiment-830: #1a2032;
-		--brand-experiment-860: #111521;
-		--brand-experiment-900: #06070b;
-		--brand-experiment-05a: rgba(114, 137, 218, 0.05);
-		--brand-experiment-10a: rgba(114, 137, 218, 0.1);
-		--brand-experiment-15a: rgba(114, 137, 218, 0.15);
-		--brand-experiment-20a: rgba(114, 137, 218, 0.2);
-		--brand-experiment-25a: rgba(114, 137, 218, 0.25);
-		--brand-experiment-30a: rgba(114, 137, 218, 0.3);
-		--brand-experiment-35a: rgba(114, 137, 218, 0.35);
-		--brand-experiment-40a: rgba(114, 137, 218, 0.4);
-		--brand-experiment-45a: rgba(114, 137, 218, 0.45);
-		--brand-experiment-50a: rgba(114, 137, 218, 0.5);
-		--brand-experiment-55a: rgba(114, 137, 218, 0.55);
-		--brand-experiment-60a: rgba(114, 137, 218, 0.6);
-		--brand-experiment-65a: rgba(114, 137, 218, 0.65);
-		--brand-experiment-70a: rgba(114, 137, 218, 0.7);
-		--brand-experiment-75a: rgba(114, 137, 218, 0.75);
-		--brand-experiment-80a: rgba(114, 137, 218, 0.8);
-		--brand-experiment-85a: rgba(114, 137, 218, 0.85);
-		--brand-experiment-90a: rgba(114, 137, 218, 0.9);
-		--brand-experiment-95a: rgba(114, 137, 218, 0.95);
-	}
+  /* blurple restoration */
+  html.theme-dark when (@restore-blurple =1) {
+    --brand-experiment-100: #f8f9fd;
+    --brand-experiment-130: #f2f4fc;
+    --brand-experiment-160: #ebeefa;
+    --brand-experiment-200: #e3e7f8;
+    --brand-experiment-230: #dae0f5;
+    --brand-experiment-260: #d1d9f3;
+    --brand-experiment-300: #c7d0f0;
+    --brand-experiment-330: #b5c1ec;
+    --brand-experiment-360: #a5b3e7;
+    --brand-experiment-400: #8ea1e1;
+    --brand-experiment-430: #869adf;
+    --brand-experiment-460: #7d92dd;
+    --brand-experiment: #7289da;
+    --brand-experiment-500: #7289da;
+    --brand-experiment-530: #687dc6;
+    --brand-experiment-560: #5c6fb1;
+    --brand-experiment-600: #4e5d94;
+    --brand-experiment-630: #435180;
+    --brand-experiment-660: #3b4770;
+    --brand-experiment-700: #2e3757;
+    --brand-experiment-730: #2b3352;
+    --brand-experiment-760: #272f4b;
+    --brand-experiment-800: #222941;
+    --brand-experiment-830: #1a2032;
+    --brand-experiment-860: #111521;
+    --brand-experiment-900: #06070b;
+    --brand-experiment-05a: rgba(114, 137, 218, 0.05);
+    --brand-experiment-10a: rgba(114, 137, 218, 0.1);
+    --brand-experiment-15a: rgba(114, 137, 218, 0.15);
+    --brand-experiment-20a: rgba(114, 137, 218, 0.2);
+    --brand-experiment-25a: rgba(114, 137, 218, 0.25);
+    --brand-experiment-30a: rgba(114, 137, 218, 0.3);
+    --brand-experiment-35a: rgba(114, 137, 218, 0.35);
+    --brand-experiment-40a: rgba(114, 137, 218, 0.4);
+    --brand-experiment-45a: rgba(114, 137, 218, 0.45);
+    --brand-experiment-50a: rgba(114, 137, 218, 0.5);
+    --brand-experiment-55a: rgba(114, 137, 218, 0.55);
+    --brand-experiment-60a: rgba(114, 137, 218, 0.6);
+    --brand-experiment-65a: rgba(114, 137, 218, 0.65);
+    --brand-experiment-70a: rgba(114, 137, 218, 0.7);
+    --brand-experiment-75a: rgba(114, 137, 218, 0.75);
+    --brand-experiment-80a: rgba(114, 137, 218, 0.8);
+    --brand-experiment-85a: rgba(114, 137, 218, 0.85);
+    --brand-experiment-90a: rgba(114, 137, 218, 0.9);
+    --brand-experiment-95a: rgba(114, 137, 218, 0.95);
+  }
 }

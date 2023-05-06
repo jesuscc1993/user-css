@@ -771,11 +771,11 @@
   }
 }
 
-	@-moz-document regexp("https://game.granbluefantasy.jp/#party/.*") {
-		.cnt-weapon-list:not(.large) .btn-weapon-display-change {
-			left: 10px;
-			top: 302px;
-		}
+  @-moz-document regexp("https://game.granbluefantasy.jp/#party/.*") {
+    .cnt-weapon-list:not(.large) .btn-weapon-display-change {
+      left: 10px;
+      top: 302px;
+    }
   }
 
 @-moz-document regexp("https:\/\/game\.granbluefantasy\.jp\/.*\/(scene|#raidz).*") {

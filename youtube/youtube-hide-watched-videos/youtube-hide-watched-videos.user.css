@@ -9,8 +9,8 @@
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
-	ytd-grid-video-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer),
-	ytd-rich-item-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer) {
-		display: none !important;
-	}
+  ytd-grid-video-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer),
+  ytd-rich-item-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer) {
+    display: none !important;
+  }
 }

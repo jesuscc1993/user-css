@@ -9,43 +9,43 @@
 
 ==/UserStyle== */
 @-moz-document domain("greasyfork.org") {
-	body {
-		background: #0d0d0d;
-		filter: invert(.95) hue-rotate(180deg);
-	}
+  body {
+    background: #0d0d0d;
+    filter: invert(.95) hue-rotate(180deg);
+  }
 
-	#main-header,
-	svg,
-	img,
-	video {
-		filter: invert(1) hue-rotate(180deg);
-	}
+  #main-header,
+  svg,
+  img,
+  video {
+    filter: invert(1) hue-rotate(180deg);
+  }
 
-	#main-header img {
-		filter: none;
-	}
+  #main-header img {
+    filter: none;
+  }
 
-	a {
-		color: #F99;
-	}
+  a {
+    color: #F99;
+  }
 
-	a:visited {
-		color: #FCC;
-	}
+  a:visited {
+    color: #FCC;
+  }
 
-	a.discussion-title {
-		color: #000;
-	}
+  a.discussion-title {
+    color: #000;
+  }
 
-	.prettyprint li.L1,
-	.prettyprint li.L3,
-	.prettyprint li.L5,
-	.prettyprint li.L7,
-	.prettyprint li.L9 {
-		background: #fcfcfc;
-	}
+  .prettyprint li.L1,
+  .prettyprint li.L3,
+  .prettyprint li.L5,
+  .prettyprint li.L7,
+  .prettyprint li.L9 {
+    background: #fcfcfc;
+  }
 
-	* {
-		box-shadow: none !important;
-	}
+  * {
+    box-shadow: none !important;
+  }
 }

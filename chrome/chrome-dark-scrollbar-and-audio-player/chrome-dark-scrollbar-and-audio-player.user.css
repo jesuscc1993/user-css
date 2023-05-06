@@ -32,25 +32,25 @@
 
 /*[[dark-player]]*/
 @-moz-document regexp("https?://(?!(www\.)?(discord.com|twitter.com|youtube.com)).*") {
-	/*[[scope]]*/::-webkit-scrollbar,
-	/*[[scope]]*/::-webkit-scrollbar-corner,
-	/*[[scope]]*/::-webkit-scrollbar-track-piece {
-		background: /*[[background]]*/ !important;
-	}
+  /*[[scope]]*/::-webkit-scrollbar,
+  /*[[scope]]*/::-webkit-scrollbar-corner,
+  /*[[scope]]*/::-webkit-scrollbar-track-piece {
+    background: /*[[background]]*/ !important;
+  }
 
-	/*[[scope]]*/::-webkit-scrollbar {
-		width: /*[[scrollbar-width]]*/ !important;
-		height: /*[[scrollbar-width]]*/ !important;
-	}
+  /*[[scope]]*/::-webkit-scrollbar {
+    width: /*[[scrollbar-width]]*/ !important;
+    height: /*[[scrollbar-width]]*/ !important;
+  }
 
-	/*[[scope]]*/::-webkit-scrollbar-thumb {
-		background: /*[[scrollbar]]*/ !important;
-		border: /*[[border-width]]*/ solid /*[[background]]*/ !important;
-		border-radius: /*[[border-radius]]*/ !important;
-	}
+  /*[[scope]]*/::-webkit-scrollbar-thumb {
+    background: /*[[scrollbar]]*/ !important;
+    border: /*[[border-width]]*/ solid /*[[background]]*/ !important;
+    border-radius: /*[[border-radius]]*/ !important;
+  }
 
-	/*[[scope]]*/::-webkit-scrollbar-thumb:hover {
-		background: /*[[scrollbar-hover]]*/ !important;
-		border-width: /*[[border-width-hover]]*/ !important;
-	}
+  /*[[scope]]*/::-webkit-scrollbar-thumb:hover {
+    background: /*[[scrollbar-hover]]*/ !important;
+    border-width: /*[[border-width-hover]]*/ !important;
+  }
 }

@@ -14,29 +14,29 @@
 
 ==/UserStyle== */
 @-moz-document domain("discord.com") {
-	:root {
-		--font-size-lg: font-size-lg;
-		--font-size-md: font-size-md;
-		--line-height-font-size-ratio: line-height-font-size-ratio;
+  :root {
+    --font-size-lg: font-size-lg;
+    --font-size-md: font-size-md;
+    --line-height-font-size-ratio: line-height-font-size-ratio;
 
-		--line-height-lg: calc(var(--font-size-lg) * var(--line-height-font-size-ratio));
-		--line-height-md: calc(var(--font-size-md) * var(--line-height-font-size-ratio));
+    --line-height-lg: calc(var(--font-size-lg) * var(--line-height-font-size-ratio));
+    --line-height-md: calc(var(--font-size-md) * var(--line-height-font-size-ratio));
 
-		--inline-emoji-size: inline-emoji-size;
-	}
+    --inline-emoji-size: inline-emoji-size;
+  }
 
-	[class*="message"] [class*="username"] {
-		font-size: var(--font-size-md);
-		line-height: var(--line-height-md);
-	}
+  [class*="message"] [class*="username"] {
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-md);
+  }
 
-	[class*="message"] [class*="markup"] {
-		font-size: var(--font-size-lg);
-		line-height: var(--line-height-lg);
-	}
+  [class*="message"] [class*="markup"] {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-lg);
+  }
 
-	[class*="messagesWrapper"] img.emoji:not(.jumboable) {
-		width: var(--inline-emoji-size) !important;
-		height: var(--inline-emoji-size) !important;
-	}
+  [class*="messagesWrapper"] img.emoji:not(.jumboable) {
+    width: var(--inline-emoji-size) !important;
+    height: var(--inline-emoji-size) !important;
+  }
 }
