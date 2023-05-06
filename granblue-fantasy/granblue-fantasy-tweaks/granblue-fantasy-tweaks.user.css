@@ -356,11 +356,6 @@
     display: none;
   }
 
-  /* hide party auto-select button */
-  .btn-index-all-setting {
-    visibility: hidden;
-  }
-
   /* hide posessions in user card */
   .prt-user-info .prt-info-possessed:not(.box) {
     display: none;
