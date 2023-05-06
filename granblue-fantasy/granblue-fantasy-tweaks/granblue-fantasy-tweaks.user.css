@@ -99,6 +99,10 @@
   .prt-event-support .prt-event-temporary {
     display: none !important;
   }
+	
+	.btn-party-change {
+    margin: 536px auto 0;
+  }
 
   .prt-scene-comment {
     font-size: 13.5px;
@@ -771,11 +775,11 @@
   }
 }
 
-  @-moz-document regexp("https://game.granbluefantasy.jp/#party/.*") {
-    .cnt-weapon-list:not(.large) .btn-weapon-display-change {
-      left: 10px;
-      top: 302px;
-    }
+	@-moz-document regexp("https://game.granbluefantasy.jp/#party/.*") {
+		.cnt-weapon-list:not(.large) .btn-weapon-display-change {
+			left: 10px;
+			top: 302px;
+		}
   }
 
 @-moz-document regexp("https:\/\/game\.granbluefantasy\.jp\/.*\/(scene|#raidz).*") {
