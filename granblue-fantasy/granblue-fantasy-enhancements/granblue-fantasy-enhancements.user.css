@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.05.05.17.19
+@version        2023.05.06.11.45
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -786,15 +786,36 @@
   hide-auto-select-0 "Disabled" <<<EOT EOT;
   
   hide-auto-select-1 "Enabled" <<<EOT
-    .cnt-summon-list .prt-setting-all.btn-summon-all,
-    .cnt-summon-list .prt-setting-all.prt-summon-all-disabled,
+    .cnt-summon-list .btn-summon-all,
+    .cnt-summon-list .prt-summon-all-disabled,
     .cnt-weapon-list .btn-mainweapon-fix,
     .cnt-weapon-list .btn-weapon-all,
-    .cnt-weapon-list.large .prt-weapon-all-disabled,
+    .cnt-weapon-list .prt-weapon-all-disabled,
     .prt-bar .btn-index-all-setting,
     .prt-bar .prt-index-all-disabled {
-      display: none;
+      display: none !important;
     }
+
+		.cnt-weapon-list.large .btn-swap-slots,
+		.cnt-weapon-list.large .btn-weapon-display-change {
+			top: 363px;
+		}
+		.cnt-weapon-list.large {
+			background: url(https://i.imgur.com/lHR9CbL.png) no-repeat 0 0;
+		}
+		.prt-contents.summon.large .cnt-summon-list {
+			background: url(https://i.imgur.com/lHR9CbL.png) no-repeat 0 -424px;
+		}
+		.cnt-weapon-list {
+			background: url(https://i.imgur.com/lHR9CbL.png) no-repeat 0 -860px;
+		}
+		.prt-contents.summon .cnt-summon-list {
+			background: url(https://i.imgur.com/lHR9CbL.png) no-repeat 0 -1224px;
+		}
+		.cnt-weapon-list,
+		.prt-contents.summon .cnt-summon-list {
+			background-size: 326px 1554px !important;
+		}
   EOT;
 
 }
