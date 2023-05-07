@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.05.07.19.22
+@version        2023.05.07.22.09
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -699,6 +699,7 @@
       regexp("https://game.granbluefantasy.jp/#evolution/.*"),
       regexp("https://game.granbluefantasy.jp/#list.*"),
       regexp("https://game.granbluefantasy.jp/#party/list.*"),
+      regexp("https://game.granbluefantasy.jp/#present.*"),
       regexp("https://game.granbluefantasy.jp/#profile/fix/list/.*"),
       regexp("https://game.granbluefantasy.jp/#profile/pushed_npc/list"),
       regexp("https://game.granbluefantasy.jp/#recycle/.*"),
@@ -757,9 +758,10 @@
         transform: scale(.75);
       }
 
+      .pop-decompose-confirm-consume .prt-target-items .lis-decompose-item .img-decompose-item,
       .pop-confirm-decompose .prt-target-items .lis-decompose-item .img-decompose-item {
         width: 48px;
-        margin: 0 3px 3px;
+        margin: 0 2px 2px;
       }
     }
 
