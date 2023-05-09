@@ -18,7 +18,7 @@
 
 ==/UserStyle== */
 
-@-moz-document regexp("https?://(?!(www\.)?(discord.com|twitter.com|youtube.com)).*") {
+@-moz-document regexp("https?://(?!(www\.)?(discord.com|youtube.com)).*") {
   * {
     scrollbar-color: thumb-color track-color !important;
     scrollbar-width: scrollbar-width !important;
