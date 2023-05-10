@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2023.05.10.21.38
+@version        2023.05.10.21.48
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -78,10 +78,9 @@
     z-index: 102;
   }
 
-  /* not sure why this was added; results in issue with server guides */
-	/* [class*="content-"] [class*="sidebar-"] {
-    height: 100vh;
-  } */
+	[class*="content-"] [class*="sidebar-"] {
+    height: 100%;
+  }
 
   [class*="content-"] [class*="membersWrap"] {
     right: 0;
