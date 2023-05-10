@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2023.03.20.23.29
+@version        2023.05.10.21.38
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -57,22 +57,18 @@
     max-width: 100% !important;
   }
 
-  [class*="content-"] [class*="sidebar-"] [class^="bannerImage"],
-  [class*="content-"] [class*="sidebar-"] [class^="bannerImage"]:after {
+  [class*="content-"] [class*="bannerImage-"],
+  [class*="content-"] [class*="bannerImage-"] [class^="bannerImg"],
+  [class*="content-"] [class*="bannerImage-"] [class^="bannerImg"]:before {
     width: 100%;
   }
-
-  /* causes issue with vc */
-  /*[class*="content-"] [class*="sidebar-"] [class*="panels-"] [class*="container-"] {
-    display: flex;
-  }*/
 
   [class*="content-"] [class*="sidebar-"] [class*="panels-"] [class*="container-"] [class*="avatarWrapper-"] {
     flex: 1;
   }
 
   /* channel height */
-  [class*="sidebar"] [class*="iconVisibility"]:not([class*="wrapperCommon"]) a {
+  [class*="sidebar-"] [class*="iconVisibility"]:not([class*="wrapperCommon"]) a {
     padding: var(--channel-padding) 0;
   }
 
@@ -82,9 +78,10 @@
     z-index: 102;
   }
 
-  [class*="content-"] [class*="sidebar"] {
+  /* not sure why this was added; results in issue with server guides */
+	/* [class*="content-"] [class*="sidebar-"] {
     height: 100vh;
-  }
+  } */
 
   [class*="content-"] [class*="membersWrap"] {
     right: 0;
@@ -163,11 +160,6 @@
     height: var(--block-emoji-size) !important;
   }
 
-  /*[class^='reaction'] img.emoji:not(.jumboable) {
-     width: var(--reaction-emoji-size) !important;
-     height: var(--reaction-emoji-size) !important;
-     margin: 3px 0;
-  }*/
   [class*="messagesWrapper"] [class*="scrollable"] {
     max-height: none;
   }
