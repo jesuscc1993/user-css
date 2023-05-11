@@ -31,7 +31,7 @@
 ==/UserStyle== */
 
 /*[[dark-player]]*/
-@-moz-document regexp("https?://(?!(www\.)?(discord.com|youtube.com)).*") {
+@-moz-document regexp("https?://(?!(www\.)?(discord.com)).*") {
   /*[[scope]]*/::-webkit-scrollbar,
   /*[[scope]]*/::-webkit-scrollbar-corner,
   /*[[scope]]*/::-webkit-scrollbar-track-piece {
