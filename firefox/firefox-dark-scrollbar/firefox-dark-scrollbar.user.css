@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Firefox - Dark scrollbar
 @description    Styles the scrollbar component to a dark theme. Every setting can be customized through the "Customize Settings" feature.
-@version        2023.04.23.10.17
+@version        2023.05.12.19.36
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -18,7 +18,7 @@
 
 ==/UserStyle== */
 
-@-moz-document regexp("https?://(?!(www\.)?(discord.com|youtube.com)).*") {
+@-moz-document regexp("https?://(?!(www\.)?(discord.com|twitter.com|reddit.com|youtube.com)).*") {
   * {
     scrollbar-color: thumb-color track-color !important;
     scrollbar-width: scrollbar-width !important;
