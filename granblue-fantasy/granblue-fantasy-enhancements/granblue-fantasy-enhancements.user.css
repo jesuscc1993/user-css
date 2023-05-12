@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.05.12.0.21
+@version        2023.05.12.21.49
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -615,6 +615,7 @@
       grid-template-columns: repeat(auto-fill, 70px);
       grid-template-rows: repeat(auto-fill, 40px);
       margin: -4px 17px 16px;
+      min-height: 208px;
     }
     .cnt-sequenceraid .prt-supporter-attribute.selected {
       margin: -4px 10px 16px;
