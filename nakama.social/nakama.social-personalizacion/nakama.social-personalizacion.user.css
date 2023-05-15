@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Nakama - Personalización
 @description    Permite la configuración de ciertos aspectos visuales en Nakama.
-@version        2023.05.04.21.39
+@version        2023.05.15.21.17
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -48,6 +48,14 @@
     height: @post-button-height;
     padding: @post-button-padding;
   }
+	
+	/* fix twitter embeds */
+	.twitter-tweet {
+		width: 270px !important;
+	}
+	.twitter-tweet iframe {
+		max-width: 100% !important;
+	}
 
   html when (@attachments-scrollbar =1) {
     .media-scroller {
@@ -68,7 +76,7 @@
     }
   }
 
-  /* Scrollbar */
+  /* scrollbar */
   ::-webkit-scrollbar,
   ::-webkit-scrollbar-corner,
   ::-webkit-scrollbar-track-piece {
