@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Nakama - Personalización
 @description    Permite la configuración de ciertos aspectos visuales en Nakama.
-@version        2023.05.15.21.44
+@version        2023.05.15.21.59
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -52,7 +52,6 @@
 	/* fix twitter embeds */
 	.media-scroller[data-length="1"] .twitter-tweet {
 		width: calc(@content-width - 34px) !important;
-		max-width: 100% !important;
 	}
 	.twitter-tweet {
 		width: calc(@content-width / 2 - 20px) !important;
