@@ -134,11 +134,15 @@
     .pop-deck-info .prt-info-button {
       margin: 0;
     }
-    .prt-load-deck .prt-select-button {
-      position: initial;
+    .pop-raid-extra2.pop-usual .txt-popup-body,
+    .pop-usual.pop-raid-extra7 .txt-popup-body {
+      margin-top: 0;
     }
     .prt-load-deck .txt-load-deck.bottom {
       margin-top: 8px;
+    }
+    .prt-load-deck .prt-select-button {
+      position: initial;
     }
   EOT;
 
