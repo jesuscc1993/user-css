@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2023.05.23.20.42
+@version        2023.05.23.20.45
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -196,6 +196,7 @@
   .cnt-quest-scene,
   .cnt-raid,
   .cnt-poker {
+    box-sizing: border-box;
     min-height: calc(50vh - 31px) !important;
   }
 
