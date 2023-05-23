@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2023.05.10.21.48
+@version        2023.05.23.17.39
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -45,8 +45,7 @@
 
   /* responsive columns */
   [class*="content-"] [class*="sidebar-"],
-  [class*="content-"] [class*="members-"],
-  [class*="membersWrap-"] {
+  [class*="membersWrap-"] [class*="members-"] {
     max-width: var(--max-sidebar-width) !important;
     min-width: var(--min-sidebar-width) !important;
     width: 100% !important;
@@ -126,16 +125,16 @@
 
   /* HIDE AVATARS */
   @media (max-width: 480px) {
-    [class*="messagesWrapper"] img[class*="avatar"],
-    [class*="messagesWrapper"] [class*="timestamp"] {
+    [class*="messageListItem"] img[class*="avatar"],
+    [class*="messageListItem"] [class*="timestamp"] {
       display: none;
     }
 
-    [class*="messagesWrapper"] [class*="message"] {
-      padding: 0.125rem 0.25rem;
+    [class*="messageListItem"] [class*="message"] {
+      padding: 0.125rem 1rem;
     }
 
-    [class*="messagesWrapper"] [class*="messageContent"] {
+    [class*="messageListItem"] [class*="messageContent"] {
       margin-left: 0;
       padding-left: 0;
     }
@@ -143,7 +142,7 @@
 
   /* RESIZE */
   /* avatars */
-  [class*="messagesWrapper"] img[class*="avatar"] {
+  [class*="messageListItem"] img[class*="avatar"] {
     transform: scale(var(--avatar-scale)) !important;
     margin-top: 2.5px;
   }
