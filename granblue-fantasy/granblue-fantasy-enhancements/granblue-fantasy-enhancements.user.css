@@ -1106,10 +1106,10 @@
     font-weight: 500;
   }
 
-	/* fix home notification badge */
-	.prt-link-notification .prt-notification-count {
-		height: 14px;
-	}
+  /* fix home notification badge */
+  .prt-link-notification .prt-notification-count {
+    height: 14px;
+  }
 
   /* fix crew skill text with custom font */
   .prt-support-list .prt-support-info .prt-support-count {
