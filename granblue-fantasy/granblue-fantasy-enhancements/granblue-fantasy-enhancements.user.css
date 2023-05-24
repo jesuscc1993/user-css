@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.05.24.11.29
+@version        2023.05.24.11.32
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -25,10 +25,6 @@
     #mobage-game-container {
       left: calc(50% - 160px);
     }
-
-    #mobage-game-container .cnt-global-header {
-      left: 0;
-    }
   EOT;
 
   content-alignment-3 "Center (fixed header)" <<<EOT
@@ -43,8 +39,7 @@
   EOT;
 
   content-alignment-4 "Right" <<<EOT
-    #mobage-game-container,
-    #mobage-game-container .cnt-global-header {
+    #mobage-game-container {
       right: 0;
     }
   EOT;
