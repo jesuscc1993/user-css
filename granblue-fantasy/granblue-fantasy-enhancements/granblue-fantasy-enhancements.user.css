@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.05.24.11.14
+@version        2023.05.24.11.24
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -89,9 +89,35 @@
   center-popups-0 "Disabled" <<<EOT EOT;
   
   center-popups-1 "Enabled" <<<EOT
+    #mobage-game-container[style*="zoom: 1;"] #pop,
+    #mobage-game-container[style*="zoom: 1;"] #pop-deck,
+    #mobage-game-container[style*="zoom: 1;"] .pop-deck {
+      height: 100vh;
+    }
+    #mobage-game-container[style*="zoom: 1;"] .prt-popup-body {
+      max-height: calc(100vh - 180px);
+    }
+
+    #mobage-game-container[style*="zoom: 1.5;"] #pop,
+    #mobage-game-container[style*="zoom: 1.5;"] #pop-deck,
+    #mobage-game-container[style*="zoom: 1.5;"] .pop-deck {
+      height: 66.66vh;
+    }
+    #mobage-game-container[style*="zoom: 1.5;"] .prt-popup-body {
+      max-height: calc(66.66vh - 180px);
+    }
+
+    #mobage-game-container[style*="zoom: 2;"] #pop,
+    #mobage-game-container[style*="zoom: 2;"] #pop-deck,
+    #mobage-game-container[style*="zoom: 2;"] .pop-deck {
+      height: 50vh;
+    }
+    #mobage-game-container[style*="zoom: 2;"] .prt-popup-body {
+      max-height: calc(50vh - 180px);
+    }
+
     #pop {
       position: fixed;
-      height: 50vh;
       top: 0;
       left: initial;
       display: flex !important;
@@ -106,7 +132,6 @@
       z-index: 999998;
     }
     .prt-popup-body {
-      max-height: calc(50vh - 180px);
       overflow: auto;
     }
     .pop-sort-change.pop-usual .prt-popup-body .txt-popup-body,
@@ -130,7 +155,6 @@
     .pop-deck,
     #pop-deck {
       position: fixed;
-      height: 50vh;
       top: 0 !important;
       left: initial;
       z-index: 250004;
