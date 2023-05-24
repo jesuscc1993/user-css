@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2023.05.23.20.45
+@version        2023.05.24.11.19
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -744,10 +744,10 @@
   }
 
   /* keep pagination on screen for the replicard missions tab */
-  .cnt-replicard-mission .prt-header {
-    top: 10px;
+  .cnt-replicard-mission .prt-header .btn-location-stage {
+    top: 64px;
   }
-  .prt-replicard-tab {
+  .cnt-replicard-mission .prt-replicard-tab {
     margin-top: 10px;
   }
 }
