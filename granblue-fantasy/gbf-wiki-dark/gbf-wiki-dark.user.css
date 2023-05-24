@@ -1,0 +1,53 @@
+/* ==UserStyle==
+@name           gbf.wiki - Dark Theme
+@description    Dark theme for gbf.wiki.
+@version        2023.05.24.18.54
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+==/UserStyle== */
+
+@-moz-document domain("gbf.wiki") {
+  html,
+  img,
+  .mw-wiki-logo {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  body {
+    background-image: none;
+  }
+
+  * {
+    box-shadow: none !important;
+  }
+
+  /* overrides */
+  #p-search,
+  div#mw-head div.vectorMenu h3 {
+    background: #f6f6f6;
+  }
+
+  #p-search,
+  div#mw-head div.vectorMenu h3 {
+    margin: 0 0.5em 0 0;
+  }
+
+  #p-personal,
+  .mw-body,
+  .parsoid-body,
+  .vectorTabs li.selected span,
+  .wikitable,
+  html {
+    background-color: #f4f4f4;
+  }
+
+  [style*="background-color: white;"],
+  [style*="background-color:white;"] {
+    background-color: #f4f4f4 !important;
+  }
+
+  .vectorTabs li {
+    background: linear-gradient(0deg, #a6d5f7, #f6f6f6 20%);
+  }
+}
