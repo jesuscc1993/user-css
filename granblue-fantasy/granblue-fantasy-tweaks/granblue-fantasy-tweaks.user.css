@@ -12,7 +12,7 @@
   :root {
     --c-scrollbar-bg: #000;
   }
-  
+
   /* taller raid log */
   .cnt-raid .prt-raid-log {
     height: 100%;
@@ -105,7 +105,7 @@
   .prt-event-support .prt-event-temporary {
     display: none !important;
   }
-  
+
   .btn-party-change {
     margin: 528px auto 0;
   }
@@ -742,6 +742,14 @@
     display: inline-block;
     padding: 4px 0;
   }
+
+  /* keep pagination on screen for the replicard missions tab */
+  .cnt-replicard-mission .prt-header {
+    top: 10px;
+  }
+  .prt-replicard-tab {
+    margin-top: 10px;
+  }
 }
 
 @-moz-document url-prefix("https://game.granbluefantasy.jp/#raid/")
@@ -771,12 +779,13 @@
   }
 }
 
-  @-moz-document regexp("https://game.granbluefantasy.jp/#party/.*") {
-    .cnt-weapon-list:not(.large) .btn-weapon-display-change {
-      left: 10px;
-      top: 302px;
-    }
+@-moz-document regexp("https://game.granbluefantasy.jp/#party/.*")
+{
+  .cnt-weapon-list:not(.large) .btn-weapon-display-change {
+    left: 10px;
+    top: 302px;
   }
+}
 
 @-moz-document regexp("https:\/\/game\.granbluefantasy\.jp\/.*\/(scene|#raidz).*") {
   /* hide footer when dispensable */
