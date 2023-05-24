@@ -89,31 +89,13 @@
   center-popups-0 "Disabled" <<<EOT EOT;
   
   center-popups-1 "Enabled" <<<EOT
-    #mobage-game-container[style*="zoom: 1;"] #pop,
-    #mobage-game-container[style*="zoom: 1;"] #pop-deck,
-    #mobage-game-container[style*="zoom: 1;"] .pop-deck {
-      height: 100vh;
+    #pop,
+    #pop-deck,
+    .pop-deck {
+      height: 100%;
     }
-    #mobage-game-container[style*="zoom: 1;"] .prt-popup-body {
-      max-height: calc(100vh - 180px);
-    }
-
-    #mobage-game-container[style*="zoom: 1.5;"] #pop,
-    #mobage-game-container[style*="zoom: 1.5;"] #pop-deck,
-    #mobage-game-container[style*="zoom: 1.5;"] .pop-deck {
-      height: 66.66vh;
-    }
-    #mobage-game-container[style*="zoom: 1.5;"] .prt-popup-body {
-      max-height: calc(66.66vh - 180px);
-    }
-
-    #mobage-game-container[style*="zoom: 2;"] #pop,
-    #mobage-game-container[style*="zoom: 2;"] #pop-deck,
-    #mobage-game-container[style*="zoom: 2;"] .pop-deck {
-      height: 50vh;
-    }
-    #mobage-game-container[style*="zoom: 2;"] .prt-popup-body {
-      max-height: calc(50vh - 180px);
+    .prt-popup-body {
+      max-height: calc(100% - 180px);
     }
 
     #pop {
