@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.05.23.20.42
+@version        2023.05.24.10.44
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -22,18 +22,32 @@
   EOT;
 
   content-alignment-2 "Center" <<<EOT
-    #mobage-game-container {
+    #mobage-game-container[style="zoom: 1;"] {
+      left: calc(50vw - 160px);
+    }
+    #mobage-game-container[style="zoom: 1.5;"] {
+      left: calc(33vw - 160px);
+    }
+    #mobage-game-container[style="zoom: 2;"] {
       left: calc(25vw - 160px);
     }
 
-    .cnt-global-header {
-      left: calc(25vw - 640px);
+    #mobage-game-container .cnt-global-header {
+      left: 0;
     }
   EOT;
 
   content-alignment-3 "Center (fixed header)" <<<EOT
-    #mobage-game-container,
-    .cnt-global-header {
+    #mobage-game-container[style="zoom: 1;"],
+    #mobage-game-container[style="zoom: 1;"] .cnt-global-header {
+      left: calc(50vw - 160px);
+    }
+    #mobage-game-container[style="zoom: 1.5;"],
+    #mobage-game-container[style="zoom: 1.5;"] .cnt-global-header {
+      left: calc(33.33vw - 160px);
+    }
+    #mobage-game-container[style="zoom: 2;"],
+    #mobage-game-container[style="zoom: 2;"] .cnt-global-header {
       left: calc(25vw - 160px);
     }
 
@@ -44,17 +58,25 @@
 
   content-alignment-4 "Right" <<<EOT
     #mobage-game-container,
-    .cnt-global-header {
+    #mobage-game-container .cnt-global-header {
       right: 0;
     }
   EOT;
 
   content-alignment-5 "Right (fixed header)" <<<EOT
-    #mobage-game-container,
-    .cnt-global-header {
+    #mobage-game-container[style="zoom: 1;"] .cnt-global-header {
+      left: calc(100vw - 320px);
+    }
+    #mobage-game-container[style="zoom: 1.5;"] .cnt-global-header {
+      left: calc(66.66vw - 320px);
+    }
+    #mobage-game-container[style="zoom: 2;"] .cnt-global-header {
       left: calc(50vw - 320px);
     }
 
+    #mobage-game-container {
+      right: 0;
+    }
     .cnt-global-header {
       position: fixed;
     }
@@ -689,7 +711,7 @@
   
   compact-lists-1 "Enabled" <<<EOT
     @-moz-document
-      regexp("https://game.granbluefantasy.jp/#archaic/.*"),
+      regexp("https://game.granbluefantasy.jp/#archaic/.*"),  
       regexp("https://game.granbluefantasy.jp/#arousal/.*"),
       regexp("https://game.granbluefantasy.jp/#bonus_stock/.*"),
       regexp("https://game.granbluefantasy.jp/#container/.*"),
