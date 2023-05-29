@@ -113,7 +113,7 @@
   /* content alignment */
   if (content-alignment != 'left') {
     #mobage-game-container {
-      --left: content-alignment == center' ? calc(50% - 160px): calc(100% - 320px);
+      --left: content-alignment == 'center' ? calc(50% - 160px): calc(100% - 320px);
       left: var(--left);
     }
 
@@ -123,7 +123,7 @@
       }
     }
 
-    if (content-alignment == center') {
+    if (content-alignment == 'center') {
       /* fit submenu */
       .jssdk #submenu,
       .jssdk #submenu.open {
@@ -471,7 +471,7 @@
   }
 
   /* compact-raids */
-  if (compact-raids == basic') {
+  if (compact-raids == 'basic') {
     .prt-raid-list {
       margin: -10px 0 16px;
     }
@@ -524,7 +524,7 @@
       margin-top: 16px;
     }
   }
-  else if (compact-raids == extra') {
+  else if (compact-raids == 'extra') {
     .prt-raid-list {
       margin: -14px 0 24px;
     }
@@ -591,7 +591,7 @@
   }
 
   /* compact-summons */
-  if (compact-summons == basic') {
+  if (compact-summons == 'basic') {
     .prt-supporter-thumb {
       display: none;
     }
@@ -602,7 +602,7 @@
       margin: 0px auto -2px !important;
     }
   }
-  else if (compact-summons == extra') {
+  else if (compact-summons == 'extra') {
     .prt-supporter-list .lis-supporter .prt-supporter-thumb,
     .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-summon-max {
       display: none;
@@ -643,7 +643,7 @@
       padding: 5px 5px;
     }
   }
-  else if (compact-summons == ultra') {
+  else if (compact-summons == 'ultra') {
     .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-supporter-summon.name-s,
     .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail > *:not(.prt-summon-skill),
     .prt-supporter-list .lis-supporter .prt-supporter-thumb,
@@ -686,7 +686,7 @@
     }
     .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-summon-skill[class*="bless-rank"]:before {
       padding: 0 2px;
-      content: '★';
+      content: "★";
       font-size: 22px;
       font-weight: normal;
       line-height: 22px;
@@ -798,7 +798,7 @@
   if (hide-gacha-banner) {
     .lis-banner.prt-event-banner,
     .prt-gacha-banner-slider,
-    .btn-banner[data-href^='gacha'] {
+    .btn-banner[data-href^="gacha"] {
       display: none !important;
     }
   }
@@ -812,14 +812,14 @@
 
   /* hide-special-draw */
   if (hide-special-draw) {
-    .btn-banner[data-href='gacha/campaign/69/gachacampaign'] {
+    .btn-banner[data-href="gacha/campaign/69/gachacampaign"] {
       display: none;
     }
   }
 
   /* hide-outfit-sets */
   if (hide-outfit-sets) {
-    .btn-banner[data-href^='gacha/skin'] {
+    .btn-banner[data-href^="gacha/skin"] {
       display: none;
     }
   }
@@ -838,7 +838,7 @@
 
   /* hide-pinboard */
   if (hide-pinboard) {
-    .prt-campaign-banners [data-href='campaign/panel'] {
+    .prt-campaign-banners [data-href="campaign/panel"] {
       display: none;
     }
   }
