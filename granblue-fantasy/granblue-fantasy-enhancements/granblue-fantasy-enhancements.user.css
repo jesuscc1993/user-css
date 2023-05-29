@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2023.05.26.10.01
+@version        2023.05.29.12.56
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -346,35 +346,127 @@
 
 }
 
-@advanced dropdown compact-upgrade "📦 Compact upgrade summary" {
+@advanced dropdown compact-crew-skills "📦 Compact crew skills" {
+
+  compact-crew-skills-0 "Disabled" <<<EOT EOT;
+
+  compact-crew-skills-1 "Enabled" <<<EOT
+    .cnt-guild .prt-support-list {
+      padding-bottom: 30px;
+    }
   
-  compact-upgrade-0 "Disabled" <<<EOT EOT;
+    .cnt-guild .prt-support-list .prt-support-info {
+      margin-bottom: 12px;
+    }
+  
+    .cnt-guild .prt-support-list .lis-support {
+      transform: scale(1, 0.75);
+      margin: -26px 2px;
+    }
+  
+    .cnt-guild .prt-support-list .lis-support > * {
+      transform: scale(1, 1.33);
+    }
+  
+    .cnt-guild .prt-support-list .lis-support .txt-support-title {
+      text-align: left;
+      left: 76px;
+      position: relative;
+      width: 200px;
+    }
+  
+    .cnt-guild .prt-support-list .lis-support .prt-support-description {
+      padding: 12px 10px 0 0;
+    }
+    .cnt-guild .prt-support-list .lis-support .btn-use-support,
+    .cnt-guild .prt-support-list .lis-support .onm-use-support {
+      top: 64px;
+    }
+  EOT;
 
-  compact-upgrade-1 "Enabled" <<<EOT
-    @-moz-document regexp("https://game.granbluefantasy.jp/#enhancement/.*") {
+}
 
-      .cnt-material-status .cnt-material-list .list,
-      .cnt-material-status-item .cnt-material-list .list,
-      .prt-enhance-detail .cnt-material-list .list {
-        transform: scale(.5);
-        margin: -7.5px -13px;
+@advanced dropdown compact-enhancements "📦 Compact enhancements" {
+
+  compact-enhancements-0 "Disabled" <<<EOT EOT;
+
+  compact-enhancements-1 "Enabled" <<<EOT
+    .prt-enhance-detail.prt-module-enhancement {
+      font-size: 10px;
+      line-height: 11.5px;
+    }
+  
+    .prt-enhance-detail.prt-module-enhancement .prt-module-header {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  
+    .cnt-material-status .cnt-material-list,
+    .cnt-material-status-item .cnt-material-list,
+    .prt-enhance-detail .cnt-material-list {
+      padding-bottom: 0;
+    }
+  
+    .cnt-list-equipment .txt-notice {
+      padding: 0;
+    }
+  
+    .cnt-list-equipment .prt-induce-button .btn-induce,
+    .cnt-list-equipment .prt-induce-evo .btn-induce {
+      margin: 0 -2px;
+    }
+  
+    .prt-description-optimization,
+    .prt-material-pointer {
+      display: none;
+    }
+  
+    .cnt-material-status .txt-caution-rarity,
+    .cnt-material-status-item .txt-caution-rarity,
+    .prt-enhance-detail .txt-caution-rarity {
+      opacity: 0;
+      margin: 0;
+    }
+  
+    .lis-treasure .prt-treasure-count .txt-treasure-count {
+      font-size: 16px !important;
+      padding: 2px 0;
+    }
+  EOT;
+
+}
+
+@advanced dropdown compact-event-rewards "📦 Compact event rewards" {
+
+  compact-event-rewards-0 "Disabled" <<<EOT EOT;
+
+  compact-event-rewards-1 "Enabled" <<<EOT
+    #prt-reward-contents,
+    .prt-reward-lineup {
+      .lis-reward {
+        background: url(https://prd-game-a-granbluefantasy.akamaized.net/assets_en/img_mid/sp/event/common/teamraid/others/list_small_mision.png) no-repeat;
+        background-size: 298px 100%;
+        height: 66px;
+        margin: 0 auto 3px;
+        padding: 4px 5px 0 5px;
       }
 
-      .cnt-material-status .prt-attribute-bonus,
-      .cnt-material-status-item .prt-attribute-bonus,
-      .prt-enhance-detail .prt-attribute-bonus,
-      .cnt-material-status .txt-confirm,
-      .cnt-material-status-item .txt-confirm,
-      .prt-enhance-detail .txt-confirm {
-        font-size: 10px;
+      .lis-reward .prt-reward-image .img-reward {
+        height: 56px;
+        width: auto;
       }
 
-      .cnt-material-status .txt-confirm,
-      .cnt-material-status-item .txt-confirm,
-      .prt-enhance-detail .txt-confirm {
-        padding-bottom: 8px;
+      .lis-reward .prt-reward-info .txt-reward-description {
+        margin: 4px 0 13px;
       }
 
+      .lis-reward .btn-reward-get {
+        margin: -3.5px -3.75px;
+      }
+
+      .lis-reward .onm-not-clear {
+        margin: -4px -3px;
+      }
     }
   EOT;
 
@@ -396,6 +488,42 @@
     .prt-obtain-multi .prt-result-multi .prt-thumbnail-list .img-result-multi {
       width: 100%;
       height: 100%;
+    }
+  EOT;
+
+}
+
+@advanced dropdown compact-item-pickup "📦 Compact item pickups" {
+
+  compact-item-pickup-0 "Disabled" <<<EOT EOT;
+
+  compact-item-pickup-1 "Enabled" <<<EOT
+    .prt-button-box,
+    .prt-button-box .prt-relation-button {
+      height: 24px;
+    }
+
+    .prt-button-box .prt-relation-button {
+      padding: 0;
+      transform: scale(0.75) translate(0, -4px);
+    }
+
+    .prt-button-box .prt-relation-button .btn-arcarum {
+      font-size: 1.15em;
+      line-height: .8em;
+      transform: scale(0.85) translate(0, -3px);
+    }
+
+    .prt-button-box .btn-show-button,
+    .prt-button-box .prt-temp-button {
+      padding: 2px 2px 4px 4px;
+      width: auto;
+    }
+
+    .prt-button-box .ico-item-kind,
+    .prt-button-box .img-item-kind {
+      height: 20px;
+      width: 20px;
     }
   EOT;
 
@@ -648,42 +776,6 @@
 
 }
 
-@advanced dropdown compact-item-pickup "📦 Compact item pickups" {
-
-  compact-item-pickup-0 "Disabled" <<<EOT EOT;
-
-  compact-item-pickup-1 "Enabled" <<<EOT
-    .prt-button-box,
-    .prt-button-box .prt-relation-button {
-      height: 24px;
-    }
-
-    .prt-button-box .prt-relation-button {
-      padding: 0;
-      transform: scale(0.75) translate(0, -4px);
-    }
-
-    .prt-button-box .prt-relation-button .btn-arcarum {
-      font-size: 1.15em;
-      line-height: .8em;
-      transform: scale(0.85) translate(0, -3px);
-    }
-
-    .prt-button-box .btn-show-button,
-    .prt-button-box .prt-temp-button {
-      padding: 2px 2px 4px 4px;
-      width: auto;
-    }
-
-    .prt-button-box .ico-item-kind,
-    .prt-button-box .img-item-kind {
-      height: 20px;
-      width: 20px;
-    }
-  EOT;
-
-}
-
 @advanced dropdown compact-lists "📦 Compact lists" {
 
   compact-lists-0 "Disabled" <<<EOT EOT;
@@ -776,6 +868,40 @@
         height: auto;
         margin: 2px;
       }
+    }
+  EOT;
+
+}
+
+@advanced dropdown compact-upgrade "📦 Compact upgrade summary" {
+  
+  compact-upgrade-0 "Disabled" <<<EOT EOT;
+
+  compact-upgrade-1 "Enabled" <<<EOT
+    @-moz-document regexp("https://game.granbluefantasy.jp/#enhancement/.*") {
+
+      .cnt-material-status .cnt-material-list .list,
+      .cnt-material-status-item .cnt-material-list .list,
+      .prt-enhance-detail .cnt-material-list .list {
+        transform: scale(.5);
+        margin: -7.5px -13px;
+      }
+
+      .cnt-material-status .prt-attribute-bonus,
+      .cnt-material-status-item .prt-attribute-bonus,
+      .prt-enhance-detail .prt-attribute-bonus,
+      .cnt-material-status .txt-confirm,
+      .cnt-material-status-item .txt-confirm,
+      .prt-enhance-detail .txt-confirm {
+        font-size: 10px;
+      }
+
+      .cnt-material-status .txt-confirm,
+      .cnt-material-status-item .txt-confirm,
+      .prt-enhance-detail .txt-confirm {
+        padding-bottom: 8px;
+      }
+
     }
   EOT;
 
@@ -1140,10 +1266,13 @@
 
   /*[[content-alignment]]*/
   /*[[center-popups]]*/
+  /*[[compact-crew-skills]]*/
+  /*[[compact-enhancements]]*/
+  /*[[compact-event-rewards]]*/
   /*[[compact-gacha]]*/
+  /*[[compact-item-pickup]]*/
   /*[[compact-raids]]*/
   /*[[compact-summons]]*/
-  /*[[compact-item-pickup]]*/
   /*[[fit-crew-chat]]*/
   /*[[fix-header-menu]]*/
   /*[[gray-out-equipped]]*/

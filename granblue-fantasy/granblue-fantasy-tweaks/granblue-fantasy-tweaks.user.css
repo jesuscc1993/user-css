@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2023.05.29.10.46
+@version        2023.05.29.12.56
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -437,108 +437,6 @@
   .txt-deck-confirm .txt-limit {
     font-size: 10px;
     font-style: italic;
-  }
-
-  /* compact enhancements */
-  .prt-enhance-detail.prt-module-enhancement {
-    font-size: 10px;
-    line-height: 11.5px;
-  }
-
-  .prt-enhance-detail.prt-module-enhancement .prt-module-header {
-    font-size: 12px;
-    line-height: 12px;
-  }
-
-  .cnt-material-status .cnt-material-list,
-  .cnt-material-status-item .cnt-material-list,
-  .prt-enhance-detail .cnt-material-list {
-    padding-bottom: 0;
-  }
-
-  .cnt-list-equipment .txt-notice {
-    padding: 0;
-  }
-
-  .cnt-list-equipment .prt-induce-button .btn-induce,
-  .cnt-list-equipment .prt-induce-evo .btn-induce {
-    margin: 0 -2px;
-  }
-
-  .prt-description-optimization,
-  .prt-material-pointer {
-    display: none;
-  }
-
-  .cnt-material-status .txt-caution-rarity,
-  .cnt-material-status-item .txt-caution-rarity,
-  .prt-enhance-detail .txt-caution-rarity {
-    opacity: 0;
-    margin: 0;
-  }
-
-  .lis-treasure .prt-treasure-count .txt-treasure-count {
-    font-size: 16px !important;
-    padding: 2px 0;
-  }
-
-  /* compact crate rewards */
-  #prt-reward-contents .lis-reward {
-    background: url(https://prd-game-a-granbluefantasy.akamaized.net/assets_en/img_mid/sp/event/common/teamraid/others/list_small_mision.png?1644907745) no-repeat;
-    background-size: 298px 100%;
-    height: 66px;
-    margin: 0 auto 3px;
-    padding: 4px 5px 0 5px;
-  }
-
-  #prt-reward-contents .lis-reward .prt-reward-image .img-reward {
-    height: 56px;
-    width: auto;
-  }
-
-  #prt-reward-contents .lis-reward .prt-reward-info .txt-reward-description {
-    margin: 4px 0 13px;
-  }
-
-  #prt-reward-contents .lis-reward .btn-reward-get {
-    margin: -3.5px -3.75px;
-  }
-
-  #prt-reward-contents .lis-reward .onm-not-clear {
-    margin: -4px -3px;
-  }
-
-  /* compact crew skills */
-  .cnt-guild .prt-support-list {
-    padding-bottom: 30px;
-  }
-
-  .cnt-guild .prt-support-list .prt-support-info {
-    margin-bottom: 12px;
-  }
-
-  .cnt-guild .prt-support-list .lis-support {
-    transform: scale(1, 0.75);
-    margin: -26px 2px;
-  }
-
-  .cnt-guild .prt-support-list .lis-support > * {
-    transform: scale(1, 1.33);
-  }
-
-  .cnt-guild .prt-support-list .lis-support .txt-support-title {
-    text-align: left;
-    left: 76px;
-    position: relative;
-    width: 200px;
-  }
-
-  .cnt-guild .prt-support-list .lis-support .prt-support-description {
-    padding: 12px 10px 0 0;
-  }
-  .cnt-guild .prt-support-list .lis-support .btn-use-support,
-  .cnt-guild .prt-support-list .lis-support .onm-use-support {
-    top: 64px;
   }
 
   /* smaller stamps, with real size zoom on hover */
