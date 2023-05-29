@@ -50,6 +50,7 @@
 | **⛔ Hide gacha banners**                     | Hide gacha banners from the home screen.                                                                          |
 | **⛔ Hide gameplay extras**                   | Useful to free up space in the home screen.                                                                       |
 | **⛔ Hide header banners**                    | Hide banners from the header menu.                                                                                |
+| **⛔ Hide left sidebar**                      | Required for the style to work. Cannot be turned off.                                                             |
 | **⛔ Hide pinboard missions**                 | Hide pinboard missions from gameplay extras.                                                                      |
 | **⛔ Hide quest commentary**                  | Hide Vyrn's commentary on the summon selection screen.                                                            |
 | **⛔ Hide scrollbars**                        | Hide game scrollbars while retaining the scrolling functionality.                                                 |
@@ -57,7 +58,6 @@
 | **⛔ Hide submenu**                           | Hide game submenu&#x00B9;.                                                                                        |
 | **⛔ Hide support summon plus marks**         | Hide plus marks on support summons.                                                                               |
 | **⛔ Hide surprise draw**                     | Hide surprise draw from the home screen.                                                                          |
-| **⛔ Hide sidebar**                           | Required for the style to work. Cannot be turned off.                                                             |
 
 &#x00B9; check screenshots for reference
 

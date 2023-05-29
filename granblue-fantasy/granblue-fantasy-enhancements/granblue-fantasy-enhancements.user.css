@@ -52,13 +52,13 @@
 @var checkbox hide-gacha-banner     "⛔ Hide gacha banners" 0
 @var checkbox hide-gameplay-extras  "⛔ Hide gameplay extras" 0
 @var checkbox hide-header-banners   "⛔ Hide header banners" 0
+@var select   hide-sidebar          "⛔ Hide left sidebar" {
+ "Enabled (required)": "enabled"
+}
 @var checkbox hide-outfit-sets      "⛔ Hide featured outfit sets" 0
 @var checkbox hide-pinboard         "⛔ Hide pinboard missions" 0
 @var checkbox hide-quest-comment    "⛔ Hide quest commentary" 0
 @var checkbox hide-scrollbars       "⛔ Hide scrollbars" 0
-@var select   hide-sidebar          "⛔ Hide sidebar" {
- "Enabled (required)": "enabled"
-}
 @var checkbox hide-size             "⛔ Hide footer size settings" 0
 @var checkbox hide-special-draw     "⛔ Hide surprise draw" 0
 @var checkbox hide-star-premium     "⛔ Hide star premium draw" 0
