@@ -9,7 +9,7 @@
 
 @var color    bg-color              "Background color" #150F0F
 
-@var text     font-family           "Font family" "FOT-テロップ明朝 Pro D"
+@var text     font-family           "Font family" "Default"
 
 @var checkbox center-popups         "Center popups" 0
 
@@ -70,7 +70,7 @@
   body,
   .prt-user-info .prt-info-profile .btn-user-name,
   .prt-status .prt-user-name .txt-user-name {
-    font-family: font-family, "Average Sans", sans-serif !important;
+    font-family: font-family, "FOT-テロップ明朝 Pro D", "Average Sans", sans-serif !important;
   }
 
   body,
