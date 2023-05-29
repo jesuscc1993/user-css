@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2023.05.29.10.40
+@version        2023.05.29.10.46
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -480,6 +480,32 @@
   .lis-treasure .prt-treasure-count .txt-treasure-count {
     font-size: 16px !important;
     padding: 2px 0;
+  }
+
+  /* compact crate rewards */
+  #prt-reward-contents .lis-reward {
+    background: url(https://prd-game-a-granbluefantasy.akamaized.net/assets_en/img_mid/sp/event/common/teamraid/others/list_small_mision.png?1644907745) no-repeat;
+    background-size: 298px 100%;
+    height: 66px;
+    margin: 0 auto 3px;
+    padding: 4px 5px 0 5px;
+  }
+
+  #prt-reward-contents .lis-reward .prt-reward-image .img-reward {
+    height: 56px;
+    width: auto;
+  }
+
+  #prt-reward-contents .lis-reward .prt-reward-info .txt-reward-description {
+    margin: 4px 0 13px;
+  }
+
+  #prt-reward-contents .lis-reward .btn-reward-get {
+    margin: -3.5px -3.75px;
+  }
+
+  #prt-reward-contents .lis-reward .onm-not-clear {
+    margin: -4px -3px;
   }
 
   /* compact crew skills */
