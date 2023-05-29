@@ -7,63 +7,63 @@
 @license      CC BY-SA 4.0
 @preprocessor stylus
 
-@var color    bg-color       "Background color" #150F0F
+@var color    bg-color              "Background color" #150F0F
 
-@var text     font-family    "Font family" "FOT-テロップ明朝 Pro D"
+@var text     font-family           "Font family" "FOT-テロップ明朝 Pro D"
 
-@var checkbox center-popups "Center popups" 0
+@var checkbox center-popups         "Center popups" 0
 
-@var select   content-alignment "Content alignment" {
+@var select   content-alignment     "Content alignment" {
  "Left": "left",
  "Center": "center",
  "Right": "right"
 }
 
-@var checkbox selectable-text "Enable text selection (quest dialog excluded)" 0
-@var checkbox fixed-header   "Fixed header position" 0
-@var checkbox gray-out-equipped "Gray out equipped items" 0
-@var checkbox gray-out-sparked "Gray out acquired characters (spark menu)" 0
-@var checkbox keep-extras-open "Keep gameplay extras open" 0
-@var checkbox submenu-on-left "Move submenu to the left" 0
-@var checkbox rearrange-coop "Rearrange co-op room" 0
-@var checkbox sort-summons "Sort summons" 0
-@var checkbox compact-crew-skills "📦 Compact crew skills" 0
-@var checkbox compact-enhancements "📦 Compact enhancements" 0
+@var checkbox selectable-text       "Enable text selection (quest dialog excluded)" 0
+@var checkbox fixed-header          "Fixed header position" 0
+@var checkbox gray-out-equipped     "Gray out equipped items" 0
+@var checkbox gray-out-sparked      "Gray out acquired characters (spark menu)" 0
+@var checkbox keep-extras-open      "Keep gameplay extras open" 0
+@var checkbox submenu-on-left       "Move submenu to the left" 0
+@var checkbox rearrange-coop        "Rearrange co-op room" 0
+@var checkbox sort-summons          "Sort summons" 0
+@var checkbox compact-crew-skills   "📦 Compact crew skills" 0
+@var checkbox compact-enhancements  "📦 Compact enhancements" 0
 @var checkbox compact-event-rewards "📦 Compact event rewards" 0
-@var checkbox compact-gacha "📦 Compact gacha results" 0
-@var checkbox compact-item-pickup "📦 Compact item pickups" 0
-@var checkbox compact-lists "📦 Compact lists" 0
-@var select   compact-raids "📦 Compact raids" {
+@var checkbox compact-gacha         "📦 Compact gacha results" 0
+@var checkbox compact-item-pickup   "📦 Compact item pickups" 0
+@var checkbox compact-lists         "📦 Compact lists" 0
+@var select   compact-raids         "📦 Compact raids" {
  "Disabled": "disabled",
  "Basic": "basic",
  "Extra": "extra"
 }
-@var select   compact-summons "📦 Compact summons" {
+@var select   compact-summons       "📦 Compact summons" {
  "Disabled": "disabled",
  "Basic": "basic",
  "Extra": "extra",
  "Ultra": "ultra"
 }
-@var checkbox compact-upgrade "📦 Compact upgrade summary" 0
-@var checkbox hide-arcarum-skip "⛔ Hide arcarum skip button" 0
-@var checkbox hide-auto-select "⛔ Hide auto select feature" 0
-@var checkbox hide-crystal-count "⛔ Hide crystal count" 0
-@var checkbox hide-event-load "⛔ Hide event loading animations" 0
-@var checkbox hide-gacha-banner "⛔ Hide gacha banners" 0
-@var checkbox hide-gameplay-extras "⛔ Hide gameplay extras" 0
-@var checkbox hide-header-banners "⛔ Hide header banners" 0
-@var checkbox hide-outfit-sets "⛔ Hide featured outfit sets" 0
-@var checkbox hide-pinboard "⛔ Hide pinboard missions" 0
-@var checkbox hide-quest-comment "⛔ Hide quest commentary" 0
-@var checkbox hide-scrollbars "⛔ Hide scrollbars" 0
-@var select   hide-sidebar "⛔ Hide sidebar" {
+@var checkbox compact-upgrade       "📦 Compact upgrade summary" 0
+@var checkbox hide-arcarum-skip     "⛔ Hide arcarum skip button" 0
+@var checkbox hide-auto-select      "⛔ Hide auto select feature" 0
+@var checkbox hide-crystal-count    "⛔ Hide crystal count" 0
+@var checkbox hide-event-load       "⛔ Hide event loading animations" 0
+@var checkbox hide-gacha-banner     "⛔ Hide gacha banners" 0
+@var checkbox hide-gameplay-extras  "⛔ Hide gameplay extras" 0
+@var checkbox hide-header-banners   "⛔ Hide header banners" 0
+@var checkbox hide-outfit-sets      "⛔ Hide featured outfit sets" 0
+@var checkbox hide-pinboard         "⛔ Hide pinboard missions" 0
+@var checkbox hide-quest-comment    "⛔ Hide quest commentary" 0
+@var checkbox hide-scrollbars       "⛔ Hide scrollbars" 0
+@var select   hide-sidebar          "⛔ Hide sidebar" {
  "Enabled (required)": "enabled"
 }
-@var checkbox hide-size "⛔ Hide footer size settings" 0
-@var checkbox hide-special-draw "⛔ Hide surprise draw" 0
-@var checkbox hide-star-premium "⛔ Hide star premium draw" 0
-@var checkbox hide-submenu "⛔ Hide submenu" 0
-@var checkbox hide-support-plus "⛔ Hide support summon plus marks" 0
+@var checkbox hide-size             "⛔ Hide footer size settings" 0
+@var checkbox hide-special-draw     "⛔ Hide surprise draw" 0
+@var checkbox hide-star-premium     "⛔ Hide star premium draw" 0
+@var checkbox hide-submenu          "⛔ Hide submenu" 0
+@var checkbox hide-support-plus     "⛔ Hide support summon plus marks" 0
 
 ==/UserStyle== */
 @-moz-document domain("granbluefantasy.jp") {
