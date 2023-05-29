@@ -29,7 +29,7 @@
 | **Gray out equipped items**                   | Grays out equipped items. Useful for quickly telling them apart.                                                  |
 | **Gray out acquired characters (spark menu)** | Grays out already acquired characters in the spark screen. Useful for quickly telling them apart.                 |
 | **Keep gameplay extras open**                 | Keeps gameplay extras always open, removing the need to expand them.                                              |
-| **Move submenu to the left**                  | Move submenu to the left&#x00B9;.                                                                                 |
+| **Move right submenu to the left**            | Move right submenu to the left&#x00B9;.                                                                           |
 | **Rearrange raid UI**                         | Move raid log to the bottom of the screen.<br>**Requires:** a resolution big enough for it to fit.                |
 | **Sort summons**                              | Sort summons by uncap level.                                                                                      |
 | **📦 Compact crew skills**                    | Compacts crew results.                                                                                            |
@@ -55,7 +55,7 @@
 | **⛔ Hide quest commentary**                  | Hide Vyrn's commentary on the summon selection screen.                                                            |
 | **⛔ Hide scrollbars**                        | Hide game scrollbars while retaining the scrolling functionality.                                                 |
 | **⛔ Hide star premium draw**                 | Hide star premium draw.                                                                                           |
-| **⛔ Hide submenu**                           | Hide game submenu&#x00B9;.                                                                                        |
+| **⛔ Hide right submenu**                     | Hide right submenu&#x00B9;.                                                                                       |
 | **⛔ Hide support summon plus marks**         | Hide plus marks on support summons.                                                                               |
 | **⛔ Hide surprise draw**                     | Hide surprise draw from the home screen.                                                                          |
 

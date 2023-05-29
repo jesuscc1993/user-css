@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Granblue Fantasy Enhancements
 @description  Allows the customization of the game's layout and responsive behavior.
-@version      2023.05.29.17.00
+@version      2023.05.29.17.15
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -24,7 +24,7 @@
 @var checkbox gray-out-equipped     "Gray out equipped items" 0
 @var checkbox gray-out-sparked      "Gray out acquired characters (spark menu)" 0
 @var checkbox keep-extras-open      "Keep gameplay extras open" 0
-@var checkbox submenu-on-left       "Move submenu to the left" 0
+@var checkbox submenu-on-left       "Move right submenu to the left" 0
 @var checkbox rearrange-coop        "Rearrange co-op room" 0
 @var checkbox sort-summons          "Sort summons" 0
 @var checkbox compact-crew-skills   "📦 Compact crew skills" 0
@@ -60,9 +60,9 @@
 @var checkbox hide-quest-comment    "⛔ Hide quest commentary" 0
 @var checkbox hide-scrollbars       "⛔ Hide scrollbars" 0
 @var checkbox hide-size             "⛔ Hide footer size settings" 0
+@var checkbox hide-submenu          "⛔ Hide right submenu" 0
 @var checkbox hide-special-draw     "⛔ Hide surprise draw" 0
 @var checkbox hide-star-premium     "⛔ Hide star premium draw" 0
-@var checkbox hide-submenu          "⛔ Hide submenu" 0
 @var checkbox hide-support-plus     "⛔ Hide support summon plus marks" 0
 
 ==/UserStyle== */
