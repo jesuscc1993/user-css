@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2023.05.27.16.11
+@version        2023.05.29.10.40
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -189,36 +189,36 @@
     padding-bottom: 31px;
   }
 
-	#mobage-game-container[style="zoom: 1;"] {
-		.wrapper,
-		.mask,
-		.cnt-quest-scene,
-		.cnt-raid,
-		.cnt-poker {
-			box-sizing: border-box;
-			min-height: calc(25vh - 31px) !important;
-		}
-	}
-	#mobage-game-container[style="zoom: 1.5;"] {
-		.wrapper,
-		.mask,
-		.cnt-quest-scene,
-		.cnt-raid,
-		.cnt-poker {
-			box-sizing: border-box;
-			min-height: calc(66.66vh - 31px) !important;
-		}
-	}
-	#mobage-game-container[style="zoom: 2;"] {
-		.wrapper,
-		.mask,
-		.cnt-quest-scene,
-		.cnt-raid,
-		.cnt-poker {
-			box-sizing: border-box;
-			min-height: calc(50vh - 31px) !important;
-		}
-	}
+  #mobage-game-container[style="zoom: 1;"] {
+    .wrapper,
+    .mask,
+    .cnt-quest-scene,
+    .cnt-raid,
+    .cnt-poker {
+      box-sizing: border-box;
+      min-height: calc(25vh - 31px) !important;
+    }
+  }
+  #mobage-game-container[style="zoom: 1.5;"] {
+    .wrapper,
+    .mask,
+    .cnt-quest-scene,
+    .cnt-raid,
+    .cnt-poker {
+      box-sizing: border-box;
+      min-height: calc(66.66vh - 31px) !important;
+    }
+  }
+  #mobage-game-container[style="zoom: 2;"] {
+    .wrapper,
+    .mask,
+    .cnt-quest-scene,
+    .cnt-raid,
+    .cnt-poker {
+      box-sizing: border-box;
+      min-height: calc(50vh - 31px) !important;
+    }
+  }
 
   @media (max-height: 500px) {
     .cnt-raid {
@@ -429,6 +429,16 @@
     background-color: rgba(16, 20, 20, 0.8);
   }
 
+  /* compact battle confirmation */
+  .txt-deck-confirm {
+    min-height: 60px;
+  }
+
+  .txt-deck-confirm .txt-limit {
+    font-size: 10px;
+    font-style: italic;
+  }
+
   /* compact enhancements */
   .prt-enhance-detail.prt-module-enhancement {
     font-size: 10px;
@@ -470,6 +480,39 @@
   .lis-treasure .prt-treasure-count .txt-treasure-count {
     font-size: 16px !important;
     padding: 2px 0;
+  }
+
+  /* compact crew skills */
+  .cnt-guild .prt-support-list {
+    padding-bottom: 30px;
+  }
+
+  .cnt-guild .prt-support-list .prt-support-info {
+    margin-bottom: 12px;
+  }
+
+  .cnt-guild .prt-support-list .lis-support {
+    transform: scale(1, 0.75);
+    margin: -26px 2px;
+  }
+
+  .cnt-guild .prt-support-list .lis-support > * {
+    transform: scale(1, 1.33);
+  }
+
+  .cnt-guild .prt-support-list .lis-support .txt-support-title {
+    text-align: left;
+    left: 76px;
+    position: relative;
+    width: 200px;
+  }
+
+  .cnt-guild .prt-support-list .lis-support .prt-support-description {
+    padding: 12px 10px 0 0;
+  }
+  .cnt-guild .prt-support-list .lis-support .btn-use-support,
+  .cnt-guild .prt-support-list .lis-support .onm-use-support {
+    top: 64px;
   }
 
   /* smaller stamps, with real size zoom on hover */
@@ -584,16 +627,6 @@
 
   #submenu #cnt-submenu-navi-vertical {
     background: black !important;
-  }
-
-  /* compact battle confirmation */
-  .txt-deck-confirm {
-    min-height: 60px;
-  }
-
-  .txt-deck-confirm .txt-limit {
-    font-size: 10px;
-    font-style: italic;
   }
 
   /* */
