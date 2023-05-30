@@ -432,8 +432,8 @@
           padding: 0 5px 0 0;
             
           &:before {
-            transform: scale(0.75);
-            margin: -12%;
+            transform: scale(0.78);
+            margin: -11%;
           }
 
           .img-reward,
