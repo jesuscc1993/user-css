@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2023.05.19.15.13
+@version        2023.05.31.15.13
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -73,7 +73,7 @@
 
   ytd-rich-grid-renderer ytd-rich-item-renderer:not([is-slim-media]) {
     width: var(--rich-grid-thumbnail-width) !important;
-    max-width: 25%;
+    max-width: calc(25% - var(--ytd-rich-grid-item-margin));
   }
 
   /* shorts grid zoom */
