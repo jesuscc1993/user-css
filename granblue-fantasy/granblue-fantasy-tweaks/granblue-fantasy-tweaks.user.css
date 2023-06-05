@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2023.06.05.16.15
+@version        2023.06.05.16.32
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -192,8 +192,8 @@
   #mobage-game-container[style="zoom: 1;"] {
     .wrapper,
     .mask,
-    #cnt-quest[class="cnt-quest"],
-    #cnt-quest[class="cnt-quest"] .prt-title,
+    #quest-stage-skip + .cnt-quest,
+    #quest-stage-skip + .cnt-quest .prt-title,
     .cnt-quest-scene,
     .cnt-raid,
     .cnt-poker {
@@ -204,8 +204,8 @@
   #mobage-game-container[style="zoom: 1.5;"] {
     .wrapper,
     .mask,
-    #cnt-quest[class="cnt-quest"],
-    #cnt-quest[class="cnt-quest"] .prt-title,
+    #quest-stage-skip + .cnt-quest,
+    #quest-stage-skip + .cnt-quest .prt-title,
     .cnt-quest-scene,
     .cnt-raid,
     .cnt-poker {
@@ -216,8 +216,8 @@
   #mobage-game-container[style="zoom: 2;"] {
     .wrapper,
     .mask,
-    #cnt-quest[class="cnt-quest"],
-    #cnt-quest[class="cnt-quest"] .prt-title,
+    #quest-stage-skip + .cnt-quest,
+    #quest-stage-skip + .cnt-quest .prt-title,
     .cnt-quest-scene,
     .cnt-raid,
     .cnt-poker {
@@ -419,6 +419,10 @@
       display: none !important;
     }
 
+    .prt-result-cnt {
+      padding: 0 0 40px;
+    }
+
     .cnt-get-treasure .btn-auto-recycle-setting {
       margin: 10px auto 0;
     }
@@ -429,6 +433,10 @@
 
     .prt-reward-user {
       padding: 5px 0;
+
+      + .prt-button-area {
+        margin: 0;
+      }
     }
   }
 
