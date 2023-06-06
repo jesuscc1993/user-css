@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2023.06.06.18.47
+@version        2023.06.06.18.48
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -38,8 +38,8 @@
     --ytd-grid-6-columns-width: var(--ytd-grid-max-width);
   }
 
-  ytd-shelf-renderer,
-  ytd-section-list-renderer {
+  [page-subtype="channels"] ytd-shelf-renderer,
+  [page-subtype="channels"] ytd-section-list-renderer {
     max-width: 1284px;
     margin: 0 auto;
   }
