@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2023.06.06.16.24
+@version        2023.06.06.18.47
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -38,6 +38,12 @@
     --ytd-grid-6-columns-width: var(--ytd-grid-max-width);
   }
 
+  ytd-shelf-renderer,
+  ytd-section-list-renderer {
+    max-width: 1284px;
+    margin: 0 auto;
+  }
+
   /* sidebar width */
   ytd-app {
     --app-drawer-width: drawer-width;
@@ -49,6 +55,11 @@
 
   ytd-app[guide-persistent-and-visible] ytd-page-manager.ytd-app {
     margin-left: var(--app-drawer-width);
+  }
+
+  /* hide weird extra space next to the sidebar */
+  #contentContainer.tp-yt-app-drawer[swipe-open].tp-yt-app-drawer::after {
+    display: none;
   }
 
   /* playlist sidebar */
