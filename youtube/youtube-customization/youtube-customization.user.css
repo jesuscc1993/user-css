@@ -28,7 +28,7 @@
     --grid-thumbnail-height: grid-thumbnail-width * thumbnail-aspect-ratio;
     --grid-thumbnail-width: grid-thumbnail-width;
 
-    --rich-grid-thumbnail-height: thumbnail-aspect-ratio;
+    --rich-grid-thumbnail-height: rich-grid-thumbnail-width * thumbnail-aspect-ratio;
     --rich-grid-thumbnail-width: rich-grid-thumbnail-width;
 
     --list-thumbnail-height: list-thumbnail-width * thumbnail-aspect-ratio;
@@ -74,7 +74,7 @@
   ytd-rich-grid-renderer ytd-rich-item-renderer:not([is-slim-media]) {
     width: var(--rich-grid-thumbnail-width) !important;
     max-width: calc(25% - var(--ytd-rich-grid-item-margin));
-  }
+  } 
 
   /* shorts grid zoom */
   ytd-reel-shelf-renderer ytd-thumbnail.ytd-grid-video-renderer {
