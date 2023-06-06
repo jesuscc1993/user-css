@@ -1,23 +1,23 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2023.06.06.18.48
+@version        2023.06.06.21.16
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var text       list-thumbnail-width            "List thumbnail width"                100px
-@var text       drawer-width                    "App drawer width"                    240px
-@var text       grid-max-width                  "Max grid width"                      1284px
-@var color      sub-bg                          "Subtitle background color"           rgba(0, 0, 0, .72)
-@var text       sub-border-radius               "Subtitle border radius"              0px
-@var text       max-playlist-height             "Maximum playlist height"             460px
-@var text       max-playlist-width              "Maximum playlist width"              402px
-@var checkbox   reduced-sidebar-padding         "Reduce sidebar spacing"              0
-@var checkbox   reduced-grid-padding            "Reduce grid spacing"                 0
-@var checkbox   hide-channel-avatars            "Hide channel avatars in grid"        0
-@var checkbox   gray-out-watched                "Gray out watched videos"             0
+@var text       list-thumbnail-width      "List thumbnail width"                    100px
+@var text       drawer-width              "App drawer width"                        240px
+@var text       grid-max-width            "Max grid width"                          1284px
+@var color      sub-bg                    "Subtitle background color"               rgba(0, 0, 0, .72)
+@var text       sub-border-radius         "Subtitle border radius"                  0px
+@var text       max-playlist-height       "Maximum playlist height"                 460px
+@var text       max-playlist-width        "Maximum playlist width"                  402px
+@var checkbox   reduced-sidebar-padding   "Reduce sidebar spacing"                  0
+@var checkbox   reduced-grid-padding      "Reduce grid spacing"                     0
+@var checkbox   hide-channel-avatars      "Hide channel avatars in subscriptions"   0
+@var checkbox   gray-out-watched          "Gray out watched videos"                 0
 
 ==/UserStyle== */
 /*
@@ -145,6 +145,24 @@
     #avatar-link.ytd-rich-grid-media {
       display: none;
     }
+		
+		[page-subtype="subscriptions"][role="main"] ytd-item-section-renderer {
+			border: none !important;
+			
+			.grid-subheader h2 {
+      	display: none;				
+			}
+
+			&:not(:nth-child(1)) {
+				#contents.ytd-shelf-renderer {
+					margin-top: 0;
+				}
+
+				.grid-subheader {
+					display: none;
+				}
+			}
+		}
   }
 
   /* gray-out-watched */
