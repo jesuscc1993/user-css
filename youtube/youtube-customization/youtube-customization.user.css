@@ -22,7 +22,7 @@
 /*
   for 5 cols at 1920p:
     drawer-width: 190px
-    grid-max-width: calc(100vw - var(--app-drawer-width) - 17px)
+    grid-max-width: calc(100vw - 190px - 17px)
 */
 @-moz-document domain("youtube.com") {
   :root {
