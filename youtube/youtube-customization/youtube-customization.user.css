@@ -9,7 +9,7 @@
 
 @var text       grid-thumbnail-width            "Grid thumbnail width"                210px
 @var text       rich-grid-thumbnail-width       "Rich grid thumbnail width"           336px
-@var text       list-thumbnail-width            "List thumbnail width"                120px
+@var text       list-thumbnail-width            "List thumbnail width"                100px
 @var text       drawer-width                    "App drawer width"                    240px
 @var text       grid-max-width                  "Max grid width"                      1284px
 @var color      sub-bg                          "Subtitle background color"           rgba(0, 0, 0, .72)
@@ -36,7 +36,7 @@
   }
 
   html:not(.style-scope) {
-    --ytd-grid-max-width: grid-max-width;
+    --ytd-grid-max-width: grid-max-width; /* calc(100vw - 240px - 17px) */
     --ytd-grid-6-columns-width: var(--ytd-grid-max-width);
 
     --ytd-rich-grid-item-min-width: none;
@@ -106,10 +106,6 @@
 
   ytd-guide-renderer.ytd-app {
     width: var(--app-drawer-width);
-  }
-
-  tp-yt-paper-item.ytd-guide-entry-renderer {
-    padding: 0 16px;
   }
 
   ytd-app[guide-persistent-and-visible] ytd-page-manager.ytd-app {
