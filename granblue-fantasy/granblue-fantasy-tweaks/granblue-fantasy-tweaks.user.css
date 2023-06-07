@@ -779,6 +779,9 @@
   .cnt-replicard-mission .prt-replicard-tab {
     margin-top: 10px;
   }
+  .cnt-replicard-mission .prt-interlude-banner {
+    top: 89px;
+  }
 }
 
 @-moz-document url-prefix("https://game.granbluefantasy.jp/#raid/")
