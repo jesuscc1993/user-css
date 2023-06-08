@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2023.06.06.21.16
+@version        2023.06.08.19.36
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -16,8 +16,9 @@
 @var text       max-playlist-width        "Maximum playlist width"                  402px
 @var checkbox   reduced-sidebar-padding   "Reduce sidebar spacing"                  0
 @var checkbox   reduced-grid-padding      "Reduce grid spacing"                     0
-@var checkbox   hide-channel-avatars      "Hide channel avatars in subscriptions"   0
 @var checkbox   gray-out-watched          "Gray out watched videos"                 0
+@var checkbox   hide-watched              "Hide watched videos"                     0
+@var checkbox   hide-channel-avatars      "Hide channel avatars in subscriptions"   0
 
 ==/UserStyle== */
 /*
@@ -170,6 +171,14 @@
     ytd-grid-video-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer),
     ytd-rich-item-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer) {
       filter: grayscale(.9) brightness(.25);
+    }
+  }
+
+  /* hide-watched */
+  if (hide-watched) {
+    ytd-grid-video-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer),
+    ytd-rich-item-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer) {
+      display: none;
     }
   }
 }
