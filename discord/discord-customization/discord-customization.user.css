@@ -77,7 +77,7 @@
     z-index: 102;
   }
 
-	[class*="content-"] [class*="sidebar-"] {
+  [class*="content-"] [class*="sidebar-"] {
     height: 100%;
   }
 
@@ -257,7 +257,7 @@
     [class*="messagesWrapper-"] img.emoji.jumboable:hover {
       transform: scale(2);
     }
-    
+
     [class*="messagesWrapper-"] [class*="reaction"] img.emoji {
       transform: scale(1) !important;
     }

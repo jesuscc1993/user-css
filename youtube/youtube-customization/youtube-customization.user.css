@@ -146,24 +146,24 @@
     #avatar-link.ytd-rich-grid-media {
       display: none;
     }
-		
-		[page-subtype="subscriptions"][role="main"] ytd-item-section-renderer {
-			border: none !important;
-			
-			.grid-subheader h2 {
-      	display: none;				
-			}
+    
+    [page-subtype="subscriptions"][role="main"] ytd-item-section-renderer {
+      border: none !important;
+      
+      .grid-subheader h2 {
+        display: none;        
+      }
 
-			&:not(:nth-child(1)) {
-				#contents.ytd-shelf-renderer {
-					margin-top: 0;
-				}
+      &:not(:nth-child(1)) {
+        #contents.ytd-shelf-renderer {
+          margin-top: 0;
+        }
 
-				.grid-subheader {
-					display: none;
-				}
-			}
-		}
+        .grid-subheader {
+          display: none;
+        }
+      }
+    }
   }
 
   /* gray-out-watched */
