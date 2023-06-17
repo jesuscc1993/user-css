@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2023.05.23.17.39
+@version        2023.06.17.15.40
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -44,53 +44,61 @@
   }
 
   /* responsive columns */
-  [class*="content-"] [class*="sidebar-"],
-  [class*="membersWrap-"] [class*="members-"] {
-    max-width: var(--max-sidebar-width) !important;
-    min-width: var(--min-sidebar-width) !important;
-    width: 100% !important;
-  }
+  [class*="content-"] {
+    [class*="sidebar-"],
+    [class*="membersWrap-"] [class*="members-"] {
+      max-width: var(--max-sidebar-width) !important;
+      min-width: var(--min-sidebar-width) !important;
+      width: 100% !important;
+    }
 
-  [class*="content-"] [class*="sidebar-"] [class*="channel"],
-  [class*="content-"] [class*="membersWrap-"] [class*="member-"] {
-    max-width: 100% !important;
-  }
+    [class*="sidebar-"] [class*="channel"],
+    [class*="membersWrap-"] [class*="member-"] {
+      max-width: 100% !important;
+    }
 
-  [class*="content-"] [class*="bannerImage-"],
-  [class*="content-"] [class*="bannerImage-"] [class^="bannerImg"],
-  [class*="content-"] [class*="bannerImage-"] [class^="bannerImg"]:before {
-    width: 100%;
-  }
+    [class*="bannerImage-"],
+    [class*="bannerImage-"] [class^="bannerImg"],
+    [class*="bannerImage-"] [class^="bannerImg"]:before {
+      width: 100%;
+    }
 
-  [class*="content-"] [class*="sidebar-"] [class*="panels-"] [class*="container-"] [class*="avatarWrapper-"] {
-    flex: 1;
+    [class*="sidebar-"] [class*="panels-"] [class*="container-"] [class*="avatarWrapper-"] {
+      flex: 1;
+    }
   }
 
   /* channel height */
   [class*="sidebar-"] [class*="iconVisibility"]:not([class*="wrapperCommon"]) a {
     padding: var(--channel-padding) 0;
+
+    [class*="children"] {
+      margin-top: 0;
+    }
   }
 
   /* HIDE UNLESS HOVERED */
   /* common setup */
-  [class*="content-"] [class*="guilds"] {
-    z-index: 102;
-  }
+  [class*="content-"] {
+    [class*="guilds"] {
+      z-index: 102;
+    }
 
-  [class*="content-"] [class*="sidebar-"] {
-    height: 100%;
-  }
+    [class*="sidebar-"] {
+      height: 100%;
+    }
 
-  [class*="content-"] [class*="membersWrap"] {
-    right: 0;
-    height: calc(100vh - 50px);
-  }
+    [class*="membersWrap"] {
+      right: 0;
+      height: calc(100vh - 50px);
+    }
 
-  [class*="content-"] [class*="sidebar-"],
-  [class*="content-"] [class*="membersWrap"] {
-    transition: 0.2s;
-    transition-delay: 0.2s;
-    z-index: 101;
+    [class*="sidebar-"],
+    [class*="membersWrap"] {
+      transition: 0.2s;
+      transition-delay: 0.2s;
+      z-index: 101;
+    }
   }
 
   /* hide server members unless hovered */
@@ -106,37 +114,39 @@
 
   /* hide channels unless hovered */
   @media (max-width: 800px) {
-    [class*="sidebar-"] + [class*="chat"] {
-      padding-left: 8px;
+    [class*="sidebar-"] {
+      position: absolute;
+
+      &:not(:hover) {
+        margin-left: calc(var(--min-sidebar-width) * -1 + 8px);
+      }
+
+      & + [class*="chat"] {
+        padding-left: 8px;
+      }
     }
 
     [class*="chatContent"] [class*="messagesWrapper"] {
       padding-right: 8px;
     }
-
-    [class*="sidebar-"] {
-      position: absolute;
-    }
-
-    [class*="sidebar-"]:not(:hover) {
-      margin-left: calc(var(--min-sidebar-width) * -1 + 8px);
-    }
   }
 
   /* HIDE AVATARS */
   @media (max-width: 480px) {
-    [class*="messageListItem"] img[class*="avatar"],
-    [class*="messageListItem"] [class*="timestamp"] {
-      display: none;
-    }
+    [class*="messageListItem"] {
+      img[class*="avatar"],
+      [class*="timestamp"] {
+        display: none;
+      }
 
-    [class*="messageListItem"] [class*="message"] {
-      padding: 0.125rem 1rem;
-    }
+      [class*="message"] {
+        padding: 0.125rem 1rem;
+      }
 
-    [class*="messageListItem"] [class*="messageContent"] {
-      margin-left: 0;
-      padding-left: 0;
+      [class*="messageContent"] {
+        margin-left: 0;
+        padding-left: 0;
+      }
     }
   }
 
@@ -148,18 +158,20 @@
   }
 
   /* emojis */
-  [class*="messagesWrapper"] img.emoji:not(.jumboable) {
-    width: var(--inline-emoji-size) !important;
-    height: var(--inline-emoji-size) !important;
-  }
+  [class*="messagesWrapper"] {
+    img.emoji:not(.jumboable) {
+      width: var(--inline-emoji-size) !important;
+      height: var(--inline-emoji-size) !important;
+    }
 
-  [class*="messagesWrapper"] img.emoji.jumboable {
-    width: var(--block-emoji-size) !important;
-    height: var(--block-emoji-size) !important;
-  }
+    img.emoji.jumboable {
+      width: var(--block-emoji-size) !important;
+      height: var(--block-emoji-size) !important;
+    }
 
-  [class*="messagesWrapper"] [class*="scrollable"] {
-    max-height: none;
+    [class*="scrollable"] {
+      max-height: none;
+    }
   }
 
   /* MISCELLANEOUS */
@@ -173,18 +185,22 @@
   }
 
   /* float bot tag */
-  [class*="nameAndDecorators"] > *:first-child {
-    flex: 1;
-  }
+  [class*="nameAndDecorators"] {
+    & > *:first-child {
+      flex: 1;
+    }
 
-  [class*="nameAndDecorators"] > *:not(:first-child) {
-    align-self: normal;
+    & > *:not(:first-child) {
+      align-self: normal;
+    }
   }
 
   /* hide download icon */
-  [class*="guilds"] [class*="scroller"] > [class*="listItem"]:last-child,
-  [class*="guilds"] [class*="scroller"] > [class*="listItem"]:nth-last-child(2) {
-    display: none;
+  [class*="guilds"] [class*="scroller"] > [class*="listItem"] {
+    &:last-child,
+    &:nth-last-child(2) {
+      display: none;
+    }
   }
 
   /* hide misc stuff */
@@ -236,30 +252,32 @@
 
   /* emoji zoom */
   html when (@emoji-zoom =1) {
-    [class*="messagesWrapper"] [class*="messageContent-"] {
-      overflow: visible;
-    }
+    [class*="messagesWrapper-"] {
+      [class*="messageContent-"] {
+        overflow: visible;
+      }
 
-    [class*="messagesWrapper-"] img.emoji {
-      transition: 0.15s;
-      z-index: 1;
-      position: relative;
-    }
+      img.emoji {
+        transition: 0.15s;
+        z-index: 1;
+        position: relative;
+      }
 
-    [class*="messagesWrapper-"] img.emoji:hover {
-      z-index: 2;
-    }
+      img.emoji:hover {
+        z-index: 2;
+      }
 
-    [class*="messagesWrapper-"] img.emoji:not(.jumboable):hover {
-      transform: scale(1.8333);
-    }
+      img.emoji:not(.jumboable):hover {
+        transform: scale(1.8333);
+      }
 
-    [class*="messagesWrapper-"] img.emoji.jumboable:hover {
-      transform: scale(2);
-    }
+      img.emoji.jumboable:hover {
+        transform: scale(2);
+      }
 
-    [class*="messagesWrapper-"] [class*="reaction"] img.emoji {
-      transform: scale(1) !important;
+      [class*="reaction"] img.emoji {
+        transform: scale(1) !important;
+      }
     }
 
     [role="textbox"] img.emoji:hover {
