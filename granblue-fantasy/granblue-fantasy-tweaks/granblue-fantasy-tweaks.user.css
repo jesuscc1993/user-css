@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2023.06.17.16.49
+@version        2023.06.25.12.21
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -11,6 +11,36 @@
 @-moz-document domain("granbluefantasy.jp") {
   :root {
     --c-scrollbar-bg: #000;
+  }
+
+  /* keep battle commands visible when selecting character skills */
+  .cnt-raid {
+    .prt-command {
+      height: 204px;
+    }
+
+    .cnt-multi {
+      margin-top: 488px;
+    }
+
+    #prt-sub-command-group {
+      display: flex !important;
+      justify-content: space-between;
+      top: 47px;
+      width: 100%;
+
+      &[style="display: none;"] {
+        margin-top: 0;
+        position: absolute;
+        top: 160px;
+      }
+    }
+
+    #prt-advanced-command {
+      + #prt-sub-command-group:not([style="display: none;"]) {
+        top: 17px;
+      }
+    }
   }
 
   /* taller raid log */
