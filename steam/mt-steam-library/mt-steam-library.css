@@ -1,3 +1,9 @@
+:root {
+  --cover-border-radius: 3.5px;
+  --cover-width: 142px;
+  --cover-height: calc(var(--cover-width) * 9 / 6);
+}
+
 /* hide news and sidebar until hovered */
 [class*='library_LeftListSizableContainer'],
 [class*='libraryhome_UpdatesContainer'] {
@@ -32,9 +38,9 @@
 
 /* custom cover sizes */
 [class*="libraryhomeshowcases_ShowcaseGrid"] {
-  gap: 12px !important;
-  grid-auto-rows: 217.5px !important;
-  grid-template-columns: repeat(auto-fill, 145px) !important;
+  gap: 16px !important;
+  grid-auto-rows: var(--cover-height) !important;
+  grid-template-columns: repeat(auto-fill, var(--cover-width)) !important;
   justify-content: center !important;
   padding: 8px 0 !important;
 }
@@ -44,11 +50,13 @@
 [class*="libraryhomeshowcases_ShowcaseOuter"] {
   padding-bottom: 24px;
 }
+[class*='appportrait_LibraryItemBox'] {
+  border-width: 0 !important;
+}
 /* */
 
 /* hide game card badges until hovered */
 [class*='appportrait_LibraryItemBox'] {
-  border-radius: 3.5px !important;
   transition-duration: 150ms !important;
   transition-timing-function: cubic-bezier(0, 0.7, 0.8, 1) !important;
 }
@@ -93,11 +101,16 @@
 }
 /* */
 
+/* cover border radius */
+[class*='appportrait_LibraryItemBox'] {
+  border-radius: var(--cover-border-radius);
+}
+
 /* fade uninstalled games */
 [class*='appportrait_UninstalledBar'][class*='appportrait_UninstalledBarBottom'] {
   background: #24282fC0;
   border-radius: 2px;
-  bottom: -1px;
+  bottom: 0;
   height: 103%;
   pointer-events: none;
   z-index: 100;
@@ -107,4 +120,3 @@
 [class*="appportrait_UninstalledBarBottom"] {
   margin-top: 0 !important;
 }
-/* end: fix uninstalled games */
