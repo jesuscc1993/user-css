@@ -1,0 +1,110 @@
+/* hide news and sidebar until hovered */
+[class*='library_LeftListSizableContainer'],
+[class*='libraryhome_UpdatesContainer'] {
+  position: absolute;
+  transition-delay: 333ms;
+  transition-duration: 150ms;
+  z-index: 100;
+}
+[class*='library_LeftListSizableContainer'] {
+  height: calc(100% - 12px);
+  padding-right: 16px;
+}
+[class*='library_LeftListSizableContainer']:not(:hover) {
+  margin-left: -19%;
+}
+
+[class*='libraryhome_UpdatesContainer'] {
+  height: 316px !important;
+  border-bottom: 16px solid #2c323a;
+}
+[class*='libraryhome_UpdatesContainer']:hover {
+  border-bottom-width: 0;
+}
+[class*='libraryhome_UpdatesContainer']:not(:hover) {
+  margin-top: -300px;
+}
+
+[class*='libraryhome_LibraryHome'] {
+  padding: 12px 4px 32px 10px;
+}
+/* */
+
+/* custom cover sizes */
+[class*="libraryhomeshowcases_ShowcaseGrid"] {
+  gap: 12px !important;
+  grid-auto-rows: 217.5px !important;
+  grid-template-columns: repeat(auto-fill, 145px) !important;
+  justify-content: center !important;
+  padding: 8px 0 !important;
+}
+[class*="cssgrid_Container"] {
+  height: auto !important;
+}
+[class*="libraryhomeshowcases_ShowcaseOuter"] {
+  padding-bottom: 24px;
+}
+/* */
+
+/* hide game card badges until hovered */
+[class*='appportrait_LibraryItemBox'] {
+  border-radius: 3.5px !important;
+  transition-duration: 150ms !important;
+  transition-timing-function: cubic-bezier(0, 0.7, 0.8, 1) !important;
+}
+[class*='appportrait_LibraryItemBoxShine'] {
+  display: none !important;
+}
+[class*='appportrait_Draggable'] [class*='appportrait_LibraryItemBoxSubscript'] {
+  transition: 500ms;
+  pointer-events: none;
+}
+[class*='appportrait_Draggable']:not(:hover) [class*='appportrait_LibraryItemBoxSubscript'] {
+  opacity: 0;
+}
+/* */
+
+/*  move "add shelf" button to the bottom */
+[class*='libraryhome_LibraryHome'] > div {
+  display: flex;
+  flex-direction: column;
+}
+
+[class*='libraryhome_LibraryHome']
+  > div
+  > [class*='libraryhomeshowcases_Sortable'] {
+  order: 0;
+}
+[class*='libraryhome_LibraryHome']
+  > div
+  > *:not([class*='libraryhomeshowcases_Sortable']) {
+  order: 1;
+}
+/* */
+
+/* disable cover hover */
+[class*='HoversEnabled'] [class*='LibraryItemBox']:hover {
+  transform: none !important;
+}
+
+[class*='HoversEnabled']:hover [class*='AppPortraitBanner'],
+[class*='HoversEnabled']:hover [class*='LibraryItemBoxSubscript'] {
+  transform: none !important;
+}
+/* */
+
+/* fade uninstalled games */
+[class*='appportrait_UninstalledBar'][class*='appportrait_UninstalledBarBottom'] {
+  background: #24282fC0;
+  border-radius: 2px;
+  bottom: -1px;
+  height: 103%;
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* start: fix uninstalled games */
+[class*="appportrait_UninstalledBarBottom"] {
+  margin-top: 0 !important;
+}
+/* end: fix uninstalled games */
