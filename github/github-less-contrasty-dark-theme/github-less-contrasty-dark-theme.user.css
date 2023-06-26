@@ -1,0 +1,22 @@
+/* ==UserStyle==
+@name           GitHub - Less contrasty dark theme
+@description    Changes a few colors to reduce the contrast of the default dark theme.
+@version        2023.06.26.16.24
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+
+==/UserStyle== */
+@-moz-document domain("github.com") {
+  [data-color-mode=light][data-light-theme=dark],
+  [data-color-mode=dark][data-dark-theme=dark] {
+    --color-canvas-inset: #070a10;
+    --color-checks-bg: #070a10;
+    --color-scale-black: #070a10;
+    --color-shadow-extra-large: 0 12px 48px #070a10;
+    --color-shadow-large: 0 8px 24px #070a10;
+    --color-shadow-medium: 0 3px 6px #070a10;
+    --color-switch-track-checked-disabled-fg: #070a10;
+    --color-switch-track-disabled-fg: #070a10;
+  }
+}

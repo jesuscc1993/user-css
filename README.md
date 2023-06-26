@@ -9,12 +9,18 @@ Requires the [Stylus](https://github.com/openstyles/stylus#releases) userstyle l
 
 # List
 
-* [chrome/chrome-dark-scrollbar-and-audio-player](chrome/chrome-dark-scrollbar-and-audio-player)
+- [chrome/chrome-dark-scrollbar-and-audio-player](chrome/chrome-dark-scrollbar-and-audio-player)
+
+* [coverage/coverage-dark](coverage/coverage-dark)
 
 - [discord/discord-customization](discord/discord-customization)
 
 * [duolingo/duolingo-customization](duolingo/duolingo-customization)
 * [duolingo/duolingo-dark](duolingo/duolingo-dark)
+
+- [firefox/firefox-dark-scrollbar](firefox/firefox-dark-scrollbar)
+
+* [github/github-less-contrasty-dark-theme](github/github-less-contrasty-dark-theme)
 
 - [global/media-transformations](global/media-transformations)
 
