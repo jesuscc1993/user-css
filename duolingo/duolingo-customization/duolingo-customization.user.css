@@ -1,19 +1,20 @@
 /* ==UserStyle==
 @name           Duolingo - Customization
 @description    Provides some extra customization options for Duolingo.
-@version        2023.04.19.11.20
+@version        2023.07.06.15.27
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var  checkbox  hide-leagues           "Hide leagues"                                 0
-@var  checkbox  hide-goals             "Hide goals"                                   0
-@var  checkbox  hide-premium           "Hide premium adds and features"               0
-@var  checkbox  hide-leaderboards      "Hide leaderboards"                            0
-@var  checkbox  hide-classes           "Hide classes"                                 0
-@var  checkbox  hide-pronunciation     "Hide pronunciation"                           0
-@var  checkbox  hide-characters        "Hide Duolingo characters"                     0
+@var  checkbox  hide-leagues                        "Hide leagues"                                 0
+@var  checkbox  hide-goals                          "Hide goals"                                   0
+@var  checkbox  hide-premium                        "Hide premium adds and features"               0
+@var  checkbox  hide-leaderboards                   "Hide leaderboards"                            0
+@var  checkbox  hide-classes                        "Hide classes"                                 0
+@var  checkbox  hide-pronunciation                  "Hide pronunciation"                           0
+@var  checkbox  hide-pronunciation-unless-hovered   "Hide pronunciation (unless hovered)"          0
+@var  checkbox  hide-characters                     "Hide Duolingo characters"                     0
 
 ==/UserStyle== */
 @-moz-document domain("duolingo.com") {
@@ -65,6 +66,19 @@
     }
   }
 
+  if (hide-pronunciation-unless-hovered) {
+    ._1YQpP,
+    ._1bl79 {
+      &:not(:hover) ._47IB1._3x_e5._2m_ED {
+        opacity: 0;
+      }
+
+      ._47IB1._3x_e5._2m_ED {
+        transition: opacity 150ms;
+      }
+    }
+  }
+
   /* goals */
   if (hide-goals) {
     [data-test="/settings/coach"] {
@@ -111,8 +125,7 @@
 
   /* classes */
   if (hide-classes) {
-    [href="https://classes.duolingo.com/"]
-    {
+    [href="https://classes.duolingo.com/"] {
       display: none !important;
     }
   }
