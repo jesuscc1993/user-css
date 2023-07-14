@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Granblue Fantasy Enhancements
 @description  Allows the customization of the game's layout and responsive behavior.
-@version      2023.07.14.21.59
+@version      2023.07.14.22.12
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -56,6 +56,7 @@
 @var select   hide-sidebar          "⛔ Hide left sidebar" {
  "Enabled (required)": "enabled"
 }
+@var checkbox hide-town-background  "⛔ Hide town background" 0
 @var checkbox hide-outfit-sets      "⛔ Hide featured outfit sets" 0
 @var checkbox hide-pinboard         "⛔ Hide pinboard missions" 0
 @var checkbox hide-quest-comment    "⛔ Hide quest commentary" 0
@@ -92,7 +93,7 @@
     position: absolute !important;
   }
 
-  /* hide-sidebar */
+  /* hide sidebar */
   body.jssdk > div:first-child > div:first-child {
     display: none;
   }
@@ -140,7 +141,7 @@
     }
   }
 
-  /* center-popups */
+  /* center popups */
   if (center-popups) {
     #pop,
     #pop-deck,
@@ -243,7 +244,7 @@
     }
   }
 
-  /* selectable-text */
+  /* selectable text */
   if (selectable-text) {
     [class^="txt"],
     [class^="txt"] *,
@@ -259,7 +260,7 @@
     }
   }
 
-  /* gray-out-equipped */
+  /* gray out equipped */
   if (gray-out-equipped) {
     .btn-item.equipped,
     .btn-lis-item.equipped,
@@ -269,14 +270,14 @@
     }
   }
 
-  /* gray-out-sparked */
+  /* gray out sparked */
   if (gray-out-sparked) {
     .lis-get-npc.already {
       filter: grayscale(.5) brightness(.66);
     }
   }
 
-  /* keep-extras-open */
+  /* keep extras open */
   if (keep-extras-open) {
     .btn-campaign-toggle {
       background-image: url(https://prd-game-a-granbluefantasy.akamaized.net/assets_en/img/sp/ui/campaign_toggle/campaign_open.png?1511168524) !important;
@@ -291,7 +292,7 @@
     }
   }
 
-  /* submenu-on-left */
+  /* submenu on left */
   if (submenu-on-left && content-alignment !='left') {
     #submenu {
       left: 0 !important;
@@ -304,7 +305,7 @@
     }
   }
 
-  /* sort-summons */
+  /* sort summons */
   if (sort-summons) {
     .prt-supporter-list .prt-supporter-attribute.selected {
       display: flex;
@@ -340,7 +341,7 @@
     }
   }
 
-  /* compact-crew-skills */
+  /* compact crew skills */
   if (compact-crew-skills) {
     .cnt-guild .prt-support-list {
       padding-bottom: 30px;
@@ -376,7 +377,7 @@
     }
   }
 
-  /* compact-enhancements */
+  /* compact enhancements */
   if (compact-enhancements) {
     .prt-enhance-detail.prt-module-enhancement {
       font-size: 10px;
@@ -421,7 +422,7 @@
     }
   }
 
-  /* compact-event-rewards */
+  /* compact event rewards */
   if (compact-event-rewards) {
     #prt-reward-contents,
     .prt-reward-lineup {
@@ -479,7 +480,7 @@
     }
   }
 
-  /* compact-gacha */
+  /* compact gacha */
   if (compact-gacha) {
     .prt-obtain-multi br {
       display: none;
@@ -497,7 +498,7 @@
     }
   }
 
-  /* compact-item-pickup */
+  /* compact item pickup */
   if (compact-item-pickup) {
     .prt-button-box,
     .prt-button-box .prt-relation-button {
@@ -528,7 +529,7 @@
     }
   }
 
-  /* compact-raids */
+  /* compact raids */
   if (compact-raids == 'basic') {
     .prt-raid-list:has(.lis-raid) {
       margin: -10px 0 16px;
@@ -676,7 +677,7 @@
     }
   }
 
-  /* compact-summons */
+  /* compact summons */
   if (compact-summons == 'basic') {
     .prt-supporter-thumb {
       display: none;
@@ -815,7 +816,7 @@
     }
   }
 
-  /* compact-lists */
+  /* compact lists */
   if (compact-lists) {
     .pop-confirm-decompose .prt-target-items,
     .pop-confirm-recycle .prt-confirm-recycle,
@@ -834,14 +835,14 @@
     }
   }
 
-  /* hide-arcarum-skip */
+  /* hide arcarum skip */
   if (hide-arcarum-skip) {
     .prt-arcarum-skip {
       display: none;
     }
   }
 
-  /* hide-auto-select */
+  /* hide auto select */
   if (hide-auto-select) {
     .cnt-summon-list .btn-summon-all,
     .cnt-summon-list .prt-summon-all-disabled,
@@ -854,35 +855,35 @@
     }
   }
 
-  /* hide-header-banners */
+  /* hide header banners */
   if (hide-header-banners) {
     .pop-global-menu .prt-global-banner {
       display: none;
     }
   }
 
-  /* hide-scrollbars */
+  /* hide scrollbars */
   if (hide-scrollbars) {
     html ::-webkit-scrollbar {
       display: none !important;
     }
   }
 
-  /* hide-star-premium */
+  /* hide star premium */
   if (hide-star-premium) {
     .lis-gold.campaign {
       display: none;
     }
   }
 
-  /* hide-submenu */
+  /* hide submenu */
   if (hide-submenu) {
     #submenu {
       display: none !important;
     }
   }
 
-  /* hide-size */
+  /* hide size */
   if (hide-size) {
     #treasure-footer .cnt-treasure-footer {
       bottom: -10.5px;
@@ -894,7 +895,7 @@
     }
   }
 
-  /* hide-crystal-count */
+  /* hide crystal count */
   if (hide-crystal-count) {
     .prt-user-info .prt-info-possessed .prt-stone,
     .prt-player .prt-player-status .prt-info-possessed .prt-stone {
@@ -902,7 +903,7 @@
     }
   }
 
-  /* hide-gacha-banner */
+  /* hide gacha banner */
   if (hide-gacha-banner) {
     .lis-banner.prt-event-banner,
     .prt-gacha-banner-slider,
@@ -911,14 +912,14 @@
     }
   }
 
-  /* hide-gameplay-extras */
+  /* hide gameplay extras */
   if (hide-gameplay-extras) {
     .cnt-mypage > .prt-toggle-pane {
       display: none;
     }
   }
 
-  /* hide-global-footer */
+  /* hide global footer */
   if (hide-global-footer) {
     .cnt-global-footer {
       display: none;
@@ -929,21 +930,28 @@
 		}
   }
 
-  /* hide-special-draw */
+  /* hide special draw */
   if (hide-special-draw) {
     .btn-banner[data-href="gacha/campaign/69/gachacampaign"] {
       display: none;
     }
   }
+	
+	/* hide town background */
+  if (hide-town-background) {		
+		.prt-user-scene {
+			background-image: linear-gradient(to right, #88aeb7 0%,#b8d0d3 5%,#cfe8eb 20%,#d2d4cf 80%,#c7cebd 95%,#afc1c5 100%);
+		}
+  }
 
-  /* hide-outfit-sets */
+  /* hide outfit sets */
   if (hide-outfit-sets) {
     .btn-banner[data-href^="gacha/skin"] {
       display: none;
     }
   }
 
-  /* hide-quest-comment */
+  /* hide quest comment */
   if (hide-quest-comment) {
     .prt-lead {
       min-height: 12px;
@@ -955,21 +963,21 @@
     }
   }
 
-  /* hide-pinboard */
+  /* hide pinboard */
   if (hide-pinboard) {
     .prt-campaign-banners [data-href="campaign/panel"] {
       display: none;
     }
   }
 
-  /* hide-event-load */
+  /* hide event load */
   if (hide-event-load) {
     #ready > * {
       display: none !important;
     }
   }
 
-  /* hide-support-plus */
+  /* hide support plus */
   if (hide-support-plus) {
     .prt-supporter-list .prt-summon-quality,
     .prt-deck-select .prt-supporter .prt-supporter-info .prt-summon-image .prt-supporter-quality {
@@ -1059,7 +1067,7 @@ regexp("https://game.granbluefantasy.jp/#profile/fix/list/.*"),
 regexp("https://game.granbluefantasy.jp/#profile/pushed_npc/list"),
 regexp("https://game.granbluefantasy.jp/#recycle/.*"),
 regexp("https://game.granbluefantasy.jp/#sell/.*") {
-  /* compact-lists */
+  /* compact lists */
   if (compact-lists) {
     #lis-inner-summon,
     #lis-inner-weapon,
@@ -1142,7 +1150,7 @@ regexp("https://game.granbluefantasy.jp/#sell/.*") {
 }
 
 @-moz-document regexp("https://game.granbluefantasy.jp/#enhancement/.*") {
-  /* compact-upgrade */
+  /* compact upgrade */
   if (compact-upgrade) {
     .cnt-material-status .cnt-material-list .list,
     .cnt-material-status-item .cnt-material-list .list,
@@ -1169,7 +1177,7 @@ regexp("https://game.granbluefantasy.jp/#sell/.*") {
 }
 
 @-moz-document regexp("https://game.granbluefantasy.jp/#party/.*") {
-  /* hide-auto-select */
+  /* hide auto select */
   if (hide-auto-select) {
     .cnt-party .prt-contents {
       height: 400px;
@@ -1213,7 +1221,7 @@ regexp("https://game.granbluefantasy.jp/#sell/.*") {
 }
 
 @-moz-document regexp("https://game.granbluefantasy.jp/#coopraid/room/.*") {
-  /* rearrange-coop */
+  /* rearrange coop */
   if (rearrange-coop) {
     .cnt-coopraid {
       display: flex;
