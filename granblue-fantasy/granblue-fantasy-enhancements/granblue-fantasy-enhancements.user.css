@@ -1011,6 +1011,7 @@
   /* fix home notification badge */
   .prt-link-notification .prt-notification-count {
     height: 14px;
+    width: 34px;
   }
 
   /* fix crew skill text with custom font */
