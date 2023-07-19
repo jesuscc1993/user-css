@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Granblue Fantasy Enhancements
 @description  Allows the customization of the game's layout and responsive behavior.
-@version      2023.07.15.17.17
+@version      2023.07.15.17.18
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -1119,6 +1119,10 @@ regexp("https://game.granbluefantasy.jp/#sell/.*") {
     .prt-listup .prt-param-icon .btn-current-sort.on,
     [data-css="/mypage_character/list.css"] + .cnt-list .btn-item.on {
       transform: scale(.75);
+    }
+
+    [data-css="/party/list_npc.css"] + #cnt-list_npc .lis-npc, {
+      margin: -5.5px !important;
     }
 
     #prt-treasures-list .prt-order-middle .btn-article,
