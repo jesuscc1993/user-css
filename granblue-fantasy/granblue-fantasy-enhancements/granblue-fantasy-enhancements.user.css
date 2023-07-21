@@ -830,7 +830,7 @@
     .pop-confirm-recycle.pop-usual .txt-popup-body .prt-confirm-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle,
     .pop-decompose-confirm-consume .prt-target-items .lis-decompose-item .img-decompose-item,
     .pop-result-recycle.pop-usual .txt-popup-body .prt-result-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle {
-      width: 50px;
+      width: 48px;
       height: auto;
       margin: 2px;
     }
