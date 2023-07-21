@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Granblue Fantasy Enhancements
 @description  Allows the customization of the game's layout and responsive behavior.
-@version      2023.07.15.17.19
+@version      2023.07.15.18.12
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -826,13 +826,32 @@
       font-size: 0;
     }
 
+    .pop-decompose-confirm-treasure .prt-order-middle .prt-article,
+    .pop-decompose-confirm-treasure .prt-order-middle .prt-article .txt-material-status,
     .pop-confirm-decompose .prt-target-items .lis-decompose-item .img-decompose-item,
     .pop-confirm-recycle.pop-usual .txt-popup-body .prt-confirm-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle,
     .pop-decompose-confirm-consume .prt-target-items .lis-decompose-item .img-decompose-item,
     .pop-result-recycle.pop-usual .txt-popup-body .prt-result-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle {
-      width: 48px;
       height: auto;
+      width: 48px;
+    }
+
+    .pop-decompose-confirm-treasure .prt-order-middle .prt-article ,
+    .pop-confirm-decompose .prt-target-items .lis-decompose-item .img-decompose-item,
+    .pop-confirm-recycle.pop-usual .txt-popup-body .prt-confirm-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle,
+    .pop-decompose-confirm-consume .prt-target-items .lis-decompose-item .img-decompose-item,
+    .pop-result-recycle.pop-usual .txt-popup-body .prt-result-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle {
       margin: 2px;
+    }
+
+    .pop-decompose-confirm-treasure .prt-order-middle .prt-article .prt-material-thumbnail {
+      height: 28.5px;
+    }
+
+    .pop-decompose-confirm-treasure .prt-order-middle .prt-article .txt-material-status {
+      background-size: contain;
+      height: 22px;
+      padding: 4px 0;
     }
   }
 
@@ -925,10 +944,10 @@
     .cnt-global-footer {
       display: none;
     }
-		
-		.wrapper {
-			padding-bottom: 48px;
-		}
+    
+    .wrapper {
+      padding-bottom: 48px;
+    }
   }
 
   /* hide special draw */
@@ -937,12 +956,12 @@
       display: none;
     }
   }
-	
-	/* hide town background */
-  if (hide-town-background) {		
-		.prt-user-scene {
-			background-image: linear-gradient(to right, #88aeb7 0%,#b8d0d3 5%,#cfe8eb 20%,#d2d4cf 80%,#c7cebd 95%,#afc1c5 100%);
-		}
+  
+  /* hide town background */
+  if (hide-town-background) {    
+    .prt-user-scene {
+      background-image: linear-gradient(to right, #88aeb7 0%,#b8d0d3 5%,#cfe8eb 20%,#d2d4cf 80%,#c7cebd 95%,#afc1c5 100%);
+    }
   }
 
   /* hide outfit sets */
