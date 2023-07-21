@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Granblue Fantasy Enhancements
 @description  Allows the customization of the game's layout and responsive behavior.
-@version      2023.07.15.18.12
+@version      2023.07.15.18.14
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -836,11 +836,14 @@
       width: 48px;
     }
 
-    .pop-decompose-confirm-treasure .prt-order-middle .prt-article ,
     .pop-confirm-decompose .prt-target-items .lis-decompose-item .img-decompose-item,
     .pop-confirm-recycle.pop-usual .txt-popup-body .prt-confirm-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle,
     .pop-decompose-confirm-consume .prt-target-items .lis-decompose-item .img-decompose-item,
     .pop-result-recycle.pop-usual .txt-popup-body .prt-result-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle {
+      margin: 2px;
+    }
+
+    /* .pop-decompose-confirm-treasure .prt-order-middle .prt-article {
       margin: 2px;
     }
 
@@ -852,7 +855,7 @@
       background-size: contain;
       height: 22px;
       padding: 4px 0;
-    }
+    } */
   }
 
   /* hide arcarum skip */
