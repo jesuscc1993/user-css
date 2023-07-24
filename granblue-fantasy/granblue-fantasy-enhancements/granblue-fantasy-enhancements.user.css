@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Granblue Fantasy Enhancements
 @description  Allows the customization of the game's layout and responsive behavior.
-@version      2023.07.15.18.14
+@version      2023.07.15.18.15
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -508,13 +508,13 @@
 
     .prt-button-box .prt-relation-button {
       padding: 0;
-      transform: scale(0.75) translate(0, -4px);
+      transform: scale(0.75) translate(0, 2px);
     }
 
     .prt-button-box .prt-relation-button .btn-arcarum {
       font-size: 1.15em;
       line-height: .8em;
-      transform: scale(0.85) translate(0, -3px);
+      transform: scale(0.85) translate(0, 2px);
     }
 
     .prt-button-box .btn-show-button,
