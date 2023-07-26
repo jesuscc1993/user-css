@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Duolingo - Customization
 @description    Provides some extra customization options for Duolingo.
-@version        2023.07.06.15.27
+@version        2023.07.26.15.09
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -134,7 +134,7 @@
   ._3bTT7 {
     gap: 0;
 
-    a {
+    > div > a {
       margin-bottom: 8px;
       display: block;
     }
