@@ -19,6 +19,7 @@
 @var text avatar-scale               "Avatar scale"                unset
 @var text avatar-zoom                "Avatar zoom (hover)"         unset
 @var text group-spacing              "Message groups spacing"      unset
+@var text li-margin                  "List item margin"            4px
 @var text transition                 "Transition duration"         150ms
 @var checkbox darker-quotes          "Darker code and quotes"      0
 @var checkbox full-width-embeds      "Full width embeds"           0
@@ -41,6 +42,7 @@
     --group-spacing: @group-spacing;
     --max-sidebar-width: @max-sidebar-width;
     --min-sidebar-width: @min-sidebar-width;
+    --li-margin: @li-margin;
     --transition: @transition;
   }
 
@@ -181,11 +183,11 @@
 
   /* emojis */
   [class*="messagesWrapper"] {
-		/* fixes vanilla's lack of vertical spacing between emojis */
+    /* fixes vanilla's lack of vertical spacing between emojis */
     img.emoji {
       margin: 1px 0;
     }
-		
+    
     img.emoji:not(.jumboable) {
       width: var(--inline-emoji-size) !important;
       height: var(--inline-emoji-size) !important;
@@ -304,6 +306,11 @@
   [class*="mentioned"] .mention[class*="wrapper"] {
     color: var(--brand-experiment) !important;
     background: transparent;
+  }
+
+  /* custom list margin */
+  [class*="markup"] li {
+    margin-bottom: var(--li-margin);
   }
 
   /* darker code and quotes */
