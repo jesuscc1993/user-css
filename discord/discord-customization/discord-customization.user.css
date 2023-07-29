@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2023.07.29.21.47
+@version        2023.07.29.23.10
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -187,7 +187,7 @@
     img.emoji {
       margin: 1px 0;
     }
-    
+
     img.emoji:not(.jumboable) {
       width: var(--inline-emoji-size) !important;
       height: var(--inline-emoji-size) !important;
@@ -309,8 +309,14 @@
   }
 
   /* custom list margin */
+  [class*="markup"] ol,
+  [class*="markup"] ul {
+    margin: 4px 0 4px 16px;
+  }
+
+  [class*="markup"] ol,
   [class*="markup"] li {
-    margin-bottom: var(--li-margin);
+    margin: calc(var(--li-margin) / 2) 0;
   }
 
   /* darker code and quotes */
