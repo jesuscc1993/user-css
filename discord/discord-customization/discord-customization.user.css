@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2023.07.29.21.37
+@version        2023.07.29.21.47
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -181,6 +181,11 @@
 
   /* emojis */
   [class*="messagesWrapper"] {
+		/* fixes vanilla's lack of vertical spacing between emojis */
+    img.emoji {
+      margin: 1px 0;
+    }
+		
     img.emoji:not(.jumboable) {
       width: var(--inline-emoji-size) !important;
       height: var(--inline-emoji-size) !important;
