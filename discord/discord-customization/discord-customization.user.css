@@ -1,28 +1,29 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2023.07.29.20.31
+@version        2023.07.29.20.59
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   less
 
-@var text font-family                "Font family"                "'Whitney', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
-@var text block-emoji-size           "Block emoji size"           54px
-@var text inline-emoji-size          "Inline emoji size"          24px
-@var text reaction-emoji-size        "Reaction emoji size"        20px
-@var text min-sidebar-width          "Min sidebar width"          240px
-@var text max-sidebar-width          "Max sidebar width"          240px
-@var text channel-padding            "Channel spacing (sidebar)"  6px
-@var text group-spacing              "Message groups spacing"     unset
-@var text avatar-scale               "Avatar scale"               unset
-@var text avatar-zoom                "Avatar zoom (hover)"        unset
-@var checkbox darker-quotes          "Darker code and quotes"     0
-@var checkbox emoji-zoom             "Emoji zoom (hover)"         0
-@var checkbox full-width-embeds      "Full width embeds"          0
-@var checkbox reduce-message-spacing "Reduce message spacing"     0
-@var checkbox restore-blurple        "Restore blurple"            0
-@var checkbox blurple-mentions       "Blurple mentions"           0
+@var text font-family                "Font family"                 "'Whitney', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+@var text min-sidebar-width          "Min sidebar width"           240px
+@var text max-sidebar-width          "Max sidebar width"           240px
+@var text channel-padding            "Channel spacing (sidebar)"   6px
+@var text block-emoji-size           "Block emoji size"            3rem
+@var text block-emoji-zoom           "Block emoji zoom (hover)"    unset
+@var text inline-emoji-size          "Inline emoji size"           1.375em
+@var text inline-emoji-zoom          "Inline emoji zoom (hover)"   unset
+@var text reaction-emoji-size        "Reaction emoji size"         1rem
+@var text avatar-scale               "Avatar scale"                unset
+@var text avatar-zoom                "Avatar zoom (hover)"         unset
+@var text group-spacing              "Message groups spacing"      unset
+@var checkbox darker-quotes          "Darker code and quotes"      0
+@var checkbox full-width-embeds      "Full width embeds"           0
+@var checkbox reduce-message-spacing "Reduce message spacing"      0
+@var checkbox restore-blurple        "Restore blurple"             0
+@var checkbox blurple-mentions       "Blurple mentions"            0
 
 ==/UserStyle== */
 @-moz-document domain("discord.com") {
@@ -30,13 +31,15 @@
     --avatar-scale: @avatar-scale;
     --avatar-zoom: @avatar-zoom;
     --block-emoji-size: @block-emoji-size;
+    --block-emoji-zoom: @block-emoji-zoom;
+    --inline-emoji-size: @inline-emoji-size;
+    --inline-emoji-zoom: @inline-emoji-zoom;
+    --reaction-emoji-size: @reaction-emoji-size;
     --channel-padding: @channel-padding;
     --font-family: @font-family;
     --group-spacing: @group-spacing;
-    --inline-emoji-size: @inline-emoji-size;
     --max-sidebar-width: @max-sidebar-width;
     --min-sidebar-width: @min-sidebar-width;
-    --reaction-emoji-size: @reaction-emoji-size;
   }
 
   html.theme-dark {
@@ -157,13 +160,14 @@
 
   /* RESIZE */
   /* avatars */
-  html when not (@avatar-scale = unset) {
+  html when not (@avatar-scale =unset) {
     [class*="messageListItem"] img[class*="avatar"] {
       transform: scale(var(--avatar-scale)) !important;
       margin-top: 4px;
     }
   }
-  html when not (@avatar-zoom = unset) {
+
+  html when not (@avatar-zoom =unset) {
     [class*="messageListItem"] img[class*="avatar"] {
       transition: 150ms;
 
@@ -185,8 +189,50 @@
       height: var(--block-emoji-size) !important;
     }
 
+    [class*="reactionInner"] img.emoji {
+      width: var(--reaction-emoji-size) !important;
+      height: var(--reaction-emoji-size) !important;
+    }
+
     [class*="scrollable"] {
       max-height: none;
+    }
+  }
+
+  /* emoji zoom */
+  [class*="messagesWrapper-"] {
+    [class*="messageContent-"] {
+      overflow: visible;
+    }
+
+    img.emoji {
+      transition: 150ms;
+      z-index: 1;
+      position: relative;
+
+      &:hover {
+        z-index: 2;
+      }
+    }
+  }
+
+  [role="textbox"] img.emoji:hover {
+    transform: none !important;
+  }
+
+  html when not (@inline-emoji-zoom =unset) {
+    [class*="messagesWrapper-"] {
+      [class*="messageContent"] img.emoji:hover {
+        transform: scale(var(--inline-emoji-zoom));
+      }
+    }
+  }
+
+  html when not (@block-emoji-zoom =unset) {
+    [class*="messagesWrapper-"] {
+      img.emoji.jumboable:hover {
+        transform: scale(var(--block-emoji-zoom));
+      }
     }
   }
 
@@ -266,41 +312,6 @@
     }
   }
 
-  /* emoji zoom */
-  html when (@emoji-zoom =1) {
-    [class*="messagesWrapper-"] {
-      [class*="messageContent-"] {
-        overflow: visible;
-      }
-
-      img.emoji {
-        transition: 0.15s;
-        z-index: 1;
-        position: relative;
-      }
-
-      img.emoji:hover {
-        z-index: 2;
-      }
-
-      img.emoji:not(.jumboable):hover {
-        transform: scale(1.8333);
-      }
-
-      img.emoji.jumboable:hover {
-        transform: scale(2);
-      }
-
-      [class*="reaction"] img.emoji {
-        transform: scale(1) !important;
-      }
-    }
-
-    [role="textbox"] img.emoji:hover {
-      transform: none !important;
-    }
-  }
-
   /* full width embeds */
   [class*="gridContainer"] when (@full-width-embeds =1) {
     max-width: 100% !important;
@@ -316,7 +327,7 @@
   }
 
   /* custom group spacing */
-  html when not (@group-spacing = unset) {
+  html when not (@group-spacing =unset) {
     [class*="group-spacing"] [class*="groupStart"] {
       margin-top: var(--group-spacing);
     }
