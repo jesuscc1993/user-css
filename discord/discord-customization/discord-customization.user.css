@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2023.07.29.20.59
+@version        2023.07.29.21.37
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -19,6 +19,7 @@
 @var text avatar-scale               "Avatar scale"                unset
 @var text avatar-zoom                "Avatar zoom (hover)"         unset
 @var text group-spacing              "Message groups spacing"      unset
+@var text transition                 "Transition duration"         150ms
 @var checkbox darker-quotes          "Darker code and quotes"      0
 @var checkbox full-width-embeds      "Full width embeds"           0
 @var checkbox reduce-message-spacing "Reduce message spacing"      0
@@ -40,6 +41,7 @@
     --group-spacing: @group-spacing;
     --max-sidebar-width: @max-sidebar-width;
     --min-sidebar-width: @min-sidebar-width;
+    --transition: @transition;
   }
 
   html.theme-dark {
@@ -103,7 +105,7 @@
 
     [class*="sidebar-"],
     [class*="membersWrap"] {
-      transition: 0.2s;
+      transition: var(--transition);
       transition-delay: 0.2s;
       z-index: 101;
     }
@@ -169,7 +171,7 @@
 
   html when not (@avatar-zoom =unset) {
     [class*="messageListItem"] img[class*="avatar"] {
-      transition: 150ms;
+      transition: var(--transition);
 
       &:hover {
         transform: scale(var(--avatar-zoom)) !important;
@@ -206,7 +208,7 @@
     }
 
     img.emoji {
-      transition: 150ms;
+      transition: var(--transition);
       z-index: 1;
       position: relative;
 
