@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Big Text
 @description    Increases YouTube's font size; useful when watching from a distance.
-@version        2023.06.06.21.24
+@version        2023.07.29.21.13
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -93,18 +93,19 @@
   }
 
   #paid-comment-chip.ytd-comment-renderer,
+  #video-title-link.ytd-rich-grid-media yt-formatted-string,
   h1.ytd-watch-metadata,
   ytd-grid-video-renderer #text.ytd-thumbnail-overlay-time-status-renderer,
   ytd-text-inline-expander {
     font-size: var(--font-size-lg) !important;
     line-height: var(--line-height-lg) !important;
-    max-height: none;
+    max-height: none !important;
   }
 
   #player-theater-container .ytp-caption-segment {
     font-size: var(--font-size-cc) !important;
     line-height: var(--line-height-cc) !important;
-    max-height: none;
+    max-height: none !important;
   }
 
   ytd-grid-playlist-renderer #video-title.ytd-grid-playlist-renderer,
