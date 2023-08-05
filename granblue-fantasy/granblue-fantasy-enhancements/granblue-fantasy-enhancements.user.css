@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Granblue Fantasy Enhancements
 @description  Allows the customization of the game's layout and responsive behavior.
-@version      2023.08.05.12.59
+@version      2023.08.05.13.19
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -1029,6 +1029,10 @@
   .prt-supporter-info .prt-supporter-detail .prt-summon-skill.text-small {
     font-size: 8.25px !important;
     font-weight: 500;
+  }
+
+  .prt-log-notice-no-footer .btn-lis-log .txt-log-caption {
+    font-size: 10px;
   }
 
   /* fix home notification badge */
