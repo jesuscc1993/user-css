@@ -415,7 +415,8 @@
 
   /* hide spam notifications */
   .btn-lis-notification.campaign-label,
-  .btn-lis-notification[data-href^="gacha"],
+  .btn-lis-notification[data-href*="shop"],
+  .btn-lis-notification[data-href*="gacha"],
   .btn-lis-notification[data-href="#static_news/detail/prev_id=20002"] {
     display: none !important;
   }
