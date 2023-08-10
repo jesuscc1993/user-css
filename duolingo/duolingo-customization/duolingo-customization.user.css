@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Duolingo - Customization
 @description    Provides some extra customization options for Duolingo.
-@version        2023.07.26.15.09
+@version        2023.08.10.9.45
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -67,7 +67,7 @@
   }
 
   if (hide-pronunciation-unless-hovered) {
-    ._1YQpP,
+    ._3PW0K,
     ._1bl79 {
       &:not(:hover) ._47IB1._3x_e5._2m_ED {
         opacity: 0;
