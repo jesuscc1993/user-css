@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Big Text
 @description    Increases YouTube's font size; useful when watching from a distance.
-@version        2023.07.29.21.13
+@version        2023.08.11.18.23
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -72,11 +72,13 @@
   ytd-video-owner-renderer[watch-metadata-refresh] #owner-sub-count.ytd-video-owner-renderer {
     font-size: var(--font-size-sm);
     line-height: var(--line-height-sm);
-    max-height: none;
+    max-height: none !important;
+    height: auto !important;
   }
 
   #description.ytd-watch-metadata,
   #text.ytd-thumbnail-overlay-time-status-renderer,
+	#time-status.ytd-thumbnail-overlay-time-status-renderer,
   #video-title.ytd-compact-video-renderer,
   #video-title.ytd-playlist-panel-video-renderer,
   ytd-grid-playlist-renderer #video-title.ytd-grid-playlist-renderer,
@@ -89,7 +91,8 @@
   ytd-two-column-search-results-renderer #video-title.ytd-video-renderer {
     font-size: var(--font-size-md);
     line-height: var(--line-height-md);
-    max-height: none;
+    max-height: none !important;
+    height: auto !important;
   }
 
   #paid-comment-chip.ytd-comment-renderer,
@@ -100,12 +103,14 @@
     font-size: var(--font-size-lg) !important;
     line-height: var(--line-height-lg) !important;
     max-height: none !important;
+    height: auto !important;
   }
 
   #player-theater-container .ytp-caption-segment {
     font-size: var(--font-size-cc) !important;
     line-height: var(--line-height-cc) !important;
     max-height: none !important;
+    height: auto !important;
   }
 
   ytd-grid-playlist-renderer #video-title.ytd-grid-playlist-renderer,
