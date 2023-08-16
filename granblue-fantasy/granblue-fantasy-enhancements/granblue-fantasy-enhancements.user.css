@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Granblue Fantasy Enhancements
 @description  Allows the customization of the game's layout and responsive behavior.
-@version      2023.08.05.13.19
+@version      2023.08.16.12.30
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -826,21 +826,31 @@
       font-size: 0;
     }
 
-    .pop-decompose-confirm-treasure .prt-order-middle .prt-article,
-    .pop-decompose-confirm-treasure .prt-order-middle .prt-article .txt-material-status,
+    .pop-result-recycle.pop-usual .txt-popup-body .prt-result-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle,
     .pop-confirm-decompose .prt-target-items .lis-decompose-item .img-decompose-item,
     .pop-confirm-recycle.pop-usual .txt-popup-body .prt-confirm-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle,
-    .pop-decompose-confirm-consume .prt-target-items .lis-decompose-item .img-decompose-item,
-    .pop-result-recycle.pop-usual .txt-popup-body .prt-result-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle {
+    .pop-decompose-confirm-consume .prt-target-items .lis-decompose-item .img-decompose-item {
       height: auto;
-      width: 48px;
+      width: 50px;
     }
-
+    
+    .pop-result-recycle.pop-usual .txt-popup-body .prt-result-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle,
     .pop-confirm-decompose .prt-target-items .lis-decompose-item .img-decompose-item,
-    .pop-confirm-recycle.pop-usual .txt-popup-body .prt-confirm-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle,
-    .pop-decompose-confirm-consume .prt-target-items .lis-decompose-item .img-decompose-item,
-    .pop-result-recycle.pop-usual .txt-popup-body .prt-result-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle {
-      margin: 2px;
+    .pop-confirm-recycle.pop-usual .txt-popup-body .prt-confirm-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle {
+      margin: 0px;
+    }
+    
+    .pop-decompose-confirm-consume .prt-target-items .lis-decompose-item .img-decompose-item {
+      margin: 0 1px;
+    }
+    
+    .pop-decompose-confirm-treasure .prt-order-middle .prt-article {
+      zoom: .8;
+    }
+        
+    .pop-decompose-confirm-treasure .prt-order-middle .prt-article:nth-child(4n),
+    .pop-decompose-confirm-treasure .prt-order-middle .prt-article:last-child {
+      margin-right: 5px;
     }
 
     /* .pop-decompose-confirm-treasure .prt-order-middle .prt-article {
@@ -1029,10 +1039,6 @@
   .prt-supporter-info .prt-supporter-detail .prt-summon-skill.text-small {
     font-size: 8.25px !important;
     font-weight: 500;
-  }
-
-  .prt-log-notice-no-footer .btn-lis-log .txt-log-caption {
-    font-size: 10px;
   }
 
   /* fix home notification badge */
