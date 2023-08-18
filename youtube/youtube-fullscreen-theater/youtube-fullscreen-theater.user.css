@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Fullscreen Theater
 @description    Displays YouTube's theater in fullscreen.
-@version        2023.06.29.17.09
+@version        2023.08.18.21.49
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -17,9 +17,16 @@
     --header-height: 56px;
   }
 
+	/* old */
   ytd-watch-flexy[theater] #player-wide-container.ytd-watch-flexy {
     height: 100vh;
     max-height: calc(100vh - var(--header-height));
+  }
+
+	/* new */
+	ytd-watch-flexy[full-bleed-player] #player-full-bleed-container.ytd-watch-flexy {
+    height: 100vh;
+		max-height: none;
   }
 
   #background.ytd-masthead {
