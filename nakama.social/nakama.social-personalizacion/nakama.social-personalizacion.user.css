@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Nakama - Personalización
 @description    Permite la configuración de ciertos aspectos visuales en Nakama.
-@version        2023.09.10.23.10
+@version        2023.09.10.23.15
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -16,6 +16,7 @@
 @var text post-button-border-radius     "Redondeado de botones en posts"                        1.5rem
 @var checkbox attachments-scrollbar     "Scrollbar en adjuntos"                                 0
 @var checkbox hide-comment-footer       "Ocultar footers en los comentarios hasta hacer hover"  0
+@var checkbox hide-emoji-reactions      "Ocultar reacciones emoji en los post"                  0
 @var checkbox disable-seasons           "Deshabilitar efectos de estación"                      0
 
 ==/UserStyle== */
@@ -103,6 +104,16 @@
           display: none;
         }
       }
+    }
+  }
+
+  body when (@hide-emoji-reactions =1) {
+    .post .post-reactions {
+      display: none;
+    }
+
+    .comments .post .post-footer {
+      display: none;
     }
   }
 
