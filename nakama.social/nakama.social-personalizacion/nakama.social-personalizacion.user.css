@@ -1,21 +1,22 @@
 /* ==UserStyle==
 @name           Nakama - Personalización
 @description    Permite la configuración de ciertos aspectos visuales en Nakama.
-@version        2023.05.18.17.48
+@version        2023.09.10.23.10
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   less
 
-@var text border-radius-md              "Redondeado (medio)"                  1rem
-@var text border-radius-lg              "Redondeado (grande)"                 1rem
-@var text content-width                 "Ancho de contenido"                  65ch
-@var text max-attachment-height         "Alto máximo de adjuntos"             calc(100vh - 8rem)
-@var text post-button-height            "Alto de botones en posts"            3rem
-@var text post-button-padding           "Espaciado de botones en posts"       0 1rem
-@var text post-button-border-radius     "Redondeado de botones en posts"      1.5rem
-@var checkbox attachments-scrollbar     "Scrollbar en adjuntos"               0
-@var checkbox disable-seasons           "Deshabilitar efectos de estación"    0
+@var text border-radius-md              "Redondeado (medio)"                                    1rem
+@var text border-radius-lg              "Redondeado (grande)"                                   1rem
+@var text content-width                 "Ancho de contenido"                                    65ch
+@var text max-attachment-height         "Alto máximo de adjuntos"                               calc(100vh - 8rem)
+@var text post-button-height            "Alto de botones en posts"                              3rem
+@var text post-button-padding           "Espaciado de botones en posts"                         0 1rem
+@var text post-button-border-radius     "Redondeado de botones en posts"                        1.5rem
+@var checkbox attachments-scrollbar     "Scrollbar en adjuntos"                                 0
+@var checkbox hide-comment-footer       "Ocultar footers en los comentarios hasta hacer hover"  0
+@var checkbox disable-seasons           "Deshabilitar efectos de estación"                      0
 
 ==/UserStyle== */
 @-moz-document domain("nakama.social") {
@@ -61,9 +62,9 @@
   .media-scroller:not([data-length="1"]) iframe:not([id*="twitter-widget"]) {
     max-width: calc(calc(100% / 2) - 0.25rem) !important;
   }
-  
+
   .media-scroller:not([data-length="1"]):not([data-length="2"]) {
-    padding-bottom: .25rem;
+    padding-bottom: 0.25rem;
   }
 
   /* fix twitter embeds */
@@ -92,6 +93,16 @@
 
     .media-scroller::-webkit-scrollbar {
       display: block !important;
+    }
+  }
+
+  body when (@hide-comment-footer =1) {
+    .comments .post {
+      &:not(:hover) {
+        .post-footer {
+          display: none;
+        }
+      }
     }
   }
 
