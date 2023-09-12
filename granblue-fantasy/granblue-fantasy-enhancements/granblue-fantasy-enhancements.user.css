@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Granblue Fantasy Enhancements
 @description  Allows the customization of the game's layout and responsive behavior.
-@version      2023.09.05.19.28
+@version      2023.09.12.10.53
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -1093,6 +1093,7 @@ regexp("https://game.granbluefantasy.jp/#decompose.*"),
 regexp("https://game.granbluefantasy.jp/#enhancement/.*"),
 regexp("https://game.granbluefantasy.jp/#event/sequenceraid.*\/party/.*"),
 regexp("https://game.granbluefantasy.jp/#evolution/.*"),
+regexp("https://game.granbluefantasy.jp/#job/perfectionproof/enhancement/.*"),
 regexp("https://game.granbluefantasy.jp/#list.*"),
 regexp("https://game.granbluefantasy.jp/#mypage_character/list/.*"),
 regexp("https://game.granbluefantasy.jp/#party/list.*"),
@@ -1132,6 +1133,7 @@ regexp("https://game.granbluefantasy.jp/#sell/.*") {
     .cnt-weapon-select .cnt-order-box .cnt-select-order .list,
     .prt-listup:not(#prt-list-skin) .prt-list-item .btn-item,
     .prt-listup:not(#prt-list-skin) .prt-list-item .lis-item,
+    .cnt-perfectionproof-enhancement .prt-material-item-list .lis-item,
     [data-css="/mypage_character/list.css"] + .cnt-list .btn-item,
     [data-css="/party/list_npc.css"] + #cnt-list_npc .lis-npc,
     [data-css="/party/list_summon.css"] + #cnt-list_summon .lis-summon,
@@ -1154,6 +1156,7 @@ regexp("https://game.granbluefantasy.jp/#sell/.*") {
       transform: scale(.75);
     }
 
+    .cnt-perfectionproof-enhancement .prt-material-item-list .lis-item,
     [data-css="/party/list_npc.css"] + #cnt-list_npc .lis-npc, {
       margin: -5.5px !important;
     }
