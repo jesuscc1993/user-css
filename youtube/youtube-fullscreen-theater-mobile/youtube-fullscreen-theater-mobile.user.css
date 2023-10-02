@@ -9,28 +9,28 @@
 
 ==/UserStyle== */
 @-moz-document url-prefix("https://m.youtube.com/watch?v=") {
-	:root {
-		--header-height: 48px;
-		--player-height: calc(100vh - var(--header-height));
-	}
+  :root {
+    --header-height: 48px;
+    --player-height: calc(100vh - var(--header-height));
+  }
 
-	.player-container,
-	.player-container.sticky-player {
-		height: var(--player-height);
-		right: 0;
-		left: 0;
-	}
+  .player-container,
+  .player-container.sticky-player {
+    height: var(--player-height);
+    right: 0;
+    left: 0;
+  }
 
-	ytm-watch .player-size,
-	.player-container .player-size {
-		padding-bottom: 0;
-		height: var(--player-height);
-	}
+  ytm-watch .player-size,
+  .player-container .player-size {
+    padding-bottom: 0;
+    height: var(--player-height);
+  }
 
-	bottom-sheet-container,
-	drawer-layout-container,
-	panel-container,
-	ytm-single-column-watch-next-results-renderer {
-		display: none;
-	}
+  bottom-sheet-container,
+  drawer-layout-container,
+  panel-container,
+  ytm-single-column-watch-next-results-renderer {
+    display: none;
+  }
 }
