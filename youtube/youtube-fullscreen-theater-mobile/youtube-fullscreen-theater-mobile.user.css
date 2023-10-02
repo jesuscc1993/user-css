@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Fullscreen Theater (mobile)
 @description    Displays YouTube's theater in fullscreen.
-@version        2023.10.02.20.42
+@version        2023.10.02.20.46
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -13,17 +13,24 @@
 		--header-height: 48px;
 		--player-height: calc(100vh - var(--header-height));
 	}
-	
+
 	.player-container,
 	.player-container.sticky-player {
 		height: var(--player-height);
 		right: 0;
 		left: 0;
 	}
-	
+
 	ytm-watch .player-size,
 	.player-container .player-size {
 		padding-bottom: 0;
 		height: var(--player-height);
+	}
+
+	bottom-sheet-container,
+	drawer-layout-container,
+	panel-container,
+	ytm-single-column-watch-next-results-renderer {
+		display: none;
 	}
 }
