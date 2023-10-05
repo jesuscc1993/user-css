@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Duolingo - Dark Theme
 @description    Dark theme for Duolingo.
-@version        2023.05.25.11.36
+@version        2023.10.05.16.05
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -9,12 +9,8 @@
 
 ==/UserStyle== */
 @-moz-document domain("duolingo.com") {
-  path[fill="#e5e5e5"] {
-    fill: #444;
-  }
-
-  path[fill="#ffd900"] {
-    fill: #c80;
+  :root {
+    --color-dragon-always-light: 255, 128, 224;
   }
 
   [role="progressbar"],
@@ -52,6 +48,8 @@
   ._3aUCN,
   .e9TL7,
   .MyHQ0,
+  /* ques progress */
+  .KAjTN,
   /* duolingo characters */
   .F2B9m,
   .placeholder {
@@ -72,9 +70,14 @@
   .placeholder {
     filter: invert(1) hue-rotate(180deg) brightness(1.5);
   }
+  
+  /**/
+  ._2N5Ql {
+    filter: none;
+  }
 
   /* path step */
-  ._2D40f {
-    --path-level-color: #775000;
+  ._3xT0z:after {
+    box-shadow: 0 8px 0 rgba(var(--color-snow-always-light), .3), 0 8px 0 var(--path-level-color);
   }
 }
