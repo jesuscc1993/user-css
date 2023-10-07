@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Granblue Fantasy Enhancements
 @description  Allows the customization of the game's layout and responsive behavior.
-@version      2023.09.12.10.53
+@version      2023.10.07.10.59
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -971,9 +971,13 @@
   }
   
   /* hide town background */
-  if (hide-town-background) {    
-    .prt-user-scene {
-      background-image: linear-gradient(to right, #88aeb7 0%,#b8d0d3 5%,#cfe8eb 20%,#d2d4cf 80%,#c7cebd 95%,#afc1c5 100%);
+  if (hide-town-background) {
+    .prt-town-scene {
+      transition: 1s;
+    }
+
+    .prt-user-scene:not(.display-off) + .prt-town-scene {
+      opacity: 0;
     }
   }
 
