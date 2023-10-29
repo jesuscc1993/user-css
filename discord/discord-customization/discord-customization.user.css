@@ -1,15 +1,15 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2023.07.29.23.10
+@version        2023.10.30.00.15
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   less
 
 @var text font-family                "Font family"                 "'Whitney', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
-@var text min-sidebar-width          "Min sidebar width"           240px
-@var text max-sidebar-width          "Max sidebar width"           240px
+@var text min-sidebar_width          "Min sidebar width"           240px
+@var text max-sidebar_width          "Max sidebar width"           240px
 @var text channel-padding            "Channel spacing (sidebar)"   6px
 @var text block-emoji-size           "Block emoji size"            3rem
 @var text block-emoji-zoom           "Block emoji zoom (hover)"    unset
@@ -40,8 +40,8 @@
     --channel-padding: @channel-padding;
     --font-family: @font-family;
     --group-spacing: @group-spacing;
-    --max-sidebar-width: @max-sidebar-width;
-    --min-sidebar-width: @min-sidebar-width;
+    --max-sidebar_width: @max-sidebar_width;
+    --min-sidebar_width: @min-sidebar_width;
     --li-margin: @li-margin;
     --transition: @transition;
   }
@@ -55,33 +55,31 @@
   }
 
   /* responsive columns */
-  [class*="content-"] {
-    [class*="sidebar-"],
-    [class*="membersWrap-"] [class*="members-"] {
-      max-width: var(--max-sidebar-width) !important;
-      min-width: var(--min-sidebar-width) !important;
-      width: 100% !important;
+  [class*="content_"] {
+    [class*="sidebar_"],
+    [class*="membersWrap_"] [class*="members_"] {
+      width: ~"max(var(--min-sidebar_width), var(--max-sidebar_width))" !important;
     }
 
-    [class*="sidebar-"] [class*="channel"],
-    [class*="membersWrap-"] [class*="member-"] {
+    [class*="sidebar_"] [class*="channel"],
+    [class*="membersWrap_"] [class*="member_"] {
       max-width: 100% !important;
     }
 
-    [class*="bannerImage-"],
-    [class*="bannerImage-"] [class^="bannerImg"],
-    [class*="bannerImage-"] [class^="bannerImg"]:before {
+    [class*="bannerImage_"],
+    [class*="bannerImage_"] [class^="bannerImg"],
+    [class*="bannerImage_"] [class^="bannerImg"]:before {
       width: 100%;
     }
 
-    [class*="sidebar-"] [class*="panels-"] [class*="container-"] [class*="avatarWrapper-"] {
+    [class*="sidebar_"] [class*="panels_"] [class*="container_"] [class*="avatarWrapper_"] {
       flex: 1;
     }
   }
 
   /* channel height */
-  [class*="sidebar-"] [class*="iconVisibility"]:not([class*="wrapperCommon"]) a {
-    padding: var(--channel-padding) 0;
+  [class*="sidebar_"] [class*="iconVisibility"]:not([class*="wrapperCommon"]) a {
+    padding: var(--channel-padding) 8px;
 
     [class*="children"],
     + [class*="children"] {
@@ -91,22 +89,22 @@
 
   /* HIDE UNLESS HOVERED */
   /* common setup */
-  [class*="content-"] {
+  [class*="content_"] {
     [class*="guilds"] {
       z-index: 102;
     }
 
-    [class*="sidebar-"] {
+    [class*="sidebar_"] {
       height: 100%;
     }
 
-    [class*="membersWrap"] {
+    [class*="membersWrap_"] {
       right: 0;
       height: calc(100vh - 50px);
     }
 
-    [class*="sidebar-"],
-    [class*="membersWrap"] {
+    [class*="sidebar_"],
+    [class*="membersWrap_"] {
       transition: var(--transition);
       transition-delay: 0.2s;
       z-index: 101;
@@ -115,22 +113,22 @@
 
   /* hide server members unless hovered */
   @media (max-width: 1152px) {
-    [class*="membersWrap"] {
+    [class*="membersWrap_"] {
       position: absolute;
-    }
 
-    [class*="membersWrap"]:not(:hover) {
-      margin-right: calc(var(--min-sidebar-width) * -1 + 8px);
+      &:not(:hover) {
+        margin-right: calc(var(--min-sidebar_width) * -1 + 8px);
+      }
     }
   }
 
   /* hide channels unless hovered */
   @media (max-width: 800px) {
-    [class*="sidebar-"] {
+    [class*="sidebar_"] {
       position: absolute;
 
       &:not(:hover) {
-        margin-left: calc(var(--min-sidebar-width) * -1 + 8px);
+        margin-left: calc(var(--min-sidebar_width) * -1 + 8px);
       }
 
       & + [class*="chat"] {
@@ -209,8 +207,8 @@
   }
 
   /* emoji zoom */
-  [class*="messagesWrapper-"] {
-    [class*="messageContent-"] {
+  [class*="messagesWrapper_"] {
+    [class*="messagecontent_"] {
       overflow: visible;
     }
 
@@ -230,7 +228,7 @@
   }
 
   html when not (@inline-emoji-zoom =unset) {
-    [class*="messagesWrapper-"] {
+    [class*="messagesWrapper_"] {
       [class*="messageContent"] img.emoji:hover {
         transform: scale(var(--inline-emoji-zoom));
       }
@@ -238,7 +236,7 @@
   }
 
   html when not (@block-emoji-zoom =unset) {
-    [class*="messagesWrapper-"] {
+    [class*="messagesWrapper_"] {
       img.emoji.jumboable:hover {
         transform: scale(var(--block-emoji-zoom));
       }
@@ -339,8 +337,8 @@
 
   /* reduced message spacing */
   html when (@reduce-message-spacing =1) {
-    [class*="wrapper"][class*="compact"]:not([class*="mentioned-"]),
-    [class*="wrapper"][class*="cozy"]:not([class*="mentioned-"]) {
+    [class*="wrapper"][class*="compact"]:not([class*="mentioned_"]),
+    [class*="wrapper"][class*="cozy"]:not([class*="mentioned_"]) {
       padding-top: 0;
       padding-bottom: 0;
     }
@@ -355,16 +353,16 @@
 
   /* blurple mentions */
   html when (@blurple-mentions =1) {
-    [class*="mentioned-"]:before {
+    [class*="mentioned_"]:before {
       background-color: #7289da;
     }
 
-    [class*="mentioned-"] {
+    [class*="mentioned_"] {
       background-color: #7289da22;
     }
 
-    [class*="mentioned-"][class*="selected"],
-    &.mouse-mode.full-motion [class*="mentioned-"]:hover {
+    [class*="mentioned_"][class*="selected"],
+    &.mouse-mode.full-motion [class*="mentioned_"]:hover {
       background-color: #7289da11 !important;
     }
   }
