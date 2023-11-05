@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2023.10.30.00.15
+@version        2023.11.05.13.31
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -208,7 +208,7 @@
 
   /* emoji zoom */
   [class*="messagesWrapper_"] {
-    [class*="messagecontent_"] {
+    [class*="messageContent_"] {
       overflow: visible;
     }
 
