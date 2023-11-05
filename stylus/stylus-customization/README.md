@@ -1,8 +1,8 @@
-# Stylus - Dark theme
+# Stylus - Customization
 
 ## Description
 
-Dark theme for the Stylus extension (Chrome only).
+Provides some extra customization options for Stylus.
 
 ## Settings overview
 
