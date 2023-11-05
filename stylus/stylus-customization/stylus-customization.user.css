@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Stylus - Customization
 @description    Provides some extra customization options the Stylus extension.
-@version        2023.07.29.21.03
+@version        2023.11.05.13.49
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -11,7 +11,14 @@
 @var text input-height "Input Height" 24px
 
 ==/UserStyle== */
-@-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne") {
+@-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne")
+{
+  a,
+  button,
+  input {
+    cursor: pointer;
+  }
+
   #sections .section:first-child .CodeMirror {
     min-height: calc(100% - 116px) !important;
   }

@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2023.03.19.20.26
+@version        2023.11.05.13.47
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -24,7 +24,7 @@
   }
 
   #hover-overlays {
-    zoom: 2.075;
+    zoom: 1.5;
   }
 
   /* hide text on video buttons */
