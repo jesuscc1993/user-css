@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Granblue Fantasy Enhancements
 @description  Allows the customization of the game's layout and responsive behavior.
-@version      2023.10.07.10.59
+@version      2023.11.09.23.31
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -533,22 +533,12 @@
   /* compact raids */
   if (compact-raids == 'basic') {
     .prt-raid-list:has(.lis-raid) {
-      margin: -10px 0 16px;
+      margin: -10px auto 16px;
     }
 
     .lis-raid {
       transform: scale(1, .75);
       margin: -8px auto -24px !important;
-    }
-
-    .lis-raid,
-    .lis-raid.friend {
-      width: 303px;
-      height: 81px;
-    }
-
-    .lis-raid.friend {
-      background-position: 2px -171px;
     }
 
     .lis-raid .prt-raid-thumbnail .img-raid-thumbnail {
@@ -599,22 +589,12 @@
 
   else if (compact-raids == 'extra') {
     .prt-raid-list:has(.lis-raid) {
-      margin: -14px 0 24px;
+      margin: -14px auto 24px;
     }
 
     .lis-raid {
       transform: scale(1, .65);
       margin: -8px auto -32px !important;
-    }
-
-    .lis-raid,
-    .lis-raid.friend {
-      width: 303px;
-      height: 81px;
-    }
-
-    .lis-raid.friend {
-      background-position: 2px -171px;
     }
 
     .lis-raid .prt-request-info {
