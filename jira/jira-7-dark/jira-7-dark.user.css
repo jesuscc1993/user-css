@@ -1,0 +1,178 @@
+/* ==UserStyle==
+@name           JIRA (7.x) - Dark
+@description    Dark theme for JIRA 7.x.
+@version        2023.06.09.10.49
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+
+==/UserStyle== */
+@-moz-document domain("build.mypkfit.com") {
+  :root {
+    --invert-value: 0.933;
+  }
+
+  * {
+    box-shadow: none !important;
+  }
+
+  body#tinymce {
+    color: #b9c5db;
+    background: transparent;
+  }
+
+  #cp-header,
+  #quickSearchInput,
+  .cp-toolbar-layer,
+  .gadget.needs-min,
+  html {
+    filter: invert(var(--invert-value)) hue-rotate(180deg);
+  }
+
+  #quickSearchInput {
+    background: rgba(0, 0, 0, var(--invert-value));
+  }
+
+  .gadget.needs-min {
+    background: #fff;
+  }
+
+  #footer {
+    background: #fbfbfb;
+  }
+
+  .ghx-columns .ghx-column {
+    background: #fefefe;
+    box-shadow: inset 0 0 3px #fbfbfb !important;
+  }
+
+  #cp-header {
+    background: #000;
+  }
+
+  body {
+    min-height: 100vh;
+  }
+
+  .gadget .dashboard-item-header {
+    filter: invert(var(--invert-value)) hue-rotate(180deg);
+    border-bottom: 1px solid #141414;
+  }
+
+  .gadget > .gadget-hover > .dashboard-item-header,
+  .gadget > .gadget-hover > .dashboard-item-content {
+    border-color: #141414 !important;
+  }
+
+  .gadget.color1 .dashboard-item-header,
+  .gadget-colors .color1 > a {
+    background-color: #1f437a;
+  }
+  .gadget.color3 .dashboard-item-header,
+  .gadget-colors .color3 > a {
+    background-color: #8a400f;
+  }
+  .gadget.color4 .dashboard-item-header,
+  .gadget-colors .color4 > a {
+    background-color: #004d33;
+  }
+
+  #issuedetails [class*="jira-issue-status"],
+  #jira .aui-label {
+    filter: invert(var(--invert-value)) hue-rotate(180deg) brightness(1.15) saturate(0.75);
+  }
+
+  .rowFooter,
+  div#slider-wrapper {
+    background-color: #e4e4e4 !important;
+    border-color: #ccc !important;
+  }
+
+  #header > .aui-header.aui-dropdown2-trigger-group {
+    border-color: #ebebeb !important;
+  }
+
+  .ghx-issue {
+    border-color: #fbfbfb;
+    border-radius: 6px;
+    border-width: 2px;
+    margin-bottom: -2px;
+  }
+
+  .aui-blanket {
+    background: #fff8;
+  }
+
+  .markup code {
+    background: #fff2;
+  }
+
+  *[id^="cp-container-"] {
+    background-color: #f8f8f888;
+  }
+
+  .panelContent {
+    background: #00000004;
+  }
+
+  .aui-message.hint,
+  .aui-message-hint,
+  .aui-message.info,
+  .aui-message-info {
+    background: #00000008;
+  }
+
+  .ghx-issue.ghx-flagged {
+    background: #fff3f0;
+  }
+
+  .ghx-issue.ghx-selected.ghx-flagged {
+    background: #ffe2db;
+  }
+
+  img,
+  video {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  iframe {
+    filter: inherit;
+  }
+
+  #gadget-40656 {
+    filter: invert(1) hue-rotate(180deg) brightness(1.2);
+  }
+
+  .no-results,
+  .no-results > * {
+    background-color: transparent;
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  a,
+  .issue-drop-zone__button {
+    color: #005ce6;
+  }
+
+  .ghx-parent-stub .ghx-group {
+    border: 1px solid hsl(220, 16%, 96%);
+  }
+
+  #attachmentmodule #attachment_thumbnails .attachment-content .attachment-thumb {
+    background: #cccccc08;
+  }
+
+  .emoticon[src="/jira/images/icons/emoticons/add.png"],
+  .emoticon[src="/jira/images/icons/emoticons/check.png"],
+  .emoticon[src="/jira/images/icons/emoticons/error.png"],
+  .emoticon[src="/jira/images/icons/emoticons/forbidden.png"],
+  .emoticon[src="/jira/images/icons/emoticons/help_16.png"],
+  .emoticon[src="/jira/images/icons/emoticons/information.png"] {
+    border-radius: 50%;
+  }
+
+  /* hide logo cause it can't be read */
+  #logo {
+    display: none;
+  }
+}
