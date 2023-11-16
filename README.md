@@ -41,7 +41,7 @@ Requires the [Stylus](https://github.com/openstyles/stylus#releases) userstyle l
 - [greasyfork/greasyfork-dark](greasyfork/greasyfork-dark)
 <hr>
 
-- [jira/jira-7-dark](jira/jira-7-dark)
+- [jira/jira-7-dark](jira/jira-7-dark) (requires filling up your Jira instance's URL manually)
 <hr>
 
 - [nakama.social/nakama.social-personalizacion](nakama.social/nakama.social-personalizacion)
