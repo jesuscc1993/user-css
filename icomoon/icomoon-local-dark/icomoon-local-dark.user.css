@@ -1,0 +1,20 @@
+/* ==UserStyle==
+@name           IcoMoon local - Dark
+@description    Dark theme for IcoMoon projects downloaded to local.
+@version        2023.11.22.09.46
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+==/UserStyle== */
+
+@-moz-document regexp("file:///.*demo.html")
+{
+  body {
+    filter: invert(1);
+    background: #141414;
+  }
+
+  [class*="icon-"]:before {
+    color: #000;
+  }
+}

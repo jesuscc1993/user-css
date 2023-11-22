@@ -1,0 +1,48 @@
+/* ==UserStyle==
+@name           IcoMoon local - Tweaks
+@description    Tweaks IcoMoon projects downloaded to local.
+@version        2023.11.22.09.46
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+==/UserStyle== */
+
+@-moz-document regexp("file:///.*demo.html")
+{
+  body > *:not(:nth-child(1)):not(:nth-child(2)),
+  .mvm.mtn.fgc1 {
+    display: none;
+  }
+
+  .mal,
+  .mhl {
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+
+  .glyph {
+    width: 15.5vw;
+    margin: 1vh 0.25vw;
+  }
+
+  .pbs {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .fs1 {
+    font-size: 40px;
+    padding: 0;
+  }
+
+  .mls {
+    font-size: 16px;
+    margin-left: 8px;
+  }
+
+  .fs0 {
+    display: none;
+  }
+}
