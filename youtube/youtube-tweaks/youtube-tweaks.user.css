@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2023.11.05.13.47
+@version        2023.12.12.19.54
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -28,8 +28,7 @@
   }
 
   /* hide text on video buttons */
-  #top-level-buttons-computed > *:not(:first-child) .yt-core-attributed-string,
-  #flexible-item-buttons .yt-core-attributed-string {
+  #top-row > *:not(:first-child) .ytd-menu-renderer:not(:first-child) .yt-spec-button-shape-next__button-text-content {
     display: none;
   }
 
@@ -64,6 +63,13 @@
     margin-left: 6px;
   }
 
+  html[ysm-filter-hidden][ysm-filter-hidden-ready] [page-subtype="subscriptions"] ytd-rich-grid-renderer #contents ytd-rich-grid-row #contents {
+    yt-formatted-string {
+      font-size: var(--font-size-sm) !important;
+      line-height: var(--line-height-sm) !important;
+    }
+  }
+
   /* prevent accidental pagination */
   [page-subtype="channels"][role="main"] ytd-continuation-item-renderer,
   [page-subtype="playlist"][role="main"] ytd-continuation-item-renderer,
@@ -84,9 +90,9 @@
   /* hide sidebar items */
   /* shorts */
   #sections ytd-guide-section-renderer:nth-child(1) > * > ytd-guide-entry-renderer:nth-child(2),
-  /* your videos */
-  #sections ytd-guide-collapsible-section-entry-renderer:nth-child(4) > * > ytd-guide-entry-renderer:nth-child(2),
-  foo {
+	/* your videos */
+	#sections ytd-guide-collapsible-section-entry-renderer:nth-child(4) > * > ytd-guide-entry-renderer:nth-child(2),
+	foo {
     display: none;
   }
 

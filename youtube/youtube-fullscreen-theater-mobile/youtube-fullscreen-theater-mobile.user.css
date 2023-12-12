@@ -8,7 +8,8 @@
 @preprocessor   stylus
 
 ==/UserStyle== */
-@-moz-document url-prefix("https://m.youtube.com/watch?v=") {
+@-moz-document url-prefix("https://m.youtube.com/watch?v=")
+{
   :root {
     --header-height: 48px;
     --player-height: calc(100vh - var(--header-height));
@@ -34,7 +35,7 @@
   }
 
   @media (min-width: 931px) and (orientation: landscape) {
-    ytm-single-column-watch-next-results-renderer [section-identifier=related-items],
+    ytm-single-column-watch-next-results-renderer [section-identifier="related-items"],
     ytm-single-column-watch-next-results-renderer > ytm-playlist {
       position: absolute;
       right: -252px;
@@ -45,7 +46,7 @@
   }
 
   @media (min-width: 1280px) and (orientation: landscape) {
-    ytm-single-column-watch-next-results-renderer [section-identifier=related-items],
+    ytm-single-column-watch-next-results-renderer [section-identifier="related-items"],
     ytm-single-column-watch-next-results-renderer > ytm-playlist {
       right: -496px;
       width: 496px;

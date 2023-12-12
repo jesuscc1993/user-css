@@ -15,12 +15,12 @@
 {
   :root {
     --header-height: 56px;
-		--player-height: calc(100vh - var(--header-height));
+    --player-height: calc(100vh - var(--header-height));
   }
 
-	ytd-watch-flexy[full-bleed-player] #full-bleed-container.ytd-watch-flexy,
+  ytd-watch-flexy[full-bleed-player] #full-bleed-container.ytd-watch-flexy,
   ytd-watch-flexy[theater] #player-wide-container.ytd-watch-flexy,
-	ytd-watch-flexy[full-bleed-player] #player-full-bleed-container.ytd-watch-flexy {
+  ytd-watch-flexy[full-bleed-player] #player-full-bleed-container.ytd-watch-flexy {
     height: var(--player-height);
     max-height: none;
   }
@@ -30,10 +30,10 @@
   }
 
   if (hide-header) {
-		:root {
-			--player-height: 100vh;
-		}
-	
+    :root {
+      --player-height: 100vh;
+    }
+
     #page-manager.ytd-app {
       margin-top: 0;
     }
