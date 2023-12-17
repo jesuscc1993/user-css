@@ -1,11 +1,14 @@
 /* ==UserStyle==
 @name           Stylus - Dark+ (CodeMirror theme)
 @description    Dark+ CodeMirror theme for the Stylus extension (Chrome only).
-@version        2022.07.22.22.36
+@version        2023.12.17.18.53
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
-@preprocessor   uso
+@preprocessor   stylus
+
+@var text font-family "Font family" "'Roboto Mono', monospace"
+@var text font-size 	"Font size"		"15px"
 
 ==/UserStyle== */
 
@@ -34,8 +37,8 @@
     --c-scrollbar-hover: #444;
     --c-scrollbar: #333;
 
-    --font-family: "Roboto Mono";
-    --font-size: 15px;
+    --font-family: font-family;
+    --font-size: font-size;
 
     font-family: var(--font-family);
     font-size: var(--font-size);

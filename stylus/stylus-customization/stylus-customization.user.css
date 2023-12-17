@@ -1,14 +1,14 @@
 /* ==UserStyle==
 @name           Stylus - Customization
 @description    Provides some extra customization options the Stylus extension.
-@version        2023.11.05.13.49
+@version        2023.12.17.18.53
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
-@preprocessor   stylus
+@preprocessor   less
 
-@var text input-width  "Input Width"  128px
-@var text input-height "Input Height" 24px
+@var text input-width  "Input Width"  unset
+@var text input-height "Input Height" unset
 
 ==/UserStyle== */
 @-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne")
@@ -31,13 +31,19 @@
   #message-box .colorview-swatch::after,
   #message-box .colorview-swatch::before,
   .color-swatch,
-  .config-body .select-resizer,
+  .config-body .select-wrapper,
   .config-body input[type="text"],
   .config-body select {
     box-sizing: border-box;
-    height: input-height;
-    max-width: none;
-    width: input-width;
+
+    & when not (@input-width = unset) {
+      max-width: none;
+      width: @input-width;
+    }
+    & when not (@input-height = unset) {
+      max-height: none;
+      height: @input-height;
+    }
   }
 
   #message-box .colorview-swatch,
@@ -58,8 +64,4 @@
   #stylus-popup #installed {
     max-height: 500px;
   }
-
-  /*.config-reset-icon {
-    padding: 0 2px;
-  }*/
 }
