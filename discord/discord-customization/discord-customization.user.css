@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2023.12.17.01.00
+@version        2023.12.17.18.14
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -10,7 +10,7 @@
 @var text font-family                "Font family"                 "'Whitney', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
 @var text min-sidebar_width          "Min sidebar width"           240px
 @var text max-sidebar_width          "Max sidebar width"           240px
-@var text channel-padding            "Channel padding (sidebar)"   1px
+@var text channel-padding            "Channel padding (sidebar)"   6px
 @var text category-spacing           "Category spacing (sidebar)"  16px
 @var text block-emoji-size           "Block emoji size"            3rem
 @var text block-emoji-zoom           "Block emoji zoom (hover)"    unset
