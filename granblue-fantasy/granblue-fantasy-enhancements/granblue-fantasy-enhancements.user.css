@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Granblue Fantasy Enhancements
 @description  Allows the customization of the game's layout and responsive behavior.
-@version      2023.12.17.11.45
+@version      2023.12.18.23.31
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -556,14 +556,13 @@
       width: 180px !important;
     }
 
-    .lis-raid .prt-raid-info .txt-half-campaign.plural,
-    .lis-raid .prt-raid-info .txt-free-campaign.plural,
+    .lis-raid .prt-raid-info .txt-half-campaign,
+    .lis-raid .prt-raid-info .txt-free-campaign,
     .lis-raid .prt-raid-info .prt-item-effect {
+			&,
+			&.plural {
       right: 20px;
-    }
-
-    .btn-multi-raid.on {
-      transform: scale(.98, 0.74);
+			}
     }
 
     .prt-raid-list + .prt-pager-text {
@@ -575,6 +574,14 @@
       margin-left: -10px;
     }
 
+    .prt-raid-list .prt-assist-raid-setting {
+      margin-top: 16px;
+    }
+
+    .btn-multi-raid.on {
+      transform: scale(.98, 0.74);
+    }
+
     .lis-raid .prt-raid-thumbnail .prt-finish-time {
       bottom: 24px;
       left: 100px;
@@ -582,9 +589,15 @@
       width: 72px;
     }
 
-    .prt-raid-list .prt-assist-raid-setting {
-      margin-top: 16px;
-    }
+		.lis-raid.show-assist-comment .prt-assist-comment {
+			margin-left: -64px;
+      transform: scale(0.67, 1);
+			
+			&,
+			.txt-assist-comment {
+				width: 400px;
+			}
+		}
   }
 
   else if (compact-raids == 'extra') {
@@ -621,29 +634,33 @@
       width: 256px !important;
     }
 
-    .lis-raid .prt-raid-info .txt-half-campaign.plural,
-    .lis-raid .prt-raid-info .txt-free-campaign.plural,
+    .lis-raid .prt-raid-info .txt-half-campaign,
+    .lis-raid .prt-raid-info .txt-free-campaign,
     .lis-raid .prt-raid-info .prt-item-effect {
+			&,
+			&.plural {
       right: 10px;
+			}
     }
 
-    .lis-raid .prt-raid-info .txt-half-campaign.plural,
-    .lis-raid .prt-raid-info .txt-free-campaign.plural {
-      top: 24px;
-    }
-
-    .btn-multi-raid.on {
-      transform: scale(.98, 0.63);
+    .lis-raid .prt-raid-info .txt-half-campaign,
+    .lis-raid .prt-raid-info .txt-free-campaign {
+			&,
+			&.plural {
+      top: 24px;				
+			}
     }
 
     .prt-raid-list + .prt-pager-text {
       padding-top: 7px;
     }
 
-    .lis-raid .prt-raid-thumbnail .ico-defeat,
-    .lis-raid .prt-raid-thumbnail .ico-fail {
-      margin-left: -14px;
-      transform: scale(0.75, 1);
+    .prt-raid-list .prt-assist-raid-setting {
+      margin-top: 20px;
+    }
+
+    .btn-multi-raid.on {
+      transform: scale(.98, 0.63);
     }
 
     .lis-raid .prt-raid-thumbnail .prt-finish-time {
@@ -653,9 +670,21 @@
       width: 72px;
     }
 
-    .prt-raid-list .prt-assist-raid-setting {
-      margin-top: 20px;
+    .lis-raid .prt-raid-thumbnail .ico-defeat,
+    .lis-raid .prt-raid-thumbnail .ico-fail {
+      margin-left: -14px;
+      transform: scale(0.75, 1);
     }
+
+		.lis-raid.show-assist-comment .prt-assist-comment {
+			margin-left: -64px;
+      transform: scale(0.67, 1);
+			
+			&,
+			.txt-assist-comment {
+				width: 400px;
+			}
+		}
   }
 
   /* compact summons */
