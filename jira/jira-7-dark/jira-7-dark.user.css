@@ -1,13 +1,13 @@
 /* ==UserStyle==
 @name           JIRA (7.x) - Dark
 @description    Dark theme for JIRA 7.x.
-@version        2023.06.09.10.49
+@version        2023.12.22.10.44
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 
 ==/UserStyle== */
-@-moz-document domain("FILLME") {
+@-moz-document domain("build.mypkfit.com") {
   :root {
     --invert-value: 0.933;
   }
@@ -130,9 +130,11 @@
     background: #ffe2db;
   }
 
-  img,
-  video {
-    filter: invert(1) hue-rotate(180deg);
+  body:not(#tinymce) {
+    img,
+    video {
+      filter: invert(1) hue-rotate(180deg);
+    }
   }
 
   iframe {
