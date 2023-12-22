@@ -63,15 +63,15 @@
   }
 
   .img-arcarum-skip,
-	.pop-collect-recycle-setting .txt-setting-caution,
-	.pop-collect-recycle-setting .txt-setting-description,
-	.pop-raid-menu .prt-menu > :not(:nth-child(1n+4)),
-	.pop-recommend-setting .txt-setting-caution,
-	.pop-recommend-setting .txt-setting-description,
-	/* .pop-usual .txt-popup-body .txt-explain, */
-	.prt-post-twitter-attention,
-	.txt-arcarum-skip,
-	.txt-join-bonus {
+  .pop-collect-recycle-setting .txt-setting-caution,
+  .pop-collect-recycle-setting .txt-setting-description,
+  .pop-raid-menu .prt-menu > :not(:nth-child(1n+4)),
+  .pop-recommend-setting .txt-setting-caution,
+  .pop-recommend-setting .txt-setting-description,
+  /* .pop-usual .txt-popup-body .txt-explain, */
+  .prt-post-twitter-attention,
+  .txt-arcarum-skip,
+  .txt-join-bonus {
     display: none !important;
   }
 
