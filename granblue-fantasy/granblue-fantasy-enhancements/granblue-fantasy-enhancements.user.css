@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Granblue Fantasy Enhancements
 @description  Allows the customization of the game's layout and responsive behavior.
-@version      2023.12.22.17.51
+@version      2023.12.24.10.33
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -230,7 +230,7 @@
       margin: 0;
     }
 
-		.pop-level-select .prt-use-discount {
+    .pop-level-select .prt-use-discount {
       margin-top: -10px;
     }
 
@@ -563,10 +563,10 @@
     .lis-raid .prt-raid-info .txt-half-campaign,
     .lis-raid .prt-raid-info .txt-free-campaign,
     .lis-raid .prt-raid-info .prt-item-effect {
-			&,
-			&.plural {
+      &,
+      &.plural {
       right: 20px;
-			}
+      }
     }
 
     .prt-raid-list + .prt-pager-text {
@@ -593,15 +593,15 @@
       width: 72px;
     }
 
-		.lis-raid.show-assist-comment .prt-assist-comment {
-			margin-left: -64px;
+    .lis-raid.show-assist-comment .prt-assist-comment {
+      margin-left: -64px;
       transform: scale(0.67, 1);
-			
-			&,
-			.txt-assist-comment {
-				width: 400px;
-			}
-		}
+      
+      &,
+      .txt-assist-comment {
+        width: 400px;
+      }
+    }
   }
 
   else if (compact-raids == 'extra') {
@@ -641,18 +641,18 @@
     .lis-raid .prt-raid-info .txt-half-campaign,
     .lis-raid .prt-raid-info .txt-free-campaign,
     .lis-raid .prt-raid-info .prt-item-effect {
-			&,
-			&.plural {
+      &,
+      &.plural {
       right: 10px;
-			}
+      }
     }
 
     .lis-raid .prt-raid-info .txt-half-campaign,
     .lis-raid .prt-raid-info .txt-free-campaign {
-			&,
-			&.plural {
-      top: 24px;				
-			}
+      &,
+      &.plural {
+      top: 24px;        
+      }
     }
 
     .prt-raid-list + .prt-pager-text {
@@ -680,15 +680,15 @@
       transform: scale(0.75, 1);
     }
 
-		.lis-raid.show-assist-comment .prt-assist-comment {
-			margin-left: -64px;
+    .lis-raid.show-assist-comment .prt-assist-comment {
+      margin-left: -64px;
       transform: scale(0.67, 1);
-			
-			&,
-			.txt-assist-comment {
-				width: 400px;
-			}
-		}
+      
+      &,
+      .txt-assist-comment {
+        width: 400px;
+      }
+    }
   }
 
   /* compact summons */
@@ -890,7 +890,7 @@
 
   /* hide auto select */
   if (hide-auto-select) {
-		.cnt-party .btn-auto-pick,
+    .cnt-party .btn-auto-pick,
     .cnt-summon-list .btn-summon-all,
     .cnt-summon-list .prt-summon-all-disabled,
     .cnt-weapon-list .btn-mainweapon-fix,
@@ -913,6 +913,9 @@
   if (hide-scrollbars) {
     html ::-webkit-scrollbar {
       display: none !important;
+    }
+    * {
+      scrollbar-width: none !important;
     }
   }
 
