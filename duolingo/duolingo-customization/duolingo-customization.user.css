@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Duolingo - Customization
 @description    Provides some extra customization options for Duolingo.
-@version        2023.08.10.9.45
+@version        2023.12.29.10.43
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -125,7 +125,8 @@
 
   /* classes */
   if (hide-classes) {
-    [href="https://classes.duolingo.com/"] {
+    [href="https://classes.duolingo.com/"]
+    {
       display: none !important;
     }
   }
@@ -144,22 +145,21 @@
 @-moz-document regexp("https:\\/\\/www\\.duolingo\\.com\\/(characters|guidebook|learn|practice-hub|shop).*") {
   /* leagues */
   if (hide-leagues) {
-    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(3) {
+    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(2) {
       display: none;
     }
   }
 
   /* goals */
   if (hide-goals) {
-    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(4) {
+    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(3) {
       display: none;
     }
   }
 
   /* premium */
   if (hide-premium) {
-    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(2),
-    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(5) {
+    #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div > div:nth-child(4) {
       display: none;
     }
   }
