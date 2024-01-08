@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           JIRA (7.x) - Dark
 @description    Dark theme for JIRA 7.x.
-@version        2023.12.22.10.44
+@version        2024.01.08.12.31
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -19,6 +19,12 @@
   body#tinymce {
     color: #b9c5db;
     background: transparent;
+
+    pre {
+      color: #b9c5db;
+      background: #000;
+      border-color: #333 !important;
+    }
   }
 
   #cp-header,
