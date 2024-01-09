@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Duolingo - Dark Theme
 @description    Dark theme for Duolingo.
-@version        2023.10.05.16.05
+@version        2024.01.09.18.26
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -70,6 +70,10 @@
   .placeholder {
     filter: invert(1) hue-rotate(180deg) brightness(1.5);
   }
+	
+	[data-test*="skill-path-level"] path {
+		filter: brightness(.75) saturate(1.5);
+	}
   
   /**/
   ._2N5Ql {
