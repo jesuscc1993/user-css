@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Duolingo - Customization
 @description    Provides some extra customization options for Duolingo.
-@version        2023.12.29.10.43
+@version        2024.01.09.18.33
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -88,6 +88,7 @@
 
   /* premium */
   if (hide-premium) {
+		div:has(> [data-test="plus-offer-logo"]),
     [data-test="free-plus-button"],
     [href="/review"],
     [href="/settings/super"] {
