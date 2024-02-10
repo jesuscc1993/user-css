@@ -52,6 +52,9 @@ Requires the [Stylus](https://github.com/openstyles/stylus#releases) userstyle l
 - [nyaa.si/nyaa.si-customization](nyaa.si/nyaa.si-customization)
 <hr>
 
+- [steamdb/steamdb-big-game-banners](steamdb/steamdb-big-game-banners)
+<hr>
+
 - [stylus/stylus-codemirror-dark-plus](stylus/stylus-codemirror-dark-plus)
 - [stylus/stylus-customization](stylus/stylus-customization)
 - [stylus/stylus-dark](stylus/stylus-dark)
