@@ -66,4 +66,4 @@ Requires the [Stylus](https://github.com/openstyles/stylus#releases) userstyle l
 - [youtube/youtube-big-text](youtube/youtube-big-text)
 - [youtube/youtube-customization](youtube/youtube-customization)
 - [youtube/youtube-fullscreen-theater](youtube/youtube-fullscreen-theater)
-- [youtube/youtube-pure-black](youtube/youtube-pure-black)
+- [youtube/youtube-pure-black](youtube/youtube-pure-black)hr>
