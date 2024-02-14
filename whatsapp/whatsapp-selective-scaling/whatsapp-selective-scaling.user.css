@@ -1,17 +1,18 @@
 /* ==UserStyle==
 @name         WhatsApp - Selective Scaling (Chrome only)
 @description  Allows selectively resizing elements of the app.
-@version      2024.01.20.13.47
+@version      2024.02.14.18.33
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
 @preprocessor less
 
-@advanced text sidebar-size 		"Sidebar width" 		"30%"
-@advanced text sidebar-zoom 		"Sidebar zoom" 			1
-@advanced text chat-zoom 				"Chat zoom" 				1
-@advanced text large-emoji-size "Large emoji size" 	unset
-@advanced text input-font-size 	"Input font size" 	unset
+@advanced text     sidebar-size     "Sidebar width"     "30%"
+@advanced text     sidebar-zoom     "Sidebar zoom"      1
+@advanced text     chat-zoom        "Chat zoom"         1
+@advanced text     large-emoji-size "Large emoji size"  unset
+@advanced text     input-font-size  "Input font size"   unset
+@advanced checkbox full-size-view   "Full size view"    0
 
 ==/UserStyle== */
 @-moz-document domain("web.whatsapp.com") {
@@ -39,7 +40,7 @@
     }
   }
 
-  #main header ~ div img[alt][src*="64.png"] when not (@large-emoji-size =unset) {
+  #main header ~ div img[alt][src*="64.png"] when not (@large-emoji-size = unset) {
     min-width: @large-emoji-size;
     min-height: @large-emoji-size;
     width: @large-emoji-size;
@@ -48,11 +49,21 @@
     max-height: none;
   }
 
-  footer .lexical-rich-text-input when not (@input-font-size =unset) {
+  footer .lexical-rich-text-input when not (@input-font-size = unset) {
     div,
     p {
       font-size: @input-font-size;
       line-height: 1.5 * @input-font-size;
+    }
+  }
+
+  .app-wrapper-web when (@full-size-view = 1) {
+    .two,
+    .three {
+      top: 0;
+      width: 100%;
+      max-width: none;
+      height: 100%;
     }
   }
 }
