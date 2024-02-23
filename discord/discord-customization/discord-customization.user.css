@@ -22,6 +22,7 @@
 @var text group-spacing              "Message groups spacing"      unset
 @var text li-margin                  "List item margin"            4px
 @var text transition                 "Transition duration"         150ms
+@var checkbox avatar-decorations     "Avatar decorations"          1
 @var checkbox darker-quotes          "Darker code and quotes"      0
 @var checkbox full-width-embeds      "Full width embeds"           0
 @var checkbox reduce-message-spacing "Reduce message spacing"      0
@@ -168,14 +169,14 @@
 
   /* RESIZE */
   /* avatars */
-  html when not (@avatar-scale =unset) {
+  html when not (@avatar-scale = unset) {
     [class*="messageListItem"] img[class*="avatar__"] {
       transform: scale(var(--avatar-scale)) !important;
       margin-top: 4px;
     }
   }
 
-  html when not (@avatar-zoom =unset) {
+  html when not (@avatar-zoom = unset) {
     [class*="messageListItem"] img[class*="avatar__"] {
       &,
       & + img[class*="avatarDecoration__"] {
@@ -237,7 +238,7 @@
     transform: none !important;
   }
 
-  html when not (@inline-emoji-zoom =unset) {
+  html when not (@inline-emoji-zoom = unset) {
     [class*="messagesWrapper_"] {
       [class*="messageContent"] img.emoji:hover {
         transform: scale(var(--inline-emoji-zoom));
@@ -245,7 +246,7 @@
     }
   }
 
-  html when not (@block-emoji-zoom =unset) {
+  html when not (@block-emoji-zoom = unset) {
     [class*="messagesWrapper_"] {
       img.emoji.jumboable:hover {
         transform: scale(var(--block-emoji-zoom));
@@ -328,8 +329,13 @@
     margin: calc(var(--li-margin) / 2) 0;
   }
 
+  /* avatar decorations */
+  [class*="avatarDecoration_"] when (@avatar-decorations = 0) {
+    display: none;
+  }
+
   /* darker code and quotes */
-  html when (@darker-quotes =1) {
+  html when (@darker-quotes = 1) {
     [class*="markup"] code,
     blockquote {
       background: #0003;
@@ -342,12 +348,15 @@
   }
 
   /* full width embeds */
-  [class*="gridContainer"] when (@full-width-embeds =1) {
-    max-width: 100% !important;
+  [class*="embedWrapper_"] when (@full-width-embeds = 1) {
+    &,
+    [class*="gridContainer_"] {
+      max-width: 100% !important;
+    }
   }
 
   /* reduced message spacing */
-  html when (@reduce-message-spacing =1) {
+  html when (@reduce-message-spacing = 1) {
     [class*="wrapper"][class*="compact"]:not([class*="mentioned_"]),
     [class*="wrapper"][class*="cozy"]:not([class*="mentioned_"]) {
       padding-top: 0;
@@ -356,14 +365,14 @@
   }
 
   /* custom group spacing */
-  html when not (@group-spacing =unset) {
+  html when not (@group-spacing = unset) {
     [class*="group-spacing"] [class*="groupStart"] {
       margin-top: var(--group-spacing);
     }
   }
 
   /* blurple mentions */
-  html when (@blurple-mentions =1) {
+  html when (@blurple-mentions = 1) {
     [class*="mentioned_"]:before {
       background-color: #7289da;
     }
@@ -379,7 +388,7 @@
   }
 
   /* blurple restoration */
-  html.theme-dark when (@restore-blurple =1) {
+  html.theme-dark when (@restore-blurple = 1) {
     --brand-experiment-100: #f8f9fd;
     --brand-experiment-130: #f2f4fc;
     --brand-experiment-160: #ebeefa;
