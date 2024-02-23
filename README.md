@@ -35,6 +35,9 @@ Requires the [Stylus](https://github.com/openstyles/stylus#releases) userstyle l
 - [global/media-transformations](global/media-transformations)
 <hr>
 
+- [gmail/darker-gmail](gmail/darker-gmail)
+<hr>
+
 - [granblue-fantasy/granblue-fantasy-enhancements](granblue-fantasy/granblue-fantasy-enhancements)
 - [granblue-fantasy/granblue-fantasy-tweaks](granblue-fantasy/granblue-fantasy-tweaks)
 <hr>

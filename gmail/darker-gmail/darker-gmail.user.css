@@ -1,0 +1,15 @@
+/* ==UserStyle==
+@name           Gmail - Darker Gmail
+@description    Makes Gmail's inbox darker.
+@version        2022.07.31.10.59
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+==/UserStyle== */
+
+@-moz-document domain("mail.google.com") {
+  .bkK > .nH,
+  .TD {
+    background-color: #0008;
+  }
+}
