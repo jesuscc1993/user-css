@@ -28,6 +28,7 @@ Requires the [Stylus](https://github.com/openstyles/stylus#releases) userstyle l
 - [firefox/firefox-dark-scrollbar](firefox/firefox-dark-scrollbar)
 <hr>
 
+- [github/github-customization](github/github-customization)
 - [github/github-less-contrasty-dark-theme](github/github-less-contrasty-dark-theme)
 <hr>
 

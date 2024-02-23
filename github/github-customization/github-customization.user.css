@@ -1,0 +1,21 @@
+/* ==UserStyle==
+@name           GitHub - Customization
+@description    Provides some extra customization options for GitHub.
+@version        2024.02.23.16.42
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+@preprocessor   stylus
+
+@var text       diff-font-family "Diff font family" "ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace"
+@var text       diff-font-size   "Diff font size"   "12px"
+@var text       diff-line-height "Diff line height" "20px"
+
+==/UserStyle== */
+@-moz-document domain("github.com") {
+  .blob-code-inner {
+    font-family: diff-font-family;
+    font-size: diff-font-size;
+    line-height: diff-line-height;
+  }
+}
