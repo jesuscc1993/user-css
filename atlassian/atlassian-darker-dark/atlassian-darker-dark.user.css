@@ -1,0 +1,49 @@
+/* ==UserStyle==
+@name         Atlassian - Darker Dark
+@description  Darker default theme.
+@version      2024.03.07.18.08
+@author       MetalTxus
+@namespace    https://github.com/jesuscc1993/
+@license      CC BY-SA 4.0
+==/UserStyle== */
+
+@-moz-document domain("atlassian.net") {
+  html[data-color-mode="light"][data-theme~="light:dark"],
+  html[data-color-mode="dark"][data-theme~="dark:dark"] {
+    /* manually tweaked */
+    --ds-background-selected: #171f2b;
+    --ds-background-selected-hovered: #192f4d;
+    --ds-background-selected-pressed: #0055cc;
+    --ds-background-selected-bold: #579dff;
+    --ds-background-selected-bold-hovered: #85b8ff;
+    --ds-background-selected-bold-pressed: #cce0ff;
+    /* -10% brightness */
+    --ds-surface: #101416;
+    --ds-surface-hovered: #171c1f;
+    --ds-surface-pressed: #191d20;
+    --ds-surface-overlay: #191d20;
+    --ds-surface-overlay-hovered: #1c2125;
+    --ds-surface-overlay-pressed: #212d37;
+    --ds-surface-raised: #171c1f;
+    --ds-surface-raised-hovered: #191d20;
+    --ds-surface-raised-pressed: #1c2125;
+    --ds-surface-sunken: #0d1013;
+    /* originals */
+    /* --ds-background-selected: #1c2b41; */
+    /* --ds-background-selected-hovered: #09326c; */
+    /* --ds-background-selected-pressed: #0055cc; */
+    /* --ds-background-selected-bold: #579dff; */
+    /* --ds-background-selected-bold-hovered: #85b8ff; */
+    /* --ds-background-selected-bold-pressed: #cce0ff; */
+    /* --ds-surface: #1d2125; */
+    /* --ds-surface-hovered: #22272b; */
+    /* --ds-surface-pressed: #282e33; */
+    /* --ds-surface-overlay: #282e33; */
+    /* --ds-surface-overlay-hovered: #2c333a; */
+    /* --ds-surface-overlay-pressed: #38414a; */
+    /* --ds-surface-raised: #22272b; */
+    /* --ds-surface-raised-hovered: #282e33; */
+    /* --ds-surface-raised-pressed: #2c333a; */
+    /* --ds-surface-sunken: #161a1d; */
+  }
+}
