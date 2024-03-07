@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         WhatsApp - Selective Scaling (Chrome only)
 @description  Allows selectively resizing elements of the app.
-@version      2024.02.14.18.33
+@version      2024.03.07.18.05
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -31,22 +31,22 @@
     }
   }
 
-  #main header ~ div {
+  #main header ~ div:nth-child(5) {
     zoom: @chat-zoom;
 
     img,
     [role="row"] [style*="width"]:not([style*="width: 55px;"]) {
       zoom: calc(1 / @chat-zoom);
     }
-  }
 
-  #main header ~ div img[alt][src*="64.png"] when not (@large-emoji-size = unset) {
-    min-width: @large-emoji-size;
-    min-height: @large-emoji-size;
-    width: @large-emoji-size;
-    height: @large-emoji-size;
-    max-width: none;
-    max-height: none;
+    img[alt][src*="64.png"] when not (@large-emoji-size = unset) {
+      min-width: @large-emoji-size;
+      min-height: @large-emoji-size;
+      width: @large-emoji-size;
+      height: @large-emoji-size;
+      max-width: none;
+      max-height: none;
+    }
   }
 
   footer .lexical-rich-text-input when not (@input-font-size = unset) {
