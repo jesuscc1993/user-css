@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2024.03.11.15.45
+@version        2024.03.11.16.27
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -383,16 +383,11 @@
     height: auto;
   }
 
-  .img-header-bg[src="https://prd-game-a-granbluefantasy.akamaized.net/assets_en/img_mid/sp/gacha/rupie/header/1.jpg"]
-  {
-    width: 0;
-    background: url(https://prd-game-a-granbluefantasy.akamaized.net/assets_en/img_mid/sp/gacha/7hyy02tv/header/bg.jpg);
-    background-size: cover;
-    padding: 160px;
+  .img-header-bg[src*="rupie/header/"] {
+    top: -40px;
   }
 
-  .img-header-bg[src="https://prd-game-a-granbluefantasy.akamaized.net/assets_en/img_mid/sp/gacha/classic/header/bg.jpg"]
-  {
+  .img-header-bg[src*="classic/header/"] {
     top: -20px;
   }
 
