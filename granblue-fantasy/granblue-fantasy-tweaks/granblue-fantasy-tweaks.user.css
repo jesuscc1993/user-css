@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2023.12.22.17.53
+@version        2024.03.11.15.38
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -422,9 +422,15 @@
   }
 
   /* hide add banners */
-  .btn-banner[href="https://extrafes.granbluefantasy.jp/"],
+  .btn-banner[data-href*="shop/package"],
+  .btn-banner[data-href*="extrafes.granbluefantasy.jp"],
   .btn-banner-s[data-href*="collaboration/campaign/gbvs"],
   .btn-banner-s[data-href*="collaboration/campaign/relink_rising"] {
+    display: none !important;
+  }
+
+  /* hide preview banners */
+  .btn-global-banner[data-href*="teaser"] {
     display: none !important;
   }
 
