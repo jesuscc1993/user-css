@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2024.03.11.15.38
+@version        2024.03.11.15.45
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -421,16 +421,24 @@
     display: none !important;
   }
 
-  /* hide add banners */
-  .btn-banner[data-href*="shop/package"],
+  /* hide top banners */
   .btn-banner[data-href*="extrafes.granbluefantasy.jp"],
-  .btn-banner-s[data-href*="collaboration/campaign/gbvs"],
-  .btn-banner-s[data-href*="collaboration/campaign/relink_rising"] {
+  .btn-banner[data-href*="gacha/campaign"],
+  .btn-banner[data-href*="gacha/skin"],
+  .btn-banner[data-href*="shop/package"],
+  .btn-banner[data-href*="shop/skin"],
+  .btn-banner[data-href*="sidestory/story/"],
+  .btn-global-banner[data-href*="teaser"] {
     display: none !important;
   }
 
-  /* hide preview banners */
-  .btn-global-banner[data-href*="teaser"] {
+  /* hide gameplay extra banners */
+  .btn-banner-s[data-href*="collaboration/campaign/gbvs"],
+  .btn-banner-s[data-href*="collaboration/campaign/gbvs"],
+  .btn-banner-s[data-href*="collaboration/campaign/relink"],
+  .btn-banner-s[data-href*="collaboration/campaign/relink_rising"],
+  .btn-banner-s[data-href="beginnercomic"],
+  .btn-banner-s[data-href="premium"] {
     display: none !important;
   }
 
@@ -602,16 +610,6 @@
   /* crap removal */
   .cnt-extra-lb .img-tips,
   .btn-thumbnail.btn-grapass-banner,
-  .btn-banner-s[data-href*="collaboration/campaign/gbvs"],
-  .btn-banner-s[data-href="beginnercomic"],
-  .btn-banner-s[data-href="premium"],
-  .btn-banner[data-external-href*="granbluefantasy-campaign.mobage.jp"],
-  .btn-banner[data-href*="gacha/campaign"],
-  .btn-banner[data-href*="gacha/skin"],
-  .btn-banner[data-href*="shop/skin"],
-  .btn-banner[data-href*="sidestory/story/"],
-  .btn-banner[data-href="manariafriends"],
-  .btn-banner[href*="anime.granbluefantasy.jp"],
   .btn-check-seraphic,
   .prt-campaign-banners .btn-banner-s img[src*="banner_anime.png"],
   .prt-scene-comment-after-mask,
