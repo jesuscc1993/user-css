@@ -607,18 +607,17 @@
   }
 
   /* crap removal */
-  .cnt-extra-lb .img-tips,
-  .btn-thumbnail.btn-grapass-banner,
-  .btn-check-seraphic,
-  .prt-campaign-banners .btn-banner-s img[src*="banner_anime.png"],
-  .prt-scene-comment-after-mask,
-  .prt-config-balloon,
-  .btn-mainweapon-fix,
   .btn-change-sex.type-1,
+  .btn-check-seraphic,
+  .btn-mainweapon-fix,
+  .btn-thumbnail.btn-grapass-banner,
+  .cnt-extra-lb .img-tips,
+  .prt-config-balloon,
+  .prt-scene-comment-after-mask,
   .prt-self-introduction .prt-sns-one:nth-child(2),
-  #prt-comic-banner,
+  #prt-assist-id .prt-assist-tips,
   #prt-assist-id .txt-offer-lead,
-  #prt-assist-id .prt-assist-tips {
+  #prt-comic-banner {
     display: none !important;
   }
 
