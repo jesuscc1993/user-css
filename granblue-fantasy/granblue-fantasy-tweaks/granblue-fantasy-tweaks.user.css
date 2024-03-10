@@ -434,7 +434,6 @@
 
   /* hide gameplay extra banners */
   .btn-banner-s[data-href*="collaboration/campaign/gbvs"],
-  .btn-banner-s[data-href*="collaboration/campaign/gbvs"],
   .btn-banner-s[data-href*="collaboration/campaign/relink"],
   .btn-banner-s[data-href*="collaboration/campaign/relink_rising"],
   .btn-banner-s[data-href="beginnercomic"],
