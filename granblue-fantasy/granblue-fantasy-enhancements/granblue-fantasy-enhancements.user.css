@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Granblue Fantasy Enhancements
 @description  Allows the customization of the game's layout and responsive behavior.
-@version      2023.12.29.01.50
+@version      2024.03.15.17.44
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -854,7 +854,7 @@
     }
     
     .pop-decompose-confirm-consume .prt-target-items .lis-decompose-item .img-decompose-item {
-      margin: 0 1px;
+      margin: 1px;
     }
     
     .pop-decompose-confirm-treasure .prt-order-middle .prt-article {
