@@ -1,7 +1,7 @@
 /* ==UserStyle== 
 @name         Granblue Fantasy Enhancements
 @description  Allows the customization of the game's layout and responsive behavior.
-@version      2024.03.18.14.19
+@version      2024.03.18.14.53
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -69,7 +69,7 @@
 @var checkbox hide-support-plus     "⛔ Hide support summon plus marks" 0
 
  ==/UserStyle== */
-@-moz-document domain("granbluefantasy.jp") {
+ @-moz-document domain("granbluefantasy.jp") {
   body,
   .prt-user-info .prt-info-profile .btn-user-name,
   .prt-status .prt-user-name .txt-user-name {
@@ -473,6 +473,12 @@
     .cnt-material-status-item .cnt-material-list,
     .prt-enhance-detail .cnt-material-list {
       padding-bottom: 0;
+    }
+    
+    .cnt-skillplus {
+      .cnt-material-status .cnt-material-list {
+        padding-bottom: 40px;
+      }      
     }
 
     .cnt-list-equipment .txt-notice {
