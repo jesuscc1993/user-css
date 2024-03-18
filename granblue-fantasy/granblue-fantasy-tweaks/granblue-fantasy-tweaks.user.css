@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2024.03.11.16.27
+@version        2024.03.18.12.24
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -15,32 +15,34 @@
 
   /* keep battle commands visible when selecting character skills */
   .cnt-raid {
-    .prt-command {
-      height: 204px;
-    }
-
-    .cnt-multi {
-      margin-top: 488px;
-    }
-
-    #prt-sub-command-group {
-      display: flex !important;
-      justify-content: space-between;
-      /*top: 47px;*/
-      width: 100%;
-
-      &[style="display: none;"] {
-        margin-top: 0;
-        position: absolute;
-        top: 160px;
+    @media screen and (min-height: 888px) {
+      .prt-command {
+        height: 204px;
       }
-    }
 
-    /*#prt-advanced-command {
+      .cnt-multi {
+        margin-top: 488px;
+      }
+
+      #prt-sub-command-group {
+        display: flex !important;
+        justify-content: space-between;
+        /*top: 47px;*/
+        width: 100%;
+
+        &[style="display: none;"] {
+          margin-top: 0;
+          position: absolute;
+          top: 160px;
+        }
+      }
+
+      /*#prt-advanced-command {
       + #prt-sub-command-group:not([style="display: none;"]) {
         top: 17px;
       }
     }*/
+    }
   }
 
   /* taller raid log */
@@ -231,6 +233,7 @@
       min-height: calc(25vh - 31px) !important;
     }
   }
+
   #mobage-game-container[style="zoom: 1.5;"] {
     .wrapper,
     .mask,
@@ -243,6 +246,7 @@
       min-height: calc(66.66vh - 31px) !important;
     }
   }
+
   #mobage-game-container[style="zoom: 2;"] {
     .wrapper,
     .mask,
@@ -353,9 +357,11 @@
     .prt-progress {
       top: 248px;
     }
+
     .prt-ready {
       top: 180px;
     }
+
     .prt-auto-setting {
       top: 332px;
     }
@@ -501,6 +507,7 @@
   .prt-multi-mene {
     display: none !important;
   }
+
   .prt-multi-mene + * {
     margin-top: 5px;
   }
@@ -804,9 +811,11 @@
   .cnt-replicard-mission .prt-header .btn-location-stage {
     top: 64px;
   }
+
   .cnt-replicard-mission .prt-replicard-tab {
     margin-top: 10px;
   }
+
   .cnt-replicard-mission .prt-interlude-banner {
     top: 89px;
   }
