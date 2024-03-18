@@ -1,7 +1,7 @@
 /* ==UserStyle== 
 @name         Granblue Fantasy Enhancements
 @description  Allows the customization of the game's layout and responsive behavior.
-@version      2024.03.18.14.17
+@version      2024.03.18.14.19
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -349,68 +349,74 @@
 
   /* compact crate */
   if (compact-crate) {
-    .list-innner-present,
-    .list-innner-history {
-      --reward-size: 54px;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 12px 5px;
-      margin: 0 14px;
+    .prt-present {
+      .list-innner-present,
+      .list-innner-history {
+        --reward-size: 54px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 12px 5px;
+        margin: 0 14px;
 
-      .lis-present {
-        background: none;
-        margin: 0;
-
-        &,
-        .prt-left-box img {
-          height: var(--reward-size);
-          width: var(--reward-size);
-        }
-
-        .prt-left-box {
+        .lis-present {
+          background: none;
           margin: 0;
-          position: relative;
 
-          img {
+          &,
+          .prt-left-box img {
+            height: var(--reward-size);
+            width: var(--reward-size);
+          }
+
+          .prt-left-box {
             margin: 0;
+            position: relative;
 
-            &.btn-present-img {
-              border-top-right-radius: 8px;
+            img {
+              margin: 0;
+
+              &.btn-present-img {
+                border-top-right-radius: 8px;
+              }
+            }
+          }
+
+          .txt-present-num {
+            background: #d1dedd;
+            border-radius: 12px;
+            border: .5px solid #231e18;
+            box-sizing: border-box;
+            margin: -12px 6px 0;
+            padding: 2px;
+            position: absolute;
+            width: calc(var(--reward-size) - 12px);
+            box-shadow: 0 1px 2px 1px #231e18;
+          }
+
+          .prt-right-box {
+            position: absolute;
+            width: 0;
+            height: 0;
+
+            .txt-present-name,
+            .txt-present-description,
+            .prt-info-box,
+            .prt-date-and-btn {
+              display: none;
+            }
+
+            .prt-present-btn {
+              transform: scale(.5);
+              position: relative;
+              right: -13.5px;
+              top: -32px;
             }
           }
         }
+      }
 
-        .txt-present-num {
-          background: #d1dedd;
-          border-radius: 12px;
-					border: .5px solid #231e18;
-          box-sizing: border-box;
-          margin: -12px 6px 0;
-          padding: 2px;
-          position: absolute;
-          width: calc(var(--reward-size) - 12px);
-          box-shadow: 0 1px 2px 1px #231e18;
-        }
-
-        .prt-right-box {
-          position: absolute;
-          width: 0;
-          height: 0;
-
-          .txt-present-name,
-          .txt-present-description,
-          .prt-info-box,
-          .prt-date-and-btn {
-            display: none;
-          }
-
-          .prt-present-btn {
-            transform: scale(.5);
-            position: relative;
-            right: -13.5px;
-            top: -32px;
-          }
-        }
+      .txt-total-paging {
+        padding-top: 16px;
       }
     }
   }
