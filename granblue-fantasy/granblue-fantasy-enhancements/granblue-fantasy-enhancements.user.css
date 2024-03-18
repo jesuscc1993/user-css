@@ -1,7 +1,7 @@
-/* ==UserStyle==
+/* ==UserStyle== 
 @name         Granblue Fantasy Enhancements
 @description  Allows the customization of the game's layout and responsive behavior.
-@version      2024.03.15.17.44
+@version      2024.03.18.14.07
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -27,6 +27,7 @@
 @var checkbox submenu-on-left       "Move right submenu to the left" 0
 @var checkbox rearrange-coop        "Rearrange co-op room" 0
 @var checkbox sort-summons          "Sort summons" 0
+@var checkbox compact-crate         "📦 Compact crate" 0
 @var checkbox compact-crew-skills   "📦 Compact crew skills" 0
 @var checkbox compact-enhancements  "📦 Compact enhancements" 0
 @var checkbox compact-event-rewards "📦 Compact event rewards" 0
@@ -67,7 +68,7 @@
 @var checkbox hide-star-premium     "⛔ Hide star premium draw" 0
 @var checkbox hide-support-plus     "⛔ Hide support summon plus marks" 0
 
-==/UserStyle== */
+ ==/UserStyle== */
 @-moz-document domain("granbluefantasy.jp") {
   body,
   .prt-user-info .prt-info-profile .btn-user-name,
@@ -116,9 +117,9 @@
   }
 
   /* content alignment */
-  if (content-alignment !='left') {
+  if (content-alignment != 'left') {
     #mobage-game-container {
-      --left: content-alignment=='center' ? calc(50% - 160px): calc(100% - 320px);
+      --left: content-alignment == 'center' ? calc(50% - 160px): calc(100% - 320px);
       left: var(--left);
     }
 
@@ -128,7 +129,7 @@
       }
     }
 
-    if (content-alignment=='center') {
+    if (content-alignment == 'center') {
       /* fit submenu */
       .jssdk #submenu,
       .jssdk #submenu.open {
@@ -298,7 +299,7 @@
   }
 
   /* submenu on left */
-  if (submenu-on-left && content-alignment !='left') {
+  if (submenu-on-left && content-alignment != 'left') {
     #submenu {
       left: 0 !important;
       margin: 0 !important;
@@ -343,6 +344,74 @@
 
     .prt-supporter-list .lis-supporter[data-supporter-evolution="0"] {
       order: 7;
+    }
+  }
+
+  /* compact crate */
+  if (compact-crate) {
+    .list-innner-present,
+    .list-innner-history {
+      --reward-size: 54px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px 5px;
+      margin: 0 14px;
+
+      .lis-present {
+        background: none;
+        margin: 0;
+
+        &,
+        .prt-left-box img {
+          height: var(--reward-size);
+          width: var(--reward-size);
+        }
+
+        .prt-left-box {
+          margin: 0;
+          position: relative;
+
+          img {
+            margin: 0;
+
+            &.btn-present-img {
+              border-top-right-radius: 8px;
+            }
+          }
+        }
+
+        .txt-present-num {
+          background: #d1dedd;
+          border-radius: 12px;
+          border: 1px solid #231e18;
+          box-sizing: border-box;
+          margin: -12px 6px 0;
+          padding: 2px;
+          position: absolute;
+          width: calc(var(--reward-size) - 12px);
+          box-shadow: 0 1px 2px 1px #231e18;
+        }
+
+        .prt-right-box {
+          position: absolute;
+          width: 0;
+          height: 0;
+
+          .txt-present-name,
+          .txt-present-description,
+          .prt-info-box,
+          .prt-date-and-btn {
+            display: none;
+          }
+
+          .prt-present-btn {
+            transform: scale(.5);
+            position: relative;
+            right: -13.5px;
+            top: -32px;
+          }
+        }
+      }
     }
   }
 
@@ -565,7 +634,7 @@
     .lis-raid .prt-raid-info .prt-item-effect {
       &,
       &.plural {
-      right: 20px;
+        right: 20px;
       }
     }
 
@@ -596,7 +665,7 @@
     .lis-raid.show-assist-comment .prt-assist-comment {
       margin-left: -64px;
       transform: scale(0.67, 1);
-      
+
       &,
       .txt-assist-comment {
         width: 400px;
@@ -643,7 +712,7 @@
     .lis-raid .prt-raid-info .prt-item-effect {
       &,
       &.plural {
-      right: 10px;
+        right: 10px;
       }
     }
 
@@ -651,7 +720,7 @@
     .lis-raid .prt-raid-info .txt-free-campaign {
       &,
       &.plural {
-      top: 24px;        
+        top: 24px;
       }
     }
 
@@ -683,7 +752,7 @@
     .lis-raid.show-assist-comment .prt-assist-comment {
       margin-left: -64px;
       transform: scale(0.67, 1);
-      
+
       &,
       .txt-assist-comment {
         width: 400px;
@@ -846,21 +915,21 @@
       height: auto;
       width: 50px;
     }
-    
+
     .pop-confirm-decompose .prt-target-items .lis-decompose-item .img-decompose-item,
     .pop-confirm-recycle.pop-usual .txt-popup-body .prt-confirm-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle,
     .pop-result-recycle.pop-usual .txt-popup-body .prt-result-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle {
       margin: 2px;
     }
-    
+
     .pop-decompose-confirm-consume .prt-target-items .lis-decompose-item .img-decompose-item {
       margin: 1px;
     }
-    
+
     .pop-decompose-confirm-treasure .prt-order-middle .prt-article {
       zoom: .8;
     }
-        
+
     .pop-decompose-confirm-treasure .prt-order-middle .prt-article:nth-child(4n),
     .pop-decompose-confirm-treasure .prt-order-middle .prt-article:last-child {
       margin-right: 5px;
@@ -914,6 +983,7 @@
     html ::-webkit-scrollbar {
       display: none !important;
     }
+
     * {
       scrollbar-width: none !important;
     }
@@ -974,7 +1044,7 @@
     .cnt-global-footer {
       display: none;
     }
-    
+
     .wrapper {
       padding-bottom: 48px;
     }
@@ -986,7 +1056,7 @@
       display: none;
     }
   }
-  
+
   /* hide town background */
   if (hide-town-background) {
     .prt-town-scene {
@@ -1065,7 +1135,7 @@
   /* fix cut summon text */
   .prt-deck-select .prt-supporter .prt-supporter-info .prt-supporter-detail .prt-summon-skill {
     overflow: visible;
-		width: 194px;
+    width: 194px;
   }
 
   /* fix home notification badge */
@@ -1141,7 +1211,7 @@ regexp("https://game.granbluefantasy.jp/#sell/.*") {
     .prt-listup .prt-list-item {
       padding: 7px 12px;
     }
-    
+
     [data-css="/mypage_character/list.css"] + .cnt-list #js-list {
       padding-left: 13px;
       padding-right: 12px;
@@ -1309,11 +1379,11 @@ regexp("https://game.granbluefantasy.jp/#sell/.*") {
   }
 }
 
-  @-moz-document regexp("https://game.granbluefantasy.jp/#raid_multi/.*") {
-    /* hide global footer */
-    if (hide-global-footer) {
-      .wrapper {
-        padding-bottom: 0;
-      }
+@-moz-document regexp("https://game.granbluefantasy.jp/#raid_multi/.*") {
+  /* hide global footer */
+  if (hide-global-footer) {
+    .wrapper {
+      padding-bottom: 0;
     }
   }
+}
