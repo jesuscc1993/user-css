@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           nyaa.si - Customization
 @description    Provides some extra customization options.
-@version        2024.03.19.22.57
+@version        2024.03.19.23.20
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -93,15 +93,11 @@
   }
 
   if (custom-categories) {
-    img[src="/static/img/icons/nyaa/1_1.png"],
-    img[src="/static/img/icons/nyaa/1_2.png"],
-    img[src="/static/img/icons/nyaa/1_3.png"],
-    img[src="/static/img/icons/nyaa/1_4.png"],
-    img[src="/static/img/icons/nyaa/2_1.png"],
-    img[src="/static/img/icons/nyaa/2_2.png"],
-    img[src="/static/img/icons/nyaa/3_1.png"],
-    img[src="/static/img/icons/nyaa/3_2.png"],
-    img[src="/static/img/icons/nyaa/3_3.png"] {
+    img[src^="/static/img/icons/nyaa/1_"],
+    img[src^="/static/img/icons/nyaa/2_"],
+    img[src^="/static/img/icons/nyaa/3_"],
+    img[src^="/static/img/icons/nyaa/5_"],
+    img[src^="/static/img/icons/nyaa/6_"] {
       height: 0;
       width: 80px;
       padding-top: 28px;
@@ -142,6 +138,22 @@
 
     img[src="/static/img/icons/nyaa/3_3.png"] {
       background-image: url("https://raw.githubusercontent.com/jesuscc1993/user-css/develop/_resources/images/3_3.png");
+    }
+
+    img[src="/static/img/icons/nyaa/5_1.png"] {
+      background-image: url("https://raw.githubusercontent.com/jesuscc1993/user-css/develop/_resources/images/5_1.png");
+    }
+
+    img[src="/static/img/icons/nyaa/5_2.png"] {
+      background-image: url("https://raw.githubusercontent.com/jesuscc1993/user-css/develop/_resources/images/5_2.png");
+    }
+
+    img[src="/static/img/icons/nyaa/6_1.png"] {
+      background-image: url("https://raw.githubusercontent.com/jesuscc1993/user-css/develop/_resources/images/6_1.png");
+    }
+
+    img[src="/static/img/icons/nyaa/6_2.png"] {
+      background-image: url("https://raw.githubusercontent.com/jesuscc1993/user-css/develop/_resources/images/6_2.png");
     }
   }
 
