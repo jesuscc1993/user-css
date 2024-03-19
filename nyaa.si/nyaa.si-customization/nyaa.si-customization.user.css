@@ -1,18 +1,18 @@
 /* ==UserStyle==
 @name           nyaa.si - Customization
 @description    Provides some extra customization options.
-@version        2024.03.19.23.20
+@version        2024.03.19.23.32
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var  checkbox  bigger-icons      "Bigger download icons"       0
-@var  checkbox  wide-search       "Wide searchbar"              0
-@var  checkbox  custom-style      "Alternative style"           0
-@var  checkbox  custom-categories "Custom category icons (WIP)" 0
-@var  checkbox  text-categories   "Display categories as text"  0
-@var  checkbox  hide-categories   "Hide categories"             0
+@var  checkbox  bigger-icons      "Bigger download icons"                        0
+@var  checkbox  wide-search       "Wide searchbar"                               0
+@var  checkbox  custom-style      "Alternative style"                            0
+@var  checkbox  custom-categories "Custom category icons (live action excluded)" 0
+@var  checkbox  text-categories   "Display categories as text"                   0
+@var  checkbox  hide-categories   "Hide categories"                              0
 
 ==/UserStyle== */
 @-moz-document regexp("https?:\\/\\/\\S*nyaa.(si|at)\\S*") {
