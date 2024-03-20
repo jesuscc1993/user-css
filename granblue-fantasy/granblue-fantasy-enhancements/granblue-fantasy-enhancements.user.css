@@ -1,7 +1,7 @@
-/* ==UserStyle== 
+/* ==UserStyle==
 @name         Granblue Fantasy Enhancements
 @description  Allows the customization of the game's layout and responsive behavior.
-@version      2024.03.18.14.53
+@version      2024.03.18.14.54
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -363,7 +363,7 @@
           margin: 0;
 
           &,
-          .prt-left-box img {
+          .prt-left-box .btn-present-img {
             height: var(--reward-size);
             width: var(--reward-size);
           }
@@ -378,6 +378,11 @@
               &.btn-present-img {
                 border-top-right-radius: 8px;
               }
+
+              &.ico-ex-skill,
+              &.ico-arousal-type {
+                top: 22px;
+              }
             }
           }
 
@@ -391,6 +396,7 @@
             position: absolute;
             width: calc(var(--reward-size) - 12px);
             box-shadow: 0 1px 2px 1px #231e18;
+            z-index: 10;
           }
 
           .prt-right-box {
@@ -474,11 +480,11 @@
     .prt-enhance-detail .cnt-material-list {
       padding-bottom: 0;
     }
-    
+
     .cnt-skillplus {
       .cnt-material-status .cnt-material-list {
         padding-bottom: 40px;
-      }      
+      }
     }
 
     .cnt-list-equipment .txt-notice {
@@ -1266,7 +1272,7 @@ regexp("https://game.granbluefantasy.jp/#sell/.*") {
     }
 
     .cnt-perfectionproof-enhancement .prt-material-item-list .lis-item,
-    [data-css="/party/list_npc.css"] + #cnt-list_npc .lis-npc, {
+    [data-css="/party/list_npc.css"] + #cnt-list_npc .lis-npc {
       margin: -5.5px !important;
     }
 
