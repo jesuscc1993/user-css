@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Granblue Fantasy Enhancements
 @description  Allows the customization of the game's layout and responsive behavior.
-@version      2024.03.18.14.54
+@version      2024.03.18.14.55
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -919,6 +919,7 @@
 
   /* compact lists */
   if (compact-lists) {
+    .prt-reward-frame .prt-list-frame .prt-item-list .btn-item-thumb,
     .pop-confirm-decompose .prt-target-items,
     .pop-confirm-recycle.pop-usual .txt-popup-body .prt-confirm-recycle .cnt-recycle-image,
     .pop-decompose-confirm-consume .prt-target-items,
@@ -926,6 +927,7 @@
       font-size: 0;
     }
 
+    .prt-reward-frame .prt-list-frame .prt-item-list .btn-item-thumb .img-item-thumb,
     .pop-confirm-decompose .prt-target-items .lis-decompose-item .img-decompose-item,
     .pop-confirm-recycle.pop-usual .txt-popup-body .prt-confirm-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle,
     .pop-decompose-confirm-consume .prt-target-items .lis-decompose-item .img-decompose-item,
@@ -934,6 +936,7 @@
       width: 50px;
     }
 
+    .prt-reward-frame .prt-list-frame .prt-item-list .btn-item-thumb,
     .pop-confirm-decompose .prt-target-items .lis-decompose-item .img-decompose-item,
     .pop-confirm-recycle.pop-usual .txt-popup-body .prt-confirm-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle,
     .pop-result-recycle.pop-usual .txt-popup-body .prt-result-recycle .cnt-recycle-image .prt-recycle-image-mini .img-recycle {
