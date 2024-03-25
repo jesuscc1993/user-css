@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           gbf.wiki - Dark Theme
 @description    Dark theme for gbf.wiki.
-@version        2023.05.24.18.54
+@version        2024.03.25.19.10
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -14,7 +14,8 @@
     filter: invert(1) hue-rotate(180deg);
   }
 
-  body {
+  body,
+  #content {
     background-image: none;
   }
 
