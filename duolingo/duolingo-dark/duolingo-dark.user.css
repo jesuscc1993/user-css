@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Duolingo - Dark Theme
 @description    Dark theme for Duolingo.
-@version        2024.03.26.17.39
+@version        2024.03.26.17.57
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -22,6 +22,7 @@
     filter: invert(0.9) hue-rotate(180deg);
   }
 
+  canvas,
   img,
   img:hover,
   svg,
@@ -52,6 +53,8 @@
   .KAjTN,
   /* duolingo characters */
   .F2B9m,
+	/* avatar editor button */
+	[style*="--avatars-background-color"] button,
   .placeholder {
     filter: invert(1) hue-rotate(180deg) brightness(1.125);
   }
@@ -86,5 +89,9 @@
   /* path step */
   ._3xT0z:after {
     box-shadow: 0 8px 0 rgba(var(--color-snow-always-light), 0.3), 0 8px 0 var(--path-level-color);
+  }
+
+  [style*="--avatars-background-color"] button {
+    z-index: 1;
   }
 }
