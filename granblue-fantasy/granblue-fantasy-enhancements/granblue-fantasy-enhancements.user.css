@@ -832,6 +832,7 @@
       font-weight: 500;
       line-height: 9px;
       margin-bottom: 0 !important;
+      margin-top: 8px;
     }
 
     .prt-supporter-list .lis-supporter {
@@ -847,7 +848,10 @@
     .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-supporter-summon.name-s,
     .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail > *:not(.prt-summon-skill),
     .prt-supporter-list .lis-supporter .prt-supporter-thumb,
-    .prt-supporter-list .lis-supporter[data-supporter-max="0"] .prt-supporter-detail {
+    .prt-supporter-list .lis-supporter[data-supporter-evolution="0"] .prt-supporter-detail,
+    .prt-supporter-list .lis-supporter[data-supporter-evolution="1"] .prt-supporter-detail,
+    .prt-supporter-list .lis-supporter[data-supporter-evolution="2"] .prt-supporter-detail,
+    .prt-supporter-list .lis-supporter[data-supporter-evolution="3"] .prt-supporter-detail {
       display: none;
     }
 
