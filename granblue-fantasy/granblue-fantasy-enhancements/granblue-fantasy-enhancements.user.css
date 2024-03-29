@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Granblue Fantasy Enhancements
 @description  Allows the customization of the game's layout and responsive behavior.
-@version      2024.03.29.14.26
+@version      2024.03.29.15.39
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -845,13 +845,10 @@
   }
 
   else if (compact-summons == 'ultra') {
+    .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-summon-skill.bless-rank0-style,
     .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail .prt-supporter-summon.name-s,
     .prt-supporter-list .lis-supporter .prt-supporter-info .prt-supporter-detail > *:not(.prt-summon-skill),
-    .prt-supporter-list .lis-supporter .prt-supporter-thumb,
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="0"] .prt-supporter-detail,
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="1"] .prt-supporter-detail,
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="2"] .prt-supporter-detail,
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="3"] .prt-supporter-detail {
+    .prt-supporter-list .lis-supporter .prt-supporter-thumb {
       display: none;
     }
 
