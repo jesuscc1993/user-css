@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Granblue Fantasy Enhancements
 @description  Allows the customization of the game's layout and responsive behavior.
-@version      2024.03.29.15.39
+@version      2024.03.31.12.00
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -317,33 +317,37 @@
       display: flex;
       flex-direction: column;
     }
-
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="6"] {
+    
+    .prt-supporter-list .lis-supporter[data-supporter-evolution="6"]:has(.bless-rank4-style) {
       order: 1;
     }
 
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="5"] {
+    .prt-supporter-list .lis-supporter[data-supporter-evolution="6"] {
       order: 2;
     }
 
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="4"] {
+    .prt-supporter-list .lis-supporter[data-supporter-evolution="5"] {
       order: 3;
     }
 
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="3"] {
+    .prt-supporter-list .lis-supporter[data-supporter-evolution="4"] {
       order: 4;
     }
 
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="2"] {
+    .prt-supporter-list .lis-supporter[data-supporter-evolution="3"] {
       order: 5;
     }
 
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="1"] {
+    .prt-supporter-list .lis-supporter[data-supporter-evolution="2"] {
       order: 6;
     }
 
-    .prt-supporter-list .lis-supporter[data-supporter-evolution="0"] {
+    .prt-supporter-list .lis-supporter[data-supporter-evolution="1"] {
       order: 7;
+    }
+
+    .prt-supporter-list .lis-supporter[data-supporter-evolution="0"] {
+      order: 8;
     }
   }
 
