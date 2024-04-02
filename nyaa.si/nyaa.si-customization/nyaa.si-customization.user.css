@@ -1,12 +1,13 @@
 /* ==UserStyle==
 @name           nyaa.si - Customization
 @description    Provides some extra customization options.
-@version        2024.03.19.23.32
+@version        2024.04.02.18.14
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
+@var  text      cell-padding      "Cell padding"                                 4px
 @var  checkbox  bigger-icons      "Bigger download icons"                        0
 @var  checkbox  wide-search       "Wide searchbar"                               0
 @var  checkbox  custom-style      "Alternative style"                            0
@@ -81,6 +82,17 @@
         background-color: #ffffff12;
       }
     }
+  }
+
+  /* other settings */
+  .table > thead > tr > th,
+  .table > tbody > tr > th,
+  .table > tfoot > tr > th,
+  .table > thead > tr > td,
+  .table > tbody > tr > td,
+  .table > tfoot > tr > td,
+  table.torrent-list td:first-child {
+    padding: cell-padding;
   }
 
   if (bigger-icons) {
