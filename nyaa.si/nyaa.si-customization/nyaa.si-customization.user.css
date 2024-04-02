@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           nyaa.si - Customization
 @description    Provides some extra customization options.
-@version        2024.04.02.18.14
+@version        2024.04.02.18.22
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -84,7 +84,7 @@
     }
   }
 
-  /* other settings */
+  /* cell-padding */
   .table > thead > tr > th,
   .table > tbody > tr > th,
   .table > tfoot > tr > th,
@@ -95,6 +95,16 @@
     padding: cell-padding;
   }
 
+  table.torrent-list thead th.sorting:after,
+  table.torrent-list thead th.sorting_asc:after,
+  table.torrent-list thead th.sorting_desc:after {
+    top: 4px;
+    right: 4px;
+    padding: cell-padding;
+  }
+
+  /*  */
+  /* bigger-icons */
   if (bigger-icons) {
     table.torrent-list .fa.fa-download,
     table.torrent-list .fa.fa-magnet {
@@ -104,6 +114,7 @@
     }
   }
 
+  /* custom-categories */
   if (custom-categories) {
     img[src^="/static/img/icons/nyaa/1_"],
     img[src^="/static/img/icons/nyaa/2_"],
@@ -169,6 +180,7 @@
     }
   }
 
+  /* text-categories */
   if (text-categories) {
     .torrent-list td:first-child a img {
       display: none;
@@ -182,6 +194,7 @@
     }
   }
 
+  /* hide-categories */
   if (hide-categories) {
     .torrent-list th:first-child,
     .torrent-list td:first-child:not([colspan]) {
@@ -197,6 +210,7 @@
     }
   }
 
+  /* wide-search */
   if (wide-search) {
     @media (min-width: 992px) {
       .navbar-right:first-of-type {
