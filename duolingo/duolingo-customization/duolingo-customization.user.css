@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Duolingo - Customization
 @description    Provides some extra customization options for Duolingo. DISCLAIMER: some features are currently not supported on Firefox.
-@version        2024.04.03.18.52
+@version        2024.04.06.13.34
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -93,29 +93,9 @@
     [href="/review"],
     [href="/settings/super"],
     div:has(> [data-test="plus-offer-logo"]),
-    div:has(> [data-test="plus-offer-logo"]) + div:has(img) {
+    /*div:has(> [data-test="plus-offer-logo"]) + div:has(img)*/ {
       display: none !important;
     }
-
-    /* hide top shop add */
-    #root > div._1R67g._3YKTw > div > div:nth-child(2) > div > div._33Mo9 > div._2TlMB > div > div {
-      display: none;
-    }
-
-    /* */
-    /* hide results adds column */
-    ._11gj4 {
-      width: 100%;
-    }
-
-    .sOajH {
-      display: none;
-    }
-
-    /*[src*="images/super"] {
-      display: none;
-    }*/
-    /* */
   }
 
   /* leaderboards */
@@ -145,7 +125,7 @@
 }
 
 @-moz-document regexp("https:\\/\\/www\\.duolingo\\.com\\/(characters|guidebook|learn|practice-hub|shop).*") {
-  #root > div > div > div:nth-child(2) > div > div._3eI9W._1FaGz > div {
+  #root > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(1) > div {
     /* leagues */
     if (hide-leagues) {
       &:not(:has(> div:nth-child(5))) {
