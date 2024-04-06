@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GitHub - Customization
 @description    Provides some extra customization options for GitHub.
-@version        2024.02.23.16.47
+@version        2024.04.06.15.49
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -13,11 +13,12 @@
 
 ==/UserStyle== */
 @-moz-document domain("github.com") {
-  .ͼ5 .cm-content,
   .blob-code-inner,
-  .react-code-text {
-    font-family: editor-font-family;
-    font-size: editor-font-size;
-    line-height: editor-line-height;
+  .react-blob-textarea,
+  .react-code-text,
+  .ͼ5 .cm-content {
+    font-family: editor-font-family !important;
+    font-size: editor-font-size !important;
+    line-height: editor-line-height !important;
   }
 }
