@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Big Text
 @description    Increases YouTube's font size; useful when watching from a distance.
-@version        2023.11.14.20.24
+@version        2024.04.06.18.53
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -61,6 +61,7 @@
     --ytd-link-line-height: var(--line-height-md);
   }
 
+  #byline.ytd-playlist-panel-video-renderer,
   #text.ytd-channel-name,
   #vote-count-middle.ytd-comment-action-buttons-renderer,
   .metadata-owner.ytd-playlist-header-renderer,
@@ -69,9 +70,12 @@
   ytd-playlist-panel-renderer[collapsible] .badge.ytd-badge-supported-renderer,
   ytd-playlist-panel-renderer[collapsible] .index-message-wrapper.ytd-playlist-panel-renderer,
   ytd-playlist-panel-renderer[collapsible] .publisher.ytd-playlist-panel-renderer,
+  ytd-video-meta-block:not([rich-meta]) #byline-container.ytd-video-meta-block,
+  ytd-video-meta-block:not([rich-meta])[inline-badges] #metadata-line.ytd-video-meta-block,
+  ytd-video-meta-block:not([rich-meta])[inline-badges] #text.ytd-channel-name,
   ytd-video-owner-renderer[watch-metadata-refresh] #owner-sub-count.ytd-video-owner-renderer {
-    font-size: var(--font-size-sm);
-    line-height: var(--line-height-sm);
+    font-size: var(--font-size-sm) !important;
+    line-height: var(--line-height-sm) !important;
     max-height: none !important;
   }
 
@@ -90,16 +94,30 @@
   ytd-rich-grid-media[mini-mode] #video-title.ytd-rich-grid-media,
   ytd-two-column-browse-results-renderer #video-title.ytd-rich-grid-media,
   ytd-two-column-search-results-renderer #video-title.ytd-video-renderer {
-    font-size: var(--font-size-md);
-    line-height: var(--line-height-md);
+    font-size: var(--font-size-md) !important;
+    line-height: var(--line-height-md) !important;
     max-height: none !important;
   }
 
+  #author-text.yt-simple-endpoint.ytd-comment-view-model,
+  #content-text.ytd-comment-view-model,
   #paid-comment-chip.ytd-comment-renderer,
+  #text.ytd-channel-name,
   #video-title-link.ytd-rich-grid-media yt-formatted-string,
+  #vote-count-middle.ytd-comment-action-buttons-renderer,
+  #vote-count-middle.ytd-comment-engagement-bar,
+  .metadata-owner.ytd-playlist-header-renderer,
+  .metadata-stats.ytd-playlist-byline-renderer,
+  .yt-spec-button-shape-next--size-m,
+  .yt-spec-button-shape-next--size-s,
   h1.ytd-watch-metadata,
   ytd-grid-video-renderer #text.ytd-thumbnail-overlay-time-status-renderer,
-  ytd-text-inline-expander {
+  ytd-playlist-panel-renderer[collapsible] .badge.ytd-badge-supported-renderer,
+  ytd-playlist-panel-renderer[collapsible] .index-message-wrapper.ytd-playlist-panel-renderer,
+  ytd-playlist-panel-renderer[collapsible] .publisher.ytd-playlist-panel-renderer,
+  ytd-text-inline-expander,
+  ytd-video-meta-block:not([rich-meta]) #byline-container.ytd-video-meta-block,
+  ytd-video-owner-renderer[watch-metadata-refresh] #owner-sub-count.ytd-video-owner-renderer {
     font-size: var(--font-size-lg) !important;
     line-height: var(--line-height-lg) !important;
     max-height: none !important;
