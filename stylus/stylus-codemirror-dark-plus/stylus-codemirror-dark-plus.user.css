@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Stylus - Dark+ (CodeMirror theme)
 @description    Dark+ CodeMirror theme for the Stylus extension (Chrome only).
-@version        2023.12.17.18.53
+@version        2024.04.06.13.29
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -9,6 +9,7 @@
 
 @var text font-family "Font family" "'Roboto Mono', monospace"
 @var text font-size   "Font size"   "15px"
+@var text line-height "Line height" "normal"
 
 ==/UserStyle== */
 
@@ -39,6 +40,7 @@
 
     --font-family: font-family;
     --font-size: font-size;
+    --line-height: line-height;
 
     font-family: var(--font-family);
     font-size: var(--font-size);
@@ -84,6 +86,10 @@
     color: var(--c-attention);
     font-family: var(--font-family);
     text-shadow: none;
+  }
+  .CodeMirror pre.CodeMirror-line,
+  .CodeMirror pre.CodeMirror-line-like {
+    line-height: var(--line-height);
   }
 
   div.CodeMirror span.CodeMirror-matchingbracket {
