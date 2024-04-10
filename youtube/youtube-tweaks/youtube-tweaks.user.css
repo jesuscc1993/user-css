@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2024.03.25.20.11
+@version        2024.04.10.11.27
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -88,9 +88,14 @@
   }
 
   /* huge video duration text */
-  #text.ytd-thumbnail-overlay-time-status-renderer {
-    font-size: 42px;
-    line-height: 0.9;
+  #time-status {
+    height: auto !important;
+
+    #text.ytd-thumbnail-overlay-time-status-renderer {
+      font-size: 42px;
+      line-height: 0.9;
+      max-height: none;
+    }
   }
 
   /* hide sidebar items */

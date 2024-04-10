@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Big Text
 @description    Increases YouTube's font size; useful when watching from a distance.
-@version        2024.04.09.17.35
+@version        2024.04.10.11.27
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -62,10 +62,13 @@
   }
 
   #byline.ytd-playlist-panel-video-renderer,
+  #published-time-text.ytd-comment-view-model,
   #text.ytd-channel-name,
   #vote-count-middle.ytd-comment-action-buttons-renderer,
+  .less-button.ytd-comment-view-model,
   .metadata-owner.ytd-playlist-header-renderer,
   .metadata-stats.ytd-playlist-byline-renderer,
+  .more-button.ytd-comment-view-model,
   .yt-spec-button-shape-next--size-s,
   ytd-pinned-comment-badge-renderer,
   ytd-playlist-panel-renderer[collapsible] .badge.ytd-badge-supported-renderer,
@@ -85,11 +88,12 @@
   #time-status.ytd-thumbnail-overlay-time-status-renderer,
   #video-title.ytd-compact-video-renderer,
   #video-title.ytd-playlist-panel-video-renderer,
+  #vote-count-middle.ytd-comment-engagement-bar,
   .less-button.ytd-comment-renderer,
-  .more-button.ytd-comment-renderer,
-  .yt-spec-button-shape-next--size-m,
   .metadata-owner.ytd-playlist-header-renderer,
   .metadata-stats.ytd-playlist-byline-renderer,
+  .more-button.ytd-comment-renderer,
+  .yt-spec-button-shape-next--size-m,
   ytd-grid-playlist-renderer #video-title.ytd-grid-playlist-renderer,
   ytd-grid-video-renderer #video-title.yt-simple-endpoint.ytd-grid-video-renderer,
   ytd-grid-video-renderer #video-title.ytd-grid-video-renderer,
@@ -107,17 +111,12 @@
   #paid-comment-chip.ytd-comment-renderer,
   #video-title-link.ytd-rich-grid-media yt-formatted-string,
   #vote-count-middle.ytd-comment-action-buttons-renderer,
-  #vote-count-middle.ytd-comment-engagement-bar,
   h1.ytd-watch-metadata,
   ytd-author-comment-badge-renderer #text.ytd-channel-name,
   ytd-grid-video-renderer #text.ytd-thumbnail-overlay-time-status-renderer,
   ytd-item-section-renderer #video-title.ytd-playlist-video-renderer,
-  ytd-playlist-panel-renderer[collapsible] .badge.ytd-badge-supported-renderer,
-  ytd-playlist-panel-renderer[collapsible] .index-message-wrapper.ytd-playlist-panel-renderer,
-  ytd-playlist-panel-renderer[collapsible] .publisher.ytd-playlist-panel-renderer,
   ytd-text-inline-expander,
-  ytd-video-owner-renderer #text.ytd-channel-name,
-  ytd-video-owner-renderer[watch-metadata-refresh] #owner-sub-count.ytd-video-owner-renderer {
+  ytd-video-owner-renderer #text.ytd-channel-name {
     font-size: var(--font-size-lg) !important;
     line-height: var(--line-height-lg) !important;
     max-height: none !important;
