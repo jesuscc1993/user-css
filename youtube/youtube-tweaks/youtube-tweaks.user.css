@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2024.04.13.11.55
+@version        2024.04.13.11.56
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -92,8 +92,8 @@
     height: auto !important;
 
     #text.ytd-thumbnail-overlay-time-status-renderer {
-      font-size: 42px;
-      line-height: 0.9;
+      font-size: 42px !important;
+      line-height: 0.9 !important;
       max-height: none !important;
     }
   }
