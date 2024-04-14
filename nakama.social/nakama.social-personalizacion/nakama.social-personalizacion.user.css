@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Nakama - Personalización
 @description    Permite la configuración de ciertos aspectos visuales en Nakama.
-@version        2023.10.07.10.35
+@version        2024.04.14.22.01
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -11,6 +11,7 @@
 @var text border-radius-lg              "Redondeado (grande)"                                   1rem
 @var text content-width                 "Ancho de contenido"                                    65ch
 @var text max-attachment-height         "Alto máximo de adjuntos"                               calc(100vh - 8rem)
+@var text max-iframe-height             "Alto máximo de embebidos"                              calc(100vh - 8rem)
 @var text post-button-height            "Alto de botones en posts"                              3rem
 @var text post-button-padding           "Espaciado de botones en posts"                         0 1rem
 @var text post-button-border-radius     "Redondeado de botones en posts"                        1.5rem
@@ -36,6 +37,10 @@
   .media-scroller video {
     max-height: @max-attachment-height;
     border-radius: @border-radius-md;
+  }
+
+  .media-scroller iframe {
+    max-height: @max-iframe-height;
   }
 
   .post-warning {
