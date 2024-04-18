@@ -1,14 +1,15 @@
 /* ==UserStyle==
 @name           Fanbox - Customization
 @description    Provides some extra customization options for Fanbox.
-@version        2024.04.18.19.54
+@version        2024.04.18.19.58
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var checkbox   wide-content       "Wide content"          0
-@var checkbox   hide-post-cover    "Hide post cover"       0
+@var checkbox   wide-content                "Wide content"                0
+@var checkbox   restrict-artist-cover-size  "Restrict artist cover size"  0
+@var checkbox   hide-post-cover             "Hide post cover"             0
 
 ==/UserStyle== */
 @-moz-document domain("fanbox.cc") {
@@ -18,6 +19,12 @@
         max-width: calc(100% - 300px);
         margin-left: 300px;
       }
+    }
+  }
+
+  if (restrict-artist-cover-size) {
+    [class*="styled__Wrapper"] [class*="CoverImage__CoverInner"] {
+      max-height: 256px;
     }
   }
 
