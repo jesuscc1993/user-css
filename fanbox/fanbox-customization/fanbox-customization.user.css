@@ -1,0 +1,22 @@
+/* ==UserStyle==
+@name           Fanbox - Customization
+@description    Provides some extra customization options for Fanbox.
+@version        2024.04.18.19.48
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+@preprocessor   stylus
+
+@var checkbox   wide-content     "Wide content"          0
+
+==/UserStyle== */
+@-moz-document domain("fanbox.cc") {
+  if (wide-content) {
+    @media (min-width: 1024px) {
+      [class*="TwoColumnLayout__Wrapper"] {
+        max-width: calc(100% - 300px);
+        margin-left: 300px;
+      }
+    }
+  }
+}

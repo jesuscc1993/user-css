@@ -22,6 +22,9 @@ Requires the [Stylus](https://github.com/openstyles/stylus#releases) userstyle l
 - [duolingo/duolingo-dark](duolingo/duolingo-dark)
 <hr>
 
+- [fanbox/fanbox-customization](fanbox/fanbox-customization)
+<hr>
+
 - [fanfox/fanfox-fullscreen-reader](fanfox/fanfox-fullscreen-reader)
 <hr>
 
