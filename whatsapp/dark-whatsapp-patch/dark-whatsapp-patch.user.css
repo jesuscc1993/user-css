@@ -1,0 +1,17 @@
+/* ==UserStyle==
+@name         Dark-WhatsApp - Patch
+@description  3rd party patch for Vednoc's abandoned dark whatsapp theme. Requires the original https://github.com/vednoc/dark-whatsapp to be installed.
+@version      2024.04.23.15.54
+@author       MetalTxus
+@namespace    https://github.com/jesuscc1993/
+
+==/UserStyle== */
+@-moz-document domain("whatsapp.com") {
+  .dark {
+    --input-floating-toolbar-background: #3b4251;
+    --input-floating-toolbar-button-active: #282e37;
+    --navbar-background: #323843;
+    --search-input-container-background-active: #282e37;
+    --search-input-container-background: #282e37;
+  }
+}
