@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2024.04.13.11.56
+@version        2024.04.25.20.47
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -9,11 +9,6 @@
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
-  html[dark],
-  dark {
-    --yt-spec-static-overlay-background-heavy: rgba(0, 0, 0, 0.85);
-  }
-
   ytd-grid-video-renderer {
     height: 296px;
   }
@@ -88,13 +83,17 @@
   }
 
   /* huge video duration text */
-  #time-status {
+  ytd-thumbnail-overlay-time-status-renderer {
     height: auto !important;
 
-    #text.ytd-thumbnail-overlay-time-status-renderer {
+    .badge-shape-wiz {
       font-size: 42px !important;
       line-height: 0.9 !important;
       max-height: none !important;
+
+      &.badge-shape-wiz--default.badge-shape-wiz--overlay {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
     }
   }
 
