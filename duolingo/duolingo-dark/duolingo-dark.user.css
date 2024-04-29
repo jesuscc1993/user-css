@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Duolingo - Dark Theme
 @description    Dark theme for Duolingo.
-@version        2024.04.23.15.50
+@version        2024.04.29.11.03
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -33,10 +33,8 @@
     }
   }
 
-  /* streak freeze */
-  ._36lJw,
-  /* double or nothing */
-  .AS1h6,
+  /* powerups */
+  .zFZva,
   /* double XP */
   ._1fwMd,
   /* unit test */
