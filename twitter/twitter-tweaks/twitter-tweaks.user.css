@@ -1,0 +1,52 @@
+/* ==UserStyle==
+@name           Twitter - Tweaks
+@description    Miscellaneous style overrides for Twitter.
+@version        2024.05.11.21.29
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+@preprocessor   stylus
+
+==/UserStyle== */
+@-moz-document domain("twitter.com") {
+  /* hide sensitive warning */
+  /* .r-yfv4eo {
+    filter: none;
+  } */
+
+  [data-testid="Tweet-User-Avatar"] {
+    border-radius: 50% !important;
+    overflow: hidden;
+  }
+
+  @media (max-width: 1280px) {
+    [data-testid="primaryColumn"] {
+      max-width: calc(100% - 64px);
+
+      .r-1ye8kvj {
+        max-width: none;
+      }
+    }
+
+    [data-testid="sidebarColumn"] {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1281px) {
+    [data-testid="primaryColumn"] {
+      max-width: calc(100% - 352px);
+
+      .r-1ye8kvj {
+        max-width: none;
+      }
+    }
+  }
+}
+
+@-moz-document regexp("https:\/\/twitter\.com.*?headerless=1") {
+  /* hide header */
+  .r-184en5c > div > div:nth-child(3) > div > div > div {
+    display: none;
+  }
+}
