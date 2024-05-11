@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2024.03.18.12.24
+@version        2024.05.11.20.45
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -11,6 +11,21 @@
 @-moz-document domain("granbluefantasy.jp") {
   :root {
     --c-scrollbar-bg: #000;
+  }
+  
+  /* adapt zoom on small screens */
+  .mobage-game-container {
+    @media (max-width: 639px) {
+      &[style="zoom: 2;"] {
+        zoom: 1.5 !important;
+      }
+    }
+    @media (max-width: 479px) {
+      &[style="zoom: 2;"],
+      &[style="zoom: 1.5;"] {
+        zoom: 1 !important;
+      }
+    }
   }
 
   /* keep battle commands visible when selecting character skills */
