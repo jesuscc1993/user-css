@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Fanbox - Customization
 @description    Provides some extra customization options for Fanbox.
-@version        2024.04.18.19.58
+@version        2024.05.16.17.41
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -10,6 +10,7 @@
 @var checkbox   wide-content                "Wide content"                0
 @var checkbox   restrict-artist-cover-size  "Restrict artist cover size"  0
 @var checkbox   hide-post-cover             "Hide post cover"             0
+@var checkbox   hide-paid                   "Hide paid items"             0
 
 ==/UserStyle== */
 @-moz-document domain("fanbox.cc") {
@@ -30,6 +31,12 @@
 
   if (hide-post-cover) {
     [class*="PostDetailPage__Wrapper"] [class*="Cover__Wrapper"] {
+      display: none;
+    }
+  }
+
+  if (hide-paid) {
+    [class*="CardPostItem__Wrapper"]:has([class*="FeeRequirementBox"]) {
       display: none;
     }
   }
