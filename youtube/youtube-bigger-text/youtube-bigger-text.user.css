@@ -1,0 +1,53 @@
+/* ==UserStyle==
+@name           YouTube - Bigger Text
+@description    Further increases YouTube's font size; requires "YouTube - Big Text".
+@version        2023.04.20.23.54
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+@preprocessor   stylus
+
+@var text       font-size-cc                    "Caption font size"               40px
+@var text       font-size-lg                    "Grid font size"                  40px
+@var text       font-size-md                    "Video font size"                 28px
+@var text       font-size-sm                    "Small texts"                     18px
+@var text       video-description-max-height    "Max video description height"    430px
+@var text       line-height-font-size-ratio     "Line height / font size ratio"   1.2
+@var text       owner-and-teaser-scale          "Owner and teaser scale"          1.75
+@var number     grid-line-clamp                 "Max grid title lines"            4
+@var number     video-title-line-clamp          "Max video title lines"           2
+@var number     video-comment-line-clamp        "Max video comment lines"         6
+
+==/UserStyle== */
+@-moz-document domain("youtube.com") {
+  :root {
+    --line-height-font-size-ratio: line-height-font-size-ratio !important;
+    --owner-and-teaser-scale: owner-and-teaser-scale !important;
+    --font-size-cc: font-size-cc !important;
+    --font-size-lg: font-size-lg !important;
+    --font-size-md: font-size-md !important;
+    --font-size-sm: font-size-sm !important;
+    --grid-line-clamp: grid-line-clamp !important;
+    --video-comment-line-clamp: video-comment-line-clamp !important;
+    --video-description-max-height: video-description-max-height !important;
+    --video-title-line-clamp: video-title-line-clamp !important;
+
+    --line-height-cc: calc(var(--font-size-cc) * var(--line-height-font-size-ratio)) !important;
+    --line-height-lg: calc(var(--font-size-lg) * var(--line-height-font-size-ratio)) !important;
+    --line-height-md: calc(var(--font-size-md) * var(--line-height-font-size-ratio)) !important;
+    --line-height-sm: calc(var(--font-size-sm) * var(--line-height-font-size-ratio)) !important;
+  }
+
+  .ytp-chrome-controls svg {
+    transform: scale(1.25) !important;
+  }
+
+  @media (max-width: 1281px) {
+    ytd-video-owner-renderer {
+      #channel-name.ytd-video-owner-renderer,
+      #upload-info.ytd-video-owner-renderer {
+        display: none;
+      }
+    }
+  }
+}
