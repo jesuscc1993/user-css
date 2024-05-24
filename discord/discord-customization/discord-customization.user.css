@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2024.04.14.23.13
+@version        2024.05.24.16.14
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -326,7 +326,9 @@
 
   [class*="markup"] ol,
   [class*="markup"] li {
-    margin: calc(var(--li-margin) / 2) 0;
+    @margin: calc(var(--li-margin) / 2);
+    margin-top: @margin;
+    margin-bottom: @margin;
   }
 
   /* avatar decorations */
