@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2024.06.01.02.25
+@version        2024.06.04.21.29
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -28,6 +28,7 @@
 @var checkbox reduce-message-spacing "Reduce message spacing"      0
 @var checkbox restore-blurple        "Restore blurple"             0
 @var checkbox blurple-mentions       "Blurple mentions"            0
+@var checkbox hide-download-icon     "Hide download icon"          0
 
 ==/UserStyle== */
 @-moz-document domain("discord.com") {
@@ -276,10 +277,16 @@
   }
 
   /* hide download icon */
-  [class*="guilds"] [class*="scroller"] > [class*="listItem"] {
-    &:last-child,
-    &:nth-last-child(2) {
+  html when (@hide-download-icon = 1) {
+    [class*="listItem"]:not(:nth-child(2)) [class*="guildSeparator"] {
       display: none;
+    }
+
+    [class*="guilds"] [class*="scroller"] > [class*="listItem"] {
+      &:last-child,
+      &:nth-last-child(2) {
+        display: none;
+      }
     }
   }
 
