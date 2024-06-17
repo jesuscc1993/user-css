@@ -1,0 +1,62 @@
+/* ==UserStyle==
+@name           GameFAQs Dark
+@description    Dark theme for GameFAQs.
+@version        2024.06.17.20.48
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+
+==/UserStyle== */
+@-moz-document domain("gamefaqs.gamespot.com") {
+  html {
+    filter: invert(0.9) hue-rotate(180deg) brightness(1.15);
+  }
+
+  img,
+  svg,
+  video,
+  .msg_text,
+  .btn_light,
+  .content_nav_wrap,
+  .footer,
+  .header_image,
+  .masthead,
+  .paginate > li.action a,
+  .pod_profile_header {
+    filter: invert(1) hue-rotate(180deg) saturate(1.33);
+  }
+
+  .pod_profile_header img {
+    filter: none;
+  }
+
+  .content_nav {
+    box-shadow: none;
+  }
+
+  .msg_body {
+    font-family: "Roboto Regular";
+  }
+
+  .btn {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05), transparent);
+  }
+
+  .forum_anon {
+    background-color: #dbc9b2;
+  }
+
+  .msg_text {
+    color: #fcfcfc;
+  }
+
+  .board cite,
+  .board blockquote {
+    color: #c1c1c1;
+  }
+
+  .ffaq table td,
+  .ffaq table th {
+    border: 1px solid #0008;
+  }
+}
