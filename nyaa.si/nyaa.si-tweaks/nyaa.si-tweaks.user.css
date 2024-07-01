@@ -1,0 +1,26 @@
+/* ==UserStyle==
+@name           nyaa.si - Tweaks
+@description    Miscellaneous tweaks for nyaa.si.
+@version        2024.07.01.15.13
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+@preprocessor   stylus
+
+==/UserStyle== */
+@-moz-document domain("nyaa.si") {
+  script[src="https://a.magsrv.com/ad-provider.js"] + div
+  {
+    display: none !important;
+  }
+
+  #comments {
+    .col-md-2 {
+      width: 168px;
+    }
+
+    blockquote {
+      background: #fff1;
+    }
+  }
+}
