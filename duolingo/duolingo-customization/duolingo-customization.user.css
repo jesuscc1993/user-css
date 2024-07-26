@@ -15,6 +15,8 @@
 @var  checkbox  hide-pronunciation                  "Hide pronunciation"                           0
 @var  checkbox  hide-pronunciation-unless-hovered   "Hide pronunciation (unless hovered)"          0
 @var  checkbox  hide-characters                     "Hide Duolingo characters"                     0
+@var  checkbox  center-lesson-title                 "Center lesson title"                          0
+@var  text      lesson-width                        "Lesson width (desktop)"                       600px
 
 ==/UserStyle== */
 @-moz-document domain("duolingo.com") {
@@ -27,9 +29,21 @@
       display: none;
     }
 
-    [data-test*="challenge"] > .uH5m4 {
+    [data-test*="challenge"] > ._2n5fx {
       max-width: none;
-      width: 672px;
+      width: lesson-width;
+    }
+
+    [aria-label="choice"] {
+      width: 600px;
+      margin: 0 auto;
+    }
+
+    /* center lesson title */
+    if (center-lesson-title) {
+      [data-test="challenge-header"] {
+        text-align: center;
+      }
     }
   }
 
