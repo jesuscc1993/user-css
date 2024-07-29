@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Duolingo - Customization
 @description    Provides some extra customization options for Duolingo. DISCLAIMER: some features are currently not supported on Firefox.
-@version        2024.07.26.18.51
+@version        2024.07.29.23.34
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -35,7 +35,7 @@
     }
 
     [aria-label="choice"] {
-      width: 600px;
+      width: min(lesson-width, 600px);
       margin: 0 auto;
     }
 
