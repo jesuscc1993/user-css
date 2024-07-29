@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2024.06.04.21.29
+@version        2024.07.29.18.02
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -171,21 +171,21 @@
   /* RESIZE */
   /* avatars */
   html when not (@avatar-scale = unset) {
-    [class*="messageListItem"] img[class*="avatar__"] {
+    [class*="messageListItem"] img[class*="avatar_"] {
       transform: scale(var(--avatar-scale)) !important;
       margin-top: 4px;
     }
   }
 
   html when not (@avatar-zoom = unset) {
-    [class*="messageListItem"] img[class*="avatar__"] {
+    [class*="messageListItem"] img[class*="avatar_"] {
       &,
-      & + img[class*="avatarDecoration__"] {
+      & + img[class*="avatarDecoration_"] {
         transition: var(--transition);
       }
 
       &:hover,
-      &:hover + img[class*="avatarDecoration__"] {
+      &:hover + img[class*="avatarDecoration_"] {
         transform: scale(var(--avatar-zoom)) !important;
       }
     }
