@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2024.07.26.22.25
+@version        2024.08.06.12.21
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -12,6 +12,7 @@
 @var text       grid-max-width            "Max grid width"                          1284px
 @var color      sub-bg                    "Subtitle background color"               rgba(0, 0, 0, .72)
 @var text       sub-border-radius         "Subtitle border radius"                  0px
+@var text       max-comments-width        "Maximum comments width"                  calc((100vh - var(--ytd-watch-flexy-masthead-height) - var(--ytd-margin-6x) - var(--ytd-watch-flexy-space-below-player))*(var(--ytd-watch-flexy-width-ratio) / var(--ytd-watch-flexy-height-ratio)))
 @var text       max-playlist-height       "Maximum playlist height"                 460px
 @var text       max-playlist-width        "Maximum playlist width"                  402px
 @var checkbox   reduced-sidebar-padding   "Reduce sidebar spacing"                  0
@@ -40,10 +41,13 @@
     --ytd-grid-6-columns-width: var(--ytd-grid-max-width);
   }
 
-  [page-subtype="channels"] ytd-shelf-renderer,
-  [page-subtype="channels"] ytd-section-list-renderer {
-    max-width: 1284px;
-    margin: 0 auto;
+  /* comments width */
+  ytd-watch-flexy[flexy] {
+    --ytd-watch-flexy-max-player-width: max-comments-width;
+  }
+
+  #columns.ytd-watch-flexy {
+    justify-content: center;
   }
 
   /* sidebar width */
@@ -57,6 +61,12 @@
 
   ytd-app[guide-persistent-and-visible] ytd-page-manager.ytd-app {
     margin-left: var(--app-drawer-width);
+  }
+
+  [page-subtype="channels"] ytd-shelf-renderer,
+  [page-subtype="channels"] ytd-section-list-renderer {
+    max-width: 1284px;
+    margin: 0 auto;
   }
 
   /* hide weird extra space next to the sidebar */
@@ -147,12 +157,12 @@
     #avatar-link.ytd-rich-grid-media {
       display: none;
     }
-    
+
     [page-subtype="subscriptions"][role="main"] ytd-item-section-renderer {
       border: none !important;
-      
+
       .grid-subheader h2 {
-        display: none;        
+        display: none;
       }
 
       &:not(:nth-child(1)) {
@@ -182,7 +192,7 @@
       display: none;
     }
   }
-  
+
   /* crop fullscreen */
   if (crop-fullscreen) {
     .html5-video-player.ytp-fullscreen .video-stream {
