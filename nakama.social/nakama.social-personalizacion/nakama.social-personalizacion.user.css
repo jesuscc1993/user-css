@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Nakama - Personalización
 @description    Permite la configuración de ciertos aspectos visuales en Nakama.
-@version        2024.04.14.22.01
+@version        2024.08.13.16.12
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -129,6 +129,10 @@
     #padoru {
       display: none !important;
     }
+  }
+
+  [role="tablist"] {
+    display: none;
   }
 
   /* scrollbar */
