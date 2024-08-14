@@ -15,6 +15,7 @@
 @var text       max-comments-width        "Maximum comments width"                  calc((100vh - var(--ytd-watch-flexy-masthead-height) - var(--ytd-margin-6x) - var(--ytd-watch-flexy-space-below-player))*(var(--ytd-watch-flexy-width-ratio) / var(--ytd-watch-flexy-height-ratio)))
 @var text       max-playlist-height       "Maximum playlist height"                 460px
 @var text       max-playlist-width        "Maximum playlist width"                  402px
+@var text       progress-bar-thickness    "Progress bar thickness"                  5px
 @var checkbox   reduced-sidebar-padding   "Reduce sidebar spacing"                  0
 @var checkbox   reduced-grid-padding      "Reduce grid spacing"                     0
 @var checkbox   crop-fullscreen           "Crop fullscreen to cover the screen"     0
@@ -112,6 +113,17 @@
   .ytp-caption-segment:last-child {
     border-top-right-radius: sub-border-radius;
     border-bottom-right-radius: sub-border-radius;
+  }
+
+  /* progress-bar-thickness */
+  .ytp-progress-bar-container {
+    height: progress-bar-thickness;
+
+    .ytp-scrubber-button {
+      height: progress-bar-thickness + 8px;
+      width: progress-bar-thickness + 8px;
+      border-radius: 50%;
+    }
   }
 
   /* reduced-sidebar-padding */
