@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2024.04.25.20.47
+@version        2024.08.21.17.59
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -20,6 +20,14 @@
 
   #hover-overlays {
     zoom: 1.5;
+  }
+
+  /* hide metadata on grids */
+  .ytd-rich-item-renderer .ytd-video-meta-block {
+    > :nth-child(3),
+    > :nth-child(4):before {
+      display: none !important;
+    }
   }
 
   /* hide text on video buttons */
