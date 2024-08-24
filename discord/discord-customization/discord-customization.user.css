@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2024.07.29.18.02
+@version        2024.08.24.11.27
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -215,6 +215,10 @@
 
     [class*="scrollable"] {
       max-height: none;
+    }
+
+    [class*="emojiContainer"] + [class*="emojiContainer"] {
+      margin-left: 0.5rem;
     }
   }
 
