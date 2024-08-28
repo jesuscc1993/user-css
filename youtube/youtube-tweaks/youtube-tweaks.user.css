@@ -1,21 +1,25 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2024.08.21.17.59
+@version        2024.08.28.21.16
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
-@preprocessor   stylus
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
+  :root {
+    --duration-height: 48px;
+  }
+
   ytd-grid-video-renderer {
     height: 296px;
   }
 
   ytd-thumbnail-overlay-resume-playback-renderer {
-    height: 32px;
+    height: calc(var(--duration-height) + 10px);
     z-index: 0;
+    opacity: 0.9;
   }
 
   #hover-overlays {
@@ -95,8 +99,8 @@
     height: auto !important;
 
     .badge-shape-wiz {
-      font-size: 42px !important;
-      line-height: 0.9 !important;
+      font-size: var(--duration-height) !important;
+      line-height: 1 !important;
       max-height: none !important;
 
       &.badge-shape-wiz--default.badge-shape-wiz--overlay {
