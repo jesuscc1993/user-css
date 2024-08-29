@@ -1,15 +1,18 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2024.08.28.21.16
+@version        2024.08.29.10.26
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
+@preprocessor   stylus
+
+@var text       duration-height      "Video duration font size"                    16px
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
   :root {
-    --duration-height: 48px;
+    --duration-height: duration-height;
   }
 
   ytd-grid-video-renderer {
@@ -94,13 +97,13 @@
     display: none !important;
   }
 
-  /* huge video duration text */
+  /* video duration text */
   ytd-thumbnail-overlay-time-status-renderer {
     height: auto !important;
 
     .badge-shape-wiz {
       font-size: var(--duration-height) !important;
-      line-height: 1 !important;
+      line-height: 0.975 !important;
       max-height: none !important;
 
       &.badge-shape-wiz--default.badge-shape-wiz--overlay {
