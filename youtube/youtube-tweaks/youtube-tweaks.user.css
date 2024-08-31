@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2024.08.29.10.26
+@version        2024.08.31.11.00
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -106,7 +106,7 @@
       line-height: 0.975 !important;
       max-height: none !important;
 
-      &.badge-shape-wiz--default.badge-shape-wiz--overlay {
+      &.badge-shape-wiz--thumbnail-default {
         background-color: rgba(0, 0, 0, 0.8);
       }
     }
