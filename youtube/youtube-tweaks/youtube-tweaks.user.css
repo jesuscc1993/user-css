@@ -1,20 +1,20 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2024.09.02.19.49
+@version        2024.09.02.19.51
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var text       duration-spacing       "Video duration spacing"         4px
-@var text       duration-height        "Video duration font size"       16px
+@var text       duration-font-size       "Video duration font size"       16px
+@var text       duration-spacing         "Video duration spacing"         4px
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
   :root {
+    --duration-font-size: duration-font-size;
     --duration-spacing: duration-spacing;
-    --duration-height: duration-height;
   }
 
   ytd-grid-video-renderer {
@@ -22,7 +22,7 @@
   }
 
   ytd-thumbnail-overlay-resume-playback-renderer {
-    height: calc(var(--duration-height) + var(--duration-spacing) * 2 + 2px);
+    height: calc(var(--duration-font-size) + var(--duration-spacing) * 2 + 2px);
     z-index: 0;
     opacity: 0.9;
   }
@@ -104,7 +104,7 @@
     height: auto !important;
 
     .badge-shape-wiz {
-      font-size: var(--duration-height) !important;
+      font-size: var(--duration-font-size) !important;
       line-height: 0.975 !important;
       max-height: none !important;
 
