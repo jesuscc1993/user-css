@@ -1,17 +1,19 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2024.08.31.11.01
+@version        2024.09.02.19.49
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var text       duration-height      "Video duration font size"                    16px
+@var text       duration-spacing       "Video duration spacing"         4px
+@var text       duration-height        "Video duration font size"       16px
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
   :root {
+    --duration-spacing: duration-spacing;
     --duration-height: duration-height;
   }
 
@@ -20,7 +22,7 @@
   }
 
   ytd-thumbnail-overlay-resume-playback-renderer {
-    height: calc(var(--duration-height) + 10px);
+    height: calc(var(--duration-height) + var(--duration-spacing) * 2 + 2px);
     z-index: 0;
     opacity: 0.9;
   }
@@ -110,6 +112,15 @@
         background-color: rgba(0, 0, 0, 0.75);
       }
     }
+  }
+
+  ytd-thumbnail[size="large"] ytd-thumbnail-overlay-button-renderer.ytd-thumbnail,
+  ytd-thumbnail[size="large"] ytd-thumbnail-overlay-time-status-renderer.ytd-thumbnail,
+  ytd-thumbnail[size="large"] ytd-thumbnail-overlay-toggle-button-renderer.ytd-thumbnail,
+  ytd-thumbnail[size="medium"] ytd-thumbnail-overlay-button-renderer.ytd-thumbnail,
+  ytd-thumbnail[size="medium"] ytd-thumbnail-overlay-time-status-renderer.ytd-thumbnail,
+  ytd-thumbnail[size="medium"] ytd-thumbnail-overlay-toggle-button-renderer.ytd-thumbnail {
+    margin: var(--duration-spacing);
   }
 
   /* hide sidebar items */
