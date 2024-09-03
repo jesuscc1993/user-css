@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Pure Black
 @description    Pure black theme for YouTube.
-@version        2023.08.22.21.53
+@version        2024.09.03.19.59
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -40,6 +40,19 @@
 
     .ytd-channel-owner-empty-state-renderer.illustration {
       filter: contrast(1.2);
+    }
+
+    yt-notification-action-renderer[darker-dark-theme] {
+      &[ui-refresh] {
+        #text.yt-notification-action-renderer,
+        #sub-text.yt-notification-action-renderer {
+          color: var(--yt-spec-text-primary);
+        }
+      }
+
+      tp-yt-paper-toast.yt-notification-action-renderer {
+        background-color: var(--yt-guide-background);
+      }
     }
 
     if (remove-playlist-gradient) {
