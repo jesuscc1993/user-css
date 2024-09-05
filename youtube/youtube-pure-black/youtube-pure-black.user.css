@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Pure Black
 @description    Pure black theme for YouTube.
-@version        2024.09.03.19.59
+@version        2024.09.05.20.20
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -20,12 +20,12 @@
   html[dark],
   [dark] {
     /* PRIMARY */
+    --yt-spec-general-background-c: primary-bg-color /* #030303 */;
     --yt-spec-base-background: primary-bg-color /* #0f0f0f */;
+    --yt-spec-general-background-b: primary-bg-color /* #0f0f0f */;
+    --yt-spec-general-background-a: primary-bg-color /* #181818 */;
     --yt-spec-raised-background: primary-bg-color /* #212121 */;
     --yt-spec-menu-background: primary-bg-color /* #2F2F2F */;
-    --yt-spec-general-background-a: primary-bg-color /* #181818 */;
-    --yt-spec-general-background-b: primary-bg-color /* #0f0f0f */;
-    --yt-spec-general-background-c: primary-bg-color /* #030303 */;
     /* regular dark */
     --yt-spec-brand-background-solid: primary-bg-color /* #212121 */;
     --yt-spec-brand-background-primary: primary-bg-color /* rgba(33, 33, 33, 0.98) */;
@@ -42,16 +42,16 @@
       filter: contrast(1.2);
     }
 
-    yt-notification-action-renderer[darker-dark-theme] {
-      &[ui-refresh] {
-        #text.yt-notification-action-renderer,
-        #sub-text.yt-notification-action-renderer {
-          color: var(--yt-spec-text-primary);
-        }
-      }
-
-      tp-yt-paper-toast.yt-notification-action-renderer {
-        background-color: var(--yt-guide-background);
+    tp-yt-paper-dialog,
+    tp-yt-paper-listbox,
+    tp-yt-paper-toast,
+    ytd-menu-popup-renderer tp-yt-paper-listbox.ytd-menu-popup-renderer {
+      background-color: lightness(primary-bg-color, 5%);
+    }
+    yt-notification-action-renderer {
+      #text.yt-notification-action-renderer,
+      #sub-text.yt-notification-action-renderer {
+        color: var(--yt-spec-text-primary);
       }
     }
 
