@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2024.08.15.00.09
+@version        2024.09.07.20.12
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -40,6 +40,12 @@
   html:not(.style-scope) {
     --ytd-grid-max-width: grid-max-width;
     --ytd-grid-6-columns-width: var(--ytd-grid-max-width);
+  }
+
+  ytd-tabbed-page-header.grid-6-columns #page-header.ytd-tabbed-page-header,
+  ytd-tabbed-page-header.grid-6-columns[has-inset-banner] #page-header-banner.ytd-tabbed-page-header {
+    padding-right: calc(50% - var(--ytd-grid-max-width) / 2);
+    padding-left: calc(50% - var(--ytd-grid-max-width) / 2);
   }
 
   /* comments width */
