@@ -1,12 +1,13 @@
 /* ==UserStyle==
 @name           Duolingo - Customization
 @description    Provides some extra customization options for Duolingo. DISCLAIMER: some features are currently not supported on Firefox.
-@version        2024.09.07.18.13
+@version        2024.09.07.18.19
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
+@var  checkbox  hide-leagues                        "Hide leagues"                                 0
 @var  checkbox  hide-goals                          "Hide goals"                                   0
 @var  checkbox  hide-premium                        "Hide some premium adds and features"          0
 @var  checkbox  hide-leaderboards                   "Hide leaderboards"                            0
@@ -93,8 +94,19 @@
     }
   }
 
+  if (hide-leagues) {
+    /*div:has(> div > div > div > [src*="/images/leagues/"]) {*/
+    div:has(> div > [data-test="leaderboards-open"]) {
+      display: none;
+    }
+  }
+
   /* goals */
   if (hide-goals) {
+    div:has(> div > div > [src*="/images/goals/"]) {
+      display: none;
+    }
+
     [data-test="/settings/coach"] {
       display: none;
     }
@@ -107,7 +119,7 @@
     [href="/review"],
     [href="/settings/super"],
     div:has(> [data-test="plus-offer-logo"]),
-    div:has(> [src*="/super/"]),
+    div:has(> [src*="/images/super/"]),
     div:has(> div > [data-test="plus-offer-logo"]):has(> div > [src*="practiceHub"]),
     /*div:has(> [data-test="plus-offer-logo"]) + div:has(img)*/ {
       display: none !important;
