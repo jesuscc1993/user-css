@@ -121,6 +121,7 @@
     div:has(> [data-test="plus-offer-logo"]),
     div:has(> [src*="/images/super/"]),
     div:has(> div > [data-test="plus-offer-logo"]):has(> div > [src*="practiceHub"]),
+    div:has(> div > div > ins),
     /*div:has(> [data-test="plus-offer-logo"]) + div:has(img)*/ {
       display: none !important;
     }
