@@ -1,13 +1,12 @@
 /* ==UserStyle==
 @name           Duolingo - Customization
 @description    Provides some extra customization options for Duolingo. DISCLAIMER: some features are currently not supported on Firefox.
-@version        2024.07.29.23.34
+@version        2024.09.07.18.13
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var  checkbox  hide-leagues                        "Hide leagues"                                 0
 @var  checkbox  hide-goals                          "Hide goals"                                   0
 @var  checkbox  hide-premium                        "Hide some premium adds and features"          0
 @var  checkbox  hide-leaderboards                   "Hide leaderboards"                            0
@@ -108,6 +107,7 @@
     [href="/review"],
     [href="/settings/super"],
     div:has(> [data-test="plus-offer-logo"]),
+    div:has(> [src*="/super/"]),
     div:has(> div > [data-test="plus-offer-logo"]):has(> div > [src*="practiceHub"]),
     /*div:has(> [data-test="plus-offer-logo"]) + div:has(img)*/ {
       display: none !important;
@@ -136,55 +136,6 @@
     > div > a {
       margin-bottom: 8px;
       display: block;
-    }
-  }
-}
-
-@-moz-document regexp("https:\\/\\/www\\.duolingo\\.com\\/(characters|guidebook|learn|practice-hub|shop).*") {
-  #root > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(1) > div {
-    /* leagues */
-    if (hide-leagues) {
-      &:not(:has(> div:nth-child(5))) {
-        > div:nth-child(2) {
-          display: none;
-        }
-      }
-
-      &:has(> div:nth-child(5)) {
-        > div:nth-child(3) {
-          display: none;
-        }
-      }
-    }
-
-    /* goals */
-    if (hide-goals) {
-      &:not(:has(> div:nth-child(5))) {
-        > div:nth-child(3) {
-          display: none;
-        }
-      }
-
-      &:has(> div:nth-child(5)) {
-        > div:nth-child(4) {
-          display: none;
-        }
-      }
-    }
-
-    /* premium */
-    if (hide-premium) {
-      &:not(:has(> div:nth-child(5))) {
-        > div:nth-child(4) {
-          display: none;
-        }
-      }
-
-      &:has(> div:nth-child(5)) {
-        > div:nth-child(5) {
-          display: none;
-        }
-      }
     }
   }
 }
