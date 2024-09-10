@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2024.08.30.19.56
+@version        2024.09.10.15.01
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -28,6 +28,7 @@
 @var checkbox reduce-message-spacing "Reduce message spacing"      0
 @var checkbox restore-blurple        "Restore blurple"             0
 @var checkbox blurple-mentions       "Blurple mentions"            0
+@var checkbox hide-voice-channels    "Hide voice channels"         0
 @var checkbox hide-download-icon     "Hide download icon"          0
 
 ==/UserStyle== */
@@ -170,14 +171,14 @@
 
   /* RESIZE */
   /* avatars */
-  html when not (@avatar-scale = unset) {
+  html when not (@avatar-scale =unset) {
     [class*="messageListItem"] img[class*="avatar_"] {
       transform: scale(var(--avatar-scale)) !important;
       margin-top: 4px;
     }
   }
 
-  html when not (@avatar-zoom = unset) {
+  html when not (@avatar-zoom =unset) {
     [class*="messageListItem"] img[class*="avatar_"] {
       &,
       & + img[class*="avatarDecoration_"] {
@@ -247,7 +248,7 @@
     transform: none !important;
   }
 
-  html when not (@inline-emoji-zoom = unset) {
+  html when not (@inline-emoji-zoom =unset) {
     [class*="messagesWrapper_"] {
       [class*="messageContent"] img.emoji:hover {
         transform: scale(var(--inline-emoji-zoom));
@@ -255,7 +256,7 @@
     }
   }
 
-  html when not (@block-emoji-zoom = unset) {
+  html when not (@block-emoji-zoom =unset) {
     [class*="messagesWrapper_"] {
       img.emoji.jumboable:hover {
         transform: scale(var(--block-emoji-zoom));
@@ -284,8 +285,16 @@
     }
   }
 
+  /* hide voice channels */
+  html when (@hide-voice-channels =1) {
+    [class*="containerDefault"]:has([class*="iconVisibility"][class*="typeVoice"]),
+    [class*="voiceChannelsButton"] {
+      display: none;
+    }
+  }
+
   /* hide download icon */
-  html when (@hide-download-icon = 1) {
+  html when (@hide-download-icon =1) {
     [class*="listItem"]:not(:nth-child(2)) [class*="guildSeparator"] {
       display: none;
     }
@@ -347,12 +356,12 @@
   }
 
   /* avatar decorations */
-  [class*="avatarDecoration_"] when (@avatar-decorations = 0) {
+  [class*="avatarDecoration_"] when (@avatar-decorations =0) {
     display: none;
   }
 
   /* darker code and quotes */
-  html when (@darker-quotes = 1) {
+  html when (@darker-quotes =1) {
     [class*="markup"] code,
     blockquote {
       background: #0003;
@@ -365,7 +374,7 @@
   }
 
   /* full width embeds */
-  [class*="embedWrapper_"] when (@full-width-embeds = 1) {
+  [class*="embedWrapper_"] when (@full-width-embeds =1) {
     &,
     [class*="gridContainer_"] {
       max-width: 100% !important;
@@ -377,7 +386,7 @@
   }
 
   /* reduced message spacing */
-  html when (@reduce-message-spacing = 1) {
+  html when (@reduce-message-spacing =1) {
     [class*="wrapper"][class*="compact"]:not([class*="mentioned_"]),
     [class*="wrapper"][class*="cozy"]:not([class*="mentioned_"]) {
       padding-top: 0;
@@ -386,14 +395,14 @@
   }
 
   /* custom group spacing */
-  html when not (@group-spacing = unset) {
+  html when not (@group-spacing =unset) {
     [class*="group-spacing"] [class*="groupStart"] {
       margin-top: var(--group-spacing);
     }
   }
 
   /* blurple mentions */
-  html when (@blurple-mentions = 1) {
+  html when (@blurple-mentions =1) {
     [class*="mentioned_"]:before {
       background-color: #7289da;
     }
@@ -409,7 +418,7 @@
   }
 
   /* blurple restoration */
-  html.theme-dark when (@restore-blurple = 1) {
+  html.theme-dark when (@restore-blurple =1) {
     --brand-100: #f8f9fd;
     --brand-130: #f2f4fc;
     --brand-160: #ebeefa;
