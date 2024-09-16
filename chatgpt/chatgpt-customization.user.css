@@ -24,7 +24,7 @@
     }
   }
 
-  html when (@center-content=1) {
+  html when (@center-content = 1) {
     .bg-token-sidebar-surface-primary[style*="width: 260px"] + .max-w-full {
       border-right: 260px solid var(--sidebar-surface-primary);
     }

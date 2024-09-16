@@ -92,7 +92,7 @@
     max-width: 100% !important;
   }
 
-  html when (@attachments-scrollbar =1) {
+  html when (@attachments-scrollbar = 1) {
     .media-scroller {
       overflow-x: auto;
       scrollbar-width: initial !important;
@@ -103,7 +103,7 @@
     }
   }
 
-  body when (@hide-comment-footer =1) {
+  body when (@hide-comment-footer = 1) {
     .comments .post {
       &:not(:hover) {
         .post-footer {
@@ -113,7 +113,7 @@
     }
   }
 
-  body when (@hide-emoji-reactions =1) {
+  body when (@hide-emoji-reactions = 1) {
     .post .post-reactions {
       display: none;
     }
@@ -123,7 +123,7 @@
     }
   }
 
-  body when (@disable-seasons =1) {
+  body when (@disable-seasons = 1) {
     > canvas,
     #animateimage,
     #padoru {

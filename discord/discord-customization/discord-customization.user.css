@@ -286,7 +286,7 @@
   }
 
   /* hide voice channels */
-  html when (@hide-voice-channels =1) {
+  html when (@hide-voice-channels = 1) {
     [class*="containerDefault"]:has([class*="iconVisibility"][class*="typeVoice"]),
     [class*="voiceChannelsButton"] {
       display: none;
@@ -294,7 +294,7 @@
   }
 
   /* hide download icon */
-  html when (@hide-download-icon =1) {
+  html when (@hide-download-icon = 1) {
     [class*="listItem"]:not(:nth-child(2)) [class*="guildSeparator"] {
       display: none;
     }
@@ -361,7 +361,7 @@
   }
 
   /* darker code and quotes */
-  html when (@darker-quotes =1) {
+  html when (@darker-quotes = 1) {
     [class*="markup"] code,
     blockquote {
       background: #0003;
@@ -374,7 +374,7 @@
   }
 
   /* full width embeds */
-  [class*="embedWrapper_"] when (@full-width-embeds =1) {
+  [class*="embedWrapper_"] when (@full-width-embeds = 1) {
     &,
     [class*="gridContainer_"] {
       max-width: 100% !important;
@@ -386,7 +386,7 @@
   }
 
   /* reduced message spacing */
-  html when (@reduce-message-spacing =1) {
+  html when (@reduce-message-spacing = 1) {
     [class*="wrapper"][class*="compact"]:not([class*="mentioned_"]),
     [class*="wrapper"][class*="cozy"]:not([class*="mentioned_"]) {
       padding-top: 0;
@@ -402,7 +402,7 @@
   }
 
   /* blurple mentions */
-  html when (@blurple-mentions =1) {
+  html when (@blurple-mentions = 1) {
     [class*="mentioned_"]:before {
       background-color: #7289da;
     }
@@ -418,7 +418,7 @@
   }
 
   /* blurple restoration */
-  html.theme-dark when (@restore-blurple =1) {
+  html.theme-dark when (@restore-blurple = 1) {
     --brand-100: #f8f9fd;
     --brand-130: #f2f4fc;
     --brand-160: #ebeefa;
