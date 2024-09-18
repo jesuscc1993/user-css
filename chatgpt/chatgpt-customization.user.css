@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           ChatGPT - Customization
 @description    Provides some extra customization options for ChatGPT.
-@version        2024.09.16.13.27
+@version        2024.09.18.14.58
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -9,6 +9,7 @@
 
 @var text       max-width         "Max content width"   48rem
 @var checkbox   center-content    "Center content"      0
+@var checkbox   hide-adds         "Hide bottom add"     0
 
 ==/UserStyle== */
 @-moz-document domain("chatgpt.com") {
@@ -27,6 +28,12 @@
   html when (@center-content = 1) {
     .bg-token-sidebar-surface-primary[style*="width: 260px"] + .max-w-full {
       border-right: 260px solid var(--sidebar-surface-primary);
+    }
+  }
+
+  html when (@hide-adds = 1) {
+    .absolute.bottom-full:has([data-testid="close-button"]) {
+      display: none;
     }
   }
 }
