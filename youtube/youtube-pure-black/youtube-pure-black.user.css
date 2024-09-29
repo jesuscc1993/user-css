@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Pure Black
 @description    Pure black theme for YouTube.
-@version        2024.09.05.21.15
+@version        2024.09.29.10.57
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -46,9 +46,11 @@
     tp-yt-paper-listbox,
     tp-yt-paper-toast,
     yt-confirm-dialog-renderer[dialog],
-    ytd-menu-popup-renderer tp-yt-paper-listbox.ytd-menu-popup-renderer {
+    ytd-menu-popup-renderer tp-yt-paper-listbox.ytd-menu-popup-renderer,
+    .yt-contextual-sheet-layout-wiz {
       background-color: lightness(primary-bg-color, 5%);
     }
+
     yt-notification-action-renderer {
       #text.yt-notification-action-renderer,
       #sub-text.yt-notification-action-renderer {
@@ -57,6 +59,7 @@
     }
 
     if (remove-playlist-gradient) {
+      .YtCinematicContainerViewModelBackgroundGradient,
       .immersive-header-background-wrapper {
         background: primary-bg-color !important;
       }
