@@ -1,27 +1,28 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2024.10.01.10.05
+@version        2024.10.01.10.08
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var text       list-thumbnail-width      "List thumbnail width"                    100px
-@var text       drawer-width              "App drawer width"                        240px
-@var text       grid-max-width            "Max grid width"                          1284px
-@var color      sub-bg                    "Subtitle background color"               rgba(0, 0, 0, .72)
-@var text       sub-border-radius         "Subtitle border radius"                  0px
-@var text       max-comments-width        "Maximum comments width"                  calc((100vh - var(--ytd-watch-flexy-masthead-height) - var(--ytd-margin-6x) - var(--ytd-watch-flexy-space-below-player))*(var(--ytd-watch-flexy-width-ratio) / var(--ytd-watch-flexy-height-ratio)))
-@var text       max-playlist-height       "Maximum playlist height"                 460px
-@var text       max-playlist-width        "Maximum playlist width"                  402px
-@var text       progress-bar-thickness    "Progress bar thickness"                  5px
-@var checkbox   reduced-sidebar-padding   "Reduce sidebar spacing"                  0
-@var checkbox   reduced-grid-padding      "Reduce grid spacing"                     0
-@var checkbox   crop-fullscreen           "Crop fullscreen to cover the screen"     0
-@var checkbox   gray-out-watched          "Gray out watched videos"                 0
-@var checkbox   hide-watched              "Hide watched videos"                     0
-@var checkbox   hide-channel-avatars      "Hide channel avatars in subscriptions"   0
+@var text       list-thumbnail-width          "List thumbnail width"                    100px
+@var text       drawer-width                  "App drawer width"                        240px
+@var text       grid-max-width                "Max grid width"                          1284px
+@var color      sub-bg                        "Subtitle background color"               rgba(0, 0, 0, .72)
+@var text       sub-border-radius             "Subtitle border radius"                  0px
+@var text       max-comments-width            "Maximum comments width"                  calc((100vh - var(--ytd-watch-flexy-masthead-height) - var(--ytd-margin-6x) - var(--ytd-watch-flexy-space-below-player))*(var(--ytd-watch-flexy-width-ratio) / var(--ytd-watch-flexy-height-ratio)))
+@var text       max-playlist-height           "Maximum playlist height"                 460px
+@var text       max-playlist-width            "Maximum playlist width"                  402px
+@var text       progress-bar-thickness        "Progress bar thickness"                  5px
+@var checkbox   disable-progress-bar-gradient "Disable progress bar gradient"           0
+@var checkbox   reduced-sidebar-padding       "Reduce sidebar spacing"                  0
+@var checkbox   reduced-grid-padding          "Reduce grid spacing"                     0
+@var checkbox   crop-fullscreen               "Crop fullscreen to cover the screen"     0
+@var checkbox   gray-out-watched              "Gray out watched videos"                 0
+@var checkbox   hide-watched                  "Hide watched videos"                     0
+@var checkbox   hide-channel-avatars          "Hide channel avatars in subscriptions"   0
 
 ==/UserStyle== */
 /*
@@ -137,6 +138,14 @@
       transform: scaleY(0.6);
     }
   }
+
+  /* disable-progress-bar-gradient */
+if (disable-progress-bar-gradient) {
+
+  .ytp-cairo-refresh-signature-moments .ytp-play-progress {
+    background: #f03;
+  }
+}
 
   /* reduced-sidebar-padding */
   if (reduced-sidebar-padding) {
