@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Pure Black
 @description    Pure black theme for YouTube.
-@version        2024.09.29.10.57
+@version        2024.10.04.19.36
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -10,6 +10,7 @@
 @var color      primary-bg-color            "Primary background color"              #000
 @var color      secondary-bg-color          "Secondary background color"            rgba(255, 255, 255, 0.05)
 @var color      secondary-bg-color-hover    "Secondary background color (hover)"    rgba(255, 255, 255, 0.1)
+@var checkbox   remove-header-gradient      "Remove header gradient"                1
 @var checkbox   remove-playlist-gradient    "Remove playlist gradient"              1
 @var checkbox   remove-cinematics-gradient  "Remove video gradient"                 1
 
@@ -55,6 +56,13 @@
       #text.yt-notification-action-renderer,
       #sub-text.yt-notification-action-renderer {
         color: var(--yt-spec-text-primary);
+      }
+    }
+
+    if (remove-header-gradient) {
+      ytd-masthead[frosted-glass="without-chipbar"] #background.ytd-masthead {
+        background: #000;
+        backdrop-filter: none;
       }
     }
 
