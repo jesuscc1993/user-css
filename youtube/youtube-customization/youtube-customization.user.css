@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2024.10.01.10.08
+@version        2024.10.04.20.06
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -228,7 +228,7 @@ if (disable-progress-bar-gradient) {
 
   /* crop fullscreen */
   if (crop-fullscreen) {
-    .html5-video-player.ytp-fullscreen .video-stream {
+    .html5-video-player.ytp-fullscreen:not(.ytp-rounded-miniplayer-not-regular-wide-video) .video-stream {
       width: 100vw !important;
       height: 100vh !important;
       left: 0 !important;
