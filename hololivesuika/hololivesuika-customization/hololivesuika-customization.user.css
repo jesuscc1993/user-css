@@ -1,0 +1,33 @@
+/* ==UserStyle==
+@name           Hololive Suika - Customization
+@description    Provides some extra customization options for Hololive Suika.
+@version        2024.10.01.15.37
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+@preprocessor   stylus
+
+@var checkbox   fullscreen          "Fullscreen"      0
+==/UserStyle== */
+@-moz-document domain("hololivesuika.com") {
+  if (fullscreen) {
+    body > :not(.unity-desktop) {
+      display: none;
+    }
+
+    body {
+      background: black;
+    }
+
+    .unity-desktop {
+      #unity-canvas {
+        height: 100vh !important;
+        width: calc(100vh * 480 / 640) !important;
+      }
+
+      #unity-footer {
+        display: none;
+      }
+    }
+  }
+}
