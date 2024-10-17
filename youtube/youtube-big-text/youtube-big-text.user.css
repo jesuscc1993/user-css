@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Big Text
 @description    Increases YouTube's font size; useful when watching from a distance.
-@version        2024.10.13.19.32
+@version        2024.10.17.21.40
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -63,15 +63,24 @@
   }
 
   #byline.ytd-playlist-panel-video-renderer,
+  #label.ytd-playlist-add-to-option-renderer,
+  #modern-card-owner-name.ytd-miniplayer,
+  #modern-owner-name.ytd-miniplayer,
+  #owner-name.ytd-miniplayer,
   #published-time-text.ytd-comment-view-model,
   #text.ytd-channel-name,
   #vote-count-middle.ytd-comment-action-buttons-renderer,
+  .channel.ytd-miniplayer,
   .less-button.ytd-comment-view-model,
   .metadata-owner.ytd-playlist-header-renderer,
   .metadata-stats.ytd-playlist-byline-renderer,
+  .miniplayer-title.ytd-miniplayer,
   .more-button.ytd-comment-view-model,
+  .yt-avatar-stack-view-model-wiz__avatar-stack-text,
   .yt-content-metadata-view-model-wiz__metadata-text,
+  .yt-spec-button-shape-next--size-m,
   .yt-spec-button-shape-next--size-s,
+  .ytd-menu-title-renderer,
   ytd-pinned-comment-badge-renderer,
   ytd-playlist-panel-renderer[collapsible] .badge.ytd-badge-supported-renderer,
   ytd-playlist-panel-renderer[collapsible] .index-message-wrapper.ytd-playlist-panel-renderer,
@@ -93,7 +102,6 @@
   .less-button.ytd-comment-renderer,
   .metadata-owner.ytd-playlist-header-renderer,
   .more-button.ytd-comment-renderer,
-  .yt-spec-button-shape-next--size-m,
   ytd-grid-playlist-renderer #video-title.ytd-grid-playlist-renderer,
   ytd-grid-video-renderer #video-title.yt-simple-endpoint.ytd-grid-video-renderer,
   ytd-grid-video-renderer #video-title.ytd-grid-video-renderer,
