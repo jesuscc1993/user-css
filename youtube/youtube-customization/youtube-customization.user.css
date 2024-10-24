@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2024.10.08.16.21
+@version        2024.10.24.23.15
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -15,6 +15,7 @@
 @var text       max-playlist-height           "Maximum playlist height"                 460px
 @var text       max-playlist-width            "Maximum playlist width"                  402px
 @var text       progress-bar-thickness        "Progress bar thickness"                  5px
+@var text       volume-bar-thickness          "Volume bar thickness"                    4px
 @var checkbox   disable-progress-bar-gradient "Disable progress bar gradient"           0
 @var checkbox   reduced-sidebar-padding       "Reduce sidebar spacing"                  0
 @var checkbox   reduced-grid-padding          "Reduce grid spacing"                     0
@@ -30,9 +31,11 @@
     grid-max-width: calc(100vw - 190px - 17px)
 */
 @-moz-document domain("youtube.com") {
-  :root {
-    thumbnail-aspect-ratio=9 / 16;
+  thumbnail-aspect-ratio=9 / 16;
+  progress-bar-handle-size=progress-bar-thickness + 8px;
+  volume-bar-handle-size=volume-bar-thickness + 8px;
 
+  :root {
     --list-thumbnail-height: list-thumbnail-width * thumbnail-aspect-ratio;
     --list-thumbnail-width: list-thumbnail-width;
   }
@@ -81,8 +84,7 @@
   #thumbnail-container.ytd-playlist-panel-video-renderer,
   #thumbnail-container.ytd-playlist-panel-video-renderer > ytd-thumbnail.ytd-playlist-panel-video-renderer,
   #thumbnail-container.ytd-playlist-panel-video-renderer img.yt-img-shadow,
-  ytd-thumbnail.ytd-playlist-video-renderer,
-  {
+  ytd-thumbnail.ytd-playlist-video-renderer {
     max-height: none;
     max-width: none;
     height: var(--list-thumbnail-height);
@@ -123,8 +125,8 @@
       height: progress-bar-thickness;
 
       .ytp-scrubber-button {
-        height: progress-bar-thickness + 8px;
-        width: progress-bar-thickness + 8px;
+        height: progress-bar-handle-size;
+        width: progress-bar-handle-size;
         border-radius: 50%;
       }
     }
@@ -134,9 +136,30 @@
     }
   }
 
+  /* volume-bar-thickness */
+  .html5-video-player:not(.ytp-big-mode) {
+    .ytp-volume-slider-active .ytp-volume-panel {
+      width: 40px + volume-bar-handle-size;
+    }
+
+    .ytp-volume-slider-handle {
+      height: volume-bar-handle-size;
+      width: volume-bar-handle-size;
+      border-radius: 50%;
+      margin-top: volume-bar-handle-size * -0.5;
+    }
+
+    .ytp-volume-slider-handle {
+      &::before,
+      &::after {
+        height: volume-bar-thickness;
+        margin-top: volume-bar-thickness * -0.5;
+      }
+    }
+  }
+
   /* disable-progress-bar-gradient */
   if (disable-progress-bar-gradient) {
-
     .ytp-cairo-refresh-signature-moments .ytp-play-progress {
       background: #f03;
     }
@@ -209,7 +232,7 @@
   if (gray-out-watched) {
     ytd-grid-video-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer),
     ytd-rich-item-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer) {
-      filter: grayscale(.9) brightness(.25);
+      filter: grayscale(0.9) brightness(0.25);
     }
   }
 
