@@ -38,10 +38,6 @@
     --line-height-sm: calc(var(--font-size-sm) * var(--line-height-font-size-ratio)) !important;
   }
 
-  .ytp-chrome-controls svg {
-    transform: scale(1.25) !important;
-  }
-
   @media (max-width: 1281px) {
     ytd-video-owner-renderer {
       #channel-name.ytd-video-owner-renderer,

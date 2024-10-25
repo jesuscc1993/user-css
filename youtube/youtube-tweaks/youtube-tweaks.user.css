@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2024.09.02.19.59
+@version        2024.10.25.17.35
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -150,5 +150,12 @@
         height: 100%;
       }
     }
+  }
+
+  /* highlight unavailable videos */
+  #container.ytd-playlist-video-renderer:has([src="https://i.ytimg.com/img/no_thumbnail.jpg"])
+  {
+    background: #ffffff66;
+    padding: 1em;
   }
 }

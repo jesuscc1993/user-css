@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2024.10.24.23.15
+@version        2024.10.25.17.35
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -160,8 +160,9 @@
 
   /* disable-progress-bar-gradient */
   if (disable-progress-bar-gradient) {
-    .ytp-cairo-refresh-signature-moments .ytp-play-progress {
-      background: #f03;
+    .ytp-cairo-refresh-signature-moments .ytp-play-progress,
+    ytd-thumbnail-overlay-resume-playback-renderer[enable-refresh-signature-moments-web] #progress.ytd-thumbnail-overlay-resume-playback-renderer {
+      background: var(--yt-spec-static-brand-red);
     }
   }
 
