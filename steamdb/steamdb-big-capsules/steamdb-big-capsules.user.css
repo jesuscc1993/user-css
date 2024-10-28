@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           SteamDB - Big Capsules
 @description    Miscellaneous style overrides for Steam.
-@version        2024.10.28.20.04
+@version        2024.10.28.20.10
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -22,8 +22,9 @@
     }
 
     .applogo > a {
-      &, img {
-        height: 84px;
+      &,
+      img {
+        height: 87px;
         width: 231px;
       }
     }
