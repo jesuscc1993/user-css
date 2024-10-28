@@ -1,6 +1,6 @@
 # UserCSS
 
-To install, view the raw files.  
+To install, view the raw files.
 Requires the [Stylus](https://github.com/openstyles/stylus#releases) userstyle loader extension. Install for:
 
 - [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
@@ -57,6 +57,9 @@ Requires the [Stylus](https://github.com/openstyles/stylus#releases) userstyle l
 <hr>
 
 - [nyaa.si/nyaa.si-customization](nyaa.si/nyaa.si-customization)
+<hr>
+
+- [steamdb/steamdb-big-capsules](steamdb/steamdb-big-capsules)
 <hr>
 
 - [stylus/stylus-codemirror-dark-plus](stylus/stylus-codemirror-dark-plus)
