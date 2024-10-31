@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2024.10.25.17.35
+@version        2024.10.31.22.31
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -15,7 +15,9 @@
 @var text       max-playlist-height           "Maximum playlist height"                 460px
 @var text       max-playlist-width            "Maximum playlist width"                  402px
 @var text       progress-bar-thickness        "Progress bar thickness"                  5px
+@var text       progress-bar-handle-size      "Progress bar handle size"                13px
 @var text       volume-bar-thickness          "Volume bar thickness"                    4px
+@var text       volume-bar-handle-size        "Volume bar handle size"                  12px
 @var checkbox   disable-progress-bar-gradient "Disable progress bar gradient"           0
 @var checkbox   reduced-sidebar-padding       "Reduce sidebar spacing"                  0
 @var checkbox   reduced-grid-padding          "Reduce grid spacing"                     0
@@ -32,8 +34,6 @@
 */
 @-moz-document domain("youtube.com") {
   thumbnail-aspect-ratio=9 / 16;
-  progress-bar-handle-size=progress-bar-thickness + 8px;
-  volume-bar-handle-size=volume-bar-thickness + 8px;
 
   :root {
     --list-thumbnail-height: list-thumbnail-width * thumbnail-aspect-ratio;
@@ -123,6 +123,11 @@
   .html5-video-player:not(.ytp-big-mode) {
     .ytp-progress-bar-container {
       height: progress-bar-thickness;
+
+      .ytp-scrubber-container {
+        left: progress-bar-handle-size * -0.5;
+        top: progress-bar-handle-size * -0.5 + progress-bar-thickness * 0.5;
+      }
 
       .ytp-scrubber-button {
         height: progress-bar-handle-size;
