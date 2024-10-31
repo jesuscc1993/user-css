@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2024.10.31.22.31
+@version        2024.10.31.22.50
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -120,7 +120,7 @@
   }
 
   /* progress-bar-thickness */
-  .html5-video-player:not(.ytp-big-mode) {
+  .html5-video-player {
     .ytp-progress-bar-container {
       height: progress-bar-thickness;
 
@@ -142,9 +142,16 @@
   }
 
   /* volume-bar-thickness */
-  .html5-video-player:not(.ytp-big-mode) {
-    .ytp-volume-slider-active .ytp-volume-panel {
-      width: 40px + volume-bar-handle-size;
+  .html5-video-player {
+    &.ytp-big-mode {
+      .ytp-volume-slider-active .ytp-volume-panel {
+        width: 60px + volume-bar-handle-size;
+      }
+    }
+    &:not(.ytp-big-mode) {
+      .ytp-volume-slider-active .ytp-volume-panel {
+        width: 40px + volume-bar-handle-size;
+      }
     }
 
     .ytp-volume-slider-handle {
