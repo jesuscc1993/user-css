@@ -1,7 +1,7 @@
 /* ==UserStyle==
-@name           YouTube - Pure Black
-@description    Pure black theme for YouTube.
-@version        2024.10.04.19.36
+@name           YouTube - Darker
+@description    Darker theme for YouTube.
+@version        2024.11.03.11.23
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -56,6 +56,16 @@
       #text.yt-notification-action-renderer,
       #sub-text.yt-notification-action-renderer {
         color: var(--yt-spec-text-primary);
+      }
+    }
+
+    .yt-spec-button-shape-next--mono.yt-spec-button-shape-next--filled,
+    .yt-spec-button-shape-next--overlay.yt-spec-button-shape-next--filled {
+      background-color: #ffffff1a;
+      color: var(--yt-spec-text-primary);
+
+      &:hover {
+        background-color: #fff3;
       }
     }
 
