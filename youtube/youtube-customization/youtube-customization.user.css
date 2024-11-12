@@ -119,7 +119,7 @@
     border-bottom-right-radius: sub-border-radius;
   }
 
-  /* progress-bar-thickness */
+  /* progress bar thickness */
   .html5-video-player {
     .ytp-progress-bar-container {
       height: progress-bar-thickness;
@@ -141,7 +141,7 @@
     }
   }
 
-  /* volume-bar-thickness */
+  /* volume bar thickness */
   .html5-video-player {
     &.ytp-big-mode {
       .ytp-volume-slider-active .ytp-volume-panel {
@@ -170,7 +170,7 @@
     }
   }
 
-  /* disable-progress-bar-gradient */
+  /* disable progress bar gradient */
   if (disable-progress-bar-gradient) {
     .ytp-cairo-refresh-signature-moments .ytp-play-progress,
     ytd-thumbnail-overlay-resume-playback-renderer[enable-refresh-signature-moments-web] #progress.ytd-thumbnail-overlay-resume-playback-renderer {
@@ -178,7 +178,7 @@
     }
   }
 
-  /* reduced-sidebar-padding */
+  /* reduced sidebar padding */
   if (reduced-sidebar-padding) {
     #guide-inner-content {
       #sections.ytd-guide-renderer > ytd-guide-section-renderer.ytd-guide-renderer:not(:first-child),
@@ -216,7 +216,7 @@
     }
   }
 
-  /* hide-channel-avatars */
+  /* hide channel avatars */
   if (hide-channel-avatars) {
     #avatar-link.ytd-rich-grid-media {
       display: none;
@@ -241,7 +241,7 @@
     }
   }
 
-  /* gray-out-watched */
+  /* gray out watched */
   if (gray-out-watched) {
     ytd-grid-video-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer),
     ytd-rich-item-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer) {
@@ -249,7 +249,7 @@
     }
   }
 
-  /* hide-watched */
+  /* hide watched */
   if (hide-watched) {
     ytd-grid-video-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer),
     ytd-rich-item-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer) {
