@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Duolingo - Customization
 @description    Provides some extra customization options for Duolingo. DISCLAIMER: some features are currently not supported on Firefox.
-@version        2024.09.07.18.32
+@version        2024.11.14.19.05
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -15,6 +15,7 @@
 @var  checkbox  hide-pronunciation                  "Hide pronunciation"                           0
 @var  checkbox  hide-pronunciation-unless-hovered   "Hide pronunciation (unless hovered)"          0
 @var  checkbox  hide-characters                     "Hide Duolingo characters"                     0
+@var  checkbox  lowercase-pills                     "Lowercase pills"                              0
 @var  checkbox  center-lesson-title                 "Center lesson title"                          0
 @var  text      lesson-width                        "Lesson width (desktop)"                       600px
 
@@ -140,6 +141,13 @@
     [href="https://classes.duolingo.com/"]
     {
       display: none !important;
+    }
+  }
+
+  /* lowercase pills */
+  if (lowercase-pills) {
+    ._2O7Ua {
+      text-transform: lowercase !important;
     }
   }
 
