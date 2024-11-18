@@ -59,6 +59,9 @@ Requires the [Stylus](https://github.com/openstyles/stylus#releases) userstyle l
 - [nyaa.si/nyaa.si-customization](nyaa.si/nyaa.si-customization)
 <hr>
 
+- [reddit/reddit-darker-dark](reddit/reddit-darker-dark)
+<hr>
+
 - [steamdb/steamdb-big-capsules](steamdb/steamdb-big-capsules)
 <hr>
 

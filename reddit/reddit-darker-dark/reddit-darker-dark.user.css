@@ -1,0 +1,38 @@
+/* ==UserStyle==
+@name           Reddit - Darker Dark
+@description    Darker default dark theme for Reddit.
+@version        2024.11.18.22.42
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+
+==/UserStyle== */
+@-moz-document domain("reddit.com") {
+  @media (prefers-color-scheme: dark) {
+    :root.theme-dark {
+      .grid-container.grid,
+      .sidebar-grid,
+      :not(.theme-light) {
+        .theme-beta:not(.stickied):not(#left-sidebar-container):not(.left-sidebar-container),
+        .theme-rpl:not(.stickied):not(#left-sidebar-container):not(.left-sidebar-container),
+        & {
+          --color-neutral-background: #000000;
+          --color-neutral-background-container: #000000;
+          --color-neutral-background-container-hover: #000000;
+          --color-neutral-background-container-strong: #000000;
+          --color-neutral-background-container-strong-hover: #000000;
+          --color-neutral-background-gilded: #000000;
+          --color-neutral-background-gilded-hover: #000000;
+          --color-neutral-background-hover: #000000;
+          --color-neutral-background-medium: #000000;
+          --color-neutral-background-pinned: #000000;
+          --color-neutral-background-selected: #000000;
+          --color-neutral-background-strong: #000000;
+          --color-neutral-background-strong-hover: #000000;
+          --color-neutral-background-weak: #000000;
+          --color-neutral-background-weak-hover: #000000;
+        }
+      }
+    }
+  }
+}
