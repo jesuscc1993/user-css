@@ -1,0 +1,56 @@
+/* ==UserStyle==
+@name           JIRA AUI 6 - Theme Customization
+@description    Theme customization for AUI 6
+@version        2024.12.04.11.38
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+@preprocessor   stylus
+
+@var text     hue         "Hue"                 210
+@var text     lightness   "Lightness"           1
+@var text     saturation  "Saturation"          1
+@var checkbox red-flagged "Red flagged tickets" 0
+
+==/UserStyle== */
+@-moz-document domain("atlassian.net") {
+  html[data-color-mode="light"][data-theme~="light:dark"],
+  html[data-color-mode="dark"][data-theme~="dark:dark"] {
+    --ds-background-accent-gray-subtlest: hsl(hue, saturation * 11%, lightness * 20%);
+    --ds-background-accent-gray-subtlest-hovered: hsl(hue, saturation * 11%, lightness * 25%);
+    --ds-background-accent-gray-subtlest-pressed: hsl(hue, saturation * 11%, lightness * 30%);
+    --ds-background-accent-gray-subtler: hsl(hue, saturation * 11%, lightness * 30%);
+    --ds-background-accent-gray-subtler-hovered: hsl(hue, saturation * 11%, lightness * 35%);
+    --ds-background-accent-gray-subtler-pressed: hsl(hue, saturation * 11%, lightness * 40%);
+    --ds-background-accent-gray-subtle: hsl(hue, saturation * 11%, lightness * 35%);
+    --ds-background-accent-gray-subtle-hovered: hsl(hue, saturation * 11%, lightness * 30%);
+    --ds-background-accent-gray-subtle-pressed: hsl(hue, saturation * 11%, lightness * 25%);
+    --ds-background-accent-gray-bolder: hsl(hue, saturation * 11%, lightness * 65%);
+    --ds-background-accent-gray-bolder-hovered: hsl(hue, saturation * 11%, lightness * 70%);
+    --ds-background-accent-gray-bolder-pressed: hsl(hue, saturation * 11%, lightness * 75%);
+
+    --ds-background-selected: hsl(hue, saturation * 35%, 17%);
+    --ds-background-selected-hovered: hsl(hue, saturation * 83%, 22%);
+    --ds-background-selected-pressed: hsl(hue, saturation * 100%, 50%);
+    --ds-background-selected-bold: hsl(hue, saturation * 100%, 70%);
+    --ds-background-selected-bold-hovered: hsl(hue, saturation * 100%, 80%);
+    --ds-background-selected-bold-pressed: hsl(hue, saturation * 100%, 90%);
+
+    --ds-surface: hsl(hue, saturation * 11%, lightness * 13%);
+    --ds-surface-hovered: hsl(hue, saturation * 11%, lightness * 15%);
+    --ds-surface-pressed: hsl(hue, saturation * 11%, lightness * 17%);
+    --ds-surface-overlay: hsl(hue, saturation * 11%, lightness * 17%);
+    --ds-surface-overlay-hovered: hsl(hue, saturation * 11%, lightness * 20%);
+    --ds-surface-overlay-pressed: hsl(hue, saturation * 11%, lightness * 25%);
+    --ds-surface-raised: hsl(hue, saturation * 11%, lightness * 15%);
+    --ds-surface-raised-hovered: hsl(hue, saturation * 11%, lightness * 17%);
+    --ds-surface-raised-pressed: hsl(hue, saturation * 11%, lightness * 20%);
+    --ds-surface-sunken: hsl(hue, saturation * 11%, lightness * 10%);
+
+    if (red-flagged) {
+      --ds-background-warning: #42221f;
+      --ds-background-warning-hovered: #5d1f1a;
+      --ds-background-warning-pressed: #ae2e24;
+    }
+  }
+}
