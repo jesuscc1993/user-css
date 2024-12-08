@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Nakama - Personalización
 @description    Permite la configuración de ciertos aspectos visuales en Nakama.
-@version        2024.11.20.16.59
+@version        2024.12.08.13.26
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -22,7 +22,8 @@
 
 ==/UserStyle== */
 @-moz-document domain("nakama.social") {
-  .container {
+  .container,
+  post-item {
     max-width: @content-width;
   }
 
