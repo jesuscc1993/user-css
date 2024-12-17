@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         WhatsApp - Selective Scaling (Chrome only)
 @description  Allows selectively resizing elements of the app.
-@version      2024.11.11.14.37
+@version      2024.12.17.10.04
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
@@ -69,10 +69,10 @@
   .app-wrapper-web when (@full-size-view = 1) {
     .two,
     .three {
-      top: 0;
-      width: 100%;
-      max-width: none;
-      height: 100%;
+      top: 0 !important;
+      width: 100% !important;
+      max-width: none !important;
+      height: 100% !important;
     }
   }
 }
