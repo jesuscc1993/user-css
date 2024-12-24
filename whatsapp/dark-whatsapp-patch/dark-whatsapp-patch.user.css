@@ -1,23 +1,23 @@
 /* ==UserStyle==
 @name         Dark-WhatsApp - Patch
 @description  3rd party patch for Vednoc's abandoned dark whatsapp theme. Requires the original https://github.com/vednoc/dark-whatsapp to be installed.
-@version      2024.11.11.14.37
+@version      2024.12.24.15.24
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 
 ==/UserStyle== */
 @-moz-document domain("whatsapp.com") {
   .dark {
-    --filters-container-background: #282e37;
-    --filters-item-active-background: #3b4251;
-    --filters-item-active-color: #8696a0;
-    --filters-item-background-hover: #3b4251;
-    --filters-item-background: #323843;
-    --input-floating-toolbar-background: #3b4251;
-    --input-floating-toolbar-button-active: #282e37;
-    --navbar-background: #323843;
-    --search-input-container-background-active: #282e37;
-    --search-input-container-background: #282e37;
+    --filters-container-background: var(--background-default);
+    --filters-item-active-background: var(--ac-4);
+    --filters-item-active-color: var(--ac-0);
+    --filters-item-background-hover: var(--menu-bar-item-background-active);
+    --filters-item-background: var(--search-input-background);
+    --input-floating-toolbar-background: var(--menu-bar-item-background-active);
+    --input-floating-toolbar-button-active: var(--background-default);
+    --navbar-background: var(--search-input-background);
+    --search-input-container-background-active: var(--background-default);
+    --search-input-container-background: var(--background-default);
   }
 
   [data-icon="archived-outline"] {
