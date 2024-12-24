@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2024.10.01.15.37
+@version        2024.12.24.16.11
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -28,8 +28,9 @@
 @var checkbox reduce-message-spacing "Reduce message spacing"      0
 @var checkbox restore-blurple        "Restore blurple"             0
 @var checkbox blurple-mentions       "Blurple mentions"            0
-@var checkbox hide-voice-channels    "Hide voice channels"         0
+@var checkbox white-sidebar-icons    "White sidebar icons"         0
 @var checkbox hide-download-icon     "Hide download icon"          0
+@var checkbox hide-voice-channels    "Hide voice channels"         0
 
 ==/UserStyle== */
 @-moz-document domain("discord.com") {
@@ -285,15 +286,10 @@
     }
   }
 
-  /* hide voice channels */
-  html when (@hide-voice-channels = 1) {
-    [class*="containerDefault"]:has([class*="iconVisibility"][class*="typeVoice"]),
-    [class*="voiceChannelsButton"] {
-      display: none;
-    }
-
-    [class*="containerPadding_"] [class*="voiceChannels"] {
-      display: none;
+  /* white sidebar icons */
+  html when (@white-sidebar-icons = 1) {
+    [class*="circleIconButton"] {
+      color: var(--text-normal);
     }
   }
 
@@ -308,6 +304,18 @@
       &:nth-last-child(2) {
         display: none;
       }
+    }
+  }
+
+  /* hide voice channels */
+  html when (@hide-voice-channels = 1) {
+    [class*="containerDefault"]:has([class*="iconVisibility"][class*="typeVoice"]),
+    [class*="voiceChannelsButton"] {
+      display: none;
+    }
+
+    [class*="containerPadding_"] [class*="voiceChannels"] {
+      display: none;
     }
   }
 
