@@ -1,14 +1,14 @@
 /* ==UserStyle==
 @name           Twitter - Tweaks
 @description    Miscellaneous style overrides for Twitter. May require the "Control Panel for Twitter" extension to display properly.
-@version        2024.05.17.23.10
+@version        2024.12.26.20.16
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
 ==/UserStyle== */
-@-moz-document domain("twitter.com"), domain("x.com") {
+@-moz-document domain("x.com") {
   /* hide sensitive warning */
   /* .r-yfv4eo {
     filter: none;
@@ -53,9 +53,16 @@
   }
 }
 
-@-moz-document regexp("https:\/\/twitter\.com.*?headerless=1") {
+@-moz-document regexp("https:\/\/x\.com.*?headerless=1") {
   /* hide header */
-  .r-184en5c > div > div:nth-child(3) > div > div > div {
+  .css-175oi2r:nth-child(1) > div > div:nth-child(3) > div > div > div {
     display: none;
+  }
+}
+
+@-moz-document url-prefix("https://platform.twitter.com/embed")
+{
+  body {
+    background: #425364;
   }
 }
