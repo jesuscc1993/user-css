@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2024.12.24.16.11
+@version        2025.01.03.17.52
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -20,7 +20,7 @@
 @var text avatar-scale               "Avatar scale"                unset
 @var text avatar-zoom                "Avatar zoom (hover)"         unset
 @var text group-spacing              "Message groups spacing"      unset
-@var text li-margin                  "List item margin"            4px
+@var text li-margin                  "Vertical list item margin"   4px
 @var text transition                 "Transition duration"         150ms
 @var checkbox avatar-decorations     "Avatar decorations"          1
 @var checkbox darker-quotes          "Darker code and quotes"      0
@@ -355,12 +355,6 @@
   }
 
   /* custom list margin */
-  [class*="markup"] ol,
-  [class*="markup"] ul {
-    margin: 4px 0 4px 16px;
-  }
-
-  [class*="markup"] ol,
   [class*="markup"] li {
     @margin: calc(var(--li-margin) / 2);
     margin-top: @margin;
