@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Duolingo - Customization
 @description    Provides some extra customization options for Duolingo. DISCLAIMER: some features are currently not supported on Firefox.
-@version        2025.01.19.19.12
+@version        2025.01.24.18.59
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -78,19 +78,18 @@
 
   /* pronunciation */
   if (hide-pronunciation) {
-    ._47IB1._3x_e5._2m_ED {
+    ruby rt {
       display: none;
     }
   }
 
   if (hide-pronunciation-unless-hovered) {
-    ._3PW0K,
-    ._1bl79 {
-      &:not(:hover) ._47IB1._3x_e5._2m_ED {
+    button:has(ruby) {
+      &:not(:hover) rt {
         opacity: 0;
       }
 
-      ._47IB1._3x_e5._2m_ED {
+      rt {
         transition: opacity 150ms;
       }
     }
