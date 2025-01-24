@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Duolingo - Customization
 @description    Provides some extra customization options for Duolingo. DISCLAIMER: some features are currently not supported on Firefox.
-@version        2025.01.24.18.59
+@version        2025.01.24.19.00
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -12,8 +12,8 @@
 @var  checkbox  hide-premium                        "Hide some premium adds and features"          0
 @var  checkbox  hide-leaderboards                   "Hide leaderboards"                            0
 @var  checkbox  hide-classes                        "Hide classes"                                 0
-@var  checkbox  hide-pronunciation                  "Hide pronunciation"                           0
-@var  checkbox  hide-pronunciation-unless-hovered   "Hide pronunciation (unless hovered)"          0
+@var  checkbox  hide-pronunciation                  "Hide choice pronunciation"                    0
+@var  checkbox  hide-pronunciation-unless-hovered   "Hide choice pronunciation (unless hovered)"   0
 @var  checkbox  hide-choice-images                  "Hide choice images"                           0
 @var  checkbox  hide-characters                     "Hide Duolingo characters"                     0
 @var  checkbox  lowercase-pills                     "Lowercase pills"                              0
