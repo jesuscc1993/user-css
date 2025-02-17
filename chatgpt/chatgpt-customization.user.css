@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           ChatGPT - Customization
 @description    Provides some extra customization options for ChatGPT.
-@version        2025.02.11.14.44
+@version        2025.02.17.18.41
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -26,14 +26,12 @@
   }
 
   html when (@center-content = 1) {
-    .bg-token-sidebar-surface-primary[style*="width"] {
-      & + .max-w-full {
-        border-right: 0 solid var(--sidebar-surface-primary);
-        transition: border-right-width 300ms;
-      }
+    .bg-token-sidebar-surface-primary[style*="will-change"] {
+      visibility: visible !important;
 
-      &[style*="260px"] + .max-w-full {
-        border-right-width: 260px;
+      &,
+      > * {
+        width: 260px !important;
       }
     }
   }
