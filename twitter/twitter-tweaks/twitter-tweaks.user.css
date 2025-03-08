@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter - Tweaks
 @description    Miscellaneous style overrides for Twitter. May require the "Control Panel for Twitter" extension to display properly.
-@version        2024.12.26.20.16
+@version        2025.03.08.14.43
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -44,6 +44,13 @@
 
     [data-testid="sidebarColumn"] {
       margin-left: 24px;
+    }
+  }
+
+  /* hide comments/retweet/quote/etc until hovered */
+  [data-testid="tweet"]:not(:hover) {
+    .r-1t982j2 > .css-175oi2r:last-child {
+      display: none;
     }
   }
 
