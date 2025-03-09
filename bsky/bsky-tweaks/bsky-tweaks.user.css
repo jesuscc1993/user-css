@@ -1,0 +1,45 @@
+/* ==UserStyle==
+@name           Bluesky - Tweaks
+@description    Miscellaneous style overrides for Bluesky.
+@version        2025.03.09.18.15
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+@preprocessor   stylus
+==/UserStyle== */
+
+@-moz-document domain("bsky.app") {
+  /* highlight reposts */
+  [class*="css"]:has(> * > * > * > [aria-label*="Reposted by"]) {
+    background: #25334266;
+  }
+
+  /* hide comments/retweet/quote/etc until hovered */
+  [data-testid^="feedItem"]:not(:hover) .r-13awgt0 > .css-175oi2r:last-child {
+    display: none;
+  }
+}
+@-moz-document domain("embed.bsky.app") {
+  /* dark embeds */
+  body {
+    background: #2e4052;
+    filter: invert(1) hue-rotate(180deg);
+
+    .bg-white {
+      &,
+      &:hover {
+        background: #d8e0e9;
+      }
+    }
+
+    .border {
+      border-color: #adbfd1;
+    }
+
+    svg,
+    img,
+    video {
+      filter: invert(1) hue-rotate(180deg);
+    }
+  }
+}
