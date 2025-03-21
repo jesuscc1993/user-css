@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2024.05.11.20.45
+@version        2025.03.21.18.40
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -12,7 +12,7 @@
   :root {
     --c-scrollbar-bg: #000;
   }
-  
+
   /* adapt zoom on small screens */
   .mobage-game-container {
     @media (max-width: 639px) {
@@ -759,10 +759,14 @@
   .cnt-mypage {
     display: flex;
     flex-direction: column;
-  }
 
-  .lis-banner {
-    margin-bottom: -4px;
+    .prt-banner.no-active-icons {
+      margin-top: -48px;
+
+      &.display-off {
+        margin-top: -8px;
+      }
+    }
   }
 
   /* black background in scenes */

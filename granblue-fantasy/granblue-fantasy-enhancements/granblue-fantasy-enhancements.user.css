@@ -1,19 +1,19 @@
 /* ==UserStyle==
-@name         Granblue Fantasy Enhancements
-@description  Allows the customization of the game's layout and responsive behavior.
-@version      2024.03.31.12.00
-@author       MetalTxus
-@namespace    https://github.com/jesuscc1993/
-@license      CC BY-SA 4.0
-@preprocessor stylus
+@name           Granblue Fantasy Enhancements
+@description    Allows the customization of the game's layout and responsive behavior.
+@version        2025.03.21.18.40
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+@preprocessor   stylus
 
-@var color    bg-color              "Background color" #150F0F
+@var color      bg-color              "Background color" #150F0F
 
-@var text     font-family           "Font family" "Default"
+@var text       font-family           "Font family" "Default"
 
-@var checkbox center-popups         "Center popups" 0
+@var checkbox   center-popups         "Center popups" 0
 
-@var select   content-alignment     "Content alignment" {
+@var select     content-alignment     "Content alignment" {
  "Left": "left",
  "Center": "center",
  "Right": "right"
@@ -317,7 +317,7 @@
       display: flex;
       flex-direction: column;
     }
-    
+
     .prt-supporter-list .lis-supporter[data-supporter-evolution="6"]:has(.bless-rank4-style) {
       order: 1;
     }
@@ -1162,12 +1162,6 @@
   .prt-deck-select .prt-supporter .prt-supporter-info .prt-supporter-detail .prt-summon-skill {
     overflow: visible;
     width: 194px;
-  }
-
-  /* fix home notification badge */
-  .prt-link-notification .prt-notification-count {
-    height: 13.5px;
-    width: 33.5px;
   }
 
   /* fix crew skill text with custom font */
