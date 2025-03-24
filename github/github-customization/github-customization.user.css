@@ -1,15 +1,16 @@
 /* ==UserStyle==
 @name           GitHub - Customization
 @description    Provides some extra customization options for GitHub.
-@version        2024.04.06.15.49
+@version        2025.03.23.18.35
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var text       editor-font-family "Editor font family" "ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace"
-@var text       editor-font-size   "Editor font size"   "12px"
-@var text       editor-line-height "Editor line height" "20px"
+@var text       editor-font-family "Editor font family"       "ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace"
+@var text       editor-font-size   "Editor font size"         "12px"
+@var text       editor-line-height "Editor line height"       "20px"
+@var checkbox   newline-on-pr      "Newline before PR names"  1
 
 ==/UserStyle== */
 @-moz-document domain("github.com") {
@@ -20,5 +21,11 @@
     font-family: editor-font-family !important;
     font-size: editor-font-size !important;
     line-height: editor-line-height !important;
+  }
+
+  if (newline-on-pr) {
+    #issues_dashboard a[data-hovercard-type="repository"] {
+      display: block;
+    }
   }
 }
