@@ -1,36 +1,37 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.01.03.17.52
+@version        2025.01.27.11.29
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   less
 
-@var text font-family                "Font family"                 "'Whitney', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
-@var text min-sidebar_width          "Min sidebar width"           240px
-@var text max-sidebar_width          "Max sidebar width"           240px
-@var text channel-padding            "Channel padding (sidebar)"   6px
-@var text category-spacing           "Category spacing (sidebar)"  16px
-@var text block-emoji-size           "Block emoji size"            3rem
-@var text block-emoji-zoom           "Block emoji zoom (hover)"    unset
-@var text inline-emoji-size          "Inline emoji size"           1.375em
-@var text inline-emoji-zoom          "Inline emoji zoom (hover)"   unset
-@var text reaction-emoji-size        "Reaction emoji size"         1rem
-@var text avatar-scale               "Avatar scale"                unset
-@var text avatar-zoom                "Avatar zoom (hover)"         unset
-@var text group-spacing              "Message groups spacing"      unset
-@var text li-margin                  "Vertical list item margin"   4px
-@var text transition                 "Transition duration"         150ms
-@var checkbox avatar-decorations     "Avatar decorations"          1
-@var checkbox darker-quotes          "Darker code and quotes"      0
-@var checkbox full-width-embeds      "Full width embeds"           0
-@var checkbox reduce-message-spacing "Reduce message spacing"      0
-@var checkbox restore-blurple        "Restore blurple"             0
-@var checkbox blurple-mentions       "Blurple mentions"            0
-@var checkbox white-sidebar-icons    "White sidebar icons"         0
-@var checkbox hide-download-icon     "Hide download icon"          0
-@var checkbox hide-voice-channels    "Hide voice channels"         0
+@var text font-family                   "Font family"                 "'Whitney', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+@var text min-sidebar_width             "Min sidebar width"           240px
+@var text max-sidebar_width             "Max sidebar width"           240px
+@var text channel-padding               "Channel padding (sidebar)"   6px
+@var text category-spacing              "Category spacing (sidebar)"  16px
+@var text block-emoji-size              "Block emoji size"            3rem
+@var text block-emoji-zoom              "Block emoji zoom (hover)"    unset
+@var text inline-emoji-size             "Inline emoji size"           1.375em
+@var text inline-emoji-zoom             "Inline emoji zoom (hover)"   unset
+@var text reaction-emoji-size           "Reaction emoji size"         1rem
+@var text avatar-scale                  "Avatar scale"                unset
+@var text avatar-zoom                   "Avatar zoom (hover)"         unset
+@var text group-spacing                 "Message groups spacing"      unset
+@var text li-margin                     "Vertical list item margin"   4px
+@var text transition                    "Transition duration"         150ms
+@var checkbox avatar-decorations        "Avatar decorations"          1
+@var checkbox darker-quotes             "Darker code and quotes"      0
+@var checkbox full-width-embeds         "Full width embeds"           0
+@var checkbox reduce-message-spacing    "Reduce message spacing"      0
+@var checkbox restore-blurple           "Restore blurple"             0
+@var checkbox blurple-mentions          "Purple mentions"             0
+@var checkbox white-sidebar-icons       "White sidebar icons"         0
+@var checkbox hide-download-icon        "Hide download icon"          0
+@var checkbox hide-voice-channels       "Hide voice channels"         0
+@var checkbox disable-redesign-borders  "Disable redesign borders"    0
 
 ==/UserStyle== */
 @-moz-document domain("discord.com") {
@@ -52,7 +53,7 @@
     --transition: @transition;
   }
 
-  html.theme-dark {
+  html {
     --font-display: var(--font-family);
   }
 
@@ -407,24 +408,24 @@
     }
   }
 
-  /* blurple mentions */
+  /* purple mentions */
   html when (@blurple-mentions = 1) {
     [class*="mentioned_"]:before {
-      background-color: #7289da;
+      background-color: var(--brand);
     }
 
     [class*="mentioned_"] {
-      background-color: #7289da22;
+      background-color: var(--brand-10a);
     }
 
     [class*="mentioned_"][class*="selected"],
     &.mouse-mode.full-motion [class*="mentioned_"]:hover {
-      background-color: #7289da11 !important;
+      background-color: var(--brand-05a) !important;
     }
   }
 
   /* blurple restoration */
-  html.theme-dark when (@restore-blurple = 1) {
+  .restore-blurple {
     --brand-100: #f8f9fd;
     --brand-130: #f2f4fc;
     --brand-160: #ebeefa;
@@ -470,6 +471,22 @@
     --brand-85a: rgba(114, 137, 218, 0.85);
     --brand-90a: rgba(114, 137, 218, 0.9);
     --brand-95a: rgba(114, 137, 218, 0.95);
+  }
+
+  html.theme-dark when (@restore-blurple = 1) {
+    .restore-blurple();
+  }
+
+  html.theme-light when (@restore-blurple = 1) {
+    .restore-blurple();
+  }
+
+  /* disable redesign borders */
+  .visual-refresh when (@disable-redesign-borders = 1) {
+    /*--app-border-frame: #0000 !important;*/
+    --border-faint: #0000 !important;
+    --border-subtle: #0000 !important;
+    --border-strong: #0000 !important;
   }
 
   /* fixes */
