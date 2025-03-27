@@ -30,6 +30,7 @@
 @var checkbox blurple-mentions          "Purple mentions"             0
 @var checkbox monochrome-bg             "Monochrome background"       0
 @var checkbox round-server-icons        "Round server icons"          0
+@var checkbox server-icon-bgs           "Server icon backgrounds"     0
 @var checkbox hide-download-icon        "Hide download icon"          0
 @var checkbox hide-top-bar              "Hide top bar"                0
 @var checkbox hide-voice-channels       "Hide voice channels"         0
@@ -495,6 +496,11 @@
   }
   [class*="guildIcon"][class*="iconSizeMini"] when (@round-server-icons = 1) {
     border-radius: 50% !important;
+  }
+
+  /* server icon bgs */
+  [data-list-item-id^="guildsnav"] when (@server-icon-bgs = 1) {
+    background-color: var(--background-primary);
   }
 
   /* disable redesign borders */
