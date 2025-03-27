@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.01.27.11.39
+@version        2025.01.27.11.49
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -29,9 +29,11 @@
 @var checkbox restore-blurple           "Restore blurple"             0
 @var checkbox blurple-mentions          "Purple mentions"             0
 @var checkbox white-sidebar-icons       "White sidebar icons"         0
+@var checkbox round-server-icons        "Round server icons"          0
 @var checkbox hide-download-icon        "Hide download icon"          0
 @var checkbox hide-voice-channels       "Hide voice channels"         0
 @var checkbox disable-redesign-borders  "Disable redesign borders"    0
+@var checkbox disable-other-borders     "Disable other borders"       0
 
 ==/UserStyle== */
 @-moz-document domain("discord.com") {
@@ -485,12 +487,22 @@
     --bg-brand: #7289da !important;
   }
 
+  /* round server icons */
+  [data-list-item-id^="guildsnav"] when (@round-server-icons = 1) {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
   /* disable redesign borders */
   .visual-refresh when (@disable-redesign-borders = 1) {
-    /*--app-border-frame: #0000 !important;*/
     --border-faint: #0000 !important;
     --border-subtle: #0000 !important;
     --border-strong: #0000 !important;
+  }
+
+  /* disable other borders */
+  .visual-refresh when (@disable-other-borders = 1) {
+    --app-border-frame: #0000 !important;
   }
 
   /* fixes */
