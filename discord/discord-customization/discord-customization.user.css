@@ -29,8 +29,8 @@
 @var checkbox restore-blurple           "Restore blurple"             0
 @var checkbox blurple-mentions          "Purple mentions"             0
 @var checkbox monochrome-bg             "Monochrome background"       0
-@var checkbox round-server-icons        "Round server icons"          0
 @var checkbox server-icon-bgs           "Server icon backgrounds"     0
+@var checkbox round-server-icons        "Round server icons"          0
 @var checkbox hide-download-icon        "Hide download icon"          0
 @var checkbox hide-top-bar              "Hide top bar"                0
 @var checkbox hide-voice-channels       "Hide voice channels"         0
