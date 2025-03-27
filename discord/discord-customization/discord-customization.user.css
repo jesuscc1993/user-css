@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.01.27.11.29
+@version        2025.01.27.11.39
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -426,6 +426,7 @@
 
   /* blurple restoration */
   .restore-blurple {
+    --bg-brand: #7289da;
     --brand-100: #f8f9fd;
     --brand-130: #f2f4fc;
     --brand-160: #ebeefa;
@@ -438,7 +439,6 @@
     --brand-400: #8ea1e1;
     --brand-430: #869adf;
     --brand-460: #7d92dd;
-    --brand: #7289da;
     --brand-500: #7289da;
     --brand-530: #687dc6;
     --brand-560: #5c6fb1;
@@ -479,6 +479,10 @@
 
   html.theme-light when (@restore-blurple = 1) {
     .restore-blurple();
+  }
+
+  .visual-refresh when (@restore-blurple = 1) {
+    --bg-brand: #7289da !important;
   }
 
   /* disable redesign borders */
