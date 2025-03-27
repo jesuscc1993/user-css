@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.01.27.11.50
+@version        2025.01.27.12.10
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -28,7 +28,7 @@
 @var checkbox reduce-message-spacing    "Reduce message spacing"      0
 @var checkbox restore-blurple           "Restore blurple"             0
 @var checkbox blurple-mentions          "Purple mentions"             0
-@var checkbox white-sidebar-icons       "White sidebar icons"         0
+@var checkbox monochrome-bg             "Monochrome background"       0
 @var checkbox round-server-icons        "Round server icons"          0
 @var checkbox hide-download-icon        "Hide download icon"          0
 @var checkbox hide-voice-channels       "Hide voice channels"         0
@@ -288,13 +288,6 @@
     }
   }
 
-  /* white sidebar icons */
-  html when (@white-sidebar-icons = 1) {
-    [class*="circleIconButton"] {
-      color: var(--text-normal);
-    }
-  }
-
   /* hide download icon */
   html when (@hide-download-icon = 1) {
     [class*="listItem"]:not(:nth-child(2)) [class*="guildSeparator"] {
@@ -311,12 +304,7 @@
 
   /* hide voice channels */
   html when (@hide-voice-channels = 1) {
-    [class*="containerDefault"]:has([class*="iconVisibility"][class*="typeVoice"]),
-    [class*="voiceChannelsButton"] {
-      display: none;
-    }
-
-    [class*="containerPadding_"] [class*="voiceChannels"] {
+    [class*="containerDefault"]:has(a[aria-label*="voice channel"]) {
       display: none;
     }
   }
@@ -498,6 +486,16 @@
     --border-faint: #0000 !important;
     --border-subtle: #0000 !important;
     --border-strong: #0000 !important;
+  }
+
+  /* monochrome bg */
+  .visual-refresh when (@monochrome-bg = 1) {
+    --background-base-low: #0000 !important;
+    --background-base-lower: #0000 !important;
+    --background-base-lowest: #0000 !important;
+    --background-surface-high: #0000 !important;
+    --chat-background-default: #0000 !important;
+    --custom-channel-members-bg: #0000 !important;
   }
 
   /* fixes */
