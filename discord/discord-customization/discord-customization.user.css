@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.01.27.12.10
+@version        2025.01.27.12.32
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -304,7 +304,7 @@
 
   /* hide voice channels */
   html when (@hide-voice-channels = 1) {
-    [class*="containerDefault"]:has(a[aria-label*="voice channel"]) {
+    [class*="containerDefault"]:has(a[role="button"]) {
       display: none;
     }
   }
