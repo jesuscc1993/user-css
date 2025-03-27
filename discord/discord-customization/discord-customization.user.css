@@ -23,7 +23,6 @@
 @var text li-margin                     "Vertical list item margin"   4px
 @var text transition                    "Transition duration"         150ms
 @var checkbox avatar-decorations        "Avatar decorations"          1
-@var checkbox darker-quotes             "Darker code and quotes"      0
 @var checkbox full-width-embeds         "Full width embeds"           0
 @var checkbox reduce-message-spacing    "Reduce message spacing"      0
 @var checkbox restore-blurple           "Restore blurple"             0
@@ -369,19 +368,6 @@
   /* avatar decorations */
   [class*="avatarDecoration_"] when (@avatar-decorations =0) {
     display: none;
-  }
-
-  /* darker code and quotes */
-  html when (@darker-quotes = 1) {
-    [class*="markup"] code,
-    blockquote {
-      background: #0003;
-    }
-
-    [class*="textArea"] [class*="markup"] code,
-    [class*="textArea"] blockquote {
-      background: var(--background-secondary);
-    }
   }
 
   /* full width embeds */
