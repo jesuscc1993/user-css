@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.01.27.15.02
+@version        2025.01.28.14.50
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -26,7 +26,7 @@
 @var checkbox full-width-embeds         "Full width embeds"           0
 @var checkbox reduce-message-spacing    "Reduce message spacing"      0
 @var checkbox restore-blurple           "Restore blurple"             0
-@var checkbox blurple-mentions          "Purple mentions"             0
+@var checkbox blurple-mentions          "Purple mentions and links"   0
 @var checkbox monochrome-bg             "Monochrome background"       0
 @var checkbox server-icon-bgs           "Server icon backgrounds"     0
 @var checkbox round-server-icons        "Round server icons"          0
@@ -398,7 +398,7 @@
     }
   }
 
-  /* purple mentions */
+  /* purple mentions and links */
   html when (@blurple-mentions = 1) {
     [class*="mentioned_"]:before {
       background-color: var(--brand);
@@ -411,6 +411,10 @@
     [class*="mentioned_"][class*="selected"],
     &.mouse-mode.full-motion [class*="mentioned_"]:hover {
       background-color: var(--brand-05a) !important;
+    }
+
+    a {
+      --text-link: var(--brand);
     }
   }
 
