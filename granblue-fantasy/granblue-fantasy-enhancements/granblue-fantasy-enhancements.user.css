@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2025.03.21.18.40
+@version        2025.03.29.10.50
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -107,8 +107,6 @@
 
     .pop-global-menu {
       position: fixed;
-      top: 0 !important;
-      left: auto;
     }
 
     .prt-item-contents.item-filter .prt-item-filter .prt-item-filter-list.pos-fixed {
@@ -124,7 +122,8 @@
     }
 
     if (fixed-header) {
-      .cnt-global-header {
+      .cnt-global-header,
+      .pop-global-menu {
         left: var(--left);
       }
     }
