@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.01.29.18.20
+@version        2025.01.31.21.12
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -31,6 +31,7 @@
 @var checkbox server-icon-bgs           "Server icon backgrounds"     0
 @var checkbox round-server-icons        "Round server icons"          0
 @var checkbox reduce-user-card-padding  "Reduce user card padding"    0
+@var checkbox float-role-decorators     "Float role decorators"       0
 @var checkbox hide-download-icon        "Hide download icon"          0
 @var checkbox hide-top-bar              "Hide top bar"                0
 @var checkbox hide-voice-channels       "Hide voice channels"         0
@@ -283,14 +284,18 @@
     margin-top: 1px;
   }
 
-  /* float bot tag */
-  [class*="nameAndDecorators"] {
-    & > *:first-child {
-      flex: 1;
-    }
+  /* float role decorators */
+  [class*="memberInner"] when (@float-role-decorators = 1) {
+    width: 100%;
 
-    & > *:not(:first-child) {
-      align-self: normal;
+    [class*="nameAndDecorators"] {
+      & > *:first-child {
+        flex: 1;
+      }
+
+      & > *:not(:first-child) {
+        align-self: normal;
+      }
     }
   }
 
