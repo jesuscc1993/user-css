@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.04.03.14.52
+@version        2025.04.03.15.10
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -28,6 +28,7 @@
 @var checkbox reduce-message-spacing    "Reduce message spacing"      0
 @var checkbox reduce-user-card-padding  "Reduce user card padding"    0
 @var checkbox restore-blurple           "Restore classic blurple"     0
+@var checkbox same-color-sidebars       "Same color sidebars"         0
 @var checkbox round-server-icons        "Round server icons"          0
 @var checkbox disable-redesign-borders  "Disable redesign borders"    0
 @var checkbox hide-download-icon        "Hide download icon"          0
@@ -283,6 +284,16 @@
 
   [class*="isMentioned"] {
     margin-top: 1px;
+  }
+
+  /* same color sidebars */
+  [class*="membersWrap_"] [class*="members_"] when (@same-color-sidebars = 1) {
+    border-top-left-radius: var(--radius-md);
+
+    &,
+    [class*="member_"] {
+      background: var(--bg-overlay-4, var(--background-base-lowest));
+    }
   }
 
   /* float role decorators */
