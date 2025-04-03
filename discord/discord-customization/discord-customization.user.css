@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.04.03.15.19
+@version        2025.04.03.15.25
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -519,8 +519,12 @@
   }
 
   /* darker guildnav */
-  [data-list-id="guildsnav"] when (@darker-guildnav = 1) {
-    background: #0003;
+  .visual-refresh [class*="guilds"] when (@darker-guildnav = 1) {
+    margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) * 2);
+
+    [data-list-id="guildsnav"] {
+      background: #0003;
+    }
   }
 
   /* same color sidebars */
