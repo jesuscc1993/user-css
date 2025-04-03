@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.04.03.15.12
+@version        2025.04.03.15.19
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -10,7 +10,7 @@
 @var text font-family                   "Font family"                 "'Whitney', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
 @var text min-sidebar_width             "Min sidebar width"           300px
 @var text max-sidebar_width             "Max sidebar width"           300px
-@var text channel-padding               "Channel padding (sidebar)"   6px
+@var text channel-padding               "Channel padding (sidebar)"   4px
 @var text category-spacing              "Category spacing (sidebar)"  16px
 @var text block-emoji-size              "Block emoji size"            3rem
 @var text block-emoji-zoom              "Block emoji zoom (hover)"    unset
@@ -28,13 +28,14 @@
 @var checkbox reduce-message-spacing    "Reduce message spacing"      0
 @var checkbox reduce-user-card-padding  "Reduce user card padding"    0
 @var checkbox restore-blurple           "Restore classic blurple"     0
-@var checkbox same-color-sidebars       "Same color sidebars"         0
 @var checkbox round-server-icons        "Round server icons"          0
 @var checkbox disable-redesign-borders  "Disable redesign borders"    0
 @var checkbox hide-download-icon        "Hide download icon"          0
 @var checkbox hide-top-bar              "Hide top bar"                0
 @var checkbox hide-voice-channels       "Hide voice channels"         0
 @var checkbox hide-avatar-decorations   "Hide avatar decorations"     0
+@var checkbox darker-guildnav           "Darker server list"          0
+@var checkbox same-color-sidebars       "Same color sidebars"         0
 @var checkbox monochrome-bg             "Monochrome background"       0
 @var checkbox server-icon-bgs           "Server icon backgrounds"     0
 
@@ -96,7 +97,7 @@
 
   /* channel padding */
   [class*="sidebar_"] [class*="iconVisibility"]:not([class*="wrapperCommon"]) a {
-    padding: var(--channel-padding) 8px;
+    padding: var(--channel-padding) var(--space-xs);
 
     [class*="children"],
     + [class*="children"] {
@@ -284,18 +285,6 @@
 
   [class*="isMentioned"] {
     margin-top: 1px;
-  }
-
-  /* same color sidebars */
-  [class*="membersWrap_"] [class*="members_"] when (@same-color-sidebars = 1) {
-    &,
-    [class*="member_"] {
-      background: var(--bg-overlay-4, var(--background-base-lowest));
-    }
-  }
-
-  [class*="membersWrap_"] [class*="members_"] when (@disable-redesign-borders = 1) {
-    border-top-left-radius: var(--radius-md);
   }
 
   /* float role decorators */
@@ -527,6 +516,23 @@
     --background-surface-high: #0000 !important;
     --chat-background-default: #0000 !important;
     --custom-channel-members-bg: #0000 !important;
+  }
+
+  /* darker guildnav */
+  [data-list-id="guildsnav"] when (@darker-guildnav = 1) {
+    background: #0003;
+  }
+
+  /* same color sidebars */
+  [class*="membersWrap_"] [class*="members_"] when (@same-color-sidebars = 1) {
+    &,
+    [class*="member_"] {
+      background: var(--bg-overlay-4, var(--background-base-lowest));
+    }
+  }
+
+  [class*="membersWrap_"] [class*="members_"] when (@disable-redesign-borders = 1) {
+    border-top-left-radius: var(--radius-md);
   }
 
   /* fixes */
