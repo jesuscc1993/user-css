@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.01.31.21.12
+@version        2025.04.03.11.41
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -430,64 +430,47 @@
 
   /* blurple restoration */
   .restore-blurple {
-    --bg-brand: #7289da;
     --brand: #7289da;
-    --brand-100: #f8f9fd;
-    --brand-130: #f2f4fc;
-    --brand-160: #ebeefa;
-    --brand-200: #e3e7f8;
-    --brand-230: #dae0f5;
-    --brand-260: #d1d9f3;
-    --brand-300: #c7d0f0;
-    --brand-330: #b5c1ec;
-    --brand-360: #a5b3e7;
-    --brand-400: #8ea1e1;
-    --brand-430: #869adf;
-    --brand-460: #7d92dd;
-    --brand-500: #7289da;
-    --brand-530: #687dc6;
-    --brand-560: #5c6fb1;
-    --brand-600: #4e5d94;
-    --brand-630: #435180;
-    --brand-660: #3b4770;
-    --brand-700: #2e3757;
-    --brand-730: #2b3352;
-    --brand-760: #272f4b;
-    --brand-800: #222941;
-    --brand-830: #1a2032;
-    --brand-860: #111521;
-    --brand-900: #06070b;
+
+    .brand(@i) when (@i <= 900) {
+      @base-hue: 228;
+      @base-saturation: 58%;
+      @base-lightness: 98%;
+
+      .brand-(@i) {
+        @saturation: if(@i > 500, round(@base-saturation - (@i / 33)), @base-saturation);
+        @lightness: 100 - round((@i - 80) * 0.11%);
+        @name: ~"brand-@{i}";
+        --@{name}: hsl(@base-hue, @saturation, @lightness);
+      }
+
+      .brand-(@i);
+      .brand-(@i+30);
+      .brand-(@i+60);
+      .brand(@i + 100);
+    }
+    .brand(100);
+
     --brand-05a: rgba(114, 137, 218, 0.05);
-    --brand-10a: rgba(114, 137, 218, 0.1);
-    --brand-15a: rgba(114, 137, 218, 0.15);
-    --brand-20a: rgba(114, 137, 218, 0.2);
-    --brand-25a: rgba(114, 137, 218, 0.25);
-    --brand-30a: rgba(114, 137, 218, 0.3);
-    --brand-35a: rgba(114, 137, 218, 0.35);
-    --brand-40a: rgba(114, 137, 218, 0.4);
-    --brand-45a: rgba(114, 137, 218, 0.45);
-    --brand-50a: rgba(114, 137, 218, 0.5);
-    --brand-55a: rgba(114, 137, 218, 0.55);
-    --brand-60a: rgba(114, 137, 218, 0.6);
-    --brand-65a: rgba(114, 137, 218, 0.65);
-    --brand-70a: rgba(114, 137, 218, 0.7);
-    --brand-75a: rgba(114, 137, 218, 0.75);
-    --brand-80a: rgba(114, 137, 218, 0.8);
-    --brand-85a: rgba(114, 137, 218, 0.85);
-    --brand-90a: rgba(114, 137, 218, 0.9);
-    --brand-95a: rgba(114, 137, 218, 0.95);
+    .brand-a(@i) when (@i <= 100) {
+      --brand-@{i}a: rgba(114, 137, 218, @i * 0.01);
+      .brand-a(@i + 5);
+    }
+    .brand-a(10);
+
+    .blurple(@i) when (@i =< 100) {
+      --blurple-@{i}: hsl(227, 58%, (95.294% - ((@i - 1) * (95.294% - 30%) / 99)));
+      --blurple-@{i}-hsl: 227, 58%, (95.294% - ((@i - 1) * (95.294% - 30%) / 99));
+      .blurple(@i + 1);
+    }
+    .blurple(1);
   }
 
-  html.theme-dark when (@restore-blurple = 1) {
-    .restore-blurple();
-  }
-
-  html.theme-light when (@restore-blurple = 1) {
-    .restore-blurple();
-  }
-
-  .visual-refresh when (@restore-blurple = 1) {
-    --bg-brand: #7289da !important;
+  html when (@restore-blurple = 1) {
+    &.theme-dark,
+    &.theme-light {
+      .restore-blurple();
+    }
   }
 
   /* round server icons */
