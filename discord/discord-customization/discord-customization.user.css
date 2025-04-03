@@ -427,10 +427,6 @@
     &.mouse-mode.full-motion [class*="mentioned_"]:hover {
       background-color: var(--brand-05a) !important;
     }
-
-    a {
-      --text-link: var(--brand);
-    }
   }
 
   /* blurple restoration */
@@ -461,6 +457,10 @@
     --brand-830: #1a2032;
     --brand-860: #111521;
     --brand-900: #06070b;
+
+    > * {
+      --text-link: var(--brand-400);
+    }
 
     --brand-05a: rgba(114, 137, 218, 0.05);
     .brand-a(@i) when (@i <= 100) {
