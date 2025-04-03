@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.04.03.14.49
+@version        2025.04.03.14.52
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -22,20 +22,20 @@
 @var text group-spacing                 "Message groups spacing"      unset
 @var text li-margin                     "Vertical list item margin"   4px
 @var text transition                    "Transition duration"         150ms
-@var checkbox avatar-decorations        "Avatar decorations"          1
+@var checkbox blurple-mentions          "Purple mentions and links"   0
+@var checkbox float-role-decorators     "Float role decorators"       0
 @var checkbox full-width-embeds         "Full width embeds"           0
 @var checkbox reduce-message-spacing    "Reduce message spacing"      0
-@var checkbox restore-blurple           "Restore blurple"             0
-@var checkbox blurple-mentions          "Purple mentions and links"   0
-@var checkbox monochrome-bg             "Monochrome background"       0
-@var checkbox server-icon-bgs           "Server icon backgrounds"     0
-@var checkbox round-server-icons        "Round server icons"          0
 @var checkbox reduce-user-card-padding  "Reduce user card padding"    0
-@var checkbox float-role-decorators     "Float role decorators"       0
+@var checkbox restore-blurple           "Restore classic blurple"     0
+@var checkbox round-server-icons        "Round server icons"          0
+@var checkbox disable-redesign-borders  "Disable redesign borders"    0
 @var checkbox hide-download-icon        "Hide download icon"          0
 @var checkbox hide-top-bar              "Hide top bar"                0
 @var checkbox hide-voice-channels       "Hide voice channels"         0
-@var checkbox disable-redesign-borders  "Disable redesign borders"    0
+@var checkbox hide-avatar-decorations   "Hide avatar decorations"     0
+@var checkbox monochrome-bg             "Monochrome background"       0
+@var checkbox server-icon-bgs           "Server icon backgrounds"     0
 
 ==/UserStyle== */
 @-moz-document domain("discord.com") {
@@ -377,7 +377,7 @@
   }
 
   /* avatar decorations */
-  [class*="avatarDecoration_"] when (@avatar-decorations =0) {
+  [class*="avatarDecoration_"] when (@hide-avatar-decorations = 1) {
     display: none;
   }
 
