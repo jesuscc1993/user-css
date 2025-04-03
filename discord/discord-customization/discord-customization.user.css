@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.04.03.17.54
+@version        2025.04.03.18.06
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -508,6 +508,10 @@
     --border-faint: #0000 !important;
     --border-subtle: #0000 !important;
     --border-strong: #0000 !important;
+
+    [class*="subtitleContainer"] {
+      --border-subtle: color-mix(in oklab, hsl(var(--opacity-12-hsl) / 0.12) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.12) var(--theme-base-color-amount, 0%));
+    }
   }
 
   /* monochrome bg */
@@ -543,13 +547,6 @@
       [class*="member_"] {
         background: var(--bg-overlay-4, var(--background-base-lowest));
       }
-    }
-  }
-
-  /* disable-redesign-borders */
-  html when (@disable-redesign-borders = 1) {
-    [class*="membersWrap_"] [class*="members_"] {
-      border-top-left-radius: var(--radius-md);
     }
   }
 
