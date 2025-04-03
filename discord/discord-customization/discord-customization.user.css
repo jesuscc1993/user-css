@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.04.03.15.25
+@version        2025.04.03.17.54
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -273,8 +273,10 @@
     }
   }
 
-  .visual-refresh .container__37e49 when (@reduce-user-card-padding = 1) {
-    padding: 0 var(--space-xxs);
+  .visual-refresh when (@reduce-user-card-padding = 1) {
+    .container__37e49 {
+      padding: 0 var(--space-xxs);
+    }
   }
 
   /* MISCELLANEOUS */
@@ -323,10 +325,10 @@
     > [data-windows="false"] {
       display: none;
     }
-  }
 
-  [class*="itemsContainer"] when (@hide-top-bar = 1) {
-    padding-top: var(--space-xs);
+    [class*="itemsContainer"] {
+      padding-top: var(--space-xs);
+    }
   }
 
   /* hide voice channels */
@@ -519,24 +521,36 @@
   }
 
   /* darker guildnav */
-  .visual-refresh [class*="guilds"] when (@darker-guildnav = 1) {
-    margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) * 2);
+  .visual-refresh when (@darker-guildnav = 1) {
+    [class*="guilds"] {
+      margin-bottom: 0;
 
-    [data-list-id="guildsnav"] {
-      background: #0003;
+      [data-list-id="guildsnav"] {
+        background: #0003;
+      }
+    }
+
+    .panels_c48ade {
+      margin-left: var(--custom-guild-list-width);
+      width: calc(100% - var(--custom-guild-list-width) - var(--space-xs) * 2);
     }
   }
 
   /* same color sidebars */
-  [class*="membersWrap_"] [class*="members_"] when (@same-color-sidebars = 1) {
-    &,
-    [class*="member_"] {
-      background: var(--bg-overlay-4, var(--background-base-lowest));
+  html when (@same-color-sidebars = 1) {
+    [class*="membersWrap_"] [class*="members_"] {
+      &,
+      [class*="member_"] {
+        background: var(--bg-overlay-4, var(--background-base-lowest));
+      }
     }
   }
 
-  [class*="membersWrap_"] [class*="members_"] when (@disable-redesign-borders = 1) {
-    border-top-left-radius: var(--radius-md);
+  /* disable-redesign-borders */
+  html when (@disable-redesign-borders = 1) {
+    [class*="membersWrap_"] [class*="members_"] {
+      border-top-left-radius: var(--radius-md);
+    }
   }
 
   /* fixes */
