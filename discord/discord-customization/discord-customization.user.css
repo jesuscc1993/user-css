@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.04.03.19.44
+@version        2025.04.05.00.07
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -290,17 +290,23 @@
   }
 
   /* float role decorators */
-  [class*="memberInner"] when (@float-role-decorators = 1) {
-    width: 100%;
+  [class*="member"] when (@float-role-decorators = 1) {
+    [class*="memberInner"] {
+      width: 100%;
 
-    [class*="nameAndDecorators"] {
-      & > *:first-child {
-        flex: 1;
-      }
+      [class*="nameAndDecorators"] {
+        & > *:first-child {
+          flex: 1;
+        }
 
-      & > *:not(:first-child) {
-        align-self: normal;
+        & > *:not(:first-child) {
+          align-self: normal;
+        }
       }
+    }
+
+    [class*="childContainer"][class*="nameplated"] {
+      padding-right: 8px;
     }
   }
 
