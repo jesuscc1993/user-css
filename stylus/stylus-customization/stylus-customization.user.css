@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Stylus - Customization
 @description    Provides some extra customization options the Stylus extension.
-@version        2025.03.15.14.57
+@version        2025.04.05.20.37
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -50,6 +50,11 @@
       max-height: none;
       height: @input-height;
     }
+  }
+
+  .config-body :is(input[type="text"], .select-wrapper, select) {
+    width: 100%;
+    max-width: @input-width;
   }
 
   #message-box .colorview-swatch,
