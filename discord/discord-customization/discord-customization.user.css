@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.04.05.00.07
+@version        2025.04.05.20.37
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -31,6 +31,7 @@
 @var checkbox round-server-icons        "Round server icons"          0
 @var checkbox disable-redesign-borders  "Disable redesign borders"    0
 @var checkbox hide-download-icon        "Hide download icon"          0
+@var checkbox hide-events               "Hide events (sidebar)"       0
 @var checkbox hide-top-bar              "Hide top bar"                0
 @var checkbox hide-voice-channels       "Hide voice channels"         0
 @var checkbox hide-avatar-decorations   "Hide avatar decorations"     0
@@ -319,6 +320,17 @@
     [class*="guilds"] [class*="scroller"] > [class*="listItem"] {
       &:last-child,
       &:nth-last-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  /* hide events */
+  html when (@hide-events = 1) {
+    #channels:has([id^="upcoming-events"]) ul {
+      > [style="height: 12px;"],
+      [class*="sectionDivider"],
+      li:has([id^="upcoming-events"]) {
         display: none;
       }
     }
