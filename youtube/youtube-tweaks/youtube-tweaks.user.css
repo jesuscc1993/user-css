@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2024.12.08.20.31
+@version        2025.04.29.11.47
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -9,6 +9,7 @@
 
 @var text       duration-font-size       "Video duration font size"       16px
 @var text       duration-spacing         "Video duration spacing"         4px
+@var checkbox   hide-playlist-index      "Hide playlist index"            0
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
@@ -36,6 +37,13 @@
     > :nth-child(3),
     > :nth-child(4):before {
       display: none !important;
+    }
+  }
+
+  /* hide playlist index */
+  if (hide-playlist-index) {
+    .ytd-playlist-panel-renderer.index-message-wrapper {
+      display: none;
     }
   }
 
@@ -92,7 +100,6 @@
   }
 
   /* misc */
-  /*html > ::-webkit-scrollbar,*/
   #country-code,
   #top-level-buttons-computed > :nth-child(4),
   #voice-search-button,
