@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.04.23.10.42
+@version        2025.05.01.12.11
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -513,7 +513,7 @@
     border-radius: 50%;
     overflow: hidden;
   }
-  [class*="guildIcon"][class*="iconSizeMini"] when (@round-server-icons = 1) {
+  [class*="folderGroup"] [class*="iconSizeMini"] when (@round-server-icons = 1) {
     border-radius: 50% !important;
   }
 
