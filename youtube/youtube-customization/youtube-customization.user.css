@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2025.02.13.18.55
+@version        2025.05.05.12.03
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -24,6 +24,7 @@
 @var checkbox   crop-fullscreen               "Crop fullscreen to cover the screen"     0
 @var checkbox   gray-out-watched              "Gray out watched videos"                 0
 @var checkbox   hide-watched                  "Hide watched videos"                     0
+@var checkbox   hide-member-only              "Hide member only videos"                 0
 @var checkbox   hide-channel-avatars          "Hide channel avatars in subscriptions"   0
 
 ==/UserStyle== */
@@ -253,6 +254,13 @@
   if (hide-watched) {
     ytd-grid-video-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer),
     ytd-rich-item-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer) {
+      display: none;
+    }
+  }
+
+  /* hide member only videos */
+  if (hide-member-only) {
+    .ytd-rich-grid-renderer > ytd-rich-item-renderer:has(.ytd-rich-grid-media > ytd-badge-supported-renderer:not([hidden])) {
       display: none;
     }
   }
