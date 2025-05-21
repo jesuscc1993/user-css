@@ -1,0 +1,24 @@
+/* ==UserStyle==
+@name           Pixlr Tweaks
+@description    Miscellaneous style overrides for Pixlr.
+@version        2025.05.21.19.35
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+
+==/UserStyle== */
+@-moz-document domain("pixlr.com") {
+  #splash-content-top {
+    #splash-content-file-dropper {
+      margin: 0 auto;
+      width: calc(100vw - 512px);
+    }
+    #splash-content-text {
+      display: none;
+    }
+  }
+
+  #head-premium {
+    display: none;
+  }
+}
