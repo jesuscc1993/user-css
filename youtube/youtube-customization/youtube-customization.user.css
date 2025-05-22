@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2025.05.05.12.03
+@version        2025.05.22.11.42
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -18,6 +18,7 @@
 @var text       progress-bar-handle-size      "Progress bar handle size"                13px
 @var text       volume-bar-thickness          "Volume bar thickness"                    4px
 @var text       volume-bar-handle-size        "Volume bar handle size"                  12px
+@var text       control-icons-scale           "Controls icons scale"                    1
 @var checkbox   disable-progress-bar-gradient "Disable progress bar gradient"           0
 @var checkbox   reduced-sidebar-padding       "Reduce sidebar spacing"                  0
 @var checkbox   reduced-grid-padding          "Reduce grid spacing"                     0
@@ -140,6 +141,11 @@
     #previewbar {
       transform: scaleY(0.6);
     }
+  }
+
+  /* control icons scale */
+  .ytp-chrome-controls svg {
+    scale: control-icons-scale;
   }
 
   /* volume bar thickness */
