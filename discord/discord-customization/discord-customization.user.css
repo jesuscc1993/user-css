@@ -16,7 +16,7 @@
 @var text block-emoji-zoom              "Block emoji zoom (hover)"    unset
 @var text inline-emoji-size             "Inline emoji size"           1.375em
 @var text inline-emoji-zoom             "Inline emoji zoom (hover)"   unset
-@var text reaction-emoji-size           "Reaction emoji size"         1rem
+@var text reaction-emoji-size           "Reaction emoji size"         1.25rem
 @var text avatar-scale                  "Avatar scale"                unset
 @var text avatar-zoom                   "Avatar zoom (hover)"         unset
 @var text group-spacing                 "Message groups spacing"      unset
