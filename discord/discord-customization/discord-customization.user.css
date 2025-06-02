@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.06.02.17.21
+@version        2025.06.02.17.30
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -209,17 +209,17 @@
       margin: 1px 0;
     }
 
-    img.emoji:not(.jumboable) {
+    img.emoji:not(.jumboable) when not (@inline-emoji-size = unset) {
       width: var(--inline-emoji-size) !important;
       height: var(--inline-emoji-size) !important;
     }
 
-    img.emoji.jumboable {
+    img.emoji.jumboable when not (@block-emoji-size = unset) {
       width: var(--block-emoji-size) !important;
       height: var(--block-emoji-size) !important;
     }
 
-    [class*="reactionInner"] img.emoji {
+    [class*="reactionInner"] img.emoji when not (@reaction-emoji-size = unset) {
       width: var(--reaction-emoji-size) !important;
       height: var(--reaction-emoji-size) !important;
     }
