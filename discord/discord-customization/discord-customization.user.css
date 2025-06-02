@@ -12,11 +12,11 @@
 @var text max-sidebar_width             "Max sidebar width"           300px
 @var text channel-padding               "Channel padding (sidebar)"   4px
 @var text category-spacing              "Category spacing (sidebar)"  16px
-@var text block-emoji-size              "Block emoji size"            3rem
+@var text block-emoji-size              "Block emoji size"            unset
 @var text block-emoji-zoom              "Block emoji zoom (hover)"    unset
-@var text inline-emoji-size             "Inline emoji size"           1.375em
+@var text inline-emoji-size             "Inline emoji size"           unset
 @var text inline-emoji-zoom             "Inline emoji zoom (hover)"   unset
-@var text reaction-emoji-size           "Reaction emoji size"         1.375rem
+@var text reaction-emoji-size           "Reaction emoji size"         unset
 @var text avatar-scale                  "Avatar scale"                unset
 @var text avatar-zoom                   "Avatar zoom (hover)"         unset
 @var text group-spacing                 "Message groups spacing"      unset
