@@ -1,0 +1,26 @@
+/* ==UserStyle==
+@name           Spotify - Tweaks
+@description    Miscellaneous style overrides for Steam.
+@version        2025.06.19.16.50
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+@preprocessor   stylus
+
+@var text       lyrics-size  "Lyrics size" unset
+
+==/UserStyle== */
+@-moz-document domain("open.spotify.com") {
+  [href="/download"],
+  [data-testid="upgrade-button"] {
+    display: none;
+  }
+
+  if lyrics-size != "unset" {
+    @media (min-width: 1280px) {
+      .vkO5F4KbLk8mbjZoy1Lf {
+        font-size: lyrics-size;
+      }
+    }
+  }
+}
