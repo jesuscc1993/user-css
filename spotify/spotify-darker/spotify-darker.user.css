@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Spotify - Darker
 @description    Darkens some spotify colors.
-@version        2025.06.26.10.32
+@version        2025.06.26.10.41
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -10,7 +10,7 @@
 @-moz-document domain("open.spotify.com") {
   .encore-dark-theme,
   .encore-dark-theme .encore-base-set {
-    --background-base: #060606;
+    --background-base: #050505;
     --background-elevated-base: #121212;
   }
 
