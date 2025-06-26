@@ -1,13 +1,14 @@
 /* ==UserStyle==
 @name           Spotify - Tweaks
 @description    Miscellaneous style overrides for Steam.
-@version        2025.06.19.16.50
+@version        2025.06.26.10.17
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var text       lyrics-size  "Lyrics size" unset
+@var text       lyrics-size     "Lyrics size"    unset
+@var text       lyrics-spacing  "Lyrics spacing" unset
 
 ==/UserStyle== */
 @-moz-document domain("open.spotify.com") {
@@ -18,9 +19,15 @@
 
   if lyrics-size != "unset" {
     @media (min-width: 1280px) {
-      .vkO5F4KbLk8mbjZoy1Lf {
+      [data-testid="fullscreen-lyric"] > * {
         font-size: lyrics-size;
       }
+    }
+  }
+
+  if lyrics-spacing != "unset" {
+    [data-testid="fullscreen-lyric"] {
+      margin-bottom: lyrics-spacing !important;
     }
   }
 }
