@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.07.08.19.53
+@version        2025.07.08.20.21
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -33,6 +33,7 @@
 @var checkbox hide-download-icon        "Hide download icon"          0
 @var checkbox hide-events               "Hide events (sidebar)"       0
 @var checkbox hide-top-bar              "Hide top bar"                0
+@var checkbox hide-server-banners       "Hide server banners"         0
 @var checkbox hide-voice-channels       "Hide voice channels"         0
 @var checkbox hide-user-decorations     "Hide user decorations"       0
 @var checkbox darker-guildnav           "Darker server list"          0
@@ -355,9 +356,50 @@
     }
   }
 
+  /* hide server banners */
+  html when (@hide-server-banners = 1) {
+    [class*="bannerVisible_"] {
+      > [class*="header_"] {
+        border-bottom: 1px solid var(--border-subtle) !important;
+        border-top: 1px solid transparent !important;
+      }
+
+      [class*="headerEllipseForeground_"] {
+        background: none !important;
+      }
+
+      [class*="animatedContainer_"]:has([class*="bannerImage_"]) {
+        display: none;
+      }
+
+      [class*="name"] {
+        color: var(--text-default) !important;
+      }
+
+      svg {
+        color: var(--icon-secondary) !important;
+      }
+    }
+
+    #channels > ul > [aria-hidden="true"] {
+      display: none;
+    }
+  }
+
   /* hide voice channels */
   html when (@hide-voice-channels = 1) {
     [class*="containerDefault"]:has(a[role="button"]) {
+      display: none;
+    }
+  }
+
+  /* hide user decorations */
+  html when (@hide-user-decorations = 1) {
+    [class*="avatarDecoration_"] {
+      display: none;
+    }
+
+    [class*="member"] [class*="container_"]:has(+ [class*="memberInner_"]) {
       display: none;
     }
   }
@@ -403,17 +445,6 @@
     @margin: calc(var(--li-margin) / 2);
     margin-top: @margin;
     margin-bottom: @margin;
-  }
-
-  /* user decorations */
-  html when (@hide-user-decorations = 1) {
-    [class*="avatarDecoration_"] {
-      display: none;
-    }
-
-    [class*="member"] [class*="container_"]:has(+ [class*="memberInner_"]) {
-      display: none;
-    }
   }
 
   /* full width embeds */
