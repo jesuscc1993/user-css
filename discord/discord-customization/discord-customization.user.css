@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.06.10.17.35
+@version        2025.07.08.19.53
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -368,9 +368,10 @@
     display: none;
   }
 
-  /* hide ads */
+  /* hide ads and nitro */
   [aria-label="Send a gift"],
   [class*="buttons"][class*="you"] > *:first-child,
+  [class^="container_"]:has(> [class^="contentContainer_"] > [class^="progressContainer_"]),
   [href="/shop"],
   [href="/store"] {
     display: none;
