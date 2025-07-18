@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Big Text
 @description    Increases YouTube's font size; useful when watching from a distance.
-@version        2025.05.22.17.23
+@version        2025.07.18.18.03
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -17,7 +17,7 @@
 @var number     grid-line-clamp                 "Max grid title lines"            4
 @var number     playlist-line-clamp             "Max playlist title lines"        2
 @var number     video-title-line-clamp          "Max video title lines"           2
-@var number     video-comment-line-clamp        "Max video comment lines"         6
+@var number     video-comment-line-clamp        "Max video comment lines"         8
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
@@ -134,8 +134,8 @@
     max-height: none !important;
   }
 
-  .ytd-text-inline-expander {
-    max-height: 6em !important;
+  #description #snippet {
+    max-height: video-comment-line-clamp * 1em !important;
     line-height: calc(var(--font-size-lg) * 1.34) !important;
   }
 
