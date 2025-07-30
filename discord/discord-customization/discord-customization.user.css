@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.07.11.21.23
+@version        2025.07.30.15.21
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -79,6 +79,11 @@
     }
 
     [class*="membersWrap_"] {
+      min-width: var(--min-sidebar_width);
+    }
+
+    [class*="nowPlayingColumn_"] {
+      max-width: var(--sidebar_width);
       min-width: var(--min-sidebar_width);
     }
 
