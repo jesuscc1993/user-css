@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           MS Teams - Customization
 @description    Provides some extra customization options for MS Teams.
-@version        2025.08.01.10.15
+@version        2025.08.01.10.17
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -94,18 +94,15 @@
 
   /* full width messages */
   if (full-width-messages) {
-    [data-tid="message-pane-list-runway"] {
-      width: 100%
+    [data-tid="message-pane-list-runway"],
+    [data-tid="message-pane-footer"] {
+      max-width: 100%;
     }
 
     [data-tid="chat-pane-message"] {
       blockquote {
         width: 100%;
       }
-    }
-
-    [data-tid="message-pane-footer"] {
-      max-width: 100%;
     }
   }
 
