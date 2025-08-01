@@ -17,6 +17,7 @@
 @var checkbox   align-own-messages-to-start   "Align own messages to start" 0
 @var checkbox   reduced-code-padding          "Reduced code padding"        0
 @var checkbox   reduced-message-padding       "Reduced message padding"     0
+
 ==/UserStyle== */
 @-moz-document domain("teams.microsoft.com") {
   if (hide-alerts) {
