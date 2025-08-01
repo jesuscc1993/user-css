@@ -1,0 +1,161 @@
+/* ==UserStyle==
+@name           MS Teams - Customization
+@description    Provides some extra customization options for MS Teams.
+@version        2025.08.01.09.5252
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+@preprocessor   stylus
+
+@var text       font-scale                    "Font scale"                  1
+@var text       line-height                   "Line height"                 1.4286
+@var checkbox   hide-alerts                   "Hide alerts"                 0
+@var checkbox   hide-external-label           "Hide (External) label"       0
+@var checkbox   hide-edited-label             "Hide edited label"           0
+@var checkbox   hide-translate                "Hide translate button"       0
+@var checkbox   full-width-messages           "Full width messages"         0
+@var checkbox   align-own-messages-to-start   "Align own messages to start" 0
+@var checkbox   reduced-code-padding          "Reduced code padding"        0
+@var checkbox   reduced-message-padding       "Reduced message padding"     0
+==/UserStyle== */
+
+@-moz-document domain("teams.microsoft.com") {
+  if (hide-alerts) {
+    [data-tid="app-layout-area--main"] {
+      .ui-alert {
+        display: none;
+      }
+    }
+  }
+
+  .fui-FluentProviderr0 {
+    /* small compensation for the sidebar */
+    --fontSizeBase100: 10px * font-scale * 0.9;
+    --fontSizeBase200: 12px * font-scale;
+    --fontSizeBase300: 14px * font-scale;
+    --fontSizeBase400: 16px * font-scale;
+    --fontSizeBase500: 20px * font-scale;
+    --fontSizeBase600: 24px * font-scale;
+    line-height: line-height;
+  }
+
+  .fui-Chat {
+    --chat-avatar-spacing-size: 40px;
+  }
+
+  /* more obvious selection */
+  .fpzvzei {
+    background-color: #fff2;
+  }
+
+  /* hide external label */
+  if (hide-external-label) {
+    [data-tid="chat-list-federation-tag"] {
+      display: none;
+    }
+  }
+
+  /* hide edited label */
+  if (hide-edited-label) {
+    .fui-Chat {
+      [id^="edited"] {
+        display: none;
+      }
+
+      .f14rdt9 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  /* hide translate */
+  if (hide-translate) {
+    .fui-ChatMessage__details {
+      display: none;
+    }
+  }
+
+  /* full width messages */
+  if (full-width-messages) {
+    [data-tid="chat-pane-message"] {
+      &.fzqqayd {
+        max-width: calc(100% - var(--chat-avatar-spacing-size));
+      }
+      &.ffzz00n {
+        max-width: calc(100% - 18px - var(--chat-avatar-spacing-size));
+      }
+      &.f1q0nqlt {
+        max-width: calc(100% - 20px - var(--chat-avatar-spacing-size));
+      }
+      &.fx91ewl {
+        max-width: calc(100% - 58px - var(--chat-avatar-spacing-size));
+      }
+
+      blockquote {
+        width: 100%;
+      }
+    }
+  }
+
+  /* align own messages to start */
+  if (align-own-messages-to-start) {
+    .fui-Chat {
+      .f9c4gz4 {
+        justify-content: flex-start;
+      }
+
+      .fe9ho8d {
+        left: -8px;
+      }
+
+      .fui-ChatMyMessage__body {
+        margin-inline-start: var(--chat-avatar-spacing-size);
+        border-radius: var(--borderRadiusLarge);
+      }
+    }
+  }
+
+  /* reduced code padding */
+  if (reduced-code-padding) {
+    .r1wszx8g code {
+      padding: 0 4px;
+    }
+  }
+
+  /* reduced message padding */
+  if (reduced-message-padding) {
+    [data-tid="chat-pane-message"] {
+      padding: 0.45rem 1rem 0.65rem;
+
+      &:has([id^="content-"] > blockquote: only-child) {
+        padding: 0;
+
+        blockquote {
+          margin: 0;
+        }
+      }
+    }
+
+    .fb2oc5p {
+      margin-bottom: 2.5rem;
+    }
+
+    .fui-ChatMessage__avatar {
+      margin-top: 0;
+      text-align: end;
+    }
+
+    .f1kcqot9 {
+      padding-top: 0.75rem;
+    }
+
+    /* meeting chat */
+    .fjw5fx7 {
+      width: 24px;
+    }
+    .fb5scp {
+      margin-left: 24px;
+    }
+    /* */
+  }
+}
