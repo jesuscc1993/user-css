@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           MS Teams - Customization
 @description    Provides some extra customization options for MS Teams.
-@version        2025.08.01.09.58
+@version        2025.08.01.10.02
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -20,24 +20,18 @@
 
 ==/UserStyle== */
 @-moz-document domain("teams.microsoft.com") {
-  if (hide-alerts) {
-    [data-tid="app-layout-area--main"] {
-      .ui-alert {
-        display: none;
-      }
-    }
-  }
+  sidebar-compensation = .8;
 
   .fui-FluentProviderr0 {
     /* small compensation for the sidebar */
-    --fontSizeBase100: 10px * font-scale * 0.85;
+    --fontSizeBase100: 10px * font-scale * sidebar-compensation;
     --fontSizeBase200: 12px * font-scale;
     --fontSizeBase300: 14px * font-scale;
     --fontSizeBase400: 16px * font-scale;
     --fontSizeBase500: 20px * font-scale;
     --fontSizeBase600: 24px * font-scale;
     /* small compensation for the sidebar */
-    --lineHeightBase100: 14px * font-scale * 0.85;
+    --lineHeightBase100: 14px * font-scale * sidebar-compensation;
     --lineHeightBase200: 16px * font-scale;
     --lineHeightBase300: 20px * font-scale;
     --lineHeightBase400: 22px * font-scale;
@@ -47,7 +41,15 @@
   }
 
   .f1d2rq10 {
-    height: 32px * font-scale * 0.85;
+    height: 32px * font-scale * sidebar-compensation;
+  }
+
+  if (hide-alerts) {
+    [data-tid="app-layout-area--main"] {
+      .ui-alert {
+        display: none;
+      }
+    }
   }
 
   .fui-Chat {
