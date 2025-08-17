@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2025.05.26.18.27
+@version        2025.08.17.11.38
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -27,6 +27,7 @@
 @var checkbox   hide-watched                  "Hide watched videos"                     0
 @var checkbox   hide-member-only              "Hide member only videos"                 0
 @var checkbox   hide-channel-avatars          "Hide channel avatars in subscriptions"   0
+@var checkbox   hide-shorts-in-results        "Hide shorts in search results"           0
 
 ==/UserStyle== */
 /*
@@ -278,6 +279,15 @@
       height: 100vh !important;
       left: 0 !important;
       top: 0 !important;
+    }
+  }
+}
+
+@-moz-document url-prefix("https://www.youtube.com/results") {
+  /* hide shorts in results */
+  if (hide-shorts-in-results) {
+    ytd-video-renderer:has([aria-label="Shorts"]) {
+      display: none;
     }
   }
 }
