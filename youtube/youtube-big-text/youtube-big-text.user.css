@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Big Text
 @description    Increases YouTube's font size; useful when watching from a distance.
-@version        2025.07.18.18.03
+@version        2025.08.20.10.33
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -100,9 +100,9 @@
   #video-title.ytd-playlist-panel-video-renderer,
   #vote-count-middle.ytd-comment-engagement-bar,
   .badge-shape-wiz,
-  .less-button.ytd-comment-renderer,
   .metadata-owner.ytd-playlist-header-renderer,
-  .more-button.ytd-comment-renderer,
+  .ytd-comment-thread-renderer.less-button,
+  .ytd-comment-thread-renderer.more-button,
   ytd-grid-playlist-renderer #video-title.ytd-grid-playlist-renderer,
   ytd-grid-video-renderer #video-title.yt-simple-endpoint.ytd-grid-video-renderer,
   ytd-grid-video-renderer #video-title.ytd-grid-video-renderer,
@@ -118,7 +118,7 @@
 
   #author-text.yt-simple-endpoint.ytd-comment-view-model,
   #content-text.ytd-comment-view-model,
-  #paid-comment-chip.ytd-comment-renderer,
+  #paid-comment-chip.ytd-comment-thread-renderer,
   #paid-comment-chip.ytd-comment-view-model,
   #thumbnail,
   #thumbnail-container,
@@ -183,17 +183,16 @@
     max-height: none;
   }
 
-  #content-text.ytd-comment-renderer,
   #name.ytd-author-comment-badge-renderer .ytd-channel-name,
-  .ytd-comment-renderer,
   ytd-expander.ytd-video-secondary-info-renderer {
     font-size: var(--ytd-user-comment_-_font-size);
     line-height: var(--ytd-user-comment_-_line-height);
   }
 
-  .ytd-comment-renderer yt-formatted-string > .emoji.small-emoji {
-    height: var(--ytd-user-comment_-_font-size);
-    width: auto;
+  .ytd-comment-thread-renderer .ytCoreImageContentModeScaleToFill,
+  .ytd-comment-thread-renderer yt-formatted-string > .emoji.small-emoji {
+    height: var(--ytd-user-comment_-_font-size) !important;
+    width: auto !important;
   }
 
   ytd-thumbnail-overlay-time-status-renderer {
