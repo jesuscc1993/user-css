@@ -1,22 +1,24 @@
 /* ==UserStyle==
 @name           MS Teams - Customization
 @description    Provides some extra customization options for MS Teams.
-@version        2025.08.01.10.17
+@version        2025.08.26.15.23
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var text       font-scale                    "Font scale"                  1
-@var text       line-height                   "Line height"                 1.4286
-@var checkbox   hide-alerts                   "Hide alerts"                 0
-@var checkbox   hide-external-label           "Hide (External) label"       0
-@var checkbox   hide-edited-label             "Hide edited label"           0
-@var checkbox   hide-translate                "Hide translate button"       0
-@var checkbox   full-width-messages           "Full width messages"         0
-@var checkbox   align-own-messages-to-start   "Align own messages to start" 0
-@var checkbox   reduced-code-padding          "Reduced code padding"        0
-@var checkbox   reduced-message-padding       "Reduced message padding"     0
+@var text       font-scale                    "Font scale"                           1
+@var text       line-height                   "Line height"                          1.4286
+@var checkbox   hide-alerts                   "Hide alerts"                          0
+@var checkbox   hide-sidebar-filters          "Hide sidebar filters"                 0
+@var checkbox   hide-sidebar-links            "Hide sidebar links (mentions, etc)"   0
+@var checkbox   hide-external-label           "Hide (External) label"                0
+@var checkbox   hide-edited-label             "Hide edited label"                    0
+@var checkbox   hide-translate                "Hide translate button"                0
+@var checkbox   full-width-messages           "Full width messages"                  0
+@var checkbox   align-own-messages-to-start   "Align own messages to start"          0
+@var checkbox   reduced-code-padding          "Reduced code padding"                 0
+@var checkbox   reduced-message-padding       "Reduced message padding"              0
 
 ==/UserStyle== */
 @-moz-document domain("teams.microsoft.com") {
@@ -48,6 +50,16 @@
     }
   }
 
+  .fui-Chat {
+    --chat-avatar-spacing-size: 40px;
+  }
+
+  /* more obvious selection */
+  .fpzvzei {
+    background-color: #fff2;
+  }
+
+  /* hide alerts */
   if (hide-alerts) {
     [data-tid="app-layout-area--main"] {
       .ui-alert {
@@ -56,13 +68,21 @@
     }
   }
 
-  .fui-Chat {
-    --chat-avatar-spacing-size: 40px;
+  /* hide sidebar top */
+  if (hide-sidebar-filters) {
+    [data-testid="simple-collab-left-rail-sticky-filter-v2"] {
+      display: none;
+    }
   }
 
-  /* more obvious selection */
-  .fpzvzei {
-    background-color: #fff2;
+  /* hide sidebar links */
+  if (hide-sidebar-links) {
+    [data-testid="simple-collab-dnd-rail"] {
+      > span,
+      > hr {
+        display: none;
+      }
+    }
   }
 
   /* hide external label */
