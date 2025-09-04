@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.09.04.14.26
+@version        2025.09.04.14.32
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -403,8 +403,8 @@
 
   /* hide channel badges */
   html when (@hide-channel-badges = 1) {
-    [class*="sidebar"] [class*="wrapper"] mask,
-    [class*="sidebar"] [class*="upperBadge"] {
+    [class*="guilds_"] [class*="wrapper"] mask,
+    [class*="guilds_"] [class*="upperBadge"] {
       display: none;
     }
   }
