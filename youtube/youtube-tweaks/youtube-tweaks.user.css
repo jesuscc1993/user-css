@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2025.04.29.11.47
+@version        2025.09.06.11.17
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -164,5 +164,10 @@
   ytd-playlist-video-renderer:has([src="https://i.ytimg.com/img/no_thumbnail.jpg"])
   {
     background: #ffffff66;
+  }
+
+  /* restore fullscreen scroll (https://www.reddit.com/r/youtube/comments/1n3wizl/comment/nbh8r43/) */
+  ytd-watch-flexy[fullscreen] #columns.ytd-watch-flexy {
+    display: flex !important;
   }
 }
