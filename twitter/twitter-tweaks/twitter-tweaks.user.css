@@ -1,11 +1,13 @@
 /* ==UserStyle==
 @name           Twitter - Tweaks
 @description    Miscellaneous style overrides for Twitter. May require the "Control Panel for Twitter" extension to display properly.
-@version        2025.09.12.21.14
+@version        2025.09.12.21.31
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
+
+@advanced checkbox full-width-images  "Full width images"    0
 
 ==/UserStyle== */
 @-moz-document domain("x.com") {
@@ -52,20 +54,24 @@
     display: none;
   }
 
+  /* full width attachments */
+  [data-testid="tweet"] [aria-labelledby] [style*="max-width"] {
+    max-width: 100% !important;
+  }
+
   /* center single images */
   .r-k200y {
     align-self: center;
   }
 
-  /* full width horizontal images */
-  [data-testid="tweet"] [aria-labelledby] [style*="max-width"] {
-    max-width: 100% !important;
+  if (full-width-images) {
+    @media (min-width: 1281px) {
+      [href*="/photo/1"] > * {
+        width: 616px !important;
+        height: fit-content !important;
+      }
+    }
   }
-
-  /*[href*="/photo/1"] > * {
-    width: 616px !important;
-    height: fit-content !important;
-  }*/
 }
 
 @-moz-document regexp("https:\/\/x\.com.*?headerless=1") {
