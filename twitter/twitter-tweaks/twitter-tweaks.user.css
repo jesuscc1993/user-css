@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter - Tweaks
 @description    Miscellaneous style overrides for Twitter. May require the "Control Panel for Twitter" extension to display properly.
-@version        2025.09.13.15.34
+@version        2025.09.13.15.41
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -21,13 +21,15 @@
     overflow: hidden;
   }
 
+  [data-testid="primaryColumn"] {
+    .r-1ye8kvj {
+      max-width: none;
+    }
+  }
+
   @media (max-width: 1280px) {
     [data-testid="primaryColumn"] {
       max-width: calc(100% - 64px);
-
-      .r-1ye8kvj {
-        max-width: none;
-      }
     }
 
     [data-testid="sidebarColumn"] {
@@ -37,15 +39,30 @@
 
   @media (min-width: 1281px) {
     [data-testid="primaryColumn"] {
-      max-width: calc(100% - 352px);
-
-      .r-1ye8kvj {
-        max-width: none;
-      }
+      max-width: calc(100% - 372px);
     }
 
     [data-testid="sidebarColumn"] {
       margin-left: 24px;
+    }
+  }
+
+  /* fullwidth images */
+  if (full-width-images) {
+    [href*="/photo/1"] > * {
+      height: fit-content !important;
+    }
+
+    @media (max-width: 1280px) {
+      [href*="/photo/1"] > * {
+        width: 904px !important;
+      }
+    }
+
+    @media (min-width: 1281px) {
+      [href*="/photo/1"] > * {
+        width: 596px !important;
+      }
     }
   }
 
@@ -62,24 +79,6 @@
   /* center single images */
   .r-k200y {
     align-self: center;
-  }
-
-  if (full-width-images) {
-    [href*="/photo/1"] > * {
-      height: fit-content !important;
-    }
-
-    @media (max-width: 1280px) {
-      [href*="/photo/1"] > * {
-        width: 904px !important;
-      }
-    }
-
-    @media (min-width: 1281px) {
-      [href*="/photo/1"] > * {
-        width: 616px !important;
-      }
-    }
   }
 }
 
