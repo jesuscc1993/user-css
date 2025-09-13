@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.09.13.11.24
+@version        2025.09.13.11.28
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -22,6 +22,7 @@
 @var text group-spacing                 "Message groups spacing"      unset
 @var text li-margin                     "Vertical list item margin"   4px
 @var text transition                    "Transition duration"         150ms
+@var text custom-guild-list-padding     "Custom guild list padding"   16px
 @var checkbox blurple-mentions          "Purple mentions and links"   0
 @var checkbox float-role-decorators     "Float role decorators"       0
 @var checkbox full-width-embeds         "Full width embeds"           0
@@ -61,6 +62,7 @@
     --li-margin: @li-margin;
     --transition: @transition;
     --sidebar_width: max(var(--min-sidebar_width), var(--max-sidebar_width));
+    --custom-guild-list-padding: @custom-guild-list-padding;
   }
 
   html {
