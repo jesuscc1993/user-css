@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Bluesky - Tweaks
 @description    Miscellaneous style overrides for Bluesky.
-@version        2025.03.09.18.15
+@version        2025.09.13.12.41
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -17,6 +17,11 @@
   /* hide comments/retweet/quote/etc until hovered */
   [data-testid^="feedItem"]:not(:hover) .r-13awgt0 > .css-175oi2r:last-child {
     display: none;
+  }
+
+  /* center attachments */
+  [data-testid="contentHider-post"] .css-g5y9jx[style*="flex"] {
+    justify-content: center;
   }
 }
 @-moz-document domain("embed.bsky.app") {
