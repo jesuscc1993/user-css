@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter - Tweaks
 @description    Miscellaneous style overrides for Twitter. May require the "Control Panel for Twitter" extension to display properly.
-@version        2025.09.13.15.51
+@version        2025.09.13.20.55
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -67,6 +67,10 @@
     .r-qklmqi,
     [data-testid="primaryColumn"] {
       border: none;
+    }
+
+    .r-109y4c4.r-gu4em3 {
+      display: none;
     }
   }
 
