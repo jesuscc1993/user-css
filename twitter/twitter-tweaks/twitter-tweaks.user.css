@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter - Tweaks
 @description    Miscellaneous style overrides for Twitter. May require the "Control Panel for Twitter" extension to display properly.
-@version        2025.09.14.22.27
+@version        2025.09.14.22.36
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -45,24 +45,22 @@
 
   /* fullwidth images */
   if (full-width-images) {
-    [data-testid="tweet"] [href*="/photo/1"] > * {
-      height: fit-content !important;
-      margin: 0 auto;
-
-      @media (max-width: 1280px) {
-        width: 904px !important;
-      }
-
-      @media (min-width: 1281px) {
-        width: 596px !important;
-      }
-    }
-
-    [aria-labelledby],
-    [data-testid="testCondensedMedia"] {
+    [data-testid="tweet"]:not(:has([href*="/photo/2"])) {
       [href*="/photo/1"] > * {
-        width: initial !important;
-        height: initial !important;
+        height: fit-content !important;
+        margin: 0 auto;
+
+        @media (max-width: 1280px) {
+          width: 904px !important;
+        }
+
+        @media (min-width: 1281px) {
+          width: 596px !important;
+        }
+      }
+
+      [data-testid="testCondensedMedia"] [href*="/photo/1"] > * {
+        width: 100% !important;
       }
     }
   }
