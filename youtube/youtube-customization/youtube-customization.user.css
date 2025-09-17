@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2025.08.17.11.38
+@version        2025.09.17.14.41
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -181,7 +181,7 @@
   /* disable progress bar gradient */
   if (disable-progress-bar-gradient) {
     .ytp-play-progress,
-    ytd-thumbnail-overlay-resume-playback-renderer[enable-refresh-signature-moments-web] #progress.ytd-thumbnail-overlay-resume-playback-renderer {
+    #progress.ytd-thumbnail-overlay-resume-playback-renderer {
       background: var(--yt-spec-static-brand-red, #f03);
     }
   }
@@ -251,17 +251,23 @@
 
   /* gray out watched */
   if (gray-out-watched) {
-    ytd-grid-video-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer),
-    ytd-rich-item-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer) {
-      filter: grayscale(0.9) brightness(0.25);
+    ytd-grid-video-renderer,
+    ytd-rich-item-renderer {
+      &:has(.ytd-thumbnail-overlay-resume-playback-renderer),
+      &:has(.ytThumbnailOverlayProgressBarHost) {
+        filter: grayscale(0.9) brightness(0.25);
+      }
     }
   }
 
   /* hide watched */
   if (hide-watched) {
-    ytd-grid-video-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer),
-    ytd-rich-item-renderer:has(.ytd-thumbnail-overlay-resume-playback-renderer) {
-      display: none;
+    ytd-grid-video-renderer,
+    ytd-rich-item-renderer {
+      &:has(.ytd-thumbnail-overlay-resume-playback-renderer),
+      &:has(.ytThumbnailOverlayProgressBarHost) {
+        display: none;
+      }
     }
   }
 
