@@ -265,6 +265,7 @@
   /* hide watched */
   if (hide-watched) {
     ytd-grid-video-renderer,
+    ytd-playlist-video-renderer,
     ytd-rich-item-renderer {
       &:has(.ytd-thumbnail-overlay-resume-playback-renderer),
       &:has(.ytThumbnailOverlayProgressBarHost) {
