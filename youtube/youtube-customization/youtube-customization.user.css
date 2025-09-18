@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2025.09.18.20.59
+@version        2025.09.18.21.07
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -231,21 +231,27 @@
       display: none;
     }
 
-    [page-subtype="subscriptions"][role="main"] ytd-item-section-renderer {
-      border: none !important;
+    [page-subtype="subscriptions"][role="main"] {
+      ytd-item-section-renderer {
+        border: none !important;
 
-      .grid-subheader h2 {
-        display: none;
+        .grid-subheader h2 {
+          display: none !important;
+        }
+
+        &:not(:nth-child(1)) {
+          #contents.ytd-shelf-renderer {
+            margin-top: 0;
+          }
+
+          .grid-subheader {
+            display: none;
+          }
+        }
       }
 
-      &:not(:nth-child(1)) {
-        #contents.ytd-shelf-renderer {
-          margin-top: 0;
-        }
-
-        .grid-subheader {
-          display: none;
-        }
+      .yt-lockup-metadata-view-model--standard .yt-lockup-metadata-view-model__avatar  {
+        display: none;
       }
     }
   }
@@ -265,7 +271,6 @@
   /* hide watched */
   if (hide-watched) {
     ytd-grid-video-renderer,
-    ytd-playlist-video-renderer,
     ytd-rich-item-renderer {
       &:has(.ytd-thumbnail-overlay-resume-playback-renderer),
       &:has(.ytThumbnailOverlayProgressBarHost) {
