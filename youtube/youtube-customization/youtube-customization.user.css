@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2025.09.18.21.07
+@version        2025.09.18.21.10
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -260,7 +260,8 @@
   if (gray-out-watched) {
     ytd-grid-video-renderer,
     ytd-playlist-video-renderer,
-    ytd-rich-item-renderer {
+    ytd-rich-item-renderer,
+    ytd-video-renderer {
       &:has(.ytd-thumbnail-overlay-resume-playback-renderer),
       &:has(.ytThumbnailOverlayProgressBarHost) {
         filter: grayscale(0.9) brightness(0.25);
@@ -271,7 +272,9 @@
   /* hide watched */
   if (hide-watched) {
     ytd-grid-video-renderer,
-    ytd-rich-item-renderer {
+    ytd-playlist-video-renderer,
+    ytd-rich-item-renderer,
+    ytd-video-renderer {
       &:has(.ytd-thumbnail-overlay-resume-playback-renderer),
       &:has(.ytThumbnailOverlayProgressBarHost) {
         display: none;
