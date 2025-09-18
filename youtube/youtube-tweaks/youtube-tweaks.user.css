@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2025.09.17.14.41
+@version        2025.09.18.20.58
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -22,10 +22,15 @@
     height: 296px;
   }
 
+  .ytThumbnailOverlayProgressBarHostWatchedProgressBar,
   ytd-thumbnail-overlay-resume-playback-renderer {
     height: calc(var(--duration-font-size) + var(--duration-spacing) * 2 + 4px);
     z-index: 0;
     opacity: 0.9;
+  }
+
+  .ytThumbnailOverlayProgressBarHostWatchedProgressBar {
+    background: var(--yt-spec-text-disabled);
   }
 
   #hover-overlays {
@@ -129,6 +134,11 @@
   ytd-thumbnail[size="medium"] ytd-thumbnail-overlay-time-status-renderer.ytd-thumbnail,
   ytd-thumbnail[size="medium"] ytd-thumbnail-overlay-toggle-button-renderer.ytd-thumbnail {
     margin: var(--duration-spacing);
+  }
+
+  .ytThumbnailBottomOverlayViewModelBadgeContainerLarge {
+    padding: 0 var(--duration-spacing) var(--duration-spacing) 0;
+    z-index: 0;
   }
 
   /* hide sidebar items */
