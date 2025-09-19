@@ -259,6 +259,7 @@
   /* gray out watched */
   if (gray-out-watched) {
     ytd-grid-video-renderer,
+    ytd-playlist-panel-video-renderer,
     ytd-playlist-video-renderer,
     ytd-rich-item-renderer,
     ytd-video-renderer {
@@ -272,6 +273,7 @@
   /* hide watched */
   if (hide-watched) {
     ytd-grid-video-renderer,
+    ytd-playlist-panel-video-renderer,
     ytd-playlist-video-renderer,
     ytd-rich-item-renderer,
     ytd-video-renderer {
