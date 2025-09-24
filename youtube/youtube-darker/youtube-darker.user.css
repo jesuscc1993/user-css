@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Darker
 @description    Darker theme for YouTube.
-@version        2025.09.09.23.553
+@version        2025.09.24.10.53
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -100,6 +100,11 @@
       #cinematics {
         display: none;
       }
+    }
+
+    /* extensions */
+    .ysm-subscription-filter {
+      filter: contrast(1.25);
     }
   }
 }
