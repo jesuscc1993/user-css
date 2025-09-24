@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2025.09.24.17.12
+@version        2025.09.24.18.44
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -141,14 +141,14 @@
     z-index: 0;
   }
 
-  /* hide "your videos" sidebar items */
-  #sections ytd-guide-collapsible-section-entry-renderer:nth-child(4) > * > ytd-guide-entry-renderer:has(a[href*="studio.youtube.com"]) {
-    display: none;
-  }
-
   /* side menu items */
   ytd-guide-entry-renderer[guide-refresh] {
     width: 100%;
+  }
+
+  /* hide "your videos" sidebar items */
+  ytd-guide-entry-renderer:has(a[href*="studio.youtube.com"]) {
+    display: none;
   }
 
   /* better clickable videos */
