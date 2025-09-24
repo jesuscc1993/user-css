@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2025.09.24.15.16
+@version        2025.09.24.17.12
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -328,6 +328,10 @@
       &:has(ytm-shorts-lockup-view-model) {
         display: none !important;
       }
+    }
+
+    #sections ytd-guide-section-renderer:nth-child(1) > * > ytd-guide-entry-renderer:nth-child(2) {
+      display: none !important;
     }
   }
 }
