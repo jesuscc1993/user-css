@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2025.09.24.10.53
+@version        2025.09.24.11.20
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -43,22 +43,6 @@
   :root {
     --list-thumbnail-height: list-thumbnail-width * thumbnail-aspect-ratio;
     --list-thumbnail-width: list-thumbnail-width;
-  }
-
-  ytd-rich-grid-renderer {
-    --ytd-rich-grid-items-per-row: items-per-grid-row !important;
-
-    > #contents.ytd-rich-grid-renderer {
-      justify-content: center;
-    }
-
-    ytd-rich-item-renderer[rendered-from-rich-grid][is-in-first-column] {
-      margin-left: calc(var(--ytd-rich-grid-item-margin)/2);
-    }
-  }
-
-  ytd-rich-shelf-renderer {
-    --ytd-rich-grid-items-per-row: items-per-shelf-row !important;
   }
 
   html:not(.style-scope) {
@@ -316,6 +300,24 @@
       height: 100vh !important;
       left: 0 !important;
       top: 0 !important;
+    }
+  }
+
+  /* items per grid row */
+  if (items-per-grid-row != 3) {
+    ytd-rich-grid-renderer {
+      --ytd-rich-grid-items-per-row: items-per-grid-row !important;
+
+      ytd-rich-item-renderer[rendered-from-rich-grid][is-in-first-column] {
+        margin-left: calc(var(--ytd-rich-grid-item-margin)/2);
+      }
+    }
+  }
+
+  /* items per shelf row */
+  if (items-per-shelf-row != 5) {
+    ytd-rich-shelf-renderer {
+      --ytd-rich-grid-items-per-row: items-per-shelf-row !important;
     }
   }
 }
