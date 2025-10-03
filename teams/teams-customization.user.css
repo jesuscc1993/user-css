@@ -1,24 +1,25 @@
 /* ==UserStyle==
 @name           MS Teams - Customization
 @description    Provides some extra customization options for MS Teams.
-@version        2025.10.03.17.09
+@version        2025.10.03.17.19
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var text       font-scale                    "Font scale"                           1
-@var text       line-height                   "Line height"                          1.4286
-@var checkbox   hide-alerts                   "Hide alerts"                          0
-@var checkbox   hide-sidebar-filters          "Hide sidebar filters"                 0
-@var checkbox   hide-sidebar-links            "Hide sidebar links (mentions, etc)"   0
-@var checkbox   hide-external-label           "Hide (External) label"                0
-@var checkbox   hide-edited-label             "Hide edited label"                    0
-@var checkbox   hide-translate                "Hide translate button"                0
-@var checkbox   full-width-messages           "Full width messages"                  0
-@var checkbox   align-own-messages-to-start   "Align own messages to start"          0
-@var checkbox   reduced-code-padding          "Reduced code padding"                 0
-@var checkbox   reduced-message-padding       "Reduced message padding"              0
+@var text       font-scale                      "Font scale"                           1
+@var text       line-height                     "Line height"                          1.4286
+@var checkbox   hide-alerts                     "Hide alerts"                          0
+@var checkbox   hide-sidebar-filters            "Hide sidebar filters"                 0
+@var checkbox   hide-sidebar-links              "Hide sidebar links (mentions, etc)"   0
+@var checkbox   hide-external-label             "Hide (External) label"                0
+@var checkbox   hide-edited-label               "Hide edited label"                    0
+@var checkbox   hide-translate                  "Hide translate button"                0
+@var checkbox   full-width-messages             "Full width messages"                  0
+@var checkbox   align-own-messages-text-to-end  "Align own messages text to end"       0
+@var checkbox   align-own-messages-to-start     "Align own messages to start"          0
+@var checkbox   reduced-code-padding            "Reduced code padding"                 0
+@var checkbox   reduced-message-padding         "Reduced message padding"              0
 
 ==/UserStyle== */
 @-moz-document domain("teams.microsoft.com") {
@@ -122,6 +123,15 @@
     [data-tid="chat-pane-message"] {
       blockquote {
         width: 100%;
+      }
+    }
+  }
+
+  /* align own messages text to end */
+  if (align-own-messages-text-to-end) {
+    .fui-Chat {
+      .fypbzun {
+        text-align: end;
       }
     }
   }
