@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           MS Teams - Customization
 @description    Provides some extra customization options for MS Teams.
-@version        2025.08.26.15.23
+@version        2025.10.03.17.09
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -179,12 +179,16 @@
     }
 
     /* meeting chat */
-    .fjw5fx7 {
+    /* .fjw5fx7 {
       width: 24px;
     }
     .fb5scp {
       margin-left: 24px;
-    }
+    } */
     /* */
+  }
+
+  [data-tid="app-layout-area--nav"] {
+    --slot-width: 5.8rem;
   }
 }
