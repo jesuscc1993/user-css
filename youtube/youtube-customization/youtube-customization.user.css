@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2025.09.24.17.12
+@version        2025.10.05.11.19
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -260,6 +260,7 @@
 
   /* gray out watched */
   if (gray-out-watched) {
+    yt-lockup-view-model,
     ytd-grid-video-renderer,
     ytd-playlist-panel-video-renderer,
     ytd-playlist-video-renderer,
@@ -274,6 +275,7 @@
 
   /* hide watched */
   if (hide-watched) {
+    yt-lockup-view-model,
     ytd-grid-video-renderer,
     ytd-playlist-panel-video-renderer,
     ytd-playlist-video-renderer,
