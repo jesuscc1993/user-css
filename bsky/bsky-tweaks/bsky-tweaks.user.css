@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Bluesky - Tweaks
 @description    Miscellaneous style overrides for Bluesky.
-@version        2025.09.13.12.41
+@version        2025.10.08.00.44
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -20,7 +20,7 @@
   }
 
   /* center attachments */
-  [data-testid="contentHider-post"] .css-g5y9jx[style*="flex"] {
+  [data-testid="contentHider-post"] .css-g5y9jx[style*="flex"]:has([data-expoimage="true"]) {
     justify-content: center;
   }
 }
