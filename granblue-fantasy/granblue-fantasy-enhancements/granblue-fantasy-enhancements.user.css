@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2025.03.29.10.50
+@version        2025.10.13.12.01
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -23,7 +23,7 @@
 @var checkbox fixed-header          "Fixed header position" 0
 @var checkbox gray-out-equipped     "Gray out equipped items" 0
 @var checkbox gray-out-sparked      "Gray out acquired characters (spark menu)" 0
-@var checkbox keep-extras-open      "Keep gameplay extras open" 0
+@var checkbox keep-extras-open      "[BROKEN] Keep gameplay extras open" 0
 @var checkbox submenu-on-left       "Move right submenu to the left" 0
 @var checkbox rearrange-coop        "Rearrange co-op room" 0
 @var checkbox sort-summons          "Sort summons" 0
@@ -283,7 +283,7 @@
   }
 
   /* keep extras open */
-  if (keep-extras-open) {
+  /*if (keep-extras-open) {
     .btn-campaign-toggle {
       background-image: url(https://prd-game-a-granbluefantasy.akamaized.net/assets_en/img/sp/ui/campaign_toggle/campaign_open.png?1511168524) !important;
     }
@@ -295,7 +295,7 @@
     .prt-campaign-banners {
       display: block;
     }
-  }
+  }*/
 
   /* submenu on left */
   if (submenu-on-left && content-alignment != 'left') {
