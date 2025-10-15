@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2025.10.15.16.40
+@version        2025.10.15.16.53
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -160,7 +160,8 @@
   .ytp-delhi-modern .ytp-chrome-controls .ytp-prev-button:not(.ytp-miniplayer-button-container>*),
   .ytp-delhi-modern .ytp-chrome-controls .ytp-right-controls,
   .ytp-delhi-modern .ytp-time-wrapper:not(.ytp-miniplayer-ui *),
-  .ytp-delhi-modern.ytp-delhi-horizontal-volume-controls .ytp-volume-area {
+  .ytp-delhi-modern.ytp-delhi-horizontal-volume-controls .ytp-volume-area,
+  .ytp-delhi-modern.ytp-delhi-modern-compact-controls .ytp-chrome-controls .ytp-play-button {
     background: video-controls-bg;
   }
 
