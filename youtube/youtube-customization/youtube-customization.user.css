@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2025.10.15.11.26
+@version        2025.10.15.15.58
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -15,9 +15,7 @@
 @var text       max-playlist-height           "Maximum playlist height"                 460px
 @var text       max-playlist-width            "Maximum playlist width"                  402px
 @var text       progress-bar-thickness        "Progress bar thickness"                  unset
-@var text       progress-bar-handle-size      "Progress bar handle size"                unset
 @var text       volume-bar-thickness          "Volume bar thickness"                    unset
-@var text       volume-bar-handle-size        "Volume bar handle size"                  unset
 @var text       control-icons-scale           "Controls icons scale"                    1
 @var text       items-per-grid-row            "Items per grid row"                      3
 @var text       items-per-shelf-row           "Items per shelf row"                     5
@@ -125,56 +123,31 @@
   }
 
   /* progress bar thickness */
-  if (progress-bar-thickness != unset && progress-bar-handle-size != unset) {
-    .html5-video-player {
-      .ytp-progress-bar-container {
+  if (progress-bar-thickness != unset) {
+    .html5-video-player,
+    .ytp-delhi-modern {
+      &:not(.ytp-player-minimized) .ytp-progress-bar-container {
         height: progress-bar-thickness;
-
-        .ytp-scrubber-container {
-          left: progress-bar-handle-size * -0.5;
-          top: progress-bar-handle-size * -0.5 + progress-bar-thickness * 0.5;
-        }
-
-        .ytp-scrubber-button {
-          height: progress-bar-handle-size;
-          width: progress-bar-handle-size;
-          border-radius: 50%;
-        }
       }
 
-      #previewbar {
-        transform: scaleY(0.6);
+      .ytp-scrubber-container {
+        top: (-6px + progress-bar-thickness / 2);
+      }
+      &.ytp-big-mode .ytp-scrubber-container {
+        top: (-10px + progress-bar-thickness / 2);
       }
     }
   }
 
   /* volume bar thickness */
-  if (volume-bar-thickness != unset && volume-bar-handle-size != unset) {
-    .html5-video-player {
-      &.ytp-big-mode {
-        .ytp-volume-slider-active .ytp-volume-panel {
-          width: 60px + volume-bar-handle-size;
-        }
-      }
-      &:not(.ytp-big-mode) {
-        .ytp-volume-slider-active .ytp-volume-panel {
-          width: 40px + volume-bar-handle-size;
-        }
-      }
-
-      .ytp-volume-slider-handle {
-        height: volume-bar-handle-size;
-        width: volume-bar-handle-size;
-        border-radius: 50%;
-        margin-top: volume-bar-handle-size * -0.5;
-      }
-
-      .ytp-volume-slider-handle {
-        &::before,
-        &::after {
+  if (volume-bar-thickness != unset) {
+    .html5-video-player:not(.ytp-delhi-modern),
+    .ytp-delhi-horizontal-volume-controls,
+    .ytp-big-mode.ytp-delhi-horizontal-volume-controls {
+      .ytp-volume-slider-handle::before,
+      .ytp-volume-slider-handle::after {
           height: volume-bar-thickness;
-          margin-top: volume-bar-thickness * -0.5;
-        }
+          margin-top: (volume-bar-thickness * -0.5);
       }
     }
   }
