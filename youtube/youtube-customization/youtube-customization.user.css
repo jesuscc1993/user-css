@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2025.10.15.16.53
+@version        2025.10.15.17.04
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -23,6 +23,7 @@
 @var checkbox   disable-progress-bar-gradient "Disable progress bar gradient"           0
 @var checkbox   reduced-sidebar-padding       "Reduce sidebar spacing"                  0
 @var checkbox   reduced-grid-padding          "Reduce grid spacing"                     0
+@var checkbox   reduced-controls-bar-height   "Reduce controls bar height"              0
 @var checkbox   crop-fullscreen               "Crop fullscreen to cover the screen"     0
 @var checkbox   gray-out-watched              "Gray out watched videos"                 0
 @var checkbox   hide-watched                  "Hide watched videos"                     0
@@ -214,6 +215,23 @@
   if (reduced-grid-padding) {
     ytd-rich-item-renderer {
       margin-bottom: var(--ytd-rich-grid-item-margin);
+    }
+  }
+
+  /* reduced controls bar height */
+  if (reduced-controls-bar-height) {
+    .ytp-delhi-modern {
+      --yt-delhi-big-mode-bottom-controls-height: 72px !important;
+      --yt-delhi-big-mode-pill-top-height: 8px !important;
+
+      &.ytp-big-mode:not(.ytp-xsmall-width-mode) .ytp-chrome-controls .ytp-play-button,
+      .ytp-delhi-modern.ytp-big-mode:not(.ytp-xsmall-width-mode) .ytp-chrome-controls .ytp-play-button-playlist {
+        margin-top: 0;
+      }
+
+      .ytp-progress-bar {
+        z-index: 60;
+      }
     }
   }
 
