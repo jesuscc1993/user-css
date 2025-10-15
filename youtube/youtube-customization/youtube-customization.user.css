@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2025.10.15.15.58
+@version        2025.10.15.16.40
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -16,7 +16,8 @@
 @var text       max-playlist-width            "Maximum playlist width"                  402px
 @var text       progress-bar-thickness        "Progress bar thickness"                  unset
 @var text       volume-bar-thickness          "Volume bar thickness"                    unset
-@var text       control-icons-scale           "Controls icons scale"                    1
+@var text       video-controls-bg             "Video controls background"               rgba(0, 0, 0, .3)
+@var text       video-controls-icons-scale    "Video controls icons scale"              1
 @var text       items-per-grid-row            "Items per grid row"                      3
 @var text       items-per-shelf-row           "Items per shelf row"                     5
 @var checkbox   disable-progress-bar-gradient "Disable progress bar gradient"           0
@@ -152,9 +153,20 @@
     }
   }
 
-  /* control icons scale */
+  /* video controls bg */
+  .ytp-delhi-modern .ytp-chapter-title.ytp-button,
+  .ytp-delhi-modern .ytp-chrome-controls .ytp-next-button:not(.ytp-miniplayer-button-container>*),
+  .ytp-delhi-modern .ytp-chrome-controls .ytp-play-button,
+  .ytp-delhi-modern .ytp-chrome-controls .ytp-prev-button:not(.ytp-miniplayer-button-container>*),
+  .ytp-delhi-modern .ytp-chrome-controls .ytp-right-controls,
+  .ytp-delhi-modern .ytp-time-wrapper:not(.ytp-miniplayer-ui *),
+  .ytp-delhi-modern.ytp-delhi-horizontal-volume-controls .ytp-volume-area {
+    background: video-controls-bg;
+  }
+
+  /* video control icons scale */
   .ytp-chrome-controls svg {
-    scale: control-icons-scale;
+    scale: video-controls-icons-scale;
   }
 
   /* disable progress bar gradient */
