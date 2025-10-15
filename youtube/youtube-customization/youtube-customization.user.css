@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2025.10.15.17.04
+@version        2025.10.15.19.19
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -155,16 +155,20 @@
   }
 
   /* video controls bg */
+  .ytPlayerQuickActionButtonsHost:not(:empty),
   .ytp-delhi-modern .ytp-chapter-title.ytp-button,
   .ytp-delhi-modern .ytp-chrome-controls .ytp-next-button:not(.ytp-miniplayer-button-container>*),
   .ytp-delhi-modern .ytp-chrome-controls .ytp-play-button,
   .ytp-delhi-modern .ytp-chrome-controls .ytp-prev-button:not(.ytp-miniplayer-button-container>*),
   .ytp-delhi-modern .ytp-chrome-controls .ytp-right-controls,
+  .ytp-delhi-modern .ytp-playlist-menu-button,
   .ytp-delhi-modern .ytp-time-wrapper:not(.ytp-miniplayer-ui *),
   .ytp-delhi-modern.ytp-delhi-horizontal-volume-controls .ytp-volume-area,
-  .ytp-delhi-modern.ytp-delhi-modern-compact-controls .ytp-chrome-controls .ytp-play-button {
+  .ytp-delhi-modern.ytp-delhi-modern-compact-controls .ytp-chrome-controls .ytp-play-button,
+  .ytp-fullscreen-grid-expand-button {
     background: video-controls-bg;
   }
+
 
   /* video control icons scale */
   .ytp-chrome-controls svg {
