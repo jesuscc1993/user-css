@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2025.10.15.19.19
+@version        2025.10.16.11.05
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -20,6 +20,7 @@
 @var text       video-controls-icons-scale    "Video controls icons scale"              1
 @var text       items-per-grid-row            "Items per grid row"                      3
 @var text       items-per-shelf-row           "Items per shelf row"                     5
+@var checkbox   classic-progress-bar-colors   "Classic progress bar colors"             0
 @var checkbox   disable-progress-bar-gradient "Disable progress bar gradient"           0
 @var checkbox   reduced-sidebar-padding       "Reduce sidebar spacing"                  0
 @var checkbox   reduced-grid-padding          "Reduce grid spacing"                     0
@@ -173,6 +174,17 @@
   /* video control icons scale */
   .ytp-chrome-controls svg {
     scale: video-controls-icons-scale;
+  }
+
+  /* classic progress bar colors */
+  if (classic-progress-bar-colors) {
+    .ytp-delhi-modern .ytp-progress-list {
+      background: #fff3;
+    }
+
+    .ytp-delhi-modern .ytp-load-progress {
+      background: #fff6;
+    }
   }
 
   /* disable progress bar gradient */
