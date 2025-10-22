@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2025.10.05.11.17
+@version        2025.10.22.18.42
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -181,6 +181,7 @@
   ytd-watch-flexy[fullscreen] #columns.ytd-watch-flexy {
     display: flex !important;
   }
+
   ytd-app[fullscreen] {
     overflow: auto !important;
   }
@@ -192,4 +193,10 @@
     bottom: 0 !important;
     overflow-x: auto !important;
   }
+
+  .ytp-fullscreen-grid,
+  .ytp-fullscreen-grid .ytp-fullscreen-grid-expand-button {
+    display: none !important;
+  }
+  /* */
 }
