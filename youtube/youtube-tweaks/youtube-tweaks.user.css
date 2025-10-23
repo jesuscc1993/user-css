@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2025.10.23.19.12
+@version        2025.10.23.19.14
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -174,7 +174,7 @@
   /* controls-gradient-bg */
   if (controls-gradient-bg) {
     .html5-video-player:not(.ytp-autohide):after {
-      background: linear-gradient(0deg, #000c 0%, #0000 15%, #0000 85%, #000c 100%);
+      background: linear-gradient(0deg, #000d 0%, #0000 10%, #0000 90%, #000d 100%);
       content: "";
       display: block;
       height: 100%;
