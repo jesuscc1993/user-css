@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2025.10.23.19.14
+@version        2025.10.23.19.15
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -84,6 +84,7 @@
 
   /* extensions */
   .ryd-tooltip,
+  .ytd-guide-section-renderer .ysm-deck-open,
   .ytp-right-controls #infoButton,
   .ytp-right-controls #startSegmentButton,
   ytd-guide-section-renderer:has(> * > * > .ysm-group-popup-in-list) {
