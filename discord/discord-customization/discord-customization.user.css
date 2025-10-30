@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.09.13.11.28
+@version        2025.10.30.15.14
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -36,7 +36,7 @@
 @var checkbox hide-top-bar              "Hide top bar"                0
 @var checkbox hide-server-banners       "Hide server banners"         0
 @var checkbox hide-voice-channels       "Hide voice channels"         0
-@var checkbox hide-channel-badges       "Hide channel channels"       0
+@var checkbox hide-channel-badges       "Hide channel badges"         0
 @var checkbox hide-user-decorations     "Hide user decorations"       0
 @var checkbox darker-guildnav           "Darker server list"          0
 @var checkbox same-color-sidebars       "Same color sidebars"         0
@@ -358,7 +358,7 @@
   }
 
   /* hide top bar */
-  .visual-refresh [data-fullscreen="false"] when (@hide-top-bar = 1) {
+  .visual-refresh [data-fullscreen="false"]:not(:has([class*="notice"])) when (@hide-top-bar = 1) {
     grid-template-rows: [titleBarEnd] min-content [noticeEnd] 1fr [end];
 
     > [class*="bar_"] {
