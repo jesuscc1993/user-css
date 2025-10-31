@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.10.30.15.14
+@version        2025.10.31.17.40
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -128,7 +128,7 @@
 
   /* HIDE UNLESS HOVERED */
   /* common setup */
-  [class*="content_"] {
+  /*[class*="content_"] {
     [class*="guilds"] {
       z-index: 102;
     }
@@ -148,10 +148,10 @@
       transition-delay: 0.2s;
       z-index: 101;
     }
-  }
+  }*/
 
   /* hide server members unless hovered */
-  @media (max-width: 1152px) {
+  /*@media (max-width: 1152px) {
     [class*="membersWrap_"] {
       position: absolute;
 
@@ -159,10 +159,10 @@
         margin-right: calc(var(--min-sidebar_width) * -1 + 8px);
       }
     }
-  }
+  }*/
 
   /* hide channels unless hovered */
-  @media (max-width: 800px) {
+  /*@media (max-width: 800px) {
     [class*="sidebar_"] {
       position: absolute;
 
@@ -178,7 +178,7 @@
     [class*="chatContent"] [class*="messagesWrapper"] {
       padding-right: 8px;
     }
-  }
+  }*/
 
   /* HIDE AVATARS */
   @media (max-width: 480px) {
