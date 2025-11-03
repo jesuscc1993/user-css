@@ -1,13 +1,13 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.10.31.17.40
+@version        2025.11.03.12.07
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   less
 
-@var text font-family                   "Font family"                 "'Whitney', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+@var text font-family                   "Font family"                 "gg sans","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif
 @var text min-sidebar_width             "Min sidebar width"           300px
 @var text max-sidebar_width             "Max sidebar width"           300px
 @var text channel-padding               "Channel padding (sidebar)"   4px
@@ -55,7 +55,7 @@
     --reaction-emoji-size: @reaction-emoji-size;
     --channel-padding: @channel-padding;
     --custom-category-channel-space-before-category: @category-spacing;
-    --font-family: @font-family;
+    --font-primary: @font-family;
     --group-spacing: @group-spacing;
     --max-sidebar_width: @max-sidebar_width;
     --min-sidebar_width: @min-sidebar_width;
@@ -71,7 +71,6 @@
 
   body {
     --custom-guild-sidebar-width: calc(var(--sidebar_width) + var(--custom-guild-list-width)) !important;
-    font-family: var(--font-family);
   }
 
   /* responsive columns */
