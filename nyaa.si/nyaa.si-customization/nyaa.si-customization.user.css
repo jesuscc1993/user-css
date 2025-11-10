@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           nyaa.si - Customization
 @description    Provides some extra customization options.
-@version        2024.04.02.18.22
+@version        2024.04.02.18.50
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -96,12 +96,14 @@
     padding: cell-padding;
   }
 
-  table.torrent-list thead th.sorting:after,
-  table.torrent-list thead th.sorting_asc:after,
-  table.torrent-list thead th.sorting_desc:after {
-    top: 4px;
-    right: 4px;
-    padding: cell-padding;
+  table.torrent-list thead {
+    th.sorting:after,
+    th.sorting_asc:after,
+    th.sorting_desc:after {
+      top: 4px;
+      right: 4px;
+      padding: (cell-padding / 2) 0;
+    }
   }
 
   /*  */
