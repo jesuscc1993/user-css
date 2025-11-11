@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           MS Teams - Customization
 @description    Provides some extra customization options for MS Teams.
-@version        2025.10.31.12.05
+@version        2025.11.11.09.33
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -78,11 +78,9 @@
 
   /* hide sidebar links */
   if (hide-sidebar-links) {
-    [data-testid="simple-collab-dnd-rail"] {
-      > span,
-      > hr {
-        display: none;
-      }
+    [data-testid="list-item-activities-mentions"],
+    [data-testid="list-item-activities-replies"] {
+      display: none;
     }
   }
 
