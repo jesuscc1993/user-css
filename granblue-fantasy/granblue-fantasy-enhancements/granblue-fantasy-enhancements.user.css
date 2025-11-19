@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2025.10.13.12.01
+@version        2025.11.19.15.51
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -1138,18 +1138,6 @@
 
 
   /* MISCELLANEOUS */
-  /* reduce gameplay extras padding */
-  .prt-campaign-banners {
-    padding: 48px 0 8px 15px;
-
-    .btn-banner-s {
-      margin: 0 !important;
-
-      img {
-        margin: 0 10px 6px 0;
-      }
-    }
-  }
 
   /* fix font sizes */
   .prt-supporter-info .prt-supporter-detail .prt-summon-skill.text-small {
@@ -1341,7 +1329,7 @@ regexp("https://game.granbluefantasy.jp/#sell/.*") {
     }
 
     .cnt-party .prt-bar {
-      background-position-y: -944px;
+      background-position-y: -1149px;
       height: 54px;
     }
 
