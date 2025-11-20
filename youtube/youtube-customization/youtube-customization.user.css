@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2025.10.16.11.05
+@version        2025.11.20.18.47
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -20,6 +20,7 @@
 @var text       video-controls-icons-scale    "Video controls icons scale"              1
 @var text       items-per-grid-row            "Items per grid row"                      3
 @var text       items-per-shelf-row           "Items per shelf row"                     5
+@var checkbox   controls-gradient-bg          "Add back controls gradient bg"           0
 @var checkbox   classic-progress-bar-colors   "Classic progress bar colors"             0
 @var checkbox   disable-progress-bar-gradient "Disable progress bar gradient"           0
 @var checkbox   reduced-sidebar-padding       "Reduce sidebar spacing"                  0
@@ -155,6 +156,20 @@
     }
   }
 
+  /* controls-gradient-bg */
+  if (controls-gradient-bg) {
+    .html5-video-player:not(.ytp-autohide):after {
+      background: linear-gradient(0deg, #000d 0%, #0000 10%, #0000 90%, #000d 100%);
+      content: "";
+      display: block;
+      height: 100%;
+      pointer-events: none;
+      position: absolute;
+      width: 100%;
+      z-index: 11;
+    }
+  }
+
   /* video controls bg */
   .ytPlayerQuickActionButtonsHost:not(:empty),
   .ytp-delhi-modern .ytp-chapter-title.ytp-button,
@@ -169,7 +184,6 @@
   .ytp-fullscreen-grid-expand-button {
     background: video-controls-bg;
   }
-
 
   /* video control icons scale */
   .ytp-chrome-controls svg {
