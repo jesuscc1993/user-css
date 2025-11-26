@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Tweaks
 @description    Tweaks certain aspects of the game.
-@version        2025.11.19.16.12
+@version        2025.11.26.18.35
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -476,15 +476,15 @@
     display: none !important;
   }
 
-  /* hide posessions in user card */
+  /* hide possessions in user card */
   .prt-user-info .prt-info-possessed:not(.box) {
     display: none;
   }
 
   /* hide crate filters */
-  .prt-present-type {
+  /*.prt-present-type {
     display: none;
-  }
+  }*/
 
   .prt-present-type + .prt-get-all {
     margin: 10px auto;
