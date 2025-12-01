@@ -1,0 +1,90 @@
+/* ==UserStyle==
+@name           PowerPyx Dark
+@description    Dark theme for PowerPyx.
+@version        2025.12.01.19.19
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+
+==/UserStyle== */
+@-moz-document domain("powerpyx.com") {
+  /* tweaks */
+  html {
+    --sidebar-w: 300px;
+  }
+
+  .content {
+    width: calc(99vw - var(--sidebar-w) * 2);
+  }
+
+  .site-inner .wrap {
+    margin: 0 0 0 var(--sidebar-w);
+    max-width: 100%;
+  }
+
+  .sidebar-primary {
+    width: var(--sidebar-w);
+    padding: 1rem;
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .ai_widget,
+  .code-block {
+    display: none;
+  }
+
+  /* theme */
+  body,
+  input,
+  select,
+  textarea {
+    font-family: sans-serif;
+  }
+
+  body,
+  .site-inner .wrap,
+  .header-search-container input {
+    background-color: #111;
+  }
+
+  input,
+  select,
+  textarea,
+  .breadcrumb,
+  .comment {
+    background-color: #fff1;
+    box-shadow: none;
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  input,
+  select,
+  textarea,
+  [style="color: #000000;"],
+  .site-inner .wrap {
+    color: #fff !important;
+  }
+
+  .powerpyx-blue .entry-title a,
+  .powerpyx-green .entry-title a,
+  .powerpyx-red .entry-title a {
+    color: #ccc;
+  }
+
+  .header-search-container .search-form input[type="submit"] {
+    color: transparent !important;
+  }
+
+  * {
+    border-color: #fff2 !important;
+  }
+}
