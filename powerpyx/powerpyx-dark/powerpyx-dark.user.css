@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           PowerPyx Dark
 @description    Dark theme for PowerPyx.
-@version        2025.12.01.19.19
+@version        2025.12.01.19.26
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -34,6 +34,12 @@
   .ai_widget,
   .code-block {
     display: none;
+  }
+
+  iframe[src*="youtube.com"] {
+    aspect-ratio: 16/9;
+    height: 450px;
+    width: auto;
   }
 
   /* theme */
