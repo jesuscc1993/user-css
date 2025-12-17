@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           MS Teams - Customization
 @description    Provides some extra customization options for MS Teams.
-@version        2025.11.17.11.48
+@version        2025.12.17.13.24
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -9,6 +9,8 @@
 
 @var text       font-scale                      "Font scale"                           1
 @var text       line-height                     "Line height"                          1.4286
+@var text       sidebar-font-scale              "Sidebar font scale"                   1
+@var text       sidebar-item-height             "Sidebar item height"                  32px
 @var checkbox   hide-alerts                     "Hide alerts"                          0
 @var checkbox   hide-sidebar-filters            "Hide sidebar filters"                 0
 @var checkbox   hide-sidebar-links              "Hide sidebar links (mentions, etc)"   0
@@ -23,31 +25,41 @@
 
 ==/UserStyle== */
 @-moz-document domain("teams.microsoft.com") {
-  sidebar-compensation = .8;
+  applyFontScale(scale) {
+    --fontSizeBase100: 10px * scale;
+    --fontSizeBase200: 12px * scale;
+    --fontSizeBase300: 14px * scale;
+    --fontSizeBase400: 16px * scale;
+    --fontSizeBase500: 20px * scale;
+    --fontSizeBase600: 24px * scale;
+    --lineHeightBase100: 14px * scale;
+    --lineHeightBase200: 16px * scale;
+    --lineHeightBase300: 20px * scale;
+    --lineHeightBase400: 22px * scale;
+    --lineHeightBase500: 28px * scale;
+    --lineHeightBase600: 32px * scale;
+  }
 
   .fui-FluentProviderr0 {
-    /* small compensation for the sidebar */
-    --fontSizeBase100: 10px * font-scale * sidebar-compensation;
-    --fontSizeBase200: 12px * font-scale;
-    --fontSizeBase300: 14px * font-scale;
-    --fontSizeBase400: 16px * font-scale;
-    --fontSizeBase500: 20px * font-scale;
-    --fontSizeBase600: 24px * font-scale;
-    /* small compensation for the sidebar */
-    --lineHeightBase100: 14px * font-scale * sidebar-compensation;
-    --lineHeightBase200: 16px * font-scale;
-    --lineHeightBase300: 20px * font-scale;
-    --lineHeightBase400: 22px * font-scale;
-    --lineHeightBase500: 28px * font-scale;
-    --lineHeightBase600: 32px * font-scale;
+    applyFontScale(font-scale);
     line-height: line-height;
-
-    [data-testid="list-item"] {
-      height: 32px * font-scale * sidebar-compensation;
-    }
 
     .ck.ck-editor__editable {
       font-size: var(--fontSizeBase300);
+    }
+  }
+
+  [data-tid="app-layout-area--mid-nav"] {
+    applyFontScale(sidebar-font-scale);
+
+    [data-testid="list-item"],
+    [data-inp="simple-collab-unified-chat-switch"] {
+      min-height: 0;
+      height: sidebar-item-height * sidebar-font-scale;
+    }
+
+    .fw5db7e {
+      padding-right: var(--spacingHorizontalS);
     }
   }
 
@@ -90,6 +102,7 @@
 
   /* hide external label */
   if (hide-external-label) {
+    .f16lhge,
     [data-tid="chat-list-federation-tag"] {
       display: none;
     }
