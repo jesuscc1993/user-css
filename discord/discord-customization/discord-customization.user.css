@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.11.03.12.07
+@version        2025.12.12.23.24
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -417,7 +417,7 @@
 
   /* hide user decorations */
   html when (@hide-user-decorations = 1) {
-    [class*="avatarDecoration_"] {
+    [class*="avatarDecoration"] {
       display: none;
     }
 
