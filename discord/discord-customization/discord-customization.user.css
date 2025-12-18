@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.12.18.09.51
+@version        2025.12.18.10.22
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -294,7 +294,7 @@
   }
 
   .visual-refresh when (@reduce-user-card-padding = 1) {
-    .container__37e49 {
+    [class*="sidebarResizeHandle"] + section [class*="container"]:has(> [class*="avatarWrapper"]) {
       height: auto;
       padding: 0 var(--space-xxs);
     }
