@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.12.18.10.24
+@version        2025.12.19.23.23
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -484,8 +484,8 @@
 
   /* reduced message spacing */
   html when (@reduce-message-spacing = 1) {
-    [class*="wrapper"][class*="compact"]:not([class*="mentioned_"]),
-    [class*="wrapper"][class*="cozy"]:not([class*="mentioned_"]) {
+    [class*="wrapper"][class*="compact"]:not([class*="-mentioned"]),
+    [class*="wrapper"][class*="cozy"]:not([class*="-mentioned"]) {
       padding-top: 0;
       padding-bottom: 0;
     }
@@ -500,16 +500,16 @@
 
   /* purple mentions and links */
   html when (@blurple-mentions = 1) {
-    [class*="mentioned_"]:before {
+    [class*="-mentioned"]:before {
       background-color: var(--brand);
     }
 
-    [class*="mentioned_"] {
+    [class*="-mentioned"] {
       background-color: var(--brand-10a);
     }
 
-    [class*="mentioned_"][class*="selected"],
-    &.mouse-mode.full-motion [class*="mentioned_"]:hover {
+    [class*="-mentioned"][class*="selected"],
+    &.mouse-mode.full-motion [class*="-mentioned"]:hover {
       background-color: var(--brand-05a) !important;
     }
   }
