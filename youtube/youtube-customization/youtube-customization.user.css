@@ -1,22 +1,22 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2025.11.20.18.47
+@version        2025.12.22.18.47
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
+@var color      sub-bg                        "Subtitle background color"               rgba(0, 0, 0, .72)
+@var color      video-controls-bg             "Video controls background"               rgba(0, 0, 0, .3)
 @var text       list-thumbnail-width          "List thumbnail width"                    100px
 @var text       drawer-width                  "App drawer width"                        240px
 @var text       grid-max-width                "Max grid width"                          1284px
-@var color      sub-bg                        "Subtitle background color"               rgba(0, 0, 0, .72)
 @var text       sub-border-radius             "Subtitle border radius"                  0px
 @var text       max-playlist-height           "Maximum playlist height"                 460px
 @var text       max-playlist-width            "Maximum playlist width"                  402px
 @var text       progress-bar-thickness        "Progress bar thickness"                  unset
 @var text       volume-bar-thickness          "Volume bar thickness"                    unset
-@var text       video-controls-bg             "Video controls background"               rgba(0, 0, 0, .3)
 @var text       video-controls-icons-scale    "Video controls icons scale"              1
 @var text       items-per-grid-row            "Items per grid row"                      3
 @var text       items-per-shelf-row           "Items per shelf row"                     5
