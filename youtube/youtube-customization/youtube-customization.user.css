@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2025.12.22.18.47
+@version        2025.12.24.10.38
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -13,8 +13,8 @@
 @var text       drawer-width                  "App drawer width"                        240px
 @var text       grid-max-width                "Max grid width"                          1284px
 @var text       sub-border-radius             "Subtitle border radius"                  0px
-@var text       max-playlist-height           "Maximum playlist height"                 460px
-@var text       max-playlist-width            "Maximum playlist width"                  402px
+@var text       playlist-width                "Playlist width"                          unset
+@var text       max-playlist-height           "Maximum playlist height"                 unset
 @var text       progress-bar-thickness        "Progress bar thickness"                  unset
 @var text       volume-bar-thickness          "Volume bar thickness"                    unset
 @var text       video-controls-icons-scale    "Video controls icons scale"              1
@@ -98,9 +98,17 @@
     width: var(--list-thumbnail-width);
   }
 
-  ytd-watch-flexy {
-    --ytd-watch-flexy-panel-max-height: max-playlist-height !important;
-    --ytd-watch-flexy-sidebar-width: max-playlist-width;
+  if (playlist-width != unset) {
+    ytd-watch-flexy {
+      --ytd-watch-flexy-sidebar-min-width: playlist-width !important;
+      --ytd-watch-flexy-sidebar-width: playlist-width !important;
+    }
+  }
+
+  if (max-playlist-height != unset) {
+    ytd-watch-flexy {
+      --ytd-watch-flexy-panel-max-height: max-playlist-height !important;
+    }
   }
 
   /* captions */
@@ -150,8 +158,8 @@
     .ytp-big-mode.ytp-delhi-horizontal-volume-controls {
       .ytp-volume-slider-handle::before,
       .ytp-volume-slider-handle::after {
-          height: volume-bar-thickness;
-          margin-top: (volume-bar-thickness * -0.5);
+        height: volume-bar-thickness;
+        margin-top: (volume-bar-thickness * -0.5);
       }
     }
   }
