@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.12.19.23.23
+@version        2025.12.25.16.05
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -433,14 +433,25 @@
   }
 
   /* hide ads and nitro */
+  #channels li:has([id*="skill-trees"]) {
+    &,
+    + [class*="sectionDivider"] {
+      display: none;
+    }
+
+    + [class*="sectionDivider"] + [class*="containerDefault"] {
+      padding-top: 0;
+    }
+  }
+
+  #channels ul > [class*="containerWithMargin"],
   [aria-label="Send a gift"],
   [class*="buttons"][class*="you"] > *:first-child,
-  [class*="container_"]:has(> [class*="contentContainer_"] > [class*="progressContainer_"]),
-  [class*="container_"]:has(> [data-list-item-id^="channels___skill-trees-"]),
   [href="/shop"],
   [href="/store"] {
     display: none;
   }
+  /*  */
 
   /* make "invisible" usernames readeable */
   [class*="name"][style="color: rgb(255, 255, 255);"] {
