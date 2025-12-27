@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           neoseeker - Customization
 @description    Provides some extra customization options for neoseeker.
-@version        2025.12.27.21.08
+@version        2025.12.27.21.14
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -73,6 +73,7 @@
             filter: invert(1) hue-rotate(180deg);
 
             svg,
+            iframe,
             img,
             video,
             .btn-primary {
@@ -96,10 +97,17 @@
     #column_right_top_content,
     #page_top_content,
     .section-spaced:has(> [href^="https://www.neoseeker.com/nplus"]),
-    [id^="Mobile_inline"],
-    div[style]:has(> [data-ad-unit-id]),
+    div[style]:not([id^="Mobile_inline"]):has(> [data-ad-unit-id]),
     div[style]:has(> script) {
       display: none;
+    }
+
+    [id^="Mobile_inline"] {
+      height: 0 !important;
+      margin: 0 !important;
+      min-height: 0 !important;
+      opacity: 0 !important;
+      padding: 0 !important;
     }
   }
 }
