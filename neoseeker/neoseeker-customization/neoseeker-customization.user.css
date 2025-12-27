@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           neoseeker - Customization
 @description    Provides some extra customization options for neoseeker.
-@version        2025.12.27.20.59
+@version        2025.12.27.21.08
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -74,7 +74,8 @@
 
             svg,
             img,
-            video {
+            video,
+            .btn-primary {
               filter: invert(1) hue-rotate(180deg);
             }
           }
