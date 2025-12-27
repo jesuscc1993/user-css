@@ -9,71 +9,149 @@ Requires the [Stylus](https://github.com/openstyles/stylus#releases) userstyle l
 
 # List
 
+- [atlassian/atlassian-darker-dark](atlassian/atlassian-darker-dark)
+
+---
+
+- [bsky/bsky-tweaks](bsky/bsky-tweaks)
+
+---
+
+- [chatgpt/chatgpt-customization](chatgpt/chatgpt-customization.user.css)
+
+---
+
 - [chrome/chrome-dark-scrollbar-and-audio-player](chrome/chrome-dark-scrollbar-and-audio-player)
-<hr>
+
+---
 
 - [coverage/coverage-dark](coverage/coverage-dark)
-<hr>
+
+---
 
 - [discord/discord-customization](discord/discord-customization)
-<hr>
+
+---
 
 - [duolingo/duolingo-customization](duolingo/duolingo-customization)
 - [duolingo/duolingo-dark](duolingo/duolingo-dark)
-<hr>
+
+---
 
 - [fanbox/fanbox-customization](fanbox/fanbox-customization)
-<hr>
+
+---
 
 - [fanfox/fanfox-fullscreen-reader](fanfox/fanfox-fullscreen-reader)
-<hr>
+
+---
 
 - [firefox/firefox-dark-scrollbar](firefox/firefox-dark-scrollbar)
-<hr>
+
+---
+
+- [gamefaqs/gamefaqs-dark](gamefaqs/gamefaqs-dark)
+
+---
 
 - [github/github-customization](github/github-customization)
 - [github/github-less-contrasty-dark-theme](github/github-less-contrasty-dark-theme)
-<hr>
+
+---
 
 - [global/media-transformations](global/media-transformations)
-<hr>
+
+---
 
 - [gmail/darker-gmail](gmail/darker-gmail)
-<hr>
 
+---
+
+- [granblue-fantasy/gbf-wiki-dark](granblue-fantasy/gbf-wiki-dark)
 - [granblue-fantasy/granblue-fantasy-enhancements](granblue-fantasy/granblue-fantasy-enhancements)
 - [granblue-fantasy/granblue-fantasy-tweaks](granblue-fantasy/granblue-fantasy-tweaks)
-<hr>
+
+---
 
 - [greasyfork/greasyfork-dark](greasyfork/greasyfork-dark)
-<hr>
 
-<!--
-- [jira/jira-7-dark](jira/jira-7-dark) (requires filling up your Jira instance's URL manually)
-<hr>
--->
+---
+
+- [holo-no-suika/holo-no-suika-customization](holo-no-suika/holo-no-suika-customization)
+
+---
+
+- [icomoon/icomoon-local-dark](icomoon/icomoon-local-dark)
+- [icomoon/icomoon-tweaks](icomoon/icomoon-tweaks)
+
+---
+
+- [jira/jira-7-dark](jira/jira-7-dark)
+- [jira/jira-aui-6-theme-customization](jira/jira-aui-6-theme-customization)
+
+---
 
 - [nakama.social/nakama.social-personalizacion](nakama.social/nakama.social-personalizacion)
-<hr>
+
+---
+
+- [neoseeker/neoseeker-customization](neoseeker/neoseeker-customization)
+
+---
 
 - [nyaa.si/nyaa.si-customization](nyaa.si/nyaa.si-customization)
-<hr>
+- [nyaa.si/nyaa.si-tweaks](nyaa.si/nyaa.si-tweaks)
+
+---
+
+- [pixlr/pixlr-tweaks](pixlr/pixlr-tweaks)
+
+---
+
+- [powerpyx/powerpyx-dark](powerpyx/powerpyx-dark)
+
+---
 
 - [reddit/reddit-darker-dark](reddit/reddit-darker-dark)
-<hr>
+
+---
+
+- [spotify/spotify-darker](spotify/spotify-darker)
+- [spotify/spotify-tweaks](spotify/spotify-tweaks)
+
+---
+
+- [steam/steam-tweaks](steam/steam-tweaks)
+
+---
 
 - [steamdb/steamdb-big-capsules](steamdb/steamdb-big-capsules)
-<hr>
+
+---
 
 - [stylus/stylus-codemirror-dark-plus](stylus/stylus-codemirror-dark-plus)
 - [stylus/stylus-customization](stylus/stylus-customization)
 - [stylus/stylus-dark](stylus/stylus-dark)
-<hr>
+
+---
+
+- [teams/teams-customization](teams/teams-customization.user.css)
+
+---
+
+- [twitter/twitter-tweaks](twitter/twitter-tweaks)
+
+---
 
 - [whatsapp/whatsapp-selective-scaling](whatsapp/whatsapp-selective-scaling)
-<hr>
+
+---
 
 - [youtube/youtube-big-text](youtube/youtube-big-text)
+- [youtube/youtube-bigger-text](youtube/youtube-bigger-text)
 - [youtube/youtube-customization](youtube/youtube-customization)
 - [youtube/youtube-darker](youtube/youtube-darker)
 - [youtube/youtube-fullscreen-theater](youtube/youtube-fullscreen-theater)
+- [youtube/youtube-fullscreen-theater-mobile](youtube/youtube-fullscreen-theater-mobile)
+- [youtube/youtube-hide-watched-videos](youtube/youtube-hide-watched-videos)
+- [youtube/youtube-tweaks](youtube/youtube-tweaks)
