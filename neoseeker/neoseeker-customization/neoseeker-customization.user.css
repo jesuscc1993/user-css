@@ -1,0 +1,104 @@
+/* ==UserStyle==
+@name           neoseeker - Customization
+@description    Provides some extra customization options for neoseeker.
+@version        2025.12.27.20.59
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+@preprocessor   stylus
+
+@var  text      content-width                       "Content width"                                1060px
+@var  text      sidebar-width                       "Sidebar width"                                300px
+@var  checkbox  alternate-content-centering         "Alternate content centering"                  0
+@var  checkbox  dark-mode                           "Dark mode"                                    0
+@var  checkbox  hide-adds                           "Hide adds"                                    1
+
+==/UserStyle== */
+@-moz-document domain("neoseeker.com") {
+  html body {
+    @media only screen and (min-width: 1200px) {
+      #maincolumn,
+      .container,
+      .navbar-static-top .container,
+      .navbar-fixed-top .container,
+      .navbar-fixed-bottom .container,
+      .span16 {
+        width: content-width;
+      }
+
+      .row > .span11 {
+        width: unquote("calc(" + content-width + " - " + sidebar-width + " - 20px)");
+      }
+
+      #right_content_span {
+        width: sidebar-width;
+      }
+    }
+  }
+
+  if (alternate-content-centering) {
+    #maincolumn {
+      padding-left: (sidebar-width);
+    }
+
+    p:has(> .image) {
+      text-align: center;
+    }
+  }
+
+  if (dark-mode) {
+    body {
+      background: #111;
+
+      #crumbs {
+        filter: invert(1) hue-rotate(180deg);
+      }
+
+      #maincolumn {
+        &,
+        > .container {
+          background-color: transparent;
+          border-color: transparent;
+        }
+
+        .section-list,
+        .section-list-ordered,
+        .section-list-img-bullets {
+          background-color: transparent;
+        }
+
+        .column-main,
+        #wiki-sidebar {
+          > *:not(.section-info-inverse) {
+            filter: invert(1) hue-rotate(180deg);
+
+            svg,
+            img,
+            video {
+              filter: invert(1) hue-rotate(180deg);
+            }
+          }
+
+          .section-info-inverse {
+            border-color: transparent;
+
+            .section-header {
+              filter: invert(1) hue-rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  if (hide-adds) {
+    #column_right_top_content,
+    #page_top_content,
+    .section-spaced:has(> [href^="https://www.neoseeker.com/nplus"]),
+    [id^="Mobile_inline"],
+    div[style]:has(> [data-ad-unit-id]),
+    div[style]:has(> script) {
+      display: none;
+    }
+  }
+}
