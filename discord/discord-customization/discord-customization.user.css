@@ -1,47 +1,45 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.12.25.16.05
+@version        2025.12.27.20.06
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   less
 
 @var text font-family                   "Font family"                 "gg sans","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif
-@var text min-sidebar_width             "Min sidebar width"           300px
-@var text max-sidebar_width             "Max sidebar width"           300px
-@var text channel-padding               "Channel padding (sidebar)"   4px
-@var text category-spacing              "Category spacing (sidebar)"  16px
+@var text avatar-scale                  "Avatar scale"                unset
+@var text avatar-zoom                   "Avatar zoom (hover)"         unset
 @var text block-emoji-size              "Block emoji size"            unset
 @var text block-emoji-zoom              "Block emoji zoom (hover)"    unset
 @var text inline-emoji-size             "Inline emoji size"           unset
 @var text inline-emoji-zoom             "Inline emoji zoom (hover)"   unset
-@var text reaction-emoji-size           "Reaction emoji size"         unset
-@var text avatar-scale                  "Avatar scale"                unset
-@var text avatar-zoom                   "Avatar zoom (hover)"         unset
+@var text category-spacing              "Category spacing (sidebar)"  unset
+@var text custom-guild-sidebar-width    "Custom guild sidebar width"  unset
+@var text custom-member-list-width      "Custom member list width"    unset
 @var text group-spacing                 "Message groups spacing"      unset
-@var text li-margin                     "Vertical list item margin"   4px
+@var text li-margin                     "Vertical list item margin"   unset
+@var text reaction-emoji-size           "Reaction emoji size"         unset
 @var text transition                    "Transition duration"         150ms
-@var text custom-guild-list-padding     "Custom guild list padding"   16px
 @var checkbox blurple-mentions          "Purple mentions and links"   0
+@var checkbox darker-guildnav           "Darker server list"          0
 @var checkbox float-role-decorators     "Float role decorators"       0
 @var checkbox full-width-embeds         "Full width embeds"           0
+@var checkbox monochrome-bg             "Monochrome background"       0
 @var checkbox reduce-message-spacing    "Reduce message spacing"      0
 @var checkbox reduce-user-card-padding  "Reduce user card padding"    0
 @var checkbox restore-blurple           "Restore classic blurple"     0
 @var checkbox round-server-icons        "Round server icons"          0
+@var checkbox same-color-sidebars       "Same color sidebars"         0
+@var checkbox server-icon-bgs           "Server icon backgrounds"     0
 @var checkbox disable-redesign-borders  "Disable redesign borders"    0
+@var checkbox hide-channel-badges       "Hide channel badges"         0
 @var checkbox hide-download-icon        "Hide download icon"          0
 @var checkbox hide-events               "Hide events (sidebar)"       0
-@var checkbox hide-top-bar              "Hide top bar"                0
 @var checkbox hide-server-banners       "Hide server banners"         0
-@var checkbox hide-voice-channels       "Hide voice channels"         0
-@var checkbox hide-channel-badges       "Hide channel badges"         0
+@var checkbox hide-top-bar              "Hide top bar"                0
 @var checkbox hide-user-decorations     "Hide user decorations"       0
-@var checkbox darker-guildnav           "Darker server list"          0
-@var checkbox same-color-sidebars       "Same color sidebars"         0
-@var checkbox monochrome-bg             "Monochrome background"       0
-@var checkbox server-icon-bgs           "Server icon backgrounds"     0
+@var checkbox hide-voice-channels       "Hide voice channels"         0
 
 ==/UserStyle== */
 @-moz-document domain("discord.com") {
@@ -53,16 +51,9 @@
     --inline-emoji-size: @inline-emoji-size;
     --inline-emoji-zoom: @inline-emoji-zoom;
     --reaction-emoji-size: @reaction-emoji-size;
-    --channel-padding: @channel-padding;
-    --custom-category-channel-space-before-category: @category-spacing;
     --font-primary: @font-family;
     --group-spacing: @group-spacing;
-    --max-sidebar_width: @max-sidebar_width;
-    --min-sidebar_width: @min-sidebar_width;
-    --li-margin: @li-margin;
     --transition: @transition;
-    --sidebar_width: max(var(--min-sidebar_width), var(--max-sidebar_width));
-    --custom-guild-list-padding: @custom-guild-list-padding;
   }
 
   html {
@@ -70,79 +61,35 @@
   }
 
   body {
-    --custom-guild-sidebar-width: calc(var(--sidebar_width) + var(--custom-guild-list-width)) !important;
-  }
-
-  /* responsive columns */
-  [class*="content_"] {
-    /*[class*="sidebar_"]:not([class*="hidden_"]),*/
-    [class*="membersWrap_"] [class*="members_"] {
-      width: var(--sidebar_width) !important;
+    & when not (@category-spacing = unset) {
+      --custom-category-channel-space-before-category: @category-spacing !important;
     }
-
-    [class*="membersWrap_"] {
-      min-width: var(--min-sidebar_width);
+    & when not (@custom-member-list-width = unset) {
+      --custom-member-list-width: @custom-member-list-width !important;
     }
-
-    [class*="nowPlayingColumn_"] {
-      max-width: var(--sidebar_width);
-      min-width: var(--min-sidebar_width);
-    }
-
-    [class*="sidebar_"] [class*="channel"],
-    [class*="membersWrap_"] [class*="member_"] {
-      max-width: 100% !important;
-    }
-
-    [class*="bannerImage_"],
-    [class*="bannerImage_"] [class^="bannerImg"],
-    [class*="bannerImage_"] [class^="bannerImg"]:before {
-      width: 100%;
-    }
-
-    [class*="sidebar_"] [class*="panels_"] [class*="container_"] [class*="avatarWrapper_"] {
-      flex: 1;
-    }
-  }
-
-  /* channel padding */
-  [class*="sidebar_"] {
-    [class*="iconVisibility"]:not([class*="wrapperCommon"]) a {
-      padding: var(--channel-padding) var(--space-xs);
-
-      [class*="children"],
-      + [class*="children"] {
-        margin-top: 0;
-      }
-    }
-
-    [class*="iconVisibility"] > [class*="link"] {
-      padding: var(--channel-padding) var(--space-xs);
-    }
-
-    #channels ul {
-      height: auto !important;
+    & when not (@custom-guild-sidebar-width = unset) {
+      --custom-guild-sidebar-width: @custom-guild-sidebar-width !important;
     }
   }
 
   /* HIDE UNLESS HOVERED */
   /* common setup */
-  /*[class*="content_"] {
+  /*[class*="content"] {
     [class*="guilds"] {
       z-index: 102;
     }
 
-    [class*="sidebar_"] {
+    [class*="sidebar"] {
       height: 100%;
     }
 
-    [class*="membersWrap_"] {
+    [class*="membersWrap"] {
       right: 0;
       height: calc(100vh - 50px);
     }
 
-    [class*="sidebar_"],
-    [class*="membersWrap_"] {
+    [class*="sidebar"],
+    [class*="membersWrap"] {
       transition: var(--transition);
       transition-delay: 0.2s;
       z-index: 101;
@@ -151,7 +98,7 @@
 
   /* hide server members unless hovered */
   /*@media (max-width: 1152px) {
-    [class*="membersWrap_"] {
+    [class*="membersWrap"] {
       position: absolute;
 
       &:not(:hover) {
@@ -162,7 +109,7 @@
 
   /* hide channels unless hovered */
   /*@media (max-width: 800px) {
-    [class*="sidebar_"] {
+    [class*="sidebar"] {
       position: absolute;
 
       &:not(:hover) {
@@ -210,12 +157,12 @@
   html when not (@avatar-zoom = unset) {
     [class*="messageListItem"] img[class*="-avatar "] {
       &,
-      & + img[class*="avatarDecoration_"] {
+      & + img[class*="avatarDecoration"] {
         transition: var(--transition);
       }
 
       &:hover,
-      &:hover + img[class*="avatarDecoration_"] {
+      &:hover + img[class*="avatarDecoration"] {
         transform: scale(var(--avatar-zoom)) !important;
       }
     }
@@ -257,8 +204,8 @@
   }
 
   /* emoji zoom */
-  [class*="messagesWrapper_"] {
-    [class*="messageContent_"] {
+  [class*="messagesWrapper"] {
+    [class*="messageContent"] {
       overflow: visible;
     }
 
@@ -278,7 +225,7 @@
   }
 
   html when not (@inline-emoji-zoom = unset) {
-    [class*="messagesWrapper_"] {
+    [class*="messagesWrapper"] {
       [class*="messageContent"] img.emoji:hover {
         transform: scale(var(--inline-emoji-zoom));
       }
@@ -286,7 +233,7 @@
   }
 
   html when not (@block-emoji-zoom = unset) {
-    [class*="messagesWrapper_"] {
+    [class*="messagesWrapper"] {
       img.emoji.jumboable:hover {
         transform: scale(var(--block-emoji-zoom));
       }
@@ -371,17 +318,17 @@
 
   /* hide server banners */
   html when (@hide-server-banners = 1) {
-    [class*="bannerVisible_"] {
-      > [class*="header_"] {
+    [class*="bannerVisible"] {
+      > [class*="header"] {
         border-bottom: 1px solid var(--border-subtle) !important;
         border-top: 1px solid transparent !important;
       }
 
-      [class*="headerEllipseForeground_"] {
+      [class*="headerEllipseForeground"] {
         background: none !important;
       }
 
-      [class*="animatedContainer_"]:has([class*="bannerImage_"]) {
+      [class*="animatedContainer"]:has([class*="bannerImage"]) {
         display: none;
       }
 
@@ -409,8 +356,8 @@
 
   /* hide channel badges */
   html when (@hide-channel-badges = 1) {
-    [class*="guilds_"] [class*="wrapper"] mask,
-    [class*="guilds_"] [class*="upperBadge"] {
+    [class*="guilds"] [class*="wrapper"] mask,
+    [class*="guilds"] [class*="upperBadge"] {
       display: none;
     }
   }
@@ -475,16 +422,16 @@
   }
 
   /* custom list margin */
-  [class*="markup"] li {
-    @margin: calc(var(--li-margin) / 2);
+  [class*="markup"] li when not (@li-margin = unset) {
+    @margin: (@li-margin / 2);
     margin-top: @margin;
     margin-bottom: @margin;
   }
 
   /* full width embeds */
-  [class*="embedWrapper_"] when (@full-width-embeds = 1) {
+  [class*="embedWrapper"] when (@full-width-embeds = 1) {
     &,
-    [class*="gridContainer_"] {
+    [class*="gridContainer"] {
       max-width: 100% !important;
     }
 
@@ -638,16 +585,16 @@
 
   /* same color sidebars */
   html when (@same-color-sidebars = 1) {
-    [class*="membersWrap_"] [class*="members_"] {
+    [class*="membersWrap"] [class*="members"] {
       &,
-      [class*="member_"] {
+      [class*="member"] {
         background: var(--bg-overlay-4, var(--background-base-lowest));
       }
     }
   }
 
   /* fixes */
-  [class*="repliedTextPreview_"] {
+  [class*="repliedTextPreview"] {
     max-height: 1.25rem;
   }
 }
