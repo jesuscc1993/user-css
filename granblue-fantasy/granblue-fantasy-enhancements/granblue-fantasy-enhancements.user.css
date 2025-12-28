@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2025.11.19.15.51
+@version        2025.12.28.19.45
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -91,7 +91,18 @@
   }
 
   #mobage-game-container {
+    --zoom: 1;
+    --counter-zoom: 1;
     position: absolute !important;
+
+    &[style*="zoom: 1.5"] {
+      --zoom: 1.5;
+      --counter-zoom: 0.75;
+    }
+    &[style*="zoom: 2"] {
+      --zoom: 2;
+      --counter-zoom: 0.5;
+    }
   }
 
   /* hide sidebar */
@@ -150,7 +161,8 @@
     }
 
     .prt-popup-body {
-      max-height: calc(100% - 180px);
+      max-height: calc(var(--counter-zoom) * (100vh - 300px));
+      overflow: auto;
     }
 
     #pop {
@@ -168,10 +180,6 @@
     #pop-deck,
     #pop {
       z-index: 999998;
-    }
-
-    .prt-popup-body {
-      overflow: auto;
     }
 
     .pop-sort-change.pop-usual .prt-popup-body .txt-popup-body,
