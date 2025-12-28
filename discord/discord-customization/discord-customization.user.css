@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.12.28.16.20
+@version        2025.12.28.21.23
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -14,12 +14,12 @@
 @var text block-emoji-zoom              "Block emoji zoom (hover)"    unset
 @var text inline-emoji-size             "Inline emoji size"           unset
 @var text inline-emoji-zoom             "Inline emoji zoom (hover)"   unset
+@var text reaction-emoji-size           "Reaction emoji size"         unset
 @var text category-spacing              "Category spacing (sidebar)"  unset
 @var text custom-guild-sidebar-width    "Custom guild sidebar width"  unset
 @var text custom-member-list-width      "Custom member list width"    unset
 @var text group-spacing                 "Message groups spacing"      unset
 @var text li-margin                     "Vertical list item margin"   unset
-@var text reaction-emoji-size           "Reaction emoji size"         unset
 @var text transition                    "Transition duration"         150ms
 @var checkbox blurple-mentions          "Purple mentions and links"   0
 @var checkbox darker-guildnav           "Darker server list"          0
@@ -194,9 +194,10 @@
 
       [class*="reactionBtn"] {
         height: auto;
+        line-height: 0;
 
         svg {
-          --compensation: 8px;
+          --compensation: 5px;
           width: calc(var(--reaction-emoji-size) - var(--compensation)) !important;
           height: calc(var(--reaction-emoji-size) - var(--compensation)) !important;
         }
