@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Granblue Fantasy Enhancements
 @description    Allows the customization of the game's layout and responsive behavior.
-@version        2025.12.28.19.45
+@version        2025.12.20.00.52
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -1332,10 +1332,6 @@ regexp("https://game.granbluefantasy.jp/#sell/.*") {
 @-moz-document regexp("https://game.granbluefantasy.jp/#party/.*") {
   /* hide auto select */
   if (hide-auto-select) {
-    .cnt-party .prt-contents {
-      height: 400px;
-    }
-
     .cnt-party .prt-bar {
       background-position-y: -1149px;
       height: 54px;
