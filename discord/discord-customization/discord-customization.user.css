@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.12.27.20.08
+@version        2025.12.28.16.20
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -174,21 +174,38 @@
     img.emoji {
       margin: 1px 0;
       min-height: 0;
+
+      &:not(.jumboable) when not (@inline-emoji-size = unset) {
+        width: var(--inline-emoji-size) !important;
+        height: var(--inline-emoji-size) !important;
+      }
+
+      &.jumboable when not (@block-emoji-size = unset) {
+        width: var(--block-emoji-size) !important;
+        height: var(--block-emoji-size) !important;
+      }
     }
 
-    img.emoji:not(.jumboable) when not (@inline-emoji-size = unset) {
-      width: var(--inline-emoji-size) !important;
-      height: var(--inline-emoji-size) !important;
+    & when not (@reaction-emoji-size = unset) {
+      [class*="reactionInner"] img.emoji when not (@reaction-emoji-size = unset) {
+        width: var(--reaction-emoji-size) !important;
+        height: var(--reaction-emoji-size) !important;
+      }
+
+      [class*="reactionBtn"] {
+        height: auto;
+
+        svg {
+          --compensation: 8px;
+          width: calc(var(--reaction-emoji-size) - var(--compensation)) !important;
+          height: calc(var(--reaction-emoji-size) - var(--compensation)) !important;
+        }
+      }
     }
 
-    img.emoji.jumboable when not (@block-emoji-size = unset) {
-      width: var(--block-emoji-size) !important;
-      height: var(--block-emoji-size) !important;
-    }
-
-    [class*="reactionInner"] img.emoji when not (@reaction-emoji-size = unset) {
-      width: var(--reaction-emoji-size) !important;
-      height: var(--reaction-emoji-size) !important;
+    [class*="repliedTextContent "] img.emoji {
+      width: 1em !important;
+      height: 1em !important;
     }
 
     [class*="scrollable"] {
