@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           nyaa.si - Customization
 @description    Provides some extra customization options.
-@version        2024.04.02.18.50
+@version        2025.12.29.18.46
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -10,6 +10,7 @@
 @var  text      table-font-size   "Table font size"                              1em
 @var  text      icons-font-size   "Icons size"                                   1em
 @var  text      cell-padding      "Cell padding"                                 4px
+@var  text      avatar-size       "Avatar size"                                  unset
 @var  checkbox  wide-search       "Wide searchbar"                               0
 @var  checkbox  custom-style      "Alternative style"                            0
 @var  checkbox  custom-categories "Custom category icons (live action excluded)" 0
@@ -121,6 +122,18 @@
       font-size: icons-font-size;
       position: relative;
       top: 2px;
+    }
+  }
+
+  if (avatar-size != unset) {
+    #comments {
+      .col-md-2 {
+        width: auto;
+
+        .avatar {
+          max-width: avatar-size;
+        }
+      }
     }
   }
 
