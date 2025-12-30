@@ -490,8 +490,19 @@
     margin: 10px auto;
   }
 
-  /* hide unwanted elements in the results screen */
+  /* results screen */
   #cnt-result {
+    /* more columns */
+    .prt-item-list .lis-treasure {
+      margin-top: -4px;
+      width: 44px;
+
+      .img-treasure-item {
+        width: 100%;
+      }
+    }
+
+    /* hide unwanted elements in the results screen */
     .auto-recycle-reward,
     .cnt-auto-recycle-reward,
     .cnt-information-text,
