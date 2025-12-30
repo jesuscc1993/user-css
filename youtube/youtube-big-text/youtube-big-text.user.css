@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Big Text
 @description    Increases YouTube's font size; useful when watching from a distance.
-@version        2025.12.12.10.17
+@version        2025.12.30.21.03
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -104,11 +104,11 @@
   #vote-count-middle.ytd-comment-engagement-bar,
   .badge-shape-wiz,
   .metadata-owner.ytd-playlist-header-renderer,
+  .yt-content-metadata-view-model__metadata-text-max-lines-2 ytd-grid-playlist-renderer #video-title.ytd-grid-playlist-renderer,
   .ytCommentFilterContextHost,
   .ytPlayerOverlayVideoDetailsRendererSubtitle ytd-grid-playlist-renderer #video-title.ytd-grid-playlist-renderer,
   .ytd-comment-thread-renderer.less-button,
   .ytd-comment-thread-renderer.more-button,
-  ytd-grid-playlist-renderer #video-title.ytd-grid-playlist-renderer,
   ytd-grid-video-renderer #video-title.yt-simple-endpoint.ytd-grid-video-renderer,
   ytd-grid-video-renderer #video-title.ytd-grid-video-renderer,
   ytd-playlist-panel-renderer[modern-panels]:not([hide-header-text]) .title.ytd-playlist-panel-renderer,
@@ -130,6 +130,7 @@
   #thumbnail-container,
   #video-title-link.ytd-rich-grid-media yt-formatted-string,
   #vote-count-middle.ytd-comment-action-buttons-renderer,
+  .yt-lockup-metadata-view-model--standard .yt-lockup-metadata-view-model__title,
   .yt-lockup-view-model__content-image .yt-badge-shape,
   .ytPlayerOverlayVideoDetailsRendererSingleLineTitle.ytPlayerOverlayVideoDetailsRendererTitle,
   .ytThumbnailBottomOverlayViewModelHost,
