@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2025.12.28.21.23
+@version        2026.01.23.23.23
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -326,12 +326,12 @@
   .visual-refresh [data-fullscreen="false"]:not(:has([class*="notice"])) when (@hide-top-bar = 1) {
     grid-template-rows: [titleBarEnd] min-content [noticeEnd] 1fr [end];
 
-    > [class*="-bar "] {
+    > [class*="bar"] {
       display: none;
     }
 
     [class*="itemsContainer"] {
-      padding-top: var(--space-xs);
+      padding-top: var(--space-sm);
     }
   }
 
