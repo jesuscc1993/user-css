@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2025.12.24.10.38
+@version        2026.01.24.10.10
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -167,7 +167,7 @@
   /* controls-gradient-bg */
   if (controls-gradient-bg) {
     .html5-video-player:not(.ytp-autohide):after {
-      background: linear-gradient(0deg, #000d 0%, #0000 10%, #0000 90%, #000d 100%);
+      background: linear-gradient(0deg, #000d 0%, #0000 8%, #0000 92%, #000d 100%);
       content: "";
       display: block;
       height: 100%;
