@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2026.01.30.18.12
+@version        2026.02.08.03.59
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -421,16 +421,19 @@
 
   /* make "invisible" usernames readeable */
   [class*="name"][style="color: rgb(255, 255, 255);"] {
-    color: #747f8d !important;
+    color: #607d8b !important;
   }
 
+  [class*="name"][style="color: rgb(0, 0, 0);"],
+  [class*="name"][style="color: rgb(8, 2, 0);"],
+  [class*="name"][style="color: rgb(1, 9, 20);"],
   [class*="name"][style="color: rgb(54, 57, 62);"],
   [class*="name"][style="color: rgb(54, 57, 63);"] {
-    color: #98a8b3 !important;
+    color: #95a5a6 !important;
   }
 
   /* hide folder when set to match background */
-  [class*="folderIconWrapper"] svg[style="color: rgb(47, 49, 54);"] {
+  [class*="folderGroup"][style="--custom-folder-color: #232428;"] [class*="folderIconWrapper"] svg {
     display: none;
   }
 
