@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           MS Teams - Customization
 @description    Provides some extra customization options for MS Teams.
-@version        2025.12.17.13.24
+@version        2026.03.03.10.50
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -24,7 +24,7 @@
 @var checkbox   reduced-message-padding         "Reduced message padding"              0
 
 ==/UserStyle== */
-@-moz-document domain("teams.microsoft.com") {
+@-moz-document domain("teams.microsoft.com"), domain("teams.cloud.microsoft") {
   applyFontScale(scale) {
     --fontSizeBase100: 10px * scale;
     --fontSizeBase200: 12px * scale;
@@ -179,9 +179,9 @@
   /* reduced message padding */
   if (reduced-message-padding) {
     [data-tid="chat-pane-message"]:has(p) {
-      padding: 0.45rem 1rem 0.65rem;
+      padding: 0.3rem .8rem 0.5rem;
 
-      &:has([id^="content-"] > blockquote: only-child) {
+      &:has([id^="content-"] > blockquote:only-child) {
         padding: 0;
 
         blockquote {
