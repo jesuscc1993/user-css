@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           MS Teams - Customization
 @description    Provides some extra customization options for MS Teams.
-@version        2026.03.03.10.50
+@version        2026.03.27.12.03
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -56,6 +56,10 @@
     [data-inp="simple-collab-unified-chat-switch"] {
       min-height: 0;
       height: sidebar-item-height * sidebar-font-scale;
+    }
+
+    .f1nxs5xn {
+      min-height: sidebar-item-height;
     }
 
     .fw5db7e {
