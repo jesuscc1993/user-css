@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Nakama - Personalización
 @description    Permite la configuración de ciertos aspectos visuales en Nakama.
-@version        2026.04.04.18.32
+@version        2026.04.04.18.39
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -26,19 +26,15 @@
     max-width: @content-width;
   }
 
-  .post,
+  .post {
+    border-radius: @border-radius-lg;
+  }
+
   .media-scroller li > *,
   .media-scroller li img,
   .media-scroller li audio,
   .media-scroller li video,
   .media-scroller li iframe {
-    border-radius: @border-radius-lg;
-  }
-
-  .media-scroller audio,
-  .media-scroller iframe,
-  .media-scroller img,
-  .media-scroller video {
     max-height: @max-attachment-height;
     border-radius: @border-radius-md;
   }
