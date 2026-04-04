@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Nakama - Personalización
 @description    Permite la configuración de ciertos aspectos visuales en Nakama.
-@version        2026.04.04.18.22
+@version        2026.04.04.18.32
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -27,7 +27,11 @@
   }
 
   .post,
-  .media-scroller iframe[id^="twitter-widget"] {
+  .media-scroller li > *,
+  .media-scroller li img,
+  .media-scroller li audio,
+  .media-scroller li video,
+  .media-scroller li iframe {
     border-radius: @border-radius-lg;
   }
 
@@ -80,6 +84,17 @@
   /* fix twitter embeds */
   .media-scroller {
     @tweet-width: calc(@content-width - 33.98px);
+
+    li:has(iframe[id^="twitter-widget"]) {
+      > *,
+      iframe {
+        border-radius: 12px;
+      }
+    }
+
+    .twitter-tweet {
+      margin: 0 auto !important;
+    }
 
     &[data-length="1"] .twitter-tweet iframe {
       width: @tweet-width !important;
