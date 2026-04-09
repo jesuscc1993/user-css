@@ -42,11 +42,11 @@
   .config-body select {
     box-sizing: border-box;
 
-    & when not (@input-width =unset) {
+    & when not (@input-width = unset) {
       max-width: none;
       width: @input-width;
     }
-    & when not (@input-height =unset) {
+    & when not (@input-height = unset) {
       max-height: none;
       height: @input-height;
     }
