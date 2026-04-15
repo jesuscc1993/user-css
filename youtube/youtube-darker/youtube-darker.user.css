@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Darker
 @description    Darker theme for YouTube.
-@version        2026.04.16.01.19
+@version        2026.04.16.01.20
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -9,7 +9,6 @@
 
 @var color      primary-bg-color            "Primary background color"              #000
 @var color      additive-bg-color           "Additive background color"             #fff
-@var checkbox   remove-header-gradient      "Remove header gradient"                1
 @var checkbox   remove-playlist-gradient    "Remove playlist gradient"              1
 @var checkbox   remove-cinematics-gradient  "Remove video gradient"                 1
 
@@ -62,7 +61,7 @@
     }
 
     .ytContextualSheetLayoutHost {
-      background-color: var(--yt-sys-color-baseline--menu-background);
+      background-color: var(--primary-bg-color-10);
     }
 
     yt-notification-action-renderer {
@@ -79,13 +78,6 @@
 
       &:hover {
         background-color: var(--additive-bg-color-20);
-      }
-    }
-
-    if (remove-header-gradient) {
-      ytd-masthead[frosted-glass="without-chipbar"] #background.ytd-masthead {
-        background: var(--primary-bg-color-00);
-        backdrop-filter: none;
       }
     }
 
