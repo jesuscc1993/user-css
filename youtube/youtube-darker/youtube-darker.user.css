@@ -1,27 +1,32 @@
 /* ==UserStyle==
 @name           YouTube - Darker
 @description    Darker theme for YouTube.
-@version        2026.04.15.12.08
+@version        2026.04.16.00.59
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var color      primary-bg-color            "Primary background color"              #000
-@var color      secondary-bg-color          "Secondary background color"            rgba(255, 255, 255, 0.05)
+@var color      primary-bg-color-00         "Primary background color"              rgb(0, 0, 0)
+@var color      additive-bg-color           "Additive background color"             rgba(255, 255, 255, 0.05)
 @var checkbox   remove-header-gradient      "Remove header gradient"                1
 @var checkbox   remove-playlist-gradient    "Remove playlist gradient"              1
 @var checkbox   remove-cinematics-gradient  "Remove video gradient"                 1
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
-  html[darker-dark-theme][dark],
+  [dark],
   [darker-dark-theme] [dark],
   html[dark],
-  [dark] {
-    --yt-sys-color-baseline--base-background: primary-bg-color;
-    --yt-sys-color-baseline--additive-background: secondary-bg-color;
+  html[darker-dark-theme][dark] {
+    --primary-bg-color-00: primary-bg-color-00;
+    --primary-bg-color-05: lightness(primary-bg-color-00, 5%);
+    --primary-bg-color-10: lightness(primary-bg-color-00, 10%);
 
+    --yt-sys-color-baseline--additive-background: additive-bg-color;
+
+    --yt-sys-color-baseline--base-background: var(--primary-bg-color-00);
+    --yt-sys-color-baseline--menu-background: var(--primary-bg-color-10);
     --yt-sys-color-baseline--raised-background: var(--yt-sys-color-baseline--additive-background);
 
     .ytd-channel-owner-empty-state-renderer.illustration {
@@ -38,11 +43,11 @@
     yt-confirm-dialog-renderer[dialog],
     ytd-menu-popup-renderer tp-yt-paper-listbox.ytd-menu-popup-renderer,
     .yt-contextual-sheet-layout-wiz {
-      background-color: lightness(primary-bg-color, 5%);
+      background-color: var(--primary-bg-color-5);
     }
 
     .ytContextualSheetLayoutHost {
-      background-color: lightness(primary-bg-color, 10%);
+      background-color: var(--yt-sys-color-baseline--menu-background);
     }
 
     yt-notification-action-renderer {
@@ -72,7 +77,7 @@
     if (remove-playlist-gradient) {
       .YtCinematicContainerViewModelBackgroundGradient,
       .immersive-header-background-wrapper {
-        background: primary-bg-color !important;
+        background: var(--primary-bg-color-00) !important;
       }
 
       .immersive-header-gradient {
