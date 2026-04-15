@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Darker
 @description    Darker theme for YouTube.
-@version        2025.09.24.10.53
+@version        2026.04.15.12.08
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -9,7 +9,6 @@
 
 @var color      primary-bg-color            "Primary background color"              #000
 @var color      secondary-bg-color          "Secondary background color"            rgba(255, 255, 255, 0.05)
-@var color      secondary-bg-color-hover    "Secondary background color (hover)"    rgba(255, 255, 255, 0.1)
 @var checkbox   remove-header-gradient      "Remove header gradient"                1
 @var checkbox   remove-playlist-gradient    "Remove playlist gradient"              1
 @var checkbox   remove-cinematics-gradient  "Remove video gradient"                 1
@@ -20,27 +19,17 @@
   [darker-dark-theme] [dark],
   html[dark],
   [dark] {
-    /* PRIMARY */
-    --yt-spec-general-background-c: primary-bg-color /* #030303 */;
-    --yt-spec-base-background: primary-bg-color /* #0f0f0f */;
-    --yt-spec-general-background-b: primary-bg-color /* #0f0f0f */;
-    --yt-spec-general-background-a: primary-bg-color /* #181818 */;
-    --yt-spec-raised-background: primary-bg-color /* #212121 */;
-    --yt-spec-menu-background: primary-bg-color /* #2F2F2F */;
-    /* regular dark */
-    --yt-spec-brand-background-solid: primary-bg-color /* #212121 */;
-    --yt-spec-brand-background-primary: primary-bg-color /* rgba(33, 33, 33, 0.98) */;
-    --yt-spec-brand-background-secondary: primary-bg-color /* rgba(33, 33, 33, 0.95) */;
+    --yt-sys-color-baseline--base-background: primary-bg-color;
+    --yt-sys-color-baseline--additive-background: secondary-bg-color;
 
-    /* SECONDARY */
-    --yt-spec-badge-chip-background: secondary-bg-color /* rgba(255, 255, 255, 0.1) */;
-    --yt-spec-additive-background: secondary-bg-color /* rgba(255, 255, 255, 0.1) */;
-    /* hover */
-    --yt-spec-button-chip-background-hover: secondary-bg-color-hover /* rgba(255, 255, 255, 0.2); */;
-    --yt-spec-mono-tonal-hover: secondary-bg-color-hover /* rgba(255, 255, 255, 0.2); */;
+    --yt-sys-color-baseline--raised-background: var(--yt-sys-color-baseline--additive-background);
 
     .ytd-channel-owner-empty-state-renderer.illustration {
       filter: contrast(1.2);
+    }
+
+    .playlist-items.ytd-playlist-panel-renderer {
+      background-color: var(--yt-sys-color-baseline--additive-background);
     }
 
     tp-yt-paper-dialog,

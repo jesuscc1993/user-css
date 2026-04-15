@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2025.12.01.17.45
+@version        2026.04.15.11.57
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -125,17 +125,13 @@
   }
 
   /* video duration text */
-  ytd-thumbnail-overlay-time-status-renderer {
-    height: auto !important;
+  .ytBadgeShapeTypography {
+    font-size: var(--duration-font-size) !important;
+    line-height: 0.975 !important;
+    max-height: none !important;
 
-    .yt-badge-shape {
-      font-size: var(--duration-font-size) !important;
-      line-height: 0.975 !important;
-      max-height: none !important;
-
-      &.yt-badge-shape--thumbnail-default {
-        background-color: rgba(0, 0, 0, 0.75);
-      }
+    &.ytBadgeShapeThumbnailDefault {
+      background-color: rgba(0, 0, 0, 0.75);
     }
   }
 
@@ -179,8 +175,7 @@
   }
 
   /* highlight unavailable videos */
-  ytd-playlist-video-renderer:has([src="https://i.ytimg.com/img/no_thumbnail.jpg"])
-  {
+  ytd-playlist-video-renderer:has([src="https://i.ytimg.com/img/no_thumbnail.jpg"]) {
     background: #ffffff66;
   }
 
