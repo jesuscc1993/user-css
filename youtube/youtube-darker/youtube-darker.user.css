@@ -1,14 +1,14 @@
 /* ==UserStyle==
 @name           YouTube - Darker
 @description    Darker theme for YouTube.
-@version        2026.04.16.01.10
+@version        2026.04.16.01.19
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var color      primary-bg-color-00         "Primary background color"              rgb(0, 0, 0)
-@var color      additive-bg-color           "Additive background color"             rgba(255, 255, 255, 0.05)
+@var color      primary-bg-color            "Primary background color"              #000
+@var color      additive-bg-color           "Additive background color"             #fff
 @var checkbox   remove-header-gradient      "Remove header gradient"                1
 @var checkbox   remove-playlist-gradient    "Remove playlist gradient"              1
 @var checkbox   remove-cinematics-gradient  "Remove video gradient"                 1
@@ -21,11 +21,18 @@
   html[color-version="v2_0"][dark],
   html[dark],
   html[darker-dark-theme][dark] {
-    --primary-bg-color-00: primary-bg-color-00;
-    --primary-bg-color-05: lightness(primary-bg-color-00, 5%);
-    --primary-bg-color-10: lightness(primary-bg-color-00, 10%);
+    /* stylus to CSS */
+    --primary-bg-color-00: primary-bg-color;
+    --primary-bg-color-05: lightness(primary-bg-color, 5%);
+    --primary-bg-color-10: lightness(primary-bg-color, 10%);
 
-    --yt-sys-color-baseline--additive-background: additive-bg-color;
+    --additive-bg-color-00: additive-bg-color;
+    --additive-bg-color-05: rgba(additive-bg-color, 5%);
+    --additive-bg-color-10: rgba(additive-bg-color, 10%);
+    --additive-bg-color-20: rgba(additive-bg-color, 20%);
+    /*  */
+
+    --yt-sys-color-baseline--additive-background: var(--additive-bg-color-05);
 
     --yt-sys-color-baseline--base-background: var(--primary-bg-color-00);
     --yt-sys-color-baseline--menu-background: var(--primary-bg-color-10);
@@ -67,17 +74,17 @@
 
     .yt-spec-button-shape-next--mono.yt-spec-button-shape-next--filled,
     .yt-spec-button-shape-next--overlay.yt-spec-button-shape-next--filled {
-      background-color: #ffffff1a;
+      background-color: var(--additive-bg-color-10);
       color: var(--yt-spec-text-primary);
 
       &:hover {
-        background-color: #fff3;
+        background-color: var(--additive-bg-color-20);
       }
     }
 
     if (remove-header-gradient) {
       ytd-masthead[frosted-glass="without-chipbar"] #background.ytd-masthead {
-        background: #000;
+        background: var(--primary-bg-color-00);
         backdrop-filter: none;
       }
     }
