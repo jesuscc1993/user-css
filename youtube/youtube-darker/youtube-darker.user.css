@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Darker
 @description    Darker theme for YouTube.
-@version        2026.04.16.01.20
+@version        2026.04.17.12.33
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -35,7 +35,7 @@
 
     --yt-sys-color-baseline--base-background: var(--primary-bg-color-00);
     --yt-sys-color-baseline--menu-background: var(--primary-bg-color-10);
-    --yt-sys-color-baseline--raised-background: var(--yt-sys-color-baseline--additive-background);
+    --yt-sys-color-baseline--raised-background: var(--primary-bg-color-05);
 
     --yt-spec-base-background: var(--primary-bg-color-00);
 
@@ -44,9 +44,10 @@
     }
 
     .playlist-items.ytd-playlist-panel-renderer {
-      background-color: var(--yt-sys-color-baseline--additive-background);
+      background-color: var(--additive-bg-color-05);
     }
 
+    ytd-app,
     ytd-masthead {
       background: var(--primary-bg-color-00);
     }
@@ -57,7 +58,7 @@
     yt-confirm-dialog-renderer[dialog],
     ytd-menu-popup-renderer tp-yt-paper-listbox.ytd-menu-popup-renderer,
     .yt-contextual-sheet-layout-wiz {
-      background-color: var(--primary-bg-color-5);
+      background-color: var(--primary-bg-color-05);
     }
 
     .ytContextualSheetLayoutHost {
