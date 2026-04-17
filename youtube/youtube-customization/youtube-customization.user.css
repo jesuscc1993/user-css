@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2026.04.09.13.41
+@version        2026.04.17.12.59
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -179,6 +179,7 @@
   }
 
   /* video controls bg */
+  .ytPlayerOverlayVideoDetailsRendererHost,
   .ytPlayerQuickActionButtonsHost:not(:empty),
   .ytp-delhi-modern .ytp-chapter-title.ytp-button,
   .ytp-delhi-modern .ytp-chrome-controls .ytp-next-button:not(.ytp-miniplayer-button-container>*),
