@@ -1,27 +1,26 @@
 /* ==UserStyle==
-@name         WhatsApp - Selective Scaling (Chrome only)
-@description  Allows selectively resizing elements of the app.
-@version      2025.12.05.12.07
-@author       MetalTxus
-@namespace    https://github.com/jesuscc1993/
-@license      CC BY-SA 4.0
-@preprocessor less
+@name               WhatsApp - Selective Scaling (Chrome only)
+@description        Allows selectively resizing elements of the app.
+@version            2026.04.30.12.14
+@author             MetalTxus
+@namespace          https://github.com/jesuscc1993/
+@license            CC BY-SA 4.0
+@preprocessor       less
 
-@advanced text     sidebar-size       "Sidebar width"             "30%"
-@advanced text     sidebar-zoom       "Sidebar zoom"              1
-@advanced text     chat-zoom          "Chat zoom"                 1
-@advanced text     large-emoji-size   "Large emoji size"          unset
-@advanced text     input-font-size    "Input font size"           unset
-@advanced checkbox full-size-view     "Full size view"            0
-@advanced checkbox resize-attachments "Resize image attachments"  1
-@advanced checkbox hide-app-download  "Hide app download adds"    0
+@advanced text      sidebar-size       "Sidebar width"             "30%"
+@advanced text      sidebar-zoom       "Sidebar zoom"              1
+@advanced text      chat-zoom          "Chat zoom"                 1
+@advanced text      large-emoji-size   "Large emoji size"          unset
+@advanced text      input-font-size    "Input font size"           unset
+@advanced checkbox  resize-attachments "Resize image attachments"  1
+@advanced checkbox  hide-app-download  "Hide app download adds"    0
 
 ==/UserStyle== */
 @-moz-document domain("web.whatsapp.com") {
   .app-wrapper-web > div:nth-child(10) > div:nth-child(1) {
-    &.three > :last-child,
-    > :nth-child(4) > :nth-child(1),
-    > :nth-child(5) {
+    &.three > :nth-child(7),
+    > :nth-child(3),
+    > :nth-child(4) {
       flex: 0 0 @sidebar-size !important;
       max-width: @sidebar-size !important;
 
@@ -39,7 +38,7 @@
     zoom: @chat-zoom;
 
     img,
-    [role="row"] [style*="width"]:not([style*="width: 55"]):not([style*="width: 200"]) {
+    [data-testid="msg-container"] > * > [style*="width"]:not([style*="width: 55"]):not([style*="width: 200"]) {
       & when not (@resize-attachments = 1) {
         zoom: calc(1 / @chat-zoom);
       }
@@ -50,7 +49,7 @@
       zoom: 1;
     }
 
-    img[alt][src*="64.png"] when not (@large-emoji-size = unset) {
+    img[src^="https://web.whatsapp.com/emoji"] when not (@large-emoji-size = unset) {
       min-width: @large-emoji-size;
       min-height: @large-emoji-size;
       width: @large-emoji-size;
@@ -68,7 +67,11 @@
     }
   }
 
-  .app-wrapper-web when (@full-size-view = 1) {
+  div[role="button"]:has([data-icon="wa-square-icon"]) when (@hide-app-download = 1) {
+    display: none;
+  }
+
+  /* .app-wrapper-web when (@full-size-view = 1) {
     .two,
     .three {
       top: 0 !important;
@@ -76,9 +79,5 @@
       max-width: none !important;
       height: 100% !important;
     }
-  }
-
-  div[role="button"]:has([data-icon="wa-square-icon"]) when (@hide-app-download = 1) {
-    display: none;
-  }
+  } */
 }
