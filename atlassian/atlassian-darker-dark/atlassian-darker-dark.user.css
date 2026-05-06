@@ -1,49 +1,83 @@
 /* ==UserStyle==
 @name         Atlassian - Darker Dark
 @description  Darker default theme.
-@version      2024.03.07.18.08
+@version      2026.05.06.11.54
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
-==/UserStyle== */
 
+@var text     hue         "Hue"                 210
+@var text     lightness   "Lightness"           1
+@var text     saturation  "Saturation"          1
+@var checkbox red-flagged "Red flagged tickets" 0
+
+==/UserStyle== */
 @-moz-document domain("atlassian.net") {
   html[data-color-mode="light"][data-theme~="light:dark"],
   html[data-color-mode="dark"][data-theme~="dark:dark"] {
-    /* manually tweaked */
-    --ds-background-selected: #171f2b;
-    --ds-background-selected-hovered: #192f4d;
-    --ds-background-selected-pressed: #0055cc;
-    --ds-background-selected-bold: #579dff;
-    --ds-background-selected-bold-hovered: #85b8ff;
-    --ds-background-selected-bold-pressed: #cce0ff;
-    /* -10% brightness */
-    --ds-surface: #101416;
-    --ds-surface-hovered: #171c1f;
-    --ds-surface-pressed: #191d20;
-    --ds-surface-overlay: #191d20;
-    --ds-surface-overlay-hovered: #1c2125;
-    --ds-surface-overlay-pressed: #212d37;
-    --ds-surface-raised: #171c1f;
-    --ds-surface-raised-hovered: #191d20;
-    --ds-surface-raised-pressed: #1c2125;
-    --ds-surface-sunken: #0d1013;
-    /* originals */
-    /* --ds-background-selected: #1c2b41; */
-    /* --ds-background-selected-hovered: #09326c; */
-    /* --ds-background-selected-pressed: #0055cc; */
-    /* --ds-background-selected-bold: #579dff; */
-    /* --ds-background-selected-bold-hovered: #85b8ff; */
-    /* --ds-background-selected-bold-pressed: #cce0ff; */
-    /* --ds-surface: #1d2125; */
-    /* --ds-surface-hovered: #22272b; */
-    /* --ds-surface-pressed: #282e33; */
-    /* --ds-surface-overlay: #282e33; */
-    /* --ds-surface-overlay-hovered: #2c333a; */
-    /* --ds-surface-overlay-pressed: #38414a; */
-    /* --ds-surface-raised: #22272b; */
-    /* --ds-surface-raised-hovered: #282e33; */
-    /* --ds-surface-raised-pressed: #2c333a; */
-    /* --ds-surface-sunken: #161a1d; */
+    --ds-background-accent-gray-subtlest: hsl(hue, saturation * 11%, lightness * 20%);
+    --ds-background-accent-gray-subtlest-hovered: hsl(hue, saturation * 11%, lightness * 25%);
+    --ds-background-accent-gray-subtlest-pressed: hsl(hue, saturation * 11%, lightness * 30%);
+    --ds-background-accent-gray-subtler: hsl(hue, saturation * 11%, lightness * 30%);
+    --ds-background-accent-gray-subtler-hovered: hsl(hue, saturation * 11%, lightness * 35%);
+    --ds-background-accent-gray-subtler-pressed: hsl(hue, saturation * 11%, lightness * 40%);
+    --ds-background-accent-gray-subtle: hsl(hue, saturation * 11%, lightness * 35%);
+    --ds-background-accent-gray-subtle-hovered: hsl(hue, saturation * 11%, lightness * 30%);
+    --ds-background-accent-gray-subtle-pressed: hsl(hue, saturation * 11%, lightness * 25%);
+    --ds-background-accent-gray-bolder: hsl(hue, saturation * 11%, lightness * 65%);
+    --ds-background-accent-gray-bolder-hovered: hsl(hue, saturation * 11%, lightness * 70%);
+    --ds-background-accent-gray-bolder-pressed: hsl(hue, saturation * 11%, lightness * 75%);
+
+    --ds-background-selected: hsl(hue, saturation * 35%, 17%);
+    --ds-background-selected-hovered: hsl(hue, saturation * 83%, 22%);
+    --ds-background-selected-pressed: hsl(hue, saturation * 100%, 50%);
+    --ds-background-selected-bold: hsl(hue, saturation * 100%, 70%);
+    --ds-background-selected-bold-hovered: hsl(hue, saturation * 100%, 80%);
+    --ds-background-selected-bold-pressed: hsl(hue, saturation * 100%, 90%);
+
+    --ds-surface: hsl(hue, saturation * 11%, lightness * 13%);
+    --ds-surface-hovered: hsl(hue, saturation * 11%, lightness * 15%);
+    --ds-surface-pressed: hsl(hue, saturation * 11%, lightness * 17%);
+    --ds-surface-overlay: hsl(hue, saturation * 11%, lightness * 17%);
+    --ds-surface-overlay-hovered: hsl(hue, saturation * 11%, lightness * 20%);
+    --ds-surface-overlay-pressed: hsl(hue, saturation * 11%, lightness * 25%);
+    --ds-surface-raised: hsl(hue, saturation * 11%, lightness * 15%);
+    --ds-surface-raised-hovered: hsl(hue, saturation * 11%, lightness * 17%);
+    --ds-surface-raised-pressed: hsl(hue, saturation * 11%, lightness * 20%);
+    --ds-surface-sunken: hsl(hue, saturation * 11%, lightness * 10%);
+
+    if (red-flagged) {
+      --ds-background-warning: #42221f;
+      --ds-background-warning-hovered: #5d1f1a;
+      --ds-background-warning-pressed: #ae2e24;
+    }
+
+    blockquote {
+      background: var(--ds-background-accent-gray-subtlest);
+    }
+
+    #jira.adg3 .ghx-label-12 {
+      background-color: #7a869a;
+      border-color: #7a869a;
+    }
+
+    /* labels */
+    ._syazwwip:has(> span),
+    span:has(> ._syazwwip),
+    span:has(> div > ._syazwwip),
+    /* swimlane task count */
+    .css-zkpmpi ._18u01b66 {
+      filter: invert(1) hue-rotate(180deg);
+
+      &._syazwwip,
+      ._syazwwip {
+        color: black;
+      }
+    }
+
+    .issue-table .parentIssue {
+      filter: invert(1);
+      color: #3f3d3a;
+    }
   }
 }
