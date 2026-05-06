@@ -1,10 +1,11 @@
 /* ==UserStyle==
 @name         Atlassian - Darker Dark
 @description  Darker default theme.
-@version      2026.05.06.11.54
+@version      2026.05.06.11.59
 @author       MetalTxus
 @namespace    https://github.com/jesuscc1993/
 @license      CC BY-SA 4.0
+@preprocessor stylus
 
 @var text     hue         "Hue"                 210
 @var text     lightness   "Lightness"           1
