@@ -1,13 +1,12 @@
 /* ==UserStyle==
 @name               WhatsApp - Selective Scaling (Chrome only)
 @description        Allows selectively resizing elements of the app.
-@version            2026.04.30.12.14
+@version            2026.05.09.01.25
 @author             MetalTxus
 @namespace          https://github.com/jesuscc1993/
 @license            CC BY-SA 4.0
 @preprocessor       less
 
-@advanced text      sidebar-size       "Sidebar width"             "30%"
 @advanced text      sidebar-zoom       "Sidebar zoom"              1
 @advanced text      chat-zoom          "Chat zoom"                 1
 @advanced text      large-emoji-size   "Large emoji size"          unset
@@ -17,67 +16,71 @@
 
 ==/UserStyle== */
 @-moz-document domain("web.whatsapp.com") {
-  .app-wrapper-web > div:nth-child(10) > div:nth-child(1) {
-    &.three > :nth-child(7),
-    > :nth-child(3),
-    > :nth-child(4) {
-      flex: 0 0 @sidebar-size !important;
-      max-width: @sidebar-size !important;
+  html {
+    --chat-zoom: @chat-zoom;
+    --hide-app-download: @hide-app-download;
+    --input-font-size: @input-font-size;
+    --large-emoji-size: @large-emoji-size;
+    --resize-attachments: @resize-attachments;
+    --sidebar-zoom: @sidebar-zoom;
+  }
 
-      header + * {
-        zoom: @sidebar-zoom;
+  html when not (@sidebar-zoom = 1) {
+    .app-wrapper-web > div:nth-child(10) > div:nth-child(1) {
+      &.three > :nth-child(7),
+      > :nth-child(3),
+      > :nth-child(4) {
+        header + * {
+          zoom: var(--sidebar-zoom);
 
-        [role="button"][data-tab="4"] {
-          zoom: calc(1 / @sidebar-zoom);
+          [role="button"][data-tab="4"] {
+            zoom: calc(1 / var(--sidebar-zoom));
+          }
         }
       }
     }
   }
 
-  #main header ~ div:has(.copyable-area) {
-    zoom: @chat-zoom;
+  html when not (@chat-zoom = 1) {
+    #main header ~ div:has(.copyable-area) {
+      zoom: var(--chat-zoom);
 
-    img,
-    [data-testid="msg-container"] > * > [style*="width"]:not([style*="width: 55"]):not([style*="width: 200"]) {
-      & when not (@resize-attachments = 1) {
-        zoom: calc(1 / @chat-zoom);
+      img,
+      [data-testid="msg-container"] > * > [style*="width"]:not([style*="width: 55"]):not([style*="width: 200"]) {
+        & when not (@resize-attachments = 1) {
+          zoom: calc(1 / var(--chat-zoom));
+        }
+      }
+
+      img.emoji {
+        image-rendering: auto !important;
+        zoom: 1;
+      }
+
+      img[src^="https://web.whatsapp.com/emoji"] when not (@large-emoji-size =unset) {
+        min-width: var(--large-emoji-size);
+        min-height: var(--large-emoji-size);
+        width: var(--large-emoji-size);
+        height: var(--large-emoji-size);
+        max-width: none;
+        max-height: none;
       }
     }
+  }
 
-    img.emoji {
-      image-rendering: auto !important;
-      zoom: 1;
-    }
-
-    img[src^="https://web.whatsapp.com/emoji"] when not (@large-emoji-size = unset) {
-      min-width: @large-emoji-size;
-      min-height: @large-emoji-size;
-      width: @large-emoji-size;
-      height: @large-emoji-size;
-      max-width: none;
-      max-height: none;
+  html when not (@input-font-size = unset) {
+    footer .lexical-rich-text-input {
+      div,
+      p {
+        font-size: var(--input-font-size);
+        line-height: calc(1.5 * var(--input-font-size));
+      }
     }
   }
 
-  footer .lexical-rich-text-input when not (@input-font-size = unset) {
-    div,
-    p {
-      font-size: @input-font-size;
-      line-height: 1.5 * @input-font-size;
+  html when (@hide-app-download = 1) {
+    div[role="button"]:has([data-icon="wa-square-icon"]) {
+      display: none;
     }
   }
-
-  div[role="button"]:has([data-icon="wa-square-icon"]) when (@hide-app-download = 1) {
-    display: none;
-  }
-
-  /* .app-wrapper-web when (@full-size-view = 1) {
-    .two,
-    .three {
-      top: 0 !important;
-      width: 100% !important;
-      max-width: none !important;
-      height: 100% !important;
-    }
-  } */
 }
