@@ -17,10 +17,6 @@ Requires the [Stylus](https://github.com/openstyles/stylus#releases) userstyle l
 
 ---
 
-- [chatgpt/chatgpt-customization](chatgpt/chatgpt-customization.user.css)
-
----
-
 - [chrome/chrome-dark-scrollbar-and-audio-player](chrome/chrome-dark-scrollbar-and-audio-player)
 
 ---
