@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GameFAQs Dark
 @description    Dark theme for GameFAQs.
-@version        2024.08.22.22.02
+@version        2025.05.25.13.56
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -10,6 +10,10 @@
 @-moz-document domain("gamefaqs.gamespot.com") {
   html {
     filter: invert(0.9) hue-rotate(180deg) brightness(1.15);
+  }
+
+  [style*="background: rgb(0, 0, 0)"] {
+    background: white !important;
   }
 
   img,
