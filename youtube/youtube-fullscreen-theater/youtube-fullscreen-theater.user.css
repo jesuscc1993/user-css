@@ -18,10 +18,10 @@
     --player-height: calc(100vh - var(--header-height));
   }
 
-  ytd-watch-flexy[full-bleed-player],
-  ytd-watch-flexy[full-bleed-player][respect-aspect-ratio],
-  ytd-watch-flexy[theater] {
-    &:not([fullscreen]) {
+  ytd-watch-flexy:not([fullscreen]) {
+    &[full-bleed-player],
+    &[full-bleed-player][respect-aspect-ratio],
+    &[theater] {
       #full-bleed-container.ytd-watch-flexy,
       #player-full-bleed-container.ytd-watch-flexy,
       #player-wide-container.ytd-watch-flexy {
