@@ -1,11 +1,11 @@
 # UserCSS
 
 To install, view the raw files.
-Requires the [Stylus](https://github.com/openstyles/stylus#releases) userstyle loader extension. Install for:
+Requires the [Stylus](https://github.com/openstyles/stylus#releases) userstyle loader extension.
 
-- [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
-- [Opera](https://addons.opera.com/en/extensions/details/stylus/)
-- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
+[![Install for Chrome](https://img.shields.io/badge/Install%20for-Chrome-1772e8.svg)](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
+[![Install for Opera](https://img.shields.io/badge/Install%20for-Opera-e62600.svg)](https://addons.opera.com/en/extensions/details/27c0f4146c879f67a91b70f93f4eee4a01846fdd/)
+[![Install for Firefox](https://img.shields.io/badge/Install%20for-Firefox-ff5b32.svg)](https://addons.mozilla.org/firefox/addon/styl-us/)
 
 # List
 
