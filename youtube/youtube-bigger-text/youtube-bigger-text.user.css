@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Bigger Text
 @description    Further increases YouTube's font size; requires "YouTube - Big Text".
-@version        2026.05.29.11.24
+@version        2026.06.16.19.33
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -21,23 +21,25 @@
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
-  :root {
-    --line-height-font-size-ratio: line-height-font-size-ratio !important;
-    --owner-and-teaser-scale: owner-and-teaser-scale !important;
-    --font-size-cc: font-size-cc !important;
-    --font-size-lg: font-size-lg !important;
-    --font-size-md: font-size-md !important;
-    --font-size-sm: font-size-sm !important;
-    --grid-line-clamp: grid-line-clamp !important;
-    --playlist-line-clamp: playlist-line-clamp !important;
-    --video-comment-line-clamp: video-comment-line-clamp !important;
-    --video-description-max-height: video-description-max-height !important;
-    --video-title-line-clamp: video-title-line-clamp !important;
+  @media (min-width: 1280px) {
+    :root {
+      --line-height-font-size-ratio: line-height-font-size-ratio !important;
+      --owner-and-teaser-scale: owner-and-teaser-scale !important;
+      --font-size-cc: font-size-cc !important;
+      --font-size-lg: font-size-lg !important;
+      --font-size-md: font-size-md !important;
+      --font-size-sm: font-size-sm !important;
+      --grid-line-clamp: grid-line-clamp !important;
+      --playlist-line-clamp: playlist-line-clamp !important;
+      --video-comment-line-clamp: video-comment-line-clamp !important;
+      --video-description-max-height: video-description-max-height !important;
+      --video-title-line-clamp: video-title-line-clamp !important;
 
-    --line-height-cc: calc(var(--font-size-cc) * var(--line-height-font-size-ratio)) !important;
-    --line-height-lg: calc(var(--font-size-lg) * var(--line-height-font-size-ratio)) !important;
-    --line-height-md: calc(var(--font-size-md) * var(--line-height-font-size-ratio)) !important;
-    --line-height-sm: calc(var(--font-size-sm) * var(--line-height-font-size-ratio)) !important;
+      --line-height-cc: calc(var(--font-size-cc) * var(--line-height-font-size-ratio)) !important;
+      --line-height-lg: calc(var(--font-size-lg) * var(--line-height-font-size-ratio)) !important;
+      --line-height-md: calc(var(--font-size-md) * var(--line-height-font-size-ratio)) !important;
+      --line-height-sm: calc(var(--font-size-sm) * var(--line-height-font-size-ratio)) !important;
+    }
   }
 
   @media (max-width: 1281px) {
