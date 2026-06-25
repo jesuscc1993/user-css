@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2026.06.04.16.02
+@version        2026.06.25.11.08
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -9,7 +9,8 @@
 
 @var color      sub-bg                        "Subtitle background color"               rgba(0, 0, 0, .72)
 @var color      video-controls-bg             "Video controls background"               rgba(0, 0, 0, .3)
-@var text       list-thumbnail-width          "List thumbnail width"                    100px
+@var text       list-thumbnail-width          "List thumbnail width"                    55%
+@var text       playlist-thumbnail-width      "Playlist thumbnail width"                100px
 @var text       drawer-width                  "App drawer width"                        240px
 @var text       grid-max-width                "Max grid width"                          1284px
 @var text       sub-border-radius             "Subtitle border radius"                  0px
@@ -44,7 +45,8 @@
   thumbnail-aspect-ratio=9 / 16;
 
   :root {
-    --list-thumbnail-height: list-thumbnail-width * thumbnail-aspect-ratio;
+    --playlist-thumbnail-height: playlist-thumbnail-width * thumbnail-aspect-ratio;
+    --playlist-thumbnail-width: playlist-thumbnail-width;
     --list-thumbnail-width: list-thumbnail-width;
   }
 
@@ -95,8 +97,19 @@
   ytd-thumbnail.ytd-playlist-video-renderer {
     max-height: none;
     max-width: none;
-    height: var(--list-thumbnail-height);
-    width: var(--list-thumbnail-width);
+    height: var(--playlist-thumbnail-height);
+    width: var(--playlist-thumbnail-width);
+  }
+
+  /* sidebar */
+  .ytd-item-section-renderer {
+    .ytLockupViewModelContentImage {
+      width: var(--list-thumbnail-width) !important;
+    }
+
+    .ytContentMetadataViewModelMetadataRowMetadataRowWrap {
+      display: none;
+    }
   }
 
   if (playlist-width != unset) {
