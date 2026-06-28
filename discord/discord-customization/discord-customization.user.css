@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2026.06.18.21.51
+@version        2026.06.28.13.27
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -330,7 +330,7 @@
       display: none;
     }
 
-    [class*="itemsContainer"] {
+    [data-list-id="guildsnav"] {
       padding-top: var(--space-sm);
     }
   }
