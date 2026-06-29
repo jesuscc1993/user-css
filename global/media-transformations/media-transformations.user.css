@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Media Transformations
 @description    Applies configurable transformations to images and/or videos.
-@version        2026.04.23.20.04
+@version        2026.06.29.19.59
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -29,7 +29,7 @@
 ==/UserStyle== */
 @-moz-document regexp(".*") {
   apply() {
-    transform: rotate(rotation) scale(scale) translate(translation-x + 0px, translation-y + 0px);
+    transform: rotate(rotation) scale(scale) translate(translation-x + 0px, translation-y + 0px) !important;
 
     filter = '';
 
@@ -70,7 +70,7 @@
     }
 
     if (filter !='') {
-      filter: unquote(filter)
+      filter: unquote(filter) !important;
     }
   }
 
