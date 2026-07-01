@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter - Tweaks
 @description    Miscellaneous style overrides for Twitter. May require the "Control Panel for Twitter" extension to display properly.
-@version        2026.04.23.17.17
+@version        2026.07.01.15.25
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -12,6 +12,10 @@
 
 ==/UserStyle== */
 @-moz-document domain("x.com") {
+  :root {
+    --c-primary: #1d9bf0;
+  }
+
   [data-testid="Tweet-User-Avatar"] {
     border-radius: 50% !important;
     overflow: hidden;
@@ -90,6 +94,11 @@
   /* center single images */
   .r-k200y {
     align-self: center;
+  }
+
+  /* highlighted videos */
+  a[href*="/video/"] {
+    border: 0.25rem solid var(--c-primary);
   }
 }
 
