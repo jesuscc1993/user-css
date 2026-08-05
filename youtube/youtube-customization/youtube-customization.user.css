@@ -1,39 +1,40 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2026.06.27.11.54
+@version        2026.08.05.20.20
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@var color      sub-bg                        "Subtitle background color"               rgba(0, 0, 0, .72)
-@var color      video-controls-bg             "Video controls background"               rgba(0, 0, 0, .3)
-@var text       list-thumbnail-width          "List thumbnail width"                    55%
-@var text       playlist-thumbnail-width      "Playlist thumbnail width"                100px
-@var text       drawer-width                  "App drawer width"                        240px
-@var text       grid-max-width                "Max grid width"                          1284px
-@var text       sub-border-radius             "Subtitle border radius"                  0px
-@var text       playlist-width                "Playlist width"                          unset
-@var text       max-playlist-height           "Maximum playlist height"                 unset
-@var text       progress-bar-thickness        "Progress bar thickness"                  unset
-@var text       volume-bar-thickness          "Volume bar thickness"                    unset
-@var text       video-controls-icons-scale    "Video controls icons scale"              1
-@var text       items-per-grid-row            "Items per grid row"                      3
-@var text       items-per-shelf-row           "Items per shelf row"                     5
-@var checkbox   controls-gradient-bg          "Add back controls gradient bg"           0
-@var checkbox   classic-progress-bar-colors   "Classic progress bar colors"             0
-@var checkbox   disable-progress-bar-gradient "Disable progress bar gradient"           0
-@var checkbox   reduced-sidebar-padding       "Reduce sidebar spacing"                  0
-@var checkbox   reduced-grid-padding          "Reduce grid spacing"                     0
-@var checkbox   reduced-controls-bar-height   "Reduce controls bar height"              0
-@var checkbox   crop-fullscreen               "Crop fullscreen to cover the screen"     0
-@var checkbox   gray-out-watched              "Gray out watched videos"                 0
-@var checkbox   hide-watched                  "Hide watched videos"                     0
-@var checkbox   hide-member-only              "Hide member only videos"                 0
-@var checkbox   hide-channel-avatars          "Hide channel avatars in subscriptions"   0
-@var checkbox   hide-overlay-channel-avatars  "Hide channel avatars in overlay"         0
-@var checkbox   hide-shorts                   "Hide shorts"                             0
+@var color      sub-bg                          "Subtitle background color"               rgba(0, 0, 0, .72)
+@var color      video-controls-bg               "Video controls background"               rgba(0, 0, 0, .3)
+@var text       list-thumbnail-width            "List thumbnail width"                    55%
+@var text       playlist-thumbnail-width        "Playlist thumbnail width"                100px
+@var text       drawer-width                    "App drawer width"                        240px
+@var text       grid-max-width                  "Max grid width"                          1284px
+@var text       sub-border-radius               "Subtitle border radius"                  0px
+@var text       playlist-width                  "Playlist width"                          unset
+@var text       max-playlist-height             "Maximum playlist height"                 unset
+@var text       progress-bar-thickness          "Progress bar thickness"                  unset
+@var text       volume-bar-thickness            "Volume bar thickness"                    unset
+@var text       video-controls-icons-scale      "Video controls icons scale"              1
+@var text       items-per-grid-row              "Items per grid row"                      3
+@var text       items-per-shelf-row             "Items per shelf row"                     5
+@var checkbox   controls-gradient-bg            "Add back controls gradient bg"           0
+@var checkbox   classic-progress-bar-colors     "Classic progress bar colors"             0
+@var checkbox   disable-progress-bar-gradient   "Disable progress bar gradient"           0
+@var checkbox   reduced-sidebar-padding         "Reduce sidebar spacing"                  0
+@var checkbox   reduced-grid-padding            "Reduce grid spacing"                     0
+@var checkbox   reduced-controls-bar-height     "Reduce controls bar height"              0
+@var checkbox   crop-fullscreen                 "Crop fullscreen to cover the screen"     0
+@var checkbox   gray-out-watched                "Gray out watched videos"                 0
+@var checkbox   controls-push-fullscreen-video  "Controls push fullscreen video"          0
+@var checkbox   hide-watched                    "Hide watched videos"                     0
+@var checkbox   hide-member-only                "Hide member only videos"                 0
+@var checkbox   hide-channel-avatars            "Hide channel avatars in subscriptions"   0
+@var checkbox   hide-overlay-channel-avatars    "Hide channel avatars in overlay"         0
+@var checkbox   hide-shorts                     "Hide shorts"                             0
 
 ==/UserStyle== */
 /*
@@ -362,10 +363,24 @@
     }
   }
 
-  /* hide member only videos */
-  if (hide-member-only) {
-    .ytd-rich-grid-renderer > ytd-rich-item-renderer:has(.ytd-rich-grid-media > ytd-badge-supported-renderer:not([hidden])) {
-      display: none;
+  /* controls push fullscreen video */
+  if (controls-push-fullscreen-video) {
+    ytd-watch-flexy[fullscreen] {
+      --controls-height: 56px;
+
+      &[full-bleed-player],
+      &[full-bleed-player][respect-aspect-ratio],
+      &[theater] {
+        #player-full-bleed-container.ytd-watch-flexy,
+        #player-wide-container.ytd-watch-flexy {
+          max-width: calc(100vw - 2px - 2 * (var(--controls-height)));
+          margin: calc(var(--controls-height) * -1 - 12px) auto 0;
+        }
+      }
+
+      .ytp-overlays-container {
+        inset: calc(var(--controls-height) + 24px) 12px 72px;
+      }
     }
   }
 
@@ -394,6 +409,13 @@
   if (items-per-shelf-row != 5) {
     ytd-rich-shelf-renderer {
       --ytd-rich-grid-items-per-row: items-per-shelf-row !important;
+    }
+  }
+
+  /* hide member only videos */
+  if (hide-member-only) {
+    .ytd-rich-grid-renderer > ytd-rich-item-renderer:has(.ytd-rich-grid-media > ytd-badge-supported-renderer:not([hidden])) {
+      display: none;
     }
   }
 
