@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2026.04.15.11.57
+@version        2026.08.10.22.35
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -147,6 +147,12 @@
   .ytThumbnailBottomOverlayViewModelBadgeContainerLarge {
     padding: 0 var(--duration-spacing) var(--duration-spacing) 0;
     z-index: 0;
+  }
+
+  /* hover escape hack */
+  ytd-watch-flexy[fullscreen]:not([panel-expanded]) {
+    max-width: calc(100vw - 2px);
+    margin: 0 auto;
   }
 
   /* side menu items */
