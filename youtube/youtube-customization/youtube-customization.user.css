@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2026.08.10.11.47
+@version        2026.08.10.12.42
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -49,6 +49,7 @@
     --playlist-thumbnail-height: playlist-thumbnail-width * thumbnail-aspect-ratio;
     --playlist-thumbnail-width: playlist-thumbnail-width;
     --list-thumbnail-width: list-thumbnail-width;
+    --progress-bar-thickness: progress-bar-thickness;
   }
 
   html:not(.style-scope) {
@@ -366,7 +367,7 @@
   /* controls push fullscreen video */
   if (controls-push-fullscreen-video) {
     ytd-watch-flexy {
-      --controls-height: 66px;
+      --controls-height: calc(var(--yt-delhi-bottom-controls-height, 56px) + var(--progress-bar-thickness, 6px) * 0.825);
 
       video {
         object-fit: contain !important;
