@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2026.08.10.10.47
+@version        2026.08.10.11.47
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -29,7 +29,7 @@
 @var checkbox   reduced-controls-bar-height     "Reduce controls bar height"              0
 @var checkbox   crop-fullscreen                 "Crop fullscreen to cover the screen"     0
 @var checkbox   gray-out-watched                "Gray out watched videos"                 0
-@var checkbox   controls-push-fullscreen-video  "Controls push theater/fullscreen video"  0
+@var checkbox   controls-push-fullscreen-video  "Controls push fullscreen video"          0
 @var checkbox   hide-watched                    "Hide watched videos"                     0
 @var checkbox   hide-member-only                "Hide member only videos"                 0
 @var checkbox   hide-channel-avatars            "Hide channel avatars in subscriptions"   0
@@ -365,19 +365,21 @@
 
   /* controls push fullscreen video */
   if (controls-push-fullscreen-video) {
-    [full-bleed-player] {
+    ytd-watch-flexy {
       --controls-height: 66px;
+
+      video {
+        object-fit: contain !important;
+      }
 
       &[fullscreen] {
         video {
-          object-fit: contain;
           height: calc(100vh - var(--controls-height)) !important;
         }
       }
       &[theater]:not([fullscreen]) {
         video {
-          object-fit: contain;
-          height: calc(100vh - var(--ytd-masthead-height-absolute) - var(--controls-height)) !important;
+          height: calc(100vh - var(--ytd-masthead-height-absolute, 56px) - var(--controls-height)) !important;
         }
       }
     }
