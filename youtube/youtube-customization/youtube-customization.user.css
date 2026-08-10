@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2026.08.10.22.05
+@version        2026.08.10.22.13
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -373,7 +373,7 @@
         object-fit: contain !important;
       }
 
-      &[fullscreen] {
+      &[fullscreen]:not([panel-expanded]) {
          .html5-video-player:not(.ytp-autohide) video {
           height: calc(100vh - var(--controls-height)) !important;
         }
