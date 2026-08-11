@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Tweaks
 @description    Miscellaneous style overrides for YouTube.
-@version        2026.08.10.22.35
+@version        2026.08.11.17.08
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -150,7 +150,8 @@
   }
 
   /* hover escape hack */
-  ytd-watch-flexy[fullscreen]:not([panel-expanded]) {
+  ytd-watch-flexy[fullscreen]:not([panel-expanded]),
+  ytd-watch-flexy[theater]:not([fullscreen]) {
     max-width: calc(100vw - 2px);
     margin: 0 auto;
   }
