@@ -1,15 +1,16 @@
 /* ==UserStyle==
 @name           Twitter - Tweaks
 @description    Miscellaneous style overrides for Twitter. May require the "Control Panel for Twitter" extension to display properly.
-@version        2026.07.20.11.52
+@version        2026.08.11.19.13
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   stylus
 
-@advanced checkbox full-width-images    "Full width images"    0
-@advanced checkbox highlight-videos     "Highlight videos"     0
-@advanced checkbox disable-feed-borders "Disable feed borders" 0
+@advanced checkbox full-width-images      "Full width images"      0
+@advanced checkbox highlight-videos       "Highlight videos"       0
+@advanced checkbox bigger-multipage-icons "Bigger multipage icons" 0
+@advanced checkbox disable-feed-borders   "Disable feed borders"   0
 
 ==/UserStyle== */
 @-moz-document domain("x.com") {
@@ -72,9 +73,17 @@
 
   /* highlight videos */
   if (highlight-videos) {
-    a[href*="/video/"] {
+    [role="listitem"] a[href*="/video/"] {
       border: 1px solid black;
       outline: 0.125rem solid var(--c-primary);
+    }
+  }
+
+  /* bigger multipage icons */
+  if (bigger-multipage-icons) {
+    [role="listitem"] svg.r-z80fyv {
+      height: 40px;
+      width: 40px;
     }
   }
 
