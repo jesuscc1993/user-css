@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2026.08.10.22.13
+@version        2026.08.29.10.04
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -339,6 +339,7 @@
     ytd-rich-item-renderer,
     ytd-video-renderer {
       &:not(:has(yt-lockup-view-model)) {
+        &:has(ytw-thumbnail-overlay-resume-playback-renderer),
         &:has(.ytd-thumbnail-overlay-resume-playback-renderer),
         &:has(.ytThumbnailOverlayProgressBarHost) {
           filter: grayscale(0.9) brightness(0.25);
