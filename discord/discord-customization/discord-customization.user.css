@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2026.09.08.15.30
+@version        2026.09.09.10.57
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -314,7 +314,7 @@
 
   /* hide "edited" labels */
   html when (@hide-edited-labels = 1) {
-    [class*="timestamp"]:has([class*="hiddenVisually"]),
+    [class*="timestamp"]:not(:has([id*="message-timestamp"])),
     [class*="timestamp"] span:has([class*="edited"]) {
       display: none;
     }
