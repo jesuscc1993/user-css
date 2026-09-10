@@ -1,0 +1,38 @@
+/* ==UserStyle==
+@name           Invert Theme (template)
+@description    A barebones template to invert the colors of a website.
+@version        2026.09.10.16.23
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+@preprocessor   stylus
+==/UserStyle== */
+
+@-moz-document regexp(".*") {
+  :root {
+    --invert: 0.9;
+    --hue: calc(180deg * var(--invert));
+
+    --reverse-invert: calc(var(--invert) / (2 * var(--invert) - 1));
+    --reverse-hue: calc(-1 * var(--hue));
+
+    --invert-filter: invert(var(--invert)) hue-rotate(var(--hue));
+    --undo-invert-filter: invert(var(--reverse-invert)) hue-rotate(var(--reverse-hue));
+  }
+
+  html {
+    background: #0d0d0d;
+    filter: var(--invert-filter);
+  }
+
+  img,
+  svg,
+  video,
+  [style*="background-image"] {
+    filter: var(--undo-invert-filter);
+
+    & & {
+      filter: none;
+    }
+  }
+}
