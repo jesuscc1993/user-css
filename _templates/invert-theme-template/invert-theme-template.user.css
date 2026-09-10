@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Invert Theme (template)
 @description    A barebones template to invert the colors of a website.
-@version        2026.09.10.16.23
+@version        2026.09.10.16.39
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -25,6 +25,7 @@
     filter: var(--invert-filter);
   }
 
+  iframe,
   img,
   svg,
   video,
