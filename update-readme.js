@@ -15,32 +15,39 @@ const getSubDirectories = (dirPath) =>
     .filter((name) => !isExcluded(name))
     .filter((name) => fs.statSync(path.join(dirPath, name)).isDirectory());
 
-const getRawUrl = (site, project) =>
-  `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/refs/heads/${MAIN_REPO_BRANCH}/${site}/${project}/${project}.user.css`;
+const getRawUrl = (site, project, file) =>
+  `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/refs/heads/${MAIN_REPO_BRANCH}/${site}/${project}/${file}`;
 
-const getInstallBadge = (site, project) =>
-  `[![Install style](https://img.shields.io/badge/Install-style-0c73b8.svg)](${getRawUrl(site, project)})`;
+const getInstallBadge = (site, project, file) =>
+  `[![Install style](https://img.shields.io/badge/Install-style-0c73b8.svg)](${getRawUrl(site, project, file)})`;
+
+const findUserScriptFile = (dirPath) =>
+  fs.readdirSync(dirPath).find((name) => name.endsWith(".user.css"));
 
 const findSiteProjects = (dir, relPath) =>
   getSubDirectories(dir).flatMap((name) => {
     const subDir = path.join(dir, name);
-    return fs.existsSync(path.join(subDir, `${name}.user.css`))
-      ? [{ site: relPath, project: name }]
+    const file = findUserScriptFile(subDir);
+    return file
+      ? [{ site: relPath, project: name, file }]
       : findSiteProjects(subDir, relPath ? `${relPath}/${name}` : name);
   });
 
 const getSites = () => {
   const bySite = new Map();
 
-  for (const { site, project } of findSiteProjects(ROOT, "")) {
+  for (const { site, project, file } of findSiteProjects(ROOT, "")) {
     if (!bySite.has(site)) {
       bySite.set(site, []);
     }
-    bySite.get(site).push(project);
+    bySite.get(site).push({ project, file });
   }
 
   return [...bySite.entries()]
-    .map(([site, projects]) => ({ site, projects: projects.sort() }))
+    .map(([site, projects]) => ({
+      site,
+      projects: projects.sort((a, b) => a.project.localeCompare(b.project)),
+    }))
     .sort((a, b) => a.site.localeCompare(b.site));
 };
 
@@ -49,8 +56,12 @@ const buildTable = (sites) => {
 
   const rows = sites.map(({ site, projects }) => [
     `[${site}](${site})`,
-    projects.map((project) => `[${project}](${site}/${project})`).join("<br>"),
-    projects.map((project) => getInstallBadge(site, project)).join("<br>"),
+    projects
+      .map(({ project }) => `[${project}](${site}/${project})`)
+      .join("<br>"),
+    projects
+      .map(({ project, file }) => getInstallBadge(site, project, file))
+      .join("<br>"),
   ]);
 
   const widths = columns.map((column, index) =>
