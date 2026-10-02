@@ -1,0 +1,33 @@
+/* ==UserStyle==
+@name           (Local) Markdown
+@description    Styles for local markdown file display
+@version        2026.10.02.13.46
+@author         MetalTxus
+@namespace      https://github.com/jesuscc1993/
+@license        CC BY-SA 4.0
+==/UserStyle== */
+
+@-moz-document url-prefix("file:///")
+{
+  #_html {
+    width: fit-content !important;
+    margin: 0 auto !important;
+    font-family: sans-serif;
+  }
+
+  .markdown-body {
+    table {
+      width: 100%;
+
+      th,
+      td {
+        white-space: nowrap;
+        width: 1%;
+      }
+
+      th {
+        font-weight: bold;
+      }
+    }
+  }
+}
