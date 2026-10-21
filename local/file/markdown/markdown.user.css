@@ -1,13 +1,13 @@
 /* ==UserStyle==
 @name           (Local) Markdown
 @description    Styles for local markdown file display
-@version        2026.10.02.13.46
+@version        2026.10.22.00.15
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 ==/UserStyle== */
 
-@-moz-document url-prefix("file:///")
+@-moz-document regexp('file:///.*\\.md$')
 {
   #_html {
     width: fit-content !important;
