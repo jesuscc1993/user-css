@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Customization
 @description    Provides some extra customization options for YouTube.
-@version        2026.08.29.10.04
+@version        2026.10.27.12.09
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -417,8 +417,15 @@
 
   /* hide member only videos */
   if (hide-member-only) {
-    .ytd-rich-grid-renderer > ytd-rich-item-renderer:has(.ytd-rich-grid-media > ytd-badge-supported-renderer:not([hidden])) {
-      display: none;
+    yt-lockup-view-model,
+    ytd-grid-video-renderer,
+    ytd-playlist-panel-video-renderer,
+    ytd-playlist-video-renderer,
+    ytd-rich-item-renderer,
+    ytd-video-renderer {
+      &:has(.ytBadgeShapeCommerce) {
+        display: none;
+      }
     }
   }
 
