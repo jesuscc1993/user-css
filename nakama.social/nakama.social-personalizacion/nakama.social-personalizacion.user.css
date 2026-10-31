@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Nakama - Personalización
 @description    Permite la configuración de ciertos aspectos visuales en Nakama.
-@version        2026.04.16.10.35
+@version        2026.10.31.11.24
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -151,6 +151,8 @@
     background-image: none !important;
 
     > canvas,
+    .christmas-container,
+    .halloween-container,
     #animateimage,
     #padoru {
       display: none !important;
