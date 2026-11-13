@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2026.09.09.10.57
+@version        2026.11.13.23.32
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
@@ -30,6 +30,7 @@
 @var checkbox reduce-user-card-padding  "Reduce user card padding"    0
 @var checkbox restore-blurple           "Restore classic blurple"     0
 @var checkbox round-server-icons        "Round server icons"          0
+@var checkbox left-sidebar-border       "Left sidebar border"         0
 @var checkbox same-color-sidebars       "Same color sidebars"         0
 @var checkbox server-icon-bgs           "Server icon backgrounds"     0
 @var checkbox disable-redesign-borders  "Disable redesign borders"    0
@@ -611,6 +612,13 @@
     .panels_c48ade {
       margin-left: var(--custom-guild-list-width);
       width: calc(100% - var(--custom-guild-list-width) - var(--space-xs) * 2);
+    }
+  }
+
+  /* left sidebar border */
+  html when (@left-sidebar-border = 1) {
+    [class*="sidebar_"] {
+      border-inline-end: 1px solid var(--border-subtle);
     }
   }
 
