@@ -1,47 +1,48 @@
 /* ==UserStyle==
 @name           Discord - Customization
 @description    Provides some extra customization options for Discord.
-@version        2026.11.13.23.32
+@version        2026.11.14.10.38
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
 @preprocessor   less
 
-@var text font-family                   "Font family"                 "gg sans","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif
-@var text avatar-scale                  "Avatar scale"                unset
-@var text avatar-zoom                   "Avatar zoom (hover)"         unset
-@var text block-emoji-size              "Block emoji size"            unset
-@var text block-emoji-zoom              "Block emoji zoom (hover)"    unset
-@var text inline-emoji-size             "Inline emoji size"           unset
-@var text inline-emoji-zoom             "Inline emoji zoom (hover)"   unset
-@var text reaction-emoji-size           "Reaction emoji size"         unset
-@var text category-spacing              "Category spacing (sidebar)"  unset
-@var text custom-guild-sidebar-width    "Custom guild sidebar width"  unset
-@var text custom-member-list-width      "Custom member list width"    unset
-@var text group-spacing                 "Message groups spacing"      unset
-@var text li-margin                     "Vertical list item margin"   unset
-@var text transition                    "Transition duration"         150ms
-@var checkbox blurple-mentions          "Purple mentions and links"   0
-@var checkbox darker-guildnav           "Darker server list"          0
-@var checkbox float-role-decorators     "Float role decorators"       0
-@var checkbox full-width-embeds         "Full width embeds"           0
-@var checkbox monochrome-bg             "Monochrome background"       0
-@var checkbox reduce-message-spacing    "Reduce message spacing"      0
-@var checkbox reduce-user-card-padding  "Reduce user card padding"    0
-@var checkbox restore-blurple           "Restore classic blurple"     0
-@var checkbox round-server-icons        "Round server icons"          0
-@var checkbox left-sidebar-border       "Left sidebar border"         0
-@var checkbox same-color-sidebars       "Same color sidebars"         0
-@var checkbox server-icon-bgs           "Server icon backgrounds"     0
-@var checkbox disable-redesign-borders  "Disable redesign borders"    0
-@var checkbox hide-channel-badges       "Hide channel badges"         0
-@var checkbox hide-download-icon        "Hide download icon"          0
-@var checkbox hide-edited-labels        "Hide \"edited\" labels"      0
-@var checkbox hide-events               "Hide events (sidebar)"       0
-@var checkbox hide-server-banners       "Hide server banners"         0
-@var checkbox hide-top-bar              "Hide top bar"                0
-@var checkbox hide-user-decorations     "Hide user decorations"       0
-@var checkbox hide-voice-channels       "Hide voice channels"         0
+@var text font-family                   "Font family"                       "gg sans","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif
+@var text avatar-scale                  "Avatar scale"                      unset
+@var text avatar-zoom                   "Avatar zoom (hover)"               unset
+@var text block-emoji-size              "Block emoji size"                  unset
+@var text block-emoji-zoom              "Block emoji zoom (hover)"          unset
+@var text inline-emoji-size             "Inline emoji size"                 unset
+@var text inline-emoji-zoom             "Inline emoji zoom (hover)"         unset
+@var text reaction-emoji-size           "Reaction emoji size"               unset
+@var text category-spacing              "Category spacing (sidebar)"        unset
+@var text custom-guild-sidebar-width    "Custom guild sidebar width"        unset
+@var text custom-member-list-width      "Custom member list width"          unset
+@var text now-playing-sidebar-width     "Custom now playing sidebar width"  unset
+@var text group-spacing                 "Message groups spacing"            unset
+@var text li-margin                     "Vertical list item margin"         unset
+@var text transition                    "Transition duration"               150ms
+@var checkbox blurple-mentions          "Purple mentions and links"         0
+@var checkbox darker-guildnav           "Darker server list"                0
+@var checkbox float-role-decorators     "Float role decorators"             0
+@var checkbox full-width-embeds         "Full width embeds"                 0
+@var checkbox monochrome-bg             "Monochrome background"             0
+@var checkbox reduce-message-spacing    "Reduce message spacing"            0
+@var checkbox reduce-user-card-padding  "Reduce user card padding"          0
+@var checkbox restore-blurple           "Restore classic blurple"           0
+@var checkbox round-server-icons        "Round server icons"                0
+@var checkbox left-sidebar-border       "Left sidebar border"               0
+@var checkbox same-color-sidebars       "Same color sidebars"               0
+@var checkbox server-icon-bgs           "Server icon backgrounds"           0
+@var checkbox disable-redesign-borders  "Disable redesign borders"          0
+@var checkbox hide-channel-badges       "Hide channel badges"               0
+@var checkbox hide-download-icon        "Hide download icon"                0
+@var checkbox hide-edited-labels        "Hide \"edited\" labels"            0
+@var checkbox hide-events               "Hide events (sidebar)"             0
+@var checkbox hide-server-banners       "Hide server banners"               0
+@var checkbox hide-top-bar              "Hide top bar"                      0
+@var checkbox hide-user-decorations     "Hide user decorations"             0
+@var checkbox hide-voice-channels       "Hide voice channels"               0
 
 ==/UserStyle== */
 @-moz-document domain("discord.com") {
@@ -72,6 +73,11 @@
     & when not (@custom-guild-sidebar-width = unset) {
       --custom-guild-sidebar-width: @custom-guild-sidebar-width !important;
     }
+  }
+
+  [class*="nowPlayingColumn"] when not (@now-playing-sidebar-width = unset) {
+    flex: 0;
+    min-width: @now-playing-sidebar-width !important;
   }
 
   /* HIDE UNLESS HOVERED */
@@ -624,6 +630,7 @@
 
   /* same color sidebars */
   html when (@same-color-sidebars = 1) {
+    [class*="nowPlayingColumn"],
     [class*="membersWrap"] [class*="members"] {
       &,
       [class*="member"] {
