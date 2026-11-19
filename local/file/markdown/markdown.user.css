@@ -1,10 +1,13 @@
 /* ==UserStyle==
 @name           (Local) Markdown
 @description    Styles for local markdown file display
-@version        2026.10.22.00.15
+@version        2026.11.19.17.20
 @author         MetalTxus
 @namespace      https://github.com/jesuscc1993/
 @license        CC BY-SA 4.0
+@preprocessor   stylus
+
+@var checkbox   new-page-for-headings  "Force new page for headings"  0
 ==/UserStyle== */
 
 @-moz-document regexp('file:///.*\\.md$')
@@ -21,13 +24,19 @@
 
       th,
       td {
-        white-space: nowrap;
-        width: 1%;
+        min-width: max-content;
       }
 
       th {
         font-weight: bold;
       }
+    }
+  }
+
+  if (new-page-for-headings) {
+    h1:not(:first-of-type) {
+      page-break-before: always;
+      break-before: page;
     }
   }
 }
